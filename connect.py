@@ -335,6 +335,13 @@ def save_json_artifact(filename: str, payload: dict):
     path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
     logger.info(f"Saved {path}")
 
+def append_jsonl_artifact(filename: str, payload: dict):
+    DATA_DIR.mkdir(exist_ok=True)
+    path = DATA_DIR / filename
+    with path.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(payload, separators=(",", ":")) + "\n")
+    logger.info(f"Appended {path}")
+
 # ── Band class ────────────────────────────────────────────────────────────────
 
 class Band:
@@ -1442,6 +1449,7 @@ async def run():
             logger.info(f"Recent fitness summary (24h): {json.dumps(summary, indent=2)}")
             save_json_artifact("latest_fitness_preview.json", preview)
             save_json_artifact("latest_recovery_summary.json", summary)
+            append_jsonl_artifact("recovery_history.jsonl", summary)
         except Exception as e:
             logger.warning(f"Fitness preview query failed: {e}")
 
