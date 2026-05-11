@@ -121,6 +121,20 @@ def tlv_dec(data: bytes) -> dict:
         out[tag] = data[i:i+ln]; i += ln
     return out
 
+def tlv_items(data: bytes) -> list[tuple[int, bytes]]:
+    """Decode TLVs while preserving duplicate tags such as repeated containers."""
+    out, i = [], 0
+    while i < len(data):
+        tag = data[i]; i += 1
+        if i >= len(data) and tag == 0:
+            break
+        ln, i = varint_dec(data, i)
+        if i + ln > len(data):
+            raise ValueError(f"TLV length {ln} exceeds remaining {len(data) - i}")
+        out.append((tag, data[i:i+ln]))
+        i += ln
+    return out
+
 def crc16(data: bytes) -> int:
     return binascii.crc_hqx(data, 0)
 
@@ -1007,6 +1021,114 @@ class Band:
             "sleep": await self.get_fitness_message_count("sleep", 0x0C, start_ts, end_ts),
         }
 
+    @staticmethod
+    def _parse_step_features(data: bytes) -> dict:
+        if not data:
+            return {"error": "missing feature bitmap"}
+
+        i = 0
+        bitmap1 = data[i]
+        i += 1
+        bitmap2 = 0
+        if bitmap1 & 0x80:
+            if i >= len(data):
+                return {"error": "missing second feature bitmap"}
+            bitmap2 = data[i]
+            i += 1
+
+        parsed = {}
+        for bit in (0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40):
+            if not (bitmap1 & bit):
+                continue
+            width = 1 if bit in (0x20, 0x40) else 2
+            if i + width > len(data):
+                return {**parsed, "error": "feature payload too short"}
+            if width == 1:
+                value = data[i]
+                i += 1
+            else:
+                value = struct.unpack(">H", data[i:i + 2])[0]
+                i += 2
+            if bit == 0x02:
+                parsed["steps"] = value
+            elif bit == 0x04:
+                parsed["calories"] = value
+            elif bit == 0x08:
+                parsed["distance"] = value
+            elif bit == 0x40:
+                parsed["heart_rate"] = value
+            else:
+                parsed[f"bitmap1_{bit:#04x}"] = value
+
+        for bit in (0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80):
+            if not (bitmap2 & bit):
+                continue
+            if i >= len(data):
+                return {**parsed, "error": "second bitmap payload too short"}
+            value = data[i]
+            i += 1
+            if bit == 0x01:
+                parsed["spo2"] = value
+            elif bit == 0x02:
+                parsed["resting_heart_rate"] = value
+            else:
+                parsed[f"bitmap2_{bit:#04x}"] = value
+        return parsed
+
+    async def get_step_data_record(self, index: int) -> list[dict]:
+        tlv = tlv_enc(0x81, tlv_enc(0x02, struct.pack(">H", index)))
+        tlvs = await self._transact_encrypted(SVC_FITNESS, 0x0B, tlv, timeout=20.0)
+        container = tlv_dec(tlvs[0x81])
+        items = tlv_items(tlvs[0x81])
+        base_ts = struct.unpack(">I", container[0x03])[0]
+
+        records = []
+        for tag, value in items:
+            if tag != 0x84:
+                continue
+            sub = tlv_dec(value)
+            offset = sub.get(0x05, b"\x00")[0]
+            raw_data = sub.get(0x06, b"")
+            records.append({
+                "record": index,
+                "timestamp": base_ts + 60 * offset,
+                "raw": raw_data.hex(),
+                **self._parse_step_features(raw_data),
+            })
+        return records
+
+    async def get_sleep_data_record(self, index: int) -> list[dict]:
+        tlv = tlv_enc(0x81, tlv_enc(0x02, struct.pack(">H", index)))
+        tlvs = await self._transact_encrypted(SVC_FITNESS, 0x0D, tlv, timeout=20.0)
+        items = tlv_items(tlvs[0x81])
+
+        records = []
+        for tag, value in items:
+            if tag != 0x83:
+                continue
+            sub = tlv_dec(value)
+            stamp = sub.get(0x05, b"\x00" * 6)
+            start = struct.unpack(">I", stamp[:4])[0]
+            duration = struct.unpack(">H", stamp[4:6])[0] * 60
+            records.append({
+                "record": index,
+                "start": start,
+                "end": start + duration,
+                "duration_sec": duration,
+                "stage": sub.get(0x04, b"\x00")[0],
+            })
+        return records
+
+    async def get_recent_fitness_preview(self, hours: int = 24,
+                                         max_step_records: int = 5) -> dict:
+        counts = await self.get_recent_fitness_counts(hours=hours)
+        steps, sleep = [], []
+        for index in range(min(max(counts.get("steps", 0), 0), max_step_records)):
+            steps.extend(await self.get_step_data_record(index))
+        for index in range(max(counts.get("sleep", 0), 0)):
+            sleep.extend(await self.get_sleep_data_record(index))
+        return {"counts": counts, "steps": steps, "sleep": sleep}
+
     async def disconnect(self):
         await asyncio.sleep(0.3)
         await self.client.stop_notify(GATT_READ)
@@ -1030,10 +1152,10 @@ async def run():
             logger.warning(f"Battery query failed (expected until fully initialised): {e}")
 
         try:
-            counts = await band.get_recent_fitness_counts(hours=24)
-            logger.info(f"Recent fitness record counts (24h): {counts}")
+            preview = await band.get_recent_fitness_preview(hours=24)
+            logger.info(f"Recent fitness preview (24h): {json.dumps(preview, indent=2)}")
         except Exception as e:
-            logger.warning(f"Fitness count query failed: {e}")
+            logger.warning(f"Fitness preview query failed: {e}")
 
         await band.disconnect()
 
