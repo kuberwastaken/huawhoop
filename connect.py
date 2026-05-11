@@ -883,7 +883,7 @@ class Band:
         return response
 
     async def get_hrv_samples(self, days: int = 0) -> list[dict]:
-        response = await self.sync_dictionary_class(DICT_HRV_CLASS, days=days, timeout=45.0)
+        response = await self.sync_dictionary_class(DICT_HRV_CLASS, days=days, timeout=15.0)
         return self._parse_dictionary_samples(response["data"])
 
     async def probe_dictionary_classes(self, days: int = 0) -> dict:
@@ -1350,10 +1350,13 @@ class Band:
         return records
 
     async def get_recent_fitness_preview(self, hours: int = 24,
-                                         max_step_records: int = 5) -> dict:
+                                         max_step_records: int = None) -> dict:
         counts = await self.get_recent_fitness_counts(hours=hours)
         steps, sleep = [], []
-        for index in range(min(max(counts.get("steps", 0), 0), max_step_records)):
+        step_count = max(counts.get("steps", 0), 0)
+        if max_step_records is not None:
+            step_count = min(step_count, max_step_records)
+        for index in range(step_count):
             steps.extend(await self.get_step_data_record(index))
         for index in range(max(counts.get("sleep", 0), 0)):
             sleep.extend(await self.get_sleep_data_record(index))
@@ -1364,27 +1367,43 @@ class Band:
         steps = preview.get("steps", [])
         sleep = preview.get("sleep", [])
         heart_rates = [r["heart_rate"] for r in steps if "heart_rate" in r and r["heart_rate"] > 0]
+        resting_hrs = [r["resting_heart_rate"] for r in steps
+                       if "resting_heart_rate" in r and r["resting_heart_rate"] > 0]
         spo2 = [r["spo2"] for r in steps if "spo2" in r and r["spo2"] > 0]
         active_steps = [r for r in steps if any(k in r for k in ("steps", "heart_rate", "spo2"))]
+        sleep_minutes = sum(r.get("duration_sec", 0) for r in sleep) // 60
+        step_total = sum(r.get("steps", 0) for r in steps)
 
         summary = {
             "counts": preview.get("counts", {}),
             "downloaded_step_minutes": len(steps),
             "downloaded_sleep_segments": len(sleep),
-            "step_total_in_preview": sum(r.get("steps", 0) for r in steps),
-            "sleep_minutes": sum(r.get("duration_sec", 0) for r in sleep) // 60,
+            "step_total": step_total,
+            "sleep_minutes": sleep_minutes,
             "heart_rate_samples": len(heart_rates),
             "spo2_samples": len(spo2),
             "examples": active_steps[:5],
         }
         if heart_rates:
             summary["heart_rate_min"] = min(heart_rates)
-            summary["heart_rate_avg"] = round(sum(heart_rates) / len(heart_rates), 1)
+            hr_avg = sum(heart_rates) / len(heart_rates)
+            summary["heart_rate_avg"] = round(hr_avg, 1)
             summary["heart_rate_max"] = max(heart_rates)
+            hr_load = sum(max(0, (hr - 60) / 130) ** 2 for hr in heart_rates)
+            summary["strain_score"] = round(min(21, 21 * (1 - pow(2.718281828, -hr_load / 40))), 1)
         if spo2:
             summary["spo2_min"] = min(spo2)
             summary["spo2_avg"] = round(sum(spo2) / len(spo2), 1)
             summary["spo2_max"] = max(spo2)
+        if resting_hrs:
+            summary["resting_hr_min"] = min(resting_hrs)
+            summary["resting_hr_avg"] = round(sum(resting_hrs) / len(resting_hrs), 1)
+        if sleep_minutes or heart_rates:
+            sleep_score = min(100, round((sleep_minutes / 480) * 100))
+            hr_baseline = min(resting_hrs) if resting_hrs else (min(heart_rates) if heart_rates else 70)
+            hr_recovery = max(0, min(100, round(100 - max(0, hr_baseline - 55) * 2.2)))
+            summary["sleep_score"] = sleep_score
+            summary["recovery_proxy_no_hrv"] = round(0.7 * sleep_score + 0.3 * hr_recovery)
         return summary
 
     async def disconnect(self):
@@ -1429,11 +1448,12 @@ async def run():
                         f"examples={json.dumps(hrv_samples[:5], indent=2)}")
         except Exception as e:
             logger.warning(f"HRV sync probe failed: {e!r}")
-            try:
-                dictionary_probe = await band.probe_dictionary_classes(days=0)
-                logger.info(f"P2P dictionary class probe: {json.dumps(dictionary_probe, indent=2)}")
-            except Exception as probe_e:
-                logger.warning(f"P2P dictionary class probe failed: {probe_e!r}")
+            if os.getenv("BAND10_P2P_PROBE") == "1":
+                try:
+                    dictionary_probe = await band.probe_dictionary_classes(days=0)
+                    logger.info(f"P2P dictionary class probe: {json.dumps(dictionary_probe, indent=2)}")
+                except Exception as probe_e:
+                    logger.warning(f"P2P dictionary class probe failed: {probe_e!r}")
 
         await band.disconnect()
 
