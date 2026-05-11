@@ -3,7 +3,7 @@
     "steps": 43,
     "sleep": 4
   },
-  "downloaded_step_minutes": 1458,
+  "downloaded_step_minutes": 1459,
   "downloaded_sleep_segments": 45,
   "step_total": 6180,
   "sleep_minutes": 123,
@@ -59,5 +59,5 @@
   "resting_hr_avg": 66.2,
   "sleep_score": 26,
   "recovery_proxy_no_hrv": 42,
-  "generated_at": 1778530441
+  "generated_at": 1778530535
 }

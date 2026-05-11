@@ -8948,6 +8948,12 @@
       "timestamp": 1778530380,
       "raw": "040075",
       "calories": 117
+    },
+    {
+      "record": 42,
+      "timestamp": 1778530440,
+      "raw": "0400b7",
+      "calories": 183
     }
   ],
   "sleep": [
