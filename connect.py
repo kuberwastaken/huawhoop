@@ -82,6 +82,12 @@ SECRET_KEY_2 = {
     3: bytes([0x33,0x07,0x9B,0xC5,0x7A,0x88,0x6D,0x3C,0xF5,0x61,0x37,0x09,0x6F,0x22,0x80,0x00]),
 }
 GROUP_ID = "7B0BC0CBCE474F6C238D9661C63400B797B166EA7849B3A370FC73A9A236E989"
+DICT_HRV_CLASS = 500044
+DICT_HRV_RMSSD_VALUE = 500044831
+P2P_DICT_MODULE = "hw.unitedevice.datadictionarysync"
+P2P_DICT_PACKAGE = "hw.watch.health.filesync"
+P2P_LOCAL_FINGERPRINT = "UniteDeviceManagement"
+P2P_REMOTE_FINGERPRINT = "SystemApp"
 
 # ── Packet framing ────────────────────────────────────────────────────────────
 
@@ -729,9 +735,79 @@ class Band:
         return await self.p2p_command(
             0x01,
             "com.huawei.health",
-            "hw.watch.health.filesync",
+            P2P_DICT_PACKAGE,
             timeout=20.0,
         )
+
+    @staticmethod
+    def _dict_to_bytes(value: int) -> bytes:
+        return bytes([(value >> 16) & 0xFF, (value >> 8) & 0xFF, value & 0xFF])
+
+    @staticmethod
+    def _p2p_dict_request_payload(dict_class: int, start_ms: int, end_ms: int) -> bytes:
+        data_tlv = (
+            tlv_enc(0x01, b"\x01") +
+            tlv_enc(0x02, Band._dict_to_bytes(dict_class)) +
+            tlv_enc(0x05, struct.pack(">Q", start_ms)) +
+            tlv_enc(0x06, struct.pack(">Q", end_ms)) +
+            tlv_enc(0x0D, b"\x01")
+        )
+        return b"\x01" + data_tlv
+
+    @staticmethod
+    def _parse_dictionary_samples(data: bytes) -> list[dict]:
+        if not data or data[0] != 0x01:
+            logger.debug(f"  P2P dictionary payload has unsupported type: {data.hex()}")
+            return []
+
+        samples = []
+        for tag, block in tlv_items(data[1:]):
+            if tag != 0x83:
+                continue
+            for rec_tag, rec_block in tlv_items(block):
+                if rec_tag != 0x84:
+                    continue
+                rec = tlv_dec(rec_block)
+                start_ms = Band._tlv_int(rec.get(0x05, b""))
+                end_ms = Band._tlv_int(rec.get(0x06, b""))
+                modify_ms = Band._tlv_int(rec.get(0x0C, b""))
+                for value_tag, value_block in tlv_items(rec_block):
+                    if value_tag != 0x87:
+                        continue
+                    for entry_tag, entry_block in tlv_items(value_block):
+                        if entry_tag != 0x88:
+                            continue
+                        entry = tlv_dec(entry_block)
+                        data_type = Band._tlv_int(entry.get(0x09, b""))
+                        raw_value = entry.get(0x0A) or entry.get(0x0B) or b""
+                        if data_type != DICT_HRV_RMSSD_VALUE or len(raw_value) != 8:
+                            continue
+                        rmssd = struct.unpack(">d", raw_value)[0]
+                        if 0 <= rmssd <= 200:
+                            samples.append({
+                                "start_ms": start_ms,
+                                "end_ms": end_ms,
+                                "modify_ms": modify_ms,
+                                "rmssd": round(rmssd, 1),
+                            })
+        return samples
+
+    async def get_hrv_samples(self, days: int = 7) -> list[dict]:
+        end_ms = int(time.time() * 1000)
+        start_ms = end_ms - days * 24 * 60 * 60 * 1000
+        payload = self._p2p_dict_request_payload(DICT_HRV_CLASS, start_ms, end_ms)
+        response = await self.p2p_command(
+            0x02,
+            P2P_DICT_MODULE,
+            P2P_DICT_PACKAGE,
+            P2P_LOCAL_FINGERPRINT,
+            P2P_REMOTE_FINGERPRINT,
+            payload,
+            timeout=30.0,
+        )
+        logger.info(f"P2P HRV sync response: cmd={response['cmd_id']:#x} code={response['code']:#x} "
+                    f"data_len={len(response['data'])}")
+        return self._parse_dictionary_samples(response["data"])
 
     # ── Handshake steps ───────────────────────────────────────────────────────
 
@@ -1254,6 +1330,13 @@ async def run():
                         f"src={p2p_ping['src_package']} dst={p2p_ping['dst_package']}")
         except Exception as e:
             logger.warning(f"P2P dictionary-sync ping failed: {e}")
+
+        try:
+            hrv_samples = await band.get_hrv_samples(days=7)
+            logger.info(f"HRV samples (7d): count={len(hrv_samples)} "
+                        f"examples={json.dumps(hrv_samples[:5], indent=2)}")
+        except Exception as e:
+            logger.warning(f"HRV sync probe failed: {e}")
 
         await band.disconnect()
 
