@@ -170,6 +170,10 @@ def hmac_sha256(key: bytes, msg: bytes) -> bytes:
 def sha256(data: bytes) -> bytes:
     return hashlib.sha256(data).digest()
 
+def hexu(data: bytes) -> str:
+    """Gadgetbridge's StringUtils.bytesToHex emits uppercase hex."""
+    return data.hex().upper()
+
 def hkdf_sha256(key: bytes, salt: bytes, info: bytes, length: int) -> bytes:
     return HKDF(algorithm=hashes.SHA256(), length=length,
                 salt=salt, info=info).derive(key)
@@ -215,20 +219,25 @@ def load_or_create_config() -> dict:
         cfg.read(CONFIG_FILE)
         c = dict(cfg["band10"])
         secret_key = bytes.fromhex(c["secret_key"]) if c.get("secret_key") else None
-        android_id = c.get("android_id", "")
+        stored_android_id = c.get("android_id", "")
+        android_id = stored_android_id.upper()
         if (not secret_key) and (len(android_id) != 32 or any(ch not in "0123456789abcdefABCDEF" for ch in android_id)):
-            android_id = secrets.token_bytes(16).hex()
+            android_id = hexu(secrets.token_bytes(16))
             cfg["band10"]["android_id"] = android_id
             with open(CONFIG_FILE, "w") as f:
                 cfg.write(f)
             logger.info("Regenerated Gadgetbridge-style 32-char android_id in band.ini.")
+        elif stored_android_id != android_id:
+            cfg["band10"]["android_id"] = android_id
+            with open(CONFIG_FILE, "w") as f:
+                cfg.write(f)
         c["secret"]     = bytes.fromhex(c["secret"])
         c["android_id"] = android_id
         c["secret_key"] = secret_key
         return c
 
     secret     = secrets.token_bytes(16)
-    android_id = secrets.token_bytes(16).hex()
+    android_id = hexu(secrets.token_bytes(16))
     cfg["band10"] = {
         "device_mac":  DEVICE_MAC,
         "client_mac":  CLIENT_MAC,
@@ -688,10 +697,10 @@ class Band:
 
         # ── Step 1 ────────────────────────────────────────────────────────────
         step1_payload = {
-            "isoSalt":       rand_self.hex(),
-            "peerAuthId":    auth_id_self.hex(),
+            "isoSalt":       hexu(rand_self),
+            "peerAuthId":    hexu(auth_id_self),
             "operationCode": op_code,
-            "seed":          seed.hex(),
+            "seed":          hexu(seed),
             "peerUserType":  0,
         }
         if op_code == 0x02:
@@ -721,7 +730,7 @@ class Band:
 
         # Derive PSK
         if op_code == 0x01:
-            pin_hex_utf8 = pin_code.hex().encode("utf-8")
+            pin_hex_utf8 = hexu(pin_code).encode("utf-8")
             key          = sha256(pin_hex_utf8)
         else:
             key = self.secret_key
@@ -740,8 +749,8 @@ class Band:
         self_token = hmac_sha256(psk,
                                  rand_self + rand_peer + auth_id_peer + auth_id_self)
         step2_payload = {
-            "peerAuthId": auth_id_self.hex(),
-            "token":      self_token.hex(),
+            "peerAuthId": hexu(auth_id_self),
+            "token":      hexu(self_token),
         }
         logger.info("  HiChain step 2...")
         tlv      = self._hichain_json(2, step2_payload, op_code, request_id,
@@ -769,8 +778,8 @@ class Band:
             enc_data  = aes_gcm_enc(challenge, session_key, nonce, aad)
 
             step3_payload = {
-                "nonce":   nonce.hex(),
-                "encData": enc_data.hex(),
+                "nonce":   hexu(nonce),
+                "encData": hexu(enc_data),
             }
             logger.info("  HiChain step 3 (first-auth)...")
             tlv      = self._hichain_json(3, step3_payload, op_code, request_id)
@@ -792,8 +801,8 @@ class Band:
         aad4      = b"hichain_iso_result"
         enc_res   = aes_gcm_enc(b"\x00\x00\x00\x00", session_key, nonce4, aad4)
         step4_payload = {
-            "nonce":         nonce4.hex(),
-            "encResult":     enc_res.hex(),
+            "nonce":         hexu(nonce4),
+            "encResult":     hexu(enc_res),
             "operationCode": op_code,
         }
         step4_num = 4 if op_code == 0x01 else 3

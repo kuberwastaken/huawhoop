@@ -123,7 +123,7 @@ Band 10 returns `deviceSupportType=4`.
 Send:
 - Tag 0x01: authMode (= deviceSupportType = 4 for Band 10)
 - Tag 0x02: `\x01` (when authMode ∈ {2, 4})
-- Tag 0x05: androidId as ASCII bytes. Gadgetbridge stores this as a 32-character hex string
+- Tag 0x05: androidId as ASCII bytes. Gadgetbridge stores this as a 32-character uppercase hex string
   (`StringUtils.bytesToHex(HuaweiCrypto.generateNonce())`) and sends `androidID.getBytes(UTF_8)`.
 - Tag 0x03: `\x01`, Tag 0x04: `\x00`
 - Tag 0x06: empty tag and Tag 0x07: phone model when authMode=4
@@ -179,10 +179,10 @@ session_key = HKDF(psk, salt=salt, info=b"hichain_iso_session_key", length=32)
 #### Round 1 — send
 ```json
 {
-  "isoSalt": "<rand_self hex>",
-  "peerAuthId": "<hex of android_id ASCII bytes>",
+  "isoSalt": "<rand_self uppercase hex>",
+  "peerAuthId": "<uppercase hex of android_id ASCII bytes>",
   "operationCode": 1,
-  "seed": "<seed hex>",
+  "seed": "<seed uppercase hex>",
   "peerUserType": 0,
   "version": {"minVersion":"1.0.0","currentVersion":"2.0.16"},
   "authForm": 0,
@@ -192,8 +192,8 @@ session_key = HKDF(psk, salt=salt, info=b"hichain_iso_session_key", length=32)
   "groupName": "health_group_name",
   "groupOp": 2,
   "groupType": 256,
-  "peerDeviceId": "<android_id string>",
-  "connDeviceId": "<android_id string>",
+  "peerDeviceId": "<uppercase android_id string>",
+  "connDeviceId": "<uppercase android_id string>",
   "appId": "com.huawei.health",
   "ownerName": "",
   "groupAndModuleVersion": "2.0.1"
@@ -209,7 +209,7 @@ Verify: `HMAC(psk, rand_peer + rand_self + auth_id_self + auth_id_peer) == token
 
 #### Round 2 — send
 ```json
-{"peerAuthId": "<hex of android_id ASCII bytes>", "token": "<HMAC hex>"}
+{"peerAuthId": "<uppercase hex of android_id ASCII bytes>", "token": "<uppercase HMAC hex>"}
 ```
 token = `HMAC(psk, rand_self + rand_peer + auth_id_peer + auth_id_self)`
 
@@ -345,7 +345,7 @@ Had two `DIGEST_SECRETS = {` blocks; the first had a malformed hex string causin
 | PIN code retrieval | ✅ Working (band shows screen, PIN received and decrypted) |
 | HiChain3 step 1 send | ✅ Packet sliced and sent correctly |
 | Band shows pairing confirmation | ✅ Confirmed visible on device |
-| HiChain3 step 1 response | ⚠️ cmd=0x28 never received — two fixes applied: (1) queue-based notifications so rapid-arrival packets don't overwrite each other, (2) peerDeviceId corrected to android_id_hex (was sending garbled band SecNeg tag). Needs re-test. |
+| HiChain3 step 1 response | ⚠️ cmd=0x28 never received — fixes applied: (1) queue-based notifications so rapid-arrival packets don't overwrite each other, (2) peerDeviceId corrected to our android_id, (3) android_id changed to Gadgetbridge's 32-char ASCII format, (4) outbound HiChain hex now uppercase like Gadgetbridge. Needs re-test. |
 | HiChain3 steps 2-4 | ⚠️ Not yet tested |
 | authToken stored in band.ini | ⚠️ Not yet completed |
 | Data retrieval (HR, HRV, sleep, SpO2) | ❌ Not started |
@@ -367,7 +367,7 @@ Had two `DIGEST_SECRETS = {` blocks; the first had a malformed hex string causin
 device_mac  = 88:8E:68:A2:E4:4F
 client_mac  = FF:FF:FF:A9:F0:23
 secret      = <16 bytes hex>
-android_id  = <32-char Gadgetbridge-style hex string>
+android_id  = <32-char Gadgetbridge-style uppercase hex string>
 secret_key  =   ; filled after first successful HiChain3 auth
 ```
 
