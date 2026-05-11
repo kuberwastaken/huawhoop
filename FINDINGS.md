@@ -255,6 +255,15 @@ Decrypt: `AES-GCM(enc_auth_tok, session_key, nonce3, aad=challenge)` → authTok
 {"message": 20}   # or similar final ack
 ```
 
+The final ACK may also be TLV format rather than JSON:
+- tag 0x01: `com.huawei.health`
+- tag 0x04: response type (`0x01`)
+- tag 0x05: status (`0x00`)
+
+Treat this as `step=4` success. After first-auth (`op=0x01`) succeeds,
+Gadgetbridge immediately starts a second HiChain pass with `op=0x02`; that bind
+pass derives the final `hichain_return_key`.
+
 ---
 
 ## 5. Crypto Constants

@@ -718,11 +718,15 @@ class Band:
         # Band sends TLV-format (non-JSON) error responses when it rejects auth.
         # tag=0x01 will contain the appId string ("com.huawei.health") not a JSON object.
         if not json_bytes.startswith(b"{"):
-            error_code = tlvs.get(0x04, b"\x00")[0] if 0x04 in tlvs else 0
             app_id     = json_bytes.decode("utf-8", errors="replace")
+            resp_type  = tlvs.get(0x04, b"\x00")[0] if 0x04 in tlvs else 0
+            status     = tlvs.get(0x05, b"\x00")[0] if 0x05 in tlvs else 0
+            if app_id == "com.huawei.health" and resp_type == 1 and status == 0:
+                logger.debug(f"  HiChain final TLV ACK: appId={app_id!r} type={resp_type} status={status}")
+                return 4, {"appId": app_id, "type": resp_type, "status": status}
             logger.warning(f"  HiChain TLV-format (non-JSON) response: appId={app_id!r} "
-                           f"errorCode={error_code} all_tags={ {hex(k): v.hex() for k,v in tlvs.items()} }")
-            raise ValueError(f"HiChain errorCode={error_code} (TLV format, appId={app_id!r})")
+                           f"type={resp_type} status={status} all_tags={ {hex(k): v.hex() for k,v in tlvs.items()} }")
+            raise ValueError(f"HiChain TLV response type={resp_type} status={status} (appId={app_id!r})")
         obj     = json.loads(json_bytes.rstrip(b"\x00").decode("utf-8"))
         step    = obj.get("message", 0) & 0x0F   # mask reconnect bit
         payload = obj.get("payload", {})
@@ -857,6 +861,11 @@ class Band:
         resp_tlvs = await self._transact(SVC_DEV, CMD_HICHAIN, tlv)
         step, _  = self._parse_hichain_response(resp_tlvs)
         logger.info(f"  HiChain complete (final step={step}).")
+
+        if op_code == 0x01:
+            logger.info("  First-auth finished; starting HiChain bind pass (op=0x02)...")
+            await self.hichain_authenticate(pin_code=b"", op_code=0x02)
+            return
 
         # For reconnect: derive final session key
         if op_code == 0x02:
