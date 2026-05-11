@@ -345,6 +345,32 @@ def append_jsonl_artifact(filename: str, payload: dict):
 def local_time_label(epoch_seconds: int) -> str:
     return time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(epoch_seconds))
 
+def save_recovery_report(summary: dict):
+    DATA_DIR.mkdir(exist_ok=True)
+    path = DATA_DIR / "latest_recovery_report.md"
+    lines = [
+        "# Huawei Band 10 Recovery",
+        "",
+        f"Generated: {summary.get('generated_at_local', 'unknown')}",
+        "",
+        f"- Recovery proxy: {summary.get('recovery_proxy_no_hrv', 'n/a')} / 100",
+        f"- Strain: {summary.get('strain_score', 'n/a')} / 21",
+        f"- Sleep score: {summary.get('sleep_score', 'n/a')} / 100",
+        f"- Steps: {summary.get('step_total', 'n/a')}",
+        f"- Sleep: {summary.get('sleep_minutes', 'n/a')} min",
+        f"- HR: {summary.get('heart_rate_min', 'n/a')} / "
+        f"{summary.get('heart_rate_avg', 'n/a')} / {summary.get('heart_rate_max', 'n/a')} bpm",
+        f"- SpO2: {summary.get('spo2_min', 'n/a')} / "
+        f"{summary.get('spo2_avg', 'n/a')} / {summary.get('spo2_max', 'n/a')} %",
+        "",
+        f"Step window: {summary.get('step_window_start', 'n/a')} to {summary.get('step_window_end', 'n/a')}",
+        f"Sleep window: {summary.get('sleep_window_start', 'n/a')} to {summary.get('sleep_window_end', 'n/a')}",
+        "",
+        "Note: recovery is a proxy until HRV is available from this firmware.",
+    ]
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    logger.info(f"Saved {path}")
+
 # ── Band class ────────────────────────────────────────────────────────────────
 
 class Band:
@@ -1462,6 +1488,7 @@ async def run():
             save_json_artifact("latest_fitness_preview.json", preview)
             save_json_artifact("latest_recovery_summary.json", summary)
             append_jsonl_artifact("recovery_history.jsonl", summary)
+            save_recovery_report(summary)
         except Exception as e:
             logger.warning(f"Fitness preview query failed: {e}")
 
