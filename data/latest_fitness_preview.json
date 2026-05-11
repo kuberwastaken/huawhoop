@@ -1,6 +1,6 @@
 {
   "counts": {
-    "steps": 43,
+    "steps": 44,
     "sleep": 4
   },
   "steps": [
@@ -8976,6 +8976,14 @@
       "calories": 104,
       "heart_rate": 93,
       "spo2": 96,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 43,
+      "timestamp": 1778530680,
+      "raw": "c402003b5c00",
+      "calories": 59,
+      "heart_rate": 92,
       "resting_heart_rate": 0
     }
   ],
