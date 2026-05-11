@@ -48,6 +48,7 @@ logger = logging.getLogger("band10")
 DEVICE_MAC  = "88:8E:68:A2:E4:4F"
 CLIENT_MAC  = "FF:FF:FF:A9:F0:23"   # random fake MAC (like Gadgetbridge)
 CONFIG_FILE = Path("band.ini")
+DATA_DIR    = Path("data")
 
 GATT_WRITE  = "0000fe01-0000-1000-8000-00805f9b34fb"
 GATT_READ   = "0000fe02-0000-1000-8000-00805f9b34fb"
@@ -327,6 +328,12 @@ def save_secret_key(key: bytes):
     with open(CONFIG_FILE, "w") as f:
         cfg.write(f)
     logger.info("Saved HiChain transaction key to band.ini.")
+
+def save_json_artifact(filename: str, payload: dict):
+    DATA_DIR.mkdir(exist_ok=True)
+    path = DATA_DIR / filename
+    path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    logger.info(f"Saved {path}")
 
 # ── Band class ────────────────────────────────────────────────────────────────
 
@@ -1431,7 +1438,10 @@ async def run():
         try:
             preview = await band.get_recent_fitness_preview(hours=24)
             summary = band.summarize_fitness_preview(preview)
+            summary["generated_at"] = int(time.time())
             logger.info(f"Recent fitness summary (24h): {json.dumps(summary, indent=2)}")
+            save_json_artifact("latest_fitness_preview.json", preview)
+            save_json_artifact("latest_recovery_summary.json", summary)
         except Exception as e:
             logger.warning(f"Fitness preview query failed: {e}")
 
