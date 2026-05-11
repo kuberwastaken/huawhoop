@@ -257,7 +257,7 @@ Decrypt: `AES-GCM(enc_auth_tok, session_key, nonce3, aad=challenge)` → authTok
 
 The final ACK may also be TLV format rather than JSON:
 - tag 0x01: `com.huawei.health`
-- tag 0x04: response type (`0x01`)
+- tag 0x04: response type (nonzero; observed `0x01` for first-auth final ACK and `0x02` for bind final ACK)
 - tag 0x05: status (`0x00`)
 
 Treat this as `step=4` success. After first-auth (`op=0x01`) succeeds,

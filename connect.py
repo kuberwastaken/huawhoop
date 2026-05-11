@@ -721,7 +721,7 @@ class Band:
             app_id     = json_bytes.decode("utf-8", errors="replace")
             resp_type  = tlvs.get(0x04, b"\x00")[0] if 0x04 in tlvs else 0
             status     = tlvs.get(0x05, b"\x00")[0] if 0x05 in tlvs else 0
-            if app_id == "com.huawei.health" and resp_type == 1 and status == 0:
+            if app_id == "com.huawei.health" and resp_type != 0 and status == 0:
                 logger.debug(f"  HiChain final TLV ACK: appId={app_id!r} type={resp_type} status={status}")
                 return 4, {"appId": app_id, "type": resp_type, "status": status}
             logger.warning(f"  HiChain TLV-format (non-JSON) response: appId={app_id!r} "
