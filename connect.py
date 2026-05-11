@@ -82,18 +82,41 @@ GROUP_ID = "7B0BC0CBCE474F6C238D9661C63400B797B166EA7849B3A370FC73A9A236E989"
 # ── Packet framing ────────────────────────────────────────────────────────────
 
 def tlv_enc(tag: int, value: bytes = b"") -> bytes:
-    n = len(value)
-    if n <= 0x7E:
-        return bytes([tag, n]) + value
-    return bytes([tag, 0x7F]) + struct.pack(">H", n) + value
+    return bytes([tag]) + varint_enc(len(value)) + value
+
+def varint_enc(value: int) -> bytes:
+    """Huawei TLV length VarInt: big-endian 7-bit groups, high bit continues."""
+    if value < 0:
+        raise ValueError("negative TLV length")
+    groups = [value & 0x7F]
+    value >>= 7
+    while value:
+        groups.append((value & 0x7F) | 0x80)
+        value >>= 7
+    return bytes(reversed(groups))
+
+def varint_dec(data: bytes, offset: int) -> tuple[int, int]:
+    result = 0
+    i = offset
+    while True:
+        if i >= len(data):
+            raise ValueError("truncated TLV VarInt")
+        b = data[i]
+        i += 1
+        result += b & 0x7F
+        if (b & 0x80) == 0:
+            return result, i
+        result <<= 7
 
 def tlv_dec(data: bytes) -> dict:
     out, i = {}, 0
-    while i < len(data) - 1:
+    while i < len(data):
         tag = data[i]; i += 1
-        ln  = data[i]; i += 1
-        if ln == 0x7F:
-            ln = struct.unpack(">H", data[i:i+2])[0]; i += 2
+        if i >= len(data) and tag == 0:
+            break
+        ln, i = varint_dec(data, i)
+        if i + ln > len(data):
+            raise ValueError(f"TLV length {ln} exceeds remaining {len(data) - i}")
         out[tag] = data[i:i+ln]; i += ln
     return out
 

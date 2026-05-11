@@ -76,12 +76,18 @@ as a synthetic unsliced frame so `parse_frame` can process it uniformly.
 ### 3.4 TLV encoding
 
 ```
-[tag: 1 byte][length: 1 byte][value: N bytes]
+[tag: 1 byte][length: Huawei VarInt][value: N bytes]
 ```
 
-If `length == 0x7F`, the real length is the next 2 bytes big-endian:
+Huawei's TLV length is a big-endian 7-bit VarInt with the high bit indicating
+continuation. It is **not** `0x7F + uint16`.
+
+Examples:
 ```
-[tag][0x7F][len_hi][len_lo][value]
+len=126 -> 7E
+len=127 -> 7F
+len=128 -> 81 00
+len=671 -> 85 1F
 ```
 
 ---
