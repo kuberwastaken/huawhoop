@@ -777,10 +777,13 @@ class Band:
                 raise asyncio.TimeoutError(f"Timed out waiting for P2P data from {src_package}")
 
             tlvs = await self._recv(SVC_P2P, 0x01, timeout=remaining)
-            parsed = self._parse_p2p_response(self._decrypt_transaction_tlvs(tlvs))
+            decoded = self._decrypt_transaction_tlvs(tlvs)
+            parsed = self._parse_p2p_response(decoded)
             logger.info(f"P2P async packet: cmd={parsed['cmd_id']:#x} code={parsed['code']:#x} "
                         f"seq={parsed['sequence']} src={parsed['src_package']} "
                         f"dst={parsed['dst_package']} data_len={len(parsed['data'])}")
+            if parsed["cmd_id"] == 0:
+                logger.info(f"P2P unparsed TLVs: { {hex(k): v.hex() for k, v in decoded.items()} }")
 
             if parsed["cmd_id"] == 0x02 and parsed["src_package"] == src_package:
                 await self._send_p2p_ack(parsed)
