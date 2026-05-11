@@ -8968,6 +8968,15 @@
       "timestamp": 1778530560,
       "raw": "0400d5",
       "calories": 213
+    },
+    {
+      "record": 42,
+      "timestamp": 1778530620,
+      "raw": "c40300685d6000",
+      "calories": 104,
+      "heart_rate": 93,
+      "spo2": 96,
+      "resting_heart_rate": 0
     }
   ],
   "sleep": [
