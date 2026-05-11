@@ -334,7 +334,7 @@ class Band:
 
         elif slice_b == 0x01:
             # First slice — extract sID+cID then start buffer
-            payload      = raw[4:-2]   # after header, before CRC
+            payload      = raw[5:-2]   # after magic,len,slice,flag; before CRC
             self._rx_svc = payload[0]
             self._rx_cmd = payload[1]
             self._rx_buf = payload[2:]
@@ -342,12 +342,12 @@ class Band:
         elif slice_b == 0x02:
             # Middle slice
             if self._rx_buf is not None:
-                self._rx_buf += raw[4:-2]
+                self._rx_buf += raw[5:-2]
 
         elif slice_b == 0x03:
             # Last slice — complete reassembly, push to queue
             if self._rx_buf is not None:
-                self._rx_buf += raw[4:-2]
+                self._rx_buf += raw[5:-2]
                 # Reconstruct as a fake unsliced frame so parse_frame works
                 body  = bytes([self._rx_svc, self._rx_cmd]) + self._rx_buf
                 hdr   = bytes([MAGIC]) + struct.pack(">H", len(body)+1) + b"\x00" + body
