@@ -53,6 +53,7 @@ MAGIC       = 0x5A
 
 # Service / command IDs
 SVC_DEV     = 0x01
+SVC_FITNESS = 0x07
 CMD_LINK    = 0x01
 CMD_AUTH    = 0x13
 CMD_BOND    = 0x0E
@@ -978,6 +979,34 @@ class Band:
             return tlvs[0x02][0]
         return -1
 
+    async def get_fitness_message_count(self, label: str, cmd: int,
+                                        start_ts: int, end_ts: int) -> int:
+        # Gadgetbridge FitnessData.MessageCount.Request:
+        # tag 0x81 empty, tag 0x03 start epoch, tag 0x04 end epoch.
+        tlv = (
+            tlv_enc(0x81) +
+            tlv_enc(0x03, struct.pack(">I", start_ts)) +
+            tlv_enc(0x04, struct.pack(">I", end_ts))
+        )
+        tlvs = await self._transact_encrypted(SVC_FITNESS, cmd, tlv, timeout=20.0)
+        logger.debug(f"  {label} count tlvs={ {hex(k): v.hex() for k, v in tlvs.items()} }")
+
+        if 0x81 in tlvs:
+            container = tlv_dec(tlvs[0x81])
+            if 0x02 in container:
+                return struct.unpack(">H", container[0x02])[0]
+        if 0x02 in tlvs:
+            return struct.unpack(">H", tlvs[0x02]) [0]
+        return -1
+
+    async def get_recent_fitness_counts(self, hours: int = 24) -> dict:
+        end_ts = int(time.time())
+        start_ts = end_ts - hours * 3600
+        return {
+            "steps": await self.get_fitness_message_count("steps", 0x0A, start_ts, end_ts),
+            "sleep": await self.get_fitness_message_count("sleep", 0x0C, start_ts, end_ts),
+        }
+
     async def disconnect(self):
         await asyncio.sleep(0.3)
         await self.client.stop_notify(GATT_READ)
@@ -999,6 +1028,12 @@ async def run():
             logger.info(f"Battery: {bat}%")
         except Exception as e:
             logger.warning(f"Battery query failed (expected until fully initialised): {e}")
+
+        try:
+            counts = await band.get_recent_fitness_counts(hours=24)
+            logger.info(f"Recent fitness record counts (24h): {counts}")
+        except Exception as e:
+            logger.warning(f"Fitness count query failed: {e}")
 
         await band.disconnect()
 
