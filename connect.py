@@ -707,11 +707,11 @@ class Band:
             "code": self._tlv_int(tlvs.get(0x08, b"\x00")),
         }
 
-    async def p2p_command(self, cmd_id: int, src_package: str, dst_package: str,
-                          src_fingerprint: str = None, dst_fingerprint: str = None,
-                          data: bytes = None, code: int = None,
-                          timeout: float = 20.0) -> dict:
-        seq = self._next_p2p_sequence()
+    def _build_p2p_tlv(self, cmd_id: int, src_package: str, dst_package: str,
+                       src_fingerprint: str = None, dst_fingerprint: str = None,
+                       data: bytes = None, code: int = None,
+                       sequence: int = None) -> tuple[int, bytes]:
+        seq = self._next_p2p_sequence() if sequence is None else sequence
         tlv = (
             tlv_enc(0x01, bytes([cmd_id])) +
             tlv_enc(0x02, struct.pack(">H", seq)) +
@@ -725,11 +725,60 @@ class Band:
             tlv += tlv_enc(0x07, data)
         if cmd_id == 0x03 and code is not None:
             tlv += tlv_enc(0x08, struct.pack(">I", code))
+        return seq, tlv
 
+    async def p2p_command(self, cmd_id: int, src_package: str, dst_package: str,
+                          src_fingerprint: str = None, dst_fingerprint: str = None,
+                          data: bytes = None, code: int = None,
+                          timeout: float = 20.0) -> dict:
+        _seq, tlv = self._build_p2p_tlv(
+            cmd_id, src_package, dst_package, src_fingerprint, dst_fingerprint, data, code
+        )
         response = await self._transact_encrypted(SVC_P2P, 0x01, tlv, timeout=timeout)
         parsed = self._parse_p2p_response(response)
         logger.debug(f"  P2P response: {parsed | {'data': parsed['data'].hex()}}")
         return parsed
+
+    async def send_p2p_command(self, cmd_id: int, src_package: str, dst_package: str,
+                               src_fingerprint: str = None, dst_fingerprint: str = None,
+                               data: bytes = None, code: int = None,
+                               sequence: int = None) -> int:
+        seq, tlv = self._build_p2p_tlv(
+            cmd_id, src_package, dst_package, src_fingerprint, dst_fingerprint, data, code, sequence
+        )
+        await self._send(SVC_P2P, 0x01, self._encrypt_transaction_tlv(tlv))
+        return seq
+
+    async def _send_p2p_ack(self, response: dict, code: int = 0xCF):
+        await self.send_p2p_command(
+            0x03,
+            response["dst_package"],
+            response["src_package"],
+            code=code,
+            sequence=response["sequence"],
+        )
+
+    async def wait_for_p2p_data(self, src_package: str, dst_package: str,
+                                timeout: float = 45.0) -> dict:
+        deadline = asyncio.get_running_loop().time() + timeout
+        while True:
+            remaining = deadline - asyncio.get_running_loop().time()
+            if remaining <= 0:
+                raise asyncio.TimeoutError(f"Timed out waiting for P2P data from {src_package}")
+
+            tlvs = await self._recv(SVC_P2P, 0x01, timeout=remaining)
+            parsed = self._parse_p2p_response(self._decrypt_transaction_tlvs(tlvs))
+            logger.info(f"P2P async packet: cmd={parsed['cmd_id']:#x} code={parsed['code']:#x} "
+                        f"seq={parsed['sequence']} src={parsed['src_package']} "
+                        f"dst={parsed['dst_package']} data_len={len(parsed['data'])}")
+
+            if parsed["cmd_id"] == 0x02 and parsed["src_package"] == src_package:
+                await self._send_p2p_ack(parsed)
+                if not dst_package or parsed["dst_package"] == dst_package:
+                    return parsed
+
+            if parsed["cmd_id"] == 0x03:
+                continue
 
     async def ping_dictionary_sync(self) -> dict:
         return await self.p2p_command(
@@ -796,15 +845,16 @@ class Band:
         end_ms = int(time.time() * 1000)
         start_ms = end_ms - days * 24 * 60 * 60 * 1000
         payload = self._p2p_dict_request_payload(DICT_HRV_CLASS, start_ms, end_ms)
-        response = await self.p2p_command(
+        seq = await self.send_p2p_command(
             0x02,
             P2P_DICT_MODULE,
             P2P_DICT_PACKAGE,
             P2P_LOCAL_FINGERPRINT,
             P2P_REMOTE_FINGERPRINT,
             payload,
-            timeout=30.0,
         )
+        logger.info(f"P2P HRV sync request sent: seq={seq} window_days={days}")
+        response = await self.wait_for_p2p_data(P2P_DICT_PACKAGE, P2P_DICT_MODULE, timeout=45.0)
         logger.info(f"P2P HRV sync response: cmd={response['cmd_id']:#x} code={response['code']:#x} "
                     f"data_len={len(response['data'])}")
         return self._parse_dictionary_samples(response["data"])
