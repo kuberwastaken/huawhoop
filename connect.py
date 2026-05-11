@@ -843,7 +843,7 @@ class Band:
 
     async def get_hrv_samples(self, days: int = 7) -> list[dict]:
         end_ms = int(time.time() * 1000)
-        start_ms = end_ms - days * 24 * 60 * 60 * 1000
+        start_ms = 0 if days <= 0 else end_ms - days * 24 * 60 * 60 * 1000
         payload = self._p2p_dict_request_payload(DICT_HRV_CLASS, start_ms, end_ms)
         seq = await self.send_p2p_command(
             0x02,
@@ -853,7 +853,8 @@ class Band:
             P2P_REMOTE_FINGERPRINT,
             payload,
         )
-        logger.info(f"P2P HRV sync request sent: seq={seq} window_days={days}")
+        window = "full" if start_ms == 0 else f"{days}d"
+        logger.info(f"P2P HRV sync request sent: seq={seq} window={window}")
         response = await self.wait_for_p2p_data(P2P_DICT_PACKAGE, P2P_DICT_MODULE, timeout=45.0)
         logger.info(f"P2P HRV sync response: cmd={response['cmd_id']:#x} code={response['code']:#x} "
                     f"data_len={len(response['data'])}")
@@ -1382,8 +1383,8 @@ async def run():
             logger.warning(f"P2P dictionary-sync ping failed: {e}")
 
         try:
-            hrv_samples = await band.get_hrv_samples(days=7)
-            logger.info(f"HRV samples (7d): count={len(hrv_samples)} "
+            hrv_samples = await band.get_hrv_samples(days=0)
+            logger.info(f"HRV samples: count={len(hrv_samples)} "
                         f"examples={json.dumps(hrv_samples[:5], indent=2)}")
         except Exception as e:
             logger.warning(f"HRV sync probe failed: {e}")
