@@ -8962,6 +8962,12 @@
       "calories": 209,
       "heart_rate": 97,
       "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778530560,
+      "raw": "0400d5",
+      "calories": 213
     }
   ],
   "sleep": [
