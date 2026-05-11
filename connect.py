@@ -342,6 +342,9 @@ def append_jsonl_artifact(filename: str, payload: dict):
         f.write(json.dumps(payload, separators=(",", ":")) + "\n")
     logger.info(f"Appended {path}")
 
+def local_time_label(epoch_seconds: int) -> str:
+    return time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(epoch_seconds))
+
 # ── Band class ────────────────────────────────────────────────────────────────
 
 class Band:
@@ -1387,6 +1390,8 @@ class Band:
         active_steps = [r for r in steps if any(k in r for k in ("steps", "heart_rate", "spo2"))]
         sleep_minutes = sum(r.get("duration_sec", 0) for r in sleep) // 60
         step_total = sum(r.get("steps", 0) for r in steps)
+        step_times = [r["timestamp"] for r in steps if "timestamp" in r]
+        sleep_times = [t for r in sleep for t in (r.get("start"), r.get("end")) if t]
 
         summary = {
             "counts": preview.get("counts", {}),
@@ -1398,6 +1403,12 @@ class Band:
             "spo2_samples": len(spo2),
             "examples": active_steps[:5],
         }
+        if step_times:
+            summary["step_window_start"] = local_time_label(min(step_times))
+            summary["step_window_end"] = local_time_label(max(step_times))
+        if sleep_times:
+            summary["sleep_window_start"] = local_time_label(min(sleep_times))
+            summary["sleep_window_end"] = local_time_label(max(sleep_times))
         if heart_rates:
             summary["heart_rate_min"] = min(heart_rates)
             hr_avg = sum(heart_rates) / len(heart_rates)
@@ -1446,6 +1457,7 @@ async def run():
             preview = await band.get_recent_fitness_preview(hours=24)
             summary = band.summarize_fitness_preview(preview)
             summary["generated_at"] = int(time.time())
+            summary["generated_at_local"] = local_time_label(summary["generated_at"])
             logger.info(f"Recent fitness summary (24h): {json.dumps(summary, indent=2)}")
             save_json_artifact("latest_fitness_preview.json", preview)
             save_json_artifact("latest_recovery_summary.json", summary)
