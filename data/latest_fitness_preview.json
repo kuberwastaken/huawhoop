@@ -1,0 +1,9270 @@
+{
+  "counts": {
+    "steps": 43,
+    "sleep": 4
+  },
+  "steps": [
+    {
+      "record": 0,
+      "timestamp": 1778442960,
+      "raw": "c40200365300",
+      "calories": 54,
+      "heart_rate": 83,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 0,
+      "timestamp": 1778443020,
+      "raw": "c0034f5f00",
+      "heart_rate": 79,
+      "spo2": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 0,
+      "timestamp": 1778443080,
+      "raw": "c0025000",
+      "heart_rate": 80,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 0,
+      "timestamp": 1778443140,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778443200,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778443260,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778443320,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778443380,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778443440,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778443500,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778443560,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778443620,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778443680,
+      "raw": "c0024d00",
+      "heart_rate": 77,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 0,
+      "timestamp": 1778443740,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778443800,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778443860,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778443920,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778443980,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778444040,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778444100,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778444160,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778444220,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778444280,
+      "raw": "c0024e00",
+      "heart_rate": 78,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 0,
+      "timestamp": 1778444340,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778444400,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778444460,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778444520,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778444580,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778444640,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778444700,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778444760,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778444820,
+      "raw": "00"
+    },
+    {
+      "record": 0,
+      "timestamp": 1778444880,
+      "raw": "c0024d00",
+      "heart_rate": 77,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 0,
+      "timestamp": 1778444940,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778445000,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778445060,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778445120,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778445180,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778445240,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778445300,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778445360,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778445420,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778445480,
+      "raw": "c0025300",
+      "heart_rate": 83,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 1,
+      "timestamp": 1778445540,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778445600,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778445660,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778445720,
+      "raw": "c0024b00",
+      "heart_rate": 75,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 1,
+      "timestamp": 1778445780,
+      "raw": "c0025300",
+      "heart_rate": 83,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 1,
+      "timestamp": 1778445840,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778445900,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778445960,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778446020,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778446080,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778446140,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778446200,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778446260,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778446320,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778446380,
+      "raw": "c0025000",
+      "heart_rate": 80,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 1,
+      "timestamp": 1778446440,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778446500,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778446560,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778446620,
+      "raw": "c0034b6200",
+      "heart_rate": 75,
+      "spo2": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 1,
+      "timestamp": 1778446680,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778446740,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778446800,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778446860,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778446920,
+      "raw": "00"
+    },
+    {
+      "record": 1,
+      "timestamp": 1778446980,
+      "raw": "c0024d00",
+      "heart_rate": 77,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 2,
+      "timestamp": 1778447040,
+      "raw": "00"
+    },
+    {
+      "record": 2,
+      "timestamp": 1778447100,
+      "raw": "00"
+    },
+    {
+      "record": 2,
+      "timestamp": 1778447160,
+      "raw": "00"
+    },
+    {
+      "record": 2,
+      "timestamp": 1778447220,
+      "raw": "c003496200",
+      "heart_rate": 73,
+      "spo2": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 2,
+      "timestamp": 1778447280,
+      "raw": "00"
+    },
+    {
+      "record": 2,
+      "timestamp": 1778447340,
+      "raw": "c0024e00",
+      "heart_rate": 78,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 2,
+      "timestamp": 1778447400,
+      "raw": "00"
+    },
+    {
+      "record": 2,
+      "timestamp": 1778447460,
+      "raw": "c0024b00",
+      "heart_rate": 75,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 2,
+      "timestamp": 1778447520,
+      "raw": "c0024900",
+      "heart_rate": 73,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 2,
+      "timestamp": 1778447580,
+      "raw": "00"
+    },
+    {
+      "record": 2,
+      "timestamp": 1778447640,
+      "raw": "00"
+    },
+    {
+      "record": 2,
+      "timestamp": 1778447700,
+      "raw": "00"
+    },
+    {
+      "record": 2,
+      "timestamp": 1778447760,
+      "raw": "0a00010001",
+      "steps": 1,
+      "distance": 1
+    },
+    {
+      "record": 2,
+      "timestamp": 1778447820,
+      "raw": "ce02001503ca00186400",
+      "steps": 21,
+      "calories": 970,
+      "distance": 24,
+      "heart_rate": 100,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 2,
+      "timestamp": 1778447880,
+      "raw": "c40200175200",
+      "calories": 23,
+      "heart_rate": 82,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 2,
+      "timestamp": 1778447940,
+      "raw": "0e001404b50016",
+      "steps": 20,
+      "calories": 1205,
+      "distance": 22
+    },
+    {
+      "record": 2,
+      "timestamp": 1778448000,
+      "raw": "ce02001e043c001b5900",
+      "steps": 30,
+      "calories": 1084,
+      "distance": 27,
+      "heart_rate": 89,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 2,
+      "timestamp": 1778448060,
+      "raw": "00"
+    },
+    {
+      "record": 2,
+      "timestamp": 1778448120,
+      "raw": "c0025500",
+      "heart_rate": 85,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 2,
+      "timestamp": 1778448180,
+      "raw": "00"
+    },
+    {
+      "record": 2,
+      "timestamp": 1778448240,
+      "raw": "00"
+    },
+    {
+      "record": 2,
+      "timestamp": 1778448300,
+      "raw": "00"
+    },
+    {
+      "record": 2,
+      "timestamp": 1778448360,
+      "raw": "00"
+    },
+    {
+      "record": 2,
+      "timestamp": 1778448420,
+      "raw": "00"
+    },
+    {
+      "record": 2,
+      "timestamp": 1778448480,
+      "raw": "00"
+    },
+    {
+      "record": 2,
+      "timestamp": 1778448540,
+      "raw": "00"
+    },
+    {
+      "record": 2,
+      "timestamp": 1778448600,
+      "raw": "00"
+    },
+    {
+      "record": 2,
+      "timestamp": 1778448660,
+      "raw": "00"
+    },
+    {
+      "record": 2,
+      "timestamp": 1778448720,
+      "raw": "c0024900",
+      "heart_rate": 73,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 2,
+      "timestamp": 1778448780,
+      "raw": "00"
+    },
+    {
+      "record": 2,
+      "timestamp": 1778448840,
+      "raw": "00"
+    },
+    {
+      "record": 2,
+      "timestamp": 1778448900,
+      "raw": "00"
+    },
+    {
+      "record": 2,
+      "timestamp": 1778448960,
+      "raw": "00"
+    },
+    {
+      "record": 2,
+      "timestamp": 1778449020,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778449080,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778449140,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778449200,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778449260,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778449320,
+      "raw": "c0025200",
+      "heart_rate": 82,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 3,
+      "timestamp": 1778449380,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778449440,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778449500,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778449560,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778449620,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778449680,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778449740,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778449800,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778449860,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778449920,
+      "raw": "c0025000",
+      "heart_rate": 80,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 3,
+      "timestamp": 1778449980,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778450040,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778450100,
+      "raw": "c0024b00",
+      "heart_rate": 75,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 3,
+      "timestamp": 1778450160,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778450220,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778450280,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778450340,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778450400,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778450460,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778450520,
+      "raw": "c0024f00",
+      "heart_rate": 79,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 3,
+      "timestamp": 1778450580,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778450640,
+      "raw": "ca02001500195f00",
+      "steps": 21,
+      "distance": 25,
+      "heart_rate": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 3,
+      "timestamp": 1778450700,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778450760,
+      "raw": "c0024d00",
+      "heart_rate": 77,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 3,
+      "timestamp": 1778450820,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778450880,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778450940,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778451000,
+      "raw": "00"
+    },
+    {
+      "record": 3,
+      "timestamp": 1778451060,
+      "raw": "00"
+    },
+    {
+      "record": 4,
+      "timestamp": 1778451120,
+      "raw": "00"
+    },
+    {
+      "record": 4,
+      "timestamp": 1778451180,
+      "raw": "00"
+    },
+    {
+      "record": 4,
+      "timestamp": 1778451240,
+      "raw": "c0024d00",
+      "heart_rate": 77,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 4,
+      "timestamp": 1778451300,
+      "raw": "c0024800",
+      "heart_rate": 72,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 4,
+      "timestamp": 1778451360,
+      "raw": "c0024900",
+      "heart_rate": 73,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 4,
+      "timestamp": 1778451420,
+      "raw": "c0025e00",
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 4,
+      "timestamp": 1778451480,
+      "raw": "ca02000a000c5700",
+      "steps": 10,
+      "distance": 12,
+      "heart_rate": 87,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 4,
+      "timestamp": 1778451540,
+      "raw": "c0025700",
+      "heart_rate": 87,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 4,
+      "timestamp": 1778451600,
+      "raw": "00"
+    },
+    {
+      "record": 4,
+      "timestamp": 1778451660,
+      "raw": "c0024d00",
+      "heart_rate": 77,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 4,
+      "timestamp": 1778451720,
+      "raw": "00"
+    },
+    {
+      "record": 4,
+      "timestamp": 1778451780,
+      "raw": "00"
+    },
+    {
+      "record": 4,
+      "timestamp": 1778451840,
+      "raw": "00"
+    },
+    {
+      "record": 4,
+      "timestamp": 1778451900,
+      "raw": "c0024500",
+      "heart_rate": 69,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 4,
+      "timestamp": 1778451960,
+      "raw": "c0024d00",
+      "heart_rate": 77,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 4,
+      "timestamp": 1778452020,
+      "raw": "00"
+    },
+    {
+      "record": 4,
+      "timestamp": 1778452080,
+      "raw": "00"
+    },
+    {
+      "record": 4,
+      "timestamp": 1778452140,
+      "raw": "00"
+    },
+    {
+      "record": 4,
+      "timestamp": 1778452200,
+      "raw": "c003436349",
+      "heart_rate": 67,
+      "spo2": 99,
+      "resting_heart_rate": 73
+    },
+    {
+      "record": 4,
+      "timestamp": 1778452260,
+      "raw": "00"
+    },
+    {
+      "record": 4,
+      "timestamp": 1778452320,
+      "raw": "00"
+    },
+    {
+      "record": 4,
+      "timestamp": 1778452380,
+      "raw": "c0024b00",
+      "heart_rate": 75,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 4,
+      "timestamp": 1778452440,
+      "raw": "00"
+    },
+    {
+      "record": 4,
+      "timestamp": 1778452500,
+      "raw": "00"
+    },
+    {
+      "record": 4,
+      "timestamp": 1778452560,
+      "raw": "00"
+    },
+    {
+      "record": 4,
+      "timestamp": 1778452620,
+      "raw": "00"
+    },
+    {
+      "record": 4,
+      "timestamp": 1778452680,
+      "raw": "c0024f00",
+      "heart_rate": 79,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 4,
+      "timestamp": 1778452740,
+      "raw": "c0025100",
+      "heart_rate": 81,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 4,
+      "timestamp": 1778452800,
+      "raw": "c0025000",
+      "heart_rate": 80,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 4,
+      "timestamp": 1778452860,
+      "raw": "00"
+    },
+    {
+      "record": 4,
+      "timestamp": 1778452920,
+      "raw": "00"
+    },
+    {
+      "record": 4,
+      "timestamp": 1778452980,
+      "raw": "00"
+    },
+    {
+      "record": 4,
+      "timestamp": 1778453040,
+      "raw": "00"
+    },
+    {
+      "record": 4,
+      "timestamp": 1778453100,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778453160,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778453220,
+      "raw": "c0034d6200",
+      "heart_rate": 77,
+      "spo2": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 5,
+      "timestamp": 1778453280,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778453340,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778453400,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778453460,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778453520,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778453580,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778453640,
+      "raw": "c0034d6100",
+      "heart_rate": 77,
+      "spo2": 97,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 5,
+      "timestamp": 1778453700,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778453760,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778453820,
+      "raw": "c0024c00",
+      "heart_rate": 76,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 5,
+      "timestamp": 1778453880,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778453940,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778454000,
+      "raw": "c0034d6100",
+      "heart_rate": 77,
+      "spo2": 97,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 5,
+      "timestamp": 1778454060,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778454120,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778454180,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778454240,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778454300,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778454360,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778454420,
+      "raw": "c0024c00",
+      "heart_rate": 76,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 5,
+      "timestamp": 1778454480,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778454540,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778454600,
+      "raw": "c0034d6100",
+      "heart_rate": 77,
+      "spo2": 97,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 5,
+      "timestamp": 1778454660,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778454720,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778454780,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778454840,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778454900,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778454960,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778455020,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778455080,
+      "raw": "00"
+    },
+    {
+      "record": 5,
+      "timestamp": 1778455140,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778455200,
+      "raw": "c0034d6200",
+      "heart_rate": 77,
+      "spo2": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 6,
+      "timestamp": 1778455260,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778455320,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778455380,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778455440,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778455500,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778455560,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778455620,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778455680,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778455740,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778455800,
+      "raw": "c003446300",
+      "heart_rate": 68,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 6,
+      "timestamp": 1778455860,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778455920,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778455980,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778456040,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778456100,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778456160,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778456220,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778456280,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778456340,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778456400,
+      "raw": "c0034b6300",
+      "heart_rate": 75,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 6,
+      "timestamp": 1778456460,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778456520,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778456580,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778456640,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778456700,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778456760,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778456820,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778456880,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778456940,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778457000,
+      "raw": "c003476300",
+      "heart_rate": 71,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 6,
+      "timestamp": 1778457060,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778457120,
+      "raw": "00"
+    },
+    {
+      "record": 6,
+      "timestamp": 1778457180,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778457240,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778457300,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778457360,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778457420,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778457480,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778457540,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778457600,
+      "raw": "c0034e6300",
+      "heart_rate": 78,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 7,
+      "timestamp": 1778457660,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778457720,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778457780,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778457840,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778457900,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778457960,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778458020,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778458080,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778458140,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778458200,
+      "raw": "c003426200",
+      "heart_rate": 66,
+      "spo2": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 7,
+      "timestamp": 1778458260,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778458320,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778458380,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778458440,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778458500,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778458560,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778458620,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778458680,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778458740,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778458800,
+      "raw": "c0033f6300",
+      "heart_rate": 63,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 7,
+      "timestamp": 1778458860,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778458920,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778458980,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778459040,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778459100,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778459160,
+      "raw": "00"
+    },
+    {
+      "record": 7,
+      "timestamp": 1778459220,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778459280,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778459340,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778459400,
+      "raw": "c003416300",
+      "heart_rate": 65,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 8,
+      "timestamp": 1778459460,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778459520,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778459580,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778459640,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778459700,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778459760,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778459820,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778459880,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778459940,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778460000,
+      "raw": "c0033b6300",
+      "heart_rate": 59,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 8,
+      "timestamp": 1778460060,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778460120,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778460180,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778460240,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778460300,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778460360,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778460420,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778460480,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778460540,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778460600,
+      "raw": "c003426300",
+      "heart_rate": 66,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 8,
+      "timestamp": 1778460660,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778460720,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778460780,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778460840,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778460900,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778460960,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778461020,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778461080,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778461140,
+      "raw": "00"
+    },
+    {
+      "record": 8,
+      "timestamp": 1778461200,
+      "raw": "c0033f5f00",
+      "heart_rate": 63,
+      "spo2": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 8,
+      "timestamp": 1778461260,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778461320,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778461380,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778461440,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778461500,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778461560,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778461620,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778461680,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778461740,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778461800,
+      "raw": "c0033e5f00",
+      "heart_rate": 62,
+      "spo2": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 9,
+      "timestamp": 1778461860,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778461920,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778461980,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778462040,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778462100,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778462160,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778462220,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778462280,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778462340,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778462400,
+      "raw": "c003416200",
+      "heart_rate": 65,
+      "spo2": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 9,
+      "timestamp": 1778462460,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778462520,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778462580,
+      "raw": "c0024800",
+      "heart_rate": 72,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 9,
+      "timestamp": 1778462640,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778462700,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778462760,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778462820,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778462880,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778462940,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778463000,
+      "raw": "c003446300",
+      "heart_rate": 68,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 9,
+      "timestamp": 1778463060,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778463120,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778463180,
+      "raw": "c0024b00",
+      "heart_rate": 75,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 9,
+      "timestamp": 1778463240,
+      "raw": "00"
+    },
+    {
+      "record": 9,
+      "timestamp": 1778463300,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778463360,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778463420,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778463480,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778463540,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778463600,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778463660,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778463720,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778463780,
+      "raw": "c0024800",
+      "heart_rate": 72,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 10,
+      "timestamp": 1778463840,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778463900,
+      "raw": "c0024900",
+      "heart_rate": 73,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 10,
+      "timestamp": 1778463960,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778464020,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778464080,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778464140,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778464200,
+      "raw": "c0033e6100",
+      "heart_rate": 62,
+      "spo2": 97,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 10,
+      "timestamp": 1778464260,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778464320,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778464380,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778464440,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778464500,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778464560,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778464620,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778464680,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778464740,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778464800,
+      "raw": "c003456200",
+      "heart_rate": 69,
+      "spo2": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 10,
+      "timestamp": 1778464860,
+      "raw": "c0024a00",
+      "heart_rate": 74,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 10,
+      "timestamp": 1778464920,
+      "raw": "0e001b041f001b",
+      "steps": 27,
+      "calories": 1055,
+      "distance": 27
+    },
+    {
+      "record": 10,
+      "timestamp": 1778464980,
+      "raw": "ce0200230741001c5143",
+      "steps": 35,
+      "calories": 1857,
+      "distance": 28,
+      "heart_rate": 81,
+      "resting_heart_rate": 67
+    },
+    {
+      "record": 10,
+      "timestamp": 1778465040,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778465100,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778465160,
+      "raw": "c0025400",
+      "heart_rate": 84,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 10,
+      "timestamp": 1778465220,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778465280,
+      "raw": "00"
+    },
+    {
+      "record": 10,
+      "timestamp": 1778465340,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778465400,
+      "raw": "c003596300",
+      "heart_rate": 89,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 11,
+      "timestamp": 1778465460,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778465520,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778465580,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778465640,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778465700,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778465760,
+      "raw": "c0024800",
+      "heart_rate": 72,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 11,
+      "timestamp": 1778465820,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778465880,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778465940,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778466000,
+      "raw": "c0034e6300",
+      "heart_rate": 78,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 11,
+      "timestamp": 1778466060,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778466120,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778466180,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778466240,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778466300,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778466360,
+      "raw": "c0024900",
+      "heart_rate": 73,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 11,
+      "timestamp": 1778466420,
+      "raw": "c0024a00",
+      "heart_rate": 74,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 11,
+      "timestamp": 1778466480,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778466540,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778466600,
+      "raw": "c0034b6300",
+      "heart_rate": 75,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 11,
+      "timestamp": 1778466660,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778466720,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778466780,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778466840,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778466900,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778466960,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778467020,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778467080,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778467140,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778467200,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778467260,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778467320,
+      "raw": "00"
+    },
+    {
+      "record": 11,
+      "timestamp": 1778467380,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778467440,
+      "raw": "c003496300",
+      "heart_rate": 73,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 12,
+      "timestamp": 1778467500,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778467560,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778467620,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778467680,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778467740,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778467800,
+      "raw": "c0034b6300",
+      "heart_rate": 75,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 12,
+      "timestamp": 1778467860,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778467920,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778467980,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778468040,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778468100,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778468160,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778468220,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778468280,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778468340,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778468400,
+      "raw": "c003386300",
+      "heart_rate": 56,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 12,
+      "timestamp": 1778468460,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778468520,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778468580,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778468640,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778468700,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778468760,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778468820,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778468880,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778468940,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778469000,
+      "raw": "c003416300",
+      "heart_rate": 65,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 12,
+      "timestamp": 1778469060,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778469120,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778469180,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778469240,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778469300,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778469360,
+      "raw": "00"
+    },
+    {
+      "record": 12,
+      "timestamp": 1778469420,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778469480,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778469540,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778469600,
+      "raw": "c0033d6300",
+      "heart_rate": 61,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 13,
+      "timestamp": 1778469660,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778469720,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778469780,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778469840,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778469900,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778469960,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778470020,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778470080,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778470140,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778470200,
+      "raw": "c003466300",
+      "heart_rate": 70,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 13,
+      "timestamp": 1778470260,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778470320,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778470380,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778470440,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778470500,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778470560,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778470620,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778470680,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778470740,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778470800,
+      "raw": "c0034c6300",
+      "heart_rate": 76,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 13,
+      "timestamp": 1778470860,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778470920,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778470980,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778471040,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778471100,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778471160,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778471220,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778471280,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778471340,
+      "raw": "00"
+    },
+    {
+      "record": 13,
+      "timestamp": 1778471400,
+      "raw": "c003405e00",
+      "heart_rate": 64,
+      "spo2": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 13,
+      "timestamp": 1778471460,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778471520,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778471580,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778471640,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778471700,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778471760,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778471820,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778471880,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778471940,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778472000,
+      "raw": "c003426200",
+      "heart_rate": 66,
+      "spo2": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 14,
+      "timestamp": 1778472060,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778472120,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778472180,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778472240,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778472300,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778472360,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778472420,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778472480,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778472540,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778472600,
+      "raw": "c003466200",
+      "heart_rate": 70,
+      "spo2": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 14,
+      "timestamp": 1778472660,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778472720,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778472780,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778472840,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778472900,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778472960,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778473020,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778473080,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778473140,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778473200,
+      "raw": "c003416300",
+      "heart_rate": 65,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 14,
+      "timestamp": 1778473260,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778473320,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778473380,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778473440,
+      "raw": "00"
+    },
+    {
+      "record": 14,
+      "timestamp": 1778473500,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778473560,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778473620,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778473680,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778473740,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778473800,
+      "raw": "c003466300",
+      "heart_rate": 70,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 15,
+      "timestamp": 1778473860,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778473920,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778473980,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778474040,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778474100,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778474160,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778474220,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778474280,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778474340,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778474400,
+      "raw": "c003356300",
+      "heart_rate": 53,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 15,
+      "timestamp": 1778474460,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778474520,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778474580,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778474640,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778474700,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778474760,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778474820,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778474880,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778474940,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778475000,
+      "raw": "c0033f6300",
+      "heart_rate": 63,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 15,
+      "timestamp": 1778475060,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778475120,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778475180,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778475240,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778475300,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778475360,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778475420,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778475480,
+      "raw": "00"
+    },
+    {
+      "record": 15,
+      "timestamp": 1778475540,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778475600,
+      "raw": "c0034c6300",
+      "heart_rate": 76,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 16,
+      "timestamp": 1778475660,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778475720,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778475780,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778475840,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778475900,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778475960,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778476020,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778476080,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778476140,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778476200,
+      "raw": "c0033e6100",
+      "heart_rate": 62,
+      "spo2": 97,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 16,
+      "timestamp": 1778476260,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778476320,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778476380,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778476440,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778476500,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778476560,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778476620,
+      "raw": "c0024100",
+      "heart_rate": 65,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 16,
+      "timestamp": 1778476680,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778476740,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778476800,
+      "raw": "c0023943",
+      "heart_rate": 57,
+      "resting_heart_rate": 67
+    },
+    {
+      "record": 16,
+      "timestamp": 1778476860,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778476920,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778476980,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778477040,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778477100,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778477160,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778477220,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778477280,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778477340,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778477400,
+      "raw": "c0024f00",
+      "heart_rate": 79,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 16,
+      "timestamp": 1778477460,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778477520,
+      "raw": "00"
+    },
+    {
+      "record": 16,
+      "timestamp": 1778477580,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778477640,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778477700,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778477760,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778477820,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778477880,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778477940,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778478000,
+      "raw": "c0024500",
+      "heart_rate": 69,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 17,
+      "timestamp": 1778478060,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778478120,
+      "raw": "c0024900",
+      "heart_rate": 73,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 17,
+      "timestamp": 1778478180,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778478240,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778478300,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778478360,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778478420,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778478480,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778478540,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778478600,
+      "raw": "c0034c6000",
+      "heart_rate": 76,
+      "spo2": 96,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 17,
+      "timestamp": 1778478660,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778478720,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778478780,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778478840,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778478900,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778478960,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778479020,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778479080,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778479140,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778479200,
+      "raw": "c003496300",
+      "heart_rate": 73,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 17,
+      "timestamp": 1778479260,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778479320,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778479380,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778479440,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778479500,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778479560,
+      "raw": "00"
+    },
+    {
+      "record": 17,
+      "timestamp": 1778479620,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778479680,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778479740,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778479800,
+      "raw": "c0033a6300",
+      "heart_rate": 58,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 18,
+      "timestamp": 1778479860,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778479920,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778479980,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778480040,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778480100,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778480160,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778480220,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778480280,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778480340,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778480400,
+      "raw": "c0034b6300",
+      "heart_rate": 75,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 18,
+      "timestamp": 1778480460,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778480520,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778480580,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778480640,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778480700,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778480760,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778480820,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778480880,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778480940,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778481000,
+      "raw": "c0034a5f00",
+      "heart_rate": 74,
+      "spo2": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 18,
+      "timestamp": 1778481060,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778481120,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778481180,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778481240,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778481300,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778481360,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778481420,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778481480,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778481540,
+      "raw": "00"
+    },
+    {
+      "record": 18,
+      "timestamp": 1778481600,
+      "raw": "c003486000",
+      "heart_rate": 72,
+      "spo2": 96,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 18,
+      "timestamp": 1778481660,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778481720,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778481780,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778481840,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778481900,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778481960,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778482020,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778482080,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778482140,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778482200,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778482260,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778482320,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778482380,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778482440,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778482500,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778482560,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778482620,
+      "raw": "c0034b6200",
+      "heart_rate": 75,
+      "spo2": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 19,
+      "timestamp": 1778482680,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778482740,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778482800,
+      "raw": "c003466200",
+      "heart_rate": 70,
+      "spo2": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 19,
+      "timestamp": 1778482860,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778482920,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778482980,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778483040,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778483100,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778483160,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778483220,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778483280,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778483340,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778483400,
+      "raw": "c0034d6300",
+      "heart_rate": 77,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 19,
+      "timestamp": 1778483460,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778483520,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778483580,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778483640,
+      "raw": "00"
+    },
+    {
+      "record": 19,
+      "timestamp": 1778483700,
+      "raw": "c0025300",
+      "heart_rate": 83,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 20,
+      "timestamp": 1778483760,
+      "raw": "00"
+    },
+    {
+      "record": 20,
+      "timestamp": 1778483820,
+      "raw": "00"
+    },
+    {
+      "record": 20,
+      "timestamp": 1778483880,
+      "raw": "00"
+    },
+    {
+      "record": 20,
+      "timestamp": 1778483940,
+      "raw": "00"
+    },
+    {
+      "record": 20,
+      "timestamp": 1778484000,
+      "raw": "c0034d6300",
+      "heart_rate": 77,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 20,
+      "timestamp": 1778484060,
+      "raw": "00"
+    },
+    {
+      "record": 20,
+      "timestamp": 1778484120,
+      "raw": "00"
+    },
+    {
+      "record": 20,
+      "timestamp": 1778484180,
+      "raw": "00"
+    },
+    {
+      "record": 20,
+      "timestamp": 1778484240,
+      "raw": "00"
+    },
+    {
+      "record": 20,
+      "timestamp": 1778484300,
+      "raw": "00"
+    },
+    {
+      "record": 20,
+      "timestamp": 1778484360,
+      "raw": "00"
+    },
+    {
+      "record": 20,
+      "timestamp": 1778484420,
+      "raw": "00"
+    },
+    {
+      "record": 20,
+      "timestamp": 1778484480,
+      "raw": "00"
+    },
+    {
+      "record": 20,
+      "timestamp": 1778484540,
+      "raw": "00"
+    },
+    {
+      "record": 20,
+      "timestamp": 1778484600,
+      "raw": "c0034c6300",
+      "heart_rate": 76,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 20,
+      "timestamp": 1778484660,
+      "raw": "00"
+    },
+    {
+      "record": 20,
+      "timestamp": 1778484720,
+      "raw": "00"
+    },
+    {
+      "record": 20,
+      "timestamp": 1778484780,
+      "raw": "00"
+    },
+    {
+      "record": 20,
+      "timestamp": 1778484840,
+      "raw": "00"
+    },
+    {
+      "record": 20,
+      "timestamp": 1778484900,
+      "raw": "00"
+    },
+    {
+      "record": 20,
+      "timestamp": 1778484960,
+      "raw": "00"
+    },
+    {
+      "record": 20,
+      "timestamp": 1778485020,
+      "raw": "00"
+    },
+    {
+      "record": 20,
+      "timestamp": 1778485080,
+      "raw": "00"
+    },
+    {
+      "record": 20,
+      "timestamp": 1778485140,
+      "raw": "c0025000",
+      "heart_rate": 80,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 20,
+      "timestamp": 1778485200,
+      "raw": "00"
+    },
+    {
+      "record": 20,
+      "timestamp": 1778485260,
+      "raw": "00"
+    },
+    {
+      "record": 20,
+      "timestamp": 1778485320,
+      "raw": "0e001402f10016",
+      "steps": 20,
+      "calories": 753,
+      "distance": 22
+    },
+    {
+      "record": 20,
+      "timestamp": 1778485380,
+      "raw": "ca02001500135700",
+      "steps": 21,
+      "distance": 19,
+      "heart_rate": 87,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 20,
+      "timestamp": 1778485440,
+      "raw": "0a00150015",
+      "steps": 21,
+      "distance": 21
+    },
+    {
+      "record": 20,
+      "timestamp": 1778485500,
+      "raw": "c0025200",
+      "heart_rate": 82,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 20,
+      "timestamp": 1778485560,
+      "raw": "ca02002500245400",
+      "steps": 37,
+      "distance": 36,
+      "heart_rate": 84,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 20,
+      "timestamp": 1778485620,
+      "raw": "00"
+    },
+    {
+      "record": 20,
+      "timestamp": 1778485680,
+      "raw": "c0025500",
+      "heart_rate": 85,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 20,
+      "timestamp": 1778485740,
+      "raw": "00"
+    },
+    {
+      "record": 21,
+      "timestamp": 1778485800,
+      "raw": "00"
+    },
+    {
+      "record": 21,
+      "timestamp": 1778485860,
+      "raw": "00"
+    },
+    {
+      "record": 21,
+      "timestamp": 1778485920,
+      "raw": "00"
+    },
+    {
+      "record": 21,
+      "timestamp": 1778485980,
+      "raw": "00"
+    },
+    {
+      "record": 21,
+      "timestamp": 1778486040,
+      "raw": "00"
+    },
+    {
+      "record": 21,
+      "timestamp": 1778486100,
+      "raw": "ce020012000000105600",
+      "steps": 18,
+      "calories": 0,
+      "distance": 16,
+      "heart_rate": 86,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 21,
+      "timestamp": 1778486160,
+      "raw": "0e001c04f70017",
+      "steps": 28,
+      "calories": 1271,
+      "distance": 23
+    },
+    {
+      "record": 21,
+      "timestamp": 1778486220,
+      "raw": "00"
+    },
+    {
+      "record": 21,
+      "timestamp": 1778486280,
+      "raw": "c40200145b00",
+      "calories": 20,
+      "heart_rate": 91,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 21,
+      "timestamp": 1778486340,
+      "raw": "040013",
+      "calories": 19
+    },
+    {
+      "record": 21,
+      "timestamp": 1778486400,
+      "raw": "040023",
+      "calories": 35
+    },
+    {
+      "record": 21,
+      "timestamp": 1778486460,
+      "raw": "040022",
+      "calories": 34
+    },
+    {
+      "record": 21,
+      "timestamp": 1778486520,
+      "raw": "040013",
+      "calories": 19
+    },
+    {
+      "record": 21,
+      "timestamp": 1778486580,
+      "raw": "04001a",
+      "calories": 26
+    },
+    {
+      "record": 21,
+      "timestamp": 1778486640,
+      "raw": "040010",
+      "calories": 16
+    },
+    {
+      "record": 21,
+      "timestamp": 1778486700,
+      "raw": "040008",
+      "calories": 8
+    },
+    {
+      "record": 21,
+      "timestamp": 1778486760,
+      "raw": "040026",
+      "calories": 38
+    },
+    {
+      "record": 21,
+      "timestamp": 1778486820,
+      "raw": "040016",
+      "calories": 22
+    },
+    {
+      "record": 21,
+      "timestamp": 1778486880,
+      "raw": "c0026500",
+      "heart_rate": 101,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 21,
+      "timestamp": 1778486940,
+      "raw": "00"
+    },
+    {
+      "record": 21,
+      "timestamp": 1778487000,
+      "raw": "040026",
+      "calories": 38
+    },
+    {
+      "record": 21,
+      "timestamp": 1778487060,
+      "raw": "040047",
+      "calories": 71
+    },
+    {
+      "record": 21,
+      "timestamp": 1778487120,
+      "raw": "040028",
+      "calories": 40
+    },
+    {
+      "record": 21,
+      "timestamp": 1778487180,
+      "raw": "ce020010008f000d5000",
+      "steps": 16,
+      "calories": 143,
+      "distance": 13,
+      "heart_rate": 80,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 21,
+      "timestamp": 1778487240,
+      "raw": "ce0200120083000e5700",
+      "steps": 18,
+      "calories": 131,
+      "distance": 14,
+      "heart_rate": 87,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 21,
+      "timestamp": 1778487300,
+      "raw": "c402007d5f00",
+      "calories": 125,
+      "heart_rate": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 21,
+      "timestamp": 1778487360,
+      "raw": "04005a",
+      "calories": 90
+    },
+    {
+      "record": 21,
+      "timestamp": 1778487420,
+      "raw": "04001e",
+      "calories": 30
+    },
+    {
+      "record": 21,
+      "timestamp": 1778487480,
+      "raw": "040020",
+      "calories": 32
+    },
+    {
+      "record": 21,
+      "timestamp": 1778487540,
+      "raw": "040053",
+      "calories": 83
+    },
+    {
+      "record": 21,
+      "timestamp": 1778487600,
+      "raw": "040074",
+      "calories": 116
+    },
+    {
+      "record": 21,
+      "timestamp": 1778487660,
+      "raw": "04005c",
+      "calories": 92
+    },
+    {
+      "record": 21,
+      "timestamp": 1778487720,
+      "raw": "04005f",
+      "calories": 95
+    },
+    {
+      "record": 21,
+      "timestamp": 1778487780,
+      "raw": "04004a",
+      "calories": 74
+    },
+    {
+      "record": 22,
+      "timestamp": 1778487840,
+      "raw": "04004b",
+      "calories": 75
+    },
+    {
+      "record": 22,
+      "timestamp": 1778487900,
+      "raw": "c40200635f00",
+      "calories": 99,
+      "heart_rate": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 22,
+      "timestamp": 1778487960,
+      "raw": "040020",
+      "calories": 32
+    },
+    {
+      "record": 22,
+      "timestamp": 1778488020,
+      "raw": "04007d",
+      "calories": 125
+    },
+    {
+      "record": 22,
+      "timestamp": 1778488080,
+      "raw": "c402004d6600",
+      "calories": 77,
+      "heart_rate": 102,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 22,
+      "timestamp": 1778488140,
+      "raw": "c40200185900",
+      "calories": 24,
+      "heart_rate": 89,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 22,
+      "timestamp": 1778488200,
+      "raw": "040012",
+      "calories": 18
+    },
+    {
+      "record": 22,
+      "timestamp": 1778488260,
+      "raw": "04001c",
+      "calories": 28
+    },
+    {
+      "record": 22,
+      "timestamp": 1778488320,
+      "raw": "04000b",
+      "calories": 11
+    },
+    {
+      "record": 22,
+      "timestamp": 1778488380,
+      "raw": "040031",
+      "calories": 49
+    },
+    {
+      "record": 22,
+      "timestamp": 1778488440,
+      "raw": "04002d",
+      "calories": 45
+    },
+    {
+      "record": 22,
+      "timestamp": 1778488500,
+      "raw": "04003f",
+      "calories": 63
+    },
+    {
+      "record": 22,
+      "timestamp": 1778488560,
+      "raw": "ce020031074c002a6a43",
+      "steps": 49,
+      "calories": 1868,
+      "distance": 42,
+      "heart_rate": 106,
+      "resting_heart_rate": 67
+    },
+    {
+      "record": 22,
+      "timestamp": 1778488620,
+      "raw": "c402001d5200",
+      "calories": 29,
+      "heart_rate": 82,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 22,
+      "timestamp": 1778488680,
+      "raw": "c40200135900",
+      "calories": 19,
+      "heart_rate": 89,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 22,
+      "timestamp": 1778488740,
+      "raw": "040009",
+      "calories": 9
+    },
+    {
+      "record": 22,
+      "timestamp": 1778488800,
+      "raw": "0e001b003a0018",
+      "steps": 27,
+      "calories": 58,
+      "distance": 24
+    },
+    {
+      "record": 22,
+      "timestamp": 1778488860,
+      "raw": "c40200275e00",
+      "calories": 39,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 22,
+      "timestamp": 1778488920,
+      "raw": "c40200085900",
+      "calories": 8,
+      "heart_rate": 89,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 22,
+      "timestamp": 1778488980,
+      "raw": "04008c",
+      "calories": 140
+    },
+    {
+      "record": 22,
+      "timestamp": 1778489040,
+      "raw": "ce0200240326001e6800",
+      "steps": 36,
+      "calories": 806,
+      "distance": 30,
+      "heart_rate": 104,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 22,
+      "timestamp": 1778489100,
+      "raw": "0e00360648002d",
+      "steps": 54,
+      "calories": 1608,
+      "distance": 45
+    },
+    {
+      "record": 22,
+      "timestamp": 1778489160,
+      "raw": "04019d",
+      "calories": 413
+    },
+    {
+      "record": 22,
+      "timestamp": 1778489220,
+      "raw": "0e002a087a0023",
+      "steps": 42,
+      "calories": 2170,
+      "distance": 35
+    },
+    {
+      "record": 22,
+      "timestamp": 1778489280,
+      "raw": "040193",
+      "calories": 403
+    },
+    {
+      "record": 22,
+      "timestamp": 1778489340,
+      "raw": "0e003b015b004d",
+      "steps": 59,
+      "calories": 347,
+      "distance": 77
+    },
+    {
+      "record": 22,
+      "timestamp": 1778489400,
+      "raw": "0e0078133d008b",
+      "steps": 120,
+      "calories": 4925,
+      "distance": 139
+    },
+    {
+      "record": 22,
+      "timestamp": 1778489460,
+      "raw": "0e002e094e0030",
+      "steps": 46,
+      "calories": 2382,
+      "distance": 48
+    },
+    {
+      "record": 22,
+      "timestamp": 1778489520,
+      "raw": "04019d",
+      "calories": 413
+    },
+    {
+      "record": 22,
+      "timestamp": 1778489580,
+      "raw": "04019d",
+      "calories": 413
+    },
+    {
+      "record": 22,
+      "timestamp": 1778489640,
+      "raw": "c40200a55600",
+      "calories": 165,
+      "heart_rate": 86,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 22,
+      "timestamp": 1778489700,
+      "raw": "00"
+    },
+    {
+      "record": 22,
+      "timestamp": 1778489760,
+      "raw": "c40200755a00",
+      "calories": 117,
+      "heart_rate": 90,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 22,
+      "timestamp": 1778489820,
+      "raw": "ce020014009200135b00",
+      "steps": 20,
+      "calories": 146,
+      "distance": 19,
+      "heart_rate": 91,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 23,
+      "timestamp": 1778489880,
+      "raw": "ce02008706a500935e00",
+      "steps": 135,
+      "calories": 1701,
+      "distance": 147,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 23,
+      "timestamp": 1778489940,
+      "raw": "ce02006905e9007c5c00",
+      "steps": 105,
+      "calories": 1513,
+      "distance": 124,
+      "heart_rate": 92,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 23,
+      "timestamp": 1778490000,
+      "raw": "c40200265b00",
+      "calories": 38,
+      "heart_rate": 91,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 23,
+      "timestamp": 1778490060,
+      "raw": "c402005a5b00",
+      "calories": 90,
+      "heart_rate": 91,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 23,
+      "timestamp": 1778490120,
+      "raw": "c40200725a00",
+      "calories": 114,
+      "heart_rate": 90,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 23,
+      "timestamp": 1778490180,
+      "raw": "0e007e160e007f",
+      "steps": 126,
+      "calories": 5646,
+      "distance": 127
+    },
+    {
+      "record": 23,
+      "timestamp": 1778490240,
+      "raw": "0e000200790002",
+      "steps": 2,
+      "calories": 121,
+      "distance": 2
+    },
+    {
+      "record": 23,
+      "timestamp": 1778490300,
+      "raw": "04007d",
+      "calories": 125
+    },
+    {
+      "record": 23,
+      "timestamp": 1778490360,
+      "raw": "04007d",
+      "calories": 125
+    },
+    {
+      "record": 23,
+      "timestamp": 1778490420,
+      "raw": "ce03000500620004576200",
+      "steps": 5,
+      "calories": 98,
+      "distance": 4,
+      "heart_rate": 87,
+      "spo2": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 23,
+      "timestamp": 1778490480,
+      "raw": "0a00060004",
+      "steps": 6,
+      "distance": 4
+    },
+    {
+      "record": 23,
+      "timestamp": 1778490540,
+      "raw": "00"
+    },
+    {
+      "record": 23,
+      "timestamp": 1778490600,
+      "raw": "0a0011000d",
+      "steps": 17,
+      "distance": 13
+    },
+    {
+      "record": 23,
+      "timestamp": 1778490660,
+      "raw": "0a00050004",
+      "steps": 5,
+      "distance": 4
+    },
+    {
+      "record": 23,
+      "timestamp": 1778490720,
+      "raw": "ce0200380484002e5a00",
+      "steps": 56,
+      "calories": 1156,
+      "distance": 46,
+      "heart_rate": 90,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 23,
+      "timestamp": 1778490780,
+      "raw": "04007d",
+      "calories": 125
+    },
+    {
+      "record": 23,
+      "timestamp": 1778490840,
+      "raw": "04007d",
+      "calories": 125
+    },
+    {
+      "record": 23,
+      "timestamp": 1778490900,
+      "raw": "04007d",
+      "calories": 125
+    },
+    {
+      "record": 23,
+      "timestamp": 1778490960,
+      "raw": "0e001a045c001d",
+      "steps": 26,
+      "calories": 1116,
+      "distance": 29
+    },
+    {
+      "record": 23,
+      "timestamp": 1778491020,
+      "raw": "c403005a546200",
+      "calories": 90,
+      "heart_rate": 84,
+      "spo2": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 23,
+      "timestamp": 1778491080,
+      "raw": "040066",
+      "calories": 102
+    },
+    {
+      "record": 23,
+      "timestamp": 1778491140,
+      "raw": "040033",
+      "calories": 51
+    },
+    {
+      "record": 23,
+      "timestamp": 1778491200,
+      "raw": "c402001b5400",
+      "calories": 27,
+      "heart_rate": 84,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 23,
+      "timestamp": 1778491260,
+      "raw": "00"
+    },
+    {
+      "record": 23,
+      "timestamp": 1778491320,
+      "raw": "00"
+    },
+    {
+      "record": 23,
+      "timestamp": 1778491380,
+      "raw": "c402002a5e00",
+      "calories": 42,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 23,
+      "timestamp": 1778491440,
+      "raw": "040009",
+      "calories": 9
+    },
+    {
+      "record": 23,
+      "timestamp": 1778491500,
+      "raw": "040027",
+      "calories": 39
+    },
+    {
+      "record": 23,
+      "timestamp": 1778491560,
+      "raw": "040038",
+      "calories": 56
+    },
+    {
+      "record": 23,
+      "timestamp": 1778491620,
+      "raw": "c403001a5a5f00",
+      "calories": 26,
+      "heart_rate": 90,
+      "spo2": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 23,
+      "timestamp": 1778491680,
+      "raw": "040024",
+      "calories": 36
+    },
+    {
+      "record": 23,
+      "timestamp": 1778491740,
+      "raw": "00"
+    },
+    {
+      "record": 23,
+      "timestamp": 1778491800,
+      "raw": "c4030006565e00",
+      "calories": 6,
+      "heart_rate": 86,
+      "spo2": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 23,
+      "timestamp": 1778491860,
+      "raw": "040063",
+      "calories": 99
+    },
+    {
+      "record": 24,
+      "timestamp": 1778491920,
+      "raw": "ce020018008600195f00",
+      "steps": 24,
+      "calories": 134,
+      "distance": 25,
+      "heart_rate": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 24,
+      "timestamp": 1778491980,
+      "raw": "04007e",
+      "calories": 126
+    },
+    {
+      "record": 24,
+      "timestamp": 1778492040,
+      "raw": "c40200535c00",
+      "calories": 83,
+      "heart_rate": 92,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 24,
+      "timestamp": 1778492100,
+      "raw": "040071",
+      "calories": 113
+    },
+    {
+      "record": 24,
+      "timestamp": 1778492160,
+      "raw": "040077",
+      "calories": 119
+    },
+    {
+      "record": 24,
+      "timestamp": 1778492220,
+      "raw": "040066",
+      "calories": 102
+    },
+    {
+      "record": 24,
+      "timestamp": 1778492280,
+      "raw": "040062",
+      "calories": 98
+    },
+    {
+      "record": 24,
+      "timestamp": 1778492340,
+      "raw": "040063",
+      "calories": 99
+    },
+    {
+      "record": 24,
+      "timestamp": 1778492400,
+      "raw": "04006a",
+      "calories": 106
+    },
+    {
+      "record": 24,
+      "timestamp": 1778492460,
+      "raw": "c402002b5a00",
+      "calories": 43,
+      "heart_rate": 90,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 24,
+      "timestamp": 1778492520,
+      "raw": "c40200035600",
+      "calories": 3,
+      "heart_rate": 86,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 24,
+      "timestamp": 1778492580,
+      "raw": "040046",
+      "calories": 70
+    },
+    {
+      "record": 24,
+      "timestamp": 1778492640,
+      "raw": "04002b",
+      "calories": 43
+    },
+    {
+      "record": 24,
+      "timestamp": 1778492700,
+      "raw": "04002e",
+      "calories": 46
+    },
+    {
+      "record": 24,
+      "timestamp": 1778492760,
+      "raw": "040057",
+      "calories": 87
+    },
+    {
+      "record": 24,
+      "timestamp": 1778492820,
+      "raw": "04002d",
+      "calories": 45
+    },
+    {
+      "record": 24,
+      "timestamp": 1778492880,
+      "raw": "040043",
+      "calories": 67
+    },
+    {
+      "record": 24,
+      "timestamp": 1778492940,
+      "raw": "040069",
+      "calories": 105
+    },
+    {
+      "record": 24,
+      "timestamp": 1778493000,
+      "raw": "040069",
+      "calories": 105
+    },
+    {
+      "record": 24,
+      "timestamp": 1778493060,
+      "raw": "040022",
+      "calories": 34
+    },
+    {
+      "record": 24,
+      "timestamp": 1778493120,
+      "raw": "c40200296000",
+      "calories": 41,
+      "heart_rate": 96,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 24,
+      "timestamp": 1778493180,
+      "raw": "04001e",
+      "calories": 30
+    },
+    {
+      "record": 24,
+      "timestamp": 1778493240,
+      "raw": "040057",
+      "calories": 87
+    },
+    {
+      "record": 24,
+      "timestamp": 1778493300,
+      "raw": "040072",
+      "calories": 114
+    },
+    {
+      "record": 24,
+      "timestamp": 1778493360,
+      "raw": "04007d",
+      "calories": 125
+    },
+    {
+      "record": 24,
+      "timestamp": 1778493420,
+      "raw": "040095",
+      "calories": 149
+    },
+    {
+      "record": 24,
+      "timestamp": 1778493480,
+      "raw": "c402009a6200",
+      "calories": 154,
+      "heart_rate": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 24,
+      "timestamp": 1778493540,
+      "raw": "0e001904610019",
+      "steps": 25,
+      "calories": 1121,
+      "distance": 25
+    },
+    {
+      "record": 24,
+      "timestamp": 1778493600,
+      "raw": "040090",
+      "calories": 144
+    },
+    {
+      "record": 24,
+      "timestamp": 1778493660,
+      "raw": "04004e",
+      "calories": 78
+    },
+    {
+      "record": 24,
+      "timestamp": 1778493720,
+      "raw": "c40200a65f00",
+      "calories": 166,
+      "heart_rate": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 24,
+      "timestamp": 1778493780,
+      "raw": "c402012e6a00",
+      "calories": 302,
+      "heart_rate": 106,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 24,
+      "timestamp": 1778493840,
+      "raw": "c40200645d00",
+      "calories": 100,
+      "heart_rate": 93,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 24,
+      "timestamp": 1778493900,
+      "raw": "040030",
+      "calories": 48
+    },
+    {
+      "record": 25,
+      "timestamp": 1778493960,
+      "raw": "040075",
+      "calories": 117
+    },
+    {
+      "record": 25,
+      "timestamp": 1778494020,
+      "raw": "c4030030585f00",
+      "calories": 48,
+      "heart_rate": 88,
+      "spo2": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 25,
+      "timestamp": 1778494080,
+      "raw": "040005",
+      "calories": 5
+    },
+    {
+      "record": 25,
+      "timestamp": 1778494140,
+      "raw": "040017",
+      "calories": 23
+    },
+    {
+      "record": 25,
+      "timestamp": 1778494200,
+      "raw": "040014",
+      "calories": 20
+    },
+    {
+      "record": 25,
+      "timestamp": 1778494260,
+      "raw": "040017",
+      "calories": 23
+    },
+    {
+      "record": 25,
+      "timestamp": 1778494320,
+      "raw": "c40200345d00",
+      "calories": 52,
+      "heart_rate": 93,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 25,
+      "timestamp": 1778494380,
+      "raw": "c0025b00",
+      "heart_rate": 91,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 25,
+      "timestamp": 1778494440,
+      "raw": "c402001e5f00",
+      "calories": 30,
+      "heart_rate": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 25,
+      "timestamp": 1778494500,
+      "raw": "040024",
+      "calories": 36
+    },
+    {
+      "record": 25,
+      "timestamp": 1778494560,
+      "raw": "040045",
+      "calories": 69
+    },
+    {
+      "record": 25,
+      "timestamp": 1778494620,
+      "raw": "040015",
+      "calories": 21
+    },
+    {
+      "record": 25,
+      "timestamp": 1778494680,
+      "raw": "040002",
+      "calories": 2
+    },
+    {
+      "record": 25,
+      "timestamp": 1778494740,
+      "raw": "040057",
+      "calories": 87
+    },
+    {
+      "record": 25,
+      "timestamp": 1778494800,
+      "raw": "c40300fc6b6200",
+      "calories": 252,
+      "heart_rate": 107,
+      "spo2": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 25,
+      "timestamp": 1778494860,
+      "raw": "0402a1",
+      "calories": 673
+    },
+    {
+      "record": 25,
+      "timestamp": 1778494920,
+      "raw": "c40200705700",
+      "calories": 112,
+      "heart_rate": 87,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 25,
+      "timestamp": 1778494980,
+      "raw": "c40200805e00",
+      "calories": 128,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 25,
+      "timestamp": 1778495040,
+      "raw": "c40200b65e00",
+      "calories": 182,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 25,
+      "timestamp": 1778495100,
+      "raw": "040056",
+      "calories": 86
+    },
+    {
+      "record": 25,
+      "timestamp": 1778495160,
+      "raw": "c40200125e00",
+      "calories": 18,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 25,
+      "timestamp": 1778495220,
+      "raw": "04001d",
+      "calories": 29
+    },
+    {
+      "record": 25,
+      "timestamp": 1778495280,
+      "raw": "040005",
+      "calories": 5
+    },
+    {
+      "record": 25,
+      "timestamp": 1778495340,
+      "raw": "040012",
+      "calories": 18
+    },
+    {
+      "record": 25,
+      "timestamp": 1778495400,
+      "raw": "040026",
+      "calories": 38
+    },
+    {
+      "record": 25,
+      "timestamp": 1778495460,
+      "raw": "04007d",
+      "calories": 125
+    },
+    {
+      "record": 25,
+      "timestamp": 1778495520,
+      "raw": "040005",
+      "calories": 5
+    },
+    {
+      "record": 25,
+      "timestamp": 1778495580,
+      "raw": "00"
+    },
+    {
+      "record": 25,
+      "timestamp": 1778495640,
+      "raw": "c40300275a5e40",
+      "calories": 39,
+      "heart_rate": 90,
+      "spo2": 94,
+      "resting_heart_rate": 64
+    },
+    {
+      "record": 25,
+      "timestamp": 1778495700,
+      "raw": "040003",
+      "calories": 3
+    },
+    {
+      "record": 25,
+      "timestamp": 1778495760,
+      "raw": "c40200025800",
+      "calories": 2,
+      "heart_rate": 88,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 25,
+      "timestamp": 1778495820,
+      "raw": "00"
+    },
+    {
+      "record": 25,
+      "timestamp": 1778495880,
+      "raw": "00"
+    },
+    {
+      "record": 25,
+      "timestamp": 1778495940,
+      "raw": "00"
+    },
+    {
+      "record": 26,
+      "timestamp": 1778496000,
+      "raw": "c003576100",
+      "heart_rate": 87,
+      "spo2": 97,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 26,
+      "timestamp": 1778496060,
+      "raw": "040002",
+      "calories": 2
+    },
+    {
+      "record": 26,
+      "timestamp": 1778496120,
+      "raw": "040026",
+      "calories": 38
+    },
+    {
+      "record": 26,
+      "timestamp": 1778496180,
+      "raw": "00"
+    },
+    {
+      "record": 26,
+      "timestamp": 1778496240,
+      "raw": "040030",
+      "calories": 48
+    },
+    {
+      "record": 26,
+      "timestamp": 1778496300,
+      "raw": "04002c",
+      "calories": 44
+    },
+    {
+      "record": 26,
+      "timestamp": 1778496360,
+      "raw": "c402000f5600",
+      "calories": 15,
+      "heart_rate": 86,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 26,
+      "timestamp": 1778496420,
+      "raw": "00"
+    },
+    {
+      "record": 26,
+      "timestamp": 1778496480,
+      "raw": "040006",
+      "calories": 6
+    },
+    {
+      "record": 26,
+      "timestamp": 1778496540,
+      "raw": "040011",
+      "calories": 17
+    },
+    {
+      "record": 26,
+      "timestamp": 1778496600,
+      "raw": "c4030025596200",
+      "calories": 37,
+      "heart_rate": 89,
+      "spo2": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 26,
+      "timestamp": 1778496660,
+      "raw": "040039",
+      "calories": 57
+    },
+    {
+      "record": 26,
+      "timestamp": 1778496720,
+      "raw": "040069",
+      "calories": 105
+    },
+    {
+      "record": 26,
+      "timestamp": 1778496780,
+      "raw": "040062",
+      "calories": 98
+    },
+    {
+      "record": 26,
+      "timestamp": 1778496840,
+      "raw": "04008b",
+      "calories": 139
+    },
+    {
+      "record": 26,
+      "timestamp": 1778496900,
+      "raw": "c40200815900",
+      "calories": 129,
+      "heart_rate": 89,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 26,
+      "timestamp": 1778496960,
+      "raw": "c402005b5700",
+      "calories": 91,
+      "heart_rate": 87,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 26,
+      "timestamp": 1778497020,
+      "raw": "c402009b5a00",
+      "calories": 155,
+      "heart_rate": 90,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 26,
+      "timestamp": 1778497080,
+      "raw": "04009b",
+      "calories": 155
+    },
+    {
+      "record": 26,
+      "timestamp": 1778497140,
+      "raw": "040092",
+      "calories": 146
+    },
+    {
+      "record": 26,
+      "timestamp": 1778497200,
+      "raw": "040018",
+      "calories": 24
+    },
+    {
+      "record": 26,
+      "timestamp": 1778497260,
+      "raw": "c40200545b00",
+      "calories": 84,
+      "heart_rate": 91,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 26,
+      "timestamp": 1778497320,
+      "raw": "04000e",
+      "calories": 14
+    },
+    {
+      "record": 26,
+      "timestamp": 1778497380,
+      "raw": "040018",
+      "calories": 24
+    },
+    {
+      "record": 26,
+      "timestamp": 1778497440,
+      "raw": "04001d",
+      "calories": 29
+    },
+    {
+      "record": 26,
+      "timestamp": 1778497500,
+      "raw": "04006f",
+      "calories": 111
+    },
+    {
+      "record": 26,
+      "timestamp": 1778497560,
+      "raw": "040042",
+      "calories": 66
+    },
+    {
+      "record": 26,
+      "timestamp": 1778497620,
+      "raw": "c403000c5d5e00",
+      "calories": 12,
+      "heart_rate": 93,
+      "spo2": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 26,
+      "timestamp": 1778497680,
+      "raw": "040042",
+      "calories": 66
+    },
+    {
+      "record": 26,
+      "timestamp": 1778497740,
+      "raw": "040075",
+      "calories": 117
+    },
+    {
+      "record": 26,
+      "timestamp": 1778497800,
+      "raw": "04007d",
+      "calories": 125
+    },
+    {
+      "record": 26,
+      "timestamp": 1778497860,
+      "raw": "ce02003d060500376600",
+      "steps": 61,
+      "calories": 1541,
+      "distance": 55,
+      "heart_rate": 102,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 26,
+      "timestamp": 1778497920,
+      "raw": "c402004c5f00",
+      "calories": 76,
+      "heart_rate": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 26,
+      "timestamp": 1778497980,
+      "raw": "c402004c5900",
+      "calories": 76,
+      "heart_rate": 89,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 27,
+      "timestamp": 1778498040,
+      "raw": "04005e",
+      "calories": 94
+    },
+    {
+      "record": 27,
+      "timestamp": 1778498100,
+      "raw": "040037",
+      "calories": 55
+    },
+    {
+      "record": 27,
+      "timestamp": 1778498160,
+      "raw": "04004d",
+      "calories": 77
+    },
+    {
+      "record": 27,
+      "timestamp": 1778498220,
+      "raw": "c403006a5a6200",
+      "calories": 106,
+      "heart_rate": 90,
+      "spo2": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 27,
+      "timestamp": 1778498280,
+      "raw": "040090",
+      "calories": 144
+    },
+    {
+      "record": 27,
+      "timestamp": 1778498340,
+      "raw": "04008f",
+      "calories": 143
+    },
+    {
+      "record": 27,
+      "timestamp": 1778498400,
+      "raw": "c402004c5700",
+      "calories": 76,
+      "heart_rate": 87,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 27,
+      "timestamp": 1778498460,
+      "raw": "ce020010009000115a00",
+      "steps": 16,
+      "calories": 144,
+      "distance": 17,
+      "heart_rate": 90,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 27,
+      "timestamp": 1778498520,
+      "raw": "c40200085700",
+      "calories": 8,
+      "heart_rate": 87,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 27,
+      "timestamp": 1778498580,
+      "raw": "c40200585e00",
+      "calories": 88,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 27,
+      "timestamp": 1778498640,
+      "raw": "040035",
+      "calories": 53
+    },
+    {
+      "record": 27,
+      "timestamp": 1778498700,
+      "raw": "040062",
+      "calories": 98
+    },
+    {
+      "record": 27,
+      "timestamp": 1778498760,
+      "raw": "040071",
+      "calories": 113
+    },
+    {
+      "record": 27,
+      "timestamp": 1778498820,
+      "raw": "c4030059566100",
+      "calories": 89,
+      "heart_rate": 86,
+      "spo2": 97,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 27,
+      "timestamp": 1778498880,
+      "raw": "04007f",
+      "calories": 127
+    },
+    {
+      "record": 27,
+      "timestamp": 1778498940,
+      "raw": "c40200875d00",
+      "calories": 135,
+      "heart_rate": 93,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 27,
+      "timestamp": 1778499000,
+      "raw": "c402009f5e00",
+      "calories": 159,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 27,
+      "timestamp": 1778499060,
+      "raw": "040089",
+      "calories": 137
+    },
+    {
+      "record": 27,
+      "timestamp": 1778499120,
+      "raw": "c402006e5e00",
+      "calories": 110,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 27,
+      "timestamp": 1778499180,
+      "raw": "c40200815a00",
+      "calories": 129,
+      "heart_rate": 90,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 27,
+      "timestamp": 1778499240,
+      "raw": "c40200a45e00",
+      "calories": 164,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 27,
+      "timestamp": 1778499300,
+      "raw": "0e001e00ae0017",
+      "steps": 30,
+      "calories": 174,
+      "distance": 23
+    },
+    {
+      "record": 27,
+      "timestamp": 1778499360,
+      "raw": "c402006c4700",
+      "calories": 108,
+      "heart_rate": 71,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 27,
+      "timestamp": 1778499420,
+      "raw": "00"
+    },
+    {
+      "record": 27,
+      "timestamp": 1778499480,
+      "raw": "00"
+    },
+    {
+      "record": 27,
+      "timestamp": 1778499540,
+      "raw": "00"
+    },
+    {
+      "record": 27,
+      "timestamp": 1778499600,
+      "raw": "00"
+    },
+    {
+      "record": 27,
+      "timestamp": 1778499660,
+      "raw": "00"
+    },
+    {
+      "record": 27,
+      "timestamp": 1778499720,
+      "raw": "00"
+    },
+    {
+      "record": 27,
+      "timestamp": 1778499780,
+      "raw": "c402005c5e00",
+      "calories": 92,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 27,
+      "timestamp": 1778499840,
+      "raw": "0400aa",
+      "calories": 170
+    },
+    {
+      "record": 27,
+      "timestamp": 1778499900,
+      "raw": "c402026d6900",
+      "calories": 621,
+      "heart_rate": 105,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 27,
+      "timestamp": 1778499960,
+      "raw": "0402fb",
+      "calories": 763
+    },
+    {
+      "record": 27,
+      "timestamp": 1778500020,
+      "raw": "c402022f6800",
+      "calories": 559,
+      "heart_rate": 104,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 28,
+      "timestamp": 1778500080,
+      "raw": "c40203026e00",
+      "calories": 770,
+      "heart_rate": 110,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 28,
+      "timestamp": 1778500140,
+      "raw": "040218",
+      "calories": 536
+    },
+    {
+      "record": 28,
+      "timestamp": 1778500200,
+      "raw": "040187",
+      "calories": 391
+    },
+    {
+      "record": 28,
+      "timestamp": 1778500260,
+      "raw": "040102",
+      "calories": 258
+    },
+    {
+      "record": 28,
+      "timestamp": 1778500320,
+      "raw": "040048",
+      "calories": 72
+    },
+    {
+      "record": 28,
+      "timestamp": 1778500380,
+      "raw": "040116",
+      "calories": 278
+    },
+    {
+      "record": 28,
+      "timestamp": 1778500440,
+      "raw": "040323",
+      "calories": 803
+    },
+    {
+      "record": 28,
+      "timestamp": 1778500500,
+      "raw": "04013f",
+      "calories": 319
+    },
+    {
+      "record": 28,
+      "timestamp": 1778500560,
+      "raw": "0400f7",
+      "calories": 247
+    },
+    {
+      "record": 28,
+      "timestamp": 1778500620,
+      "raw": "c40301bc6a5f00",
+      "calories": 444,
+      "heart_rate": 106,
+      "spo2": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 28,
+      "timestamp": 1778500680,
+      "raw": "c402009b6500",
+      "calories": 155,
+      "heart_rate": 101,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 28,
+      "timestamp": 1778500740,
+      "raw": "04004c",
+      "calories": 76
+    },
+    {
+      "record": 28,
+      "timestamp": 1778500800,
+      "raw": "0400be",
+      "calories": 190
+    },
+    {
+      "record": 28,
+      "timestamp": 1778500860,
+      "raw": "040115",
+      "calories": 277
+    },
+    {
+      "record": 28,
+      "timestamp": 1778500920,
+      "raw": "c40200c16400",
+      "calories": 193,
+      "heart_rate": 100,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 28,
+      "timestamp": 1778500980,
+      "raw": "04003c",
+      "calories": 60
+    },
+    {
+      "record": 28,
+      "timestamp": 1778501040,
+      "raw": "c40200cb6b00",
+      "calories": 203,
+      "heart_rate": 107,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 28,
+      "timestamp": 1778501100,
+      "raw": "0e00110270000e",
+      "steps": 17,
+      "calories": 624,
+      "distance": 14
+    },
+    {
+      "record": 28,
+      "timestamp": 1778501160,
+      "raw": "c40202a76b00",
+      "calories": 679,
+      "heart_rate": 107,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 28,
+      "timestamp": 1778501220,
+      "raw": "0e000c03cc000b",
+      "steps": 12,
+      "calories": 972,
+      "distance": 11
+    },
+    {
+      "record": 28,
+      "timestamp": 1778501280,
+      "raw": "0e002109d3001b",
+      "steps": 33,
+      "calories": 2515,
+      "distance": 27
+    },
+    {
+      "record": 28,
+      "timestamp": 1778501340,
+      "raw": "04013c",
+      "calories": 316
+    },
+    {
+      "record": 28,
+      "timestamp": 1778501400,
+      "raw": "c40201b26c00",
+      "calories": 434,
+      "heart_rate": 108,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 28,
+      "timestamp": 1778501460,
+      "raw": "0401f6",
+      "calories": 502
+    },
+    {
+      "record": 28,
+      "timestamp": 1778501520,
+      "raw": "0400f6",
+      "calories": 246
+    },
+    {
+      "record": 28,
+      "timestamp": 1778501580,
+      "raw": "04017a",
+      "calories": 378
+    },
+    {
+      "record": 28,
+      "timestamp": 1778501640,
+      "raw": "040370",
+      "calories": 880
+    },
+    {
+      "record": 28,
+      "timestamp": 1778501700,
+      "raw": "040157",
+      "calories": 343
+    },
+    {
+      "record": 28,
+      "timestamp": 1778501760,
+      "raw": "040271",
+      "calories": 625
+    },
+    {
+      "record": 28,
+      "timestamp": 1778501820,
+      "raw": "c40301c75f6200",
+      "calories": 455,
+      "heart_rate": 95,
+      "spo2": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 28,
+      "timestamp": 1778501880,
+      "raw": "040332",
+      "calories": 818
+    },
+    {
+      "record": 28,
+      "timestamp": 1778501940,
+      "raw": "0402c9",
+      "calories": 713
+    },
+    {
+      "record": 28,
+      "timestamp": 1778502000,
+      "raw": "c40206f67a00",
+      "calories": 1782,
+      "heart_rate": 122,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 28,
+      "timestamp": 1778502060,
+      "raw": "c40202117400",
+      "calories": 529,
+      "heart_rate": 116,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 29,
+      "timestamp": 1778502120,
+      "raw": "c40205da7300",
+      "calories": 1498,
+      "heart_rate": 115,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 29,
+      "timestamp": 1778502180,
+      "raw": "c402016b6f00",
+      "calories": 363,
+      "heart_rate": 111,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 29,
+      "timestamp": 1778502240,
+      "raw": "c40201a95e00",
+      "calories": 425,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 29,
+      "timestamp": 1778502300,
+      "raw": "0403f6",
+      "calories": 1014
+    },
+    {
+      "record": 29,
+      "timestamp": 1778502360,
+      "raw": "04052e",
+      "calories": 1326
+    },
+    {
+      "record": 29,
+      "timestamp": 1778502420,
+      "raw": "c403011c6c5f00",
+      "calories": 284,
+      "heart_rate": 108,
+      "spo2": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 29,
+      "timestamp": 1778502480,
+      "raw": "c402010a6e00",
+      "calories": 266,
+      "heart_rate": 110,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 29,
+      "timestamp": 1778502540,
+      "raw": "04030f",
+      "calories": 783
+    },
+    {
+      "record": 29,
+      "timestamp": 1778502600,
+      "raw": "0402e3",
+      "calories": 739
+    },
+    {
+      "record": 29,
+      "timestamp": 1778502660,
+      "raw": "040412",
+      "calories": 1042
+    },
+    {
+      "record": 29,
+      "timestamp": 1778502720,
+      "raw": "04043e",
+      "calories": 1086
+    },
+    {
+      "record": 29,
+      "timestamp": 1778502780,
+      "raw": "0402fa",
+      "calories": 762
+    },
+    {
+      "record": 29,
+      "timestamp": 1778502840,
+      "raw": "04027e",
+      "calories": 638
+    },
+    {
+      "record": 29,
+      "timestamp": 1778502900,
+      "raw": "0402c2",
+      "calories": 706
+    },
+    {
+      "record": 29,
+      "timestamp": 1778502960,
+      "raw": "04031b",
+      "calories": 795
+    },
+    {
+      "record": 29,
+      "timestamp": 1778503020,
+      "raw": "c40304366d5f40",
+      "calories": 1078,
+      "heart_rate": 109,
+      "spo2": 95,
+      "resting_heart_rate": 64
+    },
+    {
+      "record": 29,
+      "timestamp": 1778503080,
+      "raw": "c40202ee6d00",
+      "calories": 750,
+      "heart_rate": 109,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 29,
+      "timestamp": 1778503140,
+      "raw": "0403ca",
+      "calories": 970
+    },
+    {
+      "record": 29,
+      "timestamp": 1778503200,
+      "raw": "ce02000605a400047800",
+      "steps": 6,
+      "calories": 1444,
+      "distance": 4,
+      "heart_rate": 120,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 29,
+      "timestamp": 1778503260,
+      "raw": "c40201776900",
+      "calories": 375,
+      "heart_rate": 105,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 29,
+      "timestamp": 1778503320,
+      "raw": "040131",
+      "calories": 305
+    },
+    {
+      "record": 29,
+      "timestamp": 1778503380,
+      "raw": "04027a",
+      "calories": 634
+    },
+    {
+      "record": 29,
+      "timestamp": 1778503440,
+      "raw": "0400c9",
+      "calories": 201
+    },
+    {
+      "record": 29,
+      "timestamp": 1778503500,
+      "raw": "04019f",
+      "calories": 415
+    },
+    {
+      "record": 29,
+      "timestamp": 1778503560,
+      "raw": "040018",
+      "calories": 24
+    },
+    {
+      "record": 29,
+      "timestamp": 1778503620,
+      "raw": "c40301a55f6200",
+      "calories": 421,
+      "heart_rate": 95,
+      "spo2": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 29,
+      "timestamp": 1778503680,
+      "raw": "040095",
+      "calories": 149
+    },
+    {
+      "record": 29,
+      "timestamp": 1778503740,
+      "raw": "c40200485e00",
+      "calories": 72,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 29,
+      "timestamp": 1778503800,
+      "raw": "c40203356c00",
+      "calories": 821,
+      "heart_rate": 108,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 29,
+      "timestamp": 1778503860,
+      "raw": "c402014f5f00",
+      "calories": 335,
+      "heart_rate": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 29,
+      "timestamp": 1778503920,
+      "raw": "c40201d96b00",
+      "calories": 473,
+      "heart_rate": 107,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 29,
+      "timestamp": 1778503980,
+      "raw": "040322",
+      "calories": 802
+    },
+    {
+      "record": 29,
+      "timestamp": 1778504040,
+      "raw": "040332",
+      "calories": 818
+    },
+    {
+      "record": 29,
+      "timestamp": 1778504100,
+      "raw": "0403f5",
+      "calories": 1013
+    },
+    {
+      "record": 30,
+      "timestamp": 1778504160,
+      "raw": "c40203a06c00",
+      "calories": 928,
+      "heart_rate": 108,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 30,
+      "timestamp": 1778504220,
+      "raw": "c40301d2636200",
+      "calories": 466,
+      "heart_rate": 99,
+      "spo2": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 30,
+      "timestamp": 1778504280,
+      "raw": "c40200615f00",
+      "calories": 97,
+      "heart_rate": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 30,
+      "timestamp": 1778504340,
+      "raw": "040015",
+      "calories": 21
+    },
+    {
+      "record": 30,
+      "timestamp": 1778504400,
+      "raw": "040088",
+      "calories": 136
+    },
+    {
+      "record": 30,
+      "timestamp": 1778504460,
+      "raw": "c40200976600",
+      "calories": 151,
+      "heart_rate": 102,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 30,
+      "timestamp": 1778504520,
+      "raw": "c40200555e00",
+      "calories": 85,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 30,
+      "timestamp": 1778504580,
+      "raw": "040040",
+      "calories": 64
+    },
+    {
+      "record": 30,
+      "timestamp": 1778504640,
+      "raw": "c40200da6500",
+      "calories": 218,
+      "heart_rate": 101,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 30,
+      "timestamp": 1778504700,
+      "raw": "c40200326700",
+      "calories": 50,
+      "heart_rate": 103,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 30,
+      "timestamp": 1778504760,
+      "raw": "c40300ce646200",
+      "calories": 206,
+      "heart_rate": 100,
+      "spo2": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 30,
+      "timestamp": 1778504820,
+      "raw": "c402009d6600",
+      "calories": 157,
+      "heart_rate": 102,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 30,
+      "timestamp": 1778504880,
+      "raw": "c402009b6500",
+      "calories": 155,
+      "heart_rate": 101,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 30,
+      "timestamp": 1778504940,
+      "raw": "c40202ac6800",
+      "calories": 684,
+      "heart_rate": 104,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 30,
+      "timestamp": 1778505000,
+      "raw": "c40301415f5f00",
+      "calories": 321,
+      "heart_rate": 95,
+      "spo2": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 30,
+      "timestamp": 1778505060,
+      "raw": "04012c",
+      "calories": 300
+    },
+    {
+      "record": 30,
+      "timestamp": 1778505120,
+      "raw": "04012e",
+      "calories": 302
+    },
+    {
+      "record": 30,
+      "timestamp": 1778505180,
+      "raw": "c40200485f00",
+      "calories": 72,
+      "heart_rate": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 30,
+      "timestamp": 1778505240,
+      "raw": "04005e",
+      "calories": 94
+    },
+    {
+      "record": 30,
+      "timestamp": 1778505300,
+      "raw": "040050",
+      "calories": 80
+    },
+    {
+      "record": 30,
+      "timestamp": 1778505360,
+      "raw": "0400bd",
+      "calories": 189
+    },
+    {
+      "record": 30,
+      "timestamp": 1778505420,
+      "raw": "c40200ac6600",
+      "calories": 172,
+      "heart_rate": 102,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 30,
+      "timestamp": 1778505480,
+      "raw": "c40200ec6400",
+      "calories": 236,
+      "heart_rate": 100,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 30,
+      "timestamp": 1778505540,
+      "raw": "0400f0",
+      "calories": 240
+    },
+    {
+      "record": 30,
+      "timestamp": 1778505600,
+      "raw": "0400f2",
+      "calories": 242
+    },
+    {
+      "record": 30,
+      "timestamp": 1778505660,
+      "raw": "0400be",
+      "calories": 190
+    },
+    {
+      "record": 30,
+      "timestamp": 1778505720,
+      "raw": "040076",
+      "calories": 118
+    },
+    {
+      "record": 30,
+      "timestamp": 1778505780,
+      "raw": "040112",
+      "calories": 274
+    },
+    {
+      "record": 30,
+      "timestamp": 1778505840,
+      "raw": "c40201b86700",
+      "calories": 440,
+      "heart_rate": 103,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 30,
+      "timestamp": 1778505900,
+      "raw": "0401dc",
+      "calories": 476
+    },
+    {
+      "record": 30,
+      "timestamp": 1778505960,
+      "raw": "04013c",
+      "calories": 316
+    },
+    {
+      "record": 30,
+      "timestamp": 1778506020,
+      "raw": "c40300b7596200",
+      "calories": 183,
+      "heart_rate": 89,
+      "spo2": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 30,
+      "timestamp": 1778506080,
+      "raw": "040037",
+      "calories": 55
+    },
+    {
+      "record": 30,
+      "timestamp": 1778506140,
+      "raw": "040065",
+      "calories": 101
+    },
+    {
+      "record": 31,
+      "timestamp": 1778506200,
+      "raw": "0400ca",
+      "calories": 202
+    },
+    {
+      "record": 31,
+      "timestamp": 1778506260,
+      "raw": "040067",
+      "calories": 103
+    },
+    {
+      "record": 31,
+      "timestamp": 1778506320,
+      "raw": "040078",
+      "calories": 120
+    },
+    {
+      "record": 31,
+      "timestamp": 1778506380,
+      "raw": "040030",
+      "calories": 48
+    },
+    {
+      "record": 31,
+      "timestamp": 1778506440,
+      "raw": "0400c2",
+      "calories": 194
+    },
+    {
+      "record": 31,
+      "timestamp": 1778506500,
+      "raw": "0400e9",
+      "calories": 233
+    },
+    {
+      "record": 31,
+      "timestamp": 1778506560,
+      "raw": "0400ad",
+      "calories": 173
+    },
+    {
+      "record": 31,
+      "timestamp": 1778506620,
+      "raw": "c4030022685f00",
+      "calories": 34,
+      "heart_rate": 104,
+      "spo2": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 31,
+      "timestamp": 1778506680,
+      "raw": "040007",
+      "calories": 7
+    },
+    {
+      "record": 31,
+      "timestamp": 1778506740,
+      "raw": "040032",
+      "calories": 50
+    },
+    {
+      "record": 31,
+      "timestamp": 1778506800,
+      "raw": "04006a",
+      "calories": 106
+    },
+    {
+      "record": 31,
+      "timestamp": 1778506860,
+      "raw": "04010d",
+      "calories": 269
+    },
+    {
+      "record": 31,
+      "timestamp": 1778506920,
+      "raw": "c40200d56000",
+      "calories": 213,
+      "heart_rate": 96,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 31,
+      "timestamp": 1778506980,
+      "raw": "0e000f009d000f",
+      "steps": 15,
+      "calories": 157,
+      "distance": 15
+    },
+    {
+      "record": 31,
+      "timestamp": 1778507040,
+      "raw": "0e0020057b0019",
+      "steps": 32,
+      "calories": 1403,
+      "distance": 25
+    },
+    {
+      "record": 31,
+      "timestamp": 1778507100,
+      "raw": "0400c8",
+      "calories": 200
+    },
+    {
+      "record": 31,
+      "timestamp": 1778507160,
+      "raw": "0e000b00bd000a",
+      "steps": 11,
+      "calories": 189,
+      "distance": 10
+    },
+    {
+      "record": 31,
+      "timestamp": 1778507220,
+      "raw": "0e002d07f20027",
+      "steps": 45,
+      "calories": 2034,
+      "distance": 39
+    },
+    {
+      "record": 31,
+      "timestamp": 1778507280,
+      "raw": "0e001603d90015",
+      "steps": 22,
+      "calories": 985,
+      "distance": 21
+    },
+    {
+      "record": 31,
+      "timestamp": 1778507340,
+      "raw": "0e001e070c0021",
+      "steps": 30,
+      "calories": 1804,
+      "distance": 33
+    },
+    {
+      "record": 31,
+      "timestamp": 1778507400,
+      "raw": "0400b8",
+      "calories": 184
+    },
+    {
+      "record": 31,
+      "timestamp": 1778507460,
+      "raw": "0e00631271004f",
+      "steps": 99,
+      "calories": 4721,
+      "distance": 79
+    },
+    {
+      "record": 31,
+      "timestamp": 1778507520,
+      "raw": "ce020045133e002e8700",
+      "steps": 69,
+      "calories": 4926,
+      "distance": 46,
+      "heart_rate": 135,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 31,
+      "timestamp": 1778507580,
+      "raw": "ce020021190000167e00",
+      "steps": 33,
+      "calories": 6400,
+      "distance": 22,
+      "heart_rate": 126,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 31,
+      "timestamp": 1778507640,
+      "raw": "ce02004011d500357a00",
+      "steps": 64,
+      "calories": 4565,
+      "distance": 53,
+      "heart_rate": 122,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 31,
+      "timestamp": 1778507700,
+      "raw": "ce020058153600538000",
+      "steps": 88,
+      "calories": 5430,
+      "distance": 83,
+      "heart_rate": 128,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 31,
+      "timestamp": 1778507760,
+      "raw": "ce02005c193200577e00",
+      "steps": 92,
+      "calories": 6450,
+      "distance": 87,
+      "heart_rate": 126,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 31,
+      "timestamp": 1778507820,
+      "raw": "ce02002c148900268a00",
+      "steps": 44,
+      "calories": 5257,
+      "distance": 38,
+      "heart_rate": 138,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 31,
+      "timestamp": 1778507880,
+      "raw": "ce0200681684004c8500",
+      "steps": 104,
+      "calories": 5764,
+      "distance": 76,
+      "heart_rate": 133,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 31,
+      "timestamp": 1778507940,
+      "raw": "ce020068165100498b00",
+      "steps": 104,
+      "calories": 5713,
+      "distance": 73,
+      "heart_rate": 139,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 31,
+      "timestamp": 1778508000,
+      "raw": "ce02006915f4004f8c00",
+      "steps": 105,
+      "calories": 5620,
+      "distance": 79,
+      "heart_rate": 140,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 31,
+      "timestamp": 1778508060,
+      "raw": "ce0200691801004d9000",
+      "steps": 105,
+      "calories": 6145,
+      "distance": 77,
+      "heart_rate": 144,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 31,
+      "timestamp": 1778508120,
+      "raw": "ce02006c18b5004f8d00",
+      "steps": 108,
+      "calories": 6325,
+      "distance": 79,
+      "heart_rate": 141,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 31,
+      "timestamp": 1778508180,
+      "raw": "ce02006b1747004f9500",
+      "steps": 107,
+      "calories": 5959,
+      "distance": 79,
+      "heart_rate": 149,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778508240,
+      "raw": "ce02006818f5004d8c00",
+      "steps": 104,
+      "calories": 6389,
+      "distance": 77,
+      "heart_rate": 140,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778508300,
+      "raw": "ce02005f190800458e00",
+      "steps": 95,
+      "calories": 6408,
+      "distance": 69,
+      "heart_rate": 142,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778508360,
+      "raw": "ce0200671698004c8e00",
+      "steps": 103,
+      "calories": 5784,
+      "distance": 76,
+      "heart_rate": 142,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778508420,
+      "raw": "ce02006919a2004f9000",
+      "steps": 105,
+      "calories": 6562,
+      "distance": 79,
+      "heart_rate": 144,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778508480,
+      "raw": "ce02006a183a00509600",
+      "steps": 106,
+      "calories": 6202,
+      "distance": 80,
+      "heart_rate": 150,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778508540,
+      "raw": "ce02006c1a4f00519500",
+      "steps": 108,
+      "calories": 6735,
+      "distance": 81,
+      "heart_rate": 149,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778508600,
+      "raw": "ce02006a1af600539700",
+      "steps": 106,
+      "calories": 6902,
+      "distance": 83,
+      "heart_rate": 151,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778508660,
+      "raw": "ce02006917a8004e9400",
+      "steps": 105,
+      "calories": 6056,
+      "distance": 78,
+      "heart_rate": 148,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778508720,
+      "raw": "ce0200691a05004f9400",
+      "steps": 105,
+      "calories": 6661,
+      "distance": 79,
+      "heart_rate": 148,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778508780,
+      "raw": "ce02006919c0004d9900",
+      "steps": 105,
+      "calories": 6592,
+      "distance": 77,
+      "heart_rate": 153,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778508840,
+      "raw": "ce02006a17bd004f9000",
+      "steps": 106,
+      "calories": 6077,
+      "distance": 79,
+      "heart_rate": 144,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778508900,
+      "raw": "ce02006919d5004e9300",
+      "steps": 105,
+      "calories": 6613,
+      "distance": 78,
+      "heart_rate": 147,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778508960,
+      "raw": "ce02006a1766004d9400",
+      "steps": 106,
+      "calories": 5990,
+      "distance": 77,
+      "heart_rate": 148,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778509020,
+      "raw": "ce02006518fa004a9000",
+      "steps": 101,
+      "calories": 6394,
+      "distance": 74,
+      "heart_rate": 144,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778509080,
+      "raw": "ce02006c199300519100",
+      "steps": 108,
+      "calories": 6547,
+      "distance": 81,
+      "heart_rate": 145,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778509140,
+      "raw": "ce02006a17aa004f9200",
+      "steps": 106,
+      "calories": 6058,
+      "distance": 79,
+      "heart_rate": 146,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778509200,
+      "raw": "ce02006a19da004f9100",
+      "steps": 106,
+      "calories": 6618,
+      "distance": 79,
+      "heart_rate": 145,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778509260,
+      "raw": "ce020069197d004d9100",
+      "steps": 105,
+      "calories": 6525,
+      "distance": 77,
+      "heart_rate": 145,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778509320,
+      "raw": "ce0200281d2f001c8c00",
+      "steps": 40,
+      "calories": 7471,
+      "distance": 28,
+      "heart_rate": 140,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778509380,
+      "raw": "ce02005619bc00408a00",
+      "steps": 86,
+      "calories": 6588,
+      "distance": 64,
+      "heart_rate": 138,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778509440,
+      "raw": "ce020067170b004e9400",
+      "steps": 103,
+      "calories": 5899,
+      "distance": 78,
+      "heart_rate": 148,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778509500,
+      "raw": "ce02006719b5004c9600",
+      "steps": 103,
+      "calories": 6581,
+      "distance": 76,
+      "heart_rate": 150,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778509560,
+      "raw": "ce0200691ae3004e9b00",
+      "steps": 105,
+      "calories": 6883,
+      "distance": 78,
+      "heart_rate": 155,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778509620,
+      "raw": "ce02006b196000519e00",
+      "steps": 107,
+      "calories": 6496,
+      "distance": 81,
+      "heart_rate": 158,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778509680,
+      "raw": "ce02006b1b3c004f9500",
+      "steps": 107,
+      "calories": 6972,
+      "distance": 79,
+      "heart_rate": 149,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778509740,
+      "raw": "ce020066193b004b9000",
+      "steps": 102,
+      "calories": 6459,
+      "distance": 75,
+      "heart_rate": 144,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778509800,
+      "raw": "ce0200341c8500249140",
+      "steps": 52,
+      "calories": 7301,
+      "distance": 36,
+      "heart_rate": 145,
+      "resting_heart_rate": 64
+    },
+    {
+      "record": 32,
+      "timestamp": 1778509860,
+      "raw": "ce02002c1a3f00207600",
+      "steps": 44,
+      "calories": 6719,
+      "distance": 32,
+      "heart_rate": 118,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778509920,
+      "raw": "ce02000216ca00017900",
+      "steps": 2,
+      "calories": 5834,
+      "distance": 1,
+      "heart_rate": 121,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778509980,
+      "raw": "c402057b7800",
+      "calories": 1403,
+      "heart_rate": 120,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 32,
+      "timestamp": 1778510040,
+      "raw": "04021d",
+      "calories": 541
+    },
+    {
+      "record": 32,
+      "timestamp": 1778510100,
+      "raw": "0401b1",
+      "calories": 433
+    },
+    {
+      "record": 32,
+      "timestamp": 1778510160,
+      "raw": "040036",
+      "calories": 54
+    },
+    {
+      "record": 32,
+      "timestamp": 1778510220,
+      "raw": "0400d8",
+      "calories": 216
+    },
+    {
+      "record": 33,
+      "timestamp": 1778510280,
+      "raw": "0401b1",
+      "calories": 433
+    },
+    {
+      "record": 33,
+      "timestamp": 1778510340,
+      "raw": "040145",
+      "calories": 325
+    },
+    {
+      "record": 33,
+      "timestamp": 1778510400,
+      "raw": "0400a2",
+      "calories": 162
+    },
+    {
+      "record": 33,
+      "timestamp": 1778510460,
+      "raw": "0402f5",
+      "calories": 757
+    },
+    {
+      "record": 33,
+      "timestamp": 1778510520,
+      "raw": "04083e",
+      "calories": 2110
+    },
+    {
+      "record": 33,
+      "timestamp": 1778510580,
+      "raw": "ce020029099c00246600",
+      "steps": 41,
+      "calories": 2460,
+      "distance": 36,
+      "heart_rate": 102,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 33,
+      "timestamp": 1778510640,
+      "raw": "ce02003c0485002a8700",
+      "steps": 60,
+      "calories": 1157,
+      "distance": 42,
+      "heart_rate": 135,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 33,
+      "timestamp": 1778510700,
+      "raw": "ce0200410bbd002f8e00",
+      "steps": 65,
+      "calories": 3005,
+      "distance": 47,
+      "heart_rate": 142,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 33,
+      "timestamp": 1778510760,
+      "raw": "00"
+    },
+    {
+      "record": 33,
+      "timestamp": 1778510820,
+      "raw": "00"
+    },
+    {
+      "record": 33,
+      "timestamp": 1778510880,
+      "raw": "00"
+    },
+    {
+      "record": 33,
+      "timestamp": 1778510940,
+      "raw": "00"
+    },
+    {
+      "record": 33,
+      "timestamp": 1778511000,
+      "raw": "00"
+    },
+    {
+      "record": 33,
+      "timestamp": 1778511060,
+      "raw": "00"
+    },
+    {
+      "record": 33,
+      "timestamp": 1778511120,
+      "raw": "00"
+    },
+    {
+      "record": 33,
+      "timestamp": 1778511180,
+      "raw": "00"
+    },
+    {
+      "record": 33,
+      "timestamp": 1778511240,
+      "raw": "00"
+    },
+    {
+      "record": 33,
+      "timestamp": 1778511300,
+      "raw": "00"
+    },
+    {
+      "record": 33,
+      "timestamp": 1778511360,
+      "raw": "00"
+    },
+    {
+      "record": 33,
+      "timestamp": 1778511420,
+      "raw": "00"
+    },
+    {
+      "record": 33,
+      "timestamp": 1778511480,
+      "raw": "00"
+    },
+    {
+      "record": 33,
+      "timestamp": 1778511540,
+      "raw": "00"
+    },
+    {
+      "record": 33,
+      "timestamp": 1778511600,
+      "raw": "00"
+    },
+    {
+      "record": 33,
+      "timestamp": 1778511660,
+      "raw": "00"
+    },
+    {
+      "record": 33,
+      "timestamp": 1778511720,
+      "raw": "c40202eb6c00",
+      "calories": 747,
+      "heart_rate": 108,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 33,
+      "timestamp": 1778511780,
+      "raw": "ce02000e04d0000c7300",
+      "steps": 14,
+      "calories": 1232,
+      "distance": 12,
+      "heart_rate": 115,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 33,
+      "timestamp": 1778511840,
+      "raw": "0e00310e5d002d",
+      "steps": 49,
+      "calories": 3677,
+      "distance": 45
+    },
+    {
+      "record": 33,
+      "timestamp": 1778511900,
+      "raw": "ce0200190787001a7400",
+      "steps": 25,
+      "calories": 1927,
+      "distance": 26,
+      "heart_rate": 116,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 33,
+      "timestamp": 1778511960,
+      "raw": "0401bf",
+      "calories": 447
+    },
+    {
+      "record": 33,
+      "timestamp": 1778512020,
+      "raw": "ce020003040d00046c00",
+      "steps": 3,
+      "calories": 1037,
+      "distance": 4,
+      "heart_rate": 108,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 33,
+      "timestamp": 1778512080,
+      "raw": "ce02001a030300186a00",
+      "steps": 26,
+      "calories": 771,
+      "distance": 24,
+      "heart_rate": 106,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 33,
+      "timestamp": 1778512140,
+      "raw": "04021c",
+      "calories": 540
+    },
+    {
+      "record": 33,
+      "timestamp": 1778512200,
+      "raw": "c40201566800",
+      "calories": 342,
+      "heart_rate": 104,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 33,
+      "timestamp": 1778512260,
+      "raw": "0401b8",
+      "calories": 440
+    },
+    {
+      "record": 34,
+      "timestamp": 1778512320,
+      "raw": "0400a0",
+      "calories": 160
+    },
+    {
+      "record": 34,
+      "timestamp": 1778512380,
+      "raw": "0400b4",
+      "calories": 180
+    },
+    {
+      "record": 34,
+      "timestamp": 1778512440,
+      "raw": "040145",
+      "calories": 325
+    },
+    {
+      "record": 34,
+      "timestamp": 1778512500,
+      "raw": "04014a",
+      "calories": 330
+    },
+    {
+      "record": 34,
+      "timestamp": 1778512560,
+      "raw": "c402005c5f00",
+      "calories": 92,
+      "heart_rate": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 34,
+      "timestamp": 1778512620,
+      "raw": "ce020010051a000f7700",
+      "steps": 16,
+      "calories": 1306,
+      "distance": 15,
+      "heart_rate": 119,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 34,
+      "timestamp": 1778512680,
+      "raw": "ce0200190bcb00147500",
+      "steps": 25,
+      "calories": 3019,
+      "distance": 20,
+      "heart_rate": 117,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 34,
+      "timestamp": 1778512740,
+      "raw": "0e00120746000f",
+      "steps": 18,
+      "calories": 1862,
+      "distance": 15
+    },
+    {
+      "record": 34,
+      "timestamp": 1778512800,
+      "raw": "04083d",
+      "calories": 2109
+    },
+    {
+      "record": 34,
+      "timestamp": 1778512860,
+      "raw": "0405f0",
+      "calories": 1520
+    },
+    {
+      "record": 34,
+      "timestamp": 1778512920,
+      "raw": "c40201d36b00",
+      "calories": 467,
+      "heart_rate": 107,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 34,
+      "timestamp": 1778512980,
+      "raw": "040332",
+      "calories": 818
+    },
+    {
+      "record": 34,
+      "timestamp": 1778513040,
+      "raw": "04030a",
+      "calories": 778
+    },
+    {
+      "record": 34,
+      "timestamp": 1778513100,
+      "raw": "0402b1",
+      "calories": 689
+    },
+    {
+      "record": 34,
+      "timestamp": 1778513160,
+      "raw": "040257",
+      "calories": 599
+    },
+    {
+      "record": 34,
+      "timestamp": 1778513220,
+      "raw": "04030a",
+      "calories": 778
+    },
+    {
+      "record": 34,
+      "timestamp": 1778513280,
+      "raw": "040322",
+      "calories": 802
+    },
+    {
+      "record": 34,
+      "timestamp": 1778513340,
+      "raw": "0401ce",
+      "calories": 462
+    },
+    {
+      "record": 34,
+      "timestamp": 1778513400,
+      "raw": "0400cb",
+      "calories": 203
+    },
+    {
+      "record": 34,
+      "timestamp": 1778513460,
+      "raw": "c40200bf6400",
+      "calories": 191,
+      "heart_rate": 100,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 34,
+      "timestamp": 1778513520,
+      "raw": "c40200395e00",
+      "calories": 57,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 34,
+      "timestamp": 1778513580,
+      "raw": "040036",
+      "calories": 54
+    },
+    {
+      "record": 34,
+      "timestamp": 1778513640,
+      "raw": "c40200026000",
+      "calories": 2,
+      "heart_rate": 96,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 34,
+      "timestamp": 1778513700,
+      "raw": "c40200196300",
+      "calories": 25,
+      "heart_rate": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 34,
+      "timestamp": 1778513760,
+      "raw": "040011",
+      "calories": 17
+    },
+    {
+      "record": 34,
+      "timestamp": 1778513820,
+      "raw": "040015",
+      "calories": 21
+    },
+    {
+      "record": 34,
+      "timestamp": 1778513880,
+      "raw": "0400b0",
+      "calories": 176
+    },
+    {
+      "record": 34,
+      "timestamp": 1778513940,
+      "raw": "0400c8",
+      "calories": 200
+    },
+    {
+      "record": 34,
+      "timestamp": 1778514000,
+      "raw": "040069",
+      "calories": 105
+    },
+    {
+      "record": 34,
+      "timestamp": 1778514060,
+      "raw": "0400b5",
+      "calories": 181
+    },
+    {
+      "record": 34,
+      "timestamp": 1778514120,
+      "raw": "c40200436200",
+      "calories": 67,
+      "heart_rate": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 34,
+      "timestamp": 1778514180,
+      "raw": "040008",
+      "calories": 8
+    },
+    {
+      "record": 34,
+      "timestamp": 1778514240,
+      "raw": "0400a2",
+      "calories": 162
+    },
+    {
+      "record": 34,
+      "timestamp": 1778514300,
+      "raw": "c40200775f00",
+      "calories": 119,
+      "heart_rate": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 35,
+      "timestamp": 1778514360,
+      "raw": "04009e",
+      "calories": 158
+    },
+    {
+      "record": 35,
+      "timestamp": 1778514420,
+      "raw": "04007d",
+      "calories": 125
+    },
+    {
+      "record": 35,
+      "timestamp": 1778514480,
+      "raw": "04005e",
+      "calories": 94
+    },
+    {
+      "record": 35,
+      "timestamp": 1778514540,
+      "raw": "040040",
+      "calories": 64
+    },
+    {
+      "record": 35,
+      "timestamp": 1778514600,
+      "raw": "04005a",
+      "calories": 90
+    },
+    {
+      "record": 35,
+      "timestamp": 1778514660,
+      "raw": "04002a",
+      "calories": 42
+    },
+    {
+      "record": 35,
+      "timestamp": 1778514720,
+      "raw": "c40200a26200",
+      "calories": 162,
+      "heart_rate": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 35,
+      "timestamp": 1778514780,
+      "raw": "c402003f6300",
+      "calories": 63,
+      "heart_rate": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 35,
+      "timestamp": 1778514840,
+      "raw": "c40200265e00",
+      "calories": 38,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 35,
+      "timestamp": 1778514900,
+      "raw": "04000b",
+      "calories": 11
+    },
+    {
+      "record": 35,
+      "timestamp": 1778514960,
+      "raw": "040099",
+      "calories": 153
+    },
+    {
+      "record": 35,
+      "timestamp": 1778515020,
+      "raw": "04000d",
+      "calories": 13
+    },
+    {
+      "record": 35,
+      "timestamp": 1778515080,
+      "raw": "04000b",
+      "calories": 11
+    },
+    {
+      "record": 35,
+      "timestamp": 1778515140,
+      "raw": "04008f",
+      "calories": 143
+    },
+    {
+      "record": 35,
+      "timestamp": 1778515200,
+      "raw": "04001d",
+      "calories": 29
+    },
+    {
+      "record": 35,
+      "timestamp": 1778515260,
+      "raw": "04001d",
+      "calories": 29
+    },
+    {
+      "record": 35,
+      "timestamp": 1778515320,
+      "raw": "04006d",
+      "calories": 109
+    },
+    {
+      "record": 35,
+      "timestamp": 1778515380,
+      "raw": "0400b0",
+      "calories": 176
+    },
+    {
+      "record": 35,
+      "timestamp": 1778515440,
+      "raw": "c40200925c00",
+      "calories": 146,
+      "heart_rate": 92,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 35,
+      "timestamp": 1778515500,
+      "raw": "0400a2",
+      "calories": 162
+    },
+    {
+      "record": 35,
+      "timestamp": 1778515560,
+      "raw": "c40200855800",
+      "calories": 133,
+      "heart_rate": 88,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 35,
+      "timestamp": 1778515620,
+      "raw": "040021",
+      "calories": 33
+    },
+    {
+      "record": 35,
+      "timestamp": 1778515680,
+      "raw": "c40200185f00",
+      "calories": 24,
+      "heart_rate": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 35,
+      "timestamp": 1778515740,
+      "raw": "040030",
+      "calories": 48
+    },
+    {
+      "record": 35,
+      "timestamp": 1778515800,
+      "raw": "040020",
+      "calories": 32
+    },
+    {
+      "record": 35,
+      "timestamp": 1778515860,
+      "raw": "040002",
+      "calories": 2
+    },
+    {
+      "record": 35,
+      "timestamp": 1778515920,
+      "raw": "040080",
+      "calories": 128
+    },
+    {
+      "record": 35,
+      "timestamp": 1778515980,
+      "raw": "040048",
+      "calories": 72
+    },
+    {
+      "record": 35,
+      "timestamp": 1778516040,
+      "raw": "040013",
+      "calories": 19
+    },
+    {
+      "record": 35,
+      "timestamp": 1778516100,
+      "raw": "040003",
+      "calories": 3
+    },
+    {
+      "record": 35,
+      "timestamp": 1778516160,
+      "raw": "04001d",
+      "calories": 29
+    },
+    {
+      "record": 35,
+      "timestamp": 1778516220,
+      "raw": "040068",
+      "calories": 104
+    },
+    {
+      "record": 35,
+      "timestamp": 1778516280,
+      "raw": "c40200525800",
+      "calories": 82,
+      "heart_rate": 88,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 35,
+      "timestamp": 1778516340,
+      "raw": "040070",
+      "calories": 112
+    },
+    {
+      "record": 36,
+      "timestamp": 1778516400,
+      "raw": "04003b",
+      "calories": 59
+    },
+    {
+      "record": 36,
+      "timestamp": 1778516460,
+      "raw": "04004b",
+      "calories": 75
+    },
+    {
+      "record": 36,
+      "timestamp": 1778516520,
+      "raw": "04005a",
+      "calories": 90
+    },
+    {
+      "record": 36,
+      "timestamp": 1778516580,
+      "raw": "c402003c5700",
+      "calories": 60,
+      "heart_rate": 87,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 36,
+      "timestamp": 1778516640,
+      "raw": "04001c",
+      "calories": 28
+    },
+    {
+      "record": 36,
+      "timestamp": 1778516700,
+      "raw": "c402000e5e00",
+      "calories": 14,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 36,
+      "timestamp": 1778516760,
+      "raw": "c0025e00",
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 36,
+      "timestamp": 1778516820,
+      "raw": "c40200385800",
+      "calories": 56,
+      "heart_rate": 88,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 36,
+      "timestamp": 1778516880,
+      "raw": "c40200035f00",
+      "calories": 3,
+      "heart_rate": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 36,
+      "timestamp": 1778516940,
+      "raw": "04003e",
+      "calories": 62
+    },
+    {
+      "record": 36,
+      "timestamp": 1778517000,
+      "raw": "040010",
+      "calories": 16
+    },
+    {
+      "record": 36,
+      "timestamp": 1778517060,
+      "raw": "040002",
+      "calories": 2
+    },
+    {
+      "record": 36,
+      "timestamp": 1778517120,
+      "raw": "04001d",
+      "calories": 29
+    },
+    {
+      "record": 36,
+      "timestamp": 1778517180,
+      "raw": "c402008b5940",
+      "calories": 139,
+      "heart_rate": 89,
+      "resting_heart_rate": 64
+    },
+    {
+      "record": 36,
+      "timestamp": 1778517240,
+      "raw": "040084",
+      "calories": 132
+    },
+    {
+      "record": 36,
+      "timestamp": 1778517300,
+      "raw": "040040",
+      "calories": 64
+    },
+    {
+      "record": 36,
+      "timestamp": 1778517360,
+      "raw": "040073",
+      "calories": 115
+    },
+    {
+      "record": 36,
+      "timestamp": 1778517420,
+      "raw": "c403007f595f00",
+      "calories": 127,
+      "heart_rate": 89,
+      "spo2": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 36,
+      "timestamp": 1778517480,
+      "raw": "c40200875900",
+      "calories": 135,
+      "heart_rate": 89,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 36,
+      "timestamp": 1778517540,
+      "raw": "040010",
+      "calories": 16
+    },
+    {
+      "record": 36,
+      "timestamp": 1778517600,
+      "raw": "ce02001d0502001f6a00",
+      "steps": 29,
+      "calories": 1282,
+      "distance": 31,
+      "heart_rate": 106,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 36,
+      "timestamp": 1778517660,
+      "raw": "c402019f5e00",
+      "calories": 415,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 36,
+      "timestamp": 1778517720,
+      "raw": "0400bc",
+      "calories": 188
+    },
+    {
+      "record": 36,
+      "timestamp": 1778517780,
+      "raw": "0e000e00ad0010",
+      "steps": 14,
+      "calories": 173,
+      "distance": 16
+    },
+    {
+      "record": 36,
+      "timestamp": 1778517840,
+      "raw": "c40200a65c00",
+      "calories": 166,
+      "heart_rate": 92,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 36,
+      "timestamp": 1778517900,
+      "raw": "0400bc",
+      "calories": 188
+    },
+    {
+      "record": 36,
+      "timestamp": 1778517960,
+      "raw": "0e000300bc0004",
+      "steps": 3,
+      "calories": 188,
+      "distance": 4
+    },
+    {
+      "record": 36,
+      "timestamp": 1778518020,
+      "raw": "0400ab",
+      "calories": 171
+    },
+    {
+      "record": 36,
+      "timestamp": 1778518080,
+      "raw": "0400ba",
+      "calories": 186
+    },
+    {
+      "record": 36,
+      "timestamp": 1778518140,
+      "raw": "c40200995b00",
+      "calories": 153,
+      "heart_rate": 91,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 36,
+      "timestamp": 1778518200,
+      "raw": "c40200c06000",
+      "calories": 192,
+      "heart_rate": 96,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 36,
+      "timestamp": 1778518260,
+      "raw": "c40200b15e00",
+      "calories": 177,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 36,
+      "timestamp": 1778518320,
+      "raw": "0400aa",
+      "calories": 170
+    },
+    {
+      "record": 36,
+      "timestamp": 1778518380,
+      "raw": "0400bc",
+      "calories": 188
+    },
+    {
+      "record": 37,
+      "timestamp": 1778518440,
+      "raw": "0400b9",
+      "calories": 185
+    },
+    {
+      "record": 37,
+      "timestamp": 1778518500,
+      "raw": "c40200715a00",
+      "calories": 113,
+      "heart_rate": 90,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 37,
+      "timestamp": 1778518560,
+      "raw": "c40200a65d00",
+      "calories": 166,
+      "heart_rate": 93,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 37,
+      "timestamp": 1778518620,
+      "raw": "040086",
+      "calories": 134
+    },
+    {
+      "record": 37,
+      "timestamp": 1778518680,
+      "raw": "0400ad",
+      "calories": 173
+    },
+    {
+      "record": 37,
+      "timestamp": 1778518740,
+      "raw": "c40200be5f00",
+      "calories": 190,
+      "heart_rate": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 37,
+      "timestamp": 1778518800,
+      "raw": "04005d",
+      "calories": 93
+    },
+    {
+      "record": 37,
+      "timestamp": 1778518860,
+      "raw": "c402007a5900",
+      "calories": 122,
+      "heart_rate": 89,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 37,
+      "timestamp": 1778518920,
+      "raw": "c402006d5e00",
+      "calories": 109,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 37,
+      "timestamp": 1778518980,
+      "raw": "c40200376200",
+      "calories": 55,
+      "heart_rate": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 37,
+      "timestamp": 1778519040,
+      "raw": "0400b8",
+      "calories": 184
+    },
+    {
+      "record": 37,
+      "timestamp": 1778519100,
+      "raw": "040097",
+      "calories": 151
+    },
+    {
+      "record": 37,
+      "timestamp": 1778519160,
+      "raw": "0400d1",
+      "calories": 209
+    },
+    {
+      "record": 37,
+      "timestamp": 1778519220,
+      "raw": "c40200d36700",
+      "calories": 211,
+      "heart_rate": 103,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 37,
+      "timestamp": 1778519280,
+      "raw": "c40200585c00",
+      "calories": 88,
+      "heart_rate": 92,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 37,
+      "timestamp": 1778519340,
+      "raw": "04003b",
+      "calories": 59
+    },
+    {
+      "record": 37,
+      "timestamp": 1778519400,
+      "raw": "04000f",
+      "calories": 15
+    },
+    {
+      "record": 37,
+      "timestamp": 1778519460,
+      "raw": "040017",
+      "calories": 23
+    },
+    {
+      "record": 37,
+      "timestamp": 1778519520,
+      "raw": "040009",
+      "calories": 9
+    },
+    {
+      "record": 37,
+      "timestamp": 1778519580,
+      "raw": "c40200165700",
+      "calories": 22,
+      "heart_rate": 87,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 37,
+      "timestamp": 1778519640,
+      "raw": "040084",
+      "calories": 132
+    },
+    {
+      "record": 37,
+      "timestamp": 1778519700,
+      "raw": "040032",
+      "calories": 50
+    },
+    {
+      "record": 37,
+      "timestamp": 1778519760,
+      "raw": "040006",
+      "calories": 6
+    },
+    {
+      "record": 37,
+      "timestamp": 1778519820,
+      "raw": "c40300045a6300",
+      "calories": 4,
+      "heart_rate": 90,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 37,
+      "timestamp": 1778519880,
+      "raw": "c40200565a00",
+      "calories": 86,
+      "heart_rate": 90,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 37,
+      "timestamp": 1778519940,
+      "raw": "040020",
+      "calories": 32
+    },
+    {
+      "record": 37,
+      "timestamp": 1778520000,
+      "raw": "04001f",
+      "calories": 31
+    },
+    {
+      "record": 37,
+      "timestamp": 1778520060,
+      "raw": "04001f",
+      "calories": 31
+    },
+    {
+      "record": 37,
+      "timestamp": 1778520120,
+      "raw": "040001",
+      "calories": 1
+    },
+    {
+      "record": 37,
+      "timestamp": 1778520180,
+      "raw": "04002d",
+      "calories": 45
+    },
+    {
+      "record": 37,
+      "timestamp": 1778520240,
+      "raw": "040035",
+      "calories": 53
+    },
+    {
+      "record": 37,
+      "timestamp": 1778520300,
+      "raw": "040032",
+      "calories": 50
+    },
+    {
+      "record": 37,
+      "timestamp": 1778520360,
+      "raw": "040018",
+      "calories": 24
+    },
+    {
+      "record": 37,
+      "timestamp": 1778520420,
+      "raw": "c40300585a6200",
+      "calories": 88,
+      "heart_rate": 90,
+      "spo2": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 38,
+      "timestamp": 1778520480,
+      "raw": "c40200715b00",
+      "calories": 113,
+      "heart_rate": 91,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 38,
+      "timestamp": 1778520540,
+      "raw": "040068",
+      "calories": 104
+    },
+    {
+      "record": 38,
+      "timestamp": 1778520600,
+      "raw": "00"
+    },
+    {
+      "record": 38,
+      "timestamp": 1778520660,
+      "raw": "00"
+    },
+    {
+      "record": 38,
+      "timestamp": 1778520720,
+      "raw": "00"
+    },
+    {
+      "record": 38,
+      "timestamp": 1778520780,
+      "raw": "00"
+    },
+    {
+      "record": 38,
+      "timestamp": 1778520840,
+      "raw": "00"
+    },
+    {
+      "record": 38,
+      "timestamp": 1778520900,
+      "raw": "00"
+    },
+    {
+      "record": 38,
+      "timestamp": 1778520960,
+      "raw": "00"
+    },
+    {
+      "record": 38,
+      "timestamp": 1778521020,
+      "raw": "00"
+    },
+    {
+      "record": 38,
+      "timestamp": 1778521080,
+      "raw": "00"
+    },
+    {
+      "record": 38,
+      "timestamp": 1778521140,
+      "raw": "00"
+    },
+    {
+      "record": 38,
+      "timestamp": 1778521200,
+      "raw": "00"
+    },
+    {
+      "record": 38,
+      "timestamp": 1778521260,
+      "raw": "04000e",
+      "calories": 14
+    },
+    {
+      "record": 38,
+      "timestamp": 1778521320,
+      "raw": "00"
+    },
+    {
+      "record": 38,
+      "timestamp": 1778521380,
+      "raw": "00"
+    },
+    {
+      "record": 38,
+      "timestamp": 1778521440,
+      "raw": "00"
+    },
+    {
+      "record": 38,
+      "timestamp": 1778521500,
+      "raw": "00"
+    },
+    {
+      "record": 38,
+      "timestamp": 1778521560,
+      "raw": "00"
+    },
+    {
+      "record": 38,
+      "timestamp": 1778521620,
+      "raw": "00"
+    },
+    {
+      "record": 38,
+      "timestamp": 1778521680,
+      "raw": "04002c",
+      "calories": 44
+    },
+    {
+      "record": 38,
+      "timestamp": 1778521740,
+      "raw": "c40200025200",
+      "calories": 2,
+      "heart_rate": 82,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 38,
+      "timestamp": 1778521800,
+      "raw": "c40200665e00",
+      "calories": 102,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 38,
+      "timestamp": 1778521860,
+      "raw": "c402007d5d00",
+      "calories": 125,
+      "heart_rate": 93,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 38,
+      "timestamp": 1778521920,
+      "raw": "c402008e5d00",
+      "calories": 142,
+      "heart_rate": 93,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 38,
+      "timestamp": 1778521980,
+      "raw": "040087",
+      "calories": 135
+    },
+    {
+      "record": 38,
+      "timestamp": 1778522040,
+      "raw": "0400a7",
+      "calories": 167
+    },
+    {
+      "record": 38,
+      "timestamp": 1778522100,
+      "raw": "c40200fb6500",
+      "calories": 251,
+      "heart_rate": 101,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 38,
+      "timestamp": 1778522160,
+      "raw": "c40200d75e00",
+      "calories": 215,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 38,
+      "timestamp": 1778522220,
+      "raw": "c402009a5800",
+      "calories": 154,
+      "heart_rate": 88,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 38,
+      "timestamp": 1778522280,
+      "raw": "040085",
+      "calories": 133
+    },
+    {
+      "record": 38,
+      "timestamp": 1778522340,
+      "raw": "04008a",
+      "calories": 138
+    },
+    {
+      "record": 38,
+      "timestamp": 1778522400,
+      "raw": "0e001200760011",
+      "steps": 18,
+      "calories": 118,
+      "distance": 17
+    },
+    {
+      "record": 38,
+      "timestamp": 1778522460,
+      "raw": "0e002f04fb0031",
+      "steps": 47,
+      "calories": 1275,
+      "distance": 49
+    },
+    {
+      "record": 39,
+      "timestamp": 1778522520,
+      "raw": "0e004500630040",
+      "steps": 69,
+      "calories": 99,
+      "distance": 64
+    },
+    {
+      "record": 39,
+      "timestamp": 1778522580,
+      "raw": "0e001800840017",
+      "steps": 24,
+      "calories": 132,
+      "distance": 23
+    },
+    {
+      "record": 39,
+      "timestamp": 1778522640,
+      "raw": "0e00240815001d",
+      "steps": 36,
+      "calories": 2069,
+      "distance": 29
+    },
+    {
+      "record": 39,
+      "timestamp": 1778522700,
+      "raw": "0e000e007f000d",
+      "steps": 14,
+      "calories": 127,
+      "distance": 13
+    },
+    {
+      "record": 39,
+      "timestamp": 1778522760,
+      "raw": "0e003006d9002d",
+      "steps": 48,
+      "calories": 1753,
+      "distance": 45
+    },
+    {
+      "record": 39,
+      "timestamp": 1778522820,
+      "raw": "c40302f06b5f00",
+      "calories": 752,
+      "heart_rate": 107,
+      "spo2": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 39,
+      "timestamp": 1778522880,
+      "raw": "04033c",
+      "calories": 828
+    },
+    {
+      "record": 39,
+      "timestamp": 1778522940,
+      "raw": "c402001b6400",
+      "calories": 27,
+      "heart_rate": 100,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 39,
+      "timestamp": 1778523000,
+      "raw": "040052",
+      "calories": 82
+    },
+    {
+      "record": 39,
+      "timestamp": 1778523060,
+      "raw": "040255",
+      "calories": 597
+    },
+    {
+      "record": 39,
+      "timestamp": 1778523120,
+      "raw": "c402000f5d00",
+      "calories": 15,
+      "heart_rate": 93,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 39,
+      "timestamp": 1778523180,
+      "raw": "00"
+    },
+    {
+      "record": 39,
+      "timestamp": 1778523240,
+      "raw": "00"
+    },
+    {
+      "record": 39,
+      "timestamp": 1778523300,
+      "raw": "00"
+    },
+    {
+      "record": 39,
+      "timestamp": 1778523360,
+      "raw": "00"
+    },
+    {
+      "record": 39,
+      "timestamp": 1778523420,
+      "raw": "00"
+    },
+    {
+      "record": 39,
+      "timestamp": 1778523480,
+      "raw": "00"
+    },
+    {
+      "record": 39,
+      "timestamp": 1778523540,
+      "raw": "00"
+    },
+    {
+      "record": 39,
+      "timestamp": 1778523600,
+      "raw": "00"
+    },
+    {
+      "record": 39,
+      "timestamp": 1778523660,
+      "raw": "00"
+    },
+    {
+      "record": 39,
+      "timestamp": 1778523720,
+      "raw": "00"
+    },
+    {
+      "record": 39,
+      "timestamp": 1778523780,
+      "raw": "00"
+    },
+    {
+      "record": 39,
+      "timestamp": 1778523840,
+      "raw": "00"
+    },
+    {
+      "record": 39,
+      "timestamp": 1778523900,
+      "raw": "00"
+    },
+    {
+      "record": 39,
+      "timestamp": 1778523960,
+      "raw": "00"
+    },
+    {
+      "record": 39,
+      "timestamp": 1778524020,
+      "raw": "00"
+    },
+    {
+      "record": 39,
+      "timestamp": 1778524080,
+      "raw": "00"
+    },
+    {
+      "record": 39,
+      "timestamp": 1778524140,
+      "raw": "00"
+    },
+    {
+      "record": 39,
+      "timestamp": 1778524200,
+      "raw": "00"
+    },
+    {
+      "record": 39,
+      "timestamp": 1778524260,
+      "raw": "00"
+    },
+    {
+      "record": 39,
+      "timestamp": 1778524320,
+      "raw": "00"
+    },
+    {
+      "record": 39,
+      "timestamp": 1778524380,
+      "raw": "00"
+    },
+    {
+      "record": 39,
+      "timestamp": 1778524440,
+      "raw": "00"
+    },
+    {
+      "record": 39,
+      "timestamp": 1778524500,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778524560,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778524620,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778524680,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778524740,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778524800,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778524860,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778524920,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778524980,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778525040,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778525100,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778525160,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778525220,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778525280,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778525340,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778525400,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778525460,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778525520,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778525580,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778525640,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778525700,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778525760,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778525820,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778525880,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778525940,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778526000,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778526060,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778526120,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778526180,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778526240,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778526300,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778526360,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778526420,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778526480,
+      "raw": "00"
+    },
+    {
+      "record": 40,
+      "timestamp": 1778526540,
+      "raw": "c402006d5f00",
+      "calories": 109,
+      "heart_rate": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 41,
+      "timestamp": 1778526600,
+      "raw": "c40200085f00",
+      "calories": 8,
+      "heart_rate": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 41,
+      "timestamp": 1778526660,
+      "raw": "00"
+    },
+    {
+      "record": 41,
+      "timestamp": 1778526720,
+      "raw": "00"
+    },
+    {
+      "record": 41,
+      "timestamp": 1778526780,
+      "raw": "00"
+    },
+    {
+      "record": 41,
+      "timestamp": 1778526840,
+      "raw": "040005",
+      "calories": 5
+    },
+    {
+      "record": 41,
+      "timestamp": 1778526900,
+      "raw": "c40200335b00",
+      "calories": 51,
+      "heart_rate": 91,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 41,
+      "timestamp": 1778526960,
+      "raw": "040005",
+      "calories": 5
+    },
+    {
+      "record": 41,
+      "timestamp": 1778527020,
+      "raw": "040038",
+      "calories": 56
+    },
+    {
+      "record": 41,
+      "timestamp": 1778527080,
+      "raw": "040090",
+      "calories": 144
+    },
+    {
+      "record": 41,
+      "timestamp": 1778527140,
+      "raw": "c40201546b00",
+      "calories": 340,
+      "heart_rate": 107,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 41,
+      "timestamp": 1778527200,
+      "raw": "c4030059516000",
+      "calories": 89,
+      "heart_rate": 81,
+      "spo2": 96,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 41,
+      "timestamp": 1778527260,
+      "raw": "00"
+    },
+    {
+      "record": 41,
+      "timestamp": 1778527320,
+      "raw": "00"
+    },
+    {
+      "record": 41,
+      "timestamp": 1778527380,
+      "raw": "c40200106000",
+      "calories": 16,
+      "heart_rate": 96,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 41,
+      "timestamp": 1778527440,
+      "raw": "00"
+    },
+    {
+      "record": 41,
+      "timestamp": 1778527500,
+      "raw": "00"
+    },
+    {
+      "record": 41,
+      "timestamp": 1778527560,
+      "raw": "c402000a5f00",
+      "calories": 10,
+      "heart_rate": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 41,
+      "timestamp": 1778527620,
+      "raw": "040075",
+      "calories": 117
+    },
+    {
+      "record": 41,
+      "timestamp": 1778527680,
+      "raw": "04006d",
+      "calories": 109
+    },
+    {
+      "record": 41,
+      "timestamp": 1778527740,
+      "raw": "040078",
+      "calories": 120
+    },
+    {
+      "record": 41,
+      "timestamp": 1778527800,
+      "raw": "c402003a5e00",
+      "calories": 58,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 41,
+      "timestamp": 1778527860,
+      "raw": "04005d",
+      "calories": 93
+    },
+    {
+      "record": 41,
+      "timestamp": 1778527920,
+      "raw": "04005d",
+      "calories": 93
+    },
+    {
+      "record": 41,
+      "timestamp": 1778527980,
+      "raw": "040005",
+      "calories": 5
+    },
+    {
+      "record": 41,
+      "timestamp": 1778528040,
+      "raw": "c40200836000",
+      "calories": 131,
+      "heart_rate": 96,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 41,
+      "timestamp": 1778528100,
+      "raw": "040022",
+      "calories": 34
+    },
+    {
+      "record": 41,
+      "timestamp": 1778528160,
+      "raw": "c402001b5e00",
+      "calories": 27,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 41,
+      "timestamp": 1778528220,
+      "raw": "c40300195b5f00",
+      "calories": 25,
+      "heart_rate": 91,
+      "spo2": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 41,
+      "timestamp": 1778528280,
+      "raw": "04004e",
+      "calories": 78
+    },
+    {
+      "record": 41,
+      "timestamp": 1778528340,
+      "raw": "04004e",
+      "calories": 78
+    },
+    {
+      "record": 41,
+      "timestamp": 1778528400,
+      "raw": "c402004e5800",
+      "calories": 78,
+      "heart_rate": 88,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 41,
+      "timestamp": 1778528460,
+      "raw": "040077",
+      "calories": 119
+    },
+    {
+      "record": 41,
+      "timestamp": 1778528520,
+      "raw": "04000c",
+      "calories": 12
+    },
+    {
+      "record": 41,
+      "timestamp": 1778528580,
+      "raw": "040015",
+      "calories": 21
+    },
+    {
+      "record": 42,
+      "timestamp": 1778528640,
+      "raw": "040092",
+      "calories": 146
+    },
+    {
+      "record": 42,
+      "timestamp": 1778528700,
+      "raw": "04003f",
+      "calories": 63
+    },
+    {
+      "record": 42,
+      "timestamp": 1778528760,
+      "raw": "c402001f5a00",
+      "calories": 31,
+      "heart_rate": 90,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778528820,
+      "raw": "c40300485f6200",
+      "calories": 72,
+      "heart_rate": 95,
+      "spo2": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778528880,
+      "raw": "c402004b5f00",
+      "calories": 75,
+      "heart_rate": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778528940,
+      "raw": "04005b",
+      "calories": 91
+    },
+    {
+      "record": 42,
+      "timestamp": 1778529000,
+      "raw": "c40300345c6200",
+      "calories": 52,
+      "heart_rate": 92,
+      "spo2": 98,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778529060,
+      "raw": "04004e",
+      "calories": 78
+    },
+    {
+      "record": 42,
+      "timestamp": 1778529120,
+      "raw": "04008a",
+      "calories": 138
+    },
+    {
+      "record": 42,
+      "timestamp": 1778529180,
+      "raw": "040042",
+      "calories": 66
+    },
+    {
+      "record": 42,
+      "timestamp": 1778529240,
+      "raw": "04001a",
+      "calories": 26
+    },
+    {
+      "record": 42,
+      "timestamp": 1778529300,
+      "raw": "04002a",
+      "calories": 42
+    },
+    {
+      "record": 42,
+      "timestamp": 1778529360,
+      "raw": "04002d",
+      "calories": 45
+    },
+    {
+      "record": 42,
+      "timestamp": 1778529420,
+      "raw": "c402001c6500",
+      "calories": 28,
+      "heart_rate": 101,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778529480,
+      "raw": "c402001b5c00",
+      "calories": 27,
+      "heart_rate": 92,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778529540,
+      "raw": "04007a",
+      "calories": 122
+    },
+    {
+      "record": 42,
+      "timestamp": 1778529600,
+      "raw": "c40203776d00",
+      "calories": 887,
+      "heart_rate": 109,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778529660,
+      "raw": "0404a6",
+      "calories": 1190
+    },
+    {
+      "record": 42,
+      "timestamp": 1778529720,
+      "raw": "0404b0",
+      "calories": 1200
+    },
+    {
+      "record": 42,
+      "timestamp": 1778529780,
+      "raw": "0e000404460005",
+      "steps": 4,
+      "calories": 1094,
+      "distance": 5
+    },
+    {
+      "record": 42,
+      "timestamp": 1778529840,
+      "raw": "0e000f03fa0012",
+      "steps": 15,
+      "calories": 1018,
+      "distance": 18
+    },
+    {
+      "record": 42,
+      "timestamp": 1778529900,
+      "raw": "04031d",
+      "calories": 797
+    },
+    {
+      "record": 42,
+      "timestamp": 1778529960,
+      "raw": "c40200f85e00",
+      "calories": 248,
+      "heart_rate": 94,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778530020,
+      "raw": "040071",
+      "calories": 113
+    },
+    {
+      "record": 42,
+      "timestamp": 1778530080,
+      "raw": "04005f",
+      "calories": 95
+    },
+    {
+      "record": 42,
+      "timestamp": 1778530140,
+      "raw": "040092",
+      "calories": 146
+    },
+    {
+      "record": 42,
+      "timestamp": 1778530200,
+      "raw": "040084",
+      "calories": 132
+    },
+    {
+      "record": 42,
+      "timestamp": 1778530260,
+      "raw": "040089",
+      "calories": 137
+    },
+    {
+      "record": 42,
+      "timestamp": 1778530320,
+      "raw": "040083",
+      "calories": 131
+    },
+    {
+      "record": 42,
+      "timestamp": 1778530380,
+      "raw": "040075",
+      "calories": 117
+    }
+  ],
+  "sleep": [
+    {
+      "record": 0,
+      "start": 1778434980,
+      "end": 1778435040,
+      "duration_sec": 60,
+      "stage": 1
+    },
+    {
+      "record": 0,
+      "start": 1778435340,
+      "end": 1778435400,
+      "duration_sec": 60,
+      "stage": 1
+    },
+    {
+      "record": 0,
+      "start": 1778438100,
+      "end": 1778438220,
+      "duration_sec": 120,
+      "stage": 1
+    },
+    {
+      "record": 0,
+      "start": 1778438280,
+      "end": 1778438400,
+      "duration_sec": 120,
+      "stage": 1
+    },
+    {
+      "record": 0,
+      "start": 1778441580,
+      "end": 1778441640,
+      "duration_sec": 60,
+      "stage": 1
+    },
+    {
+      "record": 0,
+      "start": 1778442300,
+      "end": 1778442420,
+      "duration_sec": 120,
+      "stage": 1
+    },
+    {
+      "record": 0,
+      "start": 1778447760,
+      "end": 1778447880,
+      "duration_sec": 120,
+      "stage": 1
+    },
+    {
+      "record": 0,
+      "start": 1778447940,
+      "end": 1778448060,
+      "duration_sec": 120,
+      "stage": 1
+    },
+    {
+      "record": 0,
+      "start": 1778450640,
+      "end": 1778450700,
+      "duration_sec": 60,
+      "stage": 1
+    },
+    {
+      "record": 0,
+      "start": 1778451480,
+      "end": 1778451540,
+      "duration_sec": 60,
+      "stage": 1
+    },
+    {
+      "record": 0,
+      "start": 1778464980,
+      "end": 1778465040,
+      "duration_sec": 60,
+      "stage": 1
+    },
+    {
+      "record": 0,
+      "start": 1778485320,
+      "end": 1778485500,
+      "duration_sec": 180,
+      "stage": 1
+    },
+    {
+      "record": 0,
+      "start": 1778485560,
+      "end": 1778485620,
+      "duration_sec": 60,
+      "stage": 1
+    },
+    {
+      "record": 1,
+      "start": 1778486100,
+      "end": 1778486220,
+      "duration_sec": 120,
+      "stage": 1
+    },
+    {
+      "record": 1,
+      "start": 1778487180,
+      "end": 1778487300,
+      "duration_sec": 120,
+      "stage": 1
+    },
+    {
+      "record": 1,
+      "start": 1778488560,
+      "end": 1778488620,
+      "duration_sec": 60,
+      "stage": 1
+    },
+    {
+      "record": 1,
+      "start": 1778488800,
+      "end": 1778488860,
+      "duration_sec": 60,
+      "stage": 1
+    },
+    {
+      "record": 1,
+      "start": 1778489040,
+      "end": 1778489160,
+      "duration_sec": 120,
+      "stage": 1
+    },
+    {
+      "record": 1,
+      "start": 1778489220,
+      "end": 1778489280,
+      "duration_sec": 60,
+      "stage": 1
+    },
+    {
+      "record": 1,
+      "start": 1778489340,
+      "end": 1778489520,
+      "duration_sec": 180,
+      "stage": 1
+    },
+    {
+      "record": 1,
+      "start": 1778489820,
+      "end": 1778490000,
+      "duration_sec": 180,
+      "stage": 1
+    },
+    {
+      "record": 1,
+      "start": 1778490180,
+      "end": 1778490300,
+      "duration_sec": 120,
+      "stage": 1
+    },
+    {
+      "record": 1,
+      "start": 1778490420,
+      "end": 1778490540,
+      "duration_sec": 120,
+      "stage": 1
+    },
+    {
+      "record": 1,
+      "start": 1778490600,
+      "end": 1778490780,
+      "duration_sec": 180,
+      "stage": 1
+    },
+    {
+      "record": 1,
+      "start": 1778490960,
+      "end": 1778491020,
+      "duration_sec": 60,
+      "stage": 1
+    },
+    {
+      "record": 1,
+      "start": 1778491920,
+      "end": 1778491980,
+      "duration_sec": 60,
+      "stage": 1
+    },
+    {
+      "record": 2,
+      "start": 1778493540,
+      "end": 1778493600,
+      "duration_sec": 60,
+      "stage": 1
+    },
+    {
+      "record": 2,
+      "start": 1778497860,
+      "end": 1778497920,
+      "duration_sec": 60,
+      "stage": 1
+    },
+    {
+      "record": 2,
+      "start": 1778498460,
+      "end": 1778498520,
+      "duration_sec": 60,
+      "stage": 1
+    },
+    {
+      "record": 2,
+      "start": 1778499300,
+      "end": 1778499360,
+      "duration_sec": 60,
+      "stage": 1
+    },
+    {
+      "record": 2,
+      "start": 1778501100,
+      "end": 1778501160,
+      "duration_sec": 60,
+      "stage": 1
+    },
+    {
+      "record": 2,
+      "start": 1778501220,
+      "end": 1778501340,
+      "duration_sec": 120,
+      "stage": 1
+    },
+    {
+      "record": 2,
+      "start": 1778503200,
+      "end": 1778503260,
+      "duration_sec": 60,
+      "stage": 1
+    },
+    {
+      "record": 2,
+      "start": 1778506980,
+      "end": 1778507100,
+      "duration_sec": 120,
+      "stage": 1
+    },
+    {
+      "record": 2,
+      "start": 1778507160,
+      "end": 1778507400,
+      "duration_sec": 240,
+      "stage": 1
+    },
+    {
+      "record": 2,
+      "start": 1778507460,
+      "end": 1778509980,
+      "duration_sec": 2520,
+      "stage": 1
+    },
+    {
+      "record": 2,
+      "start": 1778510580,
+      "end": 1778510760,
+      "duration_sec": 180,
+      "stage": 1
+    },
+    {
+      "record": 2,
+      "start": 1778511780,
+      "end": 1778511960,
+      "duration_sec": 180,
+      "stage": 1
+    },
+    {
+      "record": 2,
+      "start": 1778512020,
+      "end": 1778512140,
+      "duration_sec": 120,
+      "stage": 1
+    },
+    {
+      "record": 3,
+      "start": 1778512620,
+      "end": 1778512800,
+      "duration_sec": 180,
+      "stage": 1
+    },
+    {
+      "record": 3,
+      "start": 1778517600,
+      "end": 1778517660,
+      "duration_sec": 60,
+      "stage": 1
+    },
+    {
+      "record": 3,
+      "start": 1778517780,
+      "end": 1778517840,
+      "duration_sec": 60,
+      "stage": 1
+    },
+    {
+      "record": 3,
+      "start": 1778517960,
+      "end": 1778518020,
+      "duration_sec": 60,
+      "stage": 1
+    },
+    {
+      "record": 3,
+      "start": 1778522400,
+      "end": 1778522820,
+      "duration_sec": 420,
+      "stage": 1
+    },
+    {
+      "record": 3,
+      "start": 1778529780,
+      "end": 1778529900,
+      "duration_sec": 120,
+      "stage": 1
+    }
+  ]
+}
