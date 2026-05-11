@@ -1131,6 +1131,34 @@ class Band:
             sleep.extend(await self.get_sleep_data_record(index))
         return {"counts": counts, "steps": steps, "sleep": sleep}
 
+    @staticmethod
+    def summarize_fitness_preview(preview: dict) -> dict:
+        steps = preview.get("steps", [])
+        sleep = preview.get("sleep", [])
+        heart_rates = [r["heart_rate"] for r in steps if "heart_rate" in r and r["heart_rate"] > 0]
+        spo2 = [r["spo2"] for r in steps if "spo2" in r and r["spo2"] > 0]
+        active_steps = [r for r in steps if any(k in r for k in ("steps", "heart_rate", "spo2"))]
+
+        summary = {
+            "counts": preview.get("counts", {}),
+            "downloaded_step_minutes": len(steps),
+            "downloaded_sleep_segments": len(sleep),
+            "step_total_in_preview": sum(r.get("steps", 0) for r in steps),
+            "sleep_minutes": sum(r.get("duration_sec", 0) for r in sleep) // 60,
+            "heart_rate_samples": len(heart_rates),
+            "spo2_samples": len(spo2),
+            "examples": active_steps[:5],
+        }
+        if heart_rates:
+            summary["heart_rate_min"] = min(heart_rates)
+            summary["heart_rate_avg"] = round(sum(heart_rates) / len(heart_rates), 1)
+            summary["heart_rate_max"] = max(heart_rates)
+        if spo2:
+            summary["spo2_min"] = min(spo2)
+            summary["spo2_avg"] = round(sum(spo2) / len(spo2), 1)
+            summary["spo2_max"] = max(spo2)
+        return summary
+
     async def disconnect(self):
         await asyncio.sleep(0.3)
         await self.client.stop_notify(GATT_READ)
@@ -1155,7 +1183,8 @@ async def run():
 
         try:
             preview = await band.get_recent_fitness_preview(hours=24)
-            logger.info(f"Recent fitness preview (24h): {json.dumps(preview, indent=2)}")
+            summary = band.summarize_fitness_preview(preview)
+            logger.info(f"Recent fitness summary (24h): {json.dumps(summary, indent=2)}")
         except Exception as e:
             logger.warning(f"Fitness preview query failed: {e}")
 
