@@ -311,6 +311,7 @@ class Band:
         self._event   = asyncio.Event()
         self._rx_queue = deque()   # queue of complete reassembled frames
         self._rx_buf  = None       # reassembly buffer for sliced packets
+        self._rx_partial = b""     # BLE-level fragments of one LPv2 frame
         self._rx_svc  = 0
         self._rx_cmd  = 0
 
@@ -325,6 +326,28 @@ class Band:
         raw = bytes(data)
         logger.debug(f"← {raw.hex()}")
 
+        buf = self._rx_partial + raw
+        self._rx_partial = b""
+
+        while buf:
+            if len(buf) < 4:
+                self._rx_partial = buf
+                return
+            if buf[0] != MAGIC:
+                logger.warning(f"Dropping non-Huawei partial bytes: {buf.hex()}")
+                return
+
+            expected = struct.unpack(">H", buf[1:3])[0]
+            frame_len = expected + 5
+            if len(buf) < frame_len:
+                self._rx_partial = buf
+                return
+
+            frame = buf[:frame_len]
+            buf = buf[frame_len:]
+            self._handle_complete_frame(frame)
+
+    def _handle_complete_frame(self, raw: bytes):
         slice_b = raw[3]
 
         if slice_b == 0x00:

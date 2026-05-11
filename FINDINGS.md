@@ -70,10 +70,12 @@ Byte at offset 4 is a **flag counter** (0–255, wraps) shared across all frames
 
 Frame header for sliced packets: `[0x5A][len+2 big-endian][slice_byte][flag][payload][CRC16]`
 
-On reassembly: sliced frame content begins at byte offset 5 (`magic,len,slice,flag`
-come first). Concatenate the first slice's `svc/cmd + TLV` and following slices'
-TLV bytes, then reconstruct as a synthetic unsliced frame so `parse_frame` can
-process it uniformly.
+On receive, first buffer BLE-level fragments until a complete LPv2 frame is
+available (`frame_len = length_field + 5`). Then reassemble Huawei slices:
+sliced frame content begins at byte offset 5 (`magic,len,slice,flag` come first).
+Concatenate the first slice's `svc/cmd + TLV` and following slices' TLV bytes,
+then reconstruct as a synthetic unsliced frame so `parse_frame` can process it
+uniformly.
 
 ### 3.4 TLV encoding
 
