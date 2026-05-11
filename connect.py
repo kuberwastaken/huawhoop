@@ -242,6 +242,7 @@ def load_or_create_config() -> dict:
         cfg.read(CONFIG_FILE)
         c = dict(cfg["band10"])
         secret_key = bytes.fromhex(c["secret_key"]) if c.get("secret_key") else None
+        auth_key = bytes.fromhex(c["auth_key"]) if c.get("auth_key") else None
         stored_android_id = c.get("android_id", "")
         android_id = stored_android_id.upper()
         if (not secret_key) and (len(android_id) != 32 or any(ch not in "0123456789abcdefABCDEF" for ch in android_id)):
@@ -257,6 +258,7 @@ def load_or_create_config() -> dict:
         c["secret"]     = bytes.fromhex(c["secret"])
         c["android_id"] = android_id
         c["secret_key"] = secret_key
+        c["auth_key"]   = auth_key
         return c
 
     secret     = secrets.token_bytes(16)
@@ -266,13 +268,23 @@ def load_or_create_config() -> dict:
         "client_mac":  CLIENT_MAC,
         "secret":      secret.hex(),
         "android_id":  android_id,
+        "auth_key":    "",    # persistent HiChain authToken for reconnect
         "secret_key":  "",    # filled after first HiChain auth
     }
     with open(CONFIG_FILE, "w") as f:
         cfg.write(f)
     logger.info("Created band.ini with fresh keys.")
     return {"device_mac": DEVICE_MAC, "client_mac": CLIENT_MAC,
-            "secret": secret, "android_id": android_id, "secret_key": None}
+            "secret": secret, "android_id": android_id,
+            "auth_key": None, "secret_key": None}
+
+def save_auth_key(key: bytes):
+    cfg = ConfigParser()
+    cfg.read(CONFIG_FILE)
+    cfg["band10"]["auth_key"] = key.hex()
+    with open(CONFIG_FILE, "w") as f:
+        cfg.write(f)
+    logger.info("Saved HiChain auth key to band.ini.")
 
 def save_secret_key(key: bytes):
     cfg = ConfigParser()
@@ -280,7 +292,7 @@ def save_secret_key(key: bytes):
     cfg["band10"]["secret_key"] = key.hex()
     with open(CONFIG_FILE, "w") as f:
         cfg.write(f)
-    logger.info("Saved HiChain secret key to band.ini.")
+    logger.info("Saved HiChain transaction key to band.ini.")
 
 # ── Band class ────────────────────────────────────────────────────────────────
 
@@ -290,7 +302,8 @@ class Band:
         self.device_mac = cfg["device_mac"]
         self.client_mac = cfg["client_mac"]
         self.android_id = cfg["android_id"]          # Gadgetbridge-style 32-char hex string
-        self.secret_key = cfg.get("secret_key")      # None until first HiChain auth
+        self.auth_key   = cfg.get("auth_key")        # Persistent HiChain authToken
+        self.secret_key = cfg.get("secret_key")      # Per-session hichain_return_key
 
         self.client_serial = self.client_mac.replace(":", "")[-6:].encode()
 
@@ -809,11 +822,12 @@ class Band:
         tlv      = self._hichain_json(1, step1_payload, op_code, request_id)
         step1_json_str = tlv_dec(tlv).get(0x01, b"{}").decode("utf-8", errors="replace")
         logger.info(f"  Step 1 JSON: {step1_json_str}")
-        print("\n" + "="*60)
-        print("ACTION REQUIRED: Check your band screen NOW.")
-        print("The band will show a second pairing/bond confirmation.")
-        print("You have 90 seconds to accept it on the band.")
-        print("="*60 + "\n")
+        if op_code == 0x01:
+            print("\n" + "="*60)
+            print("ACTION REQUIRED: Check your band screen NOW.")
+            print("The band will show a second pairing/bond confirmation.")
+            print("You have 90 seconds to accept it on the band.")
+            print("="*60 + "\n")
         resp_tlvs = await self._transact(SVC_DEV, CMD_HICHAIN, tlv, timeout=90.0,
                                          pin_code=pin_code, rand_self=rand_self, seed=seed)
         step, p1 = self._parse_hichain_response(resp_tlvs)
@@ -828,7 +842,9 @@ class Band:
             pin_hex_utf8 = hexu(pin_code).encode("utf-8")
             key          = sha256(pin_hex_utf8)
         else:
-            key = self.secret_key
+            key = self.auth_key
+            if not key:
+                raise RuntimeError("Cannot reconnect HiChain without stored auth_key")
 
         psk = hmac_sha256(key, seed)
 
@@ -885,8 +901,8 @@ class Band:
             nonce3       = bytes.fromhex(p3["nonce"])
             enc_auth_tok = bytes.fromhex(p3["encAuthToken"])
             auth_token   = aes_gcm_dec(enc_auth_tok, session_key, nonce3, challenge)
-            self.secret_key = auth_token
-            save_secret_key(auth_token)
+            self.auth_key = auth_token
+            save_auth_key(auth_token)
             logger.info(f"  authToken stored: {auth_token.hex()}")
         else:
             logger.info("  Step 3 skipped (reconnect mode).")
@@ -917,7 +933,7 @@ class Band:
             final_key = hkdf_sha256(session_key, salt, b"hichain_return_key", 32)
             self.secret_key = final_key
             save_secret_key(final_key)
-            logger.info(f"  Reconnect final key stored: {final_key.hex()}")
+            logger.info(f"  Session transaction key stored: {final_key.hex()}")
 
     # ── Full handshake ────────────────────────────────────────────────────────
 
@@ -936,8 +952,8 @@ class Band:
 
         if auth_type == 0x0186A0 or is_hichain3(auth_type):
             logger.info("  Mode: HiChain3")
-            if self.secret_key:
-                logger.info("  Stored secret key found → reconnect (op=0x02)")
+            if self.auth_key:
+                logger.info("  Stored auth key found → reconnect (op=0x02)")
                 await self.hichain_authenticate(pin_code=b"", op_code=0x02)
             else:
                 logger.info("  No stored key → first-auth (op=0x01), fetching PIN...")
