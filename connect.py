@@ -25,6 +25,7 @@ import hashlib
 import hmac as _hmac
 import json
 import logging
+import os
 import secrets
 import struct
 import time
@@ -38,7 +39,8 @@ from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 from cryptography.hazmat.primitives.kdf.hkdf import HKDF
 from cryptography.hazmat.primitives import hashes
 
-logging.basicConfig(level=logging.DEBUG,
+LOG_LEVEL = getattr(logging, os.getenv("BAND10_LOG", "INFO").upper(), logging.INFO)
+logging.basicConfig(level=LOG_LEVEL,
                     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
 logger = logging.getLogger("band10")
 
