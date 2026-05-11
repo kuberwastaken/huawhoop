@@ -123,8 +123,10 @@ Band 10 returns `deviceSupportType=4`.
 Send:
 - Tag 0x01: authMode (= deviceSupportType = 4 for Band 10)
 - Tag 0x02: `\x01` (when authMode ∈ {2, 4})
-- Tag 0x05: androidId (8-byte random, stable per host)
+- Tag 0x05: androidId as ASCII bytes. Gadgetbridge stores this as a 32-character hex string
+  (`StringUtils.bytesToHex(HuaweiCrypto.generateNonce())`) and sends `androidID.getBytes(UTF_8)`.
 - Tag 0x03: `\x01`, Tag 0x04: `\x00`
+- Tag 0x06: empty tag and Tag 0x07: phone model when authMode=4
 - Tag 0x0D: `\x01` (if encMethod=GCM)
 
 Response parsing for authType:
@@ -178,20 +180,20 @@ session_key = HKDF(psk, salt=salt, info=b"hichain_iso_session_key", length=32)
 ```json
 {
   "isoSalt": "<rand_self hex>",
-  "peerAuthId": "<android_id hex>",
+  "peerAuthId": "<hex of android_id ASCII bytes>",
   "operationCode": 1,
   "seed": "<seed hex>",
   "peerUserType": 0,
   "version": {"minVersion":"1.0.0","currentVersion":"2.0.16"},
   "authForm": 0,
   "message": 1,
-  "requestId": "<random int>",
+  "requestId": "<current epoch millis>",
   "groupId": "7B0BC0CBCE474F6C238D9661C63400B797B166EA7849B3A370FC73A9A236E989",
   "groupName": "health_group_name",
   "groupOp": 2,
   "groupType": 256,
-  "peerDeviceId": "<android_id hex>",
-  "connDeviceId": "<android_id hex>",
+  "peerDeviceId": "<android_id string>",
+  "connDeviceId": "<android_id string>",
   "appId": "com.huawei.health",
   "ownerName": "",
   "groupAndModuleVersion": "2.0.1"
@@ -207,7 +209,7 @@ Verify: `HMAC(psk, rand_peer + rand_self + auth_id_self + auth_id_peer) == token
 
 #### Round 2 — send
 ```json
-{"peerAuthId": "<android_id hex>", "token": "<HMAC hex>"}
+{"peerAuthId": "<hex of android_id ASCII bytes>", "token": "<HMAC hex>"}
 ```
 token = `HMAC(psk, rand_self + rand_peer + auth_id_peer + auth_id_self)`
 
@@ -365,7 +367,7 @@ Had two `DIGEST_SECRETS = {` blocks; the first had a malformed hex string causin
 device_mac  = 88:8E:68:A2:E4:4F
 client_mac  = FF:FF:FF:A9:F0:23
 secret      = <16 bytes hex>
-android_id  = <8 bytes hex>
+android_id  = <32-char Gadgetbridge-style hex string>
 secret_key  =   ; filled after first successful HiChain3 auth
 ```
 

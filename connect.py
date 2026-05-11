@@ -27,6 +27,7 @@ import json
 import logging
 import secrets
 import struct
+import time
 from configparser import ConfigParser
 from pathlib import Path
 
@@ -213,18 +214,26 @@ def load_or_create_config() -> dict:
     if CONFIG_FILE.exists():
         cfg.read(CONFIG_FILE)
         c = dict(cfg["band10"])
+        secret_key = bytes.fromhex(c["secret_key"]) if c.get("secret_key") else None
+        android_id = c.get("android_id", "")
+        if (not secret_key) and (len(android_id) != 32 or any(ch not in "0123456789abcdefABCDEF" for ch in android_id)):
+            android_id = secrets.token_bytes(16).hex()
+            cfg["band10"]["android_id"] = android_id
+            with open(CONFIG_FILE, "w") as f:
+                cfg.write(f)
+            logger.info("Regenerated Gadgetbridge-style 32-char android_id in band.ini.")
         c["secret"]     = bytes.fromhex(c["secret"])
-        c["android_id"] = bytes.fromhex(c["android_id"])
-        c["secret_key"] = bytes.fromhex(c["secret_key"]) if c.get("secret_key") else None
+        c["android_id"] = android_id
+        c["secret_key"] = secret_key
         return c
 
     secret     = secrets.token_bytes(16)
-    android_id = secrets.token_bytes(8)
+    android_id = secrets.token_bytes(16).hex()
     cfg["band10"] = {
         "device_mac":  DEVICE_MAC,
         "client_mac":  CLIENT_MAC,
         "secret":      secret.hex(),
-        "android_id":  android_id.hex(),
+        "android_id":  android_id,
         "secret_key":  "",    # filled after first HiChain auth
     }
     with open(CONFIG_FILE, "w") as f:
@@ -248,7 +257,7 @@ class Band:
         self.client     = client
         self.device_mac = cfg["device_mac"]
         self.client_mac = cfg["client_mac"]
-        self.android_id = cfg["android_id"]          # 8-byte random
+        self.android_id = cfg["android_id"]          # Gadgetbridge-style 32-char hex string
         self.secret_key = cfg.get("secret_key")      # None until first HiChain auth
 
         self.client_serial = self.client_mac.replace(":", "")[-6:].encode()
@@ -372,10 +381,11 @@ class Band:
                 candidates.append(("hmac(digest,serverNonce)", hmac_sha256(ds, self.server_nonce)))
         # android_id derived keys
         if self.android_id:
-            candidates.append(("sha256(androidId)", sha256(self.android_id)))
-            candidates.append(("sha256(androidId)[:16]", sha256(self.android_id)[:16]))
+            android_id_bytes = self.android_id.encode("utf-8")
+            candidates.append(("sha256(androidId)", sha256(android_id_bytes)))
+            candidates.append(("sha256(androidId)[:16]", sha256(android_id_bytes)[:16]))
             for ds in DIGEST_SECRETS.values():
-                candidates.append(("hmac(digest,androidId)", hmac_sha256(ds, self.android_id)))
+                candidates.append(("hmac(digest,androidId)", hmac_sha256(ds, android_id_bytes)))
         # band_device_id derived keys
         if self.band_device_id:
             try:
@@ -562,7 +572,7 @@ class Band:
         tlv  = tlv_enc(0x01, bytes([self.auth_mode]))
         if self.auth_mode in (0x02, 0x04):
             tlv += tlv_enc(0x02, b"\x01")
-        tlv += tlv_enc(0x05, self.android_id)
+        tlv += tlv_enc(0x05, self.android_id.encode("utf-8"))
         tlv += tlv_enc(0x03, b"\x01") + tlv_enc(0x04, b"\x00")
         if self.auth_mode == 0x04:
             # Gadgetbridge adds these for authMode=4
@@ -609,7 +619,7 @@ class Band:
                       op_code: int, request_id: int,
                       value_extra: dict = None) -> bytes:
         """Build the JSON TLV blob for a HiChain step packet."""
-        android_id_hex = self.android_id.hex()
+        android_id_hex = self.android_id
         message_id     = step if op_code == 0x01 else (step | 0x10)
 
         version_obj = {"minVersion": "1.0.0", "currentVersion": "2.0.16"}
@@ -669,10 +679,10 @@ class Band:
     async def hichain_authenticate(self, pin_code: bytes, op_code: int = 0x01):
         """Execute the 4-step HiChain3 mutual authentication."""
         logger.info(f"Step 4: HiChain3 auth (op={op_code:#x})...")
-        request_id  = int.from_bytes(secrets.token_bytes(8), "big") & 0x7FFFFFFFFFFFFFFF
+        request_id  = int(time.time() * 1000)
         seed        = secrets.token_bytes(32)
         rand_self   = secrets.token_bytes(16)
-        auth_id_self = self.android_id
+        auth_id_self = self.android_id.encode("utf-8")
         session_key  = None
         challenge    = None
 
