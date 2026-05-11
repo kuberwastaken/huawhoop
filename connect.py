@@ -1452,18 +1452,19 @@ async def run():
         except Exception as e:
             logger.warning(f"P2P dictionary-sync ping failed: {e}")
 
-        try:
-            hrv_samples = await band.get_hrv_samples(days=0)
-            logger.info(f"HRV samples: count={len(hrv_samples)} "
-                        f"examples={json.dumps(hrv_samples[:5], indent=2)}")
-        except Exception as e:
-            logger.warning(f"HRV sync probe failed: {e!r}")
-            if os.getenv("BAND10_P2P_PROBE") == "1":
-                try:
-                    dictionary_probe = await band.probe_dictionary_classes(days=0)
-                    logger.info(f"P2P dictionary class probe: {json.dumps(dictionary_probe, indent=2)}")
-                except Exception as probe_e:
-                    logger.warning(f"P2P dictionary class probe failed: {probe_e!r}")
+        if os.getenv("BAND10_HRV_SYNC") == "1":
+            try:
+                hrv_samples = await band.get_hrv_samples(days=0)
+                logger.info(f"HRV samples: count={len(hrv_samples)} "
+                            f"examples={json.dumps(hrv_samples[:5], indent=2)}")
+            except Exception as e:
+                logger.warning(f"HRV sync probe failed: {e!r}")
+                if os.getenv("BAND10_P2P_PROBE") == "1":
+                    try:
+                        dictionary_probe = await band.probe_dictionary_classes(days=0)
+                        logger.info(f"P2P dictionary class probe: {json.dumps(dictionary_probe, indent=2)}")
+                    except Exception as probe_e:
+                        logger.warning(f"P2P dictionary class probe failed: {probe_e!r}")
 
         await band.disconnect()
 
