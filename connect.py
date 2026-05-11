@@ -598,6 +598,51 @@ class Band:
         await self._send(svc, cmd, tlv)
         return await self._recv(svc, cmd, timeout, pin_code=pin_code, rand_self=rand_self, seed=seed)
 
+    def _uses_gcm(self) -> bool:
+        # Gadgetbridge uses GCM for encryptMethod=1, and always for deviceSupportType=4.
+        return self.enc_method == 0x01 or self.dev_support_type == 0x04
+
+    def _next_crypto_iv(self) -> bytes:
+        if self.dev_support_type == 0x04:
+            return secrets.token_bytes(16)
+        self.enc_counter = 1 if self.enc_counter == 0xFFFFFFFF else self.enc_counter + 1
+        return secrets.token_bytes(12) + struct.pack(">I", self.enc_counter)
+
+    def _encrypt_transaction_tlv(self, plain_tlv: bytes) -> bytes:
+        if not self.secret_key:
+            raise RuntimeError("Cannot encrypt transaction before HiChain secret key is available")
+
+        iv = self._next_crypto_iv()
+        if self._uses_gcm():
+            cipher = aes_gcm_enc(plain_tlv, self.secret_key, iv, None)
+        else:
+            cipher = aes_cbc_enc(plain_tlv, self.secret_key, iv)
+
+        logger.debug(f"  encrypt tx iv={iv.hex()} plain={plain_tlv.hex()} cipher={cipher.hex()}")
+        return tlv_enc(0x7C, b"\x01") + tlv_enc(0x7D, iv) + tlv_enc(0x7E, cipher)
+
+    def _decrypt_transaction_tlvs(self, tlvs: dict) -> dict:
+        if not (self.secret_key and 0x7C in tlvs and 0x7D in tlvs and 0x7E in tlvs):
+            return tlvs
+
+        iv = tlvs[0x7D]
+        cipher = tlvs[0x7E]
+        if self._uses_gcm():
+            plain = aes_gcm_dec(cipher, self.secret_key, iv, None)
+        else:
+            plain = aes_cbc_dec(cipher, self.secret_key, iv)
+
+        decrypted = tlv_dec(plain)
+        logger.debug(f"  decrypt rx iv={iv.hex()} plain={plain.hex()} "
+                     f"tlvs={ {hex(k): v.hex() for k, v in decrypted.items()} }")
+        return decrypted
+
+    async def _transact_encrypted(self, svc: int, cmd: int, tlv: bytes,
+                                  timeout: float = 15.0) -> dict:
+        wrapped = self._encrypt_transaction_tlv(tlv)
+        response = await self._transact(svc, cmd, wrapped, timeout=timeout)
+        return self._decrypt_transaction_tlvs(response)
+
     # ── Handshake steps ───────────────────────────────────────────────────────
 
     async def get_link_params(self):
@@ -910,8 +955,12 @@ class Band:
     # ── Data queries ─────────────────────────────────────────────────────────
 
     async def get_battery(self) -> int:
-        tlvs = await self._transact(SVC_DEV, 0x08, tlv_enc(0x01))
-        return tlvs[0x02][0] if 0x02 in tlvs else -1
+        tlvs = await self._transact_encrypted(SVC_DEV, 0x08, tlv_enc(0x01))
+        if 0x01 in tlvs:
+            return tlvs[0x01][0]
+        if 0x02 in tlvs:
+            return tlvs[0x02][0]
+        return -1
 
     async def disconnect(self):
         await asyncio.sleep(0.3)
