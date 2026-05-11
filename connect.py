@@ -56,6 +56,7 @@ MAGIC       = 0x5A
 # Service / command IDs
 SVC_DEV     = 0x01
 SVC_FITNESS = 0x07
+SVC_P2P     = 0x34
 CMD_LINK    = 0x01
 CMD_AUTH    = 0x13
 CMD_BOND    = 0x0E
@@ -334,6 +335,7 @@ class Band:
         self.auth_mode        = 0
         self.slice_size       = 244
         self.enc_counter      = 0
+        self.p2p_sequence     = 1
         self.first_key        = b""
         self.band_device_id   = ""   # set from security negotiation tag=0x05
 
@@ -672,6 +674,64 @@ class Band:
         wrapped = self._encrypt_transaction_tlv(tlv)
         response = await self._transact(svc, cmd, wrapped, timeout=timeout)
         return self._decrypt_transaction_tlvs(response)
+
+    def _next_p2p_sequence(self) -> int:
+        self.p2p_sequence = (self.p2p_sequence + 1) % (0x7FFF - 1)
+        if self.p2p_sequence == 0:
+            self.p2p_sequence = 1
+        return self.p2p_sequence
+
+    @staticmethod
+    def _tlv_int(value: bytes, default: int = 0) -> int:
+        return int.from_bytes(value, "big") if value else default
+
+    @staticmethod
+    def _tlv_str(value: bytes) -> str:
+        return value.decode("utf-8", errors="replace")
+
+    def _parse_p2p_response(self, tlvs: dict) -> dict:
+        return {
+            "cmd_id": tlvs.get(0x01, b"\x00")[0],
+            "sequence": self._tlv_int(tlvs.get(0x02, b"\x00\x00")),
+            "src_package": self._tlv_str(tlvs.get(0x03, b"")),
+            "dst_package": self._tlv_str(tlvs.get(0x04, b"")),
+            "src_fingerprint": self._tlv_str(tlvs.get(0x05, b"")) if 0x05 in tlvs else None,
+            "dst_fingerprint": self._tlv_str(tlvs.get(0x06, b"")) if 0x06 in tlvs else None,
+            "data": tlvs.get(0x07, b""),
+            "code": self._tlv_int(tlvs.get(0x08, b"\x00")),
+        }
+
+    async def p2p_command(self, cmd_id: int, src_package: str, dst_package: str,
+                          src_fingerprint: str = None, dst_fingerprint: str = None,
+                          data: bytes = None, code: int = None,
+                          timeout: float = 20.0) -> dict:
+        seq = self._next_p2p_sequence()
+        tlv = (
+            tlv_enc(0x01, bytes([cmd_id])) +
+            tlv_enc(0x02, struct.pack(">H", seq)) +
+            tlv_enc(0x03, src_package.encode("utf-8")) +
+            tlv_enc(0x04, dst_package.encode("utf-8"))
+        )
+        if cmd_id == 0x02:
+            tlv += tlv_enc(0x05, (src_fingerprint or "").encode("utf-8"))
+            tlv += tlv_enc(0x06, (dst_fingerprint or "").encode("utf-8"))
+        if data:
+            tlv += tlv_enc(0x07, data)
+        if cmd_id == 0x03 and code is not None:
+            tlv += tlv_enc(0x08, struct.pack(">I", code))
+
+        response = await self._transact_encrypted(SVC_P2P, 0x01, tlv, timeout=timeout)
+        parsed = self._parse_p2p_response(response)
+        logger.debug(f"  P2P response: {parsed | {'data': parsed['data'].hex()}}")
+        return parsed
+
+    async def ping_dictionary_sync(self) -> dict:
+        return await self.p2p_command(
+            0x01,
+            "com.huawei.health",
+            "hw.watch.health.filesync",
+            timeout=20.0,
+        )
 
     # ── Handshake steps ───────────────────────────────────────────────────────
 
@@ -1187,6 +1247,13 @@ async def run():
             logger.info(f"Recent fitness summary (24h): {json.dumps(summary, indent=2)}")
         except Exception as e:
             logger.warning(f"Fitness preview query failed: {e}")
+
+        try:
+            p2p_ping = await band.ping_dictionary_sync()
+            logger.info(f"P2P dictionary-sync ping: code={p2p_ping['code']:#x} "
+                        f"src={p2p_ping['src_package']} dst={p2p_ping['dst_package']}")
+        except Exception as e:
+            logger.warning(f"P2P dictionary-sync ping failed: {e}")
 
         await band.disconnect()
 
