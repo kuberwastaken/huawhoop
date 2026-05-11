@@ -215,6 +215,9 @@ session_key = HKDF(psk, salt=salt, info=b"hichain_iso_session_key", length=32)
 {"isoSalt": "<rand_peer hex>", "peerAuthId": "<band_id hex>", "token": "<HMAC hex>"}
 ```
 
+The JSON TLV value may contain a trailing NUL byte; strip `\x00` before
+`json.loads`.
+
 Verify: `HMAC(psk, rand_peer + rand_self + auth_id_self + auth_id_peer) == token`
 
 #### Round 2 — send

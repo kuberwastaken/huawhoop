@@ -723,7 +723,7 @@ class Band:
             logger.warning(f"  HiChain TLV-format (non-JSON) response: appId={app_id!r} "
                            f"errorCode={error_code} all_tags={ {hex(k): v.hex() for k,v in tlvs.items()} }")
             raise ValueError(f"HiChain errorCode={error_code} (TLV format, appId={app_id!r})")
-        obj     = json.loads(json_bytes.decode("utf-8"))
+        obj     = json.loads(json_bytes.rstrip(b"\x00").decode("utf-8"))
         step    = obj.get("message", 0) & 0x0F   # mask reconnect bit
         payload = obj.get("payload", {})
         error   = obj.get("errorCode", 0)
