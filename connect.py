@@ -1109,7 +1109,7 @@ class Band:
         logger.info("  HiChain step 1...")
         tlv      = self._hichain_json(1, step1_payload, op_code, request_id)
         step1_json_str = tlv_dec(tlv).get(0x01, b"{}").decode("utf-8", errors="replace")
-        logger.info(f"  Step 1 JSON: {step1_json_str}")
+        logger.debug(f"  Step 1 JSON: {step1_json_str}")
         if op_code == 0x01:
             print("\n" + "="*60)
             print("ACTION REQUIRED: Check your band screen NOW.")
