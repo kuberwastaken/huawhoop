@@ -84,6 +84,16 @@ SECRET_KEY_2 = {
 GROUP_ID = "7B0BC0CBCE474F6C238D9661C63400B797B166EA7849B3A370FC73A9A236E989"
 DICT_HRV_CLASS = 500044
 DICT_HRV_RMSSD_VALUE = 500044831
+DICT_PROBE_CLASSES = {
+    "skin_temperature": 400012,
+    "emotion": 500031,
+    "sleep_apnea": 500002,
+    "arterial_stiffness": 400017,
+    "altitude": 200003,
+    "blood_pressure": 10002,
+    "lake_louise_ams": 500006,
+    "hrv": DICT_HRV_CLASS,
+}
 P2P_DICT_MODULE = "hw.unitedevice.datadictionarysync"
 P2P_DICT_PACKAGE = "hw.watch.health.filesync"
 P2P_LOCAL_FINGERPRINT = "UniteDeviceManagement"
@@ -841,10 +851,18 @@ class Band:
                             })
         return samples
 
-    async def get_hrv_samples(self, days: int = 7) -> list[dict]:
+    @staticmethod
+    def _dictionary_payload_class(data: bytes) -> int:
+        if not data or data[0] != 0x01:
+            return 0
+        top = tlv_dec(data[1:])
+        return Band._tlv_int(top.get(0x02, b""))
+
+    async def sync_dictionary_class(self, dict_class: int, days: int = 0,
+                                    timeout: float = 45.0) -> dict:
         end_ms = int(time.time() * 1000)
         start_ms = 0 if days <= 0 else end_ms - days * 24 * 60 * 60 * 1000
-        payload = self._p2p_dict_request_payload(DICT_HRV_CLASS, start_ms, end_ms)
+        payload = self._p2p_dict_request_payload(dict_class, start_ms, end_ms)
         seq = await self.send_p2p_command(
             0x02,
             P2P_DICT_MODULE,
@@ -854,11 +872,31 @@ class Band:
             payload,
         )
         window = "full" if start_ms == 0 else f"{days}d"
-        logger.info(f"P2P HRV sync request sent: seq={seq} window={window}")
-        response = await self.wait_for_p2p_data(P2P_DICT_PACKAGE, P2P_DICT_MODULE, timeout=45.0)
-        logger.info(f"P2P HRV sync response: cmd={response['cmd_id']:#x} code={response['code']:#x} "
+        logger.info(f"P2P dictionary sync request sent: class={dict_class} seq={seq} window={window}")
+        response = await self.wait_for_p2p_data(P2P_DICT_PACKAGE, P2P_DICT_MODULE, timeout=timeout)
+        logger.info(f"P2P dictionary sync response: class={self._dictionary_payload_class(response['data'])} "
+                    f"cmd={response['cmd_id']:#x} code={response['code']:#x} "
                     f"data_len={len(response['data'])}")
+        return response
+
+    async def get_hrv_samples(self, days: int = 0) -> list[dict]:
+        response = await self.sync_dictionary_class(DICT_HRV_CLASS, days=days, timeout=45.0)
         return self._parse_dictionary_samples(response["data"])
+
+    async def probe_dictionary_classes(self, days: int = 0) -> dict:
+        results = {}
+        for name, dict_class in DICT_PROBE_CLASSES.items():
+            try:
+                response = await self.sync_dictionary_class(dict_class, days=days, timeout=12.0)
+                results[name] = {
+                    "class": dict_class,
+                    "data_class": self._dictionary_payload_class(response["data"]),
+                    "data_len": len(response["data"]),
+                    "code": response["code"],
+                }
+            except asyncio.TimeoutError:
+                results[name] = {"class": dict_class, "timeout": True}
+        return results
 
     # ── Handshake steps ───────────────────────────────────────────────────────
 
@@ -1387,7 +1425,12 @@ async def run():
             logger.info(f"HRV samples: count={len(hrv_samples)} "
                         f"examples={json.dumps(hrv_samples[:5], indent=2)}")
         except Exception as e:
-            logger.warning(f"HRV sync probe failed: {e}")
+            logger.warning(f"HRV sync probe failed: {e!r}")
+            try:
+                dictionary_probe = await band.probe_dictionary_classes(days=0)
+                logger.info(f"P2P dictionary class probe: {json.dumps(dictionary_probe, indent=2)}")
+            except Exception as probe_e:
+                logger.warning(f"P2P dictionary class probe failed: {probe_e!r}")
 
         await band.disconnect()
 
