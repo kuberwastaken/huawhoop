@@ -62,6 +62,7 @@ SVC_FILE_DOWNLOAD = 0x2C
 SVC_P2P     = 0x34
 CMD_LINK    = 0x01
 CMD_SUPPORTED_SERVICES = 0x02
+CMD_SUPPORTED_COMMANDS = 0x03
 CMD_TIME    = 0x05
 CMD_PRODUCT = 0x07
 CMD_AUTH    = 0x13
@@ -71,6 +72,7 @@ CMD_PHONE_INFO = 0x10
 CMD_DEVICE_STATUS = 0x16
 CMD_SECNEGO = 0x33
 CMD_CONNECT_STATUS = 0x35
+CMD_EXPAND_CAPABILITY = 0x37
 CMD_PINCODE = 0x2C
 CMD_HICHAIN = 0x28
 CMD_SETTING_RELATED = 0x31
@@ -144,6 +146,73 @@ KNOWN_SUPPORTED_SERVICES = bytes([
     0x22, 0x23, 0x24, 0x25, 0x26, 0x27, 0x2A, 0x2B, 0x2D, 0x2E,
     0x30, 0x32, 0x33, 0x34, 0x35,
 ])
+COMMANDS_PER_SERVICE = {
+    0x01: bytes([0x04, 0x07, 0x08, 0x09, 0x0A, 0x0D, 0x0E, 0x10, 0x11, 0x12,
+                 0x13, 0x14, 0x1B, 0x1A, 0x1D, 0x21, 0x22, 0x23, 0x24, 0x29,
+                 0x2A, 0x2B, 0x32, 0x2E, 0x31, 0x30, 0x35, 0x36, 0x37, 0x2F]),
+    0x02: bytes([0x01, 0x04, 0x05, 0x06, 0x07, 0x08]),
+    0x03: bytes([0x01, 0x03, 0x04]),
+    0x04: bytes([0x01]),
+    0x05: bytes([0x01]),
+    0x06: bytes([0x01]),
+    0x07: bytes([0x01, 0x03, 0x05, 0x07, 0x08, 0x09, 0x0A, 0x0E, 0x10, 0x13,
+                 0x16, 0x15, 0x17, 0x18, 0x1B, 0x1C, 0x1D, 0x1E, 0x21, 0x22,
+                 0x23, 0x24, 0x25, 0x28, 0x29, 0x06, 0x1F]),
+    0x08: bytes([0x01, 0x02, 0x03]),
+    0x09: bytes([0x01, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F]),
+    0x0A: bytes([0x01, 0x09, 0x0A]),
+    0x0B: bytes([0x01, 0x03]),
+    0x0C: bytes([0x01]),
+    0x0D: bytes([0x01]),
+    0x0F: bytes([0x01, 0x03, 0x05, 0x06, 0x07, 0x08, 0x0A, 0x0B, 0x0C]),
+    0x10: bytes([0x01]),
+    0x11: bytes([0x01]),
+    0x12: bytes([0x01]),
+    0x13: bytes([0x01]),
+    0x14: bytes([0x01]),
+    0x15: bytes([0x01]),
+    0x16: bytes([0x01, 0x03, 0x07]),
+    0x17: bytes([0x01, 0x04, 0x06, 0x07, 0x0B, 0x0C, 0x10, 0x12, 0x15, 0x17]),
+    0x18: bytes([0x01, 0x02, 0x04, 0x05, 0x06, 0x09]),
+    0x19: bytes([0x01, 0x04]),
+    0x1A: bytes([0x01, 0x03, 0x07, 0x05, 0x06]),
+    0x1B: bytes([0x01, 0x0F, 0x19, 0x1A]),
+    0x1D: bytes([0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A]),
+    0x20: bytes([0x01, 0x02, 0x03, 0x04, 0x09, 0x0A]),
+    0x22: bytes([0x01]),
+    0x23: bytes([0x02, 0x0B]),
+    0x24: bytes([0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A,
+                 0x0B, 0x0C]),
+    0x25: bytes([0x02, 0x04, 0x0E]),
+    0x26: bytes([0x02, 0x03]),
+    0x27: bytes([0x01, 0x0E]),
+    0x2A: bytes([0x01, 0x06]),
+    0x2B: bytes([0x12]),
+    0x2D: bytes([0x01]),
+    0x2E: bytes([0x01, 0x02, 0x03]),
+    0x30: bytes([0x01]),
+    0x32: bytes([0x01]),
+    0x33: bytes([0x01, 0x02]),
+    0x34: bytes([0x01]),
+    0x35: bytes([0x03, 0x04]),
+}
+EXPAND_CAPABILITY_LABELS = {
+    "p2p_get_app_version": 14,
+    "send_country_code": 30,
+    "track_p2p": 0x36,
+    "sleep_apnea": 107,
+    "dict_sleep_sync": 143,
+    "three_circle": 154,
+    "three_circle_lite": 156,
+    "send_site_id": 170,
+    "device_command_dict_data": 173,
+    "external_calendar": 184,
+    "bed_time": 199,
+    "emotion": 206,
+    "hrv": 235,
+    "notification_picture": 256,
+    "contacts_sync": 271,
+}
 
 # ── Packet framing ────────────────────────────────────────────────────────────
 
@@ -463,6 +532,10 @@ class Band:
         self._rx_cmd  = 0
         self._pending_file_inits = []
         self._feature_config_requested = False
+        self.supported_services = set()
+        self.commands_per_service = {}
+        self.expand_capabilities = b""
+        self.capability_flags = {}
 
     # ── BLE low-level ─────────────────────────────────────────────────────────
 
@@ -1750,8 +1823,85 @@ class Band:
         for i, supported in enumerate(bitmap):
             if supported and i < len(KNOWN_SUPPORTED_SERVICES):
                 active.add(KNOWN_SUPPORTED_SERVICES[i])
+        self.supported_services = active
         logger.info(f"Supported services: {len(active)} active -> {[hex(s) for s in sorted(active)]}")
         return active
+
+    @staticmethod
+    def _parse_supported_commands_response(container: bytes) -> dict[int, bytes]:
+        out = {}
+        current_service = None
+        for tag, value in tlv_items(container):
+            if tag == 0x02:
+                current_service = value[0] if value else None
+            elif tag == 0x04 and current_service is not None:
+                candidates = COMMANDS_PER_SERVICE.get(current_service, b"")
+                commands = bytes(
+                    candidates[i]
+                    for i, flag in enumerate(value)
+                    if flag and i < len(candidates)
+                )
+                out[current_service] = commands
+                current_service = None
+        return out
+
+    def _supports_command(self, service: int, command: int) -> bool:
+        return command in self.commands_per_service.get(service, b"")
+
+    def _supports_expand_capability(self, which: int) -> bool:
+        if not self.expand_capabilities:
+            return False
+        idx = which // 8
+        if idx >= len(self.expand_capabilities):
+            return False
+        return bool(self.expand_capabilities[idx] & (1 << (which % 8)))
+
+    async def get_supported_commands(self) -> dict[int, bytes]:
+        if not self.supported_services:
+            await self.get_supported_services()
+        commands_by_service = {}
+        for service in sorted(self.supported_services):
+            candidates = COMMANDS_PER_SERVICE.get(service)
+            if not candidates:
+                continue
+            request = tlv_enc(0x81, tlv_enc(0x02, bytes([service])) + tlv_enc(0x03, candidates))
+            tlvs = await self._transact_encrypted(SVC_DEV, CMD_SUPPORTED_COMMANDS, request, timeout=8.0)
+            if 0x81 not in tlvs:
+                logger.debug(f"Supported commands missing container for service={service:#x}: {tlvs}")
+                continue
+            commands_by_service.update(self._parse_supported_commands_response(tlvs[0x81]))
+        self.commands_per_service = commands_by_service
+        logger.info(
+            "Supported commands: "
+            f"{ {hex(s): [hex(c) for c in cmds] for s, cmds in sorted(commands_by_service.items())} }"
+        )
+        return commands_by_service
+
+    async def get_expand_capabilities(self) -> dict:
+        if not self.commands_per_service:
+            await self.get_supported_commands()
+        if not self._supports_command(SVC_DEV, CMD_EXPAND_CAPABILITY):
+            logger.info("Expand capabilities not supported by command bitmap")
+            self.capability_flags = {}
+            return {}
+        tlvs = await self._transact_encrypted(SVC_DEV, CMD_EXPAND_CAPABILITY, tlv_enc(0x01), timeout=8.0)
+        self.expand_capabilities = tlvs.get(0x01, b"")
+        self.capability_flags = {
+            label: self._supports_expand_capability(bit)
+            for label, bit in EXPAND_CAPABILITY_LABELS.items()
+        }
+        artifact = {
+            "supported_services": [f"0x{s:02x}" for s in sorted(self.supported_services)],
+            "commands_per_service": {
+                f"0x{s:02x}": [f"0x{c:02x}" for c in cmds]
+                for s, cmds in sorted(self.commands_per_service.items())
+            },
+            "expand_capabilities_hex": self.expand_capabilities.hex(),
+            "capability_flags": self.capability_flags,
+        }
+        save_json_artifact("latest_capabilities.json", artifact)
+        logger.info(f"Expand capabilities: {self.capability_flags}")
+        return artifact
 
     async def get_setting_related(self) -> dict:
         tlv = b"".join(tlv_enc(tag) for tag in (0x01, 0x02, 0x03, 0x04, 0x05, 0x06))
@@ -1803,6 +1953,8 @@ class Band:
         await run_step("product info", self.get_product_info())
         await run_step("time sync", self.set_time())
         await run_step("supported services", self.get_supported_services())
+        await run_step("supported commands", self.get_supported_commands())
+        await run_step("expand capabilities", self.get_expand_capabilities())
         await run_step("setting related", self.get_setting_related())
         await run_step("setup device status", self.send_setup_device_status())
         wear = await run_step("wear status", self.get_wear_status())
