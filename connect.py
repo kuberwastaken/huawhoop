@@ -107,6 +107,15 @@ P2P_DICT_MODULE = "hw.unitedevice.datadictionarysync"
 P2P_DICT_PACKAGE = "hw.watch.health.filesync"
 P2P_LOCAL_FINGERPRINT = "UniteDeviceManagement"
 P2P_REMOTE_FINGERPRINT = "SystemApp"
+SVC_DATASYNC = 0x37
+DATASYNC_CONFIG_CMD = 0x01
+DATASYNC_EVENT_CMD = 0x02
+DATASYNC_DATA_CMD = 0x03
+DATASYNC_DICT_DATA_CMD = 0x04
+DATASYNC_REPLY_OK = 100000
+DATASYNC_FEATURE_CONFIG_ID = 900100007
+DATASYNC_FEATURE_SRC = "featureManager"
+DATASYNC_FEATURE_DST = "hw.unitedevice.configManager"
 KNOWN_SUPPORTED_SERVICES = bytes([
     0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A,
     0x0B, 0x0C, 0x0D, 0x0E, 0x0F, 0x10, 0x11, 0x12, 0x13, 0x14,
@@ -663,7 +672,7 @@ class Band:
                 if svc == SVC_DEV and cmd == CMD_PHONE_INFO:
                     await self._handle_phone_info_request(tlvs)
                     continue
-                self._log_unsolicited(svc, cmd, tlvs, pin_code, rand_self, seed)
+                await self._handle_unsolicited(svc, cmd, tlvs, pin_code, rand_self, seed)
 
             remaining = deadline - asyncio.get_running_loop().time()
             if remaining <= 0:
@@ -676,11 +685,15 @@ class Band:
                 continue
             await asyncio.wait_for(self._event.wait(), timeout=remaining)
 
-    def _log_unsolicited(self, svc: int, cmd: int, tlvs: dict,
-                         pin_code: bytes, rand_self: bytes, seed: bytes):
-        """Log an unsolicited packet without sending any response (Gadgetbridge-style)."""
+    async def _handle_unsolicited(self, svc: int, cmd: int, tlvs: dict,
+                                  pin_code: bytes, rand_self: bytes, seed: bytes):
+        """Handle or log an unsolicited packet."""
         if svc == SVC_DEV and cmd == 0x38:
             logger.warning(f"  Band auth rejection (svc=0x01/cmd=0x38): {tlvs}")
+        elif svc == SVC_DATASYNC:
+            if not await self._handle_datasync(cmd, tlvs):
+                logger.info(f"  svc={svc:#x}/cmd={cmd:#x} raw tlvs: { {hex(k): v.hex() for k,v in tlvs.items()} }")
+                self._decrypt_and_log(tlvs, f"svc={svc:#x}/cmd={cmd:#x}", pin_code, rand_self, seed)
         elif svc == 0x25 and cmd == 0x03:
             # MusicControl.Control — band sends this as a background update.
             # Gadgetbridge ignores it entirely during first auth (secretKey==None).
@@ -731,8 +744,15 @@ class Band:
         return tlv_enc(0x7C, b"\x01") + tlv_enc(0x7D, iv) + tlv_enc(0x7E, cipher)
 
     def _decrypt_transaction_tlvs(self, tlvs: dict) -> dict:
+        plain = self._decrypt_transaction_payload(tlvs)
+        decrypted = tlv_dec(plain)
+        logger.debug(f"  decrypt rx plain={plain.hex()} "
+                     f"tlvs={ {hex(k): v.hex() for k, v in decrypted.items()} }")
+        return decrypted
+
+    def _decrypt_transaction_payload(self, tlvs: dict) -> bytes:
         if not (self.secret_key and 0x7C in tlvs and 0x7D in tlvs and 0x7E in tlvs):
-            return tlvs
+            return b"".join(tlv_enc(k, v) for k, v in tlvs.items())
 
         iv = tlvs[0x7D]
         cipher = tlvs[0x7E]
@@ -741,10 +761,8 @@ class Band:
         else:
             plain = aes_cbc_dec(cipher, self.secret_key, iv)
 
-        decrypted = tlv_dec(plain)
-        logger.debug(f"  decrypt rx iv={iv.hex()} plain={plain.hex()} "
-                     f"tlvs={ {hex(k): v.hex() for k, v in decrypted.items()} }")
-        return decrypted
+        logger.debug(f"  decrypt rx iv={iv.hex()} plain={plain.hex()}")
+        return plain
 
     async def _transact_encrypted(self, svc: int, cmd: int, tlv: bytes,
                                   timeout: float = 15.0) -> dict:
@@ -754,6 +772,94 @@ class Band:
 
     async def _send_encrypted_no_wait(self, svc: int, cmd: int, tlv: bytes):
         await self._send(svc, cmd, self._encrypt_transaction_tlv(tlv))
+
+    @staticmethod
+    def _datasync_config_item(config_id: int, action: int = None,
+                              data: bytes = None, unknown: int = None) -> bytes:
+        item = tlv_enc(0x05, struct.pack(">I", config_id))
+        if action is not None:
+            item += tlv_enc(0x06, bytes([action & 0xFF]))
+        if data is not None:
+            item += tlv_enc(0x07, data)
+        if unknown is not None:
+            item += tlv_enc(0x08, struct.pack(">Q", unknown))
+        return item
+
+    @staticmethod
+    def _datasync_config_command_tlv(src_package: str, dst_package: str,
+                                     config_items: list[bytes]) -> bytes:
+        tlv = (
+            tlv_enc(0x01, src_package.encode("utf-8")) +
+            tlv_enc(0x02, dst_package.encode("utf-8"))
+        )
+        if config_items:
+            nested = b"".join(tlv_enc(0x84, item) for item in config_items)
+            tlv += tlv_enc(0x83, nested)
+        return tlv
+
+    @staticmethod
+    def _datasync_parse_config_items(container: bytes) -> list[dict]:
+        out = []
+        for tag, payload in tlv_items(container):
+            if tag != 0x84:
+                continue
+            entry = {}
+            for item_tag, value in tlv_items(payload):
+                if item_tag == 0x05:
+                    entry["config_id"] = int.from_bytes(value, "big")
+                elif item_tag == 0x06:
+                    entry["action"] = value[0] if value else None
+                elif item_tag == 0x07:
+                    entry["data"] = value
+                elif item_tag == 0x08:
+                    entry["unknown"] = int.from_bytes(value, "big")
+            out.append(entry)
+        return out
+
+    async def _handle_datasync(self, cmd: int, tlvs: dict) -> bool:
+        try:
+            plain = self._decrypt_transaction_payload(tlvs)
+            items = tlv_items(plain)
+        except Exception as e:
+            logger.debug(f"  DataSync decrypt/parse failed: {e!r}")
+            return False
+
+        parsed = {tag: value for tag, value in items}
+        src = self._tlv_str(parsed.get(0x01, b""))
+        dst = self._tlv_str(parsed.get(0x02, b""))
+        logger.info(f"  DataSync cmd={cmd:#x} src={src!r} dst={dst!r} plain={plain.hex()}")
+
+        if cmd == DATASYNC_CONFIG_CMD:
+            configs = []
+            if 0x83 in parsed:
+                configs = self._datasync_parse_config_items(parsed[0x83])
+            logger.info(f"  DataSync config items={configs}")
+            for config in configs:
+                if (
+                    src == DATASYNC_FEATURE_SRC
+                    and dst == DATASYNC_FEATURE_DST
+                    and config.get("config_id") == DATASYNC_FEATURE_CONFIG_ID
+                    and config.get("action") == 2
+                ):
+                    item = self._datasync_config_item(
+                        DATASYNC_FEATURE_CONFIG_ID,
+                        action=2,
+                        data=b"01",
+                    )
+                    reply = self._datasync_config_command_tlv(
+                        DATASYNC_FEATURE_DST,
+                        DATASYNC_FEATURE_SRC,
+                        [item],
+                    )
+                    logger.info("  DataSync FeatureManager request -> replying with feature config ACK")
+                    await self._send_encrypted_no_wait(SVC_DATASYNC, DATASYNC_CONFIG_CMD, reply)
+                    return True
+            return True
+
+        if cmd in (DATASYNC_EVENT_CMD, DATASYNC_DATA_CMD, DATASYNC_DICT_DATA_CMD):
+            return True
+
+        return False
 
     @staticmethod
     def _phone_info_response_tlv(requested_tags: bytes) -> bytes:
