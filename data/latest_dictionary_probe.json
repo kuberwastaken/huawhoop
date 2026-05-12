@@ -1,34 +1,58 @@
 {
   "skin_temperature": {
     "class": 400012,
-    "timeout": true
+    "status": "ack_no_data",
+    "ack_code": 207,
+    "ack_cmd": 3,
+    "ack_sequence": 4
   },
   "emotion": {
     "class": 500031,
-    "timeout": true
+    "status": "error_tlv",
+    "error_tlvs": {
+      "0x7f": "000186a4"
+    }
   },
   "sleep_apnea": {
     "class": 500002,
-    "timeout": true
+    "status": "error_tlv",
+    "error_tlvs": {
+      "0x7f": "000186a4"
+    }
   },
   "arterial_stiffness": {
     "class": 400017,
-    "timeout": true
+    "status": "error_tlv",
+    "error_tlvs": {
+      "0x7f": "000186a4"
+    }
   },
   "altitude": {
     "class": 200003,
-    "timeout": true
+    "status": "error_tlv",
+    "error_tlvs": {
+      "0x7f": "000186a4"
+    }
   },
   "blood_pressure": {
     "class": 10002,
-    "timeout": true
+    "status": "error_tlv",
+    "error_tlvs": {
+      "0x7f": "000186a4"
+    }
   },
   "lake_louise_ams": {
     "class": 500006,
-    "timeout": true
+    "status": "error_tlv",
+    "error_tlvs": {
+      "0x7f": "000186a4"
+    }
   },
   "hrv": {
     "class": 500044,
-    "timeout": true
+    "status": "error_tlv",
+    "error_tlvs": {
+      "0x7f": "000186a4"
+    }
   }
 }
