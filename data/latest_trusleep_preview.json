@@ -1,5 +1,6 @@
 {
   "hours": 168,
+  "route": "sequence_data/SLEEP_DETAILS",
   "state": {
     "file_size": 0,
     "session_count": 0,
@@ -8,9 +9,19 @@
   "data": {
     "file_size": 0,
     "acc_count": 0,
-    "ppg_count": 0,
-    "acc_examples": [],
-    "ppg_examples": [],
-    "errors": []
+    "ppg_count": 0
+  },
+  "sequence": {
+    "file_size": 0,
+    "dict_id": null,
+    "file_type": null,
+    "file_version": null,
+    "sequence_count": 0,
+    "sessions": [],
+    "errors": [
+      "file too short"
+    ],
+    "hours": 168,
+    "route": "sequence_data/SLEEP_DETAILS"
   }
 }

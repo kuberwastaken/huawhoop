@@ -9186,6 +9186,28 @@
       "record": 42,
       "timestamp": 1778615460,
       "raw": "00"
+    },
+    {
+      "record": 42,
+      "timestamp": 1778615520,
+      "raw": "00"
+    },
+    {
+      "record": 42,
+      "timestamp": 1778615580,
+      "raw": "00"
+    },
+    {
+      "record": 42,
+      "timestamp": 1778615640,
+      "raw": "c0025400",
+      "heart_rate": 84,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778615700,
+      "raw": "00"
     }
   ],
   "sleep": [
