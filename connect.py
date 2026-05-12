@@ -81,6 +81,7 @@ FILE_CMD_INFO = 0x03
 FILE_CMD_REQUEST_BLOCK = 0x04
 FILE_CMD_BLOCK = 0x05
 FILE_CMD_COMPLETE = 0x06
+FILE_CMD_INCOMING_INIT = 0x07
 FILE_TYPE_SLEEP_STATE = 0x0E
 FILE_TYPE_SLEEP_DATA = 0x0F
 FILE_TYPE_RRI = 0x10
@@ -451,6 +452,7 @@ class Band:
         self._rx_partial = b""     # BLE-level fragments of one LPv2 frame
         self._rx_svc  = 0
         self._rx_cmd  = 0
+        self._pending_file_inits = []
 
     # ── BLE low-level ─────────────────────────────────────────────────────────
 
@@ -753,6 +755,14 @@ class Band:
             # Gadgetbridge ignores it entirely during first auth (secretKey==None).
             logger.debug(f"  svc=0x25/cmd=0x03 (MusicControl) — skipping, "
                          f"tlvs={ {hex(k): v.hex() for k,v in tlvs.items()} }")
+        elif svc == SVC_FILE_DOWNLOAD and cmd == FILE_CMD_INCOMING_INIT:
+            init = self._parse_incoming_file_init(tlvs)
+            self._pending_file_inits.append(init)
+            logger.info(
+                "  Incoming file init: "
+                f"name={init['filename']!r} type={self._file_type_name(init['file_type'])} "
+                f"id={init['file_id']:#x} size={init['file_size']}"
+            )
         elif svc == 0x37 or (svc == SVC_DEV and cmd == 0x3D):
             # DataSync or encrypted dev packet — log but don't respond
             logger.info(f"  svc={svc:#x}/cmd={cmd:#x} raw tlvs: { {hex(k): v.hex() for k,v in tlvs.items()} }")
@@ -1602,6 +1612,83 @@ class Band:
             0x18: "ecg_analysis",
         }.get(file_type, f"unknown_{file_type:#x}")
 
+    def _parse_incoming_file_init(self, tlvs: dict) -> dict:
+        data = self._decrypt_transaction_tlvs(tlvs)
+        return {
+            "filename": self._tlv_str(data.get(0x01, b"")),
+            "file_type": data.get(0x02, b"\x00")[0],
+            "file_id": data.get(0x03, b"\x00")[0],
+            "file_size": self._tlv_int(data.get(0x04, b"")),
+            "description": self._tlv_str(data.get(0x07, b"")),
+            "src_package": self._tlv_str(data.get(0x08, b"")),
+            "dst_package": self._tlv_str(data.get(0x09, b"")),
+            "src_fingerprint": self._tlv_str(data.get(0x0A, b"")),
+            "dst_fingerprint": self._tlv_str(data.get(0x0B, b"")),
+            "raw": {hex(k): v.hex() for k, v in data.items()},
+        }
+
+    async def _ack_incoming_file_init(self, init: dict, status: int = 0):
+        tlv = (
+            tlv_enc(0x01, init["filename"].encode("utf-8")) +
+            tlv_enc(0x02, bytes([init["file_type"]])) +
+            tlv_enc(0x03, bytes([init["file_id"]])) +
+            tlv_enc(0x04, struct.pack(">I", init["file_size"]))
+        )
+        if init.get("src_package") and init.get("dst_package"):
+            tlv += (
+                tlv_enc(0x08, init["src_package"].encode("utf-8")) +
+                tlv_enc(0x09, init["dst_package"].encode("utf-8")) +
+                tlv_enc(0x0A, init.get("src_fingerprint", "").encode("utf-8")) +
+                tlv_enc(0x0B, init.get("dst_fingerprint", "").encode("utf-8"))
+            )
+        tlv += tlv_enc(0x0D, bytes([status]))
+        logger.info(
+            f"ACK incoming file init: name={init['filename']!r} "
+            f"id={init['file_id']:#x} size={init['file_size']} status={status}"
+        )
+        await self._send_encrypted_no_wait(SVC_FILE_DOWNLOAD, FILE_CMD_INCOMING_INIT, tlv)
+
+    def _pop_pending_file_init(self, filename: str, file_type: int) -> dict | None:
+        for i, init in enumerate(self._pending_file_inits):
+            if init.get("filename") == filename and init.get("file_type") == file_type:
+                return self._pending_file_inits.pop(i)
+        return None
+
+    async def _wait_for_incoming_file_init(self, filename: str, file_type: int,
+                                           timeout: float = 4.0) -> dict | None:
+        found = self._pop_pending_file_init(filename, file_type)
+        if found:
+            return found
+        deadline = asyncio.get_running_loop().time() + timeout
+        while True:
+            while self._rx_queue:
+                raw = self._rx_queue.popleft()
+                svc, cmd, tlvs = parse_frame(raw)
+                if svc == SVC_FILE_DOWNLOAD and cmd == FILE_CMD_INCOMING_INIT:
+                    init = self._parse_incoming_file_init(tlvs)
+                    if init.get("filename") == filename and init.get("file_type") == file_type:
+                        return init
+                    self._pending_file_inits.append(init)
+                    continue
+                if svc == SVC_DEV and cmd == CMD_PHONE_INFO:
+                    await self._handle_phone_info_request(tlvs)
+                else:
+                    await self._handle_unsolicited(svc, cmd, tlvs, b"", b"", b"")
+                found = self._pop_pending_file_init(filename, file_type)
+                if found:
+                    return found
+
+            remaining = deadline - asyncio.get_running_loop().time()
+            if remaining <= 0:
+                return None
+            self._event.clear()
+            if self._rx_queue:
+                continue
+            try:
+                await asyncio.wait_for(self._event.wait(), timeout=remaining)
+            except asyncio.TimeoutError:
+                return None
+
     def _parse_file_block_2c(self, payload: bytes) -> dict:
         if payload.startswith(b"\x7c"):
             plain = self._decrypt_transaction_payload(tlv_dec(payload))
@@ -1632,18 +1719,30 @@ class Band:
                      f"start={start_ts} end={end_ts} dict_id={dict_id}")
         init = await self._transact_encrypted(SVC_FILE_DOWNLOAD, FILE_CMD_INIT, init_tlv, timeout=12.0)
         logger.debug(f"File init response tlvs: { {hex(k): v.hex() for k, v in init.items()} }")
+        incoming = None
         if 0x7F in init:
             status = self._tlv_int(init[0x7F])
             if status == 0x000186A0:
-                logger.info(
-                    f"File init returned success status only for {filename!r}; no file metadata available"
-                )
-                return b""
-            raise RuntimeError(f"file init failed: {init[0x7F].hex()}")
-        resp_name = self._tlv_str(init.get(0x01, b""))
-        resp_type = init.get(0x02, b"\x00")[0]
-        file_id = init.get(0x03, b"\x00")[0]
-        file_size = self._tlv_int(init.get(0x04, b""))
+                incoming = await self._wait_for_incoming_file_init(filename, file_type, timeout=4.0)
+                if not incoming:
+                    logger.info(
+                        f"File init returned success status only for {filename!r}; no file metadata available"
+                    )
+                    return b""
+                await self._ack_incoming_file_init(incoming, status=0)
+                resp_name = incoming["filename"]
+                resp_type = incoming["file_type"]
+                file_id = incoming["file_id"]
+                file_size = incoming["file_size"]
+            else:
+                raise RuntimeError(f"file init failed: {init[0x7F].hex()}")
+        else:
+            resp_name = self._tlv_str(init.get(0x01, b""))
+            resp_type = init.get(0x02, b"\x00")[0]
+            file_id = init.get(0x03, b"\x00")[0]
+            file_size = self._tlv_int(init.get(0x04, b""))
+        if incoming:
+            logger.debug(f"File init metadata came via incoming init: {incoming['raw']}")
         logger.info(
             f"File init: name={resp_name!r} type={self._file_type_name(resp_type)} "
             f"id={file_id:#x} size={file_size}"
