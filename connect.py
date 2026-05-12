@@ -57,6 +57,7 @@ MAGIC       = 0x5A
 # Service / command IDs
 SVC_DEV     = 0x01
 SVC_FITNESS = 0x07
+SVC_FILE_DOWNLOAD = 0x2C
 SVC_P2P     = 0x34
 CMD_LINK    = 0x01
 CMD_SUPPORTED_SERVICES = 0x02
@@ -74,6 +75,13 @@ CMD_HICHAIN = 0x28
 CMD_SETTING_RELATED = 0x31
 CMD_WEAR_STATUS = 0x3D
 CMD_SETUP_DEVICE_STATUS = 0x3E
+
+FILE_CMD_INIT = 0x01
+FILE_CMD_INFO = 0x03
+FILE_CMD_REQUEST_BLOCK = 0x04
+FILE_CMD_BLOCK = 0x05
+FILE_CMD_COMPLETE = 0x06
+FILE_TYPE_RRI = 0x10
 
 # Crypto constants (same across all Gadgetbridge / huawei-lpv2 builds)
 DIGEST_SECRETS = {
@@ -235,6 +243,11 @@ def _make_sliced(svc: int, cmd: int, tlv: bytes, slice_size: int = 244) -> list[
 
 def parse_frame(data: bytes):
     """Return (svc, cmd, tlv_dict). Handles only complete reassembled data."""
+    svc, cmd, payload = frame_payload(data)
+    return svc, cmd, tlv_dec(payload)
+
+def frame_payload(data: bytes) -> tuple[int, int, bytes]:
+    """Return (svc, cmd, raw payload) for a complete reassembled frame."""
     slice_b = data[3]
     if slice_b == 0x00:
         payload = data[4:-2]
@@ -243,7 +256,7 @@ def parse_frame(data: bytes):
         payload = data[4:-2]
     svc = payload[0]
     cmd = payload[1]
-    return svc, cmd, tlv_dec(payload[2:])
+    return svc, cmd, payload[2:]
 
 # ── Crypto ────────────────────────────────────────────────────────────────────
 
@@ -358,6 +371,12 @@ def save_json_artifact(filename: str, payload: dict):
     DATA_DIR.mkdir(exist_ok=True)
     path = DATA_DIR / filename
     path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    logger.info(f"Saved {path}")
+
+def save_binary_artifact(filename: str, payload: bytes):
+    DATA_DIR.mkdir(exist_ok=True)
+    path = DATA_DIR / filename
+    path.write_bytes(payload)
     logger.info(f"Saved {path}")
 
 def append_jsonl_artifact(filename: str, payload: dict):
@@ -681,6 +700,38 @@ class Band:
 
             # Clear event THEN re-check queue to avoid missing a notification
             # that arrived between the drain loop and this clear.
+            self._event.clear()
+            if self._rx_queue:
+                continue
+            await asyncio.wait_for(self._event.wait(), timeout=remaining)
+
+    async def _recv_payload(self, exp_svc: int, exp_cmd: int,
+                            timeout: float = 15.0) -> bytes:
+        """Wait for a packet and return its raw payload bytes.
+
+        File block packets can be raw binary rather than TLV, so parse_frame()
+        is too strict for them.
+        """
+        deadline = asyncio.get_running_loop().time() + timeout
+        while True:
+            while self._rx_queue:
+                raw = self._rx_queue.popleft()
+                svc, cmd, payload = frame_payload(raw)
+                if (svc, cmd) == (exp_svc, exp_cmd):
+                    return payload
+                try:
+                    tlvs = tlv_dec(payload)
+                except Exception:
+                    logger.debug(f"  Skipping non-TLV packet svc={svc:#x} cmd={cmd:#x}")
+                    continue
+                if svc == SVC_DEV and cmd == CMD_PHONE_INFO:
+                    await self._handle_phone_info_request(tlvs)
+                else:
+                    await self._handle_unsolicited(svc, cmd, tlvs, b"", b"", b"")
+
+            remaining = deadline - asyncio.get_running_loop().time()
+            if remaining <= 0:
+                raise asyncio.TimeoutError(f"Timed out waiting for raw {exp_svc:#x}/{exp_cmd:#x}")
             self._event.clear()
             if self._rx_queue:
                 continue
@@ -1535,6 +1586,184 @@ class Band:
 
     # ── Data queries ─────────────────────────────────────────────────────────
 
+    # File sync (new 0x2c service)
+
+    @staticmethod
+    def _file_type_name(file_type: int) -> str:
+        return {
+            0x0E: "sleep_state",
+            0x0F: "sleep_data",
+            0x10: "rri",
+            0x11: "gps",
+            0x12: "pdr",
+            0x16: "sequence_data",
+            0x18: "ecg_analysis",
+        }.get(file_type, f"unknown_{file_type:#x}")
+
+    def _parse_file_block_2c(self, payload: bytes) -> dict:
+        if payload.startswith(b"\x7c"):
+            plain = self._decrypt_transaction_payload(tlv_dec(payload))
+        else:
+            plain = payload
+        if len(plain) < 6:
+            raise ValueError(f"short file block payload: {plain.hex()}")
+        return {
+            "file_id": plain[0],
+            "offset": struct.unpack(">I", plain[1:5])[0],
+            "unknown": plain[5],
+            "data": plain[6:],
+        }
+
+    async def download_file_2c(self, filename: str, file_type: int,
+                               start_ts: int, end_ts: int,
+                               dict_id: int = 0) -> bytes:
+        init_tlv = (
+            tlv_enc(0x01, filename.encode("utf-8")) +
+            tlv_enc(0x02, bytes([file_type])) +
+            tlv_enc(0x05, struct.pack(">I", start_ts)) +
+            tlv_enc(0x06, struct.pack(">I", end_ts))
+        )
+        if dict_id and file_type == 0x16:
+            init_tlv += tlv_enc(0x0C, struct.pack(">I", dict_id))
+
+        init = await self._transact_encrypted(SVC_FILE_DOWNLOAD, FILE_CMD_INIT, init_tlv, timeout=12.0)
+        if 0x7F in init:
+            raise RuntimeError(f"file init failed: {init[0x7F].hex()}")
+        resp_name = self._tlv_str(init.get(0x01, b""))
+        resp_type = init.get(0x02, b"\x00")[0]
+        file_id = init.get(0x03, b"\x00")[0]
+        file_size = self._tlv_int(init.get(0x04, b""))
+        logger.info(
+            f"File init: name={resp_name!r} type={self._file_type_name(resp_type)} "
+            f"id={file_id:#x} size={file_size}"
+        )
+        if file_size <= 0:
+            complete_tlv = tlv_enc(0x01, bytes([file_id])) + tlv_enc(0x02, b"\x01")
+            await self._send_encrypted_no_wait(SVC_FILE_DOWNLOAD, FILE_CMD_COMPLETE, complete_tlv)
+            return b""
+
+        info_tlv = (
+            tlv_enc(0x01, bytes([file_id])) +
+            tlv_enc(0x02) +
+            tlv_enc(0x03) +
+            tlv_enc(0x04) +
+            tlv_enc(0x05)
+        )
+        info = await self._transact_encrypted(SVC_FILE_DOWNLOAD, FILE_CMD_INFO, info_tlv, timeout=12.0)
+        if 0x7F in info:
+            raise RuntimeError(f"file info failed: {info[0x7F].hex()}")
+        timeout_s = info.get(0x02, b"\x0a")[0] if info.get(0x02) else 10
+        max_block_size = self._tlv_int(info.get(0x04, b"")) or 4096
+        no_encrypt = bool(info.get(0x05, b"\x00")[0]) if info.get(0x05) else False
+        logger.info(
+            f"File info: id={info.get(0x01, b'').hex()} timeout={timeout_s}s "
+            f"max_block={max_block_size} no_encrypt={no_encrypt}"
+        )
+
+        out = bytearray(file_size)
+        offset = 0
+        while offset < file_size:
+            block_size = min(file_size - offset, max_block_size)
+            block_req = (
+                tlv_enc(0x01, bytes([file_id])) +
+                tlv_enc(0x02, struct.pack(">I", offset)) +
+                tlv_enc(0x03, struct.pack(">I", block_size))
+            )
+            if dict_id and file_type == 0x16:
+                block_req += tlv_enc(0x04, struct.pack(">I", dict_id))
+            if no_encrypt:
+                await self._send(SVC_FILE_DOWNLOAD, FILE_CMD_REQUEST_BLOCK, block_req)
+            else:
+                await self._send_encrypted_no_wait(SVC_FILE_DOWNLOAD, FILE_CMD_REQUEST_BLOCK, block_req)
+
+            received = 0
+            while received < block_size:
+                payload = await self._recv_payload(
+                    SVC_FILE_DOWNLOAD,
+                    FILE_CMD_BLOCK,
+                    timeout=max(float(timeout_s), 8.0),
+                )
+                block = self._parse_file_block_2c(payload)
+                if block["file_id"] != file_id:
+                    logger.debug(f"Skipping file block for id={block['file_id']:#x}")
+                    continue
+                pos = block["offset"]
+                chunk = block["data"]
+                if pos >= file_size:
+                    raise RuntimeError(f"file block offset outside file: {pos} >= {file_size}")
+                end = min(pos + len(chunk), file_size)
+                out[pos:end] = chunk[:end - pos]
+                received += end - pos
+                logger.debug(f"File block: id={file_id:#x} offset={pos} bytes={end - pos}")
+
+            offset += block_size
+
+        complete_tlv = tlv_enc(0x01, bytes([file_id])) + tlv_enc(0x02, b"\x01")
+        await self._send_encrypted_no_wait(SVC_FILE_DOWNLOAD, FILE_CMD_COMPLETE, complete_tlv)
+        logger.info(f"File download complete: {filename} ({len(out)} bytes)")
+        return bytes(out)
+
+    @staticmethod
+    def parse_rri_stress(data: bytes) -> dict:
+        if len(data) < 48:
+            return {"file_size": len(data), "version": None, "stress": []}
+        declared_size = struct.unpack(">Q", data[0:8])[0]
+        bitmap = struct.unpack(">H", data[8:10])[0]
+        version = struct.unpack(">H", data[10:12])[0]
+        stress = []
+        if version == 3:
+            pos = 48
+            while pos + 66 <= len(data):
+                entry = data[pos:pos + 66]
+                pos += 66
+                start = struct.unpack(">I", entry[0:4])[0]
+                end = struct.unpack(">I", entry[4:8])[0]
+                if not start or not end:
+                    continue
+                features = [struct.unpack(">f", entry[18 + i * 4:22 + i * 4])[0] for i in range(12)]
+                stress.append({
+                    "start_ms": start * 1000,
+                    "end_ms": end * 1000,
+                    "start_local": local_time_label(start),
+                    "end_local": local_time_label(end),
+                    "algorithm": struct.unpack(">I", entry[8:12])[0],
+                    "score": entry[12],
+                    "level": entry[13],
+                    "c_flag": entry[14],
+                    "type": entry[15],
+                    "acc_flag": entry[16],
+                    "ppg_flag": entry[17],
+                    "features": [round(f, 6) for f in features],
+                })
+        return {
+            "file_size": len(data),
+            "declared_size": declared_size,
+            "bitmap": bitmap,
+            "version": version,
+            "stress": stress,
+        }
+
+    async def get_recent_stress_preview(self, hours: int = 24) -> dict:
+        end_ts = int(time.time())
+        start_ts = end_ts - hours * 3600
+        raw = await self.download_file_2c(
+            "rrisqi_data.bin",
+            FILE_TYPE_RRI,
+            start_ts,
+            end_ts,
+        )
+        save_binary_artifact("latest_rri.bin", raw)
+        parsed = self.parse_rri_stress(raw)
+        scores = [row["score"] for row in parsed.get("stress", [])]
+        parsed["hours"] = hours
+        parsed["stress_count"] = len(scores)
+        if scores:
+            parsed["stress_min"] = min(scores)
+            parsed["stress_avg"] = round(sum(scores) / len(scores), 1)
+            parsed["stress_max"] = max(scores)
+        save_json_artifact("latest_stress_preview.json", parsed)
+        return parsed
+
     async def get_battery(self) -> int:
         tlvs = await self._transact_encrypted(SVC_DEV, 0x08, tlv_enc(0x01))
         if 0x01 in tlvs:
@@ -1769,6 +1998,19 @@ async def run():
             save_recovery_report(summary)
         except Exception as e:
             logger.warning(f"Fitness preview query failed: {e}")
+
+        if os.getenv("BAND10_STRESS_SYNC", "1") != "0":
+            try:
+                stress = await band.get_recent_stress_preview(hours=24)
+                logger.info(
+                    "Stress preview: "
+                    f"count={stress.get('stress_count', 0)} "
+                    f"avg={stress.get('stress_avg', 'n/a')} "
+                    f"min={stress.get('stress_min', 'n/a')} "
+                    f"max={stress.get('stress_max', 'n/a')}"
+                )
+            except Exception as e:
+                logger.warning(f"Stress/RRI file sync failed: {e!r}")
 
         try:
             p2p_ping = await band.ping_dictionary_sync()
