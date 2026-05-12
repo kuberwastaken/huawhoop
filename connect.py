@@ -1345,11 +1345,10 @@ class Band:
                           src_fingerprint: str = None, dst_fingerprint: str = None,
                           data: bytes = None, code: int = None,
                           timeout: float = 20.0) -> dict:
-        _seq, tlv = self._build_p2p_tlv(
+        seq = await self.send_p2p_command(
             cmd_id, src_package, dst_package, src_fingerprint, dst_fingerprint, data, code
         )
-        response = await self._transact_encrypted(SVC_P2P, 0x01, tlv, timeout=timeout)
-        parsed = self._parse_p2p_response(response)
+        parsed = await self.wait_for_p2p_sequence(seq, timeout=timeout)
         logger.debug(f"  P2P response: {parsed | {'data': parsed['data'].hex()}}")
         return parsed
 
@@ -1371,6 +1370,25 @@ class Band:
             code=code,
             sequence=response["sequence"],
         )
+
+    async def wait_for_p2p_sequence(self, sequence: int, timeout: float = 20.0) -> dict:
+        deadline = asyncio.get_running_loop().time() + timeout
+        while True:
+            remaining = deadline - asyncio.get_running_loop().time()
+            if remaining <= 0:
+                raise asyncio.TimeoutError(f"Timed out waiting for P2P sequence {sequence}")
+
+            tlvs = await self._recv(SVC_P2P, 0x01, timeout=remaining)
+            decoded = self._decrypt_transaction_tlvs(tlvs)
+            parsed = self._parse_p2p_response(decoded)
+            logger.info(f"P2P packet: cmd={parsed['cmd_id']:#x} code={parsed['code']:#x} "
+                        f"seq={parsed['sequence']} src={parsed['src_package']} "
+                        f"dst={parsed['dst_package']} data_len={len(parsed['data'])}")
+            if parsed["sequence"] == sequence:
+                return parsed
+
+            if parsed["cmd_id"] == 0x02:
+                await self._send_p2p_ack(parsed)
 
     async def wait_for_p2p_data(self, src_package: str, dst_package: str,
                                 timeout: float = 45.0) -> dict:
