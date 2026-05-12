@@ -2145,7 +2145,14 @@ class Band:
         if 0x7F in init:
             status = self._tlv_int(init[0x7F])
             if status == 0x000186A0:
-                incoming = await self._wait_for_incoming_file_init(filename, file_type, timeout=4.0)
+                pending_timeout = 45.0 if file_type == FILE_TYPE_SEQUENCE_DATA else 6.0
+                logger.info(
+                    f"File init returned success status only for {filename!r}; "
+                    f"waiting up to {pending_timeout:.0f}s for incoming metadata"
+                )
+                incoming = await self._wait_for_incoming_file_init(
+                    filename, file_type, timeout=pending_timeout
+                )
                 if not incoming:
                     logger.info(
                         f"File init returned success status only for {filename!r}; no file metadata available"
@@ -2649,19 +2656,16 @@ class Band:
         start_ts = end_ts - hours * 3600
         if self.capability_flags.get("dict_sleep_sync"):
             sequence = await self.get_sleep_sequence_preview(hours=hours)
-            if sequence.get("file_size", 0) > 0:
-                save_json_artifact("latest_trusleep_preview.json", {
-                    "hours": hours,
-                    "route": "sequence_data/SLEEP_DETAILS",
-                    "sequence": sequence,
-                })
-                return {
-                    "hours": hours,
-                    "route": "sequence_data/SLEEP_DETAILS",
-                    "state": {"file_size": 0, "session_count": sequence.get("sequence_count", 0), "sessions": []},
-                    "data": {"file_size": sequence.get("file_size", 0), "acc_count": 0, "ppg_count": 0},
-                    "sequence": sequence,
-                }
+            result = {
+                "hours": hours,
+                "route": "sequence_data/SLEEP_DETAILS",
+                "state": {"file_size": 0, "session_count": sequence.get("sequence_count", 0), "sessions": []},
+                "data": {"file_size": sequence.get("file_size", 0), "acc_count": 0, "ppg_count": 0},
+                "sequence": sequence,
+            }
+            save_json_artifact("latest_trusleep_preview.json", result)
+            if sequence.get("file_size", 0) > 0 or os.getenv("BAND10_TRUSLEEP_LEGACY_FALLBACK") != "1":
+                return result
 
         state_raw = await self.download_file_2c(
             "sleep_state.bin",
