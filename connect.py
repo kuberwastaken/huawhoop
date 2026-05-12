@@ -1417,7 +1417,15 @@ class Band:
             if remaining <= 0:
                 raise P2PNoDataError(src_package, dst_package, ack=last_ack, error_tlvs=last_error)
 
-            tlvs = await self._recv(SVC_P2P, 0x01, timeout=remaining)
+            try:
+                tlvs = await self._recv(SVC_P2P, 0x01, timeout=remaining)
+            except asyncio.TimeoutError as e:
+                raise P2PNoDataError(
+                    src_package,
+                    dst_package,
+                    ack=last_ack,
+                    error_tlvs=last_error,
+                ) from e
             decoded = self._decrypt_transaction_tlvs(tlvs)
             parsed = self._parse_p2p_response(decoded)
             logger.info(f"P2P async packet: cmd={parsed['cmd_id']:#x} code={parsed['code']:#x} "
