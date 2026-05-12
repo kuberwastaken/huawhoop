@@ -1626,8 +1626,17 @@ class Band:
         if dict_id and file_type == 0x16:
             init_tlv += tlv_enc(0x0C, struct.pack(">I", dict_id))
 
+        logger.debug(f"File init request: name={filename!r} type={self._file_type_name(file_type)} "
+                     f"start={start_ts} end={end_ts} dict_id={dict_id}")
         init = await self._transact_encrypted(SVC_FILE_DOWNLOAD, FILE_CMD_INIT, init_tlv, timeout=12.0)
+        logger.debug(f"File init response tlvs: { {hex(k): v.hex() for k, v in init.items()} }")
         if 0x7F in init:
+            status = self._tlv_int(init[0x7F])
+            if status == 0x000186A0:
+                logger.info(
+                    f"File init returned success status only for {filename!r}; no file metadata available"
+                )
+                return b""
             raise RuntimeError(f"file init failed: {init[0x7F].hex()}")
         resp_name = self._tlv_str(init.get(0x01, b""))
         resp_type = init.get(0x02, b"\x00")[0]
@@ -2001,7 +2010,8 @@ async def run():
 
         if os.getenv("BAND10_STRESS_SYNC", "1") != "0":
             try:
-                stress = await band.get_recent_stress_preview(hours=24)
+                stress_hours = int(os.getenv("BAND10_STRESS_HOURS", "168"))
+                stress = await band.get_recent_stress_preview(hours=stress_hours)
                 logger.info(
                     "Stress preview: "
                     f"count={stress.get('stress_count', 0)} "
