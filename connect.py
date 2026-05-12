@@ -2121,9 +2121,11 @@ class Band:
         if connect is not None:
             logger.info(f"Connect status TLVs: { {hex(k): v.hex() for k, v in connect.items()} }")
         await run_step("feature config upload", self.send_feature_config_file_if_requested())
-        if self.capability_flags.get("send_country_code"):
+        if self.capability_flags.get("send_country_code") and self._supports_command(SVC_ACCOUNT, CMD_COUNTRY_CODE):
             site_id = 5 if self.capability_flags.get("send_site_id") else None
             await run_step("country code", self.send_country_code("IN", site_id=site_id))
+        elif self.capability_flags.get("send_country_code"):
+            logger.info("Post-auth init: skipping country code because 0x1a/0x0a is not advertised")
         logger.info("Post-auth init: complete")
 
     # ── Data queries ─────────────────────────────────────────────────────────
@@ -3097,6 +3099,7 @@ async def run():
                 if os.getenv("BAND10_P2P_PROBE") == "1":
                     try:
                         dictionary_probe = await band.probe_dictionary_classes(days=0)
+                        save_json_artifact("latest_dictionary_probe.json", dictionary_probe)
                         logger.info(f"P2P dictionary class probe: {json.dumps(dictionary_probe, indent=2)}")
                     except Exception as probe_e:
                         logger.warning(f"P2P dictionary class probe failed: {probe_e!r}")
