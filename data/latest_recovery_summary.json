@@ -1,13 +1,13 @@
 {
   "counts": {
-    "steps": 43,
+    "steps": 44,
     "sleep": 5
   },
-  "downloaded_step_minutes": 1452,
+  "downloaded_step_minutes": 1467,
   "downloaded_sleep_segments": 63,
   "step_total": 6038,
   "sleep_minutes": 159,
-  "heart_rate_samples": 477,
+  "heart_rate_samples": 480,
   "spo2_samples": 76,
   "examples": [
     {
@@ -54,11 +54,11 @@
     }
   ],
   "step_window_start": "2026-05-12 01:14:00",
-  "step_window_end": "2026-05-13 01:25:00",
+  "step_window_end": "2026-05-13 01:40:00",
   "sleep_window_start": "2026-05-11 20:47:00",
   "sleep_window_end": "2026-05-13 01:04:00",
   "heart_rate_min": 56,
-  "heart_rate_avg": 96.5,
+  "heart_rate_avg": 96.4,
   "heart_rate_max": 164,
   "strain_score": 14.3,
   "spo2_min": 94,
@@ -68,6 +68,6 @@
   "resting_hr_avg": 75.0,
   "sleep_score": 33,
   "recovery_proxy_no_hrv": 40,
-  "generated_at": 1778615792,
-  "generated_at_local": "2026-05-13 01:26:32"
+  "generated_at": 1778616681,
+  "generated_at_local": "2026-05-13 01:41:21"
 }

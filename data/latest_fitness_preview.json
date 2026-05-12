@@ -1,6 +1,6 @@
 {
   "counts": {
-    "steps": 43,
+    "steps": 44,
     "sleep": 5
   },
   "steps": [
@@ -9207,6 +9207,87 @@
     {
       "record": 42,
       "timestamp": 1778615700,
+      "raw": "00"
+    },
+    {
+      "record": 42,
+      "timestamp": 1778615760,
+      "raw": "00"
+    },
+    {
+      "record": 42,
+      "timestamp": 1778615820,
+      "raw": "c0025900",
+      "heart_rate": 89,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778615880,
+      "raw": "c0025100",
+      "heart_rate": 81,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778615940,
+      "raw": "00"
+    },
+    {
+      "record": 42,
+      "timestamp": 1778616000,
+      "raw": "00"
+    },
+    {
+      "record": 42,
+      "timestamp": 1778616060,
+      "raw": "00"
+    },
+    {
+      "record": 42,
+      "timestamp": 1778616120,
+      "raw": "00"
+    },
+    {
+      "record": 42,
+      "timestamp": 1778616180,
+      "raw": "00"
+    },
+    {
+      "record": 42,
+      "timestamp": 1778616240,
+      "raw": "c0025400",
+      "heart_rate": 84,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778616300,
+      "raw": "00"
+    },
+    {
+      "record": 43,
+      "timestamp": 1778616360,
+      "raw": "00"
+    },
+    {
+      "record": 43,
+      "timestamp": 1778616420,
+      "raw": "00"
+    },
+    {
+      "record": 43,
+      "timestamp": 1778616480,
+      "raw": "00"
+    },
+    {
+      "record": 43,
+      "timestamp": 1778616540,
+      "raw": "00"
+    },
+    {
+      "record": 43,
+      "timestamp": 1778616600,
       "raw": "00"
     }
   ],
