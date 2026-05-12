@@ -1170,6 +1170,12 @@ class Band:
         step, p1 = self._parse_hichain_response(resp_tlvs)
         logger.debug(f"  Step 1 response: step={step} payload={p1}")
 
+        required_step1 = {"isoSalt", "peerAuthId", "token"}
+        if not required_step1.issubset(p1):
+            logger.warning(f"  Unexpected HiChain step 1 payload: step={step} payload={p1} "
+                           f"raw_tlvs={ {hex(k): v.hex() for k, v in resp_tlvs.items()} }")
+            raise ValueError(f"HiChain step 1 missing {sorted(required_step1 - set(p1))}")
+
         rand_peer    = bytes.fromhex(p1["isoSalt"])
         auth_id_peer = bytes.fromhex(p1["peerAuthId"])
         peer_token   = bytes.fromhex(p1["token"])
