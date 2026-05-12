@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Huawei Band 10 Recovery Dashboard</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Huawei Band 10 Recovery</h1>
+      <p id="sync-label">Loading device artifacts...</p>
+    </div>
+    <div class="status-strip" id="status-strip"></div>
+  </header>
+
+  <main>
+    <section class="metric-grid" id="metric-grid"></section>
+
+    <section class="content-grid">
+      <article class="panel panel-wide">
+        <div class="panel-head">
+          <div>
+            <h2>Heart Rate And SpO2</h2>
+            <p>Minute samples pulled from the fitness history route.</p>
+          </div>
+          <span class="pill" id="sample-count-pill">0 samples</span>
+        </div>
+        <div id="hr-chart" class="chart"></div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Strain Load</h2>
+            <p>Calorie-coded minute intensity from the latest 24h pull.</p>
+          </div>
+        </div>
+        <div id="load-chart" class="chart small-chart"></div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Sleep Window</h2>
+            <p>Current reliable sleep signal from fitness segments.</p>
+          </div>
+        </div>
+        <div id="sleep-panel" class="sleep-readout"></div>
+      </article>
+
+      <article class="panel panel-wide">
+        <div class="panel-head">
+          <div>
+            <h2>Data Routes</h2>
+            <p>What the band exposed during the latest authenticated session.</p>
+          </div>
+        </div>
+        <div id="route-table" class="route-table"></div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Capabilities</h2>
+            <p>Expanded capability bits decoded from service 0x01/0x37.</p>
+          </div>
+        </div>
+        <div id="capabilities" class="cap-list"></div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Recovery History</h2>
+            <p>Recent connector runs appended to recovery_history.jsonl.</p>
+          </div>
+        </div>
+        <div id="history-chart" class="chart small-chart"></div>
+      </article>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

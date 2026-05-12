@@ -1,0 +1,311 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f7f9;
+  --text: #20252c;
+  --muted: #657080;
+  --line: #d9dee7;
+  --panel: #ffffff;
+  --panel-2: #eef4f1;
+  --green: #1f8a5b;
+  --red: #c84c3a;
+  --amber: #b77715;
+  --blue: #2f6fb3;
+  --ink: #111827;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+.topbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 28px 16px;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 720;
+  letter-spacing: 0;
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+main {
+  padding: 20px 28px 32px;
+}
+
+.status-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 5px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--muted);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.pill.ok {
+  color: var(--green);
+  border-color: #b8dccb;
+  background: #eef8f3;
+}
+
+.pill.warn {
+  color: var(--amber);
+  border-color: #ead1a4;
+  background: #fff7e8;
+}
+
+.pill.bad {
+  color: var(--red);
+  border-color: #e9b8b0;
+  background: #fff1ef;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(120px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.metric {
+  min-height: 108px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.metric .label {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.metric .value {
+  margin-top: 10px;
+  color: var(--ink);
+  font-size: 28px;
+  font-weight: 740;
+  letter-spacing: 0;
+}
+
+.metric .sub {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.panel {
+  min-height: 260px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  overflow: hidden;
+}
+
+.panel-wide {
+  grid-column: span 2;
+}
+
+.panel-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.chart {
+  width: 100%;
+  height: 280px;
+}
+
+.small-chart {
+  height: 190px;
+}
+
+.chart svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.axis {
+  stroke: #c8ced8;
+  stroke-width: 1;
+}
+
+.grid-line {
+  stroke: #e7ebf0;
+  stroke-width: 1;
+}
+
+.hr-line {
+  fill: none;
+  stroke: var(--red);
+  stroke-width: 2.5;
+}
+
+.spo2-line {
+  fill: none;
+  stroke: var(--blue);
+  stroke-width: 2;
+}
+
+.history-line {
+  fill: none;
+  stroke: var(--green);
+  stroke-width: 2.5;
+}
+
+.bar {
+  fill: #6c8c7d;
+}
+
+.chart-label {
+  fill: var(--muted);
+  font-size: 11px;
+}
+
+.sleep-readout {
+  display: grid;
+  gap: 10px;
+}
+
+.sleep-row,
+.route-row,
+.cap-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+}
+
+.sleep-row:first-child,
+.route-row:first-child,
+.cap-row:first-child {
+  border-top: 0;
+}
+
+.route-table,
+.cap-list {
+  display: grid;
+}
+
+.route-name,
+.cap-name {
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.route-detail,
+.cap-detail {
+  max-width: 56%;
+  color: var(--muted);
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.empty {
+  padding: 22px;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 1100px) {
+  .metric-grid {
+    grid-template-columns: repeat(3, minmax(120px, 1fr));
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-wide {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 680px) {
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  main {
+    padding: 14px;
+  }
+
+  .metric-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .metric .value {
+    font-size: 23px;
+  }
+
+  .route-row,
+  .cap-row,
+  .sleep-row {
+    flex-direction: column;
+  }
+
+  .route-detail,
+  .cap-detail {
+    max-width: 100%;
+    text-align: left;
+  }
+}
