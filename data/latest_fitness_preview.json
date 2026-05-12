@@ -9249,6 +9249,21 @@
       "raw": "c0025700",
       "heart_rate": 87,
       "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778597160,
+      "raw": "c0025900",
+      "heart_rate": 89,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778597220,
+      "raw": "c0035a5f00",
+      "heart_rate": 90,
+      "spo2": 95,
+      "resting_heart_rate": 0
     }
   ],
   "sleep": [
