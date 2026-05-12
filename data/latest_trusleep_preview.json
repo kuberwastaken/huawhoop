@@ -1,0 +1,16 @@
+{
+  "hours": 168,
+  "state": {
+    "file_size": 0,
+    "session_count": 0,
+    "sessions": []
+  },
+  "data": {
+    "file_size": 0,
+    "acc_count": 0,
+    "ppg_count": 0,
+    "acc_examples": [],
+    "ppg_examples": [],
+    "errors": []
+  }
+}

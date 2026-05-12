@@ -1,7 +1,7 @@
 {
   "counts": {
     "steps": 44,
-    "sleep": 5
+    "sleep": 4
   },
   "steps": [
     {
@@ -9377,445 +9377,377 @@
       "raw": "c0025600",
       "heart_rate": 86,
       "resting_heart_rate": 0
+    },
+    {
+      "record": 43,
+      "timestamp": 1778598360,
+      "raw": "00"
+    },
+    {
+      "record": 43,
+      "timestamp": 1778598420,
+      "raw": "c003545f00",
+      "heart_rate": 84,
+      "spo2": 95,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 43,
+      "timestamp": 1778598480,
+      "raw": "00"
+    },
+    {
+      "record": 43,
+      "timestamp": 1778598540,
+      "raw": "00"
     }
   ],
   "sleep": [
     {
       "record": 0,
-      "start": 1778493540,
-      "end": 1778493600,
-      "duration_sec": 60,
-      "stage": 1
-    },
-    {
-      "record": 0,
-      "start": 1778497860,
-      "end": 1778497920,
-      "duration_sec": 60,
-      "stage": 1
-    },
-    {
-      "record": 0,
-      "start": 1778498460,
-      "end": 1778498520,
-      "duration_sec": 60,
-      "stage": 1
-    },
-    {
-      "record": 0,
-      "start": 1778499300,
-      "end": 1778499360,
-      "duration_sec": 60,
-      "stage": 1
-    },
-    {
-      "record": 0,
-      "start": 1778501100,
-      "end": 1778501160,
-      "duration_sec": 60,
-      "stage": 1
-    },
-    {
-      "record": 0,
-      "start": 1778501220,
-      "end": 1778501340,
-      "duration_sec": 120,
-      "stage": 1
-    },
-    {
-      "record": 0,
-      "start": 1778503200,
-      "end": 1778503260,
-      "duration_sec": 60,
-      "stage": 1
-    },
-    {
-      "record": 0,
-      "start": 1778506980,
-      "end": 1778507100,
-      "duration_sec": 120,
-      "stage": 1
-    },
-    {
-      "record": 0,
-      "start": 1778507160,
-      "end": 1778507400,
-      "duration_sec": 240,
-      "stage": 1
-    },
-    {
-      "record": 0,
-      "start": 1778507460,
-      "end": 1778509980,
-      "duration_sec": 2520,
-      "stage": 1
-    },
-    {
-      "record": 0,
-      "start": 1778510580,
-      "end": 1778510760,
-      "duration_sec": 180,
-      "stage": 1
-    },
-    {
-      "record": 0,
-      "start": 1778511780,
-      "end": 1778511960,
-      "duration_sec": 180,
-      "stage": 1
-    },
-    {
-      "record": 0,
-      "start": 1778512020,
-      "end": 1778512140,
-      "duration_sec": 120,
-      "stage": 1
-    },
-    {
-      "record": 1,
       "start": 1778512620,
       "end": 1778512800,
       "duration_sec": 180,
       "stage": 1
     },
     {
-      "record": 1,
+      "record": 0,
       "start": 1778517600,
       "end": 1778517660,
       "duration_sec": 60,
       "stage": 1
     },
     {
-      "record": 1,
+      "record": 0,
       "start": 1778517780,
       "end": 1778517840,
       "duration_sec": 60,
       "stage": 1
     },
     {
-      "record": 1,
+      "record": 0,
       "start": 1778517960,
       "end": 1778518020,
       "duration_sec": 60,
       "stage": 1
     },
     {
-      "record": 1,
+      "record": 0,
       "start": 1778522400,
       "end": 1778522820,
       "duration_sec": 420,
       "stage": 1
     },
     {
-      "record": 1,
+      "record": 0,
       "start": 1778529780,
       "end": 1778529900,
       "duration_sec": 120,
       "stage": 1
     },
     {
-      "record": 1,
+      "record": 0,
       "start": 1778536320,
       "end": 1778536380,
       "duration_sec": 60,
       "stage": 1
     },
     {
-      "record": 1,
+      "record": 0,
       "start": 1778549400,
       "end": 1778549520,
       "duration_sec": 120,
       "stage": 1
     },
     {
-      "record": 1,
+      "record": 0,
       "start": 1778550060,
       "end": 1778550120,
       "duration_sec": 60,
       "stage": 1
     },
     {
-      "record": 1,
+      "record": 0,
       "start": 1778550300,
       "end": 1778550600,
       "duration_sec": 300,
       "stage": 1
     },
     {
-      "record": 1,
+      "record": 0,
       "start": 1778551200,
       "end": 1778551380,
       "duration_sec": 180,
       "stage": 1
     },
     {
-      "record": 1,
+      "record": 0,
       "start": 1778551440,
       "end": 1778551500,
       "duration_sec": 60,
       "stage": 1
     },
     {
-      "record": 1,
+      "record": 0,
       "start": 1778551860,
       "end": 1778552220,
       "duration_sec": 360,
       "stage": 1
     },
     {
-      "record": 2,
+      "record": 1,
       "start": 1778552880,
       "end": 1778553120,
       "duration_sec": 240,
       "stage": 1
     },
     {
-      "record": 2,
+      "record": 1,
       "start": 1778554260,
       "end": 1778554680,
       "duration_sec": 420,
       "stage": 1
     },
     {
-      "record": 2,
+      "record": 1,
       "start": 1778554800,
       "end": 1778555040,
       "duration_sec": 240,
       "stage": 1
     },
     {
-      "record": 2,
+      "record": 1,
       "start": 1778555460,
       "end": 1778555760,
       "duration_sec": 300,
       "stage": 1
     },
     {
-      "record": 2,
+      "record": 1,
       "start": 1778560860,
       "end": 1778561040,
       "duration_sec": 180,
       "stage": 1
     },
     {
-      "record": 2,
+      "record": 1,
       "start": 1778561460,
       "end": 1778561700,
       "duration_sec": 240,
       "stage": 1
     },
     {
-      "record": 2,
+      "record": 1,
       "start": 1778561880,
       "end": 1778561940,
       "duration_sec": 60,
       "stage": 1
     },
     {
-      "record": 2,
+      "record": 1,
       "start": 1778564400,
       "end": 1778564520,
       "duration_sec": 120,
       "stage": 1
     },
     {
-      "record": 2,
+      "record": 1,
       "start": 1778564640,
       "end": 1778564700,
       "duration_sec": 60,
       "stage": 1
     },
     {
-      "record": 2,
+      "record": 1,
       "start": 1778564760,
       "end": 1778564880,
       "duration_sec": 120,
       "stage": 1
     },
     {
-      "record": 2,
+      "record": 1,
       "start": 1778565840,
       "end": 1778566020,
       "duration_sec": 180,
       "stage": 1
     },
     {
-      "record": 2,
+      "record": 1,
       "start": 1778566500,
       "end": 1778566620,
       "duration_sec": 120,
       "stage": 1
     },
     {
-      "record": 2,
+      "record": 1,
       "start": 1778566680,
       "end": 1778567100,
       "duration_sec": 420,
       "stage": 1
     },
     {
-      "record": 3,
+      "record": 2,
       "start": 1778567520,
       "end": 1778567580,
       "duration_sec": 60,
       "stage": 1
     },
     {
-      "record": 3,
+      "record": 2,
       "start": 1778567700,
       "end": 1778567820,
       "duration_sec": 120,
       "stage": 1
     },
     {
-      "record": 3,
+      "record": 2,
       "start": 1778567880,
       "end": 1778568180,
       "duration_sec": 300,
       "stage": 1
     },
     {
-      "record": 3,
+      "record": 2,
       "start": 1778569380,
       "end": 1778569440,
       "duration_sec": 60,
       "stage": 1
     },
     {
-      "record": 3,
+      "record": 2,
       "start": 1778569740,
       "end": 1778569800,
       "duration_sec": 60,
       "stage": 1
     },
     {
-      "record": 3,
+      "record": 2,
       "start": 1778570040,
       "end": 1778570160,
       "duration_sec": 120,
       "stage": 1
     },
     {
-      "record": 3,
+      "record": 2,
       "start": 1778570340,
       "end": 1778570400,
       "duration_sec": 60,
       "stage": 1
     },
     {
-      "record": 3,
+      "record": 2,
       "start": 1778570640,
       "end": 1778570700,
       "duration_sec": 60,
       "stage": 1
     },
     {
-      "record": 3,
+      "record": 2,
       "start": 1778571180,
       "end": 1778571600,
       "duration_sec": 420,
       "stage": 1
     },
     {
-      "record": 3,
+      "record": 2,
       "start": 1778572320,
       "end": 1778572620,
       "duration_sec": 300,
       "stage": 1
     },
     {
-      "record": 3,
+      "record": 2,
       "start": 1778572680,
       "end": 1778573100,
       "duration_sec": 420,
       "stage": 1
     },
     {
-      "record": 3,
+      "record": 2,
       "start": 1778573160,
       "end": 1778573220,
       "duration_sec": 60,
       "stage": 1
     },
     {
-      "record": 3,
+      "record": 2,
       "start": 1778574420,
       "end": 1778574600,
       "duration_sec": 180,
       "stage": 1
     },
     {
-      "record": 4,
+      "record": 3,
       "start": 1778574660,
       "end": 1778574720,
       "duration_sec": 60,
       "stage": 1
     },
     {
-      "record": 4,
+      "record": 3,
       "start": 1778575200,
       "end": 1778575260,
       "duration_sec": 60,
       "stage": 1
     },
     {
-      "record": 4,
+      "record": 3,
       "start": 1778575320,
       "end": 1778575440,
       "duration_sec": 120,
       "stage": 1
     },
     {
-      "record": 4,
+      "record": 3,
       "start": 1778575500,
       "end": 1778575620,
       "duration_sec": 120,
       "stage": 1
     },
     {
-      "record": 4,
+      "record": 3,
       "start": 1778591160,
       "end": 1778591280,
       "duration_sec": 120,
       "stage": 1
     },
     {
-      "record": 4,
+      "record": 3,
       "start": 1778591520,
       "end": 1778591640,
       "duration_sec": 120,
       "stage": 1
     },
     {
-      "record": 4,
+      "record": 3,
       "start": 1778591820,
       "end": 1778591880,
       "duration_sec": 60,
       "stage": 1
     },
     {
-      "record": 4,
+      "record": 3,
       "start": 1778592120,
       "end": 1778592240,
       "duration_sec": 120,
       "stage": 1
     },
     {
-      "record": 4,
+      "record": 3,
       "start": 1778593440,
       "end": 1778593560,
       "duration_sec": 120,
       "stage": 1
     },
     {
-      "record": 4,
+      "record": 3,
       "start": 1778595180,
       "end": 1778595300,
       "duration_sec": 120,
       "stage": 1
     },
     {
-      "record": 4,
+      "record": 3,
       "start": 1778597880,
       "end": 1778598060,
       "duration_sec": 180,
