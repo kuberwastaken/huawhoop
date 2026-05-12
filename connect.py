@@ -57,6 +57,7 @@ MAGIC       = 0x5A
 # Service / command IDs
 SVC_DEV     = 0x01
 SVC_FITNESS = 0x07
+SVC_FILE_UPLOAD = 0x28
 SVC_FILE_DOWNLOAD = 0x2C
 SVC_P2P     = 0x34
 CMD_LINK    = 0x01
@@ -85,6 +86,14 @@ FILE_CMD_INCOMING_INIT = 0x07
 FILE_TYPE_SLEEP_STATE = 0x0E
 FILE_TYPE_SLEEP_DATA = 0x0F
 FILE_TYPE_RRI = 0x10
+
+UPLOAD_CMD_INFO = 0x02
+UPLOAD_CMD_HASH = 0x03
+UPLOAD_CMD_CONSULT = 0x04
+UPLOAD_CMD_NEXT_CHUNK = 0x05
+UPLOAD_CMD_CHUNK = 0x06
+UPLOAD_CMD_RESULT = 0x07
+UPLOAD_CMD_DEVICE_RESPONSE = 0x08
 
 # Crypto constants (same across all Gadgetbridge / huawei-lpv2 builds)
 DIGEST_SECRETS = {
@@ -453,6 +462,7 @@ class Band:
         self._rx_svc  = 0
         self._rx_cmd  = 0
         self._pending_file_inits = []
+        self._feature_config_requested = False
 
     # ── BLE low-level ─────────────────────────────────────────────────────────
 
@@ -741,6 +751,33 @@ class Band:
                 continue
             await asyncio.wait_for(self._event.wait(), timeout=remaining)
 
+    async def _recv_any(self, expected: set[tuple[int, int]],
+                        timeout: float = 15.0) -> tuple[int, int, dict]:
+        deadline = asyncio.get_running_loop().time() + timeout
+        while True:
+            while self._rx_queue:
+                raw = self._rx_queue.popleft()
+                svc, cmd, tlvs = parse_frame(raw)
+                if (svc, cmd) in expected:
+                    return svc, cmd, tlvs
+                if svc == SVC_DEV and cmd == CMD_PHONE_INFO:
+                    await self._handle_phone_info_request(tlvs)
+                else:
+                    await self._handle_unsolicited(svc, cmd, tlvs, b"", b"", b"")
+
+            remaining = deadline - asyncio.get_running_loop().time()
+            if remaining <= 0:
+                raise asyncio.TimeoutError(f"Timed out waiting for one of {expected}")
+            self._event.clear()
+            if self._rx_queue:
+                continue
+            await asyncio.wait_for(self._event.wait(), timeout=remaining)
+
+    async def _recv_any_encrypted(self, expected: set[tuple[int, int]],
+                                  timeout: float = 15.0) -> tuple[int, int, dict]:
+        svc, cmd, tlvs = await self._recv_any(expected, timeout=timeout)
+        return svc, cmd, self._decrypt_transaction_tlvs(tlvs)
+
     async def _handle_unsolicited(self, svc: int, cmd: int, tlvs: dict,
                                   pin_code: bytes, rand_self: bytes, seed: bytes):
         """Handle or log an unsolicited packet."""
@@ -763,6 +800,15 @@ class Band:
                 f"name={init['filename']!r} type={self._file_type_name(init['file_type'])} "
                 f"id={init['file_id']:#x} size={init['file_size']}"
             )
+        elif svc == SVC_FILE_UPLOAD:
+            try:
+                plain = self._decrypt_transaction_tlvs(tlvs)
+                logger.info(
+                    f"  FileUpload unsolicited cmd={cmd:#x} "
+                    f"tlvs={ {hex(k): v.hex() for k, v in plain.items()} }"
+                )
+            except Exception as e:
+                logger.debug(f"  FileUpload unsolicited parse failed cmd={cmd:#x}: {e!r}")
         elif svc == 0x37 or (svc == SVC_DEV and cmd == 0x3D):
             # DataSync or encrypted dev packet — log but don't respond
             logger.info(f"  svc={svc:#x}/cmd={cmd:#x} raw tlvs: { {hex(k): v.hex() for k,v in tlvs.items()} }")
@@ -917,6 +963,7 @@ class Band:
                     )
                     logger.info("  DataSync FeatureManager request -> replying with feature config ACK")
                     await self._send_encrypted_no_wait(SVC_DATASYNC, DATASYNC_CONFIG_CMD, reply)
+                    self._feature_config_requested = True
                     return True
             return True
 
@@ -924,6 +971,179 @@ class Band:
             return True
 
         return False
+
+    @staticmethod
+    def _feature_file_content(country_code: str) -> bytes:
+        features = [
+            {
+                "devPackageName": "com.huawei.health.pwvdetection",
+                "support": 1,
+                "extInfo": {"medical": False},
+            },
+            {
+                "devPackageName": "com.huawei.health.bloodpressure",
+                "support": 1,
+                "extInfo": {"ABPM": [135, 85, 120, 70, 130, 80], "local": 2},
+            },
+            {
+                "devPackageName": "com.huawei.watch.health.ecganalysis",
+                "support": 1,
+                "extInfo": {"medical": False},
+            },
+            {
+                "devPackageName": "com.huawei.health.healthcheck",
+                "support": 1,
+                "extInfo": {"checkItem": 23},
+            },
+            {"devPackageName": "com.huawei.hmos.watch.emotional", "support": 1},
+            {
+                "devPackageName": "com.huawei.hmos.watch.plateaucare",
+                "support": 1,
+                "extInfo": {"medical": False},
+            },
+            {
+                "devPackageName": "com.huawei.watch.health.arrhythmia",
+                "support": 1,
+                "extInfo": {"medical": False},
+            },
+        ]
+        payload = {
+            "featureList": features,
+            "country": country_code,
+            "ver": 1,
+            "name": f"feature_{country_code}_device",
+        }
+        return json.dumps(payload, separators=(",", ":")).encode("utf-8")
+
+    @staticmethod
+    def _feature_notify_content(country_code: str) -> bytes:
+        payload = {
+            "filterCondition": [{"filterCountry": country_code}],
+            "configName": "com.huawei.health_deviceFeature_config",
+            "fileData": [{
+                "version": 1,
+                "fileName": f"feature_{country_code}_device.txt",
+            }],
+        }
+        return json.dumps(payload, separators=(",", ":")).encode("utf-8")
+
+    async def _send_upload_chunk(self, file_id: int, chunk: bytes, upload_position: int,
+                                 unit_size: int, encrypt: bool):
+        offset = upload_position
+        index = 0
+        pos = 0
+        while pos < len(chunk):
+            part = chunk[pos:pos + unit_size]
+            payload = bytes([file_id & 0xFF, index & 0xFF]) + struct.pack(">I", offset) + part
+            if encrypt:
+                payload = self._encrypt_transaction_tlv(payload)
+            await self._send(SVC_FILE_UPLOAD, UPLOAD_CMD_CHUNK, payload)
+            pos += len(part)
+            offset += len(part)
+            index += 1
+
+    async def upload_file_28(self, file_name: str, file_type: int, payload: bytes,
+                             timeout: float = 20.0):
+        file_hash = hashlib.sha256(payload).digest()
+        logger.info(
+            f"Feature upload: info name={file_name!r} type={file_type:#x} "
+            f"size={len(payload)} sha256={file_hash.hex()}"
+        )
+        info_tlv = (
+            tlv_enc(0x01, file_name.encode("utf-8")) +
+            tlv_enc(0x02, struct.pack(">I", len(payload))) +
+            tlv_enc(0x03, bytes([file_type & 0xFF]))
+        )
+        info = await self._transact_encrypted(SVC_FILE_UPLOAD, UPLOAD_CMD_INFO, info_tlv, timeout=timeout)
+        info_code = self._tlv_int(info.get(0x7F, b""))
+        if info_code and info_code != DATASYNC_REPLY_OK:
+            raise RuntimeError(f"feature upload info failed: {info_code}")
+
+        _, _, hash_req = await self._recv_any_encrypted({(SVC_FILE_UPLOAD, UPLOAD_CMD_HASH)}, timeout=timeout)
+        file_id = hash_req.get(0x01, b"\x00")[0]
+        logger.info(f"Feature upload: file id={file_id:#x}, sending hash")
+        hash_tlv = tlv_enc(0x01, bytes([file_id])) + tlv_enc(0x03, file_hash)
+        await self._send_encrypted_no_wait(SVC_FILE_UPLOAD, UPLOAD_CMD_HASH, hash_tlv)
+
+        _, _, consult = await self._recv_any_encrypted({(SVC_FILE_UPLOAD, UPLOAD_CMD_CONSULT)}, timeout=timeout)
+        file_id = consult.get(0x01, bytes([file_id]))[0]
+        unit_size = self._tlv_int(consult.get(0x05, b""), default=512) or 512
+        no_encrypt = consult.get(0x09, b"\x00")[0] if consult.get(0x09) else 0
+        logger.info(
+            f"Feature upload: consult file_id={file_id:#x} unit={unit_size} "
+            f"no_encrypt={no_encrypt} raw={ {hex(k): v.hex() for k, v in consult.items()} }"
+        )
+        ack_tlv = (
+            tlv_enc(0x7F, struct.pack(">I", DATASYNC_REPLY_OK)) +
+            tlv_enc(0x01, bytes([file_id]))
+        )
+        if no_encrypt == 1:
+            ack_tlv += tlv_enc(0x09, b"\x01")
+        await self._send_encrypted_no_wait(SVC_FILE_UPLOAD, UPLOAD_CMD_CONSULT, ack_tlv)
+
+        while True:
+            _, cmd, data = await self._recv_any_encrypted(
+                {
+                    (SVC_FILE_UPLOAD, UPLOAD_CMD_NEXT_CHUNK),
+                    (SVC_FILE_UPLOAD, UPLOAD_CMD_RESULT),
+                    (SVC_FILE_UPLOAD, UPLOAD_CMD_DEVICE_RESPONSE),
+                },
+                timeout=timeout,
+            )
+            if cmd == UPLOAD_CMD_NEXT_CHUNK:
+                uploaded = self._tlv_int(data.get(0x02, b""))
+                next_size = self._tlv_int(data.get(0x03, b""))
+                if uploaded >= len(payload):
+                    logger.info("Feature upload: device requested chunk after full payload; waiting for result")
+                    continue
+                if next_size <= 0:
+                    raise RuntimeError(f"feature upload invalid next chunk size: {next_size}")
+                chunk = payload[uploaded:uploaded + next_size]
+                logger.info(f"Feature upload: chunk offset={uploaded} size={len(chunk)}")
+                await self._send_upload_chunk(
+                    file_id,
+                    chunk,
+                    uploaded,
+                    unit_size,
+                    encrypt=(no_encrypt == 0),
+                )
+            elif cmd == UPLOAD_CMD_RESULT:
+                status = data.get(0x02, b"\x00")[0] if data.get(0x02) else 0
+                logger.info(f"Feature upload: result status={status}, sending completion ACK")
+                done_tlv = (
+                    tlv_enc(0x7F, struct.pack(">I", DATASYNC_REPLY_OK)) +
+                    tlv_enc(0x01, bytes([file_id]))
+                )
+                await self._send_encrypted_no_wait(SVC_FILE_UPLOAD, UPLOAD_CMD_RESULT, done_tlv)
+                return
+            else:
+                code = self._tlv_int(data.get(0x7F, b""))
+                raise RuntimeError(f"feature upload device error: {code}")
+
+    async def send_feature_config_file_if_requested(self):
+        if not self._feature_config_requested:
+            return
+        if os.getenv("BAND10_FEATURE_UPLOAD", "1") == "0":
+            logger.info("Feature upload skipped by BAND10_FEATURE_UPLOAD=0")
+            return
+        country_code = os.getenv("BAND10_COUNTRY", "IN").upper()
+        file_name = f"feature_{country_code}_device.txt"
+        payload = self._feature_file_content(country_code)
+        save_binary_artifact(file_name, payload)
+        await self.upload_file_28(file_name, 0x0F, payload)
+        notify = self._feature_notify_content(country_code)
+        item = self._datasync_config_item(
+            DATASYNC_FEATURE_CONFIG_ID,
+            action=1,
+            data=notify,
+        )
+        reply = self._datasync_config_command_tlv(
+            DATASYNC_FEATURE_DST,
+            DATASYNC_FEATURE_SRC,
+            [item],
+        )
+        logger.info(f"Feature upload: notifying device with {notify.decode('utf-8')}")
+        await self._send_encrypted_no_wait(SVC_DATASYNC, DATASYNC_CONFIG_CMD, reply)
 
     @staticmethod
     def _phone_info_response_tlv(requested_tags: bytes) -> bytes:
@@ -1594,6 +1814,7 @@ class Band:
         device = await run_step("device status", self.get_device_status())
         if device is not None:
             logger.info(f"Device status TLVs: { {hex(k): v.hex() for k, v in device.items()} }")
+        await run_step("feature config upload", self.send_feature_config_file_if_requested())
         logger.info("Post-auth init: complete")
 
     # ── Data queries ─────────────────────────────────────────────────────────
