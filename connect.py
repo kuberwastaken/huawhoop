@@ -57,6 +57,7 @@ MAGIC       = 0x5A
 # Service / command IDs
 SVC_DEV     = 0x01
 SVC_FITNESS = 0x07
+SVC_ACCOUNT = 0x1A
 SVC_FILE_UPLOAD = 0x28
 SVC_FILE_DOWNLOAD = 0x2C
 SVC_P2P     = 0x34
@@ -78,6 +79,9 @@ CMD_HICHAIN = 0x28
 CMD_SETTING_RELATED = 0x31
 CMD_WEAR_STATUS = 0x3D
 CMD_SETUP_DEVICE_STATUS = 0x3E
+CMD_ACCEPT_AGREEMENT = 0x30
+CMD_REVERSE_CAPABILITIES = 0x3F
+CMD_COUNTRY_CODE = 0x0A
 
 FILE_CMD_INIT = 0x01
 FILE_CMD_HASH = 0x02
@@ -203,12 +207,14 @@ EXPAND_CAPABILITY_LABELS = {
     "p2p_get_app_version": 14,
     "send_country_code": 30,
     "track_p2p": 0x36,
+    "multi_device": 109,
     "sleep_apnea": 107,
     "dict_sleep_sync": 143,
     "three_circle": 154,
     "three_circle_lite": 156,
     "send_site_id": 170,
     "device_command_dict_data": 173,
+    "reverse_capabilities": 182,
     "external_calendar": 184,
     "bed_time": 199,
     "emotion": 206,
@@ -518,6 +524,17 @@ def append_jsonl_artifact(filename: str, payload: dict):
 
 def local_time_label(epoch_seconds: int) -> str:
     return time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(epoch_seconds))
+
+
+class P2PNoDataError(asyncio.TimeoutError):
+    def __init__(self, src_package: str, dst_package: str, ack: dict = None,
+                 error_tlvs: dict = None):
+        super().__init__(f"Timed out waiting for P2P data from {src_package}")
+        self.src_package = src_package
+        self.dst_package = dst_package
+        self.ack = ack
+        self.error_tlvs = error_tlvs
+
 
 def save_recovery_report(summary: dict):
     DATA_DIR.mkdir(exist_ok=True)
@@ -1393,10 +1410,12 @@ class Band:
     async def wait_for_p2p_data(self, src_package: str, dst_package: str,
                                 timeout: float = 45.0) -> dict:
         deadline = asyncio.get_running_loop().time() + timeout
+        last_ack = None
+        last_error = None
         while True:
             remaining = deadline - asyncio.get_running_loop().time()
             if remaining <= 0:
-                raise asyncio.TimeoutError(f"Timed out waiting for P2P data from {src_package}")
+                raise P2PNoDataError(src_package, dst_package, ack=last_ack, error_tlvs=last_error)
 
             tlvs = await self._recv(SVC_P2P, 0x01, timeout=remaining)
             decoded = self._decrypt_transaction_tlvs(tlvs)
@@ -1406,6 +1425,9 @@ class Band:
                         f"dst={parsed['dst_package']} data_len={len(parsed['data'])}")
             if parsed["cmd_id"] == 0:
                 logger.info(f"P2P unparsed TLVs: { {hex(k): v.hex() for k, v in decoded.items()} }")
+                if 0x7F in decoded:
+                    last_error = decoded
+                    logger.info(f"P2P error TLV while waiting for data: {decoded[0x7F].hex()}")
 
             if parsed["cmd_id"] == 0x02 and parsed["src_package"] == src_package:
                 await self._send_p2p_ack(parsed)
@@ -1413,6 +1435,8 @@ class Band:
                     return parsed
 
             if parsed["cmd_id"] == 0x03:
+                if parsed["src_package"] == src_package and (not dst_package or parsed["dst_package"] == dst_package):
+                    last_ack = parsed
                 continue
 
     async def ping_dictionary_sync(self) -> dict:
@@ -1519,6 +1543,21 @@ class Band:
                     "data_len": len(response["data"]),
                     "code": response["code"],
                 }
+            except P2PNoDataError as e:
+                item = {"class": dict_class, "status": "timeout_no_data"}
+                if e.ack:
+                    item.update({
+                        "status": "ack_no_data",
+                        "ack_code": e.ack["code"],
+                        "ack_cmd": e.ack["cmd_id"],
+                        "ack_sequence": e.ack["sequence"],
+                    })
+                if e.error_tlvs:
+                    item.update({
+                        "status": "error_tlv",
+                        "error_tlvs": {hex(k): v.hex() for k, v in e.error_tlvs.items()},
+                    })
+                results[name] = item
             except asyncio.TimeoutError:
                 results[name] = {"class": dict_class, "timeout": True}
         return results
@@ -1984,6 +2023,42 @@ class Band:
         logger.info(f"Setting related: {settings}")
         return settings
 
+    async def send_accept_agreements(self) -> dict:
+        timestamp = str(int(time.time() * 1000)).encode("utf-8")
+        version = b"20230508-20230508-0-0"
+        items = []
+        for key in (
+            b"software_update_service_statement",
+            b"device_information_management",
+            b"user_license_agreement",
+        ):
+            items.append(tlv_enc(0x82, (
+                tlv_enc(0x03, key) +
+                tlv_enc(0x04, b"\x01") +
+                tlv_enc(0x05, version) +
+                tlv_enc(0x06, timestamp)
+            )))
+        return await self._transact_encrypted(
+            SVC_DEV,
+            CMD_ACCEPT_AGREEMENT,
+            tlv_enc(0x81, b"".join(items)),
+            timeout=8.0,
+        )
+
+    async def send_reverse_capabilities(self) -> dict:
+        return await self._transact_encrypted(
+            SVC_DEV,
+            CMD_REVERSE_CAPABILITIES,
+            tlv_enc(0x01, bytes([0xFD, 0xF7, 0x73, 0x7A])),
+            timeout=8.0,
+        )
+
+    async def send_country_code(self, country_code: str = "IN", site_id: int = None) -> dict:
+        tlv = tlv_enc(0x01, country_code.encode("utf-8"))
+        if site_id is not None:
+            tlv += tlv_enc(0x02, bytes([site_id & 0xFF]))
+        return await self._transact_encrypted(SVC_ACCOUNT, CMD_COUNTRY_CODE, tlv, timeout=8.0)
+
     async def send_setup_device_status(self):
         tlv = (
             tlv_enc(0x01, b"\x01") +
@@ -2023,17 +2098,24 @@ class Band:
         await run_step("supported commands", self.get_supported_commands())
         await run_step("expand capabilities", self.get_expand_capabilities())
         await run_step("setting related", self.get_setting_related())
-        await run_step("setup device status", self.send_setup_device_status())
-        wear = await run_step("wear status", self.get_wear_status())
-        if wear is not None:
-            logger.info(f"Wear status TLVs: { {hex(k): v.hex() for k, v in wear.items()} }")
+        if self._supports_command(SVC_DEV, CMD_ACCEPT_AGREEMENT):
+            await run_step("accept agreements", self.send_accept_agreements())
+        if self.capability_flags.get("reverse_capabilities"):
+            await run_step("reverse capabilities", self.send_reverse_capabilities())
+        if self.capability_flags.get("multi_device"):
+            await run_step("setup device status", self.send_setup_device_status())
+            wear = await run_step("wear status", self.get_wear_status())
+            if wear is not None:
+                logger.info(f"Wear status TLVs: { {hex(k): v.hex() for k, v in wear.items()} }")
+        else:
+            logger.info("Post-auth init: skipping multi-device status/wear requests")
         connect = await run_step("connect status", self.get_connect_status())
         if connect is not None:
             logger.info(f"Connect status TLVs: { {hex(k): v.hex() for k, v in connect.items()} }")
-        device = await run_step("device status", self.get_device_status())
-        if device is not None:
-            logger.info(f"Device status TLVs: { {hex(k): v.hex() for k, v in device.items()} }")
         await run_step("feature config upload", self.send_feature_config_file_if_requested())
+        if self.capability_flags.get("send_country_code"):
+            site_id = 5 if self.capability_flags.get("send_site_id") else None
+            await run_step("country code", self.send_country_code("IN", site_id=site_id))
         logger.info("Post-auth init: complete")
 
     # ── Data queries ─────────────────────────────────────────────────────────
