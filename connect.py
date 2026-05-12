@@ -59,12 +59,20 @@ SVC_DEV     = 0x01
 SVC_FITNESS = 0x07
 SVC_P2P     = 0x34
 CMD_LINK    = 0x01
+CMD_SUPPORTED_SERVICES = 0x02
+CMD_TIME    = 0x05
+CMD_PRODUCT = 0x07
 CMD_AUTH    = 0x13
 CMD_BOND    = 0x0E
 CMD_BPARAMS = 0x0F
+CMD_PHONE_INFO = 0x10
+CMD_DEVICE_STATUS = 0x16
 CMD_SECNEGO = 0x33
+CMD_CONNECT_STATUS = 0x35
 CMD_PINCODE = 0x2C
 CMD_HICHAIN = 0x28
+CMD_WEAR_STATUS = 0x3D
+CMD_SETUP_DEVICE_STATUS = 0x3E
 
 # Crypto constants (same across all Gadgetbridge / huawei-lpv2 builds)
 DIGEST_SECRETS = {
@@ -99,6 +107,13 @@ P2P_DICT_MODULE = "hw.unitedevice.datadictionarysync"
 P2P_DICT_PACKAGE = "hw.watch.health.filesync"
 P2P_LOCAL_FINGERPRINT = "UniteDeviceManagement"
 P2P_REMOTE_FINGERPRINT = "SystemApp"
+KNOWN_SUPPORTED_SERVICES = bytes([
+    0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A,
+    0x0B, 0x0C, 0x0D, 0x0E, 0x0F, 0x10, 0x11, 0x12, 0x13, 0x14,
+    0x15, 0x16, 0x17, 0x18, 0x19, 0x1A, 0x1B, 0x1D, 0x20,
+    0x22, 0x23, 0x24, 0x25, 0x26, 0x27, 0x2A, 0x2B, 0x2D, 0x2E,
+    0x30, 0x32, 0x33, 0x34, 0x35,
+])
 
 # ── Packet framing ────────────────────────────────────────────────────────────
 
@@ -645,6 +660,9 @@ class Band:
                 svc, cmd, tlvs = parse_frame(raw)
                 if (svc, cmd) == (exp_svc, exp_cmd):
                     return tlvs
+                if svc == SVC_DEV and cmd == CMD_PHONE_INFO:
+                    await self._handle_phone_info_request(tlvs)
+                    continue
                 self._log_unsolicited(svc, cmd, tlvs, pin_code, rand_self, seed)
 
             remaining = deadline - asyncio.get_running_loop().time()
@@ -733,6 +751,37 @@ class Band:
         wrapped = self._encrypt_transaction_tlv(tlv)
         response = await self._transact(svc, cmd, wrapped, timeout=timeout)
         return self._decrypt_transaction_tlvs(response)
+
+    async def _send_encrypted_no_wait(self, svc: int, cmd: int, tlv: bytes):
+        await self._send(svc, cmd, self._encrypt_transaction_tlv(tlv))
+
+    @staticmethod
+    def _phone_info_response_tlv(requested_tags: bytes) -> bytes:
+        out = b""
+        for tag in requested_tags:
+            if tag in (0x00, 0x0F):
+                continue
+            if tag in (0x02, 0x04, 0x15):
+                out += tlv_enc(tag)
+            elif tag == 0x08:
+                out += tlv_enc(tag, b"14")
+            elif tag == 0x11:
+                out += tlv_enc(tag, struct.pack(">I", 1600008300))
+            else:
+                out += tlv_enc(tag, b"\x00")
+        return out
+
+    async def _handle_phone_info_request(self, tlvs: dict):
+        decoded = self._decrypt_transaction_tlvs(tlvs)
+        if 0x7F in decoded and self._tlv_int(decoded[0x7F]) == 0x0186A0:
+            logger.debug("  PhoneInfo ACK received")
+            return
+        requested = bytes(tag for tag, _value in tlv_items(b"".join(tlv_enc(k, v) for k, v in decoded.items())))
+        if not requested:
+            requested = bytes(decoded.keys())
+        reply = self._phone_info_response_tlv(requested)
+        logger.info(f"  PhoneInfo requested tags={requested.hex()} -> replying")
+        await self._send_encrypted_no_wait(SVC_DEV, CMD_PHONE_INFO, reply)
 
     def _next_p2p_sequence(self) -> int:
         self.p2p_sequence = (self.p2p_sequence + 1) % (0x7FFF - 1)
@@ -1256,6 +1305,99 @@ class Band:
 
         logger.info("Handshake complete!")
 
+    @staticmethod
+    def _timezone_offset_bytes() -> bytes:
+        if time.daylight and time.localtime().tm_isdst > 0:
+            offset = -time.altzone
+        else:
+            offset = -time.timezone
+        hour = ((-offset // 3600) + 128) if offset < 0 else offset // 3600
+        minute = int(offset / 60) % 60
+        return bytes([hour & 0xFF, minute & 0xFF])
+
+    async def get_product_info(self) -> dict:
+        tags = (0x01, 0x02, 0x07, 0x09, 0x0A, 0x11, 0x12, 0x16,
+                0x1A, 0x1D, 0x1E, 0x1F, 0x20, 0x21, 0x22, 0x23)
+        tlv = b"".join(tlv_enc(tag) for tag in tags)
+        tlvs = await self._transact_encrypted(SVC_DEV, CMD_PRODUCT, tlv, timeout=8.0)
+        info = {
+            "software": self._tlv_str(tlvs.get(0x07, b"")),
+            "serial": self._tlv_str(tlvs.get(0x09, b"")),
+            "model": self._tlv_str(tlvs.get(0x0A, b"")).strip(),
+            "name": self._tlv_str(tlvs.get(0x11, b"")),
+        }
+        logger.info(f"Product info: {info}")
+        return info
+
+    async def set_time(self) -> dict:
+        now = int(time.time())
+        tlv = tlv_enc(0x01, struct.pack(">I", now)) + tlv_enc(0x02, self._timezone_offset_bytes())
+        tlvs = await self._transact_encrypted(SVC_DEV, CMD_TIME, tlv, timeout=8.0)
+        device_time = self._tlv_int(tlvs.get(0x01, b""))
+        if device_time:
+            logger.info(f"Time sync: phone={now} band={device_time} delta={device_time - now}s")
+        return tlvs
+
+    async def get_supported_services(self) -> set[int]:
+        tlvs = await self._transact_encrypted(
+            SVC_DEV, CMD_SUPPORTED_SERVICES, tlv_enc(0x01, KNOWN_SUPPORTED_SERVICES), timeout=8.0
+        )
+        bitmap = tlvs.get(0x02, b"")
+        active = {0x01}
+        for i, supported in enumerate(bitmap):
+            if supported and i < len(KNOWN_SUPPORTED_SERVICES):
+                active.add(KNOWN_SUPPORTED_SERVICES[i])
+        logger.info(f"Supported services: {len(active)} active -> {[hex(s) for s in sorted(active)]}")
+        return active
+
+    async def send_setup_device_status(self):
+        tlv = (
+            tlv_enc(0x01, b"\x01") +
+            tlv_enc(0x02, b"HUAWEI Band 10-44F") +
+            tlv_enc(0x03, b"\x00")
+        )
+        await self._send_encrypted_no_wait(SVC_DEV, CMD_SETUP_DEVICE_STATUS, tlv)
+        await asyncio.sleep(0.1)
+        logger.info("Setup device status sent")
+
+    async def get_wear_status(self) -> dict:
+        return await self._transact_encrypted(SVC_DEV, CMD_WEAR_STATUS, tlv_enc(0x01), timeout=5.0)
+
+    async def get_connect_status(self) -> dict:
+        return await self._transact_encrypted(SVC_DEV, CMD_CONNECT_STATUS, tlv_enc(0x01, b"\x01"), timeout=5.0)
+
+    async def get_device_status(self) -> dict:
+        return await self._transact(SVC_DEV, CMD_DEVICE_STATUS, tlv_enc(0x01), timeout=5.0)
+
+    async def post_auth_initialize(self):
+        logger.info("Post-auth init: starting Huawei connected-state bootstrap...")
+
+        async def run_step(label: str, coro):
+            try:
+                result = await coro
+                logger.info(f"Post-auth init: {label} OK")
+                return result
+            except asyncio.TimeoutError:
+                logger.warning(f"Post-auth init: {label} timed out")
+            except Exception as e:
+                logger.warning(f"Post-auth init: {label} failed: {e!r}")
+            return None
+
+        await run_step("product info", self.get_product_info())
+        await run_step("time sync", self.set_time())
+        await run_step("supported services", self.get_supported_services())
+        await run_step("setup device status", self.send_setup_device_status())
+        wear = await run_step("wear status", self.get_wear_status())
+        if wear is not None:
+            logger.info(f"Wear status TLVs: { {hex(k): v.hex() for k, v in wear.items()} }")
+        connect = await run_step("connect status", self.get_connect_status())
+        if connect is not None:
+            logger.info(f"Connect status TLVs: { {hex(k): v.hex() for k, v in connect.items()} }")
+        device = await run_step("device status", self.get_device_status())
+        if device is not None:
+            logger.info(f"Device status TLVs: { {hex(k): v.hex() for k, v in device.items()} }")
+        logger.info("Post-auth init: complete")
+
     # ── Data queries ─────────────────────────────────────────────────────────
 
     async def get_battery(self) -> int:
@@ -1472,6 +1614,7 @@ async def run():
         band = Band(client=client, cfg=cfg)
         await band.connect()
         await band.handshake()
+        await band.post_auth_initialize()
 
         try:
             bat = await band.get_battery()
