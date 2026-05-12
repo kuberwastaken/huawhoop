@@ -9346,6 +9346,37 @@
       "raw": "0a00050004",
       "steps": 5,
       "distance": 4
+    },
+    {
+      "record": 43,
+      "timestamp": 1778598060,
+      "raw": "00"
+    },
+    {
+      "record": 43,
+      "timestamp": 1778598120,
+      "raw": "c0025600",
+      "heart_rate": 86,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 43,
+      "timestamp": 1778598180,
+      "raw": "00"
+    },
+    {
+      "record": 43,
+      "timestamp": 1778598240,
+      "raw": "c0025700",
+      "heart_rate": 87,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 43,
+      "timestamp": 1778598300,
+      "raw": "c0025600",
+      "heart_rate": 86,
+      "resting_heart_rate": 0
     }
   ],
   "sleep": [
@@ -9781,6 +9812,13 @@
       "start": 1778595180,
       "end": 1778595300,
       "duration_sec": 120,
+      "stage": 1
+    },
+    {
+      "record": 4,
+      "start": 1778597880,
+      "end": 1778598060,
+      "duration_sec": 180,
       "stage": 1
     }
   ]
