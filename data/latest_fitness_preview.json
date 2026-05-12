@@ -9103,6 +9103,49 @@
       "record": 42,
       "timestamp": 1778617080,
       "raw": "00"
+    },
+    {
+      "record": 42,
+      "timestamp": 1778617140,
+      "raw": "00"
+    },
+    {
+      "record": 42,
+      "timestamp": 1778617200,
+      "raw": "ce020027053500226a00",
+      "steps": 39,
+      "calories": 1333,
+      "distance": 34,
+      "heart_rate": 106,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778617260,
+      "raw": "040059",
+      "calories": 89
+    },
+    {
+      "record": 42,
+      "timestamp": 1778617320,
+      "raw": "c40200355d00",
+      "calories": 53,
+      "heart_rate": 93,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778617380,
+      "raw": "c0025900",
+      "heart_rate": 89,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778617440,
+      "raw": "c0025400",
+      "heart_rate": 84,
+      "resting_heart_rate": 0
     }
   ],
   "sleep": [
@@ -9544,6 +9587,13 @@
       "record": 4,
       "start": 1778614380,
       "end": 1778614440,
+      "duration_sec": 60,
+      "stage": 1
+    },
+    {
+      "record": 4,
+      "start": 1778617200,
+      "end": 1778617260,
       "duration_sec": 60,
       "stage": 1
     }
