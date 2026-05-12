@@ -26,6 +26,9 @@ now contains both the persistent HiChain `auth_key` and reconnect transaction
 band prompt.
 
 Latest verified run: `data/run_post_auth_p2p_probe_gated.log`.
+Latest full data refresh: `data/run_full_data_refresh.log`.
+Local dashboard: `dashboard/index.html` served from the repo root, verified at
+`http://127.0.0.1:8765/dashboard/`.
 
 What works:
 
@@ -47,6 +50,7 @@ Open constraints:
 | Standalone HRV dictionary `500044` | Capability `hrv=false`; P2P route returns `0x000186a4` | Standalone HRV is not exposed on this firmware. |
 | P2P dictionary classes | `skin_temperature=ack_no_data`; emotion/sleep_apnea/etc return `0x000186a4` | P2P module is alive, but these classes are either gated or unsupported for host pull. |
 | Sequence sleep file `sequence_data/SLEEP_DETAILS` | Parser implemented, file-init route still returns status-only/no metadata | Sleep HRV may still exist in device data, but this pull trigger is incomplete or firmware-gated. |
+| P2P ping after failed file-sync attempts | Can fail later in the same session | A fresh session pings cleanly. The dashboard uses the latest successful P2P probe artifact and marks file-sync routes separately. |
 
 ### Gadgetbridge vs Current Implementation
 
@@ -95,7 +99,9 @@ dictionary identity and field validation:
    status/error reporting.
 4. Avoid unsupported commands that empirically destabilize the session (`0x1A/0x0A`).
 5. Build a local web dashboard over the JSON artifacts in `data/`, then continue
-   adding panels as more routes become available.
+   adding panels as more routes become available. First dashboard is implemented in
+   `dashboard/` and uses the reliable fitness artifacts plus explicit experimental
+   route statuses.
 
 ## 2. Device Info
 
