@@ -71,6 +71,7 @@ CMD_SECNEGO = 0x33
 CMD_CONNECT_STATUS = 0x35
 CMD_PINCODE = 0x2C
 CMD_HICHAIN = 0x28
+CMD_SETTING_RELATED = 0x31
 CMD_WEAR_STATUS = 0x3D
 CMD_SETUP_DEVICE_STATUS = 0x3E
 
@@ -1469,6 +1470,20 @@ class Band:
         logger.info(f"Supported services: {len(active)} active -> {[hex(s) for s in sorted(active)]}")
         return active
 
+    async def get_setting_related(self) -> dict:
+        tlv = b"".join(tlv_enc(tag) for tag in (0x01, 0x02, 0x03, 0x04, 0x05, 0x06))
+        tlvs = await self._transact_encrypted(SVC_DEV, CMD_SETTING_RELATED, tlv, timeout=8.0)
+        file_flags = tlvs.get(0x02, b"\x00")[0] if tlvs.get(0x02) else 0
+        settings = {
+            "raw": {hex(k): v.hex() for k, v in tlvs.items()},
+            "file_flags": file_flags,
+            "trusleep_new_sync": bool(file_flags & 0x02),
+            "rri_new_sync": bool(file_flags & 0x04),
+            "gps_new_sync": bool(file_flags & 0x08),
+        }
+        logger.info(f"Setting related: {settings}")
+        return settings
+
     async def send_setup_device_status(self):
         tlv = (
             tlv_enc(0x01, b"\x01") +
@@ -1505,6 +1520,7 @@ class Band:
         await run_step("product info", self.get_product_info())
         await run_step("time sync", self.set_time())
         await run_step("supported services", self.get_supported_services())
+        await run_step("setting related", self.get_setting_related())
         await run_step("setup device status", self.send_setup_device_status())
         wear = await run_step("wear status", self.get_wear_status())
         if wear is not None:
