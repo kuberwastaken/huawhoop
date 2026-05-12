@@ -80,6 +80,7 @@ CMD_WEAR_STATUS = 0x3D
 CMD_SETUP_DEVICE_STATUS = 0x3E
 
 FILE_CMD_INIT = 0x01
+FILE_CMD_HASH = 0x02
 FILE_CMD_INFO = 0x03
 FILE_CMD_REQUEST_BLOCK = 0x04
 FILE_CMD_BLOCK = 0x05
@@ -88,6 +89,7 @@ FILE_CMD_INCOMING_INIT = 0x07
 FILE_TYPE_SLEEP_STATE = 0x0E
 FILE_TYPE_SLEEP_DATA = 0x0F
 FILE_TYPE_RRI = 0x10
+FILE_TYPE_SEQUENCE_DATA = 0x16
 
 UPLOAD_CMD_INFO = 0x02
 UPLOAD_CMD_HASH = 0x03
@@ -114,6 +116,7 @@ SECRET_KEY_2 = {
     3: bytes([0x33,0x07,0x9B,0xC5,0x7A,0x88,0x6D,0x3C,0xF5,0x61,0x37,0x09,0x6F,0x22,0x80,0x00]),
 }
 GROUP_ID = "7B0BC0CBCE474F6C238D9661C63400B797B166EA7849B3A370FC73A9A236E989"
+DICT_SLEEP_DETAILS_CLASS = 700013
 DICT_HRV_CLASS = 500044
 DICT_HRV_RMSSD_VALUE = 500044831
 DICT_PROBE_CLASSES = {
@@ -212,6 +215,52 @@ EXPAND_CAPABILITY_LABELS = {
     "hrv": 235,
     "notification_picture": 256,
     "contacts_sync": 271,
+}
+SLEEP_DETAILS_FIELD_IDS = {
+    700013686: "fallAsleepTime",
+    700013298: "bedTime",
+    700013973: "risingTime",
+    700013156: "wakeupTime",
+    700013786: "validData",
+    700013254: "sleepDataQuality",
+    700013679: "deepPart",
+    700013721: "snoreFreq",
+    700013245: "sleepScore",
+    700013713: "sleepLatency",
+    700013232: "sleepEfficiency",
+    700013436: "minHeartRate",
+    700013502: "maxHeartRate",
+    700013340: "minOxygenSaturation",
+    700013026: "maxOxygenSaturation",
+    700013646: "minBreathRate",
+    700013492: "maxBreathRate",
+    700013824: "hrvDayToBaseline",
+    700013355: "maxHrvBaseline",
+    700013305: "minHrvBaseline",
+    700013878: "avgHrv",
+    700013236: "breathRateDayToBaseline",
+    700013225: "maxBreathRateBaseline",
+    700013839: "minBreathRateBaseline",
+    700013886: "avgBreathRate",
+    700013718: "oxygenSaturationDayToBaseline",
+    700013227: "maxOxygenSaturationBaseline",
+    700013633: "minOxygenSaturationBaseline",
+    700013468: "avgOxygenSaturation",
+    700013810: "heartRateDayToBaseline",
+    700013841: "maxHeartRateBaseline",
+    700013722: "minHeartRateBaseline",
+    700013580: "avgHeartRate",
+    700013759: "rdi",
+    700013635: "wakeCount",
+    700013670: "turnOverCount",
+    700013821: "prepareSleepTime",
+    700013925: "wakeUpFeeling",
+    700013697: "sleepVersion",
+    700013503: "stableSleepRatio",
+}
+SLEEP_DETAILS_DOUBLE_FIELDS = {
+    "minOxygenSaturation",
+    "maxOxygenSaturation",
 }
 
 # ── Packet framing ────────────────────────────────────────────────────────────
@@ -2152,7 +2201,7 @@ class Band:
                 tlv_enc(0x02, struct.pack(">I", offset)) +
                 tlv_enc(0x03, struct.pack(">I", block_size))
             )
-            if dict_id and file_type == 0x16:
+            if dict_id and file_id == FILE_TYPE_SEQUENCE_DATA:
                 block_req += tlv_enc(0x04, struct.pack(">I", dict_id))
             if no_encrypt:
                 await self._send(SVC_FILE_DOWNLOAD, FILE_CMD_REQUEST_BLOCK, block_req)
@@ -2388,9 +2437,232 @@ class Band:
             "errors": errors[:20],
         }
 
+    @staticmethod
+    def _read_sequence_value(data_type: int, value: bytes):
+        if not value:
+            return None
+        if value == b"\xBF\x80\x00\x00":
+            return None
+        if data_type in (1, 2, 4):
+            if len(value) > 4:
+                return None
+            return int.from_bytes(value, "big", signed=False)
+        if data_type == 3:
+            if len(value) > 8:
+                return None
+            return int.from_bytes(value, "big", signed=False)
+        if data_type == 5:
+            return value.decode("utf-8", errors="replace")
+        if data_type == 6:
+            if len(value) != 8:
+                return None
+            return struct.unpack(">d", value)[0]
+        return value.hex()
+
+    @classmethod
+    def _parse_sleep_sequence_summary(cls, summary: bytes) -> dict:
+        parsed = {}
+        raw_fields = []
+        for _container_tag, container in tlv_items(summary):
+            for _item_tag, item in tlv_items(container):
+                fields = tlv_dec(item)
+                dict_id = cls._tlv_int(fields.get(0x03, b""))
+                data_type = cls._tlv_int(fields.get(0x04, b""))
+                value = cls._read_sequence_value(data_type, fields.get(0x05, b""))
+                name = SLEEP_DETAILS_FIELD_IDS.get(dict_id, f"unknown_{dict_id}")
+                parsed[name] = value
+                raw_fields.append({
+                    "dict_id": dict_id,
+                    "field": name,
+                    "data_type": data_type,
+                    "value": value,
+                })
+        parsed["_raw_fields"] = raw_fields
+        if parsed.get("validData") is None:
+            for field in (
+                "bedTime", "risingTime", "sleepScore", "sleepDataQuality",
+                "deepPart", "snoreFreq", "sleepEfficiency", "sleepLatency",
+                "prepareSleepTime",
+            ):
+                parsed.setdefault(field, None)
+        return parsed
+
+    @staticmethod
+    def _minute_aligned(ts: int | None) -> int | None:
+        if ts is None:
+            return None
+        return (ts // 60) * 60
+
+    @classmethod
+    def _parse_sleep_sequence_details(cls, details: bytes, start_time: int | None) -> dict:
+        stages = []
+        stage_counts = {}
+        errors = []
+        if start_time is None:
+            return {"stage_minute_count": 0, "stage_counts": {}, "stages": [], "errors": ["missing start time"]}
+        if len(details) % 8 != 0:
+            errors.append(f"detail length {len(details)} is not a multiple of 8")
+        pos = 0
+        cursor = start_time
+        while pos + 8 <= len(details):
+            duration = struct.unpack_from("<I", details, pos)[0]
+            stage = details[pos + 4]
+            pos += 8
+            if duration == 0 or stage == 0 or duration % 60 != 0:
+                errors.append(f"invalid detail duration={duration} stage={stage} pos={pos}")
+                continue
+            minutes = duration // 60
+            if minutes > 1440:
+                errors.append(f"detail duration too large: {minutes} minutes pos={pos}")
+                continue
+            stage_counts[str(stage)] = stage_counts.get(str(stage), 0) + minutes
+            for _ in range(minutes):
+                stages.append({
+                    "timestamp": cursor,
+                    "local": local_time_label(cursor),
+                    "stage": stage,
+                })
+                cursor += 60
+        return {
+            "stage_minute_count": len(stages),
+            "stage_counts": stage_counts,
+            "stages": stages[:240],
+            "stage_window_start": local_time_label(stages[0]["timestamp"]) if stages else None,
+            "stage_window_end": local_time_label(stages[-1]["timestamp"]) if stages else None,
+            "errors": errors[:20],
+        }
+
+    @classmethod
+    def parse_sleep_sequence_data(cls, data: bytes) -> dict:
+        if len(data) < 32:
+            return {
+                "file_size": len(data),
+                "dict_id": None,
+                "file_type": None,
+                "file_version": None,
+                "sequence_count": 0,
+                "sessions": [],
+                "errors": ["file too short"],
+            }
+
+        errors = []
+        data_size = struct.unpack_from(">I", data, 0)[0]
+        dict_id = struct.unpack_from(">I", data, 4)[0]
+        file_type = struct.unpack_from(">H", data, 8)[0]
+        file_version = struct.unpack_from(">H", data, 10)[0]
+        extra = data[12:32]
+        pos = 32
+        sessions = []
+        supports_bed_time = True
+        while pos + 32 <= len(data):
+            start_time = struct.unpack_from(">I", data, pos)[0]
+            end_time = struct.unpack_from(">I", data, pos + 4)[0]
+            data_version = data[pos + 8]
+            summary_type = data[pos + 9]
+            summary_len = struct.unpack_from(">H", data, pos + 10)[0]
+            detail_len = struct.unpack_from(">I", data, pos + 12)[0]
+            record_extra = data[pos + 16:pos + 32]
+            pos += 32
+
+            summary = b""
+            if data_version == 1:
+                if pos + summary_len > len(data):
+                    errors.append(f"summary length {summary_len} exceeds remaining at {pos}")
+                    break
+                summary = data[pos:pos + summary_len]
+                pos += summary_len
+            else:
+                errors.append(f"unsupported data version {data_version} at sequence {len(sessions)}")
+
+            details = b""
+            if detail_len > 0:
+                if detail_len > 20 * 1025 * 1024:
+                    errors.append(f"detail length {detail_len} too large at sequence {len(sessions)}")
+                    break
+                if pos + detail_len > len(data):
+                    errors.append(f"detail length {detail_len} exceeds remaining at {pos}")
+                    break
+                details = data[pos:pos + detail_len]
+                pos += detail_len
+
+            summary_obj = {}
+            if data_version == 1 and summary_type == 2 and file_type != 2 and summary:
+                try:
+                    summary_obj = cls._parse_sleep_sequence_summary(summary)
+                except Exception as e:
+                    errors.append(f"summary parse failed at sequence {len(sessions)}: {e!r}")
+
+            bed_time = summary_obj.get("bedTime")
+            fall_asleep = summary_obj.get("fallAsleepTime")
+            valid_data = summary_obj.get("validData")
+            base_time = bed_time if supports_bed_time and valid_data is not None else fall_asleep
+            base_time = cls._minute_aligned(base_time if isinstance(base_time, int) else None)
+            stages = cls._parse_sleep_sequence_details(details, base_time)
+            sessions.append({
+                "start_ts": start_time,
+                "end_ts": end_time,
+                "start_local": local_time_label(start_time) if start_time else None,
+                "end_local": local_time_label(end_time) if end_time else None,
+                "data_version": data_version,
+                "summary_type": summary_type,
+                "summary_len": summary_len,
+                "detail_len": detail_len,
+                "extra": record_extra.hex(),
+                "summary": summary_obj,
+                "details": stages,
+            })
+
+        if pos < len(data):
+            errors.append(f"{len(data) - pos} trailing bytes")
+
+        return {
+            "file_size": len(data),
+            "declared_data_size": data_size,
+            "dict_id": dict_id,
+            "file_type": file_type,
+            "file_version": file_version,
+            "extra": extra.hex(),
+            "sequence_count": len(sessions),
+            "sessions": sessions,
+            "errors": errors[:20],
+        }
+
+    async def get_sleep_sequence_preview(self, hours: int = 168) -> dict:
+        end_ts = int(time.time())
+        start_ts = end_ts - hours * 3600
+        raw = await self.download_file_2c(
+            "sequence_data",
+            FILE_TYPE_SEQUENCE_DATA,
+            start_ts,
+            end_ts,
+            dict_id=DICT_SLEEP_DETAILS_CLASS,
+        )
+        save_binary_artifact("latest_sleep_sequence_data.bin", raw)
+        parsed = self.parse_sleep_sequence_data(raw)
+        parsed["hours"] = hours
+        parsed["route"] = "sequence_data/SLEEP_DETAILS"
+        save_json_artifact("latest_sleep_sequence_preview.json", parsed)
+        return parsed
+
     async def get_recent_trusleep_preview(self, hours: int = 168) -> dict:
         end_ts = int(time.time())
         start_ts = end_ts - hours * 3600
+        if self.capability_flags.get("dict_sleep_sync"):
+            sequence = await self.get_sleep_sequence_preview(hours=hours)
+            if sequence.get("file_size", 0) > 0:
+                save_json_artifact("latest_trusleep_preview.json", {
+                    "hours": hours,
+                    "route": "sequence_data/SLEEP_DETAILS",
+                    "sequence": sequence,
+                })
+                return {
+                    "hours": hours,
+                    "route": "sequence_data/SLEEP_DETAILS",
+                    "state": {"file_size": 0, "session_count": sequence.get("sequence_count", 0), "sessions": []},
+                    "data": {"file_size": sequence.get("file_size", 0), "acc_count": 0, "ppg_count": 0},
+                    "sequence": sequence,
+                }
+
         state_raw = await self.download_file_2c(
             "sleep_state.bin",
             FILE_TYPE_SLEEP_STATE,
