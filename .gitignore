@@ -1,2 +1,4 @@
 huawei-health.apk
 Huawei-Health-Decompiled/
+__pycache__/
+*.pyc
