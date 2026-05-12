@@ -1289,7 +1289,14 @@ class Band:
 
         if auth_type == 0x0186A0 or is_hichain3(auth_type):
             logger.info("  Mode: HiChain3")
-            if self.auth_key:
+            if auth_type == 0x05:
+                if self.auth_key:
+                    logger.warning("  Band requested first-auth despite stored key; refreshing auth token (op=0x01)")
+                else:
+                    logger.info("  No stored key -> first-auth (op=0x01), fetching PIN...")
+                pin = await self.get_pin_code()
+                await self.hichain_authenticate(pin_code=pin, op_code=0x01)
+            elif self.auth_key:
                 logger.info("  Stored auth key found → reconnect (op=0x02)")
                 await self.hichain_authenticate(pin_code=b"", op_code=0x02)
             else:
