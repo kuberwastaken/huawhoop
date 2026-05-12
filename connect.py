@@ -81,6 +81,8 @@ FILE_CMD_INFO = 0x03
 FILE_CMD_REQUEST_BLOCK = 0x04
 FILE_CMD_BLOCK = 0x05
 FILE_CMD_COMPLETE = 0x06
+FILE_TYPE_SLEEP_STATE = 0x0E
+FILE_TYPE_SLEEP_DATA = 0x0F
 FILE_TYPE_RRI = 0x10
 
 # Crypto constants (same across all Gadgetbridge / huawei-lpv2 builds)
@@ -1752,6 +1754,193 @@ class Band:
             "stress": stress,
         }
 
+    @staticmethod
+    def parse_trusleep_state(data: bytes) -> dict:
+        sessions = []
+        for pos in range(0, len(data) - (len(data) % 16), 16):
+            start, end = struct.unpack_from("<II", data, pos)
+            if not start or not end:
+                continue
+            sessions.append({
+                "start_ts": start,
+                "end_ts": end,
+                "start_local": local_time_label(start),
+                "end_local": local_time_label(end),
+                "minutes": max(0, round((end - start) / 60)),
+                "raw_tail": data[pos + 8:pos + 16].hex(),
+            })
+        return {
+            "file_size": len(data),
+            "session_count": len(sessions),
+            "sessions": sessions,
+        }
+
+    @staticmethod
+    def _read_i16_le(data: bytes, pos: int) -> int:
+        return struct.unpack_from("<h", data, pos)[0]
+
+    @classmethod
+    def _decode_trusleep_short_series(cls, count: int, data: bytes, pos: int) -> tuple[list[int], int]:
+        if pos >= len(data) or count <= 0:
+            return [], pos
+        tag = data[pos]
+        pos += 1
+        values = []
+        if tag == 0xAA:
+            for _ in range(count):
+                if pos + 2 > len(data):
+                    break
+                values.append(cls._read_i16_le(data, pos))
+                pos += 2
+        elif tag == 0xBB:
+            if pos + 2 > len(data):
+                return values, pos
+            working = cls._read_i16_le(data, pos)
+            pos += 2
+            values.append(working)
+            while len(values) < count and pos < len(data):
+                delta = data[pos]
+                pos += 1
+                if delta == 0xFF:
+                    if pos + 2 > len(data):
+                        break
+                    working = cls._read_i16_le(data, pos)
+                    pos += 2
+                else:
+                    if delta >= 0x80:
+                        delta -= 0x100
+                    working += delta
+                values.append(working)
+        return values, pos
+
+    @classmethod
+    def _decode_trusleep_amp_series(cls, count: int, data: bytes, pos: int) -> tuple[list[int], int]:
+        if pos >= len(data) or count <= 0:
+            return [], pos
+        tag = data[pos]
+        pos += 1
+        values = []
+        if tag == 0xAA:
+            for _ in range(count):
+                if pos + 2 > len(data):
+                    break
+                values.append(cls._read_i16_le(data, pos))
+                pos += 2
+        elif tag == 0xBB:
+            if pos + 2 > len(data):
+                return values, pos
+            offset = cls._read_i16_le(data, pos)
+            pos += 2
+            while len(values) < count and pos < len(data):
+                delta = data[pos]
+                pos += 1
+                if delta == 0xFF:
+                    if pos + 2 > len(data):
+                        break
+                    working = offset + cls._read_i16_le(data, pos)
+                    pos += 2
+                else:
+                    if delta >= 0x80:
+                        delta -= 0x100
+                    working = offset + delta
+                values.append(working)
+        return values, pos
+
+    @classmethod
+    def parse_trusleep_data(cls, data: bytes, max_examples: int = 12) -> dict:
+        acc_examples = []
+        ppg_examples = []
+        acc_count = 0
+        ppg_count = 0
+        errors = []
+        pos = 0
+        while pos < len(data):
+            tag = data[pos]
+            pos += 1
+            if tag not in (0x01, 0x02):
+                continue
+            if tag == 0x01:
+                if pos >= len(data):
+                    break
+                length = data[pos]
+                pos += 1
+                chunk = data[pos:pos + length]
+                pos += min(length, len(data) - pos)
+                if len(chunk) < 6:
+                    errors.append(f"short ACC record len={len(chunk)}")
+                    continue
+                ts = struct.unpack_from("<I", chunk, 0)[0]
+                flags = struct.unpack_from("<H", chunk, 4)[0]
+                acc_count += 1
+                if len(acc_examples) < max_examples:
+                    acc_examples.append({
+                        "timestamp": ts,
+                        "local": local_time_label(ts),
+                        "flags": flags,
+                        "raw": chunk.hex(),
+                    })
+            else:
+                if pos + 2 > len(data):
+                    break
+                length = struct.unpack_from("<H", data, pos)[0]
+                pos += 2
+                chunk = data[pos:pos + length]
+                pos += min(length, len(data) - pos)
+                if len(chunk) < 6:
+                    errors.append(f"short PPG record len={len(chunk)}")
+                    continue
+                start = struct.unpack_from("<I", chunk, 0)[0]
+                count = chunk[4]
+                peaks, amp_pos = cls._decode_trusleep_short_series(count, chunk, 5)
+                amps, _ = cls._decode_trusleep_amp_series(count, chunk, amp_pos)
+                decoded = min(len(peaks), len(amps))
+                ppg_count += decoded
+                for i in range(decoded):
+                    if len(ppg_examples) >= max_examples:
+                        break
+                    sample_ms = start * 1000 + peaks[i] * 10
+                    sample_ts = sample_ms // 1000
+                    ppg_examples.append({
+                        "timestamp_ms": sample_ms,
+                        "local": local_time_label(sample_ts),
+                        "amplitude": amps[i],
+                    })
+                if decoded != count:
+                    errors.append(f"PPG decoded {decoded}/{count} samples")
+        return {
+            "file_size": len(data),
+            "acc_count": acc_count,
+            "ppg_count": ppg_count,
+            "acc_examples": acc_examples,
+            "ppg_examples": ppg_examples,
+            "errors": errors[:20],
+        }
+
+    async def get_recent_trusleep_preview(self, hours: int = 168) -> dict:
+        end_ts = int(time.time())
+        start_ts = end_ts - hours * 3600
+        state_raw = await self.download_file_2c(
+            "sleep_state.bin",
+            FILE_TYPE_SLEEP_STATE,
+            start_ts,
+            end_ts,
+        )
+        save_binary_artifact("latest_trusleep_state.bin", state_raw)
+        data_raw = await self.download_file_2c(
+            "sleep_data.bin",
+            FILE_TYPE_SLEEP_DATA,
+            start_ts,
+            end_ts,
+        )
+        save_binary_artifact("latest_trusleep_data.bin", data_raw)
+        parsed = {
+            "hours": hours,
+            "state": self.parse_trusleep_state(state_raw),
+            "data": self.parse_trusleep_data(data_raw),
+        }
+        save_json_artifact("latest_trusleep_preview.json", parsed)
+        return parsed
+
     async def get_recent_stress_preview(self, hours: int = 24) -> dict:
         end_ts = int(time.time())
         start_ts = end_ts - hours * 3600
@@ -2021,6 +2210,19 @@ async def run():
                 )
             except Exception as e:
                 logger.warning(f"Stress/RRI file sync failed: {e!r}")
+
+        if os.getenv("BAND10_TRUSLEEP_SYNC", "1") != "0":
+            try:
+                trusleep_hours = int(os.getenv("BAND10_TRUSLEEP_HOURS", "168"))
+                trusleep = await band.get_recent_trusleep_preview(hours=trusleep_hours)
+                logger.info(
+                    "TruSleep preview: "
+                    f"sessions={trusleep['state'].get('session_count', 0)} "
+                    f"acc={trusleep['data'].get('acc_count', 0)} "
+                    f"ppg={trusleep['data'].get('ppg_count', 0)}"
+                )
+            except Exception as e:
+                logger.warning(f"TruSleep file sync failed: {e!r}")
 
         try:
             p2p_ping = await band.ping_dictionary_sync()
