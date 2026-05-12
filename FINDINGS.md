@@ -1,6 +1,6 @@
 # Huawei Band 10 BLE Reverse Engineering — Findings & Context
 
-_Last updated: 2026-05-11_
+_Last updated: 2026-05-13_
 
 ---
 
@@ -17,6 +17,85 @@ Bluetooth LE using [bleak](https://github.com/hbldh/bleak). Reference implementa
 [Gadgetbridge](https://codeberg.org/Freeyourgadget/Gadgetbridge) (Java/Android).
 
 ---
+
+## 1.1 Current Status (2026-05-13)
+
+HiChain3 is no longer the active blocker. First-auth succeeded earlier and `band.ini`
+now contains both the persistent HiChain `auth_key` and reconnect transaction
+`secret_key`. Reconnect auth (`operationCode=0x02`) is stable and does not require a
+band prompt.
+
+Latest verified run: `data/run_post_auth_p2p_probe_gated.log`.
+
+What works:
+
+| Area | Status | Notes |
+|---|---|---|
+| HiChain3 reconnect | Working | Four-step reconnect completes; new session transaction key is saved each run. |
+| Connected-state init | Mostly aligned | Product, time, supported services, supported commands, expand capabilities, setting related, accept agreements, reverse capabilities, setup device status, wear status, connect status, feature config ACK all complete. |
+| Fitness history | Working | Latest 24h: 6019 steps, 159 sleep minutes, 472 HR samples, 74 SpO2 samples. |
+| P2P service ping | Working | `hw.watch.health.filesync` replies `cmd=0x03 code=0xca` to service ping. |
+| P2P dictionary probe classification | Working | Probe distinguishes `ack_no_data` from `0x000186a4` auth/unsupported errors. |
+| Huawei Health dictionary mapping | Confirmed | Decompiled APK confirms `SLEEP_DETAILS=700013` includes `avgHrv`, HRV baseline, sleep score, SpO2 and breath-rate fields. |
+
+Open constraints:
+
+| Area | Current result | Interpretation |
+|---|---|---|
+| `0x1A/0x0A` country code | Capability bit says yes, command bitmap does not advertise it; direct send times out | Skipped unless the command appears in the runtime bitmap. This restored reliable fitness and P2P ping. |
+| Connect status | Returns TLV `0x7F=000186a0` | Treat as OK (`100000`), not an auth error. |
+| Standalone HRV dictionary `500044` | Capability `hrv=false`; P2P route returns `0x000186a4` | Standalone HRV is not exposed on this firmware. |
+| P2P dictionary classes | `skin_temperature=ack_no_data`; emotion/sleep_apnea/etc return `0x000186a4` | P2P module is alive, but these classes are either gated or unsupported for host pull. |
+| Sequence sleep file `sequence_data/SLEEP_DETAILS` | Parser implemented, file-init route still returns status-only/no metadata | Sleep HRV may still exist in device data, but this pull trigger is incomplete or firmware-gated. |
+
+### Gadgetbridge vs Current Implementation
+
+Gadgetbridge dynamic init flow after auth:
+
+1. Product, time, battery, supported services.
+2. Supported commands and expanded capabilities.
+3. Register DataSync handlers early.
+4. Extended account, setting related, accept agreements, reverse capabilities.
+5. Setup device status and wear status only if `supportsMultiDevice()`.
+6. Connect status.
+7. A long queue of optional features gated by command/capability checks.
+
+Current Python implementation now matches the critical pieces:
+
+- Uses command bitmap for service support.
+- Uses expanded capability bits for `multi_device`, `dict_sleep_sync`,
+  `device_command_dict_data`, `emotion`, `sleep_apnea`, `reverse_capabilities`.
+- Sends accept-agreement TLV exactly like Gadgetbridge.
+- Sends reverse capabilities `FD F7 73 7A` like Gadgetbridge.
+- Sends setup-device-status and wear-status only when `multi_device=true`.
+- Skips the unsupported `0x1A/0x0A` country-code command even though the capability
+  bit is set, because the actual command bitmap omits it and empirical runs show a
+  timeout harms subsequent operations.
+
+### Decompiled Huawei Health Comparison
+
+The decompiled app does not expose the low-level BLE transport directly; most device
+I/O is delegated through Huawei services/WearEngine. It is still useful for data
+dictionary identity and field validation:
+
+- `resources/assets/dict_config.txt` contains `SLEEP_DETAILS` class `700013`.
+- `DicDataTypeUtil.java` confirms `SLEEP_DETAILS_AVG_HRV`,
+  `SLEEP_DETAILS_HRV_DAY_TO_BASELINE`, `SLEEP_DETAILS_AVG_BREATHRATE`,
+  `SLEEP_DETAILS_AVG_OXYGEN_SATURATION`, `SLEEP_DETAILS_SLEEP_SCORE`, etc.
+- `WearEngineModule.DATA_DICTIONARY_SYNC_MODULE("datadictionarysync")` confirms the
+  P2P module naming used by Gadgetbridge and this script.
+
+### Execution Plan
+
+1. Keep the stable reconnect/init path; do not return to first-auth unless
+   `band.ini` is intentionally cleared.
+2. Treat fitness minute history as the reliable base data source for the first web UI:
+   steps, HR, resting HR, SpO2, calories, sleep segments, strain proxy.
+3. Keep RRI/stress and sleep-sequence routes as experimental panels with clear
+   status/error reporting.
+4. Avoid unsupported commands that empirically destabilize the session (`0x1A/0x0A`).
+5. Build a local web dashboard over the JSON artifacts in `data/`, then continue
+   adding panels as more routes become available.
 
 ## 2. Device Info
 
