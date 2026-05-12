@@ -1,0 +1,13 @@
+{
+  "file_size": 0,
+  "dict_id": null,
+  "file_type": null,
+  "file_version": null,
+  "sequence_count": 0,
+  "sessions": [],
+  "errors": [
+    "file too short"
+  ],
+  "hours": 168,
+  "route": "sequence_data/SLEEP_DETAILS"
+}
