@@ -9222,6 +9222,73 @@
       "record": 42,
       "timestamp": 1778598960,
       "raw": "00"
+    },
+    {
+      "record": 42,
+      "timestamp": 1778599020,
+      "raw": "c003596300",
+      "heart_rate": 89,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778599080,
+      "raw": "00"
+    },
+    {
+      "record": 42,
+      "timestamp": 1778599140,
+      "raw": "00"
+    },
+    {
+      "record": 42,
+      "timestamp": 1778599200,
+      "raw": "00"
+    },
+    {
+      "record": 42,
+      "timestamp": 1778599260,
+      "raw": "c003546300",
+      "heart_rate": 84,
+      "spo2": 99,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778599320,
+      "raw": "c0025800",
+      "heart_rate": 88,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778599380,
+      "raw": "00"
+    },
+    {
+      "record": 42,
+      "timestamp": 1778599440,
+      "raw": "c0025600",
+      "heart_rate": 86,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778599500,
+      "raw": "c0024d00",
+      "heart_rate": 77,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778599560,
+      "raw": "ce020029054500235000",
+      "steps": 41,
+      "calories": 1349,
+      "distance": 35,
+      "heart_rate": 80,
+      "resting_heart_rate": 0
     }
   ],
   "sleep": [
