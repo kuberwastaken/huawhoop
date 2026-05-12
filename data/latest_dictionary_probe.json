@@ -1,0 +1,34 @@
+{
+  "skin_temperature": {
+    "class": 400012,
+    "timeout": true
+  },
+  "emotion": {
+    "class": 500031,
+    "timeout": true
+  },
+  "sleep_apnea": {
+    "class": 500002,
+    "timeout": true
+  },
+  "arterial_stiffness": {
+    "class": 400017,
+    "timeout": true
+  },
+  "altitude": {
+    "class": 200003,
+    "timeout": true
+  },
+  "blood_pressure": {
+    "class": 10002,
+    "timeout": true
+  },
+  "lake_louise_ams": {
+    "class": 500006,
+    "timeout": true
+  },
+  "hrv": {
+    "class": 500044,
+    "timeout": true
+  }
+}
