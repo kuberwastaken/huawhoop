@@ -1,6 +1,6 @@
 {
   "counts": {
-    "steps": 43,
+    "steps": 44,
     "sleep": 5
   },
   "steps": [
@@ -9291,6 +9291,61 @@
       "record": 42,
       "timestamp": 1778597520,
       "raw": "00"
+    },
+    {
+      "record": 42,
+      "timestamp": 1778597580,
+      "raw": "00"
+    },
+    {
+      "record": 42,
+      "timestamp": 1778597640,
+      "raw": "00"
+    },
+    {
+      "record": 42,
+      "timestamp": 1778597700,
+      "raw": "00"
+    },
+    {
+      "record": 42,
+      "timestamp": 1778597760,
+      "raw": "00"
+    },
+    {
+      "record": 42,
+      "timestamp": 1778597820,
+      "raw": "c003506100",
+      "heart_rate": 80,
+      "spo2": 97,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778597880,
+      "raw": "ce020017049300145700",
+      "steps": 23,
+      "calories": 1171,
+      "distance": 20,
+      "heart_rate": 87,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 42,
+      "timestamp": 1778597940,
+      "raw": "ce02000d0001000c5a00",
+      "steps": 13,
+      "calories": 1,
+      "distance": 12,
+      "heart_rate": 90,
+      "resting_heart_rate": 0
+    },
+    {
+      "record": 43,
+      "timestamp": 1778598000,
+      "raw": "0a00050004",
+      "steps": 5,
+      "distance": 4
     }
   ],
   "sleep": [
