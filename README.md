@@ -25,6 +25,13 @@ $env:BAND10_KEEPALIVE_SECONDS = "60"
 $env:BAND10_ENABLE_PASSIVE_SETTINGS = "1"
 ```
 
+For a bounded connection verification run:
+
+```powershell
+$env:BAND10_DAEMON_MAX_SECONDS = "120"
+python band_daemon.py
+```
+
 Live RRI/HRV probing is intentionally opt-in until the Band 10 emits samples reliably:
 
 ```powershell
