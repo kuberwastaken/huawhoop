@@ -746,6 +746,7 @@ Live status on 2026-05-14:
 - `connect.py` has a focused `BAND10_ONLY_WEATHER=1` live-test mode. Payload priority is `BAND10_WEATHER_JSON`, `BAND10_WEATHER_FILE`, `data/weather_payload.json`, then Open-Meteo from `BAND10_WEATHER_LAT/LON`; if no coordinates are set it sends a tiny sample payload.
 - Live daemon weather push on 2026-05-14 succeeded through the full chain: start, unit, current weather, GPS/time, and forecast all returned `0x000186a0`. The bridge remained connected with battery keepalive after the push.
 - Forecast initially returned `0x0001c139` until the day list matched Gadgetbridge exactly: row 0 is "today" at the current observation timestamp, and future rows use `observationTimestamp + 86400 * n`. Midnight daily timestamps from Open-Meteo are rejected by the Band 10 forecast command.
+- Automatic weather refresh is verified. A manual PWA/API weather push saves `data/weather_payload.json`; the daemon detects the saved payload and refreshes it on `BAND10_WEATHER_INTERVAL_SECONDS` (default 3600 seconds). A 60-second test interval produced `auto-weather-*` with all weather steps returning `0x000186a0`.
 
 ### Stress And HRV Implementation Status
 

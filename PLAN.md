@@ -106,6 +106,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Guard weather re-push requests so the bridge cannot start nested weather chains.
 - [x] Add PWA weather card and manual/API-backed push control.
 - [x] Persist latest PWA weather payload and refresh it automatically from the daemon.
+- [x] Live-test automatic daemon weather refresh after a saved PWA/API payload.
 - [x] Record packet tags, units, and cadence in `FINDINGS.md`.
 - [x] Live-test weather rendering packet chain on Band 10 after stable reconnect.
 
