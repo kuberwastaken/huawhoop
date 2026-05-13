@@ -574,3 +574,29 @@ secret_key  =   ; filled after first successful HiChain3 auth
   - Auth: `requests/` directory, `HuaweiCrypto.java`, `HuaweiSupportProvider.java`
 - Python BLE: [bleak](https://github.com/hbldh/bleak) — callback signature is `(BleakGATTCharacteristic, bytearray)` in v3.x
 - `huawei-lpv2` Python library: used as initial reference only; has auth bugs, was NOT used for implementation
+
+---
+
+## 12. 2026-05-13 Audit Update
+
+### Connection
+
+- Stored-key reconnect is now confirmed. Follow-up daemon runs return `authType=0x6`, use HiChain op=0x02, verify peer/self tokens, and complete without a pairing prompt.
+- Gadgetbridge-style post-auth init is required for a stable connected state: product/time/battery, supported services/commands, expand capabilities, extended account (`svc=0x1a/cmd=0x05`), settings, agreements, reverse capabilities, setup status, wear status, connect status, and feature config upload.
+- Passive health settings should remain enabled in normal daemon mode. A short run with `BAND10_ENABLE_PASSIVE_SETTINGS=0` dropped during fitness preview; the same bounded run with passive settings enabled stayed connected through battery keepalives.
+- Battery reads are the safe daemon keepalive. Repeating `connect_status` after init can return `000186a4` on this firmware.
+
+### HRV and Sleep
+
+- HRV is working through the dictionary sleep sequence file: `sequence_data/SLEEP_DETAILS` (`dict_id=700013`).
+- Latest valid artifact: `avgHrv=48 ms`, baseline `28-51 ms`, `sleepScore=70`, 278 sleep minutes, efficiency 92%, latency 18m, average HR 70, SpO2 98%, breath rate 14.
+- Gadgetbridge and Huawei Health decompile agree on the key fields: `avgHrv`, `minHrvBaseline`, `maxHrvBaseline`, `hrvDayToBaseline`, `sleepScore`, `sleepEfficiency`, `avgHeartRate`, `avgOxygenSaturation`, and `avgBreathrate` under sleep details.
+- Live RRI is not reliable on this Band 10 firmware: the open command succeeds and realtime HR packets arrive, but no RRI samples have been emitted. It remains an opt-in diagnostic route.
+- Repeated stress/sleep file syncs can return `00023281`; the daemon now treats this as "no fresh file" and preserves the last good artifact.
+
+### Analytics and UI
+
+- `analytics.py` now promotes sleep-sequence data to the primary overnight physiology source when older fitness sleep segments are empty.
+- Recovery now uses sleep-sequence HRV, sequence-derived sleep minutes/score, overnight average HR, SpO2, breath rate, and stage distribution.
+- The dashboard now shows HRV baseline/resilience, sleep sequence vitals, stage bars, recovery heatmap, route status, and connection status.
+- Open Wearables informed the resilience model: recent sleep HRV coefficient of variation maps to a provisional/stable/variable/unstable status.

@@ -328,6 +328,48 @@ main {
   background: linear-gradient(90deg, var(--green), var(--blue));
 }
 
+.stage-bars {
+  display: grid;
+  gap: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+
+.stage-row {
+  display: grid;
+  grid-template-columns: 86px minmax(0, 1fr) 44px;
+  align-items: center;
+  gap: 10px;
+  min-height: 28px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.stage-row strong {
+  color: var(--ink);
+  text-align: right;
+}
+
+.component-bar .stage-1 {
+  background: #78a6c8;
+}
+
+.component-bar .stage-2 {
+  background: #496a8f;
+}
+
+.component-bar .stage-3 {
+  background: #9f82c9;
+}
+
+.component-bar .stage-4 {
+  background: #d89a6a;
+}
+
+.component-bar .stage-5 {
+  background: #a8b0ba;
+}
+
 .sleep-row,
 .route-row,
 .cap-row {

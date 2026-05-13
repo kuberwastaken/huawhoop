@@ -53,6 +53,22 @@ async def _safe(label: str, coro, default=None):
         return default
 
 
+async def _optional_file_sync(label: str, coro):
+    try:
+        result = await coro
+        logger.info("%s OK", label)
+        return result, "ok"
+    except RuntimeError as e:
+        if "00023281" in str(e):
+            logger.info("%s returned no new file; preserving previous artifact", label)
+            return None, "preserved"
+        logger.warning("%s failed: %r", label, e)
+        return None, "failed"
+    except Exception as e:
+        logger.warning("%s failed: %r", label, e)
+        return None, "failed"
+
+
 async def sync_core(band: Band, full: bool = False, live_hrv: bool = False) -> dict:
     started = int(time.time())
     status = {
@@ -81,14 +97,14 @@ async def sync_core(band: Band, full: bool = False, live_hrv: bool = False) -> d
 
     if full:
         stress_hours = int(os.getenv("BAND10_STRESS_HOURS", "168"))
-        stress = await _safe("stress/RRI file", band.get_recent_stress_preview(hours=stress_hours), default=None)
-        if stress is not None:
-            status["steps"].append("stress_file")
+        stress, stress_state = await _optional_file_sync("stress/RRI file", band.get_recent_stress_preview(hours=stress_hours))
+        if stress_state != "failed":
+            status["steps"].append("stress_file" if stress_state == "ok" else "stress_file_preserved")
 
         trusleep_hours = int(os.getenv("BAND10_TRUSLEEP_HOURS", "168"))
-        trusleep = await _safe("trusleep file", band.get_recent_trusleep_preview(hours=trusleep_hours), default=None)
-        if trusleep is not None:
-            status["steps"].append("trusleep")
+        trusleep, trusleep_state = await _optional_file_sync("trusleep file", band.get_recent_trusleep_preview(hours=trusleep_hours))
+        if trusleep_state != "failed":
+            status["steps"].append("trusleep" if trusleep_state == "ok" else "trusleep_preserved")
 
     if live_hrv:
         duration = float(os.getenv("BAND10_LIVE_HRV_SECONDS", "62"))

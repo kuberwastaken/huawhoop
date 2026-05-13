@@ -24,7 +24,7 @@ $env:BAND10_FULL_SYNC_EVERY = "6"
 $env:BAND10_INITIAL_FULL_SYNC = "1"
 $env:BAND10_KEEPALIVE_SECONDS = "60"
 $env:BAND10_KEEPALIVE_MODE = "battery"      # connect_status is init-only on this band
-$env:BAND10_ENABLE_PASSIVE_SETTINGS = "1"
+$env:BAND10_ENABLE_PASSIVE_SETTINGS = "1"   # part of the stable connected-state recipe
 ```
 
 For a bounded connection verification run:
@@ -40,6 +40,10 @@ downloaded during full sync. This is the same route Gadgetbridge uses for TruSle
 dictionary data and includes `avgHrv`, HRV baselines, sleep score, SpO2 and breath
 rate summaries. The dashboard adds an Open Wearables-style HRV variability score
 from distinct sleep sessions, plus a recovery heatmap for trend review.
+
+Repeated full syncs may return `00023281` for stress/sleep files when there is no
+fresh file to download; the daemon preserves the last good artifact and continues
+using sleep-sequence HRV instead of dropping back to "unavailable".
 
 Live RRI/HRV probing is intentionally opt-in because the Band 10 accepts the stream
 open command but has not emitted RRI samples reliably:

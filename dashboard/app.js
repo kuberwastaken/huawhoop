@@ -159,12 +159,13 @@ function barChart(container, values) {
 function renderMetrics(summary, insights) {
   const grid = document.getElementById("metric-grid");
   const hrv = insights.hrv || {};
+  const sleep = insights.sleep || {};
   const hrvValue = hrv.rmssd_ms ?? hrv.avg_hrv_ms ?? "n/a";
   grid.innerHTML = [
     metric("Recovery", `${insights.recovery_score ?? summary.recovery_proxy_no_hrv ?? "n/a"}`, `${insights.recovery_label || "proxy"} readiness`),
     metric("Strain", `${insights.strain?.strain ?? summary.strain_score ?? "n/a"}`, `${insights.strain?.trimp ?? "n/a"} TRIMP`),
     metric("HRV", `${hrvValue}`, hrv.source ? `${hrv.source}` : "not available"),
-    metric("Sleep", `${insights.sleep?.score ?? summary.sleep_score ?? "n/a"}`, `${insights.sleep?.minutes ?? summary.sleep_minutes ?? 0} / ${insights.sleep?.need_minutes ?? 480} min`),
+    metric("Sleep", `${sleep.score ?? summary.sleep_score ?? "n/a"}`, `${sleep.minutes ?? summary.sleep_minutes ?? 0} / ${sleep.need_minutes ?? 480} min (${sleep.source || "unknown"})`),
     metric("Steps", fmt.format(summary.step_total ?? 0), summary.step_window_end || ""),
     metric("Resting HR", `${insights.resting_hr ?? summary.resting_hr_avg ?? "n/a"}`, `${insights.resting_hr_baseline ?? "n/a"} baseline`)
   ].join("");
@@ -288,23 +289,59 @@ function renderStrain(insights) {
   `;
 }
 
+function stageLabel(stage) {
+  return ({
+    "1": "Light",
+    "2": "Deep",
+    "3": "REM",
+    "4": "Awake",
+    "5": "Nap/unknown"
+  })[String(stage)] || `Stage ${stage}`;
+}
+
+function renderStageBars(stageCounts) {
+  const entries = Object.entries(stageCounts || {})
+    .map(([stage, value]) => [stage, Number(value)])
+    .filter(([, value]) => Number.isFinite(value) && value > 0);
+  const total = entries.reduce((sum, [, value]) => sum + value, 0);
+  if (!total) return `<div class="empty">No stage distribution yet.</div>`;
+  return `<div class="stage-bars">${entries.map(([stage, value]) => `
+    <div class="stage-row">
+      <span>${stageLabel(stage)}</span>
+      <div class="component-bar"><i class="stage-${stage}" style="width:${((value / total) * 100).toFixed(1)}%"></i></div>
+      <strong>${value}m</strong>
+    </div>
+  `).join("")}</div>`;
+}
+
 function renderSleep(summary, trusleep, sequence, insights) {
   const panel = document.getElementById("sleep-panel");
   const sequenceCount = sequence?.sequence_count ?? trusleep?.sequence?.sequence_count ?? 0;
   const sequenceErrors = sequence?.errors || trusleep?.sequence?.errors || [];
   const sleep = insights?.sleep || {};
   const components = sleep.components || {};
-  panel.innerHTML = [
-    ["Sleep minutes", `${summary.sleep_minutes ?? 0}`],
+  const sessionWindow = sleep.session_start && sleep.session_end
+    ? `${localTime(sleep.session_start)} - ${localTime(sleep.session_end)}`
+    : (summary.sleep_window_start && summary.sleep_window_end ? `${summary.sleep_window_start} - ${summary.sleep_window_end}` : "n/a");
+  const rows = [
+    ["Source", sleep.source || "unavailable"],
+    ["Sleep minutes", `${sleep.minutes ?? summary.sleep_minutes ?? 0}`],
     ["Sleep score", `${sleep.score ?? summary.sleep_score ?? "n/a"}`],
+    ["Huawei score", `${sleep.device_score ?? "n/a"}`],
     ["Performance", `${sleep.performance_score ?? "n/a"}`],
+    ["Efficiency", `${sleep.sleep_efficiency ?? "n/a"}%`],
+    ["Latency", `${sleep.sleep_latency_min ?? "n/a"} min`],
+    ["Avg SpO2", `${sleep.avg_spo2 ?? "n/a"}%`],
+    ["Breath rate", `${sleep.avg_breath_rate ?? "n/a"}`],
     ["Fragmentation", `${components.fragmentation ?? "n/a"}`],
     ["Consistency", `${components.consistency ?? "collecting"}`],
-    ["Window start", summary.sleep_window_start || "n/a"],
-    ["Window end", summary.sleep_window_end || "n/a"],
+    ["Window", sessionWindow],
     ["Sequence sessions", `${sequenceCount}`],
     ["Sequence status", sequenceErrors.length ? sequenceErrors.join(", ") : "ready"]
-  ].map(([a, b]) => `<div class="sleep-row"><span>${a}</span><strong>${b}</strong></div>`).join("");
+  ];
+  panel.innerHTML = rows
+    .map(([a, b]) => `<div class="sleep-row"><span>${a}</span><strong>${b}</strong></div>`)
+    .join("") + renderStageBars(sleep.stage_counts);
 }
 
 function renderRoutes(dictionary, stress, sequence, insights, liveHrv) {

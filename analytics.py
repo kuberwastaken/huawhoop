@@ -151,11 +151,15 @@ def _sleep_consistency_score(history: list[dict], sleep_segments: list[dict]) ->
         if row.get("sleep_window_start_ts")
     ]
     starts = [v for v in starts if v is not None]
+    distinct_starts = []
+    for start in starts:
+        if not any(abs(start - seen) < (5 / 60.0) for seen in distinct_starts):
+            distinct_starts.append(start)
     current_start = min((row.get("start") for row in sleep_segments if row.get("start")), default=None)
     current = _hours_past_noon(current_start)
-    if current is None or not starts:
+    if current is None or len(distinct_starts) < 3:
         return None
-    baseline = statistics.median(starts[-14:])
+    baseline = statistics.median(distinct_starts[-14:])
     diff_minutes = (current - baseline) * 60
     if diff_minutes > 15:
         penalty = ((diff_minutes - 15) / 105) * 100
@@ -606,6 +610,63 @@ def _extract_sleep_hrv(sequence: dict) -> dict | None:
     return latest
 
 
+def _sequence_metric(summary: dict, key: str, lo: float = 0, hi: float | None = None):
+    value = _numeric(summary.get(key))
+    if value is None or value == 0xFFFFFFFF or value < lo:
+        return None
+    if hi is not None and value > hi:
+        return None
+    return value
+
+
+def _sequence_sleep_minutes(session: dict, summary: dict) -> int:
+    start = _sequence_metric(summary, "fallAsleepTime", 1) or _numeric(session.get("start_ts"))
+    end = _sequence_metric(summary, "wakeupTime", 1) or _numeric(session.get("end_ts"))
+    if start and end and end > start:
+        return round((end - start) / 60)
+    return 0
+
+
+def _sleep_sequence_sessions(sequence: dict) -> list[dict]:
+    sessions = []
+    for session in sequence.get("sessions") or []:
+        summary = session.get("summary") or {}
+        minutes = _sequence_sleep_minutes(session, summary)
+        score = _sequence_metric(summary, "sleepScore", 1, 100)
+        avg_hrv = _sequence_metric(summary, "avgHrv", 1, 300)
+        valid_data = summary.get("validData")
+        if minutes < 90 or (score is None and avg_hrv is None and valid_data is None):
+            continue
+        details = session.get("details") or {}
+        sessions.append({
+            "start_ts": _sequence_metric(summary, "fallAsleepTime", 1) or session.get("start_ts"),
+            "end_ts": _sequence_metric(summary, "wakeupTime", 1) or session.get("end_ts"),
+            "start_local": session.get("start_local"),
+            "end_local": session.get("end_local"),
+            "sleep_minutes": minutes,
+            "device_score": score,
+            "avg_hrv_ms": avg_hrv,
+            "avg_heart_rate": _sequence_metric(summary, "avgHeartRate", 30, 220),
+            "avg_spo2": _sequence_metric(summary, "avgOxygenSaturation", 50, 100),
+            "avg_breath_rate": _sequence_metric(summary, "avgBreathRate", 5, 40),
+            "sleep_efficiency": _sequence_metric(summary, "sleepEfficiency", 1, 100),
+            "sleep_latency_min": _sequence_metric(summary, "sleepLatency", 0, 240),
+            "stage_counts": details.get("stage_counts") or {},
+            "stage_minutes": details.get("stage_minute_count"),
+        })
+    return sessions
+
+
+def _extract_sleep_sequence_sleep(sequence: dict) -> dict | None:
+    sessions = _sleep_sequence_sessions(sequence)
+    if not sessions:
+        return None
+    latest = sessions[-1]
+    latest["source"] = "sleep_sequence"
+    latest["session_count"] = len(sessions)
+    return latest
+
+
 def _hrv_resilience_model(hrv_values: list[float]) -> dict:
     values = [_numeric(value) for value in hrv_values]
     values = [value for value in values if value and value > 0]
@@ -650,15 +711,19 @@ def build_insights(data_dir: Path = DATA_DIR) -> dict:
     stress = _read_json(data_dir / "latest_stress_preview.json", {})
     live_hrv = _read_json(data_dir / "latest_live_hrv.json", {})
     history = [row for row in _read_jsonl(data_dir / "recovery_history.jsonl") if _valid_summary_row(row)]
+    sequence_sleep = _extract_sleep_sequence_sleep(sequence)
 
     steps = fitness.get("steps") or []
     heart_rates = [row.get("heart_rate") for row in steps if isinstance(row.get("heart_rate"), (int, float)) and row.get("heart_rate") > 0]
     resting_hrs = [row.get("resting_heart_rate") for row in steps if isinstance(row.get("resting_heart_rate"), (int, float)) and row.get("resting_heart_rate") > 0]
     spo2 = [row.get("spo2") for row in steps if isinstance(row.get("spo2"), (int, float)) and row.get("spo2") > 0]
-    sleep_minutes = summary.get("sleep_minutes") or 0
+    if not spo2 and sequence_sleep and sequence_sleep.get("avg_spo2"):
+        spo2 = [sequence_sleep["avg_spo2"]]
+    sleep_minutes = summary.get("sleep_minutes") or (sequence_sleep or {}).get("sleep_minutes") or 0
 
     strain = _strain_from_hr(heart_rates)
-    rhr = _mean(resting_hrs, min(heart_rates) if heart_rates else None)
+    sequence_avg_hr = (sequence_sleep or {}).get("avg_heart_rate")
+    rhr = _mean(resting_hrs, sequence_avg_hr or (min(heart_rates) if heart_rates else None))
     rhr_baseline = _history_baseline(history, "resting_hr_avg", rhr or 60)
     sleep_baseline = _history_baseline(history, "sleep_minutes", 480)
 
@@ -737,8 +802,15 @@ def build_insights(data_dir: Path = DATA_DIR) -> dict:
         load_sleep_add += (load_ratio - 1.25) * 45
     sleep_need = _clamp(480 + load_sleep_add, 420, 630)
     sleep_performance = _clamp(100 * sleep_minutes / sleep_need, 0, 100)
-    sleep_model = _sleep_quality_model(sleep_minutes, fitness.get("sleep") or [], history)
-    sleep_score = sleep_model["score"]
+    sleep_segments = fitness.get("sleep") or []
+    if not sleep_segments and sequence_sleep and sequence_sleep.get("start_ts") and sequence_sleep.get("end_ts"):
+        sleep_segments = [{"start": sequence_sleep["start_ts"], "end": sequence_sleep["end_ts"]}]
+    sleep_model = _sleep_quality_model(sleep_minutes, sleep_segments, history)
+    device_sleep_score = (sequence_sleep or {}).get("device_score")
+    if device_sleep_score is not None:
+        sleep_score = round(_clamp(device_sleep_score * 0.65 + sleep_model["score"] * 0.35, 0, 100))
+    else:
+        sleep_score = sleep_model["score"]
     spo2_score = None
     if spo2:
         spo2_score = _clamp(100 - max(0, 96 - _mean(spo2, 96)) * 8 - max(0, 92 - min(spo2)) * 5, 0, 100)
@@ -781,11 +853,21 @@ def build_insights(data_dir: Path = DATA_DIR) -> dict:
         "resting_hr": round(rhr, 1) if rhr is not None else None,
         "resting_hr_baseline": round(rhr_baseline, 1) if rhr_baseline is not None else None,
         "sleep": {
+            "source": (sequence_sleep or {}).get("source") or ("fitness_history" if summary.get("sleep_minutes") else "unavailable"),
             "minutes": sleep_minutes,
             "need_minutes": round(sleep_need),
             "baseline_minutes": round(sleep_baseline) if sleep_baseline else None,
             "score": round(sleep_score),
+            "device_score": round(device_sleep_score) if device_sleep_score is not None else None,
             "performance_score": round(sleep_performance),
+            "session_start": (sequence_sleep or {}).get("start_ts"),
+            "session_end": (sequence_sleep or {}).get("end_ts"),
+            "sleep_efficiency": (sequence_sleep or {}).get("sleep_efficiency"),
+            "sleep_latency_min": (sequence_sleep or {}).get("sleep_latency_min"),
+            "avg_breath_rate": (sequence_sleep or {}).get("avg_breath_rate"),
+            "avg_spo2": (sequence_sleep or {}).get("avg_spo2"),
+            "stage_counts": (sequence_sleep or {}).get("stage_counts") or {},
+            "stage_minutes": (sequence_sleep or {}).get("stage_minutes"),
             "components": {
                 "duration": sleep_model["duration"],
                 "consistency": sleep_model["consistency"],
@@ -811,6 +893,7 @@ def build_insights(data_dir: Path = DATA_DIR) -> dict:
             "sleep_segments": len(fitness.get("sleep") or []),
             "stress_file_samples": stress.get("stress_count", 0),
             "sleep_sequence_sessions": sequence.get("sequence_count", 0),
+            "sleep_source": (sequence_sleep or {}).get("source") or ("fitness_history" if summary.get("sleep_minutes") else "unavailable"),
             "hrv_source": (hrv or {}).get("source", "unavailable"),
             "live_hrv_transport": live_transport,
             "rhr_trend_3v14_bpm": round(rhr_trend, 1) if rhr_trend is not None else None,
