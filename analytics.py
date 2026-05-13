@@ -79,6 +79,13 @@ def _score_label(value: float) -> str:
     return "red"
 
 
+def _score_sigmoid(x: float, k: float, base: float, midpoint: float, anchor: float) -> float:
+    max_exp = 709.0
+    numerator = 1 + math.exp(min(max_exp, k * (anchor - midpoint)))
+    denominator = 1 + math.exp(min(max_exp, k * (x - midpoint)))
+    return base * numerator / denominator
+
+
 def _numeric(value):
     return value if isinstance(value, (int, float)) and math.isfinite(value) else None
 
@@ -104,6 +111,88 @@ def _trend_delta(values: list[float], short: int, long: int) -> float | None:
     if recent is None or baseline is None:
         return None
     return recent - baseline
+
+
+def _hours_past_noon(ts: int | float | None) -> float | None:
+    if not ts:
+        return None
+    local = time.localtime(ts)
+    hours = local.tm_hour + local.tm_min / 60.0 + local.tm_sec / 3600.0
+    if hours < 12.0:
+        hours += 24.0
+    return hours - 12.0
+
+
+def _sleep_duration_score(minutes: float) -> int:
+    hours = max(0.0, minutes / 60.0)
+    if 7.0 <= hours <= 9.0:
+        return 100
+    if hours < 7.0:
+        raw = _score_sigmoid(hours, k=-1.5, base=100, midpoint=5.0, anchor=7.0)
+        return round(_clamp(raw, 0, 100))
+    raw = _score_sigmoid(hours, k=0.8, base=100, midpoint=11.0, anchor=9.0)
+    return round(_clamp(max(50, raw), 0, 100))
+
+
+def _sleep_consistency_score(history: list[dict], sleep_segments: list[dict]) -> int | None:
+    starts = [
+        _hours_past_noon(row.get("sleep_window_start_ts"))
+        for row in history
+        if row.get("sleep_window_start_ts")
+    ]
+    starts = [v for v in starts if v is not None]
+    current_start = min((row.get("start") for row in sleep_segments if row.get("start")), default=None)
+    current = _hours_past_noon(current_start)
+    if current is None or not starts:
+        return None
+    baseline = statistics.median(starts[-14:])
+    diff_minutes = (current - baseline) * 60
+    if diff_minutes > 15:
+        penalty = ((diff_minutes - 15) / 105) * 100
+    elif diff_minutes < -15:
+        penalty = min(20, ((abs(diff_minutes) - 15) / 105) * 100)
+    else:
+        penalty = 0
+    return round(_clamp(100 - penalty, 0, 100))
+
+
+def _sleep_fragmentation_score(sleep_segments: list[dict], sleep_minutes: float) -> int:
+    if sleep_minutes <= 0:
+        return 0
+    starts = sorted(
+        (row.get("start"), row.get("end"))
+        for row in sleep_segments
+        if row.get("start") and row.get("end") and row.get("end") > row.get("start")
+    )
+    if len(starts) <= 1:
+        return 100
+    significant_gaps = 0
+    gap_minutes = 0.0
+    for (_prev_start, prev_end), (start, _end) in zip(starts, starts[1:]):
+        gap = max(0, start - prev_end) / 60.0
+        if gap >= 5:
+            significant_gaps += 1
+            gap_minutes += gap
+    gap_penalty = min(80, max(0, gap_minutes - 20) / 70 * 80)
+    frequency_penalty = min(20, max(0, significant_gaps - 1) * 5)
+    return round(_clamp(100 - gap_penalty - frequency_penalty, 0, 100))
+
+
+def _sleep_quality_model(sleep_minutes: float, sleep_segments: list[dict], history: list[dict]) -> dict:
+    duration = _sleep_duration_score(sleep_minutes)
+    fragmentation = _sleep_fragmentation_score(sleep_segments, sleep_minutes)
+    consistency = _sleep_consistency_score(history, sleep_segments)
+    if consistency is None:
+        overall = duration * 0.70 + fragmentation * 0.30
+    else:
+        overall = duration * 0.55 + consistency * 0.25 + fragmentation * 0.20
+    return {
+        "score": round(_clamp(overall, 0, 100)),
+        "duration": duration,
+        "consistency": consistency,
+        "fragmentation": fragmentation,
+        "method": "duration sigmoid + bedtime consistency + sleep fragmentation",
+    }
 
 
 def _classify_training_load(acute: float | None, chronic: float | None) -> dict:
@@ -590,7 +679,9 @@ def build_insights(data_dir: Path = DATA_DIR) -> dict:
     if isinstance(load_ratio, (int, float)) and load_ratio > 1.25:
         load_sleep_add += (load_ratio - 1.25) * 45
     sleep_need = _clamp(480 + load_sleep_add, 420, 630)
-    sleep_score = _clamp(100 * sleep_minutes / sleep_need, 0, 100)
+    sleep_performance = _clamp(100 * sleep_minutes / sleep_need, 0, 100)
+    sleep_model = _sleep_quality_model(sleep_minutes, fitness.get("sleep") or [], history)
+    sleep_score = sleep_model["score"]
     spo2_score = None
     if spo2:
         spo2_score = _clamp(100 - max(0, 96 - _mean(spo2, 96)) * 8 - max(0, 92 - min(spo2)) * 5, 0, 100)
@@ -636,6 +727,13 @@ def build_insights(data_dir: Path = DATA_DIR) -> dict:
             "need_minutes": round(sleep_need),
             "baseline_minutes": round(sleep_baseline) if sleep_baseline else None,
             "score": round(sleep_score),
+            "performance_score": round(sleep_performance),
+            "components": {
+                "duration": sleep_model["duration"],
+                "consistency": sleep_model["consistency"],
+                "fragmentation": sleep_model["fragmentation"],
+            },
+            "method": sleep_model["method"],
             "trend_3v14_minutes": round(sleep_trend, 1) if sleep_trend is not None else None,
         },
         "strain": strain,

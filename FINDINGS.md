@@ -89,7 +89,11 @@ model now uses an EWMA-style acute/chronic load calculation (7-day / 42-day time
 constants), reports load ratio, balance, monotony, and guidance, and records the
 latest live-HRV transport state/status in both `latest_insights.json` and the web
 dashboard. This keeps HRV failure modes visible while still making the reliable
-fitness, sleep, HR and SpO2 data useful.
+fitness, sleep, HR and SpO2 data useful. After reviewing Open Wearables'
+MIT-licensed health-score algorithms, sleep scoring now uses the same style of
+components that can be computed from our Band 10 artifacts: sigmoid duration
+scoring, bedtime consistency when history contains window timestamps, and
+fragmentation from sleep segment gaps.
 
 ### Gadgetbridge vs Current Implementation
 

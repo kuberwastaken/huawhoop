@@ -3266,8 +3266,10 @@ class Band:
             summary["step_window_start"] = local_time_label(min(step_times))
             summary["step_window_end"] = local_time_label(max(step_times))
         if sleep_times:
-            summary["sleep_window_start"] = local_time_label(min(sleep_times))
-            summary["sleep_window_end"] = local_time_label(max(sleep_times))
+            summary["sleep_window_start_ts"] = min(sleep_times)
+            summary["sleep_window_end_ts"] = max(sleep_times)
+            summary["sleep_window_start"] = local_time_label(summary["sleep_window_start_ts"])
+            summary["sleep_window_end"] = local_time_label(summary["sleep_window_end_ts"])
         if heart_rates:
             summary["heart_rate_min"] = min(heart_rates)
             hr_avg = sum(heart_rates) / len(heart_rates)

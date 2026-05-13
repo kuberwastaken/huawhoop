@@ -235,12 +235,18 @@ function renderStrain(insights) {
   `;
 }
 
-function renderSleep(summary, trusleep, sequence) {
+function renderSleep(summary, trusleep, sequence, insights) {
   const panel = document.getElementById("sleep-panel");
   const sequenceCount = sequence?.sequence_count ?? trusleep?.sequence?.sequence_count ?? 0;
   const sequenceErrors = sequence?.errors || trusleep?.sequence?.errors || [];
+  const sleep = insights?.sleep || {};
+  const components = sleep.components || {};
   panel.innerHTML = [
     ["Sleep minutes", `${summary.sleep_minutes ?? 0}`],
+    ["Sleep score", `${sleep.score ?? summary.sleep_score ?? "n/a"}`],
+    ["Performance", `${sleep.performance_score ?? "n/a"}`],
+    ["Fragmentation", `${components.fragmentation ?? "n/a"}`],
+    ["Consistency", `${components.consistency ?? "collecting"}`],
     ["Window start", summary.sleep_window_start || "n/a"],
     ["Window end", summary.sleep_window_end || "n/a"],
     ["Sequence sessions", `${sequenceCount}`],
@@ -321,7 +327,7 @@ async function boot() {
   renderCharts(fitness, historyRows);
   renderRecovery(insights, liveHrv);
   renderStrain(insights);
-  renderSleep(summary, trusleep, sequence);
+  renderSleep(summary, trusleep, sequence, insights);
   renderRoutes(dictionary, stress, sequence, insights, liveHrv);
   renderCapabilities(capabilities);
 }
