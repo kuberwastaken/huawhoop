@@ -41,7 +41,7 @@ What works:
 | P2P dictionary probe classification | Working | Probe distinguishes `ack_no_data` from `0x000186a4` auth/unsupported errors. |
 | Huawei Health dictionary mapping | Confirmed | Decompiled APK confirms `SLEEP_DETAILS=700013` includes `avgHrv`, HRV baseline, sleep score, SpO2 and breath-rate fields. |
 | Sleep sequence HRV | Working | `sequence_data/SLEEP_DETAILS` now downloads via service `0x2C`; latest 48h pull produced 4 sessions, 2 valid HRV summaries, latest full-sleep `avgHrv=48 ms` with baseline range `28-51`. |
-| Live RRI HRV route | Transport verified, samples blocked | `svc=0x19/cmd=0x01 type=0x03` is accepted with `0x000186a0`; band immediately sends `svc=0x19/cmd=0x05 status=0x0001ec38` and no RRI/SQI containers. Treat as optional/diagnostic now that sleep-sequence HRV works. |
+| Live RRI HRV route | Working after reset | 2026-05-14 daemon stress calibration captured 81 RRI samples, 48 clean intervals, RMSSD `53.7 ms`, SQI-100 count 72, Huawei stress score 54/level 2, then enabled automatic stress via `svc=0x20/cmd=0x09`. |
 | Persistent connected mode | Working in bounded soak | `band_daemon.py` kept an authenticated session open for 120s, ran two sync cycles and battery keepalives, and exited with `soak_complete`. `run_dashboard.py` is now the normal workflow: it serves the web dashboard and runs the daemon in one process. One-shot `connect.py` still disconnects by design. |
 | Weather push | Working | Live daemon command on 2026-05-14 returned `0x000186a0` for start, unit, current weather, GPS/time, and forecast. Forecast only succeeded after matching Gadgetbridge's timing: include today's row at the current observation timestamp, then future rows at `timestamp + 86400 * n`. |
 
@@ -53,7 +53,7 @@ Open constraints:
 | Connect status | Returns TLV `0x7F=000186a0` | Treat as OK (`100000`), not an auth error. |
 | Repeated connect-status keepalive | Later returns `0x000186a4` | Gadgetbridge sends connect status during init, not as a periodic heartbeat. The daemon now uses battery as the default keepalive and only repeats connect status when `BAND10_KEEPALIVE_MODE=connect_status`. |
 | Standalone HRV dictionary `500044` | Capability `hrv=false`; P2P route returns `0x000186a4` | Standalone HRV is not exposed on this firmware. |
-| Live RRI `0x19/0x05` | Returns `0x0001ec38` immediately after successful open | Gadgetbridge confirms the command shape, but Huawei Health's `serviceId_25.json` says `cmd=0x01` has optional tag `0x02=vol_status`; testing `type=0x03,vol_status=1` still returns `0x0001ec38`. |
+| Live RRI `0x19/0x05` | Working after factory reset/stored reconnect | Earlier runs returned `0x0001ec38`; latest `type=0x03` calibration emitted RRI/SQI samples and closed cleanly with `0x000186a0`. Keep the transport status visible because firmware/session state can still gate this route. |
 | PermissionCheck `0x01/0x38` | Band asks for permission `1`; reply status frame is `0x000186a4` | Gadgetbridge treats permission ACK as fire-and-forget. Python now replies and records status-only frames instead of treating them as fatal auth rejects. Permission 1 appears SMS/call-related, not the RRI gate. |
 | P2P dictionary classes | `skin_temperature=ack_no_data`; emotion/sleep_apnea/etc return `0x000186a4` | P2P module is alive, but these classes are either gated or unsupported for host pull. |
 | Sequence sleep file `sequence_data/SLEEP_DETAILS` | Working | File init may include both `0x7F=000186a0` and metadata tags. Treating any `0x7F` as status-only was wrong; after fixing that, file-info and block download complete normally. |
@@ -69,11 +69,13 @@ There are three distinct HRV-looking paths, and they are not equivalent:
    type `0x03`, listens for RRI/SQI notifications on `cmd=0x05`, then stops with
    type `0x04`. `HuaweiStressHRVCalculation` computes RMSSD-like and
    frequency-domain HRV features from 50-70 seconds of high-quality SQI data.
-   This is the strongest route for "make HRV work" today because the Band 10
-   advertises service `0x19/cmd=0x01`. As of the latest probe, the open request
-   succeeds but sample emission is blocked by status `0x0001ec38`; the working
-   code now records request type, optional `vol_status`, and all transport status
-   frames into `data/latest_live_hrv.json`.
+   This route is now live-proven after the factory reset and stored reconnect:
+   the daemon stress calibration captured 81 RRI samples over 65 seconds, 48
+   clean intervals, RMSSD `53.7 ms`, and Huawei stress score `54`/level `2`.
+   The same command enabled automatic stress using that live seed. The code still
+   records request type, optional `vol_status`, and all transport status frames
+   into `data/latest_live_hrv.json` because earlier bonded-state runs returned
+   `0x0001ec38` without samples.
 2. **Sleep sequence HRV**: Gadgetbridge `downloadDictTrueSleepData()` requests
    `sequence_data` with dictionary class `700013`. The decompiled APK confirms
    fields `avgHrv=700013878`, `minHrvBaseline=700013305`,
@@ -88,7 +90,7 @@ There are three distinct HRV-looking paths, and they are not equivalent:
    Keep it as a diagnostic route, not the primary HRV path.
 
 New local analytics code writes `data/latest_insights.json` and combines
-sleep-sequence HRV, optional live RRI diagnostics, resting HR, sleep amount, SpO2, HR-load strain, and
+sleep-sequence HRV, live RRI HRV/stress when available, resting HR, sleep amount, SpO2, HR-load strain, and
 short/long training load into a dashboard-ready readiness model. The recovery score
 is intentionally labeled as a local model, not a WHOOP clone. The training load
 model now uses an EWMA-style acute/chronic load calculation (7-day / 42-day time

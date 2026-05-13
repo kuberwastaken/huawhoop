@@ -65,12 +65,16 @@ dictionary data and includes `avgHrv`, HRV baselines, sleep score, SpO2 and brea
 rate summaries. The dashboard adds an Open Wearables-style HRV variability score
 from distinct sleep sessions, plus a recovery heatmap for trend review.
 
+Live RRI HRV/stress calibration is also verified after the factory reset and
+stored reconnect. The daemon captured a 62-second RRI window, computed RMSSD and
+Huawei stress features, and enabled automatic stress from that live seed.
+
 Repeated full syncs may return `00023281` for stress/sleep files when there is no
 fresh file to download; the daemon preserves the last good artifact and continues
 using sleep-sequence HRV instead of dropping back to "unavailable".
 
-Live RRI/HRV probing is intentionally opt-in because the Band 10 accepts the stream
-open command but has not emitted RRI samples reliably:
+Live RRI/HRV probing is still cadence-limited because it is an active measurement
+window and should not run in the tight sync loop:
 
 ```powershell
 $env:BAND10_LIVE_HRV_EVERY = "12"
