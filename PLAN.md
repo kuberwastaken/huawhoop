@@ -146,6 +146,15 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [ ] Document local bridge setup separately from hosted UI deployment.
 - [ ] Add production-safe defaults for no bridge, stale bridge, and offline mode.
 
+## Milestone 8: LLM Analysis Guardrails
+
+- [x] Write strict LLM policy before adding any model calls.
+- [x] Audit `X:\Bigger-Projects\Claurst\src-rust` for Copilot/OAuth patterns.
+- [x] Decide that BLE/weather/watchface/connection loops never trigger LLM calls.
+- [ ] Implement an opt-in analysis endpoint after deterministic analytics are stable.
+- [ ] Cache LLM output by compact dataset hash and expose model/usage metadata.
+- [ ] Add a PWA manual analysis control with payload preview and cadence warnings.
+
 ## Immediate TODO
 
 - [x] Commit this plan.
@@ -196,6 +205,6 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 
 - [ ] Android companion bridge.
 - [ ] Cloud summary relay.
-- [ ] Copilot OAuth analysis layer.
+- [ ] Copilot OAuth analysis layer after Milestone 8 endpoint and payload preview.
 - [ ] Watchface builder.
 - [ ] Custom app deployment lab.
