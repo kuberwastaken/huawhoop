@@ -2933,6 +2933,14 @@ class Band:
                 "sample_count": len(samples),
                 "latest_hr": samples[-1]["heart_rate"],
             })
+        else:
+            self._live_rri_events.append({
+                "timestamp": now,
+                "svc": SVC_HR_RRI_TEST,
+                "cmd": CMD_HR_REALTIME_DATA,
+                "sample_count": 0,
+                "tlvs": {hex(k): v.hex() for k, v in data.items()},
+            })
         return samples
 
     def _parse_live_rri_packet(self, tlvs: dict) -> list[dict]:
