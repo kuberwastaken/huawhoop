@@ -25,7 +25,7 @@ now contains both the persistent HiChain `auth_key` and reconnect transaction
 `secret_key`. Reconnect auth (`operationCode=0x02`) is stable and does not require a
 band prompt.
 
-Latest verified run: `data/run_post_auth_p2p_probe_gated.log`.
+Latest verified reconnect/init run: `data/run_live_hrv_mode_matrix.log`.
 Latest full data refresh: `data/run_full_data_refresh.log`.
 Local dashboard: `dashboard/index.html` served from the repo root, verified at
 `http://127.0.0.1:8765/dashboard/`.
@@ -40,8 +40,8 @@ What works:
 | P2P service ping | Working | `hw.watch.health.filesync` replies `cmd=0x03 code=0xca` to service ping. |
 | P2P dictionary probe classification | Working | Probe distinguishes `ack_no_data` from `0x000186a4` auth/unsupported errors. |
 | Huawei Health dictionary mapping | Confirmed | Decompiled APK confirms `SLEEP_DETAILS=700013` includes `avgHrv`, HRV baseline, sleep score, SpO2 and breath-rate fields. |
-| Live RRI HRV route | Implemented, needs band run | Gadgetbridge's stress calibration opens `svc=0x19/cmd=0x01` with type `0x03`, receives `svc=0x19/cmd=0x05` RRI/SQI notifications, then closes with type `0x04`. Python now mirrors this and writes `data/latest_live_hrv.json`. |
-| Persistent connected mode | Implemented, needs soak run | `band_daemon.py` keeps the BLE session open, runs keepalives, syncs JSON artifacts, and writes `data/connection_status.json`. This should address the band showing "not connected" after one-shot pulls. |
+| Live RRI HRV route | Transport verified, samples blocked | `svc=0x19/cmd=0x01 type=0x03` is accepted with `0x000186a0`; band immediately sends `svc=0x19/cmd=0x05 status=0x0001ec38` and no RRI/SQI containers. Added transport diagnostics and Huawei-app-shaped `vol_status` probing. |
+| Persistent connected mode | Working in bounded soak | `band_daemon.py` kept a reconnect session open, ran keepalives and sync cycles, and wrote `data/connection_status.json`. This is the path for "band remains connected"; one-shot `connect.py` still disconnects by design. |
 
 Open constraints:
 
@@ -50,6 +50,8 @@ Open constraints:
 | `0x1A/0x0A` country code | Capability bit says yes, command bitmap does not advertise it; direct send times out | Skipped unless the command appears in the runtime bitmap. This restored reliable fitness and P2P ping. |
 | Connect status | Returns TLV `0x7F=000186a0` | Treat as OK (`100000`), not an auth error. |
 | Standalone HRV dictionary `500044` | Capability `hrv=false`; P2P route returns `0x000186a4` | Standalone HRV is not exposed on this firmware. |
+| Live RRI `0x19/0x05` | Returns `0x0001ec38` immediately after successful open | Gadgetbridge confirms the command shape, but Huawei Health's `serviceId_25.json` says `cmd=0x01` has optional tag `0x02=vol_status`; testing `type=0x03,vol_status=1` still returns `0x0001ec38`. |
+| PermissionCheck `0x01/0x38` | Band asks for permission `1`; reply status frame is `0x000186a4` | Gadgetbridge treats permission ACK as fire-and-forget. Python now replies and records status-only frames instead of treating them as fatal auth rejects. Permission 1 appears SMS/call-related, not the RRI gate. |
 | P2P dictionary classes | `skin_temperature=ack_no_data`; emotion/sleep_apnea/etc return `0x000186a4` | P2P module is alive, but these classes are either gated or unsupported for host pull. |
 | Sequence sleep file `sequence_data/SLEEP_DETAILS` | Parser implemented, file-init route still returns status-only/no metadata | Sleep HRV may still exist in device data, but this pull trigger is incomplete or firmware-gated. |
 | P2P ping after failed file-sync attempts | Can fail later in the same session | A fresh session pings cleanly. The dashboard uses the latest successful P2P probe artifact and marks file-sync routes separately. |
@@ -64,7 +66,10 @@ There are three distinct HRV-looking paths, and they are not equivalent:
    type `0x04`. `HuaweiStressHRVCalculation` computes RMSSD-like and
    frequency-domain HRV features from 50-70 seconds of high-quality SQI data.
    This is the strongest route for "make HRV work" today because the Band 10
-   advertises service `0x19/cmd=0x01`.
+   advertises service `0x19/cmd=0x01`. As of the latest probe, the open request
+   succeeds but sample emission is blocked by status `0x0001ec38`; the working
+   code now records request type, optional `vol_status`, and all transport status
+   frames into `data/latest_live_hrv.json`.
 2. **Sleep sequence HRV**: Gadgetbridge `downloadDictTrueSleepData()` requests
    `sequence_data` with dictionary class `700013`. The decompiled APK confirms
    fields `avgHrv=700013878`, `minHrvBaseline=700013305`,
@@ -112,6 +117,11 @@ I/O is delegated through Huawei services/WearEngine. It is still useful for data
 dictionary identity and field validation:
 
 - `resources/assets/dict_config.txt` contains `SLEEP_DETAILS` class `700013`.
+- `resources/assets/arkui-x/arkuix/resources/rawfile/serviceId_25.json` maps
+  service `25` (`0x19`) command `1` to `hr_type` plus optional `vol_status`, and
+  command `3` to a real-time HR list. This appears to be Huawei's newer realtime
+  HR surface; it is related to, but not identical to, Gadgetbridge's RRI parser on
+  `cmd=0x05`.
 - `DicDataTypeUtil.java` confirms `SLEEP_DETAILS_AVG_HRV`,
   `SLEEP_DETAILS_HRV_DAY_TO_BASELINE`, `SLEEP_DETAILS_AVG_BREATHRATE`,
   `SLEEP_DETAILS_AVG_OXYGEN_SATURATION`, `SLEEP_DETAILS_SLEEP_SCORE`, etc.
@@ -120,14 +130,18 @@ dictionary identity and field validation:
 
 ### Execution Plan
 
-1. Keep the stable reconnect/init path; do not return to first-auth unless
+1. Run `band_daemon.py` for normal use; one-shot scripts are diagnostic only and
+   leave the band disconnected when they exit.
+2. Keep the stable reconnect/init path; do not return to first-auth unless
    `band.ini` is intentionally cleared.
-2. Treat fitness minute history as the reliable base data source for the first web UI:
+3. Treat fitness minute history as the reliable base data source for the first web UI:
    steps, HR, resting HR, SpO2, calories, sleep segments, strain proxy.
-3. Keep RRI/stress and sleep-sequence routes as experimental panels with clear
+4. Keep RRI/stress and sleep-sequence routes as experimental panels with clear
    status/error reporting.
-4. Avoid unsupported commands that empirically destabilize the session (`0x1A/0x0A`).
-5. Build a local web dashboard over the JSON artifacts in `data/`, then continue
+5. Avoid unsupported commands that empirically destabilize the session (`0x1A/0x0A`).
+6. Continue HRV work through two precise routes: solve `0x19/0x05=0x0001ec38`
+   for live RRI, and solve the `sequence_data/SLEEP_DETAILS` trigger for sleep HRV.
+7. Build a local web dashboard over the JSON artifacts in `data/`, then continue
    adding panels as more routes become available. First dashboard is implemented in
    `dashboard/` and uses the reliable fitness artifacts plus explicit experimental
    route statuses.

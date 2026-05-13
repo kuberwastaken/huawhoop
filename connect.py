@@ -611,6 +611,7 @@ class Band:
         self._pending_file_inits = []
         self._feature_config_requested = False
         self._live_rri_samples = []
+        self._live_rri_events = []
         self.supported_services = set()
         self.commands_per_service = {}
         self.expand_capabilities = b""
@@ -934,7 +935,7 @@ class Band:
                                   pin_code: bytes, rand_self: bytes, seed: bytes):
         """Handle or log an unsolicited packet."""
         if svc == SVC_DEV and cmd == 0x38:
-            logger.warning(f"  Band auth rejection (svc=0x01/cmd=0x38): {tlvs}")
+            await self._handle_permission_check(tlvs)
         elif svc == SVC_DATASYNC:
             if not await self._handle_datasync(cmd, tlvs):
                 logger.info(f"  svc={svc:#x}/cmd={cmd:#x} raw tlvs: { {hex(k): v.hex() for k,v in tlvs.items()} }")
@@ -961,16 +962,58 @@ class Band:
                 )
             except Exception as e:
                 logger.debug(f"  FileUpload unsolicited parse failed cmd={cmd:#x}: {e!r}")
+        elif svc == SVC_HR_RRI_TEST and cmd == CMD_HR_RRI_OPEN_CLOSE:
+            data = self._decrypt_or_raw_tlvs(tlvs)
+            event = {
+                "timestamp": int(time.time()),
+                "svc": svc,
+                "cmd": cmd,
+                "tlvs": {hex(k): v.hex() for k, v in data.items()},
+            }
+            if 0x7F in data:
+                event["status"] = self._tlv_int(data[0x7F])
+            self._live_rri_events.append(event)
+            logger.info(f"  Live RRI open/close status: {event}")
         elif svc == SVC_HR_RRI_TEST and cmd == CMD_HR_RRI_DATA:
             samples = self._parse_live_rri_packet(tlvs)
             self._live_rri_samples.extend(samples)
             logger.debug(f"  Live RRI packet: {len(samples)} samples, total={len(self._live_rri_samples)}")
+        elif svc == SVC_HR_RRI_TEST:
+            data = self._decrypt_or_raw_tlvs(tlvs)
+            event = {
+                "timestamp": int(time.time()),
+                "svc": svc,
+                "cmd": cmd,
+                "tlvs": {hex(k): v.hex() for k, v in data.items()},
+            }
+            if 0x7F in data:
+                event["status"] = self._tlv_int(data[0x7F])
+            self._live_rri_events.append(event)
+            logger.info(f"  Live HR/RRI unsolicited: {event}")
         elif svc == 0x37 or (svc == SVC_DEV and cmd == 0x3D):
             # DataSync or encrypted dev packet — log but don't respond
             logger.info(f"  svc={svc:#x}/cmd={cmd:#x} raw tlvs: { {hex(k): v.hex() for k,v in tlvs.items()} }")
             self._decrypt_and_log(tlvs, f"svc={svc:#x}/cmd={cmd:#x}", pin_code, rand_self, seed)
         else:
             logger.debug(f"  Skipping unsolicited packet svc={svc:#x} cmd={cmd:#x}")
+
+    async def _handle_permission_check(self, tlvs: dict):
+        try:
+            decoded = self._decrypt_transaction_tlvs(tlvs)
+        except Exception as e:
+            logger.warning(f"  PermissionCheck decrypt failed: {e!r} raw={tlvs}")
+            return
+        if 0x7F in decoded:
+            status = self._tlv_int(decoded[0x7F])
+            logger.info(f"  PermissionCheck status response: {status:#x}")
+            return
+        permission = self._tlv_int(decoded.get(0x01, b""))
+        if permission <= 0:
+            logger.warning(f"  PermissionCheck missing permission: { {hex(k): v.hex() for k, v in decoded.items()} }")
+            return
+        reply = tlv_enc(0x01, struct.pack(">H", permission)) + tlv_enc(0x02, b"\x00\x00")
+        logger.info(f"  PermissionCheck permission={permission} -> status=0")
+        await self._send_encrypted_no_wait(SVC_DEV, 0x38, reply)
 
     async def _respond_to_notification(self, svc: int, cmd: int, key: bytes):
         """Send an encrypted ACK to a band notification using the given key."""
@@ -1015,6 +1058,12 @@ class Band:
         logger.debug(f"  decrypt rx plain={plain.hex()} "
                      f"tlvs={ {hex(k): v.hex() for k, v in decrypted.items()} }")
         return decrypted
+
+    def _decrypt_or_raw_tlvs(self, tlvs: dict) -> dict:
+        try:
+            return self._decrypt_transaction_tlvs(tlvs)
+        except Exception:
+            return tlvs
 
     def _decrypt_transaction_payload(self, tlvs: dict) -> bytes:
         if not (self.secret_key and 0x7C in tlvs and 0x7D in tlvs and 0x7E in tlvs):
@@ -2839,10 +2888,20 @@ class Band:
 
     def _parse_live_rri_packet(self, tlvs: dict) -> list[dict]:
         """Parse HrRriTest.RriData notifications (svc=0x19/cmd=0x05)."""
-        try:
-            data = self._decrypt_transaction_tlvs(tlvs)
-        except Exception:
-            data = tlvs
+        data = self._decrypt_or_raw_tlvs(tlvs)
+
+        if 0x7F in data:
+            status = self._tlv_int(data[0x7F])
+            event = {
+                "timestamp": int(time.time()),
+                "svc": SVC_HR_RRI_TEST,
+                "cmd": CMD_HR_RRI_DATA,
+                "status": status,
+                "tlvs": {hex(k): v.hex() for k, v in data.items()},
+            }
+            self._live_rri_events.append(event)
+            logger.info(f"  Live RRI data status: {event}")
+            return []
 
         container = data.get(0x82, b"")
         samples = []
@@ -2896,12 +2955,22 @@ class Band:
             return result
 
         self._live_rri_samples = []
+        self._live_rri_events = []
+        open_type = int(os.getenv("BAND10_RRI_OPEN_TYPE", "3"), 0)
+        close_type = int(os.getenv("BAND10_RRI_CLOSE_TYPE", "4"), 0)
+        vol_status = os.getenv("BAND10_RRI_VOL_STATUS")
+        open_tlv = tlv_enc(0x01, bytes([open_type & 0xFF]))
+        if vol_status is not None:
+            open_tlv += tlv_enc(0x02, bytes([int(vol_status, 0) & 0xFF]))
         start = time.time()
-        logger.info(f"Live HRV: opening RRI stream for {duration:.0f}s")
+        logger.info(
+            f"Live HRV: opening RRI stream for {duration:.0f}s "
+            f"type={open_type:#x} vol_status={vol_status if vol_status is not None else 'unset'}"
+        )
         await self._send_encrypted_no_wait(
             SVC_HR_RRI_TEST,
             CMD_HR_RRI_OPEN_CLOSE,
-            tlv_enc(0x01, b"\x03"),
+            open_tlv,
         )
         try:
             await self._drain_unsolicited_for(duration)
@@ -2910,12 +2979,18 @@ class Band:
             await self._send_encrypted_no_wait(
                 SVC_HR_RRI_TEST,
                 CMD_HR_RRI_OPEN_CLOSE,
-                tlv_enc(0x01, b"\x04"),
+                tlv_enc(0x01, bytes([close_type & 0xFF])),
             )
-            await asyncio.sleep(0.5)
+            await self._drain_unsolicited_for(1.5)
 
         elapsed = max(1, round(time.time() - start))
         result = band_analytics.analyze_rri_samples(self._live_rri_samples, signal_time_sec=elapsed)
+        result["request"] = {
+            "open_type": open_type,
+            "close_type": close_type,
+            "vol_status": None if vol_status is None else int(vol_status, 0),
+        }
+        result["transport_events"] = self._live_rri_events
         save_json_artifact("latest_live_hrv.json", result)
         append_jsonl_artifact("live_hrv_history.jsonl", result)
         logger.info(
