@@ -36,6 +36,13 @@ def _status_payload(state: str, **extra) -> dict:
     return payload
 
 
+def _success_status_tlv(tlvs: dict | None) -> bool:
+    if not tlvs:
+        return False
+    status = tlvs.get(0x7F)
+    return status is None or int.from_bytes(status, "big") == 0x000186A0
+
+
 async def _safe(label: str, coro, default=None):
     try:
         result = await coro
@@ -120,6 +127,7 @@ async def run_connected_session(cfg: dict):
         full_every = max(1, int(os.getenv("BAND10_FULL_SYNC_EVERY", "6")))
         sync_interval = max(60, int(os.getenv("BAND10_SYNC_INTERVAL_SECONDS", "300")))
         keepalive_interval = max(15, int(os.getenv("BAND10_KEEPALIVE_SECONDS", "60")))
+        keepalive_mode = os.getenv("BAND10_KEEPALIVE_MODE", "battery").strip().lower()
         live_hrv_every = max(0, int(os.getenv("BAND10_LIVE_HRV_EVERY", "0")))
         initial_full_sync = os.getenv("BAND10_INITIAL_FULL_SYNC", "1") != "0"
         max_seconds = int(os.getenv("BAND10_DAEMON_MAX_SECONDS", "0"))
@@ -147,13 +155,26 @@ async def run_connected_session(cfg: dict):
                     next_sync = time.time() + sync_interval
 
                 if now >= next_keepalive:
-                    connect_status = await _safe("connect keepalive", band.get_connect_status(), default=None)
-                    _status_payload(
-                        "connected",
-                        device_mac=cfg["device_mac"],
-                        keepalive_ok=connect_status is not None,
-                        keepalive_tlvs={hex(k): v.hex() for k, v in connect_status.items()} if connect_status else None,
-                    )
+                    if keepalive_mode == "connect_status":
+                        connect_status = await _safe("connect keepalive", band.get_connect_status(), default=None)
+                        keepalive_ok = _success_status_tlv(connect_status)
+                        _status_payload(
+                            "connected" if keepalive_ok else "degraded",
+                            device_mac=cfg["device_mac"],
+                            keepalive_mode=keepalive_mode,
+                            keepalive_ok=keepalive_ok,
+                            keepalive_tlvs={hex(k): v.hex() for k, v in connect_status.items()} if connect_status else None,
+                        )
+                    else:
+                        battery = await _safe("battery keepalive", band.get_battery(), default=-1)
+                        keepalive_ok = isinstance(battery, int) and battery >= 0
+                        _status_payload(
+                            "connected" if keepalive_ok else "degraded",
+                            device_mac=cfg["device_mac"],
+                            keepalive_mode="battery",
+                            keepalive_ok=keepalive_ok,
+                            battery=battery,
+                        )
                     next_keepalive = time.time() + keepalive_interval
 
                 await band._drain_unsolicited_for(5.0)
