@@ -40,7 +40,8 @@ What works:
 | P2P service ping | Working | `hw.watch.health.filesync` replies `cmd=0x03 code=0xca` to service ping. |
 | P2P dictionary probe classification | Working | Probe distinguishes `ack_no_data` from `0x000186a4` auth/unsupported errors. |
 | Huawei Health dictionary mapping | Confirmed | Decompiled APK confirms `SLEEP_DETAILS=700013` includes `avgHrv`, HRV baseline, sleep score, SpO2 and breath-rate fields. |
-| Live RRI HRV route | Transport verified, samples blocked | `svc=0x19/cmd=0x01 type=0x03` is accepted with `0x000186a0`; band immediately sends `svc=0x19/cmd=0x05 status=0x0001ec38` and no RRI/SQI containers. Added transport diagnostics and Huawei-app-shaped `vol_status` probing. |
+| Sleep sequence HRV | Working | `sequence_data/SLEEP_DETAILS` now downloads via service `0x2C`; latest 48h pull produced 4 sessions, 2 valid HRV summaries, latest full-sleep `avgHrv=48 ms` with baseline range `28-51`. |
+| Live RRI HRV route | Transport verified, samples blocked | `svc=0x19/cmd=0x01 type=0x03` is accepted with `0x000186a0`; band immediately sends `svc=0x19/cmd=0x05 status=0x0001ec38` and no RRI/SQI containers. Treat as optional/diagnostic now that sleep-sequence HRV works. |
 | Persistent connected mode | Working in bounded soak | `band_daemon.py` kept a reconnect session open, ran keepalives and sync cycles, and wrote `data/connection_status.json`. `run_dashboard.py` is now the normal workflow: it serves the web dashboard and runs the daemon in one process. One-shot `connect.py` still disconnects by design. |
 
 Open constraints:
@@ -53,7 +54,7 @@ Open constraints:
 | Live RRI `0x19/0x05` | Returns `0x0001ec38` immediately after successful open | Gadgetbridge confirms the command shape, but Huawei Health's `serviceId_25.json` says `cmd=0x01` has optional tag `0x02=vol_status`; testing `type=0x03,vol_status=1` still returns `0x0001ec38`. |
 | PermissionCheck `0x01/0x38` | Band asks for permission `1`; reply status frame is `0x000186a4` | Gadgetbridge treats permission ACK as fire-and-forget. Python now replies and records status-only frames instead of treating them as fatal auth rejects. Permission 1 appears SMS/call-related, not the RRI gate. |
 | P2P dictionary classes | `skin_temperature=ack_no_data`; emotion/sleep_apnea/etc return `0x000186a4` | P2P module is alive, but these classes are either gated or unsupported for host pull. |
-| Sequence sleep file `sequence_data/SLEEP_DETAILS` | Parser implemented, file-init route still returns status-only/no metadata | Sleep HRV may still exist in device data, but this pull trigger is incomplete or firmware-gated. |
+| Sequence sleep file `sequence_data/SLEEP_DETAILS` | Working | File init may include both `0x7F=000186a0` and metadata tags. Treating any `0x7F` as status-only was wrong; after fixing that, file-info and block download complete normally. |
 | P2P ping after failed file-sync attempts | Can fail later in the same session | A fresh session pings cleanly. The dashboard uses the latest successful P2P probe artifact and marks file-sync routes separately. |
 | Empty quick fitness pulls | Can happen during lightweight daemon sync | The daemon/connect runner now records the empty pull in sync status but does not overwrite the last good dashboard fitness/recovery artifacts. |
 
@@ -74,16 +75,18 @@ There are three distinct HRV-looking paths, and they are not equivalent:
 2. **Sleep sequence HRV**: Gadgetbridge `downloadDictTrueSleepData()` requests
    `sequence_data` with dictionary class `700013`. The decompiled APK confirms
    fields `avgHrv=700013878`, `minHrvBaseline=700013305`,
-   `maxHrvBaseline=700013355`, and `hrvDayToBaseline=700013824`. Our parser is
-   aligned, but this band currently returns success-without-metadata for the file
-   init, so no payload is available yet.
+   `maxHrvBaseline=700013355`, and `hrvDayToBaseline=700013824`. This is now the
+   primary HRV source. A verified 48-hour pull downloaded a 2184-byte
+   `sequence_data` file and parsed `avgHrv=19 ms` for the prior main sleep plus
+   `avgHrv=48 ms` for the latest main sleep. Short nap-like stage-5 sessions can
+   carry zero HRV and are ignored by analytics.
 3. **Standalone P2P HRV dictionary**: APK class `500044` /
    `heartRateVariabilityRMSSD=500044831` exists, but the Band 10 reports
    `hrv=false` in expanded capabilities and returns `0x000186a4` for host pull.
    Keep it as a diagnostic route, not the primary HRV path.
 
-New local analytics code writes `data/latest_insights.json` and combines live RRI
-or sleep-sequence HRV, resting HR, sleep amount, SpO2, HR-load strain, and
+New local analytics code writes `data/latest_insights.json` and combines
+sleep-sequence HRV, optional live RRI diagnostics, resting HR, sleep amount, SpO2, HR-load strain, and
 short/long training load into a dashboard-ready readiness model. The recovery score
 is intentionally labeled as a local model, not a WHOOP clone. The training load
 model now uses an EWMA-style acute/chronic load calculation (7-day / 42-day time

@@ -34,7 +34,13 @@ $env:BAND10_INITIAL_FULL_SYNC = "0"
 python band_daemon.py
 ```
 
-Live RRI/HRV probing is intentionally opt-in until the Band 10 emits samples reliably:
+HRV now comes from the sleep-sequence dictionary file (`sequence_data/SLEEP_DETAILS`)
+downloaded during full sync. This is the same route Gadgetbridge uses for TruSleep
+dictionary data and includes `avgHrv`, HRV baselines, sleep score, SpO2 and breath
+rate summaries.
+
+Live RRI/HRV probing is intentionally opt-in because the Band 10 accepts the stream
+open command but has not emitted RRI samples reliably:
 
 ```powershell
 $env:BAND10_LIVE_HRV_EVERY = "12"
