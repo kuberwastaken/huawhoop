@@ -147,7 +147,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Audit APK for matching weather/watchface primitives.
 - [x] Add bridge API and command queue.
 - [x] Rebuild dashboard as PWA shell.
-- [ ] Implement weather push.
+- [ ] Live-test weather push through the daemon.
 
 ## Research TODO
 

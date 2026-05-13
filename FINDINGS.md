@@ -711,3 +711,9 @@ Implementation choice: first add read-only params/list/name support. Only add up
 - The dashboard is now a mobile-first PWA shell rather than a static artifact viewer. It reads bridge API artifacts when served by `run_dashboard.py`, falls back to local `data/*.json` artifacts for static review, and exposes sync/weather commands without showing protocol internals.
 - Browser smoke check against local artifacts showed connected status, recovery, sleep, stress, weather, and HRV (`48 ms` from sleep sequence) without console errors.
 - The hosted version should remain a client. The BLE owner stays local because it needs stored HiChain keys, a long-lived connection, and battery-aware sync behavior near the band.
+
+### Weather Implementation Status
+
+- `connect.py` now implements the Gadgetbridge weather chain: start (`0x0f/0x09`), unit (`0x0f/0x05`), basic support (`0x0f/0x02`), extended support (`0x0f/0x06`), sun/moon support (`0x0f/0x0a`), current weather (`0x0f/0x01`), and optional forecast (`0x0f/0x08`).
+- Current and forecast TLV serialization has been dry-run locally and preserves Gadgetbridge's nested/repeated container layout.
+- First live weather attempt on 2026-05-13 did not reach the Huawei protocol: Bleak/Windows returned `BleakDeviceNotFoundError` for the band address before connecting. This should be retried through the long-lived daemon once the band is advertising/available.

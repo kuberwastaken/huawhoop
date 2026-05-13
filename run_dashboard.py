@@ -30,6 +30,7 @@ ARTIFACT_ALLOWLIST = {
     "latest_trusleep_preview.json",
     "latest_live_hrv.json",
     "latest_passive_health_settings.json",
+    "latest_weather_push.json",
     "recovery_history.jsonl",
     "insights_history.jsonl",
     "live_hrv_history.jsonl",

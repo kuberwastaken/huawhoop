@@ -61,6 +61,7 @@ SVC_DEV     = 0x01
 SVC_FITNESS = 0x07
 SVC_ACCOUNT = 0x1A
 SVC_STRESS  = 0x20
+SVC_WEATHER = 0x0F
 SVC_FILE_UPLOAD = 0x28
 SVC_FILE_DOWNLOAD = 0x2C
 SVC_P2P     = 0x34
@@ -97,6 +98,18 @@ CMD_HR_RRI_OPEN_CLOSE = 0x01
 CMD_HR_REALTIME_DATA = 0x03
 CMD_HR_RRI_DATA = 0x05
 CMD_SLEEP_BREATH = 0x01
+
+WEATHER_CURRENT = 0x01
+WEATHER_SUPPORT = 0x02
+WEATHER_DEVICE_REQUEST = 0x04
+WEATHER_UNIT = 0x05
+WEATHER_EXTENDED_SUPPORT = 0x06
+WEATHER_FORECAST = 0x08
+WEATHER_START = 0x09
+WEATHER_SUN_MOON_SUPPORT = 0x0A
+RESULT_SUCCESS = 0x000186A0
+RESULT_WEATHER_ALREADY_STARTED = 0x000186A3
+RESULT_WEATHER_DEVICE_REQUEST = 0x000186AA
 
 FILE_CMD_INIT = 0x01
 FILE_CMD_HASH = 0x02
@@ -186,7 +199,7 @@ COMMANDS_PER_SERVICE = {
     0x0B: bytes([0x01, 0x03]),
     0x0C: bytes([0x01]),
     0x0D: bytes([0x01]),
-    0x0F: bytes([0x01, 0x03, 0x05, 0x06, 0x07, 0x08, 0x0A, 0x0B, 0x0C]),
+    0x0F: bytes([0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A, 0x0B, 0x0C]),
     0x10: bytes([0x01]),
     0x11: bytes([0x01]),
     0x12: bytes([0x01]),
@@ -235,6 +248,8 @@ EXPAND_CAPABILITY_LABELS = {
     "bed_time": 199,
     "emotion": 206,
     "hrv": 235,
+    "weather_uv_index": 0x2F,
+    "weather_extended_hour_forecast": 0xC0,
     "notification_picture": 256,
     "contacts_sync": 271,
 }
@@ -617,6 +632,7 @@ class Band:
         self._live_rri_samples = []
         self._live_hr_samples = []
         self._live_rri_events = []
+        self._last_weather_payload = None
         self.supported_services = set()
         self.commands_per_service = {}
         self.expand_capabilities = b""
@@ -950,6 +966,14 @@ class Band:
             # Gadgetbridge ignores it entirely during first auth (secretKey==None).
             logger.debug(f"  svc=0x25/cmd=0x03 (MusicControl) — skipping, "
                          f"tlvs={ {hex(k): v.hex() for k,v in tlvs.items()} }")
+        elif svc == SVC_WEATHER and cmd == WEATHER_DEVICE_REQUEST:
+            decoded = self._decrypt_or_raw_tlvs(tlvs)
+            status = self._tlv_int(decoded.get(0x7F, b""), default=-1)
+            logger.info(f"  Weather device request: { {hex(k): v.hex() for k, v in decoded.items()} }")
+            if status == RESULT_WEATHER_DEVICE_REQUEST and self._last_weather_payload:
+                await self.send_weather_update(self._last_weather_payload)
+            else:
+                await self._weather_device_request_ack()
         elif svc == SVC_FILE_DOWNLOAD and cmd == FILE_CMD_INCOMING_INIT:
             init = self._parse_incoming_file_init(tlvs)
             self._pending_file_inits.append(init)
@@ -2166,6 +2190,284 @@ class Band:
 
     async def get_device_status(self) -> dict:
         return await self._transact(SVC_DEV, CMD_DEVICE_STATUS, tlv_enc(0x01), timeout=5.0)
+
+    @staticmethod
+    def _byte(value: int) -> bytes:
+        return bytes([int(value) & 0xFF])
+
+    @staticmethod
+    def _i8(value: float | int) -> bytes:
+        value = int(round(value))
+        return struct.pack(">b", max(-128, min(127, value)))
+
+    @staticmethod
+    def _u8(value: float | int) -> bytes:
+        value = int(round(value))
+        return bytes([max(0, min(255, value))])
+
+    @staticmethod
+    def _i16(value: int) -> bytes:
+        return struct.pack(">h", max(-32768, min(32767, int(value))))
+
+    @staticmethod
+    def _i32(value: int) -> bytes:
+        return struct.pack(">i", max(-2147483648, min(2147483647, int(value))))
+
+    @staticmethod
+    def _weather_icon_byte(condition_code: int) -> int:
+        # Gadgetbridge's OpenWeatherMap-condition to Huawei-icon mapping.
+        exact = {
+            500: 0x07, 501: 0x08, 502: 0x09, 503: 0x0A, 504: 0x0C, 511: 0x13,
+            600: 0x0E, 601: 0x0F, 602: 0x10, 611: 0x06,
+            701: 0x12, 741: 0x12, 721: 0x35, 751: 0x1E, 761: 0x1D,
+            800: 0x00, 801: 0x01, 802: 0x01, 803: 0x02, 804: 0x02,
+        }
+        if condition_code in exact:
+            return exact[condition_code]
+        if 200 <= condition_code < 300:
+            return 0x04
+        if 300 <= condition_code < 400:
+            return 0x07
+        if 500 <= condition_code < 600:
+            return 0x08
+        if 600 <= condition_code < 700:
+            return 0x0F
+        return 0x63
+
+    @staticmethod
+    def _weather_wind_direction(degrees: float | int | None) -> int:
+        if degrees is None:
+            return 0
+        degrees = float(degrees)
+        if degrees < 0 or degrees > 360:
+            return 0
+        value = int((degrees / 45.0) + 0.5) % 8
+        return 8 if value == 0 else value
+
+    @staticmethod
+    def _weather_beaufort(wind_speed_kmh: float | int | None) -> int:
+        if wind_speed_kmh is None:
+            return 0
+        speed = max(0.0, float(wind_speed_kmh))
+        for index, upper in enumerate([1, 6, 12, 20, 29, 39, 50, 62, 75, 89, 103, 118]):
+            if speed < upper:
+                return index
+        return 12
+
+    @staticmethod
+    def _weather_support_defaults() -> dict:
+        return {
+            "weather": True,
+            "wind": True,
+            "pm25": False,
+            "temperature": True,
+            "location": True,
+            "current_temperature": True,
+            "unit": True,
+            "aqi": False,
+            "time": True,
+            "source": True,
+            "icon": True,
+            "sun_moon": False,
+            "moon_phase": False,
+            "uv_index": False,
+            "extended_hourly": False,
+        }
+
+    def _weather_parse_basic_support(self, settings: dict, tlvs: dict):
+        bitmap = tlvs.get(0x01, b"\x00")[0]
+        settings.update({
+            "weather": bool(bitmap & 0x01),
+            "wind": bool(bitmap & 0x02),
+            "pm25": bool(bitmap & 0x04),
+            "temperature": bool(bitmap & 0x08),
+            "location": bool(bitmap & 0x10),
+            "current_temperature": bool(bitmap & 0x20),
+            "unit": bool(bitmap & 0x40),
+            "aqi": bool(bitmap & 0x80),
+        })
+
+    def _weather_parse_extended_support(self, settings: dict, tlvs: dict):
+        bitmap = self._tlv_int(tlvs.get(0x01, b"\x00\x00"))
+        settings.update({
+            "time": bool(bitmap & 0x01),
+            "source": bool(bitmap & 0x02),
+            "icon": bool(bitmap & 0x04),
+        })
+
+    def _weather_parse_sun_moon_support(self, settings: dict, tlvs: dict):
+        bitmap = self._tlv_int(tlvs.get(0x01, b"\x00\x00\x00\x00"))
+        settings.update({
+            "sun_moon": bool(bitmap & 0x01),
+            "moon_phase": bool(bitmap & 0x02),
+        })
+
+    def _weather_current_tlv(self, payload: dict, settings: dict) -> bytes:
+        condition = int(payload.get("condition_code", 800) or 800)
+        now = int(payload.get("timestamp") or time.time())
+        location = str(payload.get("location") or "Weather")[:64]
+        source = str(payload.get("source") or "Open-Meteo")[:64]
+        current_temp = payload.get("current_temp_c")
+        low_temp = payload.get("low_temp_c")
+        high_temp = payload.get("high_temp_c")
+        wind_speed = payload.get("wind_speed_kmh")
+        wind_dir = payload.get("wind_direction")
+
+        tlv = b""
+        nested_81 = b""
+        if settings.get("icon"):
+            nested_81 += tlv_enc(0x02, self._byte(self._weather_icon_byte(condition)))
+        if settings.get("wind"):
+            wind = (self._weather_wind_direction(wind_dir) << 8) | self._weather_beaufort(wind_speed)
+            nested_81 += tlv_enc(0x03, self._i16(wind))
+        if nested_81:
+            tlv += tlv_enc(0x81, nested_81)
+
+        if settings.get("temperature") and low_temp is not None and high_temp is not None:
+            tlv += tlv_enc(0x85, tlv_enc(0x06, self._i8(low_temp)) + tlv_enc(0x07, self._i8(high_temp)))
+        if settings.get("pm25") and payload.get("pm25") is not None:
+            tlv += tlv_enc(0x04, self._i16(payload["pm25"]))
+        if settings.get("location"):
+            tlv += tlv_enc(0x08, location.encode("utf-8"))
+        if settings.get("current_temperature") and current_temp is not None:
+            tlv += tlv_enc(0x09, self._i8(current_temp))
+        if settings.get("unit"):
+            tlv += tlv_enc(0x0A, b"\x00")
+        if settings.get("aqi") and payload.get("aqi") is not None:
+            tlv += tlv_enc(0x0B, self._i16(payload["aqi"]))
+        if settings.get("time"):
+            tlv += tlv_enc(0x0C, self._i32(now))
+        if settings.get("source"):
+            tlv += tlv_enc(0x0E, source.encode("utf-8"))
+        if settings.get("uv_index") and payload.get("uv_index") is not None:
+            tlv += tlv_enc(0x0F, self._u8(payload["uv_index"]))
+
+        if settings.get("extended_hourly"):
+            if payload.get("humidity") is not None:
+                tlv += tlv_enc(0x10, self._u8(payload["humidity"]))
+            if wind_speed is not None:
+                tlv += tlv_enc(0x11, self._i32(round(float(wind_speed))))
+            if payload.get("feels_like_c") is not None:
+                tlv += tlv_enc(0x12, self._i32(round(float(payload["feels_like_c"]))))
+        return tlv
+
+    def _weather_forecast_tlv(self, payload: dict, settings: dict) -> bytes:
+        tlv = b""
+        hourly_items = []
+        for item in (payload.get("hourly") or [])[:24]:
+            if not item.get("timestamp"):
+                continue
+            entry = tlv_enc(0x03, self._i32(item["timestamp"]))
+            if settings.get("icon"):
+                entry += tlv_enc(0x04, self._byte(self._weather_icon_byte(int(item.get("condition_code") or 800))))
+            if settings.get("temperature") or settings.get("current_temperature"):
+                if item.get("temp_c") is not None:
+                    entry += tlv_enc(0x05, self._i8(item["temp_c"]))
+            if settings.get("extended_hourly"):
+                if item.get("precipitation_probability") is not None:
+                    entry += tlv_enc(0x06, self._u8(item["precipitation_probability"]))
+                if item.get("uv_index") is not None:
+                    entry += tlv_enc(0x07, self._u8(item["uv_index"]))
+            hourly_items.append(tlv_enc(0x82, entry))
+        if hourly_items:
+            tlv += tlv_enc(0x81, b"".join(hourly_items))
+
+        daily = list(payload.get("daily") or [])
+        if not daily and payload.get("timestamp"):
+            daily = [{
+                "timestamp": payload.get("timestamp"),
+                "condition_code": payload.get("condition_code", 800),
+                "max_temp_c": payload.get("high_temp_c"),
+                "min_temp_c": payload.get("low_temp_c"),
+            }]
+        day_items = []
+        for item in daily[:8]:
+            if not item.get("timestamp"):
+                continue
+            entry = tlv_enc(0x12, self._i32(item["timestamp"]))
+            if settings.get("icon"):
+                entry += tlv_enc(0x13, self._byte(self._weather_icon_byte(int(item.get("condition_code") or 800))))
+            if settings.get("temperature"):
+                if item.get("max_temp_c") is not None:
+                    entry += tlv_enc(0x14, self._i8(item["max_temp_c"]))
+                if item.get("min_temp_c") is not None:
+                    entry += tlv_enc(0x15, self._i8(item["min_temp_c"]))
+            if settings.get("sun_moon"):
+                for src, tag in (("sunrise", 0x16), ("sunset", 0x17), ("moonrise", 0x1A), ("moonset", 0x1B)):
+                    if item.get(src):
+                        entry += tlv_enc(tag, self._i32(item[src]))
+            if settings.get("moon_phase") and item.get("moon_phase") is not None:
+                phase = max(1, min(8, int(item["moon_phase"])))
+                entry += tlv_enc(0x1E, self._byte(phase))
+            day_items.append(tlv_enc(0x91, entry))
+        if day_items:
+            tlv += tlv_enc(0x90, b"".join(day_items))
+        return tlv
+
+    async def _weather_device_request_ack(self, status: int = RESULT_SUCCESS):
+        await self._send(SVC_WEATHER, WEATHER_DEVICE_REQUEST, tlv_enc(0x01, struct.pack(">I", status)))
+
+    async def send_weather_update(self, payload: dict) -> dict:
+        if not self.secret_key:
+            raise RuntimeError("Cannot send weather before authenticated encrypted session")
+        if not payload:
+            raise ValueError("Weather payload is empty")
+
+        payload = dict(payload)
+        self._last_weather_payload = payload
+        settings = self._weather_support_defaults()
+        settings["uv_index"] = self._supports_expand_capability(0x2F) or settings["uv_index"]
+        settings["extended_hourly"] = self._supports_expand_capability(0xC0) or settings["extended_hourly"]
+        status = {
+            "started_at": int(time.time()),
+            "started_at_local": local_time_label(int(time.time())),
+            "location": payload.get("location"),
+            "steps": [],
+            "settings": settings,
+        }
+
+        logger.info("Weather push: start")
+        start = await self._transact_encrypted(SVC_WEATHER, WEATHER_START, tlv_enc(0x01, b"\x03"), timeout=8.0)
+        start_code = self._tlv_int(start.get(0x7F, b""))
+        status["steps"].append({"name": "start", "code": start_code, "tlvs": {hex(k): v.hex() for k, v in start.items()}})
+        if start_code not in (RESULT_SUCCESS, RESULT_WEATHER_ALREADY_STARTED):
+            save_json_artifact("latest_weather_push.json", status)
+            raise RuntimeError(f"WeatherStart failed: {start_code:#x}")
+
+        if self._supports_command(SVC_WEATHER, WEATHER_UNIT):
+            unit = await self._transact_encrypted(SVC_WEATHER, WEATHER_UNIT, tlv_enc(0x01, b"\x00"), timeout=8.0)
+            status["steps"].append({"name": "unit", "tlvs": {hex(k): v.hex() for k, v in unit.items()}})
+
+        basic = await self._transact_encrypted(SVC_WEATHER, WEATHER_SUPPORT, tlv_enc(0x01), timeout=8.0)
+        self._weather_parse_basic_support(settings, basic)
+        status["steps"].append({"name": "support", "bitmap": basic.get(0x01, b"").hex()})
+
+        if self._supports_command(SVC_WEATHER, WEATHER_EXTENDED_SUPPORT):
+            extended = await self._transact_encrypted(SVC_WEATHER, WEATHER_EXTENDED_SUPPORT, tlv_enc(0x01), timeout=8.0)
+            self._weather_parse_extended_support(settings, extended)
+            status["steps"].append({"name": "extended_support", "bitmap": extended.get(0x01, b"").hex()})
+
+        if self._supports_command(SVC_WEATHER, WEATHER_SUN_MOON_SUPPORT):
+            sun_moon = await self._transact_encrypted(SVC_WEATHER, WEATHER_SUN_MOON_SUPPORT, tlv_enc(0x01), timeout=8.0)
+            self._weather_parse_sun_moon_support(settings, sun_moon)
+            status["steps"].append({"name": "sun_moon_support", "bitmap": sun_moon.get(0x01, b"").hex()})
+
+        current_tlv = self._weather_current_tlv(payload, settings)
+        current = await self._transact_encrypted(SVC_WEATHER, WEATHER_CURRENT, current_tlv, timeout=10.0)
+        status["steps"].append({"name": "current", "tlvs": {hex(k): v.hex() for k, v in current.items()}})
+
+        if self._supports_command(SVC_WEATHER, WEATHER_FORECAST):
+            forecast_tlv = self._weather_forecast_tlv(payload, settings)
+            if forecast_tlv:
+                forecast = await self._transact_encrypted(SVC_WEATHER, WEATHER_FORECAST, forecast_tlv, timeout=15.0)
+                status["steps"].append({"name": "forecast", "tlvs": {hex(k): v.hex() for k, v in forecast.items()}})
+
+        status["finished_at"] = int(time.time())
+        status["finished_at_local"] = local_time_label(status["finished_at"])
+        status["settings"] = settings
+        save_json_artifact("latest_weather_push.json", status)
+        logger.info("Weather push: complete")
+        return status
 
     async def post_auth_initialize(self):
         logger.info("Post-auth init: starting Huawei connected-state bootstrap...")
