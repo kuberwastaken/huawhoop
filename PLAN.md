@@ -93,8 +93,8 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 
 ## Milestone 2: Weather Push
 
-- [ ] Audit Gadgetbridge weather packet classes and request flow.
-- [ ] Compare against Huawei Health APK weather classes where available.
+- [x] Audit Gadgetbridge weather packet classes and request flow.
+- [x] Compare against Huawei Health APK weather classes where available.
 - [ ] Implement current weather payload push.
 - [ ] Implement forecast payload push if supported by Band 10.
 - [ ] Add PWA weather card and manual/API-backed push control.
@@ -121,8 +121,8 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 
 ## Milestone 5: Watchfaces
 
-- [ ] Audit Gadgetbridge watchface upload/confirm operation.
-- [ ] Compare Huawei Health APK watchface packaging and signing checks.
+- [x] Audit Gadgetbridge watchface upload/confirm operation.
+- [x] Compare Huawei Health APK watchface packaging and device models.
 - [ ] List installed/current watchface metadata if supported.
 - [ ] Upload a known-compatible watchface file.
 - [ ] Document custom watchface/app risk before writing to device.
@@ -142,9 +142,9 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 
 ## Immediate TODO
 
-- [ ] Commit this plan.
-- [ ] Audit Gadgetbridge weather and watchface source.
-- [ ] Audit APK for matching weather/watchface primitives.
+- [x] Commit this plan.
+- [x] Audit Gadgetbridge weather and watchface source.
+- [x] Audit APK for matching weather/watchface primitives.
 - [ ] Add bridge API and command queue.
 - [ ] Rebuild dashboard as PWA shell.
 - [ ] Implement weather push.

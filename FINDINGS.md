@@ -600,3 +600,96 @@ secret_key  =   ; filled after first successful HiChain3 auth
 - Recovery now uses sleep-sequence HRV, sequence-derived sleep minutes/score, overnight average HR, SpO2, breath rate, and stage distribution.
 - The dashboard now shows HRV baseline/resilience, sleep sequence vitals, stage bars, recovery heatmap, route status, and connection status.
 - Open Wearables informed the resilience model: recent sleep HRV coefficient of variation maps to a provisional/stable/variable/unstable status.
+
+---
+
+## 13. 2026-05-13 Weather, Watchface, and Algorithm Audit
+
+### Weather
+
+Gadgetbridge has a complete Huawei weather implementation. The Band 10 route should be copied from:
+
+- `devices/huawei/packets/Weather.java`
+- `service/devices/huawei/HuaweiWeatherManager.java`
+- `requests/SendWeatherStartRequest.java`
+- `requests/SendWeatherSupportRequest.java`
+- `requests/SendWeatherExtendedSupportRequest.java`
+- `requests/SendWeatherSunMoonSupportRequest.java`
+- `requests/SendWeatherCurrentRequest.java`
+- `requests/SendWeatherForecastRequest.java`
+- `requests/SendWeatherUnitRequest.java`
+
+Protocol shape:
+
+| Service | Command | Meaning |
+|---|---:|---|
+| `0x0f` | `0x09` | Weather start, TLV `0x01=0x03`, encrypted. Success is `0x000186a0` or `0x000186a3` in tag `0x7f`. |
+| `0x0f` | `0x05` | Weather unit, TLV `0x01=0` Celsius or `1` Fahrenheit, encrypted. |
+| `0x0f` | `0x02` | Basic support bitmap request, TLV `0x01`, encrypted. Response tag `0x01` bits: weather, wind, PM2.5, temp range, location, current temp, unit, AQI. |
+| `0x0f` | `0x06` | Extended support bitmap request, TLV `0x01`, encrypted. Response tag `0x01` bits: time, source, weather icon. |
+| `0x0f` | `0x0a` | Sun/moon support bitmap request, TLV `0x01`, encrypted. Response tag `0x01` bits: sunrise/sunset, moon phase. |
+| `0x0f` | `0x01` | Current weather payload, encrypted. |
+| `0x0f` | `0x08` | Hourly/daily forecast payload, encrypted and sliced. |
+| `0x0f` | `0x04` | Device weather request/response. Band can ask for weather with status `0x000186aa`; otherwise reply OK. |
+| `0x0f` | `0x07`/`0x0c` | Simple/extended weather error. |
+
+Current weather TLVs:
+
+- Container `0x81`: `0x02` Huawei weather icon, `0x03` wind direction/speed bit-packed as `(direction << 8) | Beaufort`.
+- Container `0x85`: `0x06` low temperature Celsius, `0x07` high temperature Celsius.
+- Scalar tags: `0x04` PM2.5, `0x08` location name, `0x09` current temp Celsius, `0x0a` unit, `0x0b` AQI, `0x0c` observation time epoch seconds, `0x0e` source, `0x0f` UV index, `0x10` humidity, `0x11` wind speed value, `0x12` feels-like temp.
+
+Forecast TLVs:
+
+- Hourly: outer `0x81`, repeated `0x82` entries with `0x03` timestamp, `0x04` icon, `0x05` temp, optional `0x06` precipitation and `0x07` UV index.
+- Daily: outer `0x90`, repeated `0x91` entries with `0x12` timestamp, `0x13` icon, `0x14` high, `0x15` low, optional `0x16` sunrise, `0x17` sunset, `0x1a` moonrise, `0x1b` moonset, `0x1e` moon phase.
+
+Huawei Health APK comparison:
+
+- `defpackage/koq.java` is the decompiled `DataWeather` model. It has the same fields Gadgetbridge sends: weather, PM2.5, low/high/current temp, location, unit, AQI, observation/update time, wind direction/speed, source, forecast days/hours, UV index, humidity, windSpeedValue, and somatosensory/feels-like temperature.
+- `WeatherForecastHour.java` includes time, temperature, weather icon, CN weather icon, precipitation, UV index, and somatosensory temperature.
+- `WeatherForecastDay.java` includes time, icon, high/low temperature, CN icon, and future sun/moon data.
+- `mbd.java` parses capability bundle keys matching Gadgetbridge support bits: `weather_support`, `wind_support`, `pm2_5_support`, `temperature_support`, `location_name_support`, `temperature_current_support`, `unit_support`, `aqi_support`, `time_support`, `source_support`, `cn_weather_icon_support`, and `weather_icon_expand_support`.
+
+Implementation choice: start with Gadgetbridge's support negotiation plus current weather. Add forecast after the basic push is confirmed on the band.
+
+### Watchfaces
+
+Gadgetbridge has a usable watchface route, but it is riskier than weather because it writes files to the device.
+
+Key files:
+
+- `devices/huawei/packets/Watchface.java`
+- `service/devices/huawei/HuaweiWatchfaceManager.java`
+- `service/devices/huawei/HuaweiFwHelper.java`
+- `requests/GetWatchfaceParams.java`
+- `requests/GetWatchfacesList.java`
+- `requests/GetWatchfacesNames.java`
+- `requests/SendWatchfaceConfirm.java`
+- `requests/SendWatchfaceOperation.java`
+- file upload service `0x28`
+
+Protocol shape:
+
+| Service | Command | Meaning |
+|---|---:|---|
+| `0x27` | `0x01` | Watchface params: max version, width, height, supported file type, sort, other versions. |
+| `0x27` | `0x02` | Installed watchface list. Request tags `0x01` and `0x06=0x03` for overseas non-test. Response has outer `0x81`, repeated `0x82` entries. |
+| `0x27` | `0x03` | Operation: activate `1` or delete `2`; tags `0x01` name, `0x02` version, `0x03` operation. |
+| `0x27` | `0x05` | Confirm uploaded watchface; tags name/version plus `0x7f=0x000186a0`. |
+| `0x27` | `0x06` | Resolve watchface display names for installed file IDs. |
+
+Packaging:
+
+- Gadgetbridge reads `description.xml`, preview `preview/cover.jpg`, and either `com.huawei.watchface` or `com.honor.watchface`.
+- That nested file may itself be a zip containing `watchface.bin`; older packages can already contain the bin.
+- File upload type is `1` for watchface. File name format is `<random9digits>_1.0.0`.
+- APK comparison confirms Huawei's model fields through `WatchFaceInfo.java` and `WatchFaceOperateInfo.java`: max version, width, height, support file type, current/preset/non-preset lists, watchface ID, version, operation, dimensions, sync type, and error code.
+
+Implementation choice: first add read-only params/list/name support. Only add upload/activate after we can validate resolution/package metadata locally.
+
+### Algorithm Sources
+
+- Open Wearables is the best open-source algorithm baseline found so far. It has explicit sleep scoring primitives, duration/stage/consistency/interruption scoring, and HRV resilience helpers.
+- WHOOP's public docs confirm high-level behavior, not exact formulas: recovery is driven mainly by HRV, resting HR, respiratory rate, sleep, skin temp, and SpO2; strain is cardiovascular load on a logarithmic 0-21 scale.
+- Current project code already shares Open Wearables-like sleep duration and sigmoid scoring. Next step is to port the actual sleep score breakdown cleanly and add a transparent strain/recovery model around our Huawei data availability.
