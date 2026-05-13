@@ -35,7 +35,7 @@ from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import urlopen
 
-from bleak import BleakClient
+from bleak import BleakClient, BleakScanner
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives import padding as _padding
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
@@ -4120,9 +4120,29 @@ async def run_one_shot_modes(band: Band) -> bool:
 
 async def run():
     cfg = load_or_create_config()
+    scan_timeout = float(os.getenv("BAND10_SCAN_TIMEOUT_SECONDS", "20"))
+    logger.info(f"Scanning for {cfg['device_mac']} for {scan_timeout:g}s...")
+    save_json_artifact("connection_status.json", {
+        "state": "scanning",
+        "device_mac": cfg["device_mac"],
+        "timeout_sec": scan_timeout,
+        "timestamp": int(time.time()),
+        "timestamp_local": local_time_label(int(time.time())),
+    })
+    device = await BleakScanner.find_device_by_address(cfg["device_mac"], timeout=scan_timeout)
+    if device is None:
+        save_json_artifact("connection_status.json", {
+            "state": "not_found",
+            "device_mac": cfg["device_mac"],
+            "timeout_sec": scan_timeout,
+            "timestamp": int(time.time()),
+            "timestamp_local": local_time_label(int(time.time())),
+        })
+        raise RuntimeError(f"Band was not visible to Windows Bluetooth within {scan_timeout:g}s")
+
     logger.info(f"Connecting to {cfg['device_mac']}...")
 
-    async with BleakClient(cfg["device_mac"]) as client:
+    async with BleakClient(device) as client:
         band = Band(client=client, cfg=cfg)
         await band.connect()
         await band.handshake()

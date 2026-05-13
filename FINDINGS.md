@@ -758,6 +758,7 @@ Project implementation:
 
 `connect.py` remains a diagnostic one-shot, but now has narrow modes for precision testing after the factory reset:
 
+- One-shots now use the same scan-before-connect strategy as `band_daemon.py`, writing `connection_status.json` with `scanning`/`not_found` instead of failing immediately on a direct Windows BLE address lookup.
 - `BAND10_ONLY_WEATHER=1`: authenticate, push weather, save `latest_weather_push.json`, disconnect.
 - `BAND10_ONLY_WATCHFACES=1`: authenticate, read installed/current watchface metadata, save `latest_watchfaces.json`, disconnect.
 - `BAND10_ONLY_WATCHFACE_ACTIVATE=1`: activate an already-installed file name from inventory, save `latest_watchface_operation.json`, disconnect.
