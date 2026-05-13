@@ -4,7 +4,8 @@ import logging
 import os
 import time
 
-from bleak import BleakClient
+from bleak import BleakClient, BleakScanner
+from bleak.exc import BleakDeviceNotFoundError
 
 import analytics as band_analytics
 from connect import (
@@ -215,7 +216,14 @@ async def sync_core(band: Band, full: bool = False, live_hrv: bool = False) -> d
 
 
 async def run_connected_session(cfg: dict):
-    async with BleakClient(cfg["device_mac"]) as client:
+    scan_timeout = float(os.getenv("BAND10_SCAN_TIMEOUT_SECONDS", "12"))
+    _status_payload("scanning", device_mac=cfg["device_mac"], timeout_sec=scan_timeout)
+    device = await BleakScanner.find_device_by_address(cfg["device_mac"], timeout=scan_timeout)
+    if device is None:
+        _status_payload("not_found", device_mac=cfg["device_mac"], timeout_sec=scan_timeout)
+        raise BleakDeviceNotFoundError(cfg["device_mac"], "Band was not advertising or visible to Windows Bluetooth")
+
+    async with BleakClient(device) as client:
         band = Band(client=client, cfg=cfg)
         await band.connect()
         await band.handshake()
@@ -303,7 +311,8 @@ async def main():
             raise
         except Exception as e:
             logger.exception("Daemon session failed")
-            _status_payload("reconnecting", device_mac=cfg["device_mac"], error=repr(e), retry_in_sec=backoff)
+            state = "not_found" if isinstance(e, BleakDeviceNotFoundError) else "reconnecting"
+            _status_payload(state, device_mac=cfg["device_mac"], error=repr(e), retry_in_sec=backoff)
             await asyncio.sleep(backoff)
             backoff = min(120, backoff * 2)
 

@@ -88,7 +88,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Add local bridge API endpoints for status, insights, artifacts, and command queue.
 - [x] Add daemon command queue handling for sync and weather commands.
 - [x] Add CORS/bridge URL support for hosted PWA access.
-- [ ] Add clear status states: connected, reconnecting, syncing, stale, error.
+- [x] Add clear status states: scanning, not_found, connected, degraded, reconnecting, stale/error via status artifact.
 - [ ] Add Windows startup/service notes after the bridge is stable.
 
 ## Milestone 2: Weather Push

@@ -705,6 +705,7 @@ Implementation choice: first add read-only params/list/name support. Only add up
   - `POST /api/commands/weather`: queues a weather push command for the active daemon session.
 - `band_daemon.py` polls `data/bridge_commands.jsonl` from inside the one authenticated BLE session and writes results to `data/bridge_command_results.jsonl`.
 - This is the first cross-device bridge: hosted PWA can point at a configured local bridge URL, while the bridge remains the only process touching BLE/auth secrets.
+- The daemon now explicitly scans before connecting and writes `scanning`/`not_found` states when Windows cannot see the band. This makes "connection failed" distinguishable from protocol/auth failure.
 
 ### PWA Shell
 
