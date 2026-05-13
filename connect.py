@@ -2598,9 +2598,14 @@ class Band:
 
     def _weather_forecast_tlv(self, payload: dict, settings: dict) -> bytes:
         tlv = b""
+        now = int(payload.get("timestamp") or time.time())
         hourly_items = []
         for item in (payload.get("hourly") or [])[:24]:
             if not item.get("timestamp"):
+                continue
+            # Open-Meteo returns hourly rows starting at midnight. Gadgetbridge
+            # sends forecast rows, so keep stale hours out of the packet.
+            if int(item["timestamp"]) < now - 3600:
                 continue
             entry = tlv_enc(0x03, self._i32(item["timestamp"]))
             if settings.get("icon"):
@@ -2626,6 +2631,11 @@ class Band:
                 "max_temp_c": payload.get("high_temp_c"),
                 "min_temp_c": payload.get("low_temp_c"),
             }]
+        if daily and daily[0].get("timestamp"):
+            current_utc_day = datetime.fromtimestamp(now, timezone.utc).date()
+            first_utc_day = datetime.fromtimestamp(int(daily[0]["timestamp"]), timezone.utc).date()
+            if first_utc_day <= current_utc_day and len(daily) > 1:
+                daily = daily[1:]
         day_items = []
         for item in daily[:8]:
             if not item.get("timestamp"):
@@ -2634,10 +2644,12 @@ class Band:
             if settings.get("icon"):
                 entry += tlv_enc(0x13, self._byte(self._weather_icon_byte(int(item.get("condition_code") or 800))))
             if settings.get("temperature"):
-                if item.get("max_temp_c") is not None:
-                    entry += tlv_enc(0x14, self._i8(item["max_temp_c"]))
-                if item.get("min_temp_c") is not None:
-                    entry += tlv_enc(0x15, self._i8(item["min_temp_c"]))
+                max_temp = item.get("max_temp_c", item.get("high_temp_c"))
+                min_temp = item.get("min_temp_c", item.get("low_temp_c"))
+                if max_temp is not None:
+                    entry += tlv_enc(0x14, self._i8(max_temp))
+                if min_temp is not None:
+                    entry += tlv_enc(0x15, self._i8(min_temp))
             if settings.get("sun_moon"):
                 for src, tag in (("sunrise", 0x16), ("sunset", 0x17), ("moonrise", 0x1A), ("moonset", 0x1B)):
                     if item.get(src) and self._same_utc_day_timestamp(item.get(src), item["timestamp"]):
