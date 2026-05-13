@@ -3301,6 +3301,24 @@ async def run():
         if os.getenv("BAND10_ENABLE_PASSIVE_SETTINGS", "1") != "0":
             await band.enable_passive_health_settings()
 
+        if os.getenv("BAND10_ONLY_LIVE_HRV", "0") == "1":
+            try:
+                live_duration = float(os.getenv("BAND10_LIVE_HRV_SECONDS", "62"))
+                await band.measure_live_hrv(duration=live_duration)
+            finally:
+                try:
+                    insights = band_analytics.build_insights(DATA_DIR)
+                    logger.info(
+                        "Insights: "
+                        f"recovery={insights.get('recovery_score')} "
+                        f"strain={insights.get('strain', {}).get('strain')} "
+                        f"hrv_source={insights.get('data_quality', {}).get('hrv_source')}"
+                    )
+                except Exception as e:
+                    logger.warning(f"Insight generation failed: {e!r}")
+                await band.disconnect()
+            return
+
         try:
             bat = await band.get_battery()
             logger.info(f"Battery: {bat}%")

@@ -33,5 +33,14 @@ $env:BAND10_LIVE_HRV_SECONDS = "62"
 python run_dashboard.py
 ```
 
+For a focused one-shot HRV transport probe:
+
+```powershell
+$env:BAND10_ONLY_LIVE_HRV = "1"
+$env:BAND10_LIVE_HRV = "1"
+$env:BAND10_LIVE_HRV_SECONDS = "35"
+python connect.py
+```
+
 The dashboard marks live HRV as experimental and shows the latest transport status
 from `data/latest_live_hrv.json`.
