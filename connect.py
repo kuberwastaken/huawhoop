@@ -2324,34 +2324,39 @@ class Band:
         init = await self._transact_encrypted(SVC_FILE_DOWNLOAD, FILE_CMD_INIT, init_tlv, timeout=12.0)
         logger.debug(f"File init response tlvs: { {hex(k): v.hex() for k, v in init.items()} }")
         incoming = None
-        if 0x7F in init:
-            status = self._tlv_int(init[0x7F])
-            if status == 0x000186A0:
-                pending_timeout = 45.0 if file_type == FILE_TYPE_SEQUENCE_DATA else 6.0
-                logger.info(
-                    f"File init returned success status only for {filename!r}; "
-                    f"waiting up to {pending_timeout:.0f}s for incoming metadata"
-                )
-                incoming = await self._wait_for_incoming_file_init(
-                    filename, file_type, timeout=pending_timeout
-                )
-                if not incoming:
-                    logger.info(
-                        f"File init returned success status only for {filename!r}; no file metadata available"
-                    )
-                    return b""
-                await self._ack_incoming_file_init(incoming, status=0)
-                resp_name = incoming["filename"]
-                resp_type = incoming["file_type"]
-                file_id = incoming["file_id"]
-                file_size = incoming["file_size"]
-            else:
-                raise RuntimeError(f"file init failed: {init[0x7F].hex()}")
-        else:
+        status = self._tlv_int(init[0x7F]) if 0x7F in init else None
+        if status is not None and status != 0x000186A0:
+            raise RuntimeError(f"file init failed: {init[0x7F].hex()}")
+
+        has_metadata = all(tag in init for tag in (0x01, 0x02, 0x03, 0x04))
+        if has_metadata:
             resp_name = self._tlv_str(init.get(0x01, b""))
             resp_type = init.get(0x02, b"\x00")[0]
             file_id = init.get(0x03, b"\x00")[0]
             file_size = self._tlv_int(init.get(0x04, b""))
+            if status == 0x000186A0:
+                logger.debug(f"File init for {filename!r} included success status plus metadata")
+        elif status == 0x000186A0:
+            pending_timeout = 45.0 if file_type == FILE_TYPE_SEQUENCE_DATA else 6.0
+            logger.info(
+                f"File init returned success status only for {filename!r}; "
+                f"waiting up to {pending_timeout:.0f}s for incoming metadata"
+            )
+            incoming = await self._wait_for_incoming_file_init(
+                filename, file_type, timeout=pending_timeout
+            )
+            if not incoming:
+                logger.info(
+                    f"File init returned success status only for {filename!r}; no file metadata available"
+                )
+                return b""
+            await self._ack_incoming_file_init(incoming, status=0)
+            resp_name = incoming["filename"]
+            resp_type = incoming["file_type"]
+            file_id = incoming["file_id"]
+            file_size = incoming["file_size"]
+        else:
+            raise RuntimeError(f"file init missing metadata: { {hex(k): v.hex() for k, v in init.items()} }")
         if incoming:
             logger.debug(f"File init metadata came via incoming init: {incoming['raw']}")
         logger.info(
