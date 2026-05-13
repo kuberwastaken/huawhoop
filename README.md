@@ -71,6 +71,9 @@ chain is Gadgetbridge-shaped: start, unit, support, extended support, sun/moon
 support, current weather, GPS/time, and forecast. Forecast rows must include today
 at the current observation timestamp, then future days at `timestamp + 86400 * n`;
 midnight forecast timestamps are rejected by the band.
+Manual weather pushes from the PWA save `data/weather_payload.json`; the daemon
+then refreshes that payload automatically every `BAND10_WEATHER_INTERVAL_SECONDS`
+seconds, defaulting to one hour. Set it to `0` to disable automatic weather pushes.
 
 HRV now comes from the sleep-sequence dictionary file (`sequence_data/SLEEP_DETAILS`)
 downloaded during full sync. This is the same route Gadgetbridge uses for TruSleep

@@ -78,6 +78,16 @@ def append_bridge_command(command_type: str, payload: dict) -> dict:
     return command
 
 
+def save_weather_payload(payload: dict):
+    if not payload:
+        return
+    DATA_DIR.mkdir(exist_ok=True)
+    saved = dict(payload)
+    saved["saved_at"] = int(time.time())
+    saved["saved_at_local"] = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    (DATA_DIR / "weather_payload.json").write_text(json.dumps(saved, indent=2), encoding="utf-8")
+
+
 class DashboardHandler(SimpleHTTPRequestHandler):
     def log_message(self, fmt, *args):
         return
@@ -181,6 +191,7 @@ class DashboardHandler(SimpleHTTPRequestHandler):
             self._send_json({"queued": True, "command": command}, status=202)
             return
         if path in ("/api/commands/weather", "/api/weather"):
+            save_weather_payload(payload)
             command = append_bridge_command("weather", payload)
             self._send_json({"queued": True, "command": command}, status=202)
             return

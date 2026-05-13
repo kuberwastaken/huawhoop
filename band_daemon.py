@@ -17,6 +17,7 @@ from connect import (
     discover_band_device,
     load_or_create_config,
     local_time_label,
+    _load_weather_payload,
     save_json_artifact,
 )
 
@@ -28,6 +29,7 @@ logger = logging.getLogger("band10.daemon")
 COMMAND_QUEUE = DATA_DIR / "bridge_commands.jsonl"
 COMMAND_STATE = DATA_DIR / "bridge_command_state.json"
 LOCK_FILE = DATA_DIR / "bridge.lock"
+WEATHER_PAYLOAD_FILE = DATA_DIR / "weather_payload.json"
 
 
 def _status_payload(state: str, **extra) -> dict:
@@ -152,6 +154,19 @@ def _command_result(command: dict, state: str, **extra) -> dict:
     }
     append_jsonl_artifact("bridge_command_results.jsonl", result)
     return result
+
+
+def _weather_payload_configured() -> bool:
+    if WEATHER_PAYLOAD_FILE.exists():
+        return True
+    return any(os.getenv(name) for name in (
+        "BAND10_WEATHER_JSON",
+        "BAND10_WEATHER_FILE",
+        "BAND10_WEATHER_LAT",
+        "BAND10_WEATHER_LON",
+        "BAND10_LATITUDE",
+        "BAND10_LONGITUDE",
+    ))
 
 
 async def _safe(label: str, coro, default=None):
@@ -318,6 +333,7 @@ async def run_connected_session(cfg: dict):
         sync_interval = max(60, int(os.getenv("BAND10_SYNC_INTERVAL_SECONDS", "300")))
         keepalive_interval = max(15, int(os.getenv("BAND10_KEEPALIVE_SECONDS", "60")))
         keepalive_mode = os.getenv("BAND10_KEEPALIVE_MODE", "battery").strip().lower()
+        weather_interval = max(0, int(os.getenv("BAND10_WEATHER_INTERVAL_SECONDS", "3600")))
         live_hrv_every = max(0, int(os.getenv("BAND10_LIVE_HRV_EVERY", "0")))
         initial_full_sync = os.getenv("BAND10_INITIAL_FULL_SYNC", "1") != "0"
         max_seconds = int(os.getenv("BAND10_DAEMON_MAX_SECONDS", "0"))
@@ -325,6 +341,7 @@ async def run_connected_session(cfg: dict):
         cycle = 0
         next_sync = 0.0
         next_keepalive = 0.0
+        next_weather = time.time() + 30 if weather_interval and _weather_payload_configured() else 0.0
 
         try:
             while client.is_connected:
@@ -368,6 +385,20 @@ async def run_connected_session(cfg: dict):
                     next_keepalive = time.time() + keepalive_interval
 
                 await process_bridge_commands(band)
+                if weather_interval and not next_weather and _weather_payload_configured():
+                    next_weather = time.time() + 30
+                if weather_interval and next_weather and time.time() >= next_weather:
+                    weather_status = await _safe("weather auto push", band.send_weather_update(_load_weather_payload()), default=None)
+                    if weather_status is not None:
+                        append_jsonl_artifact("bridge_command_results.jsonl", {
+                            "id": f"auto-weather-{int(time.time())}",
+                            "type": "weather",
+                            "state": "ok",
+                            "timestamp": int(time.time()),
+                            "timestamp_local": local_time_label(int(time.time())),
+                            "weather": weather_status,
+                        })
+                    next_weather = time.time() + weather_interval
                 await band._drain_unsolicited_for(5.0)
         finally:
             try:

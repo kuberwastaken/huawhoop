@@ -16,9 +16,18 @@ const artifactFiles = {
   insightsHistory: "insights_history.jsonl"
 };
 
+function loadJsonSetting(key, fallback = {}) {
+  try {
+    return JSON.parse(localStorage.getItem(key)) || fallback;
+  } catch (_) {
+    return fallback;
+  }
+}
+
 const state = {
   data: {},
   weather: null,
+  weatherConfig: loadJsonSetting("huawhoop.weatherConfig", {}),
   bridgeBase: localStorage.getItem("huawhoop.bridgeBase") || ""
 };
 
@@ -578,7 +587,7 @@ async function fetchWeather() {
     current: "temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m,wind_direction_10m",
     hourly: "temperature_2m,precipitation_probability,uv_index,weather_code",
     daily: "weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max",
-    forecast_days: "4",
+    forecast_days: "8",
     timezone: "auto"
   });
   const response = await fetch(`https://api.open-meteo.com/v1/forecast?${params}`);
@@ -610,7 +619,7 @@ async function fetchWeather() {
     low_temp_c: daily[0]?.low_temp_c ?? currentWeather.temperature_2m,
     high_temp_c: daily[0]?.high_temp_c ?? currentWeather.temperature_2m,
     uv_index: daily[0]?.uv_index ?? 0,
-    hourly: (data.hourly?.time || []).slice(0, 24).map((time, index) => ({
+    hourly: (data.hourly?.time || []).slice(0, 72).map((time, index) => ({
       timestamp: Math.floor(new Date(time).getTime() / 1000),
       condition_code: wmoToOwm(data.hourly.weather_code?.[index] ?? currentWeather.weather_code),
       temp_c: data.hourly.temperature_2m?.[index],
@@ -619,6 +628,12 @@ async function fetchWeather() {
     })),
     daily
   };
+  state.weatherConfig = {
+    name: state.weather.location,
+    lat: String(lat),
+    lon: String(lon)
+  };
+  localStorage.setItem("huawhoop.weatherConfig", JSON.stringify(state.weatherConfig));
   renderWeather();
   toast("Weather fetched");
   return state.weather;
@@ -667,6 +682,9 @@ async function queueStress(calibrate = false) {
 }
 
 function setupActions() {
+  $("#weather-name").value = state.weatherConfig.name || $("#weather-name").value || "Local Weather";
+  $("#weather-lat").value = state.weatherConfig.lat || "";
+  $("#weather-lon").value = state.weatherConfig.lon || "";
   $("#refresh-button").addEventListener("click", refresh);
   $("#sync-button").addEventListener("click", () => queueSync(false));
   $("#light-sync-button").addEventListener("click", () => queueSync(false));
@@ -684,6 +702,12 @@ function setupActions() {
     navigator.geolocation.getCurrentPosition((pos) => {
       $("#weather-lat").value = pos.coords.latitude.toFixed(5);
       $("#weather-lon").value = pos.coords.longitude.toFixed(5);
+      state.weatherConfig = {
+        name: $("#weather-name").value || "Local Weather",
+        lat: $("#weather-lat").value,
+        lon: $("#weather-lon").value
+      };
+      localStorage.setItem("huawhoop.weatherConfig", JSON.stringify(state.weatherConfig));
       toast("Location set");
     }, () => toast("Location denied"));
   });

@@ -77,6 +77,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 
 - Push weather every 30-60 minutes, on location/weather change, or when the band requests it.
 - Weather is the first device-push feature to complete.
+- The daemon auto-refreshes the latest saved PWA weather payload hourly by default.
 
 ### LLM Analysis
 
@@ -104,6 +105,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Mirror Gadgetbridge's optional current GPS/time push after current weather.
 - [x] Guard weather re-push requests so the bridge cannot start nested weather chains.
 - [x] Add PWA weather card and manual/API-backed push control.
+- [x] Persist latest PWA weather payload and refresh it automatically from the daemon.
 - [x] Record packet tags, units, and cadence in `FINDINGS.md`.
 - [x] Live-test weather rendering packet chain on Band 10 after stable reconnect.
 
