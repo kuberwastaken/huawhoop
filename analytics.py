@@ -52,6 +52,16 @@ def _read_jsonl(path: Path) -> list[dict]:
     return rows
 
 
+def _valid_summary_row(row: dict) -> bool:
+    return bool(
+        row.get("downloaded_step_minutes")
+        or row.get("downloaded_sleep_segments")
+        or row.get("heart_rate_samples")
+        or row.get("spo2_samples")
+        or row.get("sleep_minutes")
+    )
+
+
 def _write_json(path: Path, payload: dict):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
@@ -597,7 +607,7 @@ def build_insights(data_dir: Path = DATA_DIR) -> dict:
     sequence = _read_json(data_dir / "latest_sleep_sequence_preview.json", {})
     stress = _read_json(data_dir / "latest_stress_preview.json", {})
     live_hrv = _read_json(data_dir / "latest_live_hrv.json", {})
-    history = _read_jsonl(data_dir / "recovery_history.jsonl")
+    history = [row for row in _read_jsonl(data_dir / "recovery_history.jsonl") if _valid_summary_row(row)]
 
     steps = fitness.get("steps") or []
     heart_rates = [row.get("heart_rate") for row in steps if isinstance(row.get("heart_rate"), (int, float)) and row.get("heart_rate") > 0]
