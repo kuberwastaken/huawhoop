@@ -3341,10 +3341,13 @@ async def run():
             summary["generated_at"] = int(time.time())
             summary["generated_at_local"] = local_time_label(summary["generated_at"])
             logger.info(f"Recent fitness summary (24h): {json.dumps(summary, indent=2)}")
-            save_json_artifact("latest_fitness_preview.json", preview)
-            save_json_artifact("latest_recovery_summary.json", summary)
-            append_jsonl_artifact("recovery_history.jsonl", summary)
-            save_recovery_report(summary)
+            if summary.get("downloaded_step_minutes") or summary.get("downloaded_sleep_segments"):
+                save_json_artifact("latest_fitness_preview.json", preview)
+                save_json_artifact("latest_recovery_summary.json", summary)
+                append_jsonl_artifact("recovery_history.jsonl", summary)
+                save_recovery_report(summary)
+            else:
+                logger.warning("Fitness preview was empty; preserving previous dashboard artifacts")
         except Exception as e:
             logger.warning(f"Fitness preview query failed: {e}")
 

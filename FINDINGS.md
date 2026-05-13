@@ -55,6 +55,7 @@ Open constraints:
 | P2P dictionary classes | `skin_temperature=ack_no_data`; emotion/sleep_apnea/etc return `0x000186a4` | P2P module is alive, but these classes are either gated or unsupported for host pull. |
 | Sequence sleep file `sequence_data/SLEEP_DETAILS` | Parser implemented, file-init route still returns status-only/no metadata | Sleep HRV may still exist in device data, but this pull trigger is incomplete or firmware-gated. |
 | P2P ping after failed file-sync attempts | Can fail later in the same session | A fresh session pings cleanly. The dashboard uses the latest successful P2P probe artifact and marks file-sync routes separately. |
+| Empty quick fitness pulls | Can happen during lightweight daemon sync | The daemon/connect runner now records the empty pull in sync status but does not overwrite the last good dashboard fitness/recovery artifacts. |
 
 ### HRV Source Audit (Gadgetbridge + Huawei Health APK)
 

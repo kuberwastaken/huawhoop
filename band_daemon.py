@@ -64,10 +64,13 @@ async def sync_core(band: Band, full: bool = False, live_hrv: bool = False) -> d
         summary = band.summarize_fitness_preview(preview)
         summary["generated_at"] = int(time.time())
         summary["generated_at_local"] = local_time_label(summary["generated_at"])
-        save_json_artifact("latest_fitness_preview.json", preview)
-        save_json_artifact("latest_recovery_summary.json", summary)
-        append_jsonl_artifact("recovery_history.jsonl", summary)
-        status["steps"].append("fitness")
+        if summary.get("downloaded_step_minutes") or summary.get("downloaded_sleep_segments"):
+            save_json_artifact("latest_fitness_preview.json", preview)
+            save_json_artifact("latest_recovery_summary.json", summary)
+            append_jsonl_artifact("recovery_history.jsonl", summary)
+            status["steps"].append("fitness")
+        else:
+            status["fitness_empty"] = True
 
     if full:
         stress_hours = int(os.getenv("BAND10_STRESS_HOURS", "168"))
