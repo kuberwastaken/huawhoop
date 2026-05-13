@@ -8,3 +8,9 @@ if (Get-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue) {
 } else {
     Write-Host "Scheduled task '$taskName' is not installed."
 }
+
+$startupShortcut = Join-Path ([Environment]::GetFolderPath("Startup")) "Huawhoop Bridge.lnk"
+if (Test-Path $startupShortcut) {
+    Remove-Item -LiteralPath $startupShortcut -Force
+    Write-Host "Removed Startup shortcut '$startupShortcut'."
+}
