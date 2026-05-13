@@ -8,6 +8,7 @@ const artifactFiles = {
   sequence: "../data/latest_sleep_sequence_preview.json",
   trusleep: "../data/latest_trusleep_preview.json",
   stress: "../data/latest_stress_preview.json",
+  stressSettings: "../data/latest_stress_settings.json",
   liveHrv: "../data/latest_live_hrv.json",
   watchfaces: "../data/latest_watchfaces.json",
   recoveryHistory: "../data/recovery_history.jsonl",
@@ -88,6 +89,7 @@ async function loadData() {
       sequence: await fetchJson(bridgePath("/api/artifacts/latest_sleep_sequence_preview.json"), {}),
       trusleep: await fetchJson(bridgePath("/api/artifacts/latest_trusleep_preview.json"), {}),
       stress: await fetchJson(bridgePath("/api/artifacts/latest_stress_preview.json"), {}),
+      stressSettings: await fetchJson(bridgePath("/api/artifacts/latest_stress_settings.json"), {}),
       liveHrv: await fetchJson(bridgePath("/api/artifacts/latest_live_hrv.json"), {}),
       watchfaces: await fetchJson(bridgePath("/api/artifacts/latest_watchfaces.json"), {}),
       recoveryHistory: parseJsonl(historyText),
@@ -108,6 +110,7 @@ async function loadData() {
     fetchJson(artifactFiles.sequence, {}),
     fetchJson(artifactFiles.trusleep, {}),
     fetchJson(artifactFiles.stress, {}),
+    fetchJson(artifactFiles.stressSettings, {}),
     fetchJson(artifactFiles.liveHrv, {}),
     fetchJson(artifactFiles.watchfaces, {}),
     fetchText(artifactFiles.recoveryHistory, ""),
@@ -123,10 +126,11 @@ async function loadData() {
     sequence: entries[6],
     trusleep: entries[7],
     stress: entries[8],
-    liveHrv: entries[9],
-    watchfaces: entries[10],
-    recoveryHistory: parseJsonl(entries[11]),
-    insightsHistory: parseJsonl(entries[12]),
+    stressSettings: entries[9],
+    liveHrv: entries[10],
+    watchfaces: entries[11],
+    recoveryHistory: parseJsonl(entries[12]),
+    insightsHistory: parseJsonl(entries[13]),
     bridge: {},
     lastCommands: []
   };
@@ -206,6 +210,7 @@ function current() {
     sleepScore: number(sleep.score, 0),
     sleepMinutes: number(sleep.minutes, 0),
     strain: number(strain.strain, 0),
+    stress: number(insights.stress?.gauge_0_3, NaN),
     hrv: number(insights.hrv?.avg_hrv_ms ?? insights.hrv_rmssd_ms, NaN),
     rhr: number(insights.resting_hr, NaN),
     battery: number(state.data.connection?.battery ?? state.data.sync?.battery, NaN)
@@ -227,6 +232,7 @@ function renderToday() {
   const insights = data.insights || {};
   const sleep = insights.sleep || {};
   const strain = insights.strain || {};
+  const stress = insights.stress || {};
   const summary = data.summary || {};
   const steps = summary.step_total || data.fitness?.summary?.step_total || 0;
   const hrvText = Number.isFinite(values.hrv) ? `${Math.round(values.hrv)} ms` : "Collecting";
@@ -242,11 +248,11 @@ function renderToday() {
     miniCard("O", "SpO2", sleep.avg_spo2 ? `${sleep.avg_spo2}%` : "--", "overnight")
   ].join("");
   $("#review-summary").textContent = `Recovery ${values.recovery || "--"} · Strain ${fmt.format(values.strain)}`;
-  const zones = strain.zone_minutes || {};
+  const zones = stress.zone_minutes || {};
   const activities = [
     ["Sleep", values.sleepScore, `${Math.floor(values.sleepMinutes / 60)}:${String(Math.round(values.sleepMinutes % 60)).padStart(2, "0")}`],
-    ["Low Stress", zones.easy || 0, "easy minutes"],
-    ["Moderate", zones.moderate || 0, "active minutes"]
+    ["Low Stress", zones.low || 0, "low minutes"],
+    ["Medium", zones.medium || 0, "stress minutes"]
   ];
   $("#activity-count").textContent = `${activities.length} rows`;
   $("#activity-list").innerHTML = activities.map(([name, score, meta]) => `<div class="activity">
@@ -349,7 +355,7 @@ function renderSleep() {
     detailRow("B", "Breath Rate", sleep.avg_breath_rate ?? "--", "overnight average"),
     `<section class="panel zone-bars">
       ${Object.entries(stages).map(([stage, value]) => {
-        const names = { 1: "Light", 2: "Deep", 3: "REM", 4: "Awake" };
+        const names = { 1: "Light", 2: "REM", 3: "Deep", 4: "Awake", 5: "Nap" };
         return meter(names[stage] || `Stage ${stage}`, number(value), total, "var(--teal)");
       }).join("") || `<div class="empty">No stages yet</div>`}
     </section>`
@@ -358,40 +364,45 @@ function renderSleep() {
 
 function renderStrain() {
   const strain = state.data.insights?.strain || {};
-  const zones = strain.zone_minutes || {};
-  const maxZone = Math.max(...Object.values(zones).map(number), 1);
+  const stress = state.data.insights?.stress || {};
+  const stressSettings = state.data.stressSettings || {};
+  const stressZones = stress.zone_minutes || {};
+  const strainZones = strain.zone_minutes || {};
+  const maxStressZone = Math.max(...Object.values(stressZones).map(number), 1);
+  const maxStrainZone = Math.max(...Object.values(strainZones).map(number), 1);
+  const stressValue = Number.isFinite(current().stress) ? current().stress : 0;
   $("#stress-hero").innerHTML = ringSvg({
-    value: current().strain,
-    max: 21,
+    value: stressValue,
+    max: 3,
     size: 190,
     stroke: 12,
-    color: "var(--blue)",
-    label: "Strain",
-    sub: state.data.insights?.training_balance?.label || ""
+    color: "var(--teal)",
+    label: "Stress",
+    sub: stress.label || "collecting"
   });
   $("#stress-breakdown").innerHTML = `<div class="stress-copy">
-    ${stressSentence(zones)}
+    ${stressSentence(stress)}
+    ${stressSettings.generated_at_local ? `<br>Auto stress ${stressSettings.enabled ? "enabled" : "updated"} ${stressSettings.generated_at_local}.` : ""}
   </div>`;
   $("#strain-details").innerHTML = `<div class="zone-bars">
-    ${Object.entries(zones).map(([name, value]) => meter(name, number(value), maxZone, zoneColor(name))).join("")}
+    ${Object.entries(stressZones).map(([name, value]) => meter(`${name} stress`, number(value), maxStressZone, zoneColor(name))).join("") || `<div class="empty">No stress samples yet</div>`}
+    ${detailRow("S", "Strain", current().strain ? current().strain.toFixed(1) : "--", `${fmt.format(strain.trimp || 0)} TRIMP load`)}
+    ${Object.entries(strainZones).map(([name, value]) => meter(`${name} strain`, number(value), maxStrainZone, zoneColor(name))).join("")}
     ${detailRow("L", "Load Ratio", state.data.insights?.training_balance?.load_ratio ?? "--", state.data.insights?.training_balance?.recommendation || "")}
   </div>`;
 }
 
 function zoneColor(name) {
-  if (name.includes("hard") || name.includes("max")) return "var(--orange)";
-  if (name.includes("moderate")) return "var(--teal)";
+  if (name.includes("hard") || name.includes("max") || name.includes("high")) return "var(--orange)";
+  if (name.includes("moderate") || name.includes("medium")) return "var(--teal)";
   return "var(--blue)";
 }
 
-function stressSentence(zones) {
-  const easy = number(zones.easy);
-  const moderate = number(zones.moderate);
-  const hard = number(zones.hard) + number(zones.max);
-  const total = easy + moderate + hard;
-  if (!total) return "Stress and strain zones will populate after the next synced heart-rate window.";
-  const lowPct = Math.round((easy / total) * 100);
-  return `${lowPct}% of tracked strain time was low intensity. Moderate load lasted ${Math.round(moderate)} minutes; high load lasted ${Math.round(hard)} minutes.`;
+function stressSentence(stress) {
+  const zones = stress.zone_minutes || {};
+  const total = number(zones.low) + number(zones.medium) + number(zones.high);
+  if (!total) return stress.message || "Stress zones will populate after the next synced RRI/stress window.";
+  return `${stress.low_pct ?? "--"}% of tracked stress time was low. Medium stress lasted ${Math.round(number(zones.medium))} minutes; high stress lasted ${Math.round(number(zones.high))} minutes.`;
 }
 
 function renderRoutes() {
@@ -580,6 +591,16 @@ async function queueWatchfaceScan() {
   }
 }
 
+async function queueStress(calibrate = false) {
+  try {
+    await command("/api/commands/stress", calibrate ? { calibrate: true, duration: 62 } : { enabled: true });
+    toast(calibrate ? "Stress calibration queued" : "Auto stress command queued");
+    await refresh();
+  } catch (error) {
+    toast(`Stress command failed: ${error.message}`);
+  }
+}
+
 function setupActions() {
   $("#refresh-button").addEventListener("click", refresh);
   $("#sync-button").addEventListener("click", () => queueSync(false));
@@ -588,6 +609,8 @@ function setupActions() {
   $("#weather-fetch-button").addEventListener("click", () => fetchWeather().catch((error) => toast(error.message)));
   $("#weather-send-button").addEventListener("click", pushWeather);
   $("#watchface-scan-button").addEventListener("click", queueWatchfaceScan);
+  $("#stress-calibrate-button").addEventListener("click", () => queueStress(true));
+  $("#stress-enable-button").addEventListener("click", () => queueStress(false));
   $("#geo-button").addEventListener("click", () => {
     if (!navigator.geolocation) {
       toast("Location unavailable");

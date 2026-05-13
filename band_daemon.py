@@ -148,6 +148,13 @@ async def process_bridge_commands(band: Band) -> list[dict]:
             elif command_type == "watchfaces":
                 watchfaces = await band.get_watchface_inventory()
                 result = _command_result(command, "ok", watchfaces=watchfaces)
+            elif command_type == "stress":
+                if payload.get("calibrate"):
+                    duration = float(payload.get("duration", os.getenv("BAND10_LIVE_HRV_SECONDS", "62")))
+                    stress_status = await band.calibrate_and_enable_stress(duration=duration)
+                else:
+                    stress_status = await band.set_automatic_stress(bool(payload.get("enabled", True)))
+                result = _command_result(command, "ok", stress=stress_status)
             else:
                 result = _command_result(command, "failed", error=f"unknown command type: {command_type}")
         except Exception as e:

@@ -312,6 +312,89 @@ def _classify_training_load(acute: float | None, chronic: float | None) -> dict:
     }
 
 
+def _stress_zone_summary(stress_preview: dict, live_hrv: dict | None = None) -> dict:
+    rows = stress_preview.get("stress") or []
+    zone_minutes = {"low": 0.0, "medium": 0.0, "high": 0.0}
+    high_windows = []
+    scores = []
+    latest = None
+
+    for row in rows:
+        score = _numeric(row.get("score"))
+        if score is None or score <= 0:
+            continue
+        start_ms = _numeric(row.get("start_ms"))
+        end_ms = _numeric(row.get("end_ms"))
+        minutes = 1.0
+        if start_ms and end_ms and end_ms > start_ms:
+            minutes = _clamp((end_ms - start_ms) / 60000.0, 1.0, 60.0)
+
+        if score <= 29:
+            zone = "low"
+        elif score <= 59:
+            zone = "medium"
+        else:
+            zone = "high"
+        zone_minutes[zone] += minutes
+        scores.append(score)
+        latest = row
+        if zone == "high":
+            high_windows.append({
+                "start_local": row.get("start_local"),
+                "end_local": row.get("end_local"),
+                "minutes": round(minutes),
+                "score": round(score),
+                "level": row.get("level"),
+            })
+
+    live_stress = (live_hrv or {}).get("huawei_stress") or {}
+    if not rows and live_stress.get("status") == "ok" and live_stress.get("stress_score"):
+        score = _numeric(live_stress.get("stress_score"))
+        if score:
+            scores.append(score)
+            zone = "low" if score <= 29 else "medium" if score <= 59 else "high"
+            zone_minutes[zone] = 1.0
+            latest = {
+                "score": score,
+                "level": live_stress.get("stress_level"),
+                "source": "live_rri",
+            }
+
+    total = sum(zone_minutes.values())
+    avg_score = _mean(scores)
+    if avg_score is None:
+        return {
+            "source": "unavailable",
+            "sample_count": 0,
+            "zone_minutes": {name: 0 for name in zone_minutes},
+            "message": "Stress zones need an RRI/stress sync or a live 60-second RRI measurement.",
+            "method": "Huawei RRI/stress file parser with score buckets: low <=29, medium <=59, high >=60",
+        }
+
+    low_pct = round(100 * zone_minutes["low"] / total) if total else 0
+    high_pct = round(100 * zone_minutes["high"] / total) if total else 0
+    label = "low" if avg_score <= 29 else "medium" if avg_score <= 59 else "high"
+    return {
+        "source": "rri_stress_file" if rows else "live_rri",
+        "sample_count": len(scores),
+        "avg_score": round(avg_score, 1),
+        "max_score": round(max(scores), 1),
+        "latest_score": latest.get("score") if latest else None,
+        "latest_level": latest.get("level") if latest else None,
+        "label": label,
+        "gauge_0_3": round(_clamp(avg_score / 30.0, 0, 3), 1),
+        "zone_minutes": {name: round(value) for name, value in zone_minutes.items()},
+        "low_pct": low_pct,
+        "high_pct": high_pct,
+        "high_windows": high_windows[-5:],
+        "message": (
+            f"{low_pct}% of tracked stress time was low stress; "
+            f"high stress accounted for {high_pct}%."
+        ),
+        "method": "Huawei RRI/stress file parser with score buckets: low <=29, medium <=59, high >=60",
+    }
+
+
 def _summarize_live_hrv_transport(live_hrv: dict) -> dict:
     events = live_hrv.get("transport_events") or []
     status_events = [event for event in events if isinstance(event.get("status"), int)]
@@ -799,6 +882,7 @@ def build_insights(data_dir: Path = DATA_DIR) -> dict:
     sleep_minutes = (sequence_sleep or {}).get("sleep_minutes") or summary.get("sleep_minutes") or 0
 
     strain = _strain_from_hr(heart_rates)
+    stress_summary = _stress_zone_summary(stress, live_hrv)
     sequence_avg_hr = (sequence_sleep or {}).get("avg_heart_rate")
     rhr = _mean(resting_hrs, sequence_avg_hr or (min(heart_rates) if heart_rates else None))
     rhr_baseline = _history_baseline(history, "resting_hr_avg", rhr or 60)
@@ -963,6 +1047,7 @@ def build_insights(data_dir: Path = DATA_DIR) -> dict:
             "trend_3v14_minutes": round(sleep_trend, 1) if sleep_trend is not None else None,
         },
         "strain": strain,
+        "stress": stress_summary,
         "training_balance": {
             "acute_7d": round(acute, 1) if acute is not None else None,
             "chronic_42d": round(chronic, 1) if chronic is not None else None,

@@ -26,6 +26,7 @@ ARTIFACT_ALLOWLIST = {
     "latest_capabilities.json",
     "latest_fitness_preview.json",
     "latest_stress_preview.json",
+    "latest_stress_settings.json",
     "latest_sleep_sequence_preview.json",
     "latest_trusleep_preview.json",
     "latest_live_hrv.json",
@@ -184,6 +185,10 @@ class DashboardHandler(SimpleHTTPRequestHandler):
             return
         if path in ("/api/commands/watchfaces", "/api/watchfaces"):
             command = append_bridge_command("watchfaces", payload)
+            self._send_json({"queued": True, "command": command}, status=202)
+            return
+        if path in ("/api/commands/stress", "/api/stress"):
+            command = append_bridge_command("stress", payload)
             self._send_json({"queued": True, "command": command}, status=202)
             return
         self._send_json({"error": "unknown_endpoint", "path": path}, status=404)

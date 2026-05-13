@@ -215,7 +215,7 @@ COMMANDS_PER_SERVICE = {
     0x16: bytes([0x01, 0x03, 0x07]),
     0x17: bytes([0x01, 0x04, 0x06, 0x07, 0x0B, 0x0C, 0x10, 0x12, 0x15, 0x17]),
     0x18: bytes([0x01, 0x02, 0x04, 0x05, 0x06, 0x09]),
-    0x19: bytes([0x01, 0x04]),
+    0x19: bytes([0x01, 0x03, 0x04, 0x05]),
     0x1A: bytes([0x01, 0x03, 0x07, 0x05, 0x06]),
     0x1B: bytes([0x01, 0x0F, 0x19, 0x1A]),
     0x1D: bytes([0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A]),
@@ -2569,6 +2569,118 @@ class Band:
         }
         save_json_artifact("latest_watchfaces.json", result)
         return result
+
+    @staticmethod
+    def _stress_seed_from_preview(preview: dict) -> dict | None:
+        rows = preview.get("stress") or []
+        if not rows:
+            return None
+        latest = rows[-1]
+        features = [float(v) for v in (latest.get("features") or [])]
+        if len(features) < 10:
+            return None
+        features = (features + [0.0, 0.0])[:12]
+        score = int(latest.get("score") or 0)
+        end_ms = int(latest.get("end_ms") or 0)
+        if score <= 0 or end_ms <= 0:
+            return None
+        return {
+            "source": "latest_stress_preview",
+            "features": features,
+            "score": score,
+            "timestamp": end_ms // 1000,
+        }
+
+    @staticmethod
+    def _stress_seed_from_live(live: dict) -> dict | None:
+        stress = live.get("huawei_stress") or {}
+        features = [float(v) for v in (stress.get("features") or [])]
+        score = int(stress.get("stress_score") or 0)
+        if stress.get("status") != "ok" or len(features) < 10 or score <= 0:
+            return None
+        features = (features + [0.0, 0.0])[:12]
+        return {
+            "source": "latest_live_hrv",
+            "features": features,
+            "score": score,
+            "timestamp": int(live.get("generated_at") or time.time()),
+        }
+
+    @classmethod
+    def _load_stress_seed(cls) -> dict | None:
+        try:
+            preview = json.loads((DATA_DIR / "latest_stress_preview.json").read_text(encoding="utf-8"))
+            seed = cls._stress_seed_from_preview(preview)
+            if seed:
+                return seed
+        except Exception:
+            pass
+        try:
+            live = json.loads((DATA_DIR / "latest_live_hrv.json").read_text(encoding="utf-8"))
+            seed = cls._stress_seed_from_live(live)
+            if seed:
+                return seed
+        except Exception:
+            pass
+        return None
+
+    async def set_automatic_stress(self, enabled: bool = True, seed: dict | None = None) -> dict:
+        """Enable/disable Huawei automatic stress using Gadgetbridge's svc=0x20/cmd=0x09."""
+        if not self._supports_command(SVC_STRESS, CMD_STRESS_AUTO):
+            result = {
+                "supported": False,
+                "enabled": enabled,
+                "reason": "stress auto command not advertised",
+                "generated_at": int(time.time()),
+            }
+            save_json_artifact("latest_stress_settings.json", result)
+            return result
+
+        status = 0x01 if enabled else 0x02
+        tlv = tlv_enc(0x01, bytes([status]))
+        seed_source = None
+        if enabled:
+            seed = seed or self._load_stress_seed()
+            if not seed:
+                raise RuntimeError("No stress seed available; run a 60-second live RRI measurement or sync rrisqi_data.bin first")
+            features = [float(v) for v in seed["features"][:12]]
+            if len(features) != 12:
+                raise RuntimeError(f"stress seed must contain 12 features, got {len(features)}")
+            score = max(1, min(99, int(seed["score"])))
+            timestamp = int(seed.get("timestamp") or time.time())
+            tlv += (
+                tlv_enc(0x02, bytes([score])) +
+                tlv_enc(0x03, b"".join(struct.pack(">f", value) for value in features)) +
+                tlv_enc(0x04, struct.pack(">I", timestamp))
+            )
+            seed_source = seed.get("source")
+
+        await self._send_encrypted_no_wait(SVC_STRESS, CMD_STRESS_AUTO, tlv)
+        await self._drain_unsolicited_for(1.0)
+        result = {
+            "supported": True,
+            "enabled": enabled,
+            "status_byte": status,
+            "seed_source": seed_source,
+            "generated_at": int(time.time()),
+            "generated_at_local": local_time_label(int(time.time())),
+        }
+        save_json_artifact("latest_stress_settings.json", result)
+        return result
+
+    async def calibrate_and_enable_stress(self, duration: float = 62.0) -> dict:
+        live = await self.measure_live_hrv(duration=duration)
+        seed = self._stress_seed_from_live(live)
+        if not seed:
+            result = {
+                "enabled": False,
+                "generated_at": int(time.time()),
+                "reason": "live RRI measurement did not produce a valid Huawei stress seed",
+                "live_status": (live.get("huawei_stress") or {}).get("status"),
+            }
+            save_json_artifact("latest_stress_settings.json", result)
+            return result
+        return await self.set_automatic_stress(True, seed=seed)
 
     async def post_auth_initialize(self):
         logger.info("Post-auth init: starting Huawei connected-state bootstrap...")

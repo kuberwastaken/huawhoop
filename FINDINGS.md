@@ -722,3 +722,26 @@ Implementation status: `connect.py` now has read-only watchface inventory calls 
 - `connect.py` now implements the Gadgetbridge weather chain: start (`0x0f/0x09`), unit (`0x0f/0x05`), basic support (`0x0f/0x02`), extended support (`0x0f/0x06`), sun/moon support (`0x0f/0x0a`), current weather (`0x0f/0x01`), and optional forecast (`0x0f/0x08`).
 - Current and forecast TLV serialization has been dry-run locally and preserves Gadgetbridge's nested/repeated container layout.
 - First live weather attempt on 2026-05-13 did not reach the Huawei protocol: Bleak/Windows returned `BleakDeviceNotFoundError` for the band address before connecting. This should be retried through the long-lived daemon once the band is advertising/available.
+
+### Stress And HRV Implementation Status
+
+Gadgetbridge source of truth:
+
+- `HrRriTest` service `0x19` opens/closes measurement with `cmd=0x01`, tag `0x01=type`.
+- Gadgetbridge stress calibration opens type `3`, collects `svc=0x19/cmd=0x05` RRI/SQI data for 60 seconds, then closes with type `4`.
+- RRI notifications use outer TLV `0x82`, repeated `0x83`; each child uses `0x04` RRI and `0x05` SQI.
+- Huawei's stress model filters SQI `100`, keeps RRI in `400..1400 ms`, computes ten HRV/frequency-domain features, then maps them through fixed normalization and coefficients.
+- Automatic stress is enabled through `svc=0x20/cmd=0x09`: tag `0x01=1`, tag `0x02=score`, tag `0x03=12 float32 features`, tag `0x04=endTimeSeconds`. Disable uses tag `0x01=2`.
+
+Project implementation:
+
+- `analytics.py` contains the Huawei/Gadgetbridge stress feature and score calculation port.
+- `connect.py` now has `set_automatic_stress()` and `calibrate_and_enable_stress()` for `svc=0x20/cmd=0x09`.
+- The stress seed can come from the latest downloaded `rrisqi_data.bin` parse or a successful live 60-second RRI measurement. The two final feature slots are padded with `0.0`, matching Gadgetbridge.
+- `run_dashboard.py` and `band_daemon.py` now expose a `stress` bridge command. The PWA has buttons for calibration and enabling automatic stress.
+- `analytics.py` now emits a day-level `stress` summary with low/medium/high minutes, average score, max score, gauge value `0..3`, and recent high-stress windows.
+
+Current live caveat:
+
+- The latest local `latest_stress_preview.json` has `stress_count=0`; the historical stress file is empty right now. That likely means automatic stress has not populated since the factory reset or needs a calibration/seed push first.
+- Earlier live RRI attempts opened the service but produced HR-only traffic. Retest with the exact Gadgetbridge type `3`/`4` path is still required now that the band is reset and pairing is stable.

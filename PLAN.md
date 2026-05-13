@@ -95,8 +95,8 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 
 - [x] Audit Gadgetbridge weather packet classes and request flow.
 - [x] Compare against Huawei Health APK weather classes where available.
-- [ ] Implement current weather payload push.
-- [ ] Implement forecast payload push if supported by Band 10.
+- [x] Implement current weather payload push.
+- [x] Implement forecast payload push if supported by Band 10.
 - [x] Add PWA weather card and manual/API-backed push control.
 - [ ] Record packet tags, units, and cadence in `FINDINGS.md`.
 
@@ -115,7 +115,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Implement recovery score from HRV, resting HR, sleep performance, strain load, and recent trend.
 - [ ] Implement strain score from heart-rate zones and activity duration.
 - [x] Implement sleep performance from duration, regularity, stages, and awake interruptions.
-- [ ] Implement stress summaries by low/medium/high duration where data exists.
+- [x] Implement stress summaries by low/medium/high duration where data exists.
 - [ ] Keep equations readable and cite/source each heuristic in `FINDINGS.md`.
 - [x] Evaluate open-source wearable/WHOOP-like analytics repos before inventing complex formulas.
 
@@ -148,14 +148,44 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Audit APK for matching weather/watchface primitives.
 - [x] Add bridge API and command queue.
 - [x] Rebuild dashboard as PWA shell.
+- [x] Add automatic stress enable/calibration command path.
 - [ ] Live-test weather push through the daemon.
+- [ ] Live-test automatic stress calibration and `svc=0x20/cmd=0x09`.
+- [ ] Live-test watchface inventory after the reset/stored reconnect.
 
 ## Research TODO
 
-- [ ] Search for open-source recovery/strain/sleep algorithms.
+- [x] Search for open-source recovery/strain/sleep algorithms.
 - [ ] Inspect `open-wearables-*` for reusable data models or algorithms.
 - [ ] Investigate ECG availability on Huawei Band 10 and related Huawei devices.
 - [ ] Inspect Gadgetbridge data parsers for HRV, stress, SpO2, sleep stage, and activity semantics.
+
+## Device Push TODO
+
+- [x] Weather start/support/unit/current/forecast command chain.
+- [x] Weather request ACK/re-push handler for `0x000186AA`.
+- [x] Read-only watchface params/list/names.
+- [x] Automatic stress enable/disable route using Gadgetbridge's 12-feature seed format.
+- [ ] Weather live verification on the Band 10 UI.
+- [ ] Stress auto live verification and confirmation that future `rrisqi_data.bin` fills without manual measurement.
+- [ ] Watchface install validation before any write/delete/activate operation.
+
+## Analytics TODO
+
+- [x] Sleep-sequence HRV extraction.
+- [x] Huawei RRI stress feature port.
+- [x] Stress zone summaries for the PWA.
+- [ ] Strain refinement from activities/workouts rather than passive HR only.
+- [ ] SpO2 low-duration summaries.
+- [ ] ECG parser route if Band 10 exposes ECG analysis files; otherwise document unsupported status.
+
+## Interface TODO
+
+- [x] Installable mobile PWA shell.
+- [x] Local bridge command buttons for sync/weather/watchfaces/stress.
+- [ ] Hosted static build with configurable bridge URL for `huawhoop.kuber.studio`.
+- [ ] Browser visual regression screenshots after every major layout pass.
+- [ ] API redaction pass before any hosted/cloud relay.
 
 ## Backlog
 
