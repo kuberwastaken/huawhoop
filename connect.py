@@ -92,6 +92,7 @@ CMD_AUTO_HR = 0x17
 CMD_AUTO_SPO2 = 0x24
 CMD_STRESS_AUTO = 0x09
 CMD_HR_RRI_OPEN_CLOSE = 0x01
+CMD_HR_REALTIME_DATA = 0x03
 CMD_HR_RRI_DATA = 0x05
 CMD_SLEEP_BREATH = 0x01
 
@@ -611,6 +612,7 @@ class Band:
         self._pending_file_inits = []
         self._feature_config_requested = False
         self._live_rri_samples = []
+        self._live_hr_samples = []
         self._live_rri_events = []
         self.supported_services = set()
         self.commands_per_service = {}
@@ -974,6 +976,10 @@ class Band:
                 event["status"] = self._tlv_int(data[0x7F])
             self._live_rri_events.append(event)
             logger.info(f"  Live RRI open/close status: {event}")
+        elif svc == SVC_HR_RRI_TEST and cmd == CMD_HR_REALTIME_DATA:
+            samples = self._parse_realtime_hr_packet(tlvs)
+            self._live_hr_samples.extend(samples)
+            logger.info(f"  Realtime HR packet: {len(samples)} samples, total={len(self._live_hr_samples)}")
         elif svc == SVC_HR_RRI_TEST and cmd == CMD_HR_RRI_DATA:
             samples = self._parse_live_rri_packet(tlvs)
             self._live_rri_samples.extend(samples)
@@ -2886,6 +2892,49 @@ class Band:
         save_json_artifact("latest_stress_preview.json", parsed)
         return parsed
 
+    def _parse_realtime_hr_packet(self, tlvs: dict) -> list[dict]:
+        """Parse Huawei Health's realtime HR notifications (svc=0x19/cmd=0x03)."""
+        data = self._decrypt_or_raw_tlvs(tlvs)
+
+        if 0x7F in data:
+            status = self._tlv_int(data[0x7F])
+            event = {
+                "timestamp": int(time.time()),
+                "svc": SVC_HR_RRI_TEST,
+                "cmd": CMD_HR_REALTIME_DATA,
+                "status": status,
+                "tlvs": {hex(k): v.hex() for k, v in data.items()},
+            }
+            self._live_rri_events.append(event)
+            logger.info(f"  Realtime HR status: {event}")
+            return []
+
+        samples = []
+        now = int(time.time())
+        container = data.get(0x01, b"")
+        for tag, payload in tlv_items(container):
+            if tag != 0x02:
+                continue
+            item = tlv_dec(payload)
+            hr = self._tlv_int(item.get(0x03, b""))
+            ts = self._tlv_int(item.get(0x04, b"")) or now
+            credibility = self._tlv_int(item.get(0x05, b"")) if 0x05 in item else None
+            if hr:
+                samples.append({
+                    "timestamp": ts,
+                    "heart_rate": hr,
+                    "credibility": credibility,
+                })
+        if samples:
+            self._live_rri_events.append({
+                "timestamp": now,
+                "svc": SVC_HR_RRI_TEST,
+                "cmd": CMD_HR_REALTIME_DATA,
+                "sample_count": len(samples),
+                "latest_hr": samples[-1]["heart_rate"],
+            })
+        return samples
+
     def _parse_live_rri_packet(self, tlvs: dict) -> list[dict]:
         """Parse HrRriTest.RriData notifications (svc=0x19/cmd=0x05)."""
         data = self._decrypt_or_raw_tlvs(tlvs)
@@ -2955,6 +3004,7 @@ class Band:
             return result
 
         self._live_rri_samples = []
+        self._live_hr_samples = []
         self._live_rri_events = []
         open_type = int(os.getenv("BAND10_RRI_OPEN_TYPE", "3"), 0)
         close_type = int(os.getenv("BAND10_RRI_CLOSE_TYPE", "4"), 0)
@@ -2991,6 +3041,8 @@ class Band:
             "vol_status": None if vol_status is None else int(vol_status, 0),
         }
         result["transport_events"] = self._live_rri_events
+        result["realtime_hr_sample_count"] = len(self._live_hr_samples)
+        result["realtime_hr_preview"] = self._live_hr_samples[-10:]
         save_json_artifact("latest_live_hrv.json", result)
         append_jsonl_artifact("live_hrv_history.jsonl", result)
         logger.info(

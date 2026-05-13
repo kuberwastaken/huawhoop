@@ -66,6 +66,7 @@ function liveHrvTransport(insights, liveHrv) {
   return insights?.data_quality?.live_hrv_transport || {
     state: liveHrv?.sample_count ? "streaming" : "not_run",
     sample_count: liveHrv?.sample_count || 0,
+    realtime_hr_sample_count: liveHrv?.realtime_hr_sample_count || 0,
     request: liveHrv?.request || {},
     event_count: (liveHrv?.transport_events || []).length
   };
@@ -208,7 +209,7 @@ function renderRecovery(insights, liveHrv) {
     <div class="component-list">${rows || `<div class="empty">No recovery components yet.</div>`}</div>
     <div class="sleep-row"><span>HRV source</span><strong>${hrv.source || "unavailable"}</strong></div>
     <div class="sleep-row"><span>HRV detail</span><strong>${hrv.rmssd_ms ?? hrv.avg_hrv_ms ?? hrv.reason ?? "n/a"}</strong></div>
-    <div class="sleep-row"><span>Live stream</span><strong>${transport.state || "not_run"} · ${transport.sample_count ?? 0} samples</strong></div>
+    <div class="sleep-row"><span>Live stream</span><strong>${transport.state || "not_run"} · ${transport.sample_count ?? 0} RRI · ${transport.realtime_hr_sample_count ?? 0} HR</strong></div>
     <div class="sleep-row"><span>Live request</span><strong>type ${request.open_type ?? "n/a"} vol ${request.vol_status ?? "off"}</strong></div>
     <div class="sleep-row"><span>Last HRV status</span><strong>${transport.latest_status_hex || compactStatus(transport.latest_status)}</strong></div>
   `;

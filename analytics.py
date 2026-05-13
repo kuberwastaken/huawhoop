@@ -165,6 +165,7 @@ def _summarize_live_hrv_transport(live_hrv: dict) -> dict:
     return {
         "state": state,
         "sample_count": sample_count,
+        "realtime_hr_sample_count": live_hrv.get("realtime_hr_sample_count", 0),
         "request": live_hrv.get("request") or {},
         "latest_status": latest.get("status") if latest else None,
         "latest_status_hex": f"0x{latest.get('status'):08x}" if latest else None,

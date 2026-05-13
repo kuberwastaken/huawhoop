@@ -126,7 +126,9 @@ dictionary identity and field validation:
   service `25` (`0x19`) command `1` to `hr_type` plus optional `vol_status`, and
   command `3` to a real-time HR list. This appears to be Huawei's newer realtime
   HR surface; it is related to, but not identical to, Gadgetbridge's RRI parser on
-  `cmd=0x05`.
+  `cmd=0x05`. Python now records both `cmd=0x05` RRI/SQI packets and `cmd=0x03`
+  realtime HR packets during live probes so the next run can prove which stream this
+  firmware actually emits.
 - `DicDataTypeUtil.java` confirms `SLEEP_DETAILS_AVG_HRV`,
   `SLEEP_DETAILS_HRV_DAY_TO_BASELINE`, `SLEEP_DETAILS_AVG_BREATHRATE`,
   `SLEEP_DETAILS_AVG_OXYGEN_SATURATION`, `SLEEP_DETAILS_SLEEP_SCORE`, etc.
