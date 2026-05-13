@@ -133,7 +133,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Implement read-only installed/current watchface metadata route.
 - [x] Add safe installed-watchface activation command path.
 - [x] Live-test installed/current watchface metadata when the band is visible.
-- [ ] Live-test activation on an already installed non-current watchface.
+- [x] Live-test activation on an already installed non-current watchface.
 - [ ] Upload a known-compatible watchface file.
 - [ ] Document custom watchface/app risk before writing to device.
 

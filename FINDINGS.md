@@ -700,6 +700,13 @@ Implementation choice: first add read-only params/list/name support. Activating 
 
 Implementation status: `connect.py` now has watchface inventory calls for params (`0x27/0x01`), installed list (`0x27/0x02`), names (`0x27/0x06`), and safe installed-face activation (`0x27/0x03`, operation `1`). `band_daemon.py` and the PWA expose scan and activation commands. No upload/delete path is implemented yet.
 
+Live status on 2026-05-14:
+
+- Inventory succeeded through the daemon: Band 10 reports max watchface version `2.4`, display `194x368`, file type `1`, and 8 installed faces.
+- Current face before the write test was `Activity rings` (`2180325453`, `2.4.3`).
+- Activation of installed non-current `SuperWatch` (`2180307753`, `2.4.2`) succeeded with response tag `0x04=00`, and inventory showed it as current.
+- Activation back to `Activity rings` also succeeded with response tag `0x04=00`. No upload/delete path has been attempted.
+
 ### Algorithm Sources
 
 - Open Wearables is the best open-source algorithm baseline found so far. It has explicit sleep scoring primitives, duration/stage/consistency/interruption scoring, and HRV resilience helpers.
