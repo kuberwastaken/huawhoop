@@ -758,7 +758,8 @@ Project implementation:
 
 `connect.py` remains a diagnostic one-shot, but now has narrow modes for precision testing after the factory reset:
 
-- One-shots now use the same scan-before-connect strategy as `band_daemon.py`, writing `connection_status.json` with `scanning`/`not_found` instead of failing immediately on a direct Windows BLE address lookup.
+- One-shots and the daemon now use a shared scan-before-connect strategy, writing `connection_status.json` with `scanning`/`not_found` instead of failing immediately on a direct Windows BLE address lookup.
+- Discovery matches the stored address first, then `BAND10_DEVICE_NAME` (default `HUAWEI Band 10`). If Windows reports a different BLE address after reset, the bridge updates `band.ini` locally and writes `latest_ble_scan.json` for diagnosis.
 - `BAND10_ONLY_WEATHER=1`: authenticate, push weather, save `latest_weather_push.json`, disconnect.
 - `BAND10_ONLY_WATCHFACES=1`: authenticate, read installed/current watchface metadata, save `latest_watchfaces.json`, disconnect.
 - `BAND10_ONLY_WATCHFACE_ACTIVATE=1`: activate an already-installed file name from inventory, save `latest_watchface_operation.json`, disconnect.

@@ -4,7 +4,7 @@ import logging
 import os
 import time
 
-from bleak import BleakClient, BleakScanner
+from bleak import BleakClient
 from bleak.exc import BleakDeviceNotFoundError
 
 import analytics as band_analytics
@@ -13,6 +13,7 @@ from connect import (
     GATT_READ,
     Band,
     append_jsonl_artifact,
+    discover_band_device,
     load_or_create_config,
     local_time_label,
     save_json_artifact,
@@ -238,7 +239,7 @@ async def sync_core(band: Band, full: bool = False, live_hrv: bool = False) -> d
 async def run_connected_session(cfg: dict):
     scan_timeout = float(os.getenv("BAND10_SCAN_TIMEOUT_SECONDS", "12"))
     _status_payload("scanning", device_mac=cfg["device_mac"], timeout_sec=scan_timeout)
-    device = await BleakScanner.find_device_by_address(cfg["device_mac"], timeout=scan_timeout)
+    device = await discover_band_device(cfg, scan_timeout)
     if device is None:
         _status_payload("not_found", device_mac=cfg["device_mac"], timeout_sec=scan_timeout)
         raise BleakDeviceNotFoundError(cfg["device_mac"], "Band was not advertising or visible to Windows Bluetooth")

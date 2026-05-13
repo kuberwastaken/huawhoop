@@ -545,6 +545,18 @@ def save_secret_key(key: bytes):
         cfg.write(f)
     logger.info("Saved HiChain transaction key to band.ini.")
 
+
+def save_device_mac(address: str):
+    cfg = ConfigParser()
+    cfg.read(CONFIG_FILE)
+    if "band10" not in cfg:
+        cfg["band10"] = {}
+    cfg["band10"]["device_mac"] = address
+    with open(CONFIG_FILE, "w") as f:
+        cfg.write(f)
+    logger.info(f"Saved BLE device address to band.ini: {address}")
+
+
 def save_json_artifact(filename: str, payload: dict):
     DATA_DIR.mkdir(exist_ok=True)
     path = DATA_DIR / filename
@@ -566,6 +578,61 @@ def append_jsonl_artifact(filename: str, payload: dict):
 
 def local_time_label(epoch_seconds: int) -> str:
     return time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(epoch_seconds))
+
+
+def _device_rssi(device) -> int:
+    value = getattr(device, "rssi", None)
+    if value is None:
+        value = getattr(device, "metadata", {}).get("rssi")
+    try:
+        return int(value)
+    except Exception:
+        return -999
+
+
+async def discover_band_device(cfg: dict, scan_timeout: float):
+    target_address = str(cfg.get("device_mac") or "").lower()
+    target_name = os.getenv("BAND10_DEVICE_NAME", "HUAWEI Band 10").strip().lower()
+    devices = await BleakScanner.discover(timeout=scan_timeout)
+    scan = []
+    for device in devices:
+        scan.append({
+            "address": device.address,
+            "name": device.name or "",
+            "rssi": _device_rssi(device),
+        })
+    scan.sort(key=lambda item: item["rssi"], reverse=True)
+    save_json_artifact("latest_ble_scan.json", {
+        "target_address": cfg.get("device_mac"),
+        "target_name": target_name,
+        "timestamp": int(time.time()),
+        "timestamp_local": local_time_label(int(time.time())),
+        "devices": scan,
+    })
+
+    exact = next((device for device in devices if device.address.lower() == target_address), None)
+    if exact is not None:
+        return exact
+
+    candidates = []
+    if target_name:
+        for device in devices:
+            name = (device.name or "").lower()
+            if target_name in name:
+                candidates.append(device)
+    if not candidates:
+        return None
+
+    candidates.sort(key=_device_rssi, reverse=True)
+    chosen = candidates[0]
+    if chosen.address != cfg.get("device_mac"):
+        logger.info(
+            "Discovered band by name with a different BLE address: "
+            f"{cfg.get('device_mac')} -> {chosen.address} ({chosen.name})"
+        )
+        cfg["device_mac"] = chosen.address
+        save_device_mac(chosen.address)
+    return chosen
 
 
 def _env_enabled(name: str) -> bool:
@@ -4129,7 +4196,7 @@ async def run():
         "timestamp": int(time.time()),
         "timestamp_local": local_time_label(int(time.time())),
     })
-    device = await BleakScanner.find_device_by_address(cfg["device_mac"], timeout=scan_timeout)
+    device = await discover_band_device(cfg, scan_timeout)
     if device is None:
         save_json_artifact("connection_status.json", {
             "state": "not_found",

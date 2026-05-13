@@ -165,6 +165,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Add automatic stress enable/calibration command path.
 - [x] Add focused one-shot modes for weather, watchfaces, watchface activation, and stress.
 - [x] Align one-shot connection setup with daemon scan-before-connect behavior.
+- [x] Add shared BLE discovery fallback by advertised band name after factory reset.
 - [ ] Live-test weather push through the daemon.
 - [ ] Live-test automatic stress calibration and `svc=0x20/cmd=0x09`.
 - [ ] Live-test watchface inventory after the reset/stored reconnect.
