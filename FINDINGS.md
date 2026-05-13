@@ -35,14 +35,14 @@ What works:
 | Area | Status | Notes |
 |---|---|---|
 | HiChain3 reconnect | Working | Four-step reconnect completes; new session transaction key is saved each run. |
-| Connected-state init | Mostly aligned | Product, time, supported services, supported commands, expand capabilities, setting related, accept agreements, reverse capabilities, setup device status, wear status, connect status, feature config ACK all complete. |
+| Connected-state init | Mostly aligned | Product, time, battery, supported services/commands, expand capabilities, Gadgetbridge-style extended account, setting related, accept agreements, reverse capabilities, setup device status, wear status, one-shot connect status, feature config ACK all complete. |
 | Fitness history | Working | Latest 24h: 6019 steps, 159 sleep minutes, 472 HR samples, 74 SpO2 samples. |
 | P2P service ping | Working | `hw.watch.health.filesync` replies `cmd=0x03 code=0xca` to service ping. |
 | P2P dictionary probe classification | Working | Probe distinguishes `ack_no_data` from `0x000186a4` auth/unsupported errors. |
 | Huawei Health dictionary mapping | Confirmed | Decompiled APK confirms `SLEEP_DETAILS=700013` includes `avgHrv`, HRV baseline, sleep score, SpO2 and breath-rate fields. |
 | Sleep sequence HRV | Working | `sequence_data/SLEEP_DETAILS` now downloads via service `0x2C`; latest 48h pull produced 4 sessions, 2 valid HRV summaries, latest full-sleep `avgHrv=48 ms` with baseline range `28-51`. |
 | Live RRI HRV route | Transport verified, samples blocked | `svc=0x19/cmd=0x01 type=0x03` is accepted with `0x000186a0`; band immediately sends `svc=0x19/cmd=0x05 status=0x0001ec38` and no RRI/SQI containers. Treat as optional/diagnostic now that sleep-sequence HRV works. |
-| Persistent connected mode | Working in bounded soak | `band_daemon.py` kept a reconnect session open, ran keepalives and sync cycles, and wrote `data/connection_status.json`. `run_dashboard.py` is now the normal workflow: it serves the web dashboard and runs the daemon in one process. One-shot `connect.py` still disconnects by design. |
+| Persistent connected mode | Working in bounded soak | `band_daemon.py` kept an authenticated session open for 120s, ran two sync cycles and battery keepalives, and exited with `soak_complete`. `run_dashboard.py` is now the normal workflow: it serves the web dashboard and runs the daemon in one process. One-shot `connect.py` still disconnects by design. |
 
 Open constraints:
 
@@ -50,6 +50,7 @@ Open constraints:
 |---|---|---|
 | `0x1A/0x0A` country code | Capability bit says yes, command bitmap does not advertise it; direct send times out | Skipped unless the command appears in the runtime bitmap. This restored reliable fitness and P2P ping. |
 | Connect status | Returns TLV `0x7F=000186a0` | Treat as OK (`100000`), not an auth error. |
+| Repeated connect-status keepalive | Later returns `0x000186a4` | Gadgetbridge sends connect status during init, not as a periodic heartbeat. The daemon now uses battery as the default keepalive and only repeats connect status when `BAND10_KEEPALIVE_MODE=connect_status`. |
 | Standalone HRV dictionary `500044` | Capability `hrv=false`; P2P route returns `0x000186a4` | Standalone HRV is not exposed on this firmware. |
 | Live RRI `0x19/0x05` | Returns `0x0001ec38` immediately after successful open | Gadgetbridge confirms the command shape, but Huawei Health's `serviceId_25.json` says `cmd=0x01` has optional tag `0x02=vol_status`; testing `type=0x03,vol_status=1` still returns `0x0001ec38`. |
 | PermissionCheck `0x01/0x38` | Band asks for permission `1`; reply status frame is `0x000186a4` | Gadgetbridge treats permission ACK as fire-and-forget. Python now replies and records status-only frames instead of treating them as fatal auth rejects. Permission 1 appears SMS/call-related, not the RRI gate. |
@@ -97,7 +98,10 @@ fitness, sleep, HR and SpO2 data useful. After reviewing Open Wearables'
 MIT-licensed health-score algorithms, sleep scoring now uses the same style of
 components that can be computed from our Band 10 artifacts: sigmoid duration
 scoring, bedtime consistency when history contains window timestamps, and
-fragmentation from sleep segment gaps.
+fragmentation from sleep segment gaps. The dashboard also exposes an
+Open-Wearables-style HRV resilience model based on coefficient of variation across
+distinct sleep-sequence HRV sessions, so repeated syncs of the same night do not
+inflate the stability score.
 
 ### Gadgetbridge vs Current Implementation
 
@@ -116,6 +120,8 @@ Current Python implementation now matches the critical pieces:
 - Uses command bitmap for service support.
 - Uses expanded capability bits for `multi_device`, `dict_sleep_sync`,
   `device_command_dict_data`, `emotion`, `sleep_apnea`, `reverse_capabilities`.
+- Sends `AccountRelated.SendExtendedAccountToDevice` when the band advertises both
+  account judgment (`0x1A/0x05`) and account switch (`0x1A/0x06`).
 - Sends accept-agreement TLV exactly like Gadgetbridge.
 - Sends reverse capabilities `FD F7 73 7A` like Gadgetbridge.
 - Sends setup-device-status and wear-status only when `multi_device=true`.
