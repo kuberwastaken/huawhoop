@@ -693,3 +693,15 @@ Implementation choice: first add read-only params/list/name support. Only add up
 - Open Wearables is the best open-source algorithm baseline found so far. It has explicit sleep scoring primitives, duration/stage/consistency/interruption scoring, and HRV resilience helpers.
 - WHOOP's public docs confirm high-level behavior, not exact formulas: recovery is driven mainly by HRV, resting HR, respiratory rate, sleep, skin temp, and SpO2; strain is cardiovascular load on a logarithmic 0-21 scale.
 - Current project code already shares Open Wearables-like sleep duration and sigmoid scoring. Next step is to port the actual sleep score breakdown cleanly and add a transparent strain/recovery model around our Huawei data availability.
+
+### Bridge API
+
+- `run_dashboard.py` now exposes a local bridge API while serving the static dashboard:
+  - `GET /api/status`: bridge, connection, latest sync, insights, and recent command results.
+  - `GET /api/insights`: latest analytics artifact.
+  - `GET /api/export`: compact combined export for PWA/cloud handoff.
+  - `GET /api/artifacts/<allowlisted-file>`: selected runtime artifacts only.
+  - `POST /api/commands/sync`: queues a daemon sync without starting a second BLE script.
+  - `POST /api/commands/weather`: queues a weather push command for the active daemon session.
+- `band_daemon.py` polls `data/bridge_commands.jsonl` from inside the one authenticated BLE session and writes results to `data/bridge_command_results.jsonl`.
+- This is the first cross-device bridge: hosted PWA can point at a configured local bridge URL, while the bridge remains the only process touching BLE/auth secrets.

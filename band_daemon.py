@@ -22,6 +22,9 @@ LOG_LEVEL = getattr(logging, os.getenv("BAND10_LOG", "INFO").upper(), logging.IN
 logging.basicConfig(level=LOG_LEVEL, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
 logger = logging.getLogger("band10.daemon")
 
+COMMAND_QUEUE = DATA_DIR / "bridge_commands.jsonl"
+COMMAND_STATE = DATA_DIR / "bridge_command_state.json"
+
 
 def _status_payload(state: str, **extra) -> dict:
     now = int(time.time())
@@ -41,6 +44,52 @@ def _success_status_tlv(tlvs: dict | None) -> bool:
         return False
     status = tlvs.get(0x7F)
     return status is None or int.from_bytes(status, "big") == 0x000186A0
+
+
+def _load_command_state() -> dict:
+    try:
+        return json.loads(COMMAND_STATE.read_text(encoding="utf-8"))
+    except Exception:
+        return {"processed_lines": 0}
+
+
+def _save_command_state(processed_lines: int):
+    save_json_artifact("bridge_command_state.json", {"processed_lines": processed_lines})
+
+
+def _pending_bridge_commands(limit: int = 5) -> tuple[list[tuple[int, dict]], int]:
+    if not COMMAND_QUEUE.exists():
+        return [], 0
+    lines = COMMAND_QUEUE.read_text(encoding="utf-8").splitlines()
+    processed = int(_load_command_state().get("processed_lines", 0) or 0)
+    if processed > len(lines):
+        processed = 0
+    pending = []
+    for index, line in enumerate(lines[processed:], start=processed + 1):
+        if len(pending) >= limit:
+            break
+        if not line.strip():
+            pending.append((index, {"type": "noop", "payload": {}}))
+            continue
+        try:
+            pending.append((index, json.loads(line)))
+        except Exception as e:
+            pending.append((index, {"type": "invalid", "payload": {"line": line, "error": repr(e)}}))
+    return pending, len(lines)
+
+
+def _command_result(command: dict, state: str, **extra) -> dict:
+    now = int(time.time())
+    result = {
+        "id": command.get("id"),
+        "type": command.get("type"),
+        "state": state,
+        "timestamp": now,
+        "timestamp_local": local_time_label(now),
+        **extra,
+    }
+    append_jsonl_artifact("bridge_command_results.jsonl", result)
+    return result
 
 
 async def _safe(label: str, coro, default=None):
@@ -67,6 +116,42 @@ async def _optional_file_sync(label: str, coro):
     except Exception as e:
         logger.warning("%s failed: %r", label, e)
         return None, "failed"
+
+
+async def process_bridge_commands(band: Band) -> list[dict]:
+    pending, _total = _pending_bridge_commands()
+    if not pending:
+        return []
+    results = []
+    for line_number, command in pending:
+        command_type = command.get("type")
+        payload = command.get("payload") or {}
+        try:
+            logger.info("Processing bridge command %s (%s)", command.get("id"), command_type)
+            if command_type == "noop":
+                result = _command_result(command, "skipped")
+            elif command_type == "invalid":
+                result = _command_result(command, "failed", error=payload)
+            elif command_type == "sync":
+                sync_status = await sync_core(
+                    band,
+                    full=bool(payload.get("full", True)),
+                    live_hrv=bool(payload.get("live_hrv", False)),
+                )
+                result = _command_result(command, "ok", sync=sync_status)
+            elif command_type == "weather":
+                if not hasattr(band, "send_weather_update"):
+                    raise NotImplementedError("Weather push is not implemented in connect.py yet")
+                weather_status = await band.send_weather_update(payload)
+                result = _command_result(command, "ok", weather=weather_status)
+            else:
+                result = _command_result(command, "failed", error=f"unknown command type: {command_type}")
+        except Exception as e:
+            logger.warning("Bridge command %s failed: %r", command.get("id"), e)
+            result = _command_result(command, "failed", error=repr(e))
+        results.append(result)
+        _save_command_state(line_number)
+    return results
 
 
 async def sync_core(band: Band, full: bool = False, live_hrv: bool = False) -> dict:
@@ -193,6 +278,7 @@ async def run_connected_session(cfg: dict):
                         )
                     next_keepalive = time.time() + keepalive_interval
 
+                await process_bridge_commands(band)
                 await band._drain_unsolicited_for(5.0)
         finally:
             try:

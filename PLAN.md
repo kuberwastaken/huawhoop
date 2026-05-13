@@ -85,9 +85,9 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 
 ## Milestone 1: Persistent Bridge
 
-- [ ] Add local bridge API endpoints for status, insights, artifacts, and command queue.
-- [ ] Add daemon command queue handling for sync and weather commands.
-- [ ] Add CORS/bridge URL support for hosted PWA access.
+- [x] Add local bridge API endpoints for status, insights, artifacts, and command queue.
+- [x] Add daemon command queue handling for sync and weather commands.
+- [x] Add CORS/bridge URL support for hosted PWA access.
 - [ ] Add clear status states: connected, reconnecting, syncing, stale, error.
 - [ ] Add Windows startup/service notes after the bridge is stable.
 
@@ -145,7 +145,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Commit this plan.
 - [x] Audit Gadgetbridge weather and watchface source.
 - [x] Audit APK for matching weather/watchface primitives.
-- [ ] Add bridge API and command queue.
+- [x] Add bridge API and command queue.
 - [ ] Rebuild dashboard as PWA shell.
 - [ ] Implement weather push.
 
