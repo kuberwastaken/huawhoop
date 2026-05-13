@@ -765,6 +765,7 @@ Project implementation:
 - The one-shot runner and daemon now pass a shared Bleak options bundle. `BAND10_CONNECT_TIMEOUT_SECONDS` controls GATT connect timeout, and `BAND10_PAIR_BEFORE_CONNECT=1` exists only for Windows pairing diagnostics. Normal runs should use stored-key reconnect without forcing pairing.
 - Scan-only connect was too strict after reset/paired-state changes. If the scan does not see the band, the bridge now falls back to direct Windows BLE connect with the stored address by default (`BAND10_DIRECT_CONNECT_FALLBACK=1`), bounded by the connect timeout.
 - Bounded daemon verification (`BAND10_DAEMON_MAX_SECONDS`) now exits even if discovery/connect fails repeatedly, so live-test loops cannot run past the requested window.
+- The daemon now has a single-owner lock at `data/bridge.lock`. A second daemon/test run exits with `state=blocked` instead of racing the active dashboard bridge, which previously caused alternating `connected` and `not_found` states.
 - Repo hygiene fix: `band.ini`, `data/`, `Huawei-Health-Decompiled/`, `gadgetbridge-src/`, `open-wearables-*`, and local scratch helpers are ignored. The previously tracked runtime artifacts were removed from the index but left on disk.
 - `BAND10_ONLY_WEATHER=1`: authenticate, push weather, save `latest_weather_push.json`, disconnect.
 - `BAND10_ONLY_WATCHFACES=1`: authenticate, read installed/current watchface metadata, save `latest_watchfaces.json`, disconnect.

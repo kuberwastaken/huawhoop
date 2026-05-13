@@ -17,6 +17,8 @@ http://127.0.0.1:8765/dashboard/
 
 The daemon keeps one authenticated BLE session open, polls lightweight battery
 keepalives, and processes dashboard commands from `data/bridge_commands.jsonl`.
+It also writes `data/bridge.lock` so accidental second daemon/test runs do not
+fight the active BLE owner.
 
 ## Phone Or Cross-Device Use
 

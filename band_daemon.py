@@ -27,6 +27,7 @@ logger = logging.getLogger("band10.daemon")
 
 COMMAND_QUEUE = DATA_DIR / "bridge_commands.jsonl"
 COMMAND_STATE = DATA_DIR / "bridge_command_state.json"
+LOCK_FILE = DATA_DIR / "bridge.lock"
 
 
 def _status_payload(state: str, **extra) -> dict:
@@ -40,6 +41,64 @@ def _status_payload(state: str, **extra) -> dict:
     save_json_artifact("connection_status.json", payload)
     append_jsonl_artifact("connection_history.jsonl", payload)
     return payload
+
+
+def _pid_is_alive(pid: int) -> bool:
+    if pid <= 0:
+        return False
+    try:
+        os.kill(pid, 0)
+        return True
+    except OSError:
+        return False
+
+
+def _acquire_daemon_lock() -> bool:
+    DATA_DIR.mkdir(exist_ok=True)
+    payload = {
+        "pid": os.getpid(),
+        "started_at": int(time.time()),
+        "started_at_local": local_time_label(int(time.time())),
+    }
+    while True:
+        try:
+            fd = os.open(str(LOCK_FILE), os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+            with os.fdopen(fd, "w", encoding="utf-8") as handle:
+                json.dump(payload, handle)
+            return True
+        except FileExistsError:
+            try:
+                owner = json.loads(LOCK_FILE.read_text(encoding="utf-8"))
+            except Exception:
+                owner = {}
+            owner_pid = int(owner.get("pid") or 0)
+            if owner_pid and not _pid_is_alive(owner_pid):
+                logger.info("Removing stale bridge lock from pid %s", owner_pid)
+                try:
+                    LOCK_FILE.unlink()
+                except FileNotFoundError:
+                    pass
+                continue
+            _status_payload(
+                "blocked",
+                device_mac=load_or_create_config()["device_mac"],
+                reason="another bridge process already owns BLE",
+                owner_pid=owner_pid or None,
+            )
+            logger.error("Another bridge process already owns BLE: %s", owner)
+            return False
+
+
+def _release_daemon_lock():
+    try:
+        owner = json.loads(LOCK_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        owner = {}
+    if int(owner.get("pid") or 0) == os.getpid():
+        try:
+            LOCK_FILE.unlink()
+        except FileNotFoundError:
+            pass
 
 
 def _success_status_tlv(tlvs: dict | None) -> bool:
@@ -318,39 +377,44 @@ async def run_connected_session(cfg: dict):
 
 
 async def main():
+    if not _acquire_daemon_lock():
+        return
     cfg = load_or_create_config()
     backoff = 5
     max_seconds = int(os.getenv("BAND10_DAEMON_MAX_SECONDS", "0"))
     stop_at = time.time() + max_seconds if max_seconds > 0 else None
-    while True:
-        if stop_at is not None and time.time() >= stop_at:
-            _status_payload(
-                "soak_complete",
-                device_mac=cfg["device_mac"],
-                reason="bounded verification window ended before a stable session",
-            )
-            return
-        try:
-            _status_payload("connecting", device_mac=cfg["device_mac"])
-            await run_connected_session(cfg)
-            if stop_at is not None:
+    try:
+        while True:
+            if stop_at is not None and time.time() >= stop_at:
+                _status_payload(
+                    "soak_complete",
+                    device_mac=cfg["device_mac"],
+                    reason="bounded verification window ended before a stable session",
+                )
                 return
-            _status_payload("disconnected", device_mac=cfg["device_mac"], reason="client session ended")
-            backoff = 5
-        except asyncio.CancelledError:
-            _status_payload("stopped", device_mac=cfg["device_mac"])
-            raise
-        except Exception as e:
-            logger.exception("Daemon session failed")
-            state = "not_found" if isinstance(e, BleakDeviceNotFoundError) else "reconnecting"
-            _status_payload(state, device_mac=cfg["device_mac"], error=repr(e), retry_in_sec=backoff)
-            sleep_for = backoff
-            if stop_at is not None:
-                sleep_for = max(0.0, min(float(backoff), stop_at - time.time()))
-                if sleep_for <= 0:
-                    continue
-            await asyncio.sleep(sleep_for)
-            backoff = min(120, backoff * 2)
+            try:
+                _status_payload("connecting", device_mac=cfg["device_mac"])
+                await run_connected_session(cfg)
+                if stop_at is not None:
+                    return
+                _status_payload("disconnected", device_mac=cfg["device_mac"], reason="client session ended")
+                backoff = 5
+            except asyncio.CancelledError:
+                _status_payload("stopped", device_mac=cfg["device_mac"])
+                raise
+            except Exception as e:
+                logger.exception("Daemon session failed")
+                state = "not_found" if isinstance(e, BleakDeviceNotFoundError) else "reconnecting"
+                _status_payload(state, device_mac=cfg["device_mac"], error=repr(e), retry_in_sec=backoff)
+                sleep_for = backoff
+                if stop_at is not None:
+                    sleep_for = max(0.0, min(float(backoff), stop_at - time.time()))
+                    if sleep_for <= 0:
+                        continue
+                await asyncio.sleep(sleep_for)
+                backoff = min(120, backoff * 2)
+    finally:
+        _release_daemon_lock()
 
 
 if __name__ == "__main__":
