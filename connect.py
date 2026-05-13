@@ -737,7 +737,7 @@ def _load_weather_payload() -> dict:
         "current": "temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m,wind_direction_10m",
         "hourly": "temperature_2m,precipitation_probability,uv_index,weather_code",
         "daily": "weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max",
-        "forecast_days": os.getenv("BAND10_WEATHER_DAYS", "4"),
+        "forecast_days": os.getenv("BAND10_WEATHER_DAYS", "7"),
         "timezone": "UTC",
     })
     with urlopen(f"https://api.open-meteo.com/v1/forecast?{params}", timeout=15) as response:
@@ -759,7 +759,7 @@ def _load_weather_payload() -> dict:
 
     hourly_data = data.get("hourly") or {}
     hourly = []
-    for index, value in enumerate((hourly_data.get("time") or [])[:24]):
+    for index, value in enumerate((hourly_data.get("time") or [])[:72]):
         hourly.append({
             "timestamp": _parse_weather_time(value),
             "condition_code": _wmo_to_owm(_safe_list_get(hourly_data.get("weather_code") or [], index)),
@@ -2600,13 +2600,13 @@ class Band:
         tlv = b""
         now = int(payload.get("timestamp") or time.time())
         hourly_items = []
-        for item in (payload.get("hourly") or [])[:24]:
-            if not item.get("timestamp"):
-                continue
+        future_hourly = [
+            item for item in (payload.get("hourly") or [])
+            if item.get("timestamp") and int(item["timestamp"]) >= now - 3600
+        ]
+        for item in future_hourly[:24]:
             # Open-Meteo returns hourly rows starting at midnight. Gadgetbridge
             # sends forecast rows, so keep stale hours out of the packet.
-            if int(item["timestamp"]) < now - 3600:
-                continue
             entry = tlv_enc(0x03, self._i32(item["timestamp"]))
             if settings.get("icon"):
                 entry += tlv_enc(0x04, self._byte(self._weather_icon_byte(int(item.get("condition_code") or 800))))
