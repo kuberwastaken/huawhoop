@@ -1,0 +1,15 @@
+{
+  "full": true,
+  "live_hrv": false,
+  "battery": 87,
+  "steps": [
+    "fitness",
+    "watchfaces",
+    "stress_file_preserved",
+    "trusleep",
+    "insights"
+  ],
+  "ended_at": 1778688000,
+  "ended_at_local": "Demo sync",
+  "duration_sec": 6
+}

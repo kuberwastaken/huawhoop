@@ -12,6 +12,8 @@ This keeps one authenticated BLE session open and serves the dashboard at:
 http://127.0.0.1:8765/dashboard/
 ```
 
+Deployment and bridge notes live in `DEPLOYMENT.md` and `BRIDGE.md`.
+
 `connect.py` is a diagnostic one-shot and disconnects when it exits, so the band may
 show disconnected after those runs. `run_dashboard.py` is the default workflow for
 timely syncs without repeated pairing/connect churn.

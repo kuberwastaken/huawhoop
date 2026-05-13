@@ -1,19 +1,19 @@
 const artifactFiles = {
-  connection: "../data/connection_status.json",
-  sync: "../data/latest_sync_status.json",
-  insights: "../data/latest_insights.json",
-  summary: "../data/latest_recovery_summary.json",
-  fitness: "../data/latest_fitness_preview.json",
-  capabilities: "../data/latest_capabilities.json",
-  sequence: "../data/latest_sleep_sequence_preview.json",
-  trusleep: "../data/latest_trusleep_preview.json",
-  stress: "../data/latest_stress_preview.json",
-  stressSettings: "../data/latest_stress_settings.json",
-  liveHrv: "../data/latest_live_hrv.json",
-  watchfaces: "../data/latest_watchfaces.json",
-  watchfaceOperation: "../data/latest_watchface_operation.json",
-  recoveryHistory: "../data/recovery_history.jsonl",
-  insightsHistory: "../data/insights_history.jsonl"
+  connection: "connection_status.json",
+  sync: "latest_sync_status.json",
+  insights: "latest_insights.json",
+  summary: "latest_recovery_summary.json",
+  fitness: "latest_fitness_preview.json",
+  capabilities: "latest_capabilities.json",
+  sequence: "latest_sleep_sequence_preview.json",
+  trusleep: "latest_trusleep_preview.json",
+  stress: "latest_stress_preview.json",
+  stressSettings: "latest_stress_settings.json",
+  liveHrv: "latest_live_hrv.json",
+  watchfaces: "latest_watchfaces.json",
+  watchfaceOperation: "latest_watchface_operation.json",
+  recoveryHistory: "recovery_history.jsonl",
+  insightsHistory: "insights_history.jsonl"
 };
 
 const state = {
@@ -49,6 +49,15 @@ function esc(value) {
 function bridgePath(path) {
   const base = state.bridgeBase.replace(/\/$/, "");
   return `${base}${path}`;
+}
+
+function isLocalHost() {
+  return ["", "localhost", "127.0.0.1", "::1"].includes(window.location.hostname);
+}
+
+function artifactPath(key) {
+  const root = (!state.bridgeBase && !isLocalHost()) ? "./sample-data/" : "../data/";
+  return `${root}${artifactFiles[key]}`;
 }
 
 async function fetchJson(path, fallback = {}) {
@@ -113,21 +122,21 @@ async function loadData() {
   }
 
   const entries = await Promise.all([
-    fetchJson(artifactFiles.connection, {}),
-    fetchJson(artifactFiles.sync, {}),
-    fetchJson(artifactFiles.insights, {}),
-    fetchJson(artifactFiles.summary, {}),
-    fetchJson(artifactFiles.fitness, {}),
-    fetchJson(artifactFiles.capabilities, {}),
-    fetchJson(artifactFiles.sequence, {}),
-    fetchJson(artifactFiles.trusleep, {}),
-    fetchJson(artifactFiles.stress, {}),
-    fetchJson(artifactFiles.stressSettings, {}),
-    fetchJson(artifactFiles.liveHrv, {}),
-    fetchJson(artifactFiles.watchfaces, {}),
-    fetchJson(artifactFiles.watchfaceOperation, {}),
-    fetchText(artifactFiles.recoveryHistory, ""),
-    fetchText(artifactFiles.insightsHistory, "")
+    fetchJson(artifactPath("connection"), {}),
+    fetchJson(artifactPath("sync"), {}),
+    fetchJson(artifactPath("insights"), {}),
+    fetchJson(artifactPath("summary"), {}),
+    fetchJson(artifactPath("fitness"), {}),
+    fetchJson(artifactPath("capabilities"), {}),
+    fetchJson(artifactPath("sequence"), {}),
+    fetchJson(artifactPath("trusleep"), {}),
+    fetchJson(artifactPath("stress"), {}),
+    fetchJson(artifactPath("stressSettings"), {}),
+    fetchJson(artifactPath("liveHrv"), {}),
+    fetchJson(artifactPath("watchfaces"), {}),
+    fetchJson(artifactPath("watchfaceOperation"), {}),
+    fetchText(artifactPath("recoveryHistory"), ""),
+    fetchText(artifactPath("insightsHistory"), "")
   ]);
   state.data = {
     connection: entries[0],

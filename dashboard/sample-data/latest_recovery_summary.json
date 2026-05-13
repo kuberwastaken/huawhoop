@@ -1,0 +1,13 @@
+{
+  "step_total": 12844,
+  "sleep_minutes": 431,
+  "heart_rate_min": 49,
+  "heart_rate_avg": 74.2,
+  "heart_rate_max": 164,
+  "spo2_min": 94,
+  "spo2_avg": 98.1,
+  "spo2_max": 100,
+  "step_window_samples": 720,
+  "generated_at": 1778688000,
+  "generated_at_local": "Demo data"
+}

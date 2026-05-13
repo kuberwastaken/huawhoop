@@ -1,0 +1,10 @@
+band.ini
+data/
+Huawei-Health-Decompiled/
+huawei-health.apk
+gadgetbridge-src/
+open-wearables-src/
+open-wearables-full/
+__pycache__/
+*.pyc
+*.log

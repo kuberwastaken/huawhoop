@@ -1,0 +1,21 @@
+{
+  "supported": true,
+  "params": {
+    "width": 194,
+    "height": 368
+  },
+  "installed": [
+    {
+      "file_name": "classic_green.hwt",
+      "display_name": "Classic Green",
+      "version": "1.0",
+      "current": true
+    },
+    {
+      "file_name": "numeric_dark.hwt",
+      "display_name": "Numeric Dark",
+      "version": "1.0",
+      "current": false
+    }
+  ]
+}

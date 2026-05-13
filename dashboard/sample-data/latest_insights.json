@@ -1,0 +1,74 @@
+{
+  "recovery_score": 85,
+  "recovery_label": "green",
+  "hrv_rmssd_ms": 64,
+  "resting_hr": 58,
+  "resting_hr_baseline": 61,
+  "components": {
+    "hrv": 88,
+    "rhr": 78,
+    "sleep": 86,
+    "spo2": 97
+  },
+  "hrv": {
+    "avg_hrv_ms": 64,
+    "min_baseline": 45,
+    "max_baseline": 70,
+    "sample_count": 7,
+    "source": "sleep_sequence"
+  },
+  "sleep": {
+    "minutes": 431,
+    "need_minutes": 480,
+    "score": 86,
+    "performance_score": 90,
+    "sleep_efficiency": 94,
+    "sleep_latency_min": 12,
+    "avg_breath_rate": 14,
+    "avg_spo2": 98,
+    "stage_counts": {
+      "1": 214,
+      "2": 71,
+      "3": 112,
+      "4": 34
+    }
+  },
+  "strain": {
+    "strain": 12.8,
+    "trimp": 98.4,
+    "zone_minutes": {
+      "easy": 121,
+      "moderate": 44,
+      "hard": 13,
+      "max": 0
+    }
+  },
+  "stress": {
+    "source": "demo",
+    "sample_count": 96,
+    "gauge_0_3": 1.4,
+    "label": "Medium",
+    "low_pct": 61,
+    "zone_minutes": {
+      "low": 366,
+      "medium": 112,
+      "high": 21
+    }
+  },
+  "training_balance": {
+    "load_ratio": 0.93,
+    "label": "balanced",
+    "recommendation": "Load is close to baseline. Favor quality work if recovery stays green."
+  },
+  "data_quality": {
+    "hrv_source": "sleep_sequence",
+    "sleep_sequence_sessions": 7,
+    "hr_samples": 720,
+    "spo2_samples": 84,
+    "stress_file_samples": 96,
+    "live_hrv_transport": {
+      "state": "diagnostic",
+      "sample_count": 0
+    }
+  }
+}

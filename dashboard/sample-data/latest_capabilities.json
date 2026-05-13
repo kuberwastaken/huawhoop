@@ -1,0 +1,7 @@
+{
+  "capability_flags": {
+    "watchface": true,
+    "weather": true,
+    "reverse_capabilities": true
+  }
+}
