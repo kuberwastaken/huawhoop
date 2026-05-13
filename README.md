@@ -48,6 +48,17 @@ python band_daemon.py
 Bounded daemon runs now exit even if the band is not visible or Windows times out
 while opening GATT services, which keeps verification loops from hanging forever.
 
+To keep the bridge running after Windows login, install the scheduled task:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\install_windows_bridge_task.ps1
+Start-ScheduledTask -TaskName "Huawhoop Bridge"
+```
+
+It runs `python run_dashboard.py` in the repo root, writes logs to
+`logs/bridge-task.log`, and keeps `http://127.0.0.1:8765/dashboard/` available.
+Remove it with `scripts\uninstall_windows_bridge_task.ps1`.
+
 Local secrets and live artifacts are intentionally ignored: `band.ini`, `data/`,
 the decompiled Huawei Health tree, Gadgetbridge, and external research clones stay
 on disk but out of commits. Use `dashboard/sample-data/` for sanitized hosted
