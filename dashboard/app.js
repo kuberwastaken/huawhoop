@@ -11,6 +11,7 @@ const artifactFiles = {
   stressSettings: "../data/latest_stress_settings.json",
   liveHrv: "../data/latest_live_hrv.json",
   watchfaces: "../data/latest_watchfaces.json",
+  watchfaceOperation: "../data/latest_watchface_operation.json",
   recoveryHistory: "../data/recovery_history.jsonl",
   insightsHistory: "../data/insights_history.jsonl"
 };
@@ -33,6 +34,16 @@ function clamp(value, min, max) {
 
 function number(value, fallback = 0) {
   return Number.isFinite(Number(value)) ? Number(value) : fallback;
+}
+
+function esc(value) {
+  return String(value ?? "").replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    "\"": "&quot;",
+    "'": "&#39;"
+  })[char]);
 }
 
 function bridgePath(path) {
@@ -92,6 +103,7 @@ async function loadData() {
       stressSettings: await fetchJson(bridgePath("/api/artifacts/latest_stress_settings.json"), {}),
       liveHrv: await fetchJson(bridgePath("/api/artifacts/latest_live_hrv.json"), {}),
       watchfaces: await fetchJson(bridgePath("/api/artifacts/latest_watchfaces.json"), {}),
+      watchfaceOperation: await fetchJson(bridgePath("/api/artifacts/latest_watchface_operation.json"), {}),
       recoveryHistory: parseJsonl(historyText),
       insightsHistory: parseJsonl(insightsHistoryText),
       bridge: api.bridge || {},
@@ -113,6 +125,7 @@ async function loadData() {
     fetchJson(artifactFiles.stressSettings, {}),
     fetchJson(artifactFiles.liveHrv, {}),
     fetchJson(artifactFiles.watchfaces, {}),
+    fetchJson(artifactFiles.watchfaceOperation, {}),
     fetchText(artifactFiles.recoveryHistory, ""),
     fetchText(artifactFiles.insightsHistory, "")
   ]);
@@ -129,8 +142,9 @@ async function loadData() {
     stressSettings: entries[9],
     liveHrv: entries[10],
     watchfaces: entries[11],
-    recoveryHistory: parseJsonl(entries[12]),
-    insightsHistory: parseJsonl(entries[13]),
+    watchfaceOperation: entries[12],
+    recoveryHistory: parseJsonl(entries[13]),
+    insightsHistory: parseJsonl(entries[14]),
     bridge: {},
     lastCommands: []
   };
@@ -409,6 +423,7 @@ function renderRoutes() {
   const flags = state.data.capabilities?.capability_flags || {};
   const quality = state.data.insights?.data_quality || {};
   const watchfaces = state.data.watchfaces || {};
+  const watchfaceOperation = state.data.watchfaceOperation || {};
   const installed = watchfaces.installed || [];
   const rows = [
     ["Stored reconnect", "ready", state.data.connection?.state || "unknown"],
@@ -419,12 +434,32 @@ function renderRoutes() {
   ];
   $("#route-status").innerHTML = rows.map(([name, value, sub]) => detailRow("•", name, value, sub)).join("");
   const current = installed.find((face) => face.current);
+  const faceRows = installed.slice(0, 8).map((face) => {
+    const label = face.display_name || face.file_name || "Watchface";
+    const version = face.version || "";
+    const disabled = face.current ? "disabled" : "";
+    return `<div class="watchface-row">
+      <div>
+        <strong>${esc(label)}</strong>
+        <span>${esc(face.file_name || "")}${version ? ` / ${esc(version)}` : ""}</span>
+      </div>
+      <button class="secondary-button compact watchface-activate" type="button"
+        data-file-name="${esc(face.file_name || "")}" data-version="${esc(version)}" ${disabled}>
+        ${face.current ? "Current" : "Activate"}
+      </button>
+    </div>`;
+  }).join("");
   $("#watchface-status").innerHTML = [
     detailRow("W", "Read-only inventory", watchfaces.supported ? "ready" : "queued", watchfaces.generated_at_local || "params, list, names"),
     detailRow("C", "Current Watchface", current?.display_name || current?.file_name || "--", current?.version || ""),
     detailRow("N", "Installed Faces", installed.length || "--", watchfaces.params ? `${watchfaces.params.width || "--"}x${watchfaces.params.height || "--"}` : "waiting for scan"),
-    detailRow("U", "Upload Route", "gated", "validate package before writing")
+    detailRow("A", "Last Activation", watchfaceOperation.file_name || "--", watchfaceOperation.generated_at_local || "existing installed faces only"),
+    detailRow("U", "Upload Route", "gated", "validate package before writing"),
+    faceRows ? `<div class="watchface-list">${faceRows}</div>` : ""
   ].join("");
+  $$(".watchface-activate").forEach((button) => {
+    button.addEventListener("click", () => queueWatchfaceActivate(button.dataset.fileName, button.dataset.version));
+  });
 }
 
 function renderWeather() {
@@ -588,6 +623,17 @@ async function queueWatchfaceScan() {
     await refresh();
   } catch (error) {
     toast(`Watchface scan failed: ${error.message}`);
+  }
+}
+
+async function queueWatchfaceActivate(fileName, version) {
+  if (!fileName) return;
+  try {
+    await command("/api/commands/watchface_activate", { file_name: fileName, version });
+    toast("Watchface activation queued");
+    await refresh();
+  } catch (error) {
+    toast(`Watchface activation failed: ${error.message}`);
   }
 }
 

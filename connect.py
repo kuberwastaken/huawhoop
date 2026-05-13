@@ -62,6 +62,7 @@ SVC_FITNESS = 0x07
 SVC_ACCOUNT = 0x1A
 SVC_STRESS  = 0x20
 SVC_WEATHER = 0x0F
+SVC_GPS_TIME = 0x18
 SVC_WATCHFACE = 0x27
 SVC_FILE_UPLOAD = 0x28
 SVC_FILE_DOWNLOAD = 0x2C
@@ -108,6 +109,7 @@ WEATHER_EXTENDED_SUPPORT = 0x06
 WEATHER_FORECAST = 0x08
 WEATHER_START = 0x09
 WEATHER_SUN_MOON_SUPPORT = 0x0A
+GPS_CURRENT = 0x07
 WATCHFACE_PARAMS = 0x01
 WATCHFACE_LIST = 0x02
 WATCHFACE_OPERATION = 0x03
@@ -639,6 +641,7 @@ class Band:
         self._live_hr_samples = []
         self._live_rri_events = []
         self._last_weather_payload = None
+        self._weather_push_active = False
         self.supported_services = set()
         self.commands_per_service = {}
         self.expand_capabilities = b""
@@ -976,7 +979,7 @@ class Band:
             decoded = self._decrypt_or_raw_tlvs(tlvs)
             status = self._tlv_int(decoded.get(0x7F, b""), default=-1)
             logger.info(f"  Weather device request: { {hex(k): v.hex() for k, v in decoded.items()} }")
-            if status == RESULT_WEATHER_DEVICE_REQUEST and self._last_weather_payload:
+            if status == RESULT_WEATHER_DEVICE_REQUEST and self._last_weather_payload and not self._weather_push_active:
                 await self.send_weather_update(self._last_weather_payload)
             else:
                 await self._weather_device_request_ack()
@@ -2220,6 +2223,18 @@ class Band:
         return struct.pack(">i", max(-2147483648, min(2147483647, int(value))))
 
     @staticmethod
+    def _f64_le(value: float | int) -> bytes:
+        # HuaweiTLV writes Java Double values little-endian.
+        return struct.pack("<d", float(value))
+
+    @staticmethod
+    def _same_utc_day_timestamp(candidate: int | float | None, day_timestamp: int | float | None) -> bool:
+        if not candidate or not day_timestamp:
+            return False
+        day_start = int(day_timestamp) - (int(day_timestamp) % 86400)
+        return day_start <= int(candidate) < day_start + 86400
+
+    @staticmethod
     def _weather_icon_byte(condition_code: int) -> int:
         # Gadgetbridge's OpenWeatherMap-condition to Huawei-icon mapping.
         exact = {
@@ -2370,8 +2385,9 @@ class Band:
                 if item.get("temp_c") is not None:
                     entry += tlv_enc(0x05, self._i8(item["temp_c"]))
             if settings.get("extended_hourly"):
-                if item.get("precipitation_probability") is not None:
-                    entry += tlv_enc(0x06, self._u8(item["precipitation_probability"]))
+                precip = item.get("precipitation_probability", item.get("precipitation"))
+                if precip is not None:
+                    entry += tlv_enc(0x06, self._u8(precip))
                 if item.get("uv_index") is not None:
                     entry += tlv_enc(0x07, self._u8(item["uv_index"]))
             hourly_items.append(tlv_enc(0x82, entry))
@@ -2400,7 +2416,7 @@ class Band:
                     entry += tlv_enc(0x15, self._i8(item["min_temp_c"]))
             if settings.get("sun_moon"):
                 for src, tag in (("sunrise", 0x16), ("sunset", 0x17), ("moonrise", 0x1A), ("moonset", 0x1B)):
-                    if item.get(src):
+                    if item.get(src) and self._same_utc_day_timestamp(item.get(src), item["timestamp"]):
                         entry += tlv_enc(tag, self._i32(item[src]))
             if settings.get("moon_phase") and item.get("moon_phase") is not None:
                 phase = max(1, min(8, int(item["moon_phase"])))
@@ -2413,6 +2429,40 @@ class Band:
     async def _weather_device_request_ack(self, status: int = RESULT_SUCCESS):
         await self._send(SVC_WEATHER, WEATHER_DEVICE_REQUEST, tlv_enc(0x01, struct.pack(">I", status)))
 
+    async def _send_current_gps_time_for_weather(self, payload: dict) -> dict | None:
+        lat = payload.get("latitude")
+        lon = payload.get("longitude")
+        if lat is None or lon is None:
+            return None
+        try:
+            lat = round(float(lat), 7)
+            lon = round(float(lon), 7)
+        except (TypeError, ValueError):
+            return None
+
+        # Gadgetbridge gates this on command 0x18/0x06 but sends CurrentGPSRequest
+        # on 0x18/0x07. Mirror that quirk and keep failure non-fatal for weather.
+        if self.commands_per_service and not self._supports_command(SVC_GPS_TIME, 0x06):
+            return {"status": "unsupported", "reason": "gps/time support command 0x06 not advertised"}
+
+        timestamp = int(time.time()) - 86400
+        tlv = (
+            tlv_enc(0x01, self._i32(timestamp)) +
+            tlv_enc(0x02, self._f64_le(lat)) +
+            tlv_enc(0x03, self._f64_le(lon))
+        )
+        try:
+            response = await self._transact_encrypted(SVC_GPS_TIME, GPS_CURRENT, tlv, timeout=8.0)
+            return {
+                "status": "ok",
+                "latitude": lat,
+                "longitude": lon,
+                "timestamp": timestamp,
+                "tlvs": {hex(k): v.hex() for k, v in response.items()},
+            }
+        except Exception as e:
+            return {"status": "failed", "error": repr(e), "latitude": lat, "longitude": lon}
+
     async def send_weather_update(self, payload: dict) -> dict:
         if not self.secret_key:
             raise RuntimeError("Cannot send weather before authenticated encrypted session")
@@ -2421,59 +2471,69 @@ class Band:
 
         payload = dict(payload)
         self._last_weather_payload = payload
+        if self._weather_push_active:
+            raise RuntimeError("Weather push already in progress")
+        self._weather_push_active = True
         settings = self._weather_support_defaults()
-        settings["uv_index"] = self._supports_expand_capability(0x2F) or settings["uv_index"]
-        settings["extended_hourly"] = self._supports_expand_capability(0xC0) or settings["extended_hourly"]
-        status = {
-            "started_at": int(time.time()),
-            "started_at_local": local_time_label(int(time.time())),
-            "location": payload.get("location"),
-            "steps": [],
-            "settings": settings,
-        }
+        try:
+            settings["uv_index"] = self._supports_expand_capability(0x2F) or settings["uv_index"]
+            settings["extended_hourly"] = self._supports_expand_capability(0xC0) or settings["extended_hourly"]
+            status = {
+                "started_at": int(time.time()),
+                "started_at_local": local_time_label(int(time.time())),
+                "location": payload.get("location"),
+                "steps": [],
+                "settings": settings,
+            }
 
-        logger.info("Weather push: start")
-        start = await self._transact_encrypted(SVC_WEATHER, WEATHER_START, tlv_enc(0x01, b"\x03"), timeout=8.0)
-        start_code = self._tlv_int(start.get(0x7F, b""))
-        status["steps"].append({"name": "start", "code": start_code, "tlvs": {hex(k): v.hex() for k, v in start.items()}})
-        if start_code not in (RESULT_SUCCESS, RESULT_WEATHER_ALREADY_STARTED):
+            logger.info("Weather push: start")
+            start = await self._transact_encrypted(SVC_WEATHER, WEATHER_START, tlv_enc(0x01, b"\x03"), timeout=8.0)
+            start_code = self._tlv_int(start.get(0x7F, b""))
+            status["steps"].append({"name": "start", "code": start_code, "tlvs": {hex(k): v.hex() for k, v in start.items()}})
+            if start_code not in (RESULT_SUCCESS, RESULT_WEATHER_ALREADY_STARTED):
+                save_json_artifact("latest_weather_push.json", status)
+                raise RuntimeError(f"WeatherStart failed: {start_code:#x}")
+
+            if self._supports_command(SVC_WEATHER, WEATHER_UNIT):
+                unit = await self._transact_encrypted(SVC_WEATHER, WEATHER_UNIT, tlv_enc(0x01, b"\x00"), timeout=8.0)
+                status["steps"].append({"name": "unit", "tlvs": {hex(k): v.hex() for k, v in unit.items()}})
+
+            basic = await self._transact_encrypted(SVC_WEATHER, WEATHER_SUPPORT, tlv_enc(0x01), timeout=8.0)
+            self._weather_parse_basic_support(settings, basic)
+            status["steps"].append({"name": "support", "bitmap": basic.get(0x01, b"").hex()})
+
+            if self._supports_command(SVC_WEATHER, WEATHER_EXTENDED_SUPPORT):
+                extended = await self._transact_encrypted(SVC_WEATHER, WEATHER_EXTENDED_SUPPORT, tlv_enc(0x01), timeout=8.0)
+                self._weather_parse_extended_support(settings, extended)
+                status["steps"].append({"name": "extended_support", "bitmap": extended.get(0x01, b"").hex()})
+
+            if self._supports_command(SVC_WEATHER, WEATHER_SUN_MOON_SUPPORT):
+                sun_moon = await self._transact_encrypted(SVC_WEATHER, WEATHER_SUN_MOON_SUPPORT, tlv_enc(0x01), timeout=8.0)
+                self._weather_parse_sun_moon_support(settings, sun_moon)
+                status["steps"].append({"name": "sun_moon_support", "bitmap": sun_moon.get(0x01, b"").hex()})
+
+            current_tlv = self._weather_current_tlv(payload, settings)
+            current = await self._transact_encrypted(SVC_WEATHER, WEATHER_CURRENT, current_tlv, timeout=10.0)
+            status["steps"].append({"name": "current", "tlvs": {hex(k): v.hex() for k, v in current.items()}})
+
+            gps_time = await self._send_current_gps_time_for_weather(payload)
+            if gps_time:
+                status["steps"].append({"name": "gps_time", **gps_time})
+
+            if self._supports_command(SVC_WEATHER, WEATHER_FORECAST):
+                forecast_tlv = self._weather_forecast_tlv(payload, settings)
+                if forecast_tlv:
+                    forecast = await self._transact_encrypted(SVC_WEATHER, WEATHER_FORECAST, forecast_tlv, timeout=15.0)
+                    status["steps"].append({"name": "forecast", "tlvs": {hex(k): v.hex() for k, v in forecast.items()}})
+
+            status["finished_at"] = int(time.time())
+            status["finished_at_local"] = local_time_label(status["finished_at"])
+            status["settings"] = settings
             save_json_artifact("latest_weather_push.json", status)
-            raise RuntimeError(f"WeatherStart failed: {start_code:#x}")
-
-        if self._supports_command(SVC_WEATHER, WEATHER_UNIT):
-            unit = await self._transact_encrypted(SVC_WEATHER, WEATHER_UNIT, tlv_enc(0x01, b"\x00"), timeout=8.0)
-            status["steps"].append({"name": "unit", "tlvs": {hex(k): v.hex() for k, v in unit.items()}})
-
-        basic = await self._transact_encrypted(SVC_WEATHER, WEATHER_SUPPORT, tlv_enc(0x01), timeout=8.0)
-        self._weather_parse_basic_support(settings, basic)
-        status["steps"].append({"name": "support", "bitmap": basic.get(0x01, b"").hex()})
-
-        if self._supports_command(SVC_WEATHER, WEATHER_EXTENDED_SUPPORT):
-            extended = await self._transact_encrypted(SVC_WEATHER, WEATHER_EXTENDED_SUPPORT, tlv_enc(0x01), timeout=8.0)
-            self._weather_parse_extended_support(settings, extended)
-            status["steps"].append({"name": "extended_support", "bitmap": extended.get(0x01, b"").hex()})
-
-        if self._supports_command(SVC_WEATHER, WEATHER_SUN_MOON_SUPPORT):
-            sun_moon = await self._transact_encrypted(SVC_WEATHER, WEATHER_SUN_MOON_SUPPORT, tlv_enc(0x01), timeout=8.0)
-            self._weather_parse_sun_moon_support(settings, sun_moon)
-            status["steps"].append({"name": "sun_moon_support", "bitmap": sun_moon.get(0x01, b"").hex()})
-
-        current_tlv = self._weather_current_tlv(payload, settings)
-        current = await self._transact_encrypted(SVC_WEATHER, WEATHER_CURRENT, current_tlv, timeout=10.0)
-        status["steps"].append({"name": "current", "tlvs": {hex(k): v.hex() for k, v in current.items()}})
-
-        if self._supports_command(SVC_WEATHER, WEATHER_FORECAST):
-            forecast_tlv = self._weather_forecast_tlv(payload, settings)
-            if forecast_tlv:
-                forecast = await self._transact_encrypted(SVC_WEATHER, WEATHER_FORECAST, forecast_tlv, timeout=15.0)
-                status["steps"].append({"name": "forecast", "tlvs": {hex(k): v.hex() for k, v in forecast.items()}})
-
-        status["finished_at"] = int(time.time())
-        status["finished_at_local"] = local_time_label(status["finished_at"])
-        status["settings"] = settings
-        save_json_artifact("latest_weather_push.json", status)
-        logger.info("Weather push: complete")
-        return status
+            logger.info("Weather push: complete")
+            return status
+        finally:
+            self._weather_push_active = False
 
     @staticmethod
     def _watchface_type_flags(type_byte: int, expanded_type: int = 0) -> dict:
@@ -2568,6 +2628,45 @@ class Band:
             "names": names,
         }
         save_json_artifact("latest_watchfaces.json", result)
+        return result
+
+    async def activate_watchface(self, file_name: str, version: str | None = None) -> dict:
+        if not self._supports_command(SVC_WATCHFACE, WATCHFACE_OPERATION):
+            result = {
+                "supported": False,
+                "operation": "activate",
+                "reason": "watchface operation command not advertised",
+                "generated_at": int(time.time()),
+            }
+            save_json_artifact("latest_watchface_operation.json", result)
+            return result
+        if not file_name:
+            raise ValueError("watchface file_name is required")
+
+        if "_" in file_name and version is None:
+            file_name, version = file_name.split("_", 1)
+        version = version or ""
+        tlv = (
+            tlv_enc(0x01, file_name.encode("utf-8")) +
+            tlv_enc(0x02, version.encode("utf-8")) +
+            tlv_enc(0x03, b"\x01")
+        )
+        response = await self._transact_encrypted(SVC_WATCHFACE, WATCHFACE_OPERATION, tlv, timeout=12.0)
+        result = {
+            "supported": True,
+            "operation": "activate",
+            "file_name": file_name,
+            "version": version,
+            "generated_at": int(time.time()),
+            "generated_at_local": local_time_label(int(time.time())),
+            "tlvs": {hex(k): v.hex() for k, v in response.items()},
+        }
+        save_json_artifact("latest_watchface_operation.json", result)
+        try:
+            await self.get_watchface_inventory()
+        except Exception as e:
+            result["refresh_error"] = repr(e)
+            save_json_artifact("latest_watchface_operation.json", result)
         return result
 
     @staticmethod

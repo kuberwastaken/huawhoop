@@ -644,6 +644,13 @@ Forecast TLVs:
 - Hourly: outer `0x81`, repeated `0x82` entries with `0x03` timestamp, `0x04` icon, `0x05` temp, optional `0x06` precipitation and `0x07` UV index.
 - Daily: outer `0x90`, repeated `0x91` entries with `0x12` timestamp, `0x13` icon, `0x14` high, `0x15` low, optional `0x16` sunrise, `0x17` sunset, `0x1a` moonrise, `0x1b` moonset, `0x1e` moon phase.
 
+Weather-adjacent GPS/time:
+
+- `HuaweiWeatherManager` optionally sends GPS/time after current weather and before forecast.
+- Gadgetbridge gates this on supported command `0x18/0x06`, but the packet class sends `GpsAndTime.CurrentGPSRequest` on `svc=0x18/cmd=0x07`.
+- Tags are `0x01` epoch seconds, `0x02` latitude as little-endian Java `Double`, and `0x03` longitude as little-endian Java `Double`.
+- Gadgetbridge deliberately uses a timestamp about one day old so weather location does not override fresher workout GPS location. `connect.py` mirrors that and keeps GPS/time failure non-fatal for weather.
+
 Huawei Health APK comparison:
 
 - `defpackage/koq.java` is the decompiled `DataWeather` model. It has the same fields Gadgetbridge sends: weather, PM2.5, low/high/current temp, location, unit, AQI, observation/update time, wind direction/speed, source, forecast days/hours, UV index, humidity, windSpeedValue, and somatosensory/feels-like temperature.
@@ -651,7 +658,7 @@ Huawei Health APK comparison:
 - `WeatherForecastDay.java` includes time, icon, high/low temperature, CN icon, and future sun/moon data.
 - `mbd.java` parses capability bundle keys matching Gadgetbridge support bits: `weather_support`, `wind_support`, `pm2_5_support`, `temperature_support`, `location_name_support`, `temperature_current_support`, `unit_support`, `aqi_support`, `time_support`, `source_support`, `cn_weather_icon_support`, and `weather_icon_expand_support`.
 
-Implementation choice: start with Gadgetbridge's support negotiation plus current weather. Add forecast after the basic push is confirmed on the band.
+Implementation choice: start with Gadgetbridge's support negotiation plus current weather/forecast/GPS-time. Keep weather async device requests guarded so a `0x000186aa` request cannot recursively start a second weather chain while one is already running.
 
 ### Watchfaces
 
@@ -686,9 +693,9 @@ Packaging:
 - File upload type is `1` for watchface. File name format is `<random9digits>_1.0.0`.
 - APK comparison confirms Huawei's model fields through `WatchFaceInfo.java` and `WatchFaceOperateInfo.java`: max version, width, height, support file type, current/preset/non-preset lists, watchface ID, version, operation, dimensions, sync type, and error code.
 
-Implementation choice: first add read-only params/list/name support. Only add upload/activate after we can validate resolution/package metadata locally.
+Implementation choice: first add read-only params/list/name support. Activating an already installed face is now available because it is a small metadata operation. Upload/delete/custom faces remain gated until package validation is implemented.
 
-Implementation status: `connect.py` now has read-only watchface inventory calls for params (`0x27/0x01`), installed list (`0x27/0x02`), and names (`0x27/0x06`). `band_daemon.py` can run it as a full-sync step or explicit bridge command. No upload/activate/delete path is implemented yet.
+Implementation status: `connect.py` now has watchface inventory calls for params (`0x27/0x01`), installed list (`0x27/0x02`), names (`0x27/0x06`), and safe installed-face activation (`0x27/0x03`, operation `1`). `band_daemon.py` and the PWA expose scan and activation commands. No upload/delete path is implemented yet.
 
 ### Algorithm Sources
 
@@ -707,6 +714,9 @@ Implementation status: `connect.py` now has read-only watchface inventory calls 
   - `GET /api/artifacts/<allowlisted-file>`: selected runtime artifacts only.
   - `POST /api/commands/sync`: queues a daemon sync without starting a second BLE script.
   - `POST /api/commands/weather`: queues a weather push command for the active daemon session.
+  - `POST /api/commands/watchfaces`: queues read-only watchface inventory.
+  - `POST /api/commands/watchface_activate`: queues activation of an installed watchface.
+  - `POST /api/commands/stress`: queues automatic stress enable/calibration.
 - `band_daemon.py` polls `data/bridge_commands.jsonl` from inside the one authenticated BLE session and writes results to `data/bridge_command_results.jsonl`.
 - This is the first cross-device bridge: hosted PWA can point at a configured local bridge URL, while the bridge remains the only process touching BLE/auth secrets.
 - The daemon now explicitly scans before connecting and writes `scanning`/`not_found` states when Windows cannot see the band. This makes "connection failed" distinguishable from protocol/auth failure.
@@ -720,6 +730,7 @@ Implementation status: `connect.py` now has read-only watchface inventory calls 
 ### Weather Implementation Status
 
 - `connect.py` now implements the Gadgetbridge weather chain: start (`0x0f/0x09`), unit (`0x0f/0x05`), basic support (`0x0f/0x02`), extended support (`0x0f/0x06`), sun/moon support (`0x0f/0x0a`), current weather (`0x0f/0x01`), and optional forecast (`0x0f/0x08`).
+- Weather now also mirrors Gadgetbridge's optional current GPS/time push (`0x18/0x07`) and filters bad sun/moon timestamps before sending forecast because Gadgetbridge notes those can make the watch reject all weather display.
 - Current and forecast TLV serialization has been dry-run locally and preserves Gadgetbridge's nested/repeated container layout.
 - First live weather attempt on 2026-05-13 did not reach the Huawei protocol: Bleak/Windows returned `BleakDeviceNotFoundError` for the band address before connecting. This should be retried through the long-lived daemon once the band is advertising/available.
 

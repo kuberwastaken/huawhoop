@@ -33,6 +33,7 @@ ARTIFACT_ALLOWLIST = {
     "latest_passive_health_settings.json",
     "latest_weather_push.json",
     "latest_watchfaces.json",
+    "latest_watchface_operation.json",
     "recovery_history.jsonl",
     "insights_history.jsonl",
     "live_hrv_history.jsonl",
@@ -185,6 +186,10 @@ class DashboardHandler(SimpleHTTPRequestHandler):
             return
         if path in ("/api/commands/watchfaces", "/api/watchfaces"):
             command = append_bridge_command("watchfaces", payload)
+            self._send_json({"queued": True, "command": command}, status=202)
+            return
+        if path in ("/api/commands/watchface_activate", "/api/watchface_activate"):
+            command = append_bridge_command("watchface_activate", payload)
             self._send_json({"queued": True, "command": command}, status=202)
             return
         if path in ("/api/commands/stress", "/api/stress"):

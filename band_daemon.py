@@ -148,6 +148,12 @@ async def process_bridge_commands(band: Band) -> list[dict]:
             elif command_type == "watchfaces":
                 watchfaces = await band.get_watchface_inventory()
                 result = _command_result(command, "ok", watchfaces=watchfaces)
+            elif command_type == "watchface_activate":
+                watchface_status = await band.activate_watchface(
+                    str(payload.get("file_name") or ""),
+                    payload.get("version"),
+                )
+                result = _command_result(command, "ok", watchface=watchface_status)
             elif command_type == "stress":
                 if payload.get("calibrate"):
                     duration = float(payload.get("duration", os.getenv("BAND10_LIVE_HRV_SECONDS", "62")))
