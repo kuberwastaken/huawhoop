@@ -130,6 +130,9 @@ $env:BAND10_ONLY_WATCHFACE_ACTIVATE = "1"
 $env:BAND10_WATCHFACE_FILE = "example.hwt"
 python connect.py
 
+# Validate a custom watchface package locally before any future upload attempt.
+python watchface_tool.py path\to\face.hwt --json
+
 # Automatic stress enable, or calibration + enable if RRI samples arrive.
 $env:BAND10_ONLY_STRESS = "1"
 $env:BAND10_STRESS_CALIBRATE = "1"

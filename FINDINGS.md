@@ -706,6 +706,7 @@ Live status on 2026-05-14:
 - Current face before the write test was `Activity rings` (`2180325453`, `2.4.3`).
 - Activation of installed non-current `SuperWatch` (`2180307753`, `2.4.2`) succeeded with response tag `0x04=00`, and inventory showed it as current.
 - Activation back to `Activity rings` also succeeded with response tag `0x04=00`. No upload/delete path has been attempted.
+- `watchface_tool.py` validates `.hwt` packages locally before any future upload attempt. It mirrors Gadgetbridge's parser: `description.xml`, root `HwTheme`/`HnTheme`, `preview/cover.jpg`, `com.huawei.watchface` or `com.honor.watchface`, nested `watchface.bin` fallback to raw payload, and Band 10 resolution `368*194` (`HWHD07`/`HNHD02`).
 
 ### Algorithm Sources
 

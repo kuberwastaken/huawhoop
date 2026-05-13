@@ -144,7 +144,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 ## Milestone 6: Custom Watchfaces And Apps
 
 - [ ] Identify package format, manifest, preview, checksum/signature, and install command.
-- [ ] Build a local validation tool before any upload.
+- [x] Build a local validation tool before any upload.
 - [ ] Add a sandboxed watchface/app lab UI only after upload safety is understood.
 
 ## Milestone 7: Deployment
