@@ -208,7 +208,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Huawei RRI stress feature port.
 - [x] Stress zone summaries for the PWA.
 - [ ] Strain refinement from activities/workouts rather than passive HR only.
-- [ ] SpO2 low-duration summaries.
+- [x] SpO2 low-duration summaries.
 - [ ] ECG parser route if Band 10 exposes ECG analysis files; otherwise document unsupported status.
 
 ## Interface TODO

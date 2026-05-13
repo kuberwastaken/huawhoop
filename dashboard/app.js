@@ -364,10 +364,14 @@ function renderRecovery() {
   });
   const hrv = insights.hrv || {};
   const components = insights.components || {};
+  const spo2 = insights.spo2 || {};
+  const spo2Subtitle = spo2.status === "ok"
+    ? `${spo2.minutes_below_95 || 0} min <95%, ${spo2.minutes_below_92 || 0} min <92%`
+    : "overnight";
   $("#recovery-details").innerHTML = [
     detailRow("V", "Heart Rate Variability", Number.isFinite(values.hrv) ? `${Math.round(values.hrv)} ms` : "--", hrv.source || "sleep sequence"),
     detailRow("R", "Resting Heart Rate", Number.isFinite(values.rhr) ? `${Math.round(values.rhr)} bpm` : "--", `${insights.resting_hr_baseline || "--"} baseline`),
-    detailRow("O", "Oxygen Saturation", insights.sleep?.avg_spo2 ? `${insights.sleep.avg_spo2}%` : "--", "overnight"),
+    detailRow("O", "Oxygen Saturation", insights.sleep?.avg_spo2 ? `${insights.sleep.avg_spo2}%` : (spo2.avg_pct ? `${spo2.avg_pct}%` : "--"), spo2Subtitle),
     `<div class="zone-bars">
       ${Object.entries(components).map(([name, value]) => meter(name.toUpperCase(), number(value), 100)).join("")}
     </div>`

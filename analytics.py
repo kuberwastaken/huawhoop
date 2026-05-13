@@ -864,6 +864,29 @@ def _hrv_resilience_model(hrv_values: list[float]) -> dict:
     }
 
 
+def _spo2_low_duration(values: list[float]) -> dict:
+    clean = [float(value) for value in values if isinstance(value, (int, float)) and value > 0]
+    if not clean:
+        return {
+            "status": "unavailable",
+            "sample_count": 0,
+            "method": "Minute-level SpO2 threshold summary from Huawei fitness history samples",
+        }
+    low_95 = sum(1 for value in clean if value < 95)
+    low_92 = sum(1 for value in clean if value < 92)
+    return {
+        "status": "ok",
+        "sample_count": len(clean),
+        "avg_pct": round(_mean(clean, 0), 1),
+        "min_pct": round(min(clean), 1),
+        "minutes_below_95": low_95,
+        "minutes_below_92": low_92,
+        "percent_below_95": round(100 * low_95 / len(clean)),
+        "percent_below_92": round(100 * low_92 / len(clean)),
+        "method": "Minute-level SpO2 threshold summary from Huawei fitness history samples",
+    }
+
+
 def build_insights(data_dir: Path = DATA_DIR) -> dict:
     fitness = _read_json(data_dir / "latest_fitness_preview.json", {})
     summary = _read_json(data_dir / "latest_recovery_summary.json", {})
@@ -979,6 +1002,7 @@ def build_insights(data_dir: Path = DATA_DIR) -> dict:
     else:
         sleep_score = sleep_model["score"]
     spo2_score = None
+    spo2_low = _spo2_low_duration(spo2)
     if spo2:
         spo2_score = _clamp(100 - max(0, 96 - _mean(spo2, 96)) * 8 - max(0, 92 - min(spo2)) * 5, 0, 100)
 
@@ -1048,6 +1072,7 @@ def build_insights(data_dir: Path = DATA_DIR) -> dict:
         },
         "strain": strain,
         "stress": stress_summary,
+        "spo2": spo2_low,
         "training_balance": {
             "acute_7d": round(acute, 1) if acute is not None else None,
             "chronic_42d": round(chronic, 1) if chronic is not None else None,

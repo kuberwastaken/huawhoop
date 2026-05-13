@@ -105,6 +105,10 @@ fragmentation from sleep segment gaps. The dashboard also exposes an
 Open-Wearables-style HRV resilience model based on coefficient of variation across
 distinct sleep-sequence HRV sessions, so repeated syncs of the same night do not
 inflate the stability score.
+SpO2 analysis now reports minute-level low-duration summaries from Huawei fitness
+history samples: average, minimum, minutes below 95%, and minutes below 92%. The
+latest local build saw 30 SpO2 samples, average `97.2%`, minimum `94%`, `1` minute
+below 95%, and `0` minutes below 92%.
 
 ### Gadgetbridge vs Current Implementation
 
