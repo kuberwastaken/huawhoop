@@ -139,11 +139,11 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Live-test installed/current watchface metadata when the band is visible.
 - [x] Live-test activation on an already installed non-current watchface.
 - [ ] Upload a known-compatible watchface file.
-- [ ] Document custom watchface/app risk before writing to device.
+- [x] Document custom watchface/app risk before writing to device.
 
 ## Milestone 6: Custom Watchfaces And Apps
 
-- [ ] Identify package format, manifest, preview, checksum/signature, and install command.
+- [x] Identify package format, manifest, preview, payload, and install command shape.
 - [x] Build a local validation tool before any upload.
 - [ ] Add a sandboxed watchface/app lab UI only after upload safety is understood.
 
@@ -200,7 +200,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Weather live verification packet chain on the Band 10.
 - [x] Stress auto live verification through a live RRI seed and `svc=0x20/cmd=0x09`.
 - [ ] Confirm future `rrisqi_data.bin` fills without manual measurement.
-- [ ] Watchface install validation before any write/delete/activate operation.
+- [x] Watchface package validation before any upload operation.
 
 ## Analytics TODO
 
