@@ -47,11 +47,17 @@ $env:BAND10_KEEPALIVE_SECONDS = "60"
 $env:BAND10_KEEPALIVE_MODE = "battery"
 $env:BAND10_SCAN_TIMEOUT_SECONDS = "30"
 $env:BAND10_CONNECT_TIMEOUT_SECONDS = "30"
+$env:BAND10_DIRECT_CONNECT_FALLBACK = "1"
 ```
 
 For one-off Windows Bluetooth debugging only, `BAND10_PAIR_BEFORE_CONNECT=1` passes
 Bleak's pairing hint before opening the GATT session. It should stay disabled for
 normal stored-key reconnects.
+
+The direct-connect fallback exists because a paired Band 10 may be connectable
+through Windows even when it is not actively advertising during a scan. Disable it
+with `BAND10_DIRECT_CONNECT_FALLBACK=0` when diagnosing address/name changes after
+a reset.
 
 ## Weather
 

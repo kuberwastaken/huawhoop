@@ -24,6 +24,7 @@ Useful knobs:
 ```powershell
 $env:BAND10_SCAN_TIMEOUT_SECONDS = "30"
 $env:BAND10_CONNECT_TIMEOUT_SECONDS = "30"
+$env:BAND10_DIRECT_CONNECT_FALLBACK = "1"   # try stored Windows BLE address if scan misses a paired band
 $env:BAND10_SYNC_INTERVAL_SECONDS = "300"   # minimum 60
 $env:BAND10_FULL_SYNC_EVERY = "6"
 $env:BAND10_INITIAL_FULL_SYNC = "1"

@@ -621,6 +621,12 @@ async def discover_band_device(cfg: dict, scan_timeout: float):
             if target_name in name:
                 candidates.append(device)
     if not candidates:
+        if _env_enabled("BAND10_DIRECT_CONNECT_FALLBACK", "1") and cfg.get("device_mac"):
+            logger.info(
+                "Band was not visible in scan; falling back to direct Windows BLE connect "
+                f"for stored address {cfg['device_mac']}"
+            )
+            return cfg["device_mac"]
         return None
 
     candidates.sort(key=_device_rssi, reverse=True)
@@ -635,8 +641,8 @@ async def discover_band_device(cfg: dict, scan_timeout: float):
     return chosen
 
 
-def _env_enabled(name: str) -> bool:
-    return os.getenv(name, "0").strip().lower() in {"1", "true", "yes", "on"}
+def _env_enabled(name: str, default: str = "0") -> bool:
+    return os.getenv(name, default).strip().lower() in {"1", "true", "yes", "on"}
 
 
 def bleak_client_options() -> dict:
