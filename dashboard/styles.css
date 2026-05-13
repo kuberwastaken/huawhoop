@@ -245,6 +245,49 @@ main {
   border-color: #e9a39a;
 }
 
+.hrv-headline {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 6px;
+  min-height: 80px;
+}
+
+.hrv-headline strong {
+  color: var(--ink);
+  font-size: 42px;
+  line-height: 1;
+}
+
+.hrv-headline span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.mini-spark {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 58px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f9fafb;
+}
+
+.mini-spark i {
+  flex: 1;
+  min-width: 5px;
+  border-radius: 3px 3px 0 0;
+  background: var(--green);
+}
+
+.empty-inline {
+  margin: auto;
+  color: var(--muted);
+  font-size: 12px;
+}
+
 .component-list {
   display: grid;
   gap: 8px;
@@ -330,6 +373,47 @@ main {
   font-size: 13px;
 }
 
+.heatmap {
+  display: grid;
+  grid-template-columns: repeat(14, minmax(34px, 1fr));
+  gap: 8px;
+}
+
+.heat-cell {
+  display: grid;
+  align-content: center;
+  min-height: 48px;
+  padding: 7px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.heat-cell.ok {
+  border-color: #b8dccb;
+  background: #eef8f3;
+}
+
+.heat-cell.warn {
+  border-color: #ead1a4;
+  background: #fff7e8;
+}
+
+.heat-cell.bad {
+  border-color: #e9b8b0;
+  background: #fff1ef;
+}
+
+.heat-cell strong {
+  color: var(--ink);
+  font-size: 15px;
+}
+
+.heat-cell span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
 @media (max-width: 1100px) {
   .metric-grid {
     grid-template-columns: repeat(3, minmax(120px, 1fr));
@@ -341,6 +425,10 @@ main {
 
   .panel-wide {
     grid-column: span 1;
+  }
+
+  .heatmap {
+    grid-template-columns: repeat(7, minmax(34px, 1fr));
   }
 }
 
@@ -361,6 +449,10 @@ main {
 
   .metric .value {
     font-size: 23px;
+  }
+
+  .heatmap {
+    grid-template-columns: repeat(4, minmax(34px, 1fr));
   }
 
   .route-row,

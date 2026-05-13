@@ -9,7 +9,8 @@ const files = {
   stress: "../data/latest_stress_preview.json",
   sequence: "../data/latest_sleep_sequence_preview.json",
   liveHrv: "../data/latest_live_hrv.json",
-  history: "../data/recovery_history.jsonl"
+  history: "../data/recovery_history.jsonl",
+  insightsHistory: "../data/insights_history.jsonl"
 };
 
 const fmt = new Intl.NumberFormat(undefined, { maximumFractionDigits: 1 });
@@ -60,6 +61,21 @@ function compactStatus(status) {
   if (status === null || status === undefined) return "n/a";
   if (typeof status === "string") return status;
   return `0x${Number(status).toString(16).padStart(8, "0")}`;
+}
+
+function scoreClass(value) {
+  if (!Number.isFinite(value)) return "warn";
+  if (value >= 67) return "ok";
+  if (value >= 34) return "warn";
+  return "bad";
+}
+
+function latestValidSleepHrv(sequence) {
+  const sessions = sequence?.sessions || [];
+  const valid = sessions
+    .map(session => ({ session, summary: session.summary || {} }))
+    .filter(row => Number.isFinite(row.summary.avgHrv) && row.summary.avgHrv > 0);
+  return valid.length ? valid[valid.length - 1] : null;
 }
 
 function liveHrvTransport(insights, liveHrv) {
@@ -172,7 +188,7 @@ function renderStatus(summary, capabilities, dictionary, connection, insights, l
   document.getElementById("sync-label").textContent = `Last seen: ${label}`;
 }
 
-function renderCharts(fitness, historyRows) {
+function renderCharts(fitness, historyRows, insightsRows) {
   const steps = fitness.steps || [];
   const hr = steps.filter(x => Number.isFinite(x.heart_rate)).map(x => ({ y: x.heart_rate }));
   const spo2 = steps.filter(x => Number.isFinite(x.spo2)).map(x => ({ y: x.spo2 }));
@@ -185,9 +201,10 @@ function renderCharts(fitness, historyRows) {
   const loadChart = document.getElementById("load-chart");
   if (loadChart) barChart(loadChart, steps.map(x => x.calories || 0));
 
-  const history = historyRows.slice(-30).map(row => ({ y: row.recovery_proxy_no_hrv || 0 }));
+  const sourceRows = insightsRows.length ? insightsRows : historyRows;
+  const history = sourceRows.slice(-30).map(row => ({ y: row.recovery_score ?? row.recovery_proxy_no_hrv ?? 0 }));
   lineChart(document.getElementById("history-chart"), [
-    { label: "Recovery proxy", values: history, className: "history-line" }
+    { label: "Recovery", values: history, className: "history-line" }
   ], { minY: 0, maxY: 100, height: 190 });
 }
 
@@ -212,6 +229,42 @@ function renderRecovery(insights, liveHrv) {
     <div class="sleep-row"><span>Live stream</span><strong>${transport.state || "not_run"} · ${transport.sample_count ?? 0} RRI · ${transport.realtime_hr_sample_count ?? 0} HR</strong></div>
     <div class="sleep-row"><span>Live request</span><strong>type ${request.open_type ?? "n/a"} vol ${request.vol_status ?? "off"}</strong></div>
     <div class="sleep-row"><span>Last HRV status</span><strong>${transport.latest_status_hex || compactStatus(transport.latest_status)}</strong></div>
+  `;
+}
+
+function renderHrvPanel(sequence, insights, insightsRows) {
+  const panel = document.getElementById("hrv-panel");
+  const hrv = insights.hrv || {};
+  const latest = latestValidSleepHrv(sequence);
+  const summary = latest?.summary || {};
+  const baselineLow = hrv.min_baseline ?? summary.minHrvBaseline;
+  const baselineHigh = hrv.max_baseline ?? summary.maxHrvBaseline;
+  const hrvValue = hrv.avg_hrv_ms ?? summary.avgHrv;
+  const baselineText = Number.isFinite(baselineLow) && Number.isFinite(baselineHigh)
+    ? `${baselineLow}-${baselineHigh} ms`
+    : "collecting";
+  const sequenceTrend = (sequence?.sessions || [])
+    .map(session => session?.summary?.avgHrv)
+    .filter(value => Number.isFinite(value) && value > 0);
+  const trend = (sequenceTrend.length ? sequenceTrend : insightsRows
+    .map(row => row.hrv_rmssd_ms)
+    .filter(value => Number.isFinite(value) && value > 0)
+  ).slice(-14);
+  const maxTrend = Math.max(...trend, 1);
+  const resilience = insights.resilience || {};
+  panel.innerHTML = `
+    <div class="hrv-headline">
+      <strong>${hrvValue ?? "n/a"}</strong>
+      <span>ms</span>
+    </div>
+    <div class="mini-spark">${trend.length ? trend.map(value => (
+      `<i style="height:${Math.max(6, (value / maxTrend) * 100).toFixed(1)}%" title="${value} ms"></i>`
+    )).join("") : `<span class="empty-inline">Collecting trend</span>`}</div>
+    <div class="sleep-row"><span>Baseline</span><strong>${baselineText}</strong></div>
+    <div class="sleep-row"><span>Session</span><strong>${latest?.session?.start_local || "n/a"}</strong></div>
+    <div class="sleep-row"><span>Sleep HRV sessions</span><strong>${hrv.sample_count ?? trend.length ?? 0}</strong></div>
+    <div class="sleep-row"><span>Resilience</span><strong>${resilience.score ?? "n/a"} (${resilience.status || "collecting"})</strong></div>
+    <div class="sleep-row"><span>HRV CV</span><strong>${resilience.cv_pct ?? "n/a"}%</strong></div>
   `;
 }
 
@@ -307,8 +360,29 @@ function parseHistory(text) {
     .filter(Boolean);
 }
 
+function renderRecoveryHeatmap(insightsRows, fallbackRows) {
+  const container = document.getElementById("recovery-heatmap");
+  const rows = (insightsRows.length ? insightsRows : fallbackRows)
+    .filter(row => Number.isFinite(row.recovery_score ?? row.recovery_proxy_no_hrv))
+    .slice(-42);
+  if (!rows.length) {
+    container.innerHTML = `<div class="empty">No recovery history yet.</div>`;
+    return;
+  }
+  container.innerHTML = rows.map(row => {
+    const score = row.recovery_score ?? row.recovery_proxy_no_hrv;
+    const hrv = row.hrv_rmssd_ms;
+    const sleep = row.sleep?.minutes ?? row.sleep_minutes;
+    const title = `${row.generated_at_local || localTime(row.generated_at)} | recovery ${score} | HRV ${hrv ?? "n/a"} | sleep ${sleep ?? "n/a"}m`;
+    return `<div class="heat-cell ${scoreClass(score)}" title="${title}">
+      <strong>${Math.round(score)}</strong>
+      <span>${Number.isFinite(hrv) ? `${Math.round(hrv)}ms` : ""}</span>
+    </div>`;
+  }).join("");
+}
+
 async function boot() {
-  const [insights, connection, summary, fitness, capabilities, dictionary, trusleep, stress, sequence, liveHrv, historyText] = await Promise.all([
+  const [insights, connection, summary, fitness, capabilities, dictionary, trusleep, stress, sequence, liveHrv, historyText, insightsHistoryText] = await Promise.all([
     loadJson(files.insights, {}),
     loadJson(files.connection, {}),
     loadJson(files.summary, {}),
@@ -319,17 +393,21 @@ async function boot() {
     loadJson(files.stress, {}),
     loadJson(files.sequence, {}),
     loadJson(files.liveHrv, {}),
-    loadText(files.history, "")
+    loadText(files.history, ""),
+    loadText(files.insightsHistory, "")
   ]);
   const historyRows = parseHistory(historyText);
+  const insightsRows = parseHistory(insightsHistoryText);
   renderMetrics(summary, insights);
   renderStatus(summary, capabilities, dictionary, connection, insights, liveHrv);
-  renderCharts(fitness, historyRows);
+  renderCharts(fitness, historyRows, insightsRows);
   renderRecovery(insights, liveHrv);
+  renderHrvPanel(sequence, insights, insightsRows);
   renderStrain(insights);
   renderSleep(summary, trusleep, sequence, insights);
   renderRoutes(dictionary, stress, sequence, insights, liveHrv);
   renderCapabilities(capabilities);
+  renderRecoveryHeatmap(insightsRows, historyRows);
 }
 
 boot();

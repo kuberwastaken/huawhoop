@@ -578,7 +578,7 @@ def _strain_from_hr(heart_rates: list[int]) -> dict:
     }
 
 
-def _extract_sleep_hrv(sequence: dict) -> dict | None:
+def _sleep_hrv_series(sequence: dict) -> list[dict]:
     sessions = sequence.get("sessions") or []
     values = []
     for session in sessions:
@@ -593,12 +593,54 @@ def _extract_sleep_hrv(sequence: dict) -> dict | None:
                 "session_start": session.get("start_ts"),
                 "session_end": session.get("end_ts"),
             })
+    return values
+
+
+def _extract_sleep_hrv(sequence: dict) -> dict | None:
+    values = _sleep_hrv_series(sequence)
     if not values:
         return None
     latest = values[-1]
     latest["source"] = "sleep_sequence"
     latest["sample_count"] = len(values)
     return latest
+
+
+def _hrv_resilience_model(hrv_values: list[float]) -> dict:
+    values = [_numeric(value) for value in hrv_values]
+    values = [value for value in values if value and value > 0]
+    if len(values) < 2:
+        return {
+            "status": "collecting",
+            "score": None,
+            "cv_pct": None,
+            "sample_count": len(values),
+            "method": "Open Wearables-style HRV coefficient of variation over recent sleep HRV",
+        }
+    recent = values[-7:]
+    mean_hrv = _mean(recent, 0)
+    cv_pct = 100.0 * (statistics.stdev(recent) / mean_hrv) if len(recent) >= 2 and mean_hrv else None
+    score = None
+    if cv_pct is not None:
+        # Open Wearables resilience maps low HRV-CV to higher resilience:
+        # 7% or lower is ideal; 40% or higher is poor.
+        score = _clamp(100.0 * (40.0 - cv_pct) / (40.0 - 7.0), 0, 100)
+    if len(recent) < 5:
+        status = "provisional"
+    elif score is not None and score >= 75:
+        status = "stable"
+    elif score is not None and score >= 45:
+        status = "variable"
+    else:
+        status = "unstable"
+    return {
+        "status": status,
+        "score": round(score) if score is not None else None,
+        "cv_pct": round(cv_pct, 1) if cv_pct is not None else None,
+        "mean_hrv_ms": round(mean_hrv, 1) if mean_hrv else None,
+        "sample_count": len(recent),
+        "method": "Open Wearables-style HRV coefficient of variation over recent sleep HRV",
+    }
 
 
 def build_insights(data_dir: Path = DATA_DIR) -> dict:
@@ -633,7 +675,8 @@ def build_insights(data_dir: Path = DATA_DIR) -> dict:
     else:
         hrv = _extract_sleep_hrv(sequence)
 
-    hrv_baseline = _history_baseline(_read_jsonl(data_dir / "insights_history.jsonl"), "hrv_rmssd_ms", None)
+    insights_history = _read_jsonl(data_dir / "insights_history.jsonl")
+    hrv_baseline = _history_baseline(insights_history, "hrv_rmssd_ms", None)
     hrv_score = None
     hrv_value = None
     if hrv:
@@ -643,6 +686,10 @@ def build_insights(data_dir: Path = DATA_DIR) -> dict:
                 hrv_score = _clamp(50 + 65 * math.log(max(1, hrv_value) / max(1, hrv_baseline)), 0, 100)
             else:
                 hrv_score = _clamp(1.35 * hrv_value, 0, 100)
+    sleep_hrv_values = [row.get("avg_hrv_ms") for row in _sleep_hrv_series(sequence)]
+    if not sleep_hrv_values and hrv_value:
+        sleep_hrv_values = [row.get("hrv_rmssd_ms") for row in insights_history] + [hrv_value]
+    resilience = _hrv_resilience_model(sleep_hrv_values)
 
     rhr_score = None
     if rhr is not None:
@@ -730,6 +777,7 @@ def build_insights(data_dir: Path = DATA_DIR) -> dict:
         "components": {name: round(value, 1) for name, value, _weight in components},
         "hrv": hrv or {"source": "unavailable", "reason": "No live RRI or sleep-sequence HRV artifact yet."},
         "hrv_rmssd_ms": hrv_value,
+        "resilience": resilience,
         "resting_hr": round(rhr, 1) if rhr is not None else None,
         "resting_hr_baseline": round(rhr_baseline, 1) if rhr_baseline is not None else None,
         "sleep": {
