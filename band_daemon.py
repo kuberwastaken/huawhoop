@@ -145,6 +145,9 @@ async def process_bridge_commands(band: Band) -> list[dict]:
                     raise NotImplementedError("Weather push is not implemented in connect.py yet")
                 weather_status = await band.send_weather_update(payload)
                 result = _command_result(command, "ok", weather=weather_status)
+            elif command_type == "watchfaces":
+                watchfaces = await band.get_watchface_inventory()
+                result = _command_result(command, "ok", watchfaces=watchfaces)
             else:
                 result = _command_result(command, "failed", error=f"unknown command type: {command_type}")
         except Exception as e:
@@ -182,6 +185,10 @@ async def sync_core(band: Band, full: bool = False, live_hrv: bool = False) -> d
             status["fitness_empty"] = True
 
     if full:
+        watchfaces = await _safe("watchface inventory", band.get_watchface_inventory(), default=None)
+        if watchfaces is not None:
+            status["steps"].append("watchfaces")
+
         stress_hours = int(os.getenv("BAND10_STRESS_HOURS", "168"))
         stress, stress_state = await _optional_file_sync("stress/RRI file", band.get_recent_stress_preview(hours=stress_hours))
         if stress_state != "failed":

@@ -9,6 +9,7 @@ const artifactFiles = {
   trusleep: "../data/latest_trusleep_preview.json",
   stress: "../data/latest_stress_preview.json",
   liveHrv: "../data/latest_live_hrv.json",
+  watchfaces: "../data/latest_watchfaces.json",
   recoveryHistory: "../data/recovery_history.jsonl",
   insightsHistory: "../data/insights_history.jsonl"
 };
@@ -88,6 +89,7 @@ async function loadData() {
       trusleep: await fetchJson(bridgePath("/api/artifacts/latest_trusleep_preview.json"), {}),
       stress: await fetchJson(bridgePath("/api/artifacts/latest_stress_preview.json"), {}),
       liveHrv: await fetchJson(bridgePath("/api/artifacts/latest_live_hrv.json"), {}),
+      watchfaces: await fetchJson(bridgePath("/api/artifacts/latest_watchfaces.json"), {}),
       recoveryHistory: parseJsonl(historyText),
       insightsHistory: parseJsonl(insightsHistoryText),
       bridge: api.bridge || {},
@@ -107,6 +109,7 @@ async function loadData() {
     fetchJson(artifactFiles.trusleep, {}),
     fetchJson(artifactFiles.stress, {}),
     fetchJson(artifactFiles.liveHrv, {}),
+    fetchJson(artifactFiles.watchfaces, {}),
     fetchText(artifactFiles.recoveryHistory, ""),
     fetchText(artifactFiles.insightsHistory, "")
   ]);
@@ -121,8 +124,9 @@ async function loadData() {
     trusleep: entries[7],
     stress: entries[8],
     liveHrv: entries[9],
-    recoveryHistory: parseJsonl(entries[10]),
-    insightsHistory: parseJsonl(entries[11]),
+    watchfaces: entries[10],
+    recoveryHistory: parseJsonl(entries[11]),
+    insightsHistory: parseJsonl(entries[12]),
     bridge: {},
     lastCommands: []
   };
@@ -393,17 +397,22 @@ function stressSentence(zones) {
 function renderRoutes() {
   const flags = state.data.capabilities?.capability_flags || {};
   const quality = state.data.insights?.data_quality || {};
+  const watchfaces = state.data.watchfaces || {};
+  const installed = watchfaces.installed || [];
   const rows = [
     ["Stored reconnect", "ready", state.data.connection?.state || "unknown"],
     ["Sleep sequence HRV", quality.hrv_source || "pending", `${quality.sleep_sequence_sessions || 0} sessions`],
     ["Weather push", "queued", "service 0x0f"],
-    ["Watchfaces", flags.watchface ? "supported" : "audit", "service 0x27"],
+    ["Watchfaces", watchfaces.supported ? `${installed.length} installed` : (flags.watchface ? "supported" : "audit"), "service 0x27"],
     ["Live RRI", quality.live_hrv_transport?.state || "diagnostic", `${quality.live_hrv_transport?.sample_count || 0} samples`]
   ];
   $("#route-status").innerHTML = rows.map(([name, value, sub]) => detailRow("•", name, value, sub)).join("");
+  const current = installed.find((face) => face.current);
   $("#watchface-status").innerHTML = [
-    detailRow("W", "Read-only watchface route", "next", "params, list, names"),
-    detailRow("U", "Upload route", "gated", "validate package before writing")
+    detailRow("W", "Read-only inventory", watchfaces.supported ? "ready" : "queued", watchfaces.generated_at_local || "params, list, names"),
+    detailRow("C", "Current Watchface", current?.display_name || current?.file_name || "--", current?.version || ""),
+    detailRow("N", "Installed Faces", installed.length || "--", watchfaces.params ? `${watchfaces.params.width || "--"}x${watchfaces.params.height || "--"}` : "waiting for scan"),
+    detailRow("U", "Upload Route", "gated", "validate package before writing")
   ].join("");
 }
 
@@ -561,6 +570,16 @@ async function pushWeather() {
   }
 }
 
+async function queueWatchfaceScan() {
+  try {
+    await command("/api/commands/watchfaces", {});
+    toast("Watchface scan queued");
+    await refresh();
+  } catch (error) {
+    toast(`Watchface scan failed: ${error.message}`);
+  }
+}
+
 function setupActions() {
   $("#refresh-button").addEventListener("click", refresh);
   $("#sync-button").addEventListener("click", () => queueSync(false));
@@ -568,6 +587,7 @@ function setupActions() {
   $("#full-sync-button").addEventListener("click", () => queueSync(true));
   $("#weather-fetch-button").addEventListener("click", () => fetchWeather().catch((error) => toast(error.message)));
   $("#weather-send-button").addEventListener("click", pushWeather);
+  $("#watchface-scan-button").addEventListener("click", queueWatchfaceScan);
   $("#geo-button").addEventListener("click", () => {
     if (!navigator.geolocation) {
       toast("Location unavailable");

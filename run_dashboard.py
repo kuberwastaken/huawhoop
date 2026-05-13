@@ -31,6 +31,7 @@ ARTIFACT_ALLOWLIST = {
     "latest_live_hrv.json",
     "latest_passive_health_settings.json",
     "latest_weather_push.json",
+    "latest_watchfaces.json",
     "recovery_history.jsonl",
     "insights_history.jsonl",
     "live_hrv_history.jsonl",
@@ -179,6 +180,10 @@ class DashboardHandler(SimpleHTTPRequestHandler):
             return
         if path in ("/api/commands/weather", "/api/weather"):
             command = append_bridge_command("weather", payload)
+            self._send_json({"queued": True, "command": command}, status=202)
+            return
+        if path in ("/api/commands/watchfaces", "/api/watchfaces"):
+            command = append_bridge_command("watchfaces", payload)
             self._send_json({"queued": True, "command": command}, status=202)
             return
         self._send_json({"error": "unknown_endpoint", "path": path}, status=404)

@@ -62,6 +62,7 @@ SVC_FITNESS = 0x07
 SVC_ACCOUNT = 0x1A
 SVC_STRESS  = 0x20
 SVC_WEATHER = 0x0F
+SVC_WATCHFACE = 0x27
 SVC_FILE_UPLOAD = 0x28
 SVC_FILE_DOWNLOAD = 0x2C
 SVC_P2P     = 0x34
@@ -107,6 +108,11 @@ WEATHER_EXTENDED_SUPPORT = 0x06
 WEATHER_FORECAST = 0x08
 WEATHER_START = 0x09
 WEATHER_SUN_MOON_SUPPORT = 0x0A
+WATCHFACE_PARAMS = 0x01
+WATCHFACE_LIST = 0x02
+WATCHFACE_OPERATION = 0x03
+WATCHFACE_CONFIRM = 0x05
+WATCHFACE_NAMES = 0x06
 RESULT_SUCCESS = 0x000186A0
 RESULT_WEATHER_ALREADY_STARTED = 0x000186A3
 RESULT_WEATHER_DEVICE_REQUEST = 0x000186AA
@@ -220,7 +226,7 @@ COMMANDS_PER_SERVICE = {
                  0x0B, 0x0C]),
     0x25: bytes([0x02, 0x04, 0x0E]),
     0x26: bytes([0x02, 0x03]),
-    0x27: bytes([0x01, 0x0E]),
+    0x27: bytes([0x01, 0x02, 0x03, 0x05, 0x06, 0x0E]),
     0x2A: bytes([0x01, 0x06]),
     0x2B: bytes([0x12]),
     0x2D: bytes([0x01]),
@@ -2468,6 +2474,101 @@ class Band:
         save_json_artifact("latest_weather_push.json", status)
         logger.info("Weather push: complete")
         return status
+
+    @staticmethod
+    def _watchface_type_flags(type_byte: int, expanded_type: int = 0) -> dict:
+        return {
+            "current": bool(type_byte & 0x01),
+            "factory": bool(type_byte & 0x02),
+            "editable": bool(type_byte & 0x08),
+            "video": bool(type_byte & 0x10),
+            "photo": bool(type_byte & 0x20),
+            "tryout": bool(type_byte & 0x40),
+            "kaleidoscope": bool(type_byte & 0x80),
+            "expanded_type": expanded_type,
+        }
+
+    async def get_watchface_params(self) -> dict:
+        tlv = b"".join(tlv_enc(tag) for tag in (0x01, 0x02, 0x03, 0x04, 0x05, 0x0E, 0x0F))
+        resp = await self._transact_encrypted(SVC_WATCHFACE, WATCHFACE_PARAMS, tlv, timeout=10.0)
+        return {
+            "max_version": self._tlv_str(resp.get(0x01, b"")),
+            "width": self._tlv_int(resp.get(0x02, b"")),
+            "height": self._tlv_int(resp.get(0x03, b"")),
+            "support_file_type": resp.get(0x04, b"\x00")[0] if resp.get(0x04) else None,
+            "sort": resp.get(0x05, b"\x00")[0] if resp.get(0x05) else None,
+            "other_watchface_versions": self._tlv_str(resp.get(0x06, b"")) if 0x06 in resp else "",
+            "raw": {hex(k): v.hex() for k, v in resp.items()},
+        }
+
+    async def get_watchfaces_list(self) -> list[dict]:
+        tlv = tlv_enc(0x01) + tlv_enc(0x06, b"\x03")
+        resp = await self._transact_encrypted(SVC_WATCHFACE, WATCHFACE_LIST, tlv, timeout=10.0)
+        faces = []
+        for tag, value in tlv_items(resp.get(0x81, b"")):
+            if tag != 0x82:
+                continue
+            item = tlv_dec(value)
+            file_name = self._tlv_str(item.get(0x03, b""))
+            version = self._tlv_str(item.get(0x04, b""))
+            type_byte = item.get(0x05, b"\x00")[0] if item.get(0x05) else 0
+            expanded_type = item.get(0x07, b"\x00")[0] if item.get(0x07) else 0
+            faces.append({
+                "file_name": file_name,
+                "version": version,
+                "type": type_byte,
+                **self._watchface_type_flags(type_byte, expanded_type),
+            })
+        return faces
+
+    async def get_watchfaces_names(self, faces: list[dict]) -> dict:
+        if not faces:
+            return {}
+        entries = []
+        for face in faces:
+            file_name = face.get("file_name")
+            if file_name:
+                entries.append(tlv_enc(0x83, tlv_enc(0x04, file_name.encode("utf-8"))))
+        if not entries:
+            return {}
+        tlv = tlv_enc(0x01, b"\x01") + tlv_enc(0x82, b"".join(entries))
+        resp = await self._transact_encrypted(SVC_WATCHFACE, WATCHFACE_NAMES, tlv, timeout=10.0)
+        names = {}
+        for tag, value in tlv_items(resp.get(0x82, b"")):
+            if tag != 0x83:
+                continue
+            item = tlv_dec(value)
+            file_name = self._tlv_str(item.get(0x04, b""))
+            display_name = self._tlv_str(item.get(0x05, b""))
+            if file_name:
+                names[file_name] = display_name
+        return names
+
+    async def get_watchface_inventory(self) -> dict:
+        if not self._supports_command(SVC_WATCHFACE, WATCHFACE_PARAMS):
+            result = {"supported": False, "reason": "watchface params command not advertised"}
+            save_json_artifact("latest_watchfaces.json", result)
+            return result
+        params = await self.get_watchface_params()
+        faces = []
+        names = {}
+        if self._supports_command(SVC_WATCHFACE, WATCHFACE_LIST):
+            faces = await self.get_watchfaces_list()
+        if faces and self._supports_command(SVC_WATCHFACE, WATCHFACE_NAMES):
+            names = await self.get_watchfaces_names(faces)
+            for face in faces:
+                if face.get("file_name") in names:
+                    face["display_name"] = names[face["file_name"]]
+        result = {
+            "supported": True,
+            "generated_at": int(time.time()),
+            "generated_at_local": local_time_label(int(time.time())),
+            "params": params,
+            "installed": faces,
+            "names": names,
+        }
+        save_json_artifact("latest_watchfaces.json", result)
+        return result
 
     async def post_auth_initialize(self):
         logger.info("Post-auth init: starting Huawei connected-state bootstrap...")

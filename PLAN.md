@@ -123,7 +123,8 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 
 - [x] Audit Gadgetbridge watchface upload/confirm operation.
 - [x] Compare Huawei Health APK watchface packaging and device models.
-- [ ] List installed/current watchface metadata if supported.
+- [x] Implement read-only installed/current watchface metadata route.
+- [ ] Live-test installed/current watchface metadata when the band is visible.
 - [ ] Upload a known-compatible watchface file.
 - [ ] Document custom watchface/app risk before writing to device.
 

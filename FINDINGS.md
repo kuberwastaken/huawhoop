@@ -688,6 +688,8 @@ Packaging:
 
 Implementation choice: first add read-only params/list/name support. Only add upload/activate after we can validate resolution/package metadata locally.
 
+Implementation status: `connect.py` now has read-only watchface inventory calls for params (`0x27/0x01`), installed list (`0x27/0x02`), and names (`0x27/0x06`). `band_daemon.py` can run it as a full-sync step or explicit bridge command. No upload/activate/delete path is implemented yet.
+
 ### Algorithm Sources
 
 - Open Wearables is the best open-source algorithm baseline found so far. It has explicit sleep scoring primitives, duration/stage/consistency/interruption scoring, and HRV resilience helpers.
