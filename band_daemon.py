@@ -168,6 +168,8 @@ async def main():
         try:
             _status_payload("connecting", device_mac=cfg["device_mac"])
             await run_connected_session(cfg)
+            if int(os.getenv("BAND10_DAEMON_MAX_SECONDS", "0")) > 0:
+                return
             _status_payload("disconnected", device_mac=cfg["device_mac"], reason="client session ended")
             backoff = 5
         except asyncio.CancelledError:
