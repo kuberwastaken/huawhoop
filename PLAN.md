@@ -93,6 +93,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Add CORS/bridge URL support for hosted PWA access.
 - [x] Add clear status states: scanning, not_found, connected, degraded, reconnecting, stale/error via status artifact.
 - [x] Add Windows startup/service notes after the bridge is stable.
+- [x] Install Windows login persistence via per-user Startup shortcut fallback when Scheduled Tasks require elevation.
 
 ## Milestone 2: Weather Push
 
