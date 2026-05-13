@@ -41,7 +41,7 @@ What works:
 | P2P dictionary probe classification | Working | Probe distinguishes `ack_no_data` from `0x000186a4` auth/unsupported errors. |
 | Huawei Health dictionary mapping | Confirmed | Decompiled APK confirms `SLEEP_DETAILS=700013` includes `avgHrv`, HRV baseline, sleep score, SpO2 and breath-rate fields. |
 | Live RRI HRV route | Transport verified, samples blocked | `svc=0x19/cmd=0x01 type=0x03` is accepted with `0x000186a0`; band immediately sends `svc=0x19/cmd=0x05 status=0x0001ec38` and no RRI/SQI containers. Added transport diagnostics and Huawei-app-shaped `vol_status` probing. |
-| Persistent connected mode | Working in bounded soak | `band_daemon.py` kept a reconnect session open, ran keepalives and sync cycles, and wrote `data/connection_status.json`. This is the path for "band remains connected"; one-shot `connect.py` still disconnects by design. |
+| Persistent connected mode | Working in bounded soak | `band_daemon.py` kept a reconnect session open, ran keepalives and sync cycles, and wrote `data/connection_status.json`. `run_dashboard.py` is now the normal workflow: it serves the web dashboard and runs the daemon in one process. One-shot `connect.py` still disconnects by design. |
 
 Open constraints:
 
@@ -135,14 +135,18 @@ dictionary identity and field validation:
 
 ### Execution Plan
 
-1. Run `band_daemon.py` for normal use; one-shot scripts are diagnostic only and
-   leave the band disconnected when they exit.
+1. Run `python run_dashboard.py` for normal use; it serves
+   `http://127.0.0.1:8765/dashboard/` and keeps one authenticated BLE session open.
+   One-shot scripts are diagnostic only and leave the band disconnected when they
+   exit.
 2. Keep the stable reconnect/init path; do not return to first-auth unless
    `band.ini` is intentionally cleared.
 3. Treat fitness minute history as the reliable base data source for the first web UI:
    steps, HR, resting HR, SpO2, calories, sleep segments, strain proxy.
 4. Keep RRI/stress and sleep-sequence routes as experimental panels with clear
-   status/error reporting.
+   status/error reporting. Live RRI probes are opt-in for daemon use
+   (`BAND10_LIVE_HRV_EVERY`) until `0x19/0x05` emits samples reliably, so normal
+   dashboard syncs do not repeatedly trigger the failing HRV path.
 5. Avoid unsupported commands that empirically destabilize the session (`0x1A/0x0A`).
 6. Continue HRV work through two precise routes: solve `0x19/0x05=0x0001ec38`
    for live RRI, and solve the `sequence_data/SLEEP_DETAILS` trigger for sleep HRV.

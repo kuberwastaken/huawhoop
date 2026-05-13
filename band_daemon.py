@@ -117,7 +117,7 @@ async def run_connected_session(cfg: dict):
         full_every = max(1, int(os.getenv("BAND10_FULL_SYNC_EVERY", "6")))
         sync_interval = max(60, int(os.getenv("BAND10_SYNC_INTERVAL_SECONDS", "300")))
         keepalive_interval = max(15, int(os.getenv("BAND10_KEEPALIVE_SECONDS", "60")))
-        live_hrv_every = max(0, int(os.getenv("BAND10_LIVE_HRV_EVERY", "12")))
+        live_hrv_every = max(0, int(os.getenv("BAND10_LIVE_HRV_EVERY", "0")))
         cycle = 0
         next_sync = 0.0
         next_keepalive = 0.0
