@@ -21,6 +21,7 @@ HiChain3 step summary:
 import asyncio
 import binascii
 from collections import deque
+from datetime import datetime, timezone
 import hashlib
 import hmac as _hmac
 import json
@@ -31,6 +32,8 @@ import struct
 import time
 from configparser import ConfigParser
 from pathlib import Path
+from urllib.parse import urlencode
+from urllib.request import urlopen
 
 from bleak import BleakClient
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
@@ -563,6 +566,147 @@ def append_jsonl_artifact(filename: str, payload: dict):
 
 def local_time_label(epoch_seconds: int) -> str:
     return time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(epoch_seconds))
+
+
+def _env_enabled(name: str) -> bool:
+    return os.getenv(name, "0").strip().lower() in {"1", "true", "yes", "on"}
+
+
+def _parse_weather_time(value) -> int | None:
+    if not value:
+        return None
+    try:
+        text = str(value)
+        if text.endswith("Z"):
+            text = text[:-1] + "+00:00"
+        dt = datetime.fromisoformat(text)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return int(dt.timestamp())
+    except Exception:
+        return None
+
+
+def _wmo_to_owm(code) -> int:
+    try:
+        code = int(code)
+    except Exception:
+        return 800
+    if code == 0:
+        return 800
+    if code in (1, 2):
+        return 801
+    if code == 3:
+        return 804
+    if code in (45, 48):
+        return 741
+    if code in (51, 53, 55, 56, 57):
+        return 300
+    if code in (61, 63, 65, 66, 67, 80, 81, 82):
+        return 500
+    if code in (71, 73, 75, 77, 85, 86):
+        return 600
+    if code in (95, 96, 99):
+        return 200
+    return 800
+
+
+def _safe_list_get(values, index, default=None):
+    try:
+        return values[index]
+    except Exception:
+        return default
+
+
+def _load_weather_payload() -> dict:
+    if os.getenv("BAND10_WEATHER_JSON"):
+        return json.loads(os.environ["BAND10_WEATHER_JSON"])
+
+    weather_file = os.getenv("BAND10_WEATHER_FILE")
+    if weather_file:
+        return json.loads(Path(weather_file).read_text(encoding="utf-8"))
+
+    default_file = DATA_DIR / "weather_payload.json"
+    if default_file.exists():
+        return json.loads(default_file.read_text(encoding="utf-8"))
+
+    lat = os.getenv("BAND10_WEATHER_LAT") or os.getenv("BAND10_LATITUDE")
+    lon = os.getenv("BAND10_WEATHER_LON") or os.getenv("BAND10_LONGITUDE")
+    if not lat or not lon:
+        now = int(time.time())
+        return {
+            "location": os.getenv("BAND10_WEATHER_LOCATION", "Local Weather"),
+            "timestamp": now,
+            "source": "Huawhoop sample",
+            "current_temp_c": float(os.getenv("BAND10_WEATHER_TEMP_C", "29")),
+            "feels_like_c": float(os.getenv("BAND10_WEATHER_FEELS_C", os.getenv("BAND10_WEATHER_TEMP_C", "29"))),
+            "humidity": int(os.getenv("BAND10_WEATHER_HUMIDITY", "60")),
+            "condition_code": int(os.getenv("BAND10_WEATHER_CONDITION", "800")),
+            "wind_speed_kmh": float(os.getenv("BAND10_WEATHER_WIND_KMH", "8")),
+            "wind_direction": int(os.getenv("BAND10_WEATHER_WIND_DIR", "180")),
+            "low_temp_c": float(os.getenv("BAND10_WEATHER_LOW_C", "24")),
+            "high_temp_c": float(os.getenv("BAND10_WEATHER_HIGH_C", "32")),
+            "uv_index": int(float(os.getenv("BAND10_WEATHER_UV", "0"))),
+            "hourly": [],
+            "daily": [],
+        }
+
+    params = urlencode({
+        "latitude": lat,
+        "longitude": lon,
+        "current": "temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m,wind_direction_10m",
+        "hourly": "temperature_2m,precipitation_probability,uv_index,weather_code",
+        "daily": "weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max",
+        "forecast_days": os.getenv("BAND10_WEATHER_DAYS", "4"),
+        "timezone": "UTC",
+    })
+    with urlopen(f"https://api.open-meteo.com/v1/forecast?{params}", timeout=15) as response:
+        data = json.loads(response.read().decode("utf-8"))
+
+    daily_data = data.get("daily") or {}
+    daily = []
+    for index, day in enumerate((daily_data.get("time") or [])[:8]):
+        daily.append({
+            "label": day,
+            "timestamp": _parse_weather_time(day),
+            "condition_code": _wmo_to_owm(_safe_list_get(daily_data.get("weather_code") or [], index)),
+            "high_temp_c": _safe_list_get(daily_data.get("temperature_2m_max") or [], index),
+            "low_temp_c": _safe_list_get(daily_data.get("temperature_2m_min") or [], index),
+            "sunrise": _parse_weather_time(_safe_list_get(daily_data.get("sunrise") or [], index)),
+            "sunset": _parse_weather_time(_safe_list_get(daily_data.get("sunset") or [], index)),
+            "uv_index": _safe_list_get(daily_data.get("uv_index_max") or [], index, 0),
+        })
+
+    hourly_data = data.get("hourly") or {}
+    hourly = []
+    for index, value in enumerate((hourly_data.get("time") or [])[:24]):
+        hourly.append({
+            "timestamp": _parse_weather_time(value),
+            "condition_code": _wmo_to_owm(_safe_list_get(hourly_data.get("weather_code") or [], index)),
+            "temp_c": _safe_list_get(hourly_data.get("temperature_2m") or [], index),
+            "precipitation_probability": _safe_list_get(hourly_data.get("precipitation_probability") or [], index, 0),
+            "uv_index": _safe_list_get(hourly_data.get("uv_index") or [], index, 0),
+        })
+
+    current = data.get("current") or {}
+    return {
+        "location": os.getenv("BAND10_WEATHER_LOCATION", "Local Weather"),
+        "latitude": float(lat),
+        "longitude": float(lon),
+        "timestamp": int(time.time()),
+        "source": "Open-Meteo",
+        "current_temp_c": current.get("temperature_2m"),
+        "feels_like_c": current.get("apparent_temperature"),
+        "humidity": current.get("relative_humidity_2m"),
+        "condition_code": _wmo_to_owm(current.get("weather_code")),
+        "wind_speed_kmh": current.get("wind_speed_10m"),
+        "wind_direction": current.get("wind_direction_10m"),
+        "low_temp_c": daily[0].get("low_temp_c") if daily else current.get("temperature_2m"),
+        "high_temp_c": daily[0].get("high_temp_c") if daily else current.get("temperature_2m"),
+        "uv_index": int(float(daily[0].get("uv_index") or 0)) if daily else 0,
+        "hourly": hourly,
+        "daily": daily,
+    }
 
 
 class P2PNoDataError(asyncio.TimeoutError):
@@ -3932,6 +4076,48 @@ class Band:
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
+async def run_one_shot_modes(band: Band) -> bool:
+    ran = False
+
+    if _env_enabled("BAND10_ONLY_WEATHER"):
+        payload = _load_weather_payload()
+        logger.info(
+            "One-shot weather push: "
+            f"location={payload.get('location')} "
+            f"source={payload.get('source')} "
+            f"hourly={len(payload.get('hourly') or [])} "
+            f"daily={len(payload.get('daily') or [])}"
+        )
+        status = await band.send_weather_update(payload)
+        logger.info(f"One-shot weather status: {json.dumps(status, indent=2)}")
+        ran = True
+
+    if _env_enabled("BAND10_ONLY_WATCHFACES"):
+        inventory = await band.get_watchface_inventory()
+        logger.info(f"One-shot watchface inventory: {json.dumps(inventory, indent=2)}")
+        ran = True
+
+    if _env_enabled("BAND10_ONLY_WATCHFACE_ACTIVATE"):
+        file_name = os.getenv("BAND10_WATCHFACE_FILE", "").strip()
+        if not file_name:
+            raise RuntimeError("BAND10_WATCHFACE_FILE is required for BAND10_ONLY_WATCHFACE_ACTIVATE=1")
+        result = await band.activate_watchface(file_name, os.getenv("BAND10_WATCHFACE_VERSION"))
+        logger.info(f"One-shot watchface activation: {json.dumps(result, indent=2)}")
+        ran = True
+
+    if _env_enabled("BAND10_ONLY_STRESS"):
+        if _env_enabled("BAND10_STRESS_CALIBRATE"):
+            duration = float(os.getenv("BAND10_LIVE_HRV_SECONDS", "62"))
+            result = await band.calibrate_and_enable_stress(duration=duration)
+        else:
+            enable = os.getenv("BAND10_STRESS_ENABLE")
+            result = await band.set_automatic_stress(True if enable is None else _env_enabled("BAND10_STRESS_ENABLE"))
+        logger.info(f"One-shot stress status: {json.dumps(result, indent=2)}")
+        ran = True
+
+    return ran
+
+
 async def run():
     cfg = load_or_create_config()
     logger.info(f"Connecting to {cfg['device_mac']}...")
@@ -3943,6 +4129,10 @@ async def run():
         await band.post_auth_initialize()
         if os.getenv("BAND10_ENABLE_PASSIVE_SETTINGS", "1") != "0":
             await band.enable_passive_health_settings()
+
+        if await run_one_shot_modes(band):
+            await band.disconnect()
+            return
 
         if os.getenv("BAND10_ONLY_LIVE_HRV", "0") == "1":
             try:

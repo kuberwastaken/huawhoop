@@ -65,3 +65,30 @@ python connect.py
 
 The dashboard marks live HRV as experimental and shows the latest transport status
 from `data/latest_live_hrv.json`.
+
+Focused protocol one-shots are available for live testing without running the full
+diagnostic script:
+
+```powershell
+# Weather from Open-Meteo. Set location only once in your shell profile if useful.
+$env:BAND10_ONLY_WEATHER = "1"
+$env:BAND10_WEATHER_LAT = "12.9716"
+$env:BAND10_WEATHER_LON = "77.5946"
+$env:BAND10_WEATHER_LOCATION = "Bengaluru"
+python connect.py
+
+# Watchface inventory.
+$env:BAND10_ONLY_WATCHFACES = "1"
+python connect.py
+
+# Activate an already-installed watchface returned by inventory.
+$env:BAND10_ONLY_WATCHFACE_ACTIVATE = "1"
+$env:BAND10_WATCHFACE_FILE = "example.hwt"
+python connect.py
+
+# Automatic stress enable, or calibration + enable if RRI samples arrive.
+$env:BAND10_ONLY_STRESS = "1"
+$env:BAND10_STRESS_CALIBRATE = "1"
+$env:BAND10_LIVE_HRV_SECONDS = "62"
+python connect.py
+```

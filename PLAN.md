@@ -163,6 +163,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Add bridge API and command queue.
 - [x] Rebuild dashboard as PWA shell.
 - [x] Add automatic stress enable/calibration command path.
+- [x] Add focused one-shot modes for weather, watchfaces, watchface activation, and stress.
 - [ ] Live-test weather push through the daemon.
 - [ ] Live-test automatic stress calibration and `svc=0x20/cmd=0x09`.
 - [ ] Live-test watchface inventory after the reset/stored reconnect.
@@ -178,8 +179,11 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 
 - [x] Weather start/support/unit/current/forecast command chain.
 - [x] Weather request ACK/re-push handler for `0x000186AA`.
+- [x] Weather one-shot live-test mode with Open-Meteo payload builder.
 - [x] Read-only watchface params/list/names.
+- [x] Watchface inventory and activation one-shot modes.
 - [x] Automatic stress enable/disable route using Gadgetbridge's 12-feature seed format.
+- [x] Automatic stress one-shot enable/calibration mode.
 - [ ] Weather live verification on the Band 10 UI.
 - [ ] Stress auto live verification and confirmation that future `rrisqi_data.bin` fills without manual measurement.
 - [ ] Watchface install validation before any write/delete/activate operation.

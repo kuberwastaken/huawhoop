@@ -731,6 +731,7 @@ Implementation status: `connect.py` now has watchface inventory calls for params
 
 - `connect.py` now implements the Gadgetbridge weather chain: start (`0x0f/0x09`), unit (`0x0f/0x05`), basic support (`0x0f/0x02`), extended support (`0x0f/0x06`), sun/moon support (`0x0f/0x0a`), current weather (`0x0f/0x01`), and optional forecast (`0x0f/0x08`).
 - Weather now also mirrors Gadgetbridge's optional current GPS/time push (`0x18/0x07`) and filters bad sun/moon timestamps before sending forecast because Gadgetbridge notes those can make the watch reject all weather display.
+- `connect.py` has a focused `BAND10_ONLY_WEATHER=1` live-test mode. Payload priority is `BAND10_WEATHER_JSON`, `BAND10_WEATHER_FILE`, `data/weather_payload.json`, then Open-Meteo from `BAND10_WEATHER_LAT/LON`; if no coordinates are set it sends a tiny sample payload.
 - Current and forecast TLV serialization has been dry-run locally and preserves Gadgetbridge's nested/repeated container layout.
 - First live weather attempt on 2026-05-13 did not reach the Huawei protocol: Bleak/Windows returned `BleakDeviceNotFoundError` for the band address before connecting. This should be retried through the long-lived daemon once the band is advertising/available.
 
@@ -750,7 +751,17 @@ Project implementation:
 - `connect.py` now has `set_automatic_stress()` and `calibrate_and_enable_stress()` for `svc=0x20/cmd=0x09`.
 - The stress seed can come from the latest downloaded `rrisqi_data.bin` parse or a successful live 60-second RRI measurement. The two final feature slots are padded with `0.0`, matching Gadgetbridge.
 - `run_dashboard.py` and `band_daemon.py` now expose a `stress` bridge command. The PWA has buttons for calibration and enabling automatic stress.
+- `BAND10_ONLY_STRESS=1` is available for focused enable/calibration checks without a full data sync. Add `BAND10_STRESS_CALIBRATE=1` to run the 60-second Gadgetbridge-style RRI calibration first.
 - `analytics.py` now emits a day-level `stress` summary with low/medium/high minutes, average score, max score, gauge value `0..3`, and recent high-stress windows.
+
+### Focused Live-Test Modes
+
+`connect.py` remains a diagnostic one-shot, but now has narrow modes for precision testing after the factory reset:
+
+- `BAND10_ONLY_WEATHER=1`: authenticate, push weather, save `latest_weather_push.json`, disconnect.
+- `BAND10_ONLY_WATCHFACES=1`: authenticate, read installed/current watchface metadata, save `latest_watchfaces.json`, disconnect.
+- `BAND10_ONLY_WATCHFACE_ACTIVATE=1`: activate an already-installed file name from inventory, save `latest_watchface_operation.json`, disconnect.
+- `BAND10_ONLY_STRESS=1`: enable automatic stress, or with `BAND10_STRESS_CALIBRATE=1` run the 60-second RRI calibration first.
 
 Current live caveat:
 
