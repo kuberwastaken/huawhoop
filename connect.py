@@ -87,6 +87,8 @@ CMD_SETUP_DEVICE_STATUS = 0x3E
 CMD_ACCEPT_AGREEMENT = 0x30
 CMD_REVERSE_CAPABILITIES = 0x3F
 CMD_COUNTRY_CODE = 0x0A
+CMD_EXTENDED_ACCOUNT = 0x05
+CMD_ACCOUNT_SWITCH = 0x06
 CMD_TRUSLEEP = 0x16
 CMD_AUTO_HR = 0x17
 CMD_AUTO_SPO2 = 0x24
@@ -226,6 +228,7 @@ EXPAND_CAPABILITY_LABELS = {
     "three_circle": 154,
     "three_circle_lite": 156,
     "send_site_id": 170,
+    "diff_account_pairing_optimization": 172,
     "device_command_dict_data": 173,
     "reverse_capabilities": 182,
     "external_calendar": 184,
@@ -2133,6 +2136,12 @@ class Band:
             timeout=8.0,
         )
 
+    async def send_extended_account(self, account: str = "") -> dict:
+        tlv = tlv_enc(0x01, account.encode("utf-8") if account else b"\x00")
+        if self.capability_flags.get("diff_account_pairing_optimization"):
+            tlv += tlv_enc(0x03, b"\x01")
+        return await self._transact_encrypted(SVC_ACCOUNT, CMD_EXTENDED_ACCOUNT, tlv, timeout=8.0)
+
     async def send_country_code(self, country_code: str = "IN", site_id: int = None) -> dict:
         tlv = tlv_enc(0x01, country_code.encode("utf-8"))
         if site_id is not None:
@@ -2174,9 +2183,14 @@ class Band:
 
         await run_step("product info", self.get_product_info())
         await run_step("time sync", self.set_time())
+        battery = await run_step("battery", self.get_battery())
+        if battery is not None:
+            logger.info(f"Battery level: {battery}%")
         await run_step("supported services", self.get_supported_services())
         await run_step("supported commands", self.get_supported_commands())
         await run_step("expand capabilities", self.get_expand_capabilities())
+        if self._supports_command(SVC_ACCOUNT, CMD_EXTENDED_ACCOUNT) and self._supports_command(SVC_ACCOUNT, CMD_ACCOUNT_SWITCH):
+            await run_step("extended account", self.send_extended_account())
         await run_step("setting related", self.get_setting_related())
         if self._supports_command(SVC_DEV, CMD_ACCEPT_AGREEMENT):
             await run_step("accept agreements", self.send_accept_agreements())
