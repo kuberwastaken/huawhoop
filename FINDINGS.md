@@ -1,6 +1,6 @@
 # Huawei Band 10 BLE Reverse Engineering — Findings & Context
 
-_Last updated: 2026-05-13_
+_Last updated: 2026-05-14_
 
 ---
 
@@ -43,6 +43,7 @@ What works:
 | Sleep sequence HRV | Working | `sequence_data/SLEEP_DETAILS` now downloads via service `0x2C`; latest 48h pull produced 4 sessions, 2 valid HRV summaries, latest full-sleep `avgHrv=48 ms` with baseline range `28-51`. |
 | Live RRI HRV route | Transport verified, samples blocked | `svc=0x19/cmd=0x01 type=0x03` is accepted with `0x000186a0`; band immediately sends `svc=0x19/cmd=0x05 status=0x0001ec38` and no RRI/SQI containers. Treat as optional/diagnostic now that sleep-sequence HRV works. |
 | Persistent connected mode | Working in bounded soak | `band_daemon.py` kept an authenticated session open for 120s, ran two sync cycles and battery keepalives, and exited with `soak_complete`. `run_dashboard.py` is now the normal workflow: it serves the web dashboard and runs the daemon in one process. One-shot `connect.py` still disconnects by design. |
+| Weather push | Working | Live daemon command on 2026-05-14 returned `0x000186a0` for start, unit, current weather, GPS/time, and forecast. Forecast only succeeded after matching Gadgetbridge's timing: include today's row at the current observation timestamp, then future rows at `timestamp + 86400 * n`. |
 
 Open constraints:
 
@@ -734,8 +735,8 @@ Implementation status: `connect.py` now has watchface inventory calls for params
 - `connect.py` now implements the Gadgetbridge weather chain: start (`0x0f/0x09`), unit (`0x0f/0x05`), basic support (`0x0f/0x02`), extended support (`0x0f/0x06`), sun/moon support (`0x0f/0x0a`), current weather (`0x0f/0x01`), and optional forecast (`0x0f/0x08`).
 - Weather now also mirrors Gadgetbridge's optional current GPS/time push (`0x18/0x07`) and filters bad sun/moon timestamps before sending forecast because Gadgetbridge notes those can make the watch reject all weather display.
 - `connect.py` has a focused `BAND10_ONLY_WEATHER=1` live-test mode. Payload priority is `BAND10_WEATHER_JSON`, `BAND10_WEATHER_FILE`, `data/weather_payload.json`, then Open-Meteo from `BAND10_WEATHER_LAT/LON`; if no coordinates are set it sends a tiny sample payload.
-- Current and forecast TLV serialization has been dry-run locally and preserves Gadgetbridge's nested/repeated container layout.
-- First live weather attempt on 2026-05-13 did not reach the Huawei protocol: Bleak/Windows returned `BleakDeviceNotFoundError` for the band address before connecting. This should be retried through the long-lived daemon once the band is advertising/available.
+- Live daemon weather push on 2026-05-14 succeeded through the full chain: start, unit, current weather, GPS/time, and forecast all returned `0x000186a0`. The bridge remained connected with battery keepalive after the push.
+- Forecast initially returned `0x0001c139` until the day list matched Gadgetbridge exactly: row 0 is "today" at the current observation timestamp, and future rows use `observationTimestamp + 86400 * n`. Midnight daily timestamps from Open-Meteo are rejected by the Band 10 forecast command.
 
 ### Stress And HRV Implementation Status
 

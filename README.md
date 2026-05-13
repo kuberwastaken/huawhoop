@@ -53,6 +53,12 @@ the decompiled Huawei Health tree, Gadgetbridge, and external research clones st
 on disk but out of commits. Use `dashboard/sample-data/` for sanitized hosted
 fixtures.
 
+Weather is live-tested through the daemon command queue. The successful Band 10
+chain is Gadgetbridge-shaped: start, unit, support, extended support, sun/moon
+support, current weather, GPS/time, and forecast. Forecast rows must include today
+at the current observation timestamp, then future days at `timestamp + 86400 * n`;
+midnight forecast timestamps are rejected by the band.
+
 HRV now comes from the sleep-sequence dictionary file (`sequence_data/SLEEP_DETAILS`)
 downloaded during full sync. This is the same route Gadgetbridge uses for TruSleep
 dictionary data and includes `avgHrv`, HRV baselines, sleep score, SpO2 and breath

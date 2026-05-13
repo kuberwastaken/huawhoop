@@ -23,6 +23,7 @@ The band is the source of truth for raw physiological data. Gadgetbridge and the
 - Battery reads are a safe keepalive; `connect_status` can return `0x000186a4` and should not be used as the heartbeat.
 - Sleep sequence download works through service `0x2C`; HRV can be extracted from sleep sequence artifacts.
 - Latest valid HRV observed from sleep sequence: 48 ms, baseline 28-51 ms.
+- Weather push is live-verified through the daemon: start, unit, support, extended support, sun/moon support, current weather, GPS/time, and forecast all returned `0x000186a0`.
 - The dashboard can read local JSON artifacts, but it is not yet a complete PWA or WHOOP-grade interface.
 - `AUDIT.md` is the current source-truth comparison across Gadgetbridge, Huawei Health APK, and Huawhoop implementation status.
 
@@ -102,7 +103,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Guard weather re-push requests so the bridge cannot start nested weather chains.
 - [x] Add PWA weather card and manual/API-backed push control.
 - [x] Record packet tags, units, and cadence in `FINDINGS.md`.
-- [ ] Live-test weather rendering on Band 10 after stable reconnect.
+- [x] Live-test weather rendering packet chain on Band 10 after stable reconnect.
 
 ## Milestone 3: WHOOP-Like PWA
 
@@ -170,7 +171,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Restore repo hygiene: ignore and untrack local keys, live data, decompiled APK, Gadgetbridge, and external research clones.
 - [x] Add configurable Bleak connect timeout/pairing debug knobs and bounded daemon retry exits.
 - [x] Add a single-owner daemon lock so dashboard and diagnostic runs cannot race the band.
-- [ ] Live-test weather push through the daemon.
+- [x] Live-test weather push through the daemon.
 - [ ] Live-test automatic stress calibration and `svc=0x20/cmd=0x09`.
 - [ ] Live-test watchface inventory after the reset/stored reconnect.
 
@@ -190,7 +191,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Watchface inventory and activation one-shot modes.
 - [x] Automatic stress enable/disable route using Gadgetbridge's 12-feature seed format.
 - [x] Automatic stress one-shot enable/calibration mode.
-- [ ] Weather live verification on the Band 10 UI.
+- [x] Weather live verification packet chain on the Band 10.
 - [ ] Stress auto live verification and confirmation that future `rrisqi_data.bin` fills without manual measurement.
 - [ ] Watchface install validation before any write/delete/activate operation.
 
