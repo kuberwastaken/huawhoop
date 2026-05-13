@@ -1,0 +1,507 @@
+import json
+import math
+import statistics
+import time
+from pathlib import Path
+
+
+DATA_DIR = Path("data")
+
+STRESS_NORMALIZATION = [
+    (19.381044, 9.474176),
+    (5.5441837, 1.9308523),
+    (184.17795, 54.48858),
+    (33.487267, 25.893078),
+    (32.97501, 16.267557),
+    (677.911, 130.61485),
+    (0.43178082, 0.1747625),
+    (147.99915, 170.24158),
+    (208.32425, 245.64342),
+    (37.63596, 19.478745),
+]
+STRESS_INIT = 3.835272
+STRESS_COEFFICIENTS = [
+    0.16605523,
+    0.24399279,
+    0.0,
+    0.0,
+    -0.07095941,
+    -0.20609115,
+    0.0,
+    -0.14579488,
+    -0.09786916,
+    0.0,
+]
+
+
+def _read_json(path: Path, fallback):
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return fallback
+
+
+def _read_jsonl(path: Path) -> list[dict]:
+    rows = []
+    try:
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                rows.append(json.loads(line))
+    except Exception:
+        pass
+    return rows
+
+
+def _write_json(path: Path, payload: dict):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
+
+def _append_jsonl(path: Path, payload: dict):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("a", encoding="utf-8") as fh:
+        fh.write(json.dumps(payload, sort_keys=True) + "\n")
+
+
+def _mean(values: list[float], default=None):
+    return sum(values) / len(values) if values else default
+
+
+def _clamp(value: float, lo: float, hi: float) -> float:
+    return max(lo, min(hi, value))
+
+
+def _score_label(value: float) -> str:
+    if value >= 67:
+        return "green"
+    if value >= 34:
+        return "yellow"
+    return "red"
+
+
+def _clean_rri_values(rri_ms: list[int]) -> list[int]:
+    values = [int(v) for v in rri_ms if 400 < int(v) < 1400]
+    if len(values) < 2:
+        return values
+
+    avg = _mean(values, 0)
+    values = [v for v in values if avg * 0.8 <= v <= avg * 1.2]
+    if len(values) < 2:
+        return values
+
+    cleaned = [values[0]]
+    previous = values[0]
+    for value in values[1:]:
+        if previous * 0.8 < value < previous * 1.2:
+            cleaned.append(value)
+            previous = value
+    return cleaned
+
+
+def hrv_time_domain(rri_ms: list[int]) -> dict:
+    cleaned = _clean_rri_values(rri_ms)
+    if len(cleaned) < 2:
+        return {
+            "status": "insufficient_rri",
+            "input_count": len(rri_ms),
+            "clean_count": len(cleaned),
+        }
+
+    diffs = [cleaned[i] - cleaned[i - 1] for i in range(1, len(cleaned))]
+    abs_diffs = [abs(d) for d in diffs]
+    rmssd = math.sqrt(sum(d * d for d in diffs) / len(diffs))
+    sdnn = statistics.pstdev(cleaned) if len(cleaned) > 1 else 0.0
+    pnn50 = 100.0 * sum(1 for d in abs_diffs if d > 50) / len(diffs)
+    mean_nni = _mean(cleaned, 0.0)
+    return {
+        "status": "ok",
+        "input_count": len(rri_ms),
+        "clean_count": len(cleaned),
+        "mean_nni_ms": round(mean_nni, 1),
+        "median_nni_ms": round(statistics.median(cleaned), 1),
+        "mean_hr_bpm": round(60000.0 / mean_nni, 1) if mean_nni else None,
+        "rmssd_ms": round(rmssd, 1),
+        "sdnn_ms": round(sdnn, 1),
+        "pnn50_pct": round(pnn50, 1),
+        "min_nni_ms": min(cleaned),
+        "max_nni_ms": max(cleaned),
+    }
+
+
+def _huawei_time_features(rri_ms: list[int]) -> dict | None:
+    cleaned = _clean_rri_values(rri_ms)
+    if len(cleaned) < 30:
+        return None
+
+    rri_min = min(cleaned)
+    rri_max = max(cleaned)
+    mean_hr = _mean([60000.0 / v for v in cleaned], 0.0)
+    sd_hr = statistics.pstdev([60000.0 / v for v in cleaned]) if len(cleaned) > 1 else 0.0
+    diffs = [cleaned[i] - cleaned[i - 1] for i in range(1, len(cleaned))]
+    if not diffs:
+        return None
+
+    rmssd = math.sqrt(sum(d * d for d in diffs) / len(diffs))
+    rri_50_count = sum(1 for d in diffs if abs(d) > 50)
+    pnn50 = 100.0 * rri_50_count / len(diffs)
+    sdnn = statistics.pstdev(cleaned) if len(cleaned) > 1 else 0.0
+    diff_mean = _mean(diffs, 0.0)
+    diff_sd = math.sqrt(sum((d - diff_mean) ** 2 for d in diffs) / len(diffs))
+    var_sum = diff_sd / math.sqrt(2)
+    var_diff = (sdnn * sdnn * 2) - (var_sum * var_sum)
+    if var_diff <= 0:
+        return None
+    norm_var = var_sum / math.sqrt(var_diff)
+
+    low_bin = (rri_min // 20) * 20
+    high_bin = (rri_max // 20) * 20
+    categories = {}
+    for value in cleaned:
+        bucket = ((value - low_bin) // 20) * 20 + low_bin
+        categories[bucket] = categories.get(bucket, 0) + 1
+    if not categories or len(categories) >= 50:
+        return None
+    max_count = max(categories.values())
+    modal_bins = [bucket for bucket, count in categories.items() if count == max_count]
+    median_nni = int(round(_mean(modal_bins, low_bin) / 20.0) * 20)
+
+    return {
+        "cleaned": cleaned,
+        "median_nni_count": max_count,
+        "sd_hr": sd_hr,
+        "range_nni": high_bin - low_bin,
+        "rmssd": rmssd,
+        "median_nni": median_nni,
+        "norm_var": norm_var,
+        "mean_hr": mean_hr,
+        "pnn50": pnn50,
+        "sdnn": sdnn,
+    }
+
+
+def _resample_rri_2hz(rri_ms: list[int]) -> list[float]:
+    if len(rri_ms) < 4:
+        return []
+    cumulative = []
+    total = 0.0
+    for value in rri_ms:
+        total += value / 1000.0
+        cumulative.append(total)
+    if total < 8:
+        return []
+
+    samples = []
+    target = 0.0
+    idx = 0
+    while target <= cumulative[-1] and len(samples) < 130:
+        while idx < len(cumulative) - 1 and cumulative[idx] < target:
+            idx += 1
+        if idx == 0:
+            samples.append(float(rri_ms[0]))
+        else:
+            prev_t = cumulative[idx - 1]
+            curr_t = cumulative[idx]
+            prev_v = float(rri_ms[idx - 1])
+            curr_v = float(rri_ms[idx])
+            frac = 0.0 if curr_t == prev_t else (target - prev_t) / (curr_t - prev_t)
+            samples.append(prev_v + (curr_v - prev_v) * frac)
+        target += 0.5
+    return samples
+
+
+def _frequency_features(rri_ms: list[int]) -> dict | None:
+    samples = _resample_rri_2hz(rri_ms)
+    n = len(samples)
+    if n < 32:
+        return None
+
+    mean = _mean(samples, 0.0)
+    detrended = [v - mean for v in samples]
+    windowed = []
+    for i, value in enumerate(detrended):
+        win = 0.5 - 0.5 * math.cos((2 * math.pi * i) / max(1, n - 1))
+        windowed.append(value * win)
+
+    sample_rate = 2.0
+    freq_step = sample_rate / n
+    powers = []
+    for k in range(n // 2 + 1):
+        real = 0.0
+        imag = 0.0
+        for j, value in enumerate(windowed):
+            angle = 2 * math.pi * k * j / n
+            real += value * math.cos(angle)
+            imag -= value * math.sin(angle)
+        powers.append((real * real + imag * imag) / n)
+
+    vlf = lf = hf = 0.0
+    for k, power in enumerate(powers):
+        freq = k * freq_step
+        if 0 <= freq < 0.04:
+            vlf += freq_step * power
+        elif 0.04 <= freq < 0.15:
+            lf += freq_step * power
+        elif 0.15 <= freq <= 0.4:
+            hf += freq_step * power
+    total = vlf + lf + hf
+    if total <= 0 or hf <= 0:
+        return None
+    return {
+        "vlf_psd": vlf,
+        "lf_psd": lf,
+        "hf_psd": hf,
+        "lf_hf_vlf_total_psd": total,
+    }
+
+
+def huawei_stress_features(rri_samples: list[dict], signal_time_sec: int | None = None) -> dict:
+    if signal_time_sec is None and rri_samples:
+        first = rri_samples[0].get("timestamp_ms")
+        last = rri_samples[-1].get("timestamp_ms")
+        if first and last and last > first:
+            signal_time_sec = max(1, round((last - first) / 1000))
+    signal_time_sec = signal_time_sec or 60
+
+    if not (50 < signal_time_sec < 70):
+        return {"status": "invalid_signal_time", "signal_time_sec": signal_time_sec}
+
+    huawei_valid = [
+        int(row["rri_ms"])
+        for row in rri_samples
+        if row.get("rri_ms") and int(row.get("sqi", 0)) == 100
+    ]
+    if len(huawei_valid) < 30:
+        return {
+            "status": "insufficient_sqi_100",
+            "signal_time_sec": signal_time_sec,
+            "sqi_100_count": len(huawei_valid),
+        }
+    if sum(huawei_valid) > 65000:
+        return {"status": "window_too_long", "signal_time_sec": signal_time_sec}
+
+    time_features = _huawei_time_features(huawei_valid)
+    freq_features = _frequency_features(time_features["cleaned"] if time_features else [])
+    if not time_features or not freq_features:
+        return {"status": "feature_calc_failed", "sqi_100_count": len(huawei_valid)}
+
+    p_vlf = 100.0 * freq_features["vlf_psd"] / freq_features["lf_hf_vlf_total_psd"]
+    p_lf = 100.0 * freq_features["lf_psd"] / freq_features["lf_hf_vlf_total_psd"]
+    features = [
+        time_features["median_nni_count"],
+        time_features["sd_hr"],
+        time_features["range_nni"],
+        p_vlf,
+        time_features["rmssd"],
+        time_features["median_nni"],
+        time_features["norm_var"],
+        freq_features["hf_psd"],
+        freq_features["lf_psd"],
+        p_lf,
+    ]
+    score_factor = huawei_stress_score_factor(features)
+    score = huawei_stress_final_score(score_factor)
+    return {
+        "status": "ok",
+        "signal_time_sec": signal_time_sec,
+        "sqi_100_count": len(huawei_valid),
+        "features": [round(v, 6) for v in features],
+        "stress_score_factor": round(score_factor, 4),
+        "stress_score": score,
+        "stress_level": huawei_stress_level(score),
+    }
+
+
+def huawei_stress_score_factor(features: list[float]) -> float:
+    score = STRESS_INIT
+    for idx, coeff in enumerate(STRESS_COEFFICIENTS):
+        mean, std = STRESS_NORMALIZATION[idx]
+        normalized = (features[idx] - mean) / std
+        score += normalized * coeff
+    return _clamp(score, 0.0, 7.0)
+
+
+def huawei_stress_final_score(score_factor: float) -> int:
+    score = int((_clamp(score_factor, 0.0, 7.0) * 14.0) + 1.5)
+    return int(_clamp(score, 15, 90))
+
+
+def huawei_stress_level(score: int) -> int:
+    if score <= 29:
+        return 1
+    if score <= 59:
+        return 2
+    if score <= 79:
+        return 3
+    return 4
+
+
+def analyze_rri_samples(samples: list[dict], signal_time_sec: int | None = None) -> dict:
+    rri_values = [int(row["rri_ms"]) for row in samples if row.get("rri_ms")]
+    time_domain = hrv_time_domain(rri_values)
+    stress = huawei_stress_features(samples, signal_time_sec=signal_time_sec)
+    return {
+        "source": "live_rri",
+        "generated_at": int(time.time()),
+        "sample_count": len(samples),
+        "time_domain": time_domain,
+        "huawei_stress": stress,
+        "samples_preview": samples[:20],
+    }
+
+
+def _history_baseline(rows: list[dict], key: str, default=None):
+    values = [row.get(key) for row in rows[-30:] if isinstance(row.get(key), (int, float))]
+    return statistics.median(values) if values else default
+
+
+def _strain_from_hr(heart_rates: list[int]) -> dict:
+    if not heart_rates:
+        return {"strain": None, "trimp": 0.0, "zone_minutes": {}}
+    resting = max(45, min(75, min(heart_rates)))
+    max_hr = 190
+    zones = {"easy": 0, "moderate": 0, "hard": 0, "max": 0}
+    trimp = 0.0
+    for hr in heart_rates:
+        reserve = _clamp((hr - resting) / max(1, max_hr - resting), 0, 1)
+        trimp += reserve * math.exp(1.92 * reserve)
+        if reserve < 0.35:
+            zones["easy"] += 1
+        elif reserve < 0.55:
+            zones["moderate"] += 1
+        elif reserve < 0.75:
+            zones["hard"] += 1
+        else:
+            zones["max"] += 1
+    strain = 21.0 * (1.0 - math.exp(-trimp / 180.0))
+    return {
+        "strain": round(_clamp(strain, 0, 21), 1),
+        "trimp": round(trimp, 1),
+        "zone_minutes": zones,
+    }
+
+
+def _extract_sleep_hrv(sequence: dict) -> dict | None:
+    sessions = sequence.get("sessions") or []
+    values = []
+    for session in sessions:
+        summary = session.get("summary") or {}
+        avg = summary.get("avgHrv")
+        if isinstance(avg, (int, float)) and avg > 0:
+            values.append({
+                "avg_hrv_ms": avg,
+                "hrv_day_to_baseline": summary.get("hrvDayToBaseline"),
+                "min_baseline": summary.get("minHrvBaseline"),
+                "max_baseline": summary.get("maxHrvBaseline"),
+                "session_start": session.get("start_ts"),
+                "session_end": session.get("end_ts"),
+            })
+    if not values:
+        return None
+    latest = values[-1]
+    latest["source"] = "sleep_sequence"
+    latest["sample_count"] = len(values)
+    return latest
+
+
+def build_insights(data_dir: Path = DATA_DIR) -> dict:
+    fitness = _read_json(data_dir / "latest_fitness_preview.json", {})
+    summary = _read_json(data_dir / "latest_recovery_summary.json", {})
+    sequence = _read_json(data_dir / "latest_sleep_sequence_preview.json", {})
+    stress = _read_json(data_dir / "latest_stress_preview.json", {})
+    live_hrv = _read_json(data_dir / "latest_live_hrv.json", {})
+    history = _read_jsonl(data_dir / "recovery_history.jsonl")
+
+    steps = fitness.get("steps") or []
+    heart_rates = [row.get("heart_rate") for row in steps if isinstance(row.get("heart_rate"), (int, float)) and row.get("heart_rate") > 0]
+    resting_hrs = [row.get("resting_heart_rate") for row in steps if isinstance(row.get("resting_heart_rate"), (int, float)) and row.get("resting_heart_rate") > 0]
+    spo2 = [row.get("spo2") for row in steps if isinstance(row.get("spo2"), (int, float)) and row.get("spo2") > 0]
+    sleep_minutes = summary.get("sleep_minutes") or 0
+
+    strain = _strain_from_hr(heart_rates)
+    rhr = _mean(resting_hrs, min(heart_rates) if heart_rates else None)
+    rhr_baseline = _history_baseline(history, "resting_hr_avg", rhr or 60)
+    sleep_baseline = _history_baseline(history, "sleep_minutes", 480)
+
+    hrv = None
+    live_td = live_hrv.get("time_domain") or {}
+    if live_td.get("status") == "ok":
+        hrv = {
+            "source": "live_rri",
+            "rmssd_ms": live_td.get("rmssd_ms"),
+            "sdnn_ms": live_td.get("sdnn_ms"),
+            "pnn50_pct": live_td.get("pnn50_pct"),
+            "sample_count": live_hrv.get("sample_count", 0),
+        }
+    else:
+        hrv = _extract_sleep_hrv(sequence)
+
+    hrv_baseline = _history_baseline(_read_jsonl(data_dir / "insights_history.jsonl"), "hrv_rmssd_ms", None)
+    hrv_score = None
+    hrv_value = None
+    if hrv:
+        hrv_value = hrv.get("rmssd_ms") or hrv.get("avg_hrv_ms")
+        if hrv_value:
+            if hrv_baseline:
+                hrv_score = _clamp(50 + 65 * math.log(max(1, hrv_value) / max(1, hrv_baseline)), 0, 100)
+            else:
+                hrv_score = _clamp(1.35 * hrv_value, 0, 100)
+
+    rhr_score = None
+    if rhr is not None:
+        rhr_score = _clamp(70 + ((rhr_baseline or rhr) - rhr) * 4.0, 0, 100)
+    sleep_need = _clamp(480 + max(0, (strain["strain"] or 0) - 10) * 7, 420, 600)
+    sleep_score = _clamp(100 * sleep_minutes / sleep_need, 0, 100)
+    spo2_score = None
+    if spo2:
+        spo2_score = _clamp(100 - max(0, 96 - _mean(spo2, 96)) * 8 - max(0, 92 - min(spo2)) * 5, 0, 100)
+
+    components = []
+    if hrv_score is not None:
+        components.append(("hrv", hrv_score, 0.45))
+        components.append(("rhr", rhr_score if rhr_score is not None else 60, 0.25))
+        components.append(("sleep", sleep_score, 0.20))
+        components.append(("spo2", spo2_score if spo2_score is not None else 75, 0.10))
+    else:
+        components.append(("rhr", rhr_score if rhr_score is not None else 60, 0.35))
+        components.append(("sleep", sleep_score, 0.45))
+        components.append(("spo2", spo2_score if spo2_score is not None else 75, 0.15))
+        components.append(("load", 100 - min(40, (strain["strain"] or 0) * 2), 0.05))
+
+    recovery = sum(value * weight for _name, value, weight in components) / sum(weight for _name, _value, weight in components)
+    acute = _mean([row.get("strain_score") for row in history[-7:] if isinstance(row.get("strain_score"), (int, float))], strain["strain"] or 0)
+    chronic = _mean([row.get("strain_score") for row in history[-42:] if isinstance(row.get("strain_score"), (int, float))], acute)
+
+    generated_at = int(time.time())
+    insight = {
+        "generated_at": generated_at,
+        "recovery_score": round(recovery),
+        "recovery_label": _score_label(recovery),
+        "components": {name: round(value, 1) for name, value, _weight in components},
+        "hrv": hrv or {"source": "unavailable", "reason": "No live RRI or sleep-sequence HRV artifact yet."},
+        "hrv_rmssd_ms": hrv_value,
+        "resting_hr": round(rhr, 1) if rhr is not None else None,
+        "resting_hr_baseline": round(rhr_baseline, 1) if rhr_baseline is not None else None,
+        "sleep": {
+            "minutes": sleep_minutes,
+            "need_minutes": round(sleep_need),
+            "baseline_minutes": round(sleep_baseline) if sleep_baseline else None,
+            "score": round(sleep_score),
+        },
+        "strain": strain,
+        "training_balance": {
+            "acute_7d": round(acute or 0, 1),
+            "chronic_42d": round(chronic or 0, 1),
+            "balance": round((chronic or 0) - (acute or 0), 1),
+        },
+        "data_quality": {
+            "hr_samples": len(heart_rates),
+            "spo2_samples": len(spo2),
+            "sleep_segments": len(fitness.get("sleep") or []),
+            "stress_file_samples": stress.get("stress_count", 0),
+            "sleep_sequence_sessions": sequence.get("sequence_count", 0),
+            "hrv_source": (hrv or {}).get("source", "unavailable"),
+        },
+    }
+    _write_json(data_dir / "latest_insights.json", insight)
+    _append_jsonl(data_dir / "insights_history.jsonl", insight)
+    return insight

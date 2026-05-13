@@ -219,6 +219,66 @@ main {
   gap: 10px;
 }
 
+.readout-panel {
+  display: grid;
+  gap: 10px;
+}
+
+.recovery-score {
+  display: grid;
+  place-items: center;
+  width: 112px;
+  height: 112px;
+  margin: 4px auto 14px;
+  border: 8px solid #ead1a4;
+  border-radius: 50%;
+  color: var(--ink);
+  font-size: 34px;
+  font-weight: 760;
+}
+
+.recovery-score.green {
+  border-color: #8fd1b3;
+}
+
+.recovery-score.red {
+  border-color: #e9a39a;
+}
+
+.component-list {
+  display: grid;
+  gap: 8px;
+}
+
+.component-row {
+  display: grid;
+  grid-template-columns: 78px minmax(0, 1fr) 46px;
+  align-items: center;
+  gap: 10px;
+  min-height: 32px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.component-row strong {
+  color: var(--ink);
+  text-align: right;
+}
+
+.component-bar {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e8edf2;
+}
+
+.component-bar i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--green), var(--blue));
+}
+
 .sleep-row,
 .route-row,
 .cap-row {

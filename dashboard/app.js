@@ -1,4 +1,6 @@
 const files = {
+  insights: "../data/latest_insights.json",
+  connection: "../data/connection_status.json",
   summary: "../data/latest_recovery_summary.json",
   fitness: "../data/latest_fitness_preview.json",
   capabilities: "../data/latest_capabilities.json",
@@ -121,29 +123,35 @@ function barChart(container, values) {
   </svg>`;
 }
 
-function renderMetrics(summary) {
+function renderMetrics(summary, insights) {
   const grid = document.getElementById("metric-grid");
+  const hrv = insights.hrv || {};
+  const hrvValue = hrv.rmssd_ms ?? hrv.avg_hrv_ms ?? "n/a";
   grid.innerHTML = [
-    metric("Recovery Proxy", `${summary.recovery_proxy_no_hrv ?? "n/a"}`, "HRV not exposed yet"),
-    metric("Strain", `${summary.strain_score ?? "n/a"}`, "0-21 scale"),
-    metric("Sleep Score", `${summary.sleep_score ?? "n/a"}`, `${summary.sleep_minutes ?? 0} min sleep`),
+    metric("Recovery", `${insights.recovery_score ?? summary.recovery_proxy_no_hrv ?? "n/a"}`, `${insights.recovery_label || "proxy"} readiness`),
+    metric("Strain", `${insights.strain?.strain ?? summary.strain_score ?? "n/a"}`, `${insights.strain?.trimp ?? "n/a"} TRIMP`),
+    metric("HRV", `${hrvValue}`, hrv.source ? `${hrv.source}` : "not available"),
+    metric("Sleep", `${insights.sleep?.score ?? summary.sleep_score ?? "n/a"}`, `${insights.sleep?.minutes ?? summary.sleep_minutes ?? 0} / ${insights.sleep?.need_minutes ?? 480} min`),
     metric("Steps", fmt.format(summary.step_total ?? 0), summary.step_window_end || ""),
-    metric("Heart Rate", `${summary.heart_rate_avg ?? "n/a"}`, `${summary.heart_rate_min ?? "n/a"}-${summary.heart_rate_max ?? "n/a"} bpm`),
-    metric("SpO2", `${summary.spo2_avg ?? "n/a"}%`, `${summary.spo2_min ?? "n/a"}-${summary.spo2_max ?? "n/a"}%`)
+    metric("Resting HR", `${insights.resting_hr ?? summary.resting_hr_avg ?? "n/a"}`, `${insights.resting_hr_baseline ?? "n/a"} baseline`)
   ].join("");
 }
 
-function renderStatus(summary, capabilities, dictionary) {
+function renderStatus(summary, capabilities, dictionary, connection, insights) {
   const strip = document.getElementById("status-strip");
   const p2pOk = dictionary && Object.keys(dictionary).length > 0;
+  const connected = connection?.state === "connected";
+  const hrvSource = insights?.data_quality?.hrv_source || "unavailable";
   strip.innerHTML = [
+    pill(connected ? "Connected" : connection?.state || "No daemon", connected ? "ok" : "warn"),
     pill("Reconnect auth", "ok"),
     pill("Fitness history", "ok"),
     pill(capabilities?.capability_flags?.dict_sleep_sync ? "Sleep dict bit" : "Sleep dict off", capabilities?.capability_flags?.dict_sleep_sync ? "ok" : "warn"),
     pill(p2pOk ? "P2P probed" : "P2P missing", p2pOk ? "ok" : "warn"),
-    pill("HRV gated", "warn")
+    pill(hrvSource === "unavailable" ? "HRV pending" : `HRV ${hrvSource}`, hrvSource === "unavailable" ? "warn" : "ok")
   ].join("");
-  document.getElementById("sync-label").textContent = `Last artifact: ${summary.generated_at_local || localTime(summary.generated_at)}`;
+  const label = connection?.timestamp_local || summary.generated_at_local || localTime(summary.generated_at);
+  document.getElementById("sync-label").textContent = `Last seen: ${label}`;
 }
 
 function renderCharts(fitness, historyRows) {
@@ -156,12 +164,50 @@ function renderCharts(fitness, historyRows) {
     { label: "SpO2", values: spo2, className: "spo2-line" }
   ], { minY: 50, maxY: 170, height: 280 });
 
-  barChart(document.getElementById("load-chart"), steps.map(x => x.calories || 0));
+  const loadChart = document.getElementById("load-chart");
+  if (loadChart) barChart(loadChart, steps.map(x => x.calories || 0));
 
   const history = historyRows.slice(-30).map(row => ({ y: row.recovery_proxy_no_hrv || 0 }));
   lineChart(document.getElementById("history-chart"), [
     { label: "Recovery proxy", values: history, className: "history-line" }
   ], { minY: 0, maxY: 100, height: 190 });
+}
+
+function renderRecovery(insights) {
+  const panel = document.getElementById("recovery-panel");
+  const components = insights.components || {};
+  const rows = Object.entries(components).map(([name, value]) => `
+    <div class="component-row">
+      <span>${name.toUpperCase()}</span>
+      <div class="component-bar"><i style="width:${Math.max(0, Math.min(100, value))}%"></i></div>
+      <strong>${Math.round(value)}</strong>
+    </div>
+  `).join("");
+  const hrv = insights.hrv || {};
+  panel.innerHTML = `
+    <div class="recovery-score ${insights.recovery_label || "yellow"}">${insights.recovery_score ?? "n/a"}</div>
+    <div class="component-list">${rows || `<div class="empty">No recovery components yet.</div>`}</div>
+    <div class="sleep-row"><span>HRV source</span><strong>${hrv.source || "unavailable"}</strong></div>
+    <div class="sleep-row"><span>HRV detail</span><strong>${hrv.rmssd_ms ?? hrv.avg_hrv_ms ?? hrv.reason ?? "n/a"}</strong></div>
+  `;
+}
+
+function renderStrain(insights) {
+  const panel = document.getElementById("strain-panel");
+  const strain = insights.strain || {};
+  const zones = strain.zone_minutes || {};
+  const max = Math.max(...Object.values(zones), 1);
+  panel.innerHTML = Object.entries(zones).map(([name, value]) => `
+    <div class="component-row">
+      <span>${name}</span>
+      <div class="component-bar"><i style="width:${(value / max) * 100}%"></i></div>
+      <strong>${value}m</strong>
+    </div>
+  `).join("") + `
+    <div class="sleep-row"><span>Acute 7d</span><strong>${insights.training_balance?.acute_7d ?? "n/a"}</strong></div>
+    <div class="sleep-row"><span>Chronic 42d</span><strong>${insights.training_balance?.chronic_42d ?? "n/a"}</strong></div>
+    <div class="sleep-row"><span>Balance</span><strong>${insights.training_balance?.balance ?? "n/a"}</strong></div>
+  `;
 }
 
 function renderSleep(summary, trusleep, sequence) {
@@ -177,9 +223,11 @@ function renderSleep(summary, trusleep, sequence) {
   ].map(([a, b]) => `<div class="sleep-row"><span>${a}</span><strong>${b}</strong></div>`).join("");
 }
 
-function renderRoutes(dictionary, stress, sequence) {
+function renderRoutes(dictionary, stress, sequence, insights) {
+  const hrvSource = insights?.data_quality?.hrv_source || "unavailable";
   const rows = [
     ["Fitness minute history", "ok", "Steps, HR, SpO2, sleep segments are available."],
+    ["Live RRI HRV", hrvSource === "live_rri" ? "ok" : "warn", hrvSource === "live_rri" ? "RMSSD computed from streamed RRI/SQI." : "Waiting for a successful 60s RRI stream."],
     ["Stress/RRI file", stress?.stress_count > 0 ? "ok" : "warn", stress?.stress_count > 0 ? `${stress.stress_count} stress samples` : "No file payload in latest artifact."],
     ["Sleep sequence file", sequence?.file_size > 0 ? "ok" : "warn", sequence?.file_size > 0 ? `${sequence.sequence_count} sessions` : (sequence?.errors || ["No metadata returned"]).join(", ")],
     ["P2P skin temperature", dictionary?.skin_temperature?.status === "ack_no_data" ? "warn" : "bad", dictionary?.skin_temperature?.status || "not probed"],
@@ -225,7 +273,9 @@ function parseHistory(text) {
 }
 
 async function boot() {
-  const [summary, fitness, capabilities, dictionary, trusleep, stress, sequence, historyText] = await Promise.all([
+  const [insights, connection, summary, fitness, capabilities, dictionary, trusleep, stress, sequence, historyText] = await Promise.all([
+    loadJson(files.insights, {}),
+    loadJson(files.connection, {}),
     loadJson(files.summary, {}),
     loadJson(files.fitness, {}),
     loadJson(files.capabilities, {}),
@@ -236,11 +286,13 @@ async function boot() {
     loadText(files.history, "")
   ]);
   const historyRows = parseHistory(historyText);
-  renderMetrics(summary);
-  renderStatus(summary, capabilities, dictionary);
+  renderMetrics(summary, insights);
+  renderStatus(summary, capabilities, dictionary, connection, insights);
   renderCharts(fitness, historyRows);
+  renderRecovery(insights);
+  renderStrain(insights);
   renderSleep(summary, trusleep, sequence);
-  renderRoutes(dictionary, stress, sequence);
+  renderRoutes(dictionary, stress, sequence, insights);
   renderCapabilities(capabilities);
 }
 

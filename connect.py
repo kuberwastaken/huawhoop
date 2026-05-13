@@ -39,6 +39,8 @@ from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 from cryptography.hazmat.primitives.kdf.hkdf import HKDF
 from cryptography.hazmat.primitives import hashes
 
+import analytics as band_analytics
+
 LOG_LEVEL = getattr(logging, os.getenv("BAND10_LOG", "INFO").upper(), logging.INFO)
 logging.basicConfig(level=LOG_LEVEL,
                     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
@@ -58,9 +60,12 @@ MAGIC       = 0x5A
 SVC_DEV     = 0x01
 SVC_FITNESS = 0x07
 SVC_ACCOUNT = 0x1A
+SVC_STRESS  = 0x20
 SVC_FILE_UPLOAD = 0x28
 SVC_FILE_DOWNLOAD = 0x2C
 SVC_P2P     = 0x34
+SVC_HR_RRI_TEST = 0x19
+SVC_BREATH  = 0x2D
 CMD_LINK    = 0x01
 CMD_SUPPORTED_SERVICES = 0x02
 CMD_SUPPORTED_COMMANDS = 0x03
@@ -82,6 +87,13 @@ CMD_SETUP_DEVICE_STATUS = 0x3E
 CMD_ACCEPT_AGREEMENT = 0x30
 CMD_REVERSE_CAPABILITIES = 0x3F
 CMD_COUNTRY_CODE = 0x0A
+CMD_TRUSLEEP = 0x16
+CMD_AUTO_HR = 0x17
+CMD_AUTO_SPO2 = 0x24
+CMD_STRESS_AUTO = 0x09
+CMD_HR_RRI_OPEN_CLOSE = 0x01
+CMD_HR_RRI_DATA = 0x05
+CMD_SLEEP_BREATH = 0x01
 
 FILE_CMD_INIT = 0x01
 FILE_CMD_HASH = 0x02
@@ -598,6 +610,7 @@ class Band:
         self._rx_cmd  = 0
         self._pending_file_inits = []
         self._feature_config_requested = False
+        self._live_rri_samples = []
         self.supported_services = set()
         self.commands_per_service = {}
         self.expand_capabilities = b""
@@ -948,6 +961,10 @@ class Band:
                 )
             except Exception as e:
                 logger.debug(f"  FileUpload unsolicited parse failed cmd={cmd:#x}: {e!r}")
+        elif svc == SVC_HR_RRI_TEST and cmd == CMD_HR_RRI_DATA:
+            samples = self._parse_live_rri_packet(tlvs)
+            self._live_rri_samples.extend(samples)
+            logger.debug(f"  Live RRI packet: {len(samples)} samples, total={len(self._live_rri_samples)}")
         elif svc == 0x37 or (svc == SVC_DEV and cmd == 0x3D):
             # DataSync or encrypted dev packet — log but don't respond
             logger.info(f"  svc={svc:#x}/cmd={cmd:#x} raw tlvs: { {hex(k): v.hex() for k,v in tlvs.items()} }")
@@ -2820,6 +2837,125 @@ class Band:
         save_json_artifact("latest_stress_preview.json", parsed)
         return parsed
 
+    def _parse_live_rri_packet(self, tlvs: dict) -> list[dict]:
+        """Parse HrRriTest.RriData notifications (svc=0x19/cmd=0x05)."""
+        try:
+            data = self._decrypt_transaction_tlvs(tlvs)
+        except Exception:
+            data = tlvs
+
+        container = data.get(0x82, b"")
+        samples = []
+        timestamp_ms = int(time.time() * 1000)
+        for tag, payload in tlv_items(container):
+            if tag != 0x83:
+                continue
+            item = tlv_dec(payload)
+            rri = self._tlv_int(item.get(0x04, b""))
+            sqi = item.get(0x05, b"\x00")[0] if item.get(0x05) else 0
+            if rri:
+                samples.append({
+                    "timestamp_ms": timestamp_ms,
+                    "rri_ms": rri,
+                    "sqi": sqi,
+                })
+        return samples
+
+    async def _drain_unsolicited_for(self, duration: float):
+        deadline = asyncio.get_running_loop().time() + duration
+        while True:
+            while self._rx_queue:
+                raw = self._rx_queue.popleft()
+                svc, cmd, tlvs = parse_frame(raw)
+                if svc == SVC_DEV and cmd == CMD_PHONE_INFO:
+                    await self._handle_phone_info_request(tlvs)
+                else:
+                    await self._handle_unsolicited(svc, cmd, tlvs, b"", b"", b"")
+            remaining = deadline - asyncio.get_running_loop().time()
+            if remaining <= 0:
+                return
+            self._event.clear()
+            if self._rx_queue:
+                continue
+            try:
+                await asyncio.wait_for(self._event.wait(), timeout=min(remaining, 2.0))
+            except asyncio.TimeoutError:
+                continue
+
+    async def measure_live_hrv(self, duration: float = 62.0) -> dict:
+        """Open Gadgetbridge's live HR/RRI test stream and compute HRV locally."""
+        if not self._supports_command(SVC_HR_RRI_TEST, CMD_HR_RRI_OPEN_CLOSE):
+            result = {
+                "source": "live_rri",
+                "generated_at": int(time.time()),
+                "sample_count": 0,
+                "time_domain": {"status": "unsupported"},
+                "huawei_stress": {"status": "unsupported"},
+            }
+            save_json_artifact("latest_live_hrv.json", result)
+            return result
+
+        self._live_rri_samples = []
+        start = time.time()
+        logger.info(f"Live HRV: opening RRI stream for {duration:.0f}s")
+        await self._send_encrypted_no_wait(
+            SVC_HR_RRI_TEST,
+            CMD_HR_RRI_OPEN_CLOSE,
+            tlv_enc(0x01, b"\x03"),
+        )
+        try:
+            await self._drain_unsolicited_for(duration)
+        finally:
+            logger.info("Live HRV: closing RRI stream")
+            await self._send_encrypted_no_wait(
+                SVC_HR_RRI_TEST,
+                CMD_HR_RRI_OPEN_CLOSE,
+                tlv_enc(0x01, b"\x04"),
+            )
+            await asyncio.sleep(0.5)
+
+        elapsed = max(1, round(time.time() - start))
+        result = band_analytics.analyze_rri_samples(self._live_rri_samples, signal_time_sec=elapsed)
+        save_json_artifact("latest_live_hrv.json", result)
+        append_jsonl_artifact("live_hrv_history.jsonl", result)
+        logger.info(
+            "Live HRV: "
+            f"samples={result.get('sample_count', 0)} "
+            f"rmssd={result.get('time_domain', {}).get('rmssd_ms', 'n/a')} "
+            f"stress={result.get('huawei_stress', {}).get('stress_score', 'n/a')}"
+        )
+        return result
+
+    async def enable_passive_health_settings(self) -> dict:
+        """Best-effort Gadgetbridge-style setting enables for richer future data."""
+        results = {}
+
+        async def send(label: str, svc: int, cmd: int, tlv: bytes, wait: bool = False):
+            if self.commands_per_service and not self._supports_command(svc, cmd):
+                results[label] = {"status": "unsupported"}
+                return
+            try:
+                if wait:
+                    resp = await self._transact_encrypted(svc, cmd, tlv, timeout=8.0)
+                    results[label] = {"status": "ok", "tlvs": {hex(k): v.hex() for k, v in resp.items()}}
+                else:
+                    await self._send_encrypted_no_wait(svc, cmd, tlv)
+                    await asyncio.sleep(0.2)
+                    results[label] = {"status": "sent"}
+            except Exception as e:
+                results[label] = {"status": "failed", "error": repr(e)}
+
+        await send("trusleep", SVC_FITNESS, CMD_TRUSLEEP, tlv_enc(0x01, b"\x01"), wait=True)
+        await send("automatic_heart_rate", SVC_FITNESS, CMD_AUTO_HR, tlv_enc(0x01, b"\x01"))
+        await send("automatic_spo2", SVC_FITNESS, CMD_AUTO_SPO2, tlv_enc(0x01, b"\x01"))
+        if self._supports_command(SVC_BREATH, CMD_SLEEP_BREATH):
+            await send("sleep_breath", SVC_BREATH, CMD_SLEEP_BREATH, tlv_enc(0x01, b"\x02"))
+        else:
+            results["sleep_breath"] = {"status": "unsupported"}
+        save_json_artifact("latest_passive_health_settings.json", results)
+        logger.info(f"Passive health settings: {results}")
+        return results
+
     async def get_battery(self) -> int:
         tlvs = await self._transact_encrypted(SVC_DEV, 0x08, tlv_enc(0x01))
         if 0x01 in tlvs:
@@ -3035,6 +3171,8 @@ async def run():
         await band.connect()
         await band.handshake()
         await band.post_auth_initialize()
+        if os.getenv("BAND10_ENABLE_PASSIVE_SETTINGS", "1") != "0":
+            await band.enable_passive_health_settings()
 
         try:
             bat = await band.get_battery()
@@ -3103,6 +3241,24 @@ async def run():
                         logger.info(f"P2P dictionary class probe: {json.dumps(dictionary_probe, indent=2)}")
                     except Exception as probe_e:
                         logger.warning(f"P2P dictionary class probe failed: {probe_e!r}")
+
+        if os.getenv("BAND10_LIVE_HRV", "0") == "1":
+            try:
+                live_duration = float(os.getenv("BAND10_LIVE_HRV_SECONDS", "62"))
+                await band.measure_live_hrv(duration=live_duration)
+            except Exception as e:
+                logger.warning(f"Live HRV measurement failed: {e!r}")
+
+        try:
+            insights = band_analytics.build_insights(DATA_DIR)
+            logger.info(
+                "Insights: "
+                f"recovery={insights.get('recovery_score')} "
+                f"strain={insights.get('strain', {}).get('strain')} "
+                f"hrv_source={insights.get('data_quality', {}).get('hrv_source')}"
+            )
+        except Exception as e:
+            logger.warning(f"Insight generation failed: {e!r}")
 
         await band.disconnect()
 

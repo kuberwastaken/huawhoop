@@ -40,6 +40,8 @@ What works:
 | P2P service ping | Working | `hw.watch.health.filesync` replies `cmd=0x03 code=0xca` to service ping. |
 | P2P dictionary probe classification | Working | Probe distinguishes `ack_no_data` from `0x000186a4` auth/unsupported errors. |
 | Huawei Health dictionary mapping | Confirmed | Decompiled APK confirms `SLEEP_DETAILS=700013` includes `avgHrv`, HRV baseline, sleep score, SpO2 and breath-rate fields. |
+| Live RRI HRV route | Implemented, needs band run | Gadgetbridge's stress calibration opens `svc=0x19/cmd=0x01` with type `0x03`, receives `svc=0x19/cmd=0x05` RRI/SQI notifications, then closes with type `0x04`. Python now mirrors this and writes `data/latest_live_hrv.json`. |
+| Persistent connected mode | Implemented, needs soak run | `band_daemon.py` keeps the BLE session open, runs keepalives, syncs JSON artifacts, and writes `data/connection_status.json`. This should address the band showing "not connected" after one-shot pulls. |
 
 Open constraints:
 
@@ -51,6 +53,33 @@ Open constraints:
 | P2P dictionary classes | `skin_temperature=ack_no_data`; emotion/sleep_apnea/etc return `0x000186a4` | P2P module is alive, but these classes are either gated or unsupported for host pull. |
 | Sequence sleep file `sequence_data/SLEEP_DETAILS` | Parser implemented, file-init route still returns status-only/no metadata | Sleep HRV may still exist in device data, but this pull trigger is incomplete or firmware-gated. |
 | P2P ping after failed file-sync attempts | Can fail later in the same session | A fresh session pings cleanly. The dashboard uses the latest successful P2P probe artifact and marks file-sync routes separately. |
+
+### HRV Source Audit (Gadgetbridge + Huawei Health APK)
+
+There are three distinct HRV-looking paths, and they are not equivalent:
+
+1. **Live RRI stream / stress calibration**: Gadgetbridge class
+   `HuaweiStressCalibration` starts `HrRriTest` (`svc=0x19/cmd=0x01`) with
+   type `0x03`, listens for RRI/SQI notifications on `cmd=0x05`, then stops with
+   type `0x04`. `HuaweiStressHRVCalculation` computes RMSSD-like and
+   frequency-domain HRV features from 50-70 seconds of high-quality SQI data.
+   This is the strongest route for "make HRV work" today because the Band 10
+   advertises service `0x19/cmd=0x01`.
+2. **Sleep sequence HRV**: Gadgetbridge `downloadDictTrueSleepData()` requests
+   `sequence_data` with dictionary class `700013`. The decompiled APK confirms
+   fields `avgHrv=700013878`, `minHrvBaseline=700013305`,
+   `maxHrvBaseline=700013355`, and `hrvDayToBaseline=700013824`. Our parser is
+   aligned, but this band currently returns success-without-metadata for the file
+   init, so no payload is available yet.
+3. **Standalone P2P HRV dictionary**: APK class `500044` /
+   `heartRateVariabilityRMSSD=500044831` exists, but the Band 10 reports
+   `hrv=false` in expanded capabilities and returns `0x000186a4` for host pull.
+   Keep it as a diagnostic route, not the primary HRV path.
+
+New local analytics code writes `data/latest_insights.json` and combines live RRI
+or sleep-sequence HRV, resting HR, sleep amount, SpO2, HR-load strain, and
+short/long training load into a dashboard-ready readiness model. The recovery score
+is intentionally labeled as a local model, not a WHOOP clone.
 
 ### Gadgetbridge vs Current Implementation
 
