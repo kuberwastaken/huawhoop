@@ -55,6 +55,10 @@ function isLocalHost() {
   return ["", "localhost", "127.0.0.1", "::1"].includes(window.location.hostname);
 }
 
+function hasBridge() {
+  return !!state.bridgeBase || isLocalHost();
+}
+
 function artifactPath(key) {
   const root = (!state.bridgeBase && !isLocalHost()) ? "./sample-data/" : "../data/";
   return `${root}${artifactFiles[key]}`;
@@ -95,7 +99,7 @@ function parseJsonl(text) {
 }
 
 async function loadData() {
-  const api = await fetchJson(bridgePath("/api/status"), null);
+  const api = hasBridge() ? await fetchJson(bridgePath("/api/status"), null) : null;
   if (api && (api.connection || api.insights || api.bridge)) {
     const historyText = await fetchText(bridgePath("/api/artifacts/recovery_history.jsonl"), "");
     const insightsHistoryText = await fetchText(bridgePath("/api/artifacts/insights_history.jsonl"), "");
@@ -500,6 +504,7 @@ function renderAll() {
 }
 
 async function command(path, payload = {}) {
+  if (!hasBridge()) throw new Error("No live bridge — configure Bridge URL in Settings");
   const response = await fetch(bridgePath(path), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
