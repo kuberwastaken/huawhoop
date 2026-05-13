@@ -737,7 +737,7 @@ def _load_weather_payload() -> dict:
         "current": "temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m,wind_direction_10m",
         "hourly": "temperature_2m,precipitation_probability,uv_index,weather_code",
         "daily": "weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max",
-        "forecast_days": os.getenv("BAND10_WEATHER_DAYS", "7"),
+        "forecast_days": os.getenv("BAND10_WEATHER_DAYS", "8"),
         "timezone": "UTC",
     })
     with urlopen(f"https://api.open-meteo.com/v1/forecast?{params}", timeout=15) as response:
@@ -2624,20 +2624,31 @@ class Band:
             tlv += tlv_enc(0x81, b"".join(hourly_items))
 
         daily = list(payload.get("daily") or [])
-        if not daily and payload.get("timestamp"):
-            daily = [{
-                "timestamp": payload.get("timestamp"),
-                "condition_code": payload.get("condition_code", 800),
-                "max_temp_c": payload.get("high_temp_c"),
-                "min_temp_c": payload.get("low_temp_c"),
-            }]
+        today = {
+            "timestamp": now,
+            "condition_code": payload.get("condition_code", 800),
+            "max_temp_c": payload.get("high_temp_c"),
+            "min_temp_c": payload.get("low_temp_c"),
+        }
         if daily and daily[0].get("timestamp"):
             current_utc_day = datetime.fromtimestamp(now, timezone.utc).date()
             first_utc_day = datetime.fromtimestamp(int(daily[0]["timestamp"]), timezone.utc).date()
-            if first_utc_day <= current_utc_day and len(daily) > 1:
+            if first_utc_day == current_utc_day:
+                today.update({k: v for k, v in daily[0].items() if k in {
+                    "sunrise", "sunset", "moonrise", "moonset", "moon_phase",
+                } and v is not None})
                 daily = daily[1:]
+            elif first_utc_day < current_utc_day:
+                daily = [item for item in daily if item.get("timestamp") and datetime.fromtimestamp(int(item["timestamp"]), timezone.utc).date() > current_utc_day]
+        day_sources = [today]
+        for offset, item in enumerate(daily[:7], start=1):
+            future = dict(item)
+            # Gadgetbridge uses current weather timestamp + N days for future
+            # daily forecast rows, not midnight timestamps.
+            future["timestamp"] = now + (86400 * offset)
+            day_sources.append(future)
         day_items = []
-        for item in daily[:8]:
+        for item in day_sources[:8]:
             if not item.get("timestamp"):
                 continue
             entry = tlv_enc(0x12, self._i32(item["timestamp"]))
