@@ -1,27 +1,3921 @@
 {
-  "hours": 168,
+  "hours": 48,
   "route": "sequence_data/SLEEP_DETAILS",
   "state": {
     "file_size": 0,
-    "session_count": 0,
+    "session_count": 4,
     "sessions": []
   },
   "data": {
-    "file_size": 0,
+    "file_size": 2184,
     "acc_count": 0,
     "ppg_count": 0
   },
   "sequence": {
-    "file_size": 0,
-    "dict_id": null,
-    "file_type": null,
-    "file_version": null,
-    "sequence_count": 0,
-    "sessions": [],
-    "errors": [
-      "file too short"
+    "file_size": 2184,
+    "declared_data_size": 2184,
+    "dict_id": 700013,
+    "file_type": 1,
+    "file_version": 1,
+    "extra": "0000000000000000000000000000000000000000",
+    "sequence_count": 4,
+    "sessions": [
+      {
+        "start_ts": 1778544780,
+        "end_ts": 1778549100,
+        "start_local": "2026-05-12 05:43:00",
+        "end_local": "2026-05-12 06:55:00",
+        "data_version": 1,
+        "summary_type": 2,
+        "summary_len": 434,
+        "detail_len": 8,
+        "extra": "00000000000000000000000000000000",
+        "summary": {
+          "validData": null,
+          "hrvDayToBaseline": 0,
+          "maxHrvBaseline": 0,
+          "minHrvBaseline": 0,
+          "avgHrv": 0,
+          "breathRateDayToBaseline": 0,
+          "maxBreathRateBaseline": 0,
+          "minBreathRateBaseline": 0,
+          "avgBreathRate": 0,
+          "oxygenSaturationDayToBaseline": 0,
+          "maxOxygenSaturationBaseline": 0,
+          "minOxygenSaturationBaseline": 0,
+          "avgOxygenSaturation": 0,
+          "heartRateDayToBaseline": 0,
+          "maxHeartRateBaseline": 0,
+          "minHeartRateBaseline": 0,
+          "avgHeartRate": 0,
+          "risingTime": 0,
+          "bedTime": 0,
+          "sleepEfficiency": 255,
+          "sleepLatency": 1092,
+          "deepPart": 255,
+          "sleepDataQuality": 0,
+          "snoreFreq": 255,
+          "wakeupTime": 1778549100,
+          "fallAsleepTime": 1778544780,
+          "sleepScore": 0,
+          "_raw_fields": [
+            {
+              "dict_id": 700013786,
+              "field": "validData",
+              "data_type": 2,
+              "value": null
+            },
+            {
+              "dict_id": 700013824,
+              "field": "hrvDayToBaseline",
+              "data_type": 1,
+              "value": 0
+            },
+            {
+              "dict_id": 700013355,
+              "field": "maxHrvBaseline",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013305,
+              "field": "minHrvBaseline",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013878,
+              "field": "avgHrv",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013236,
+              "field": "breathRateDayToBaseline",
+              "data_type": 1,
+              "value": 0
+            },
+            {
+              "dict_id": 700013225,
+              "field": "maxBreathRateBaseline",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013839,
+              "field": "minBreathRateBaseline",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013886,
+              "field": "avgBreathRate",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013718,
+              "field": "oxygenSaturationDayToBaseline",
+              "data_type": 1,
+              "value": 0
+            },
+            {
+              "dict_id": 700013227,
+              "field": "maxOxygenSaturationBaseline",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013633,
+              "field": "minOxygenSaturationBaseline",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013468,
+              "field": "avgOxygenSaturation",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013810,
+              "field": "heartRateDayToBaseline",
+              "data_type": 1,
+              "value": 0
+            },
+            {
+              "dict_id": 700013841,
+              "field": "maxHeartRateBaseline",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013722,
+              "field": "minHeartRateBaseline",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013580,
+              "field": "avgHeartRate",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013973,
+              "field": "risingTime",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013298,
+              "field": "bedTime",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013232,
+              "field": "sleepEfficiency",
+              "data_type": 1,
+              "value": 255
+            },
+            {
+              "dict_id": 700013713,
+              "field": "sleepLatency",
+              "data_type": 2,
+              "value": 1092
+            },
+            {
+              "dict_id": 700013679,
+              "field": "deepPart",
+              "data_type": 1,
+              "value": 255
+            },
+            {
+              "dict_id": 700013254,
+              "field": "sleepDataQuality",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013721,
+              "field": "snoreFreq",
+              "data_type": 1,
+              "value": 255
+            },
+            {
+              "dict_id": 700013156,
+              "field": "wakeupTime",
+              "data_type": 2,
+              "value": 1778549100
+            },
+            {
+              "dict_id": 700013686,
+              "field": "fallAsleepTime",
+              "data_type": 2,
+              "value": 1778544780
+            },
+            {
+              "dict_id": 700013245,
+              "field": "sleepScore",
+              "data_type": 1,
+              "value": 0
+            }
+          ],
+          "prepareSleepTime": null
+        },
+        "details": {
+          "stage_minute_count": 72,
+          "stage_counts": {
+            "5": 72
+          },
+          "stages": [
+            {
+              "timestamp": 1778544780,
+              "local": "2026-05-12 05:43:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778544840,
+              "local": "2026-05-12 05:44:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778544900,
+              "local": "2026-05-12 05:45:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778544960,
+              "local": "2026-05-12 05:46:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778545020,
+              "local": "2026-05-12 05:47:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778545080,
+              "local": "2026-05-12 05:48:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778545140,
+              "local": "2026-05-12 05:49:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778545200,
+              "local": "2026-05-12 05:50:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778545260,
+              "local": "2026-05-12 05:51:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778545320,
+              "local": "2026-05-12 05:52:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778545380,
+              "local": "2026-05-12 05:53:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778545440,
+              "local": "2026-05-12 05:54:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778545500,
+              "local": "2026-05-12 05:55:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778545560,
+              "local": "2026-05-12 05:56:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778545620,
+              "local": "2026-05-12 05:57:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778545680,
+              "local": "2026-05-12 05:58:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778545740,
+              "local": "2026-05-12 05:59:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778545800,
+              "local": "2026-05-12 06:00:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778545860,
+              "local": "2026-05-12 06:01:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778545920,
+              "local": "2026-05-12 06:02:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778545980,
+              "local": "2026-05-12 06:03:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778546040,
+              "local": "2026-05-12 06:04:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778546100,
+              "local": "2026-05-12 06:05:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778546160,
+              "local": "2026-05-12 06:06:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778546220,
+              "local": "2026-05-12 06:07:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778546280,
+              "local": "2026-05-12 06:08:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778546340,
+              "local": "2026-05-12 06:09:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778546400,
+              "local": "2026-05-12 06:10:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778546460,
+              "local": "2026-05-12 06:11:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778546520,
+              "local": "2026-05-12 06:12:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778546580,
+              "local": "2026-05-12 06:13:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778546640,
+              "local": "2026-05-12 06:14:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778546700,
+              "local": "2026-05-12 06:15:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778546760,
+              "local": "2026-05-12 06:16:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778546820,
+              "local": "2026-05-12 06:17:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778546880,
+              "local": "2026-05-12 06:18:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778546940,
+              "local": "2026-05-12 06:19:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778547000,
+              "local": "2026-05-12 06:20:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778547060,
+              "local": "2026-05-12 06:21:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778547120,
+              "local": "2026-05-12 06:22:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778547180,
+              "local": "2026-05-12 06:23:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778547240,
+              "local": "2026-05-12 06:24:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778547300,
+              "local": "2026-05-12 06:25:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778547360,
+              "local": "2026-05-12 06:26:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778547420,
+              "local": "2026-05-12 06:27:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778547480,
+              "local": "2026-05-12 06:28:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778547540,
+              "local": "2026-05-12 06:29:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778547600,
+              "local": "2026-05-12 06:30:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778547660,
+              "local": "2026-05-12 06:31:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778547720,
+              "local": "2026-05-12 06:32:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778547780,
+              "local": "2026-05-12 06:33:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778547840,
+              "local": "2026-05-12 06:34:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778547900,
+              "local": "2026-05-12 06:35:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778547960,
+              "local": "2026-05-12 06:36:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778548020,
+              "local": "2026-05-12 06:37:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778548080,
+              "local": "2026-05-12 06:38:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778548140,
+              "local": "2026-05-12 06:39:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778548200,
+              "local": "2026-05-12 06:40:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778548260,
+              "local": "2026-05-12 06:41:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778548320,
+              "local": "2026-05-12 06:42:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778548380,
+              "local": "2026-05-12 06:43:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778548440,
+              "local": "2026-05-12 06:44:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778548500,
+              "local": "2026-05-12 06:45:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778548560,
+              "local": "2026-05-12 06:46:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778548620,
+              "local": "2026-05-12 06:47:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778548680,
+              "local": "2026-05-12 06:48:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778548740,
+              "local": "2026-05-12 06:49:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778548800,
+              "local": "2026-05-12 06:50:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778548860,
+              "local": "2026-05-12 06:51:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778548920,
+              "local": "2026-05-12 06:52:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778548980,
+              "local": "2026-05-12 06:53:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778549040,
+              "local": "2026-05-12 06:54:00",
+              "stage": 5
+            }
+          ],
+          "stage_window_start": "2026-05-12 05:43:00",
+          "stage_window_end": "2026-05-12 06:54:00",
+          "errors": []
+        }
+      },
+      {
+        "start_ts": 1778578020,
+        "end_ts": 1778590500,
+        "start_local": "2026-05-12 14:57:00",
+        "end_local": "2026-05-12 18:25:00",
+        "data_version": 1,
+        "summary_type": 2,
+        "summary_len": 434,
+        "detail_len": 120,
+        "extra": "00000000000000000000000000000000",
+        "summary": {
+          "validData": 1063582288,
+          "hrvDayToBaseline": 0,
+          "maxHrvBaseline": 51,
+          "minHrvBaseline": 28,
+          "avgHrv": 19,
+          "breathRateDayToBaseline": 0,
+          "maxBreathRateBaseline": 16,
+          "minBreathRateBaseline": 12,
+          "avgBreathRate": 17,
+          "oxygenSaturationDayToBaseline": 2,
+          "maxOxygenSaturationBaseline": 4294967295,
+          "minOxygenSaturationBaseline": 4294967295,
+          "avgOxygenSaturation": 97,
+          "heartRateDayToBaseline": 0,
+          "maxHeartRateBaseline": 80,
+          "minHeartRateBaseline": 62,
+          "avgHeartRate": 84,
+          "risingTime": 1778590620,
+          "bedTime": 1778577720,
+          "sleepEfficiency": 86,
+          "sleepLatency": 5,
+          "deepPart": 63,
+          "sleepDataQuality": 0,
+          "snoreFreq": 2,
+          "wakeupTime": 1778590500,
+          "fallAsleepTime": 1778578020,
+          "sleepScore": 58,
+          "_raw_fields": [
+            {
+              "dict_id": 700013786,
+              "field": "validData",
+              "data_type": 2,
+              "value": 1063582288
+            },
+            {
+              "dict_id": 700013824,
+              "field": "hrvDayToBaseline",
+              "data_type": 1,
+              "value": 0
+            },
+            {
+              "dict_id": 700013355,
+              "field": "maxHrvBaseline",
+              "data_type": 2,
+              "value": 51
+            },
+            {
+              "dict_id": 700013305,
+              "field": "minHrvBaseline",
+              "data_type": 2,
+              "value": 28
+            },
+            {
+              "dict_id": 700013878,
+              "field": "avgHrv",
+              "data_type": 2,
+              "value": 19
+            },
+            {
+              "dict_id": 700013236,
+              "field": "breathRateDayToBaseline",
+              "data_type": 1,
+              "value": 0
+            },
+            {
+              "dict_id": 700013225,
+              "field": "maxBreathRateBaseline",
+              "data_type": 2,
+              "value": 16
+            },
+            {
+              "dict_id": 700013839,
+              "field": "minBreathRateBaseline",
+              "data_type": 2,
+              "value": 12
+            },
+            {
+              "dict_id": 700013886,
+              "field": "avgBreathRate",
+              "data_type": 2,
+              "value": 17
+            },
+            {
+              "dict_id": 700013718,
+              "field": "oxygenSaturationDayToBaseline",
+              "data_type": 1,
+              "value": 2
+            },
+            {
+              "dict_id": 700013227,
+              "field": "maxOxygenSaturationBaseline",
+              "data_type": 2,
+              "value": 4294967295
+            },
+            {
+              "dict_id": 700013633,
+              "field": "minOxygenSaturationBaseline",
+              "data_type": 2,
+              "value": 4294967295
+            },
+            {
+              "dict_id": 700013468,
+              "field": "avgOxygenSaturation",
+              "data_type": 2,
+              "value": 97
+            },
+            {
+              "dict_id": 700013810,
+              "field": "heartRateDayToBaseline",
+              "data_type": 1,
+              "value": 0
+            },
+            {
+              "dict_id": 700013841,
+              "field": "maxHeartRateBaseline",
+              "data_type": 2,
+              "value": 80
+            },
+            {
+              "dict_id": 700013722,
+              "field": "minHeartRateBaseline",
+              "data_type": 2,
+              "value": 62
+            },
+            {
+              "dict_id": 700013580,
+              "field": "avgHeartRate",
+              "data_type": 2,
+              "value": 84
+            },
+            {
+              "dict_id": 700013973,
+              "field": "risingTime",
+              "data_type": 2,
+              "value": 1778590620
+            },
+            {
+              "dict_id": 700013298,
+              "field": "bedTime",
+              "data_type": 2,
+              "value": 1778577720
+            },
+            {
+              "dict_id": 700013232,
+              "field": "sleepEfficiency",
+              "data_type": 1,
+              "value": 86
+            },
+            {
+              "dict_id": 700013713,
+              "field": "sleepLatency",
+              "data_type": 2,
+              "value": 5
+            },
+            {
+              "dict_id": 700013679,
+              "field": "deepPart",
+              "data_type": 1,
+              "value": 63
+            },
+            {
+              "dict_id": 700013254,
+              "field": "sleepDataQuality",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013721,
+              "field": "snoreFreq",
+              "data_type": 1,
+              "value": 2
+            },
+            {
+              "dict_id": 700013156,
+              "field": "wakeupTime",
+              "data_type": 2,
+              "value": 1778590500
+            },
+            {
+              "dict_id": 700013686,
+              "field": "fallAsleepTime",
+              "data_type": 2,
+              "value": 1778578020
+            },
+            {
+              "dict_id": 700013245,
+              "field": "sleepScore",
+              "data_type": 1,
+              "value": 58
+            }
+          ]
+        },
+        "details": {
+          "stage_minute_count": 215,
+          "stage_counts": {
+            "4": 31,
+            "1": 120,
+            "3": 30,
+            "2": 34
+          },
+          "stages": [
+            {
+              "timestamp": 1778577720,
+              "local": "2026-05-12 14:52:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778577780,
+              "local": "2026-05-12 14:53:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778577840,
+              "local": "2026-05-12 14:54:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778577900,
+              "local": "2026-05-12 14:55:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778577960,
+              "local": "2026-05-12 14:56:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778578020,
+              "local": "2026-05-12 14:57:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778578080,
+              "local": "2026-05-12 14:58:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778578140,
+              "local": "2026-05-12 14:59:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778578200,
+              "local": "2026-05-12 15:00:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778578260,
+              "local": "2026-05-12 15:01:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778578320,
+              "local": "2026-05-12 15:02:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778578380,
+              "local": "2026-05-12 15:03:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778578440,
+              "local": "2026-05-12 15:04:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778578500,
+              "local": "2026-05-12 15:05:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778578560,
+              "local": "2026-05-12 15:06:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778578620,
+              "local": "2026-05-12 15:07:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778578680,
+              "local": "2026-05-12 15:08:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778578740,
+              "local": "2026-05-12 15:09:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778578800,
+              "local": "2026-05-12 15:10:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778578860,
+              "local": "2026-05-12 15:11:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778578920,
+              "local": "2026-05-12 15:12:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778578980,
+              "local": "2026-05-12 15:13:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778579040,
+              "local": "2026-05-12 15:14:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778579100,
+              "local": "2026-05-12 15:15:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778579160,
+              "local": "2026-05-12 15:16:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778579220,
+              "local": "2026-05-12 15:17:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778579280,
+              "local": "2026-05-12 15:18:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778579340,
+              "local": "2026-05-12 15:19:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778579400,
+              "local": "2026-05-12 15:20:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778579460,
+              "local": "2026-05-12 15:21:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778579520,
+              "local": "2026-05-12 15:22:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778579580,
+              "local": "2026-05-12 15:23:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778579640,
+              "local": "2026-05-12 15:24:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778579700,
+              "local": "2026-05-12 15:25:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778579760,
+              "local": "2026-05-12 15:26:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778579820,
+              "local": "2026-05-12 15:27:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778579880,
+              "local": "2026-05-12 15:28:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778579940,
+              "local": "2026-05-12 15:29:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778580000,
+              "local": "2026-05-12 15:30:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778580060,
+              "local": "2026-05-12 15:31:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778580120,
+              "local": "2026-05-12 15:32:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778580180,
+              "local": "2026-05-12 15:33:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778580240,
+              "local": "2026-05-12 15:34:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778580300,
+              "local": "2026-05-12 15:35:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778580360,
+              "local": "2026-05-12 15:36:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778580420,
+              "local": "2026-05-12 15:37:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778580480,
+              "local": "2026-05-12 15:38:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778580540,
+              "local": "2026-05-12 15:39:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778580600,
+              "local": "2026-05-12 15:40:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778580660,
+              "local": "2026-05-12 15:41:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778580720,
+              "local": "2026-05-12 15:42:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778580780,
+              "local": "2026-05-12 15:43:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778580840,
+              "local": "2026-05-12 15:44:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778580900,
+              "local": "2026-05-12 15:45:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778580960,
+              "local": "2026-05-12 15:46:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778581020,
+              "local": "2026-05-12 15:47:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778581080,
+              "local": "2026-05-12 15:48:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778581140,
+              "local": "2026-05-12 15:49:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778581200,
+              "local": "2026-05-12 15:50:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778581260,
+              "local": "2026-05-12 15:51:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778581320,
+              "local": "2026-05-12 15:52:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778581380,
+              "local": "2026-05-12 15:53:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778581440,
+              "local": "2026-05-12 15:54:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778581500,
+              "local": "2026-05-12 15:55:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778581560,
+              "local": "2026-05-12 15:56:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778581620,
+              "local": "2026-05-12 15:57:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778581680,
+              "local": "2026-05-12 15:58:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778581740,
+              "local": "2026-05-12 15:59:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778581800,
+              "local": "2026-05-12 16:00:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778581860,
+              "local": "2026-05-12 16:01:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778581920,
+              "local": "2026-05-12 16:02:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778581980,
+              "local": "2026-05-12 16:03:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778582040,
+              "local": "2026-05-12 16:04:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778582100,
+              "local": "2026-05-12 16:05:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778582160,
+              "local": "2026-05-12 16:06:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778582220,
+              "local": "2026-05-12 16:07:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778582280,
+              "local": "2026-05-12 16:08:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778582340,
+              "local": "2026-05-12 16:09:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778582400,
+              "local": "2026-05-12 16:10:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778582460,
+              "local": "2026-05-12 16:11:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778582520,
+              "local": "2026-05-12 16:12:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778582580,
+              "local": "2026-05-12 16:13:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778582640,
+              "local": "2026-05-12 16:14:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778582700,
+              "local": "2026-05-12 16:15:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778582760,
+              "local": "2026-05-12 16:16:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778582820,
+              "local": "2026-05-12 16:17:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778582880,
+              "local": "2026-05-12 16:18:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778582940,
+              "local": "2026-05-12 16:19:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778583000,
+              "local": "2026-05-12 16:20:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778583060,
+              "local": "2026-05-12 16:21:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778583120,
+              "local": "2026-05-12 16:22:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778583180,
+              "local": "2026-05-12 16:23:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778583240,
+              "local": "2026-05-12 16:24:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778583300,
+              "local": "2026-05-12 16:25:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778583360,
+              "local": "2026-05-12 16:26:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778583420,
+              "local": "2026-05-12 16:27:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778583480,
+              "local": "2026-05-12 16:28:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778583540,
+              "local": "2026-05-12 16:29:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778583600,
+              "local": "2026-05-12 16:30:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778583660,
+              "local": "2026-05-12 16:31:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778583720,
+              "local": "2026-05-12 16:32:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778583780,
+              "local": "2026-05-12 16:33:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778583840,
+              "local": "2026-05-12 16:34:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778583900,
+              "local": "2026-05-12 16:35:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778583960,
+              "local": "2026-05-12 16:36:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778584020,
+              "local": "2026-05-12 16:37:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778584080,
+              "local": "2026-05-12 16:38:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778584140,
+              "local": "2026-05-12 16:39:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778584200,
+              "local": "2026-05-12 16:40:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778584260,
+              "local": "2026-05-12 16:41:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778584320,
+              "local": "2026-05-12 16:42:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778584380,
+              "local": "2026-05-12 16:43:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778584440,
+              "local": "2026-05-12 16:44:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778584500,
+              "local": "2026-05-12 16:45:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778584560,
+              "local": "2026-05-12 16:46:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778584620,
+              "local": "2026-05-12 16:47:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778584680,
+              "local": "2026-05-12 16:48:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778584740,
+              "local": "2026-05-12 16:49:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778584800,
+              "local": "2026-05-12 16:50:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778584860,
+              "local": "2026-05-12 16:51:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778584920,
+              "local": "2026-05-12 16:52:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778584980,
+              "local": "2026-05-12 16:53:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778585040,
+              "local": "2026-05-12 16:54:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778585100,
+              "local": "2026-05-12 16:55:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778585160,
+              "local": "2026-05-12 16:56:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778585220,
+              "local": "2026-05-12 16:57:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778585280,
+              "local": "2026-05-12 16:58:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778585340,
+              "local": "2026-05-12 16:59:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778585400,
+              "local": "2026-05-12 17:00:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778585460,
+              "local": "2026-05-12 17:01:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778585520,
+              "local": "2026-05-12 17:02:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778585580,
+              "local": "2026-05-12 17:03:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778585640,
+              "local": "2026-05-12 17:04:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778585700,
+              "local": "2026-05-12 17:05:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778585760,
+              "local": "2026-05-12 17:06:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778585820,
+              "local": "2026-05-12 17:07:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778585880,
+              "local": "2026-05-12 17:08:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778585940,
+              "local": "2026-05-12 17:09:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778586000,
+              "local": "2026-05-12 17:10:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778586060,
+              "local": "2026-05-12 17:11:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778586120,
+              "local": "2026-05-12 17:12:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778586180,
+              "local": "2026-05-12 17:13:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778586240,
+              "local": "2026-05-12 17:14:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778586300,
+              "local": "2026-05-12 17:15:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778586360,
+              "local": "2026-05-12 17:16:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778586420,
+              "local": "2026-05-12 17:17:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778586480,
+              "local": "2026-05-12 17:18:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778586540,
+              "local": "2026-05-12 17:19:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778586600,
+              "local": "2026-05-12 17:20:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778586660,
+              "local": "2026-05-12 17:21:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778586720,
+              "local": "2026-05-12 17:22:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778586780,
+              "local": "2026-05-12 17:23:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778586840,
+              "local": "2026-05-12 17:24:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778586900,
+              "local": "2026-05-12 17:25:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778586960,
+              "local": "2026-05-12 17:26:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778587020,
+              "local": "2026-05-12 17:27:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778587080,
+              "local": "2026-05-12 17:28:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778587140,
+              "local": "2026-05-12 17:29:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778587200,
+              "local": "2026-05-12 17:30:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778587260,
+              "local": "2026-05-12 17:31:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778587320,
+              "local": "2026-05-12 17:32:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778587380,
+              "local": "2026-05-12 17:33:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778587440,
+              "local": "2026-05-12 17:34:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778587500,
+              "local": "2026-05-12 17:35:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778587560,
+              "local": "2026-05-12 17:36:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778587620,
+              "local": "2026-05-12 17:37:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778587680,
+              "local": "2026-05-12 17:38:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778587740,
+              "local": "2026-05-12 17:39:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778587800,
+              "local": "2026-05-12 17:40:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778587860,
+              "local": "2026-05-12 17:41:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778587920,
+              "local": "2026-05-12 17:42:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778587980,
+              "local": "2026-05-12 17:43:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778588040,
+              "local": "2026-05-12 17:44:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778588100,
+              "local": "2026-05-12 17:45:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778588160,
+              "local": "2026-05-12 17:46:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778588220,
+              "local": "2026-05-12 17:47:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778588280,
+              "local": "2026-05-12 17:48:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778588340,
+              "local": "2026-05-12 17:49:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778588400,
+              "local": "2026-05-12 17:50:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778588460,
+              "local": "2026-05-12 17:51:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778588520,
+              "local": "2026-05-12 17:52:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778588580,
+              "local": "2026-05-12 17:53:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778588640,
+              "local": "2026-05-12 17:54:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778588700,
+              "local": "2026-05-12 17:55:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778588760,
+              "local": "2026-05-12 17:56:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778588820,
+              "local": "2026-05-12 17:57:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778588880,
+              "local": "2026-05-12 17:58:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778588940,
+              "local": "2026-05-12 17:59:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778589000,
+              "local": "2026-05-12 18:00:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778589060,
+              "local": "2026-05-12 18:01:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778589120,
+              "local": "2026-05-12 18:02:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778589180,
+              "local": "2026-05-12 18:03:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778589240,
+              "local": "2026-05-12 18:04:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778589300,
+              "local": "2026-05-12 18:05:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778589360,
+              "local": "2026-05-12 18:06:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778589420,
+              "local": "2026-05-12 18:07:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778589480,
+              "local": "2026-05-12 18:08:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778589540,
+              "local": "2026-05-12 18:09:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778589600,
+              "local": "2026-05-12 18:10:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778589660,
+              "local": "2026-05-12 18:11:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778589720,
+              "local": "2026-05-12 18:12:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778589780,
+              "local": "2026-05-12 18:13:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778589840,
+              "local": "2026-05-12 18:14:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778589900,
+              "local": "2026-05-12 18:15:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778589960,
+              "local": "2026-05-12 18:16:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778590020,
+              "local": "2026-05-12 18:17:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778590080,
+              "local": "2026-05-12 18:18:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778590140,
+              "local": "2026-05-12 18:19:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778590200,
+              "local": "2026-05-12 18:20:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778590260,
+              "local": "2026-05-12 18:21:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778590320,
+              "local": "2026-05-12 18:22:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778590380,
+              "local": "2026-05-12 18:23:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778590440,
+              "local": "2026-05-12 18:24:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778590500,
+              "local": "2026-05-12 18:25:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778590560,
+              "local": "2026-05-12 18:26:00",
+              "stage": 4
+            }
+          ],
+          "stage_window_start": "2026-05-12 14:52:00",
+          "stage_window_end": "2026-05-12 18:26:00",
+          "errors": []
+        }
+      },
+      {
+        "start_ts": 1778631600,
+        "end_ts": 1778648280,
+        "start_local": "2026-05-13 05:50:00",
+        "end_local": "2026-05-13 10:28:00",
+        "data_version": 1,
+        "summary_type": 2,
+        "summary_len": 434,
+        "detail_len": 152,
+        "extra": "00000000000000000000000000000000",
+        "summary": {
+          "validData": 1063075458,
+          "hrvDayToBaseline": 0,
+          "maxHrvBaseline": 51,
+          "minHrvBaseline": 28,
+          "avgHrv": 48,
+          "breathRateDayToBaseline": 0,
+          "maxBreathRateBaseline": 16,
+          "minBreathRateBaseline": 12,
+          "avgBreathRate": 14,
+          "oxygenSaturationDayToBaseline": 1,
+          "maxOxygenSaturationBaseline": 4294967295,
+          "minOxygenSaturationBaseline": 4294967295,
+          "avgOxygenSaturation": 98,
+          "heartRateDayToBaseline": 0,
+          "maxHeartRateBaseline": 80,
+          "minHeartRateBaseline": 62,
+          "avgHeartRate": 70,
+          "risingTime": 1778648460,
+          "bedTime": 1778630520,
+          "sleepEfficiency": 92,
+          "sleepLatency": 18,
+          "deepPart": 80,
+          "sleepDataQuality": 0,
+          "snoreFreq": 1,
+          "wakeupTime": 1778648280,
+          "fallAsleepTime": 1778631600,
+          "sleepScore": 70,
+          "_raw_fields": [
+            {
+              "dict_id": 700013786,
+              "field": "validData",
+              "data_type": 2,
+              "value": 1063075458
+            },
+            {
+              "dict_id": 700013824,
+              "field": "hrvDayToBaseline",
+              "data_type": 1,
+              "value": 0
+            },
+            {
+              "dict_id": 700013355,
+              "field": "maxHrvBaseline",
+              "data_type": 2,
+              "value": 51
+            },
+            {
+              "dict_id": 700013305,
+              "field": "minHrvBaseline",
+              "data_type": 2,
+              "value": 28
+            },
+            {
+              "dict_id": 700013878,
+              "field": "avgHrv",
+              "data_type": 2,
+              "value": 48
+            },
+            {
+              "dict_id": 700013236,
+              "field": "breathRateDayToBaseline",
+              "data_type": 1,
+              "value": 0
+            },
+            {
+              "dict_id": 700013225,
+              "field": "maxBreathRateBaseline",
+              "data_type": 2,
+              "value": 16
+            },
+            {
+              "dict_id": 700013839,
+              "field": "minBreathRateBaseline",
+              "data_type": 2,
+              "value": 12
+            },
+            {
+              "dict_id": 700013886,
+              "field": "avgBreathRate",
+              "data_type": 2,
+              "value": 14
+            },
+            {
+              "dict_id": 700013718,
+              "field": "oxygenSaturationDayToBaseline",
+              "data_type": 1,
+              "value": 1
+            },
+            {
+              "dict_id": 700013227,
+              "field": "maxOxygenSaturationBaseline",
+              "data_type": 2,
+              "value": 4294967295
+            },
+            {
+              "dict_id": 700013633,
+              "field": "minOxygenSaturationBaseline",
+              "data_type": 2,
+              "value": 4294967295
+            },
+            {
+              "dict_id": 700013468,
+              "field": "avgOxygenSaturation",
+              "data_type": 2,
+              "value": 98
+            },
+            {
+              "dict_id": 700013810,
+              "field": "heartRateDayToBaseline",
+              "data_type": 1,
+              "value": 0
+            },
+            {
+              "dict_id": 700013841,
+              "field": "maxHeartRateBaseline",
+              "data_type": 2,
+              "value": 80
+            },
+            {
+              "dict_id": 700013722,
+              "field": "minHeartRateBaseline",
+              "data_type": 2,
+              "value": 62
+            },
+            {
+              "dict_id": 700013580,
+              "field": "avgHeartRate",
+              "data_type": 2,
+              "value": 70
+            },
+            {
+              "dict_id": 700013973,
+              "field": "risingTime",
+              "data_type": 2,
+              "value": 1778648460
+            },
+            {
+              "dict_id": 700013298,
+              "field": "bedTime",
+              "data_type": 2,
+              "value": 1778630520
+            },
+            {
+              "dict_id": 700013232,
+              "field": "sleepEfficiency",
+              "data_type": 1,
+              "value": 92
+            },
+            {
+              "dict_id": 700013713,
+              "field": "sleepLatency",
+              "data_type": 2,
+              "value": 18
+            },
+            {
+              "dict_id": 700013679,
+              "field": "deepPart",
+              "data_type": 1,
+              "value": 80
+            },
+            {
+              "dict_id": 700013254,
+              "field": "sleepDataQuality",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013721,
+              "field": "snoreFreq",
+              "data_type": 1,
+              "value": 1
+            },
+            {
+              "dict_id": 700013156,
+              "field": "wakeupTime",
+              "data_type": 2,
+              "value": 1778648280
+            },
+            {
+              "dict_id": 700013686,
+              "field": "fallAsleepTime",
+              "data_type": 2,
+              "value": 1778631600
+            },
+            {
+              "dict_id": 700013245,
+              "field": "sleepScore",
+              "data_type": 1,
+              "value": 70
+            }
+          ]
+        },
+        "details": {
+          "stage_minute_count": 299,
+          "stage_counts": {
+            "4": 25,
+            "1": 144,
+            "3": 104,
+            "2": 26
+          },
+          "stages": [
+            {
+              "timestamp": 1778630520,
+              "local": "2026-05-13 05:32:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778630580,
+              "local": "2026-05-13 05:33:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778630640,
+              "local": "2026-05-13 05:34:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778630700,
+              "local": "2026-05-13 05:35:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778630760,
+              "local": "2026-05-13 05:36:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778630820,
+              "local": "2026-05-13 05:37:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778630880,
+              "local": "2026-05-13 05:38:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778630940,
+              "local": "2026-05-13 05:39:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778631000,
+              "local": "2026-05-13 05:40:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778631060,
+              "local": "2026-05-13 05:41:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778631120,
+              "local": "2026-05-13 05:42:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778631180,
+              "local": "2026-05-13 05:43:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778631240,
+              "local": "2026-05-13 05:44:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778631300,
+              "local": "2026-05-13 05:45:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778631360,
+              "local": "2026-05-13 05:46:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778631420,
+              "local": "2026-05-13 05:47:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778631480,
+              "local": "2026-05-13 05:48:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778631540,
+              "local": "2026-05-13 05:49:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778631600,
+              "local": "2026-05-13 05:50:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778631660,
+              "local": "2026-05-13 05:51:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778631720,
+              "local": "2026-05-13 05:52:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778631780,
+              "local": "2026-05-13 05:53:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778631840,
+              "local": "2026-05-13 05:54:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778631900,
+              "local": "2026-05-13 05:55:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778631960,
+              "local": "2026-05-13 05:56:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778632020,
+              "local": "2026-05-13 05:57:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778632080,
+              "local": "2026-05-13 05:58:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778632140,
+              "local": "2026-05-13 05:59:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778632200,
+              "local": "2026-05-13 06:00:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778632260,
+              "local": "2026-05-13 06:01:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778632320,
+              "local": "2026-05-13 06:02:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778632380,
+              "local": "2026-05-13 06:03:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778632440,
+              "local": "2026-05-13 06:04:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778632500,
+              "local": "2026-05-13 06:05:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778632560,
+              "local": "2026-05-13 06:06:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778632620,
+              "local": "2026-05-13 06:07:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778632680,
+              "local": "2026-05-13 06:08:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778632740,
+              "local": "2026-05-13 06:09:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778632800,
+              "local": "2026-05-13 06:10:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778632860,
+              "local": "2026-05-13 06:11:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778632920,
+              "local": "2026-05-13 06:12:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778632980,
+              "local": "2026-05-13 06:13:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778633040,
+              "local": "2026-05-13 06:14:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778633100,
+              "local": "2026-05-13 06:15:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778633160,
+              "local": "2026-05-13 06:16:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778633220,
+              "local": "2026-05-13 06:17:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778633280,
+              "local": "2026-05-13 06:18:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778633340,
+              "local": "2026-05-13 06:19:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778633400,
+              "local": "2026-05-13 06:20:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778633460,
+              "local": "2026-05-13 06:21:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778633520,
+              "local": "2026-05-13 06:22:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778633580,
+              "local": "2026-05-13 06:23:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778633640,
+              "local": "2026-05-13 06:24:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778633700,
+              "local": "2026-05-13 06:25:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778633760,
+              "local": "2026-05-13 06:26:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778633820,
+              "local": "2026-05-13 06:27:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778633880,
+              "local": "2026-05-13 06:28:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778633940,
+              "local": "2026-05-13 06:29:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778634000,
+              "local": "2026-05-13 06:30:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778634060,
+              "local": "2026-05-13 06:31:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778634120,
+              "local": "2026-05-13 06:32:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778634180,
+              "local": "2026-05-13 06:33:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778634240,
+              "local": "2026-05-13 06:34:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778634300,
+              "local": "2026-05-13 06:35:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778634360,
+              "local": "2026-05-13 06:36:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778634420,
+              "local": "2026-05-13 06:37:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778634480,
+              "local": "2026-05-13 06:38:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778634540,
+              "local": "2026-05-13 06:39:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778634600,
+              "local": "2026-05-13 06:40:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778634660,
+              "local": "2026-05-13 06:41:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778634720,
+              "local": "2026-05-13 06:42:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778634780,
+              "local": "2026-05-13 06:43:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778634840,
+              "local": "2026-05-13 06:44:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778634900,
+              "local": "2026-05-13 06:45:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778634960,
+              "local": "2026-05-13 06:46:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778635020,
+              "local": "2026-05-13 06:47:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778635080,
+              "local": "2026-05-13 06:48:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778635140,
+              "local": "2026-05-13 06:49:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778635200,
+              "local": "2026-05-13 06:50:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778635260,
+              "local": "2026-05-13 06:51:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778635320,
+              "local": "2026-05-13 06:52:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778635380,
+              "local": "2026-05-13 06:53:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778635440,
+              "local": "2026-05-13 06:54:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778635500,
+              "local": "2026-05-13 06:55:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778635560,
+              "local": "2026-05-13 06:56:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778635620,
+              "local": "2026-05-13 06:57:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778635680,
+              "local": "2026-05-13 06:58:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778635740,
+              "local": "2026-05-13 06:59:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778635800,
+              "local": "2026-05-13 07:00:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778635860,
+              "local": "2026-05-13 07:01:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778635920,
+              "local": "2026-05-13 07:02:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778635980,
+              "local": "2026-05-13 07:03:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778636040,
+              "local": "2026-05-13 07:04:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778636100,
+              "local": "2026-05-13 07:05:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778636160,
+              "local": "2026-05-13 07:06:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778636220,
+              "local": "2026-05-13 07:07:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778636280,
+              "local": "2026-05-13 07:08:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778636340,
+              "local": "2026-05-13 07:09:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778636400,
+              "local": "2026-05-13 07:10:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778636460,
+              "local": "2026-05-13 07:11:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778636520,
+              "local": "2026-05-13 07:12:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778636580,
+              "local": "2026-05-13 07:13:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778636640,
+              "local": "2026-05-13 07:14:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778636700,
+              "local": "2026-05-13 07:15:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778636760,
+              "local": "2026-05-13 07:16:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778636820,
+              "local": "2026-05-13 07:17:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778636880,
+              "local": "2026-05-13 07:18:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778636940,
+              "local": "2026-05-13 07:19:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778637000,
+              "local": "2026-05-13 07:20:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778637060,
+              "local": "2026-05-13 07:21:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778637120,
+              "local": "2026-05-13 07:22:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778637180,
+              "local": "2026-05-13 07:23:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778637240,
+              "local": "2026-05-13 07:24:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778637300,
+              "local": "2026-05-13 07:25:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778637360,
+              "local": "2026-05-13 07:26:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778637420,
+              "local": "2026-05-13 07:27:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778637480,
+              "local": "2026-05-13 07:28:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778637540,
+              "local": "2026-05-13 07:29:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778637600,
+              "local": "2026-05-13 07:30:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778637660,
+              "local": "2026-05-13 07:31:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778637720,
+              "local": "2026-05-13 07:32:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778637780,
+              "local": "2026-05-13 07:33:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778637840,
+              "local": "2026-05-13 07:34:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778637900,
+              "local": "2026-05-13 07:35:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778637960,
+              "local": "2026-05-13 07:36:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778638020,
+              "local": "2026-05-13 07:37:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778638080,
+              "local": "2026-05-13 07:38:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778638140,
+              "local": "2026-05-13 07:39:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778638200,
+              "local": "2026-05-13 07:40:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778638260,
+              "local": "2026-05-13 07:41:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778638320,
+              "local": "2026-05-13 07:42:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778638380,
+              "local": "2026-05-13 07:43:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778638440,
+              "local": "2026-05-13 07:44:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778638500,
+              "local": "2026-05-13 07:45:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778638560,
+              "local": "2026-05-13 07:46:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778638620,
+              "local": "2026-05-13 07:47:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778638680,
+              "local": "2026-05-13 07:48:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778638740,
+              "local": "2026-05-13 07:49:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778638800,
+              "local": "2026-05-13 07:50:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778638860,
+              "local": "2026-05-13 07:51:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778638920,
+              "local": "2026-05-13 07:52:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778638980,
+              "local": "2026-05-13 07:53:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778639040,
+              "local": "2026-05-13 07:54:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778639100,
+              "local": "2026-05-13 07:55:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778639160,
+              "local": "2026-05-13 07:56:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778639220,
+              "local": "2026-05-13 07:57:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778639280,
+              "local": "2026-05-13 07:58:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778639340,
+              "local": "2026-05-13 07:59:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778639400,
+              "local": "2026-05-13 08:00:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778639460,
+              "local": "2026-05-13 08:01:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778639520,
+              "local": "2026-05-13 08:02:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778639580,
+              "local": "2026-05-13 08:03:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778639640,
+              "local": "2026-05-13 08:04:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778639700,
+              "local": "2026-05-13 08:05:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778639760,
+              "local": "2026-05-13 08:06:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778639820,
+              "local": "2026-05-13 08:07:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778639880,
+              "local": "2026-05-13 08:08:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778639940,
+              "local": "2026-05-13 08:09:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778640000,
+              "local": "2026-05-13 08:10:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778640060,
+              "local": "2026-05-13 08:11:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778640120,
+              "local": "2026-05-13 08:12:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778640180,
+              "local": "2026-05-13 08:13:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778640240,
+              "local": "2026-05-13 08:14:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778640300,
+              "local": "2026-05-13 08:15:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778640360,
+              "local": "2026-05-13 08:16:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778640420,
+              "local": "2026-05-13 08:17:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778640480,
+              "local": "2026-05-13 08:18:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778640540,
+              "local": "2026-05-13 08:19:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778640600,
+              "local": "2026-05-13 08:20:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778640660,
+              "local": "2026-05-13 08:21:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778640720,
+              "local": "2026-05-13 08:22:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778640780,
+              "local": "2026-05-13 08:23:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778640840,
+              "local": "2026-05-13 08:24:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778640900,
+              "local": "2026-05-13 08:25:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778640960,
+              "local": "2026-05-13 08:26:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778641020,
+              "local": "2026-05-13 08:27:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778641080,
+              "local": "2026-05-13 08:28:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778641140,
+              "local": "2026-05-13 08:29:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778641200,
+              "local": "2026-05-13 08:30:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778641260,
+              "local": "2026-05-13 08:31:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778641320,
+              "local": "2026-05-13 08:32:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778641380,
+              "local": "2026-05-13 08:33:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778641440,
+              "local": "2026-05-13 08:34:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778641500,
+              "local": "2026-05-13 08:35:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778641560,
+              "local": "2026-05-13 08:36:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778641620,
+              "local": "2026-05-13 08:37:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778641680,
+              "local": "2026-05-13 08:38:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778641740,
+              "local": "2026-05-13 08:39:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778641800,
+              "local": "2026-05-13 08:40:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778641860,
+              "local": "2026-05-13 08:41:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778641920,
+              "local": "2026-05-13 08:42:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778641980,
+              "local": "2026-05-13 08:43:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778642040,
+              "local": "2026-05-13 08:44:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778642100,
+              "local": "2026-05-13 08:45:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778642160,
+              "local": "2026-05-13 08:46:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778642220,
+              "local": "2026-05-13 08:47:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778642280,
+              "local": "2026-05-13 08:48:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778642340,
+              "local": "2026-05-13 08:49:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778642400,
+              "local": "2026-05-13 08:50:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778642460,
+              "local": "2026-05-13 08:51:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778642520,
+              "local": "2026-05-13 08:52:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778642580,
+              "local": "2026-05-13 08:53:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778642640,
+              "local": "2026-05-13 08:54:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778642700,
+              "local": "2026-05-13 08:55:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778642760,
+              "local": "2026-05-13 08:56:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778642820,
+              "local": "2026-05-13 08:57:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778642880,
+              "local": "2026-05-13 08:58:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778642940,
+              "local": "2026-05-13 08:59:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778643000,
+              "local": "2026-05-13 09:00:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778643060,
+              "local": "2026-05-13 09:01:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778643120,
+              "local": "2026-05-13 09:02:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778643180,
+              "local": "2026-05-13 09:03:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778643240,
+              "local": "2026-05-13 09:04:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778643300,
+              "local": "2026-05-13 09:05:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778643360,
+              "local": "2026-05-13 09:06:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778643420,
+              "local": "2026-05-13 09:07:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778643480,
+              "local": "2026-05-13 09:08:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778643540,
+              "local": "2026-05-13 09:09:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778643600,
+              "local": "2026-05-13 09:10:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778643660,
+              "local": "2026-05-13 09:11:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778643720,
+              "local": "2026-05-13 09:12:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778643780,
+              "local": "2026-05-13 09:13:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778643840,
+              "local": "2026-05-13 09:14:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778643900,
+              "local": "2026-05-13 09:15:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778643960,
+              "local": "2026-05-13 09:16:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778644020,
+              "local": "2026-05-13 09:17:00",
+              "stage": 3
+            },
+            {
+              "timestamp": 1778644080,
+              "local": "2026-05-13 09:18:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778644140,
+              "local": "2026-05-13 09:19:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778644200,
+              "local": "2026-05-13 09:20:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778644260,
+              "local": "2026-05-13 09:21:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778644320,
+              "local": "2026-05-13 09:22:00",
+              "stage": 2
+            },
+            {
+              "timestamp": 1778644380,
+              "local": "2026-05-13 09:23:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778644440,
+              "local": "2026-05-13 09:24:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778644500,
+              "local": "2026-05-13 09:25:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778644560,
+              "local": "2026-05-13 09:26:00",
+              "stage": 4
+            },
+            {
+              "timestamp": 1778644620,
+              "local": "2026-05-13 09:27:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778644680,
+              "local": "2026-05-13 09:28:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778644740,
+              "local": "2026-05-13 09:29:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778644800,
+              "local": "2026-05-13 09:30:00",
+              "stage": 1
+            },
+            {
+              "timestamp": 1778644860,
+              "local": "2026-05-13 09:31:00",
+              "stage": 1
+            }
+          ],
+          "stage_window_start": "2026-05-13 05:32:00",
+          "stage_window_end": "2026-05-13 10:30:00",
+          "errors": []
+        }
+      },
+      {
+        "start_ts": 1778651220,
+        "end_ts": 1778655900,
+        "start_local": "2026-05-13 11:17:00",
+        "end_local": "2026-05-13 12:35:00",
+        "data_version": 1,
+        "summary_type": 2,
+        "summary_len": 434,
+        "detail_len": 8,
+        "extra": "00000000000000000000000000000000",
+        "summary": {
+          "validData": null,
+          "hrvDayToBaseline": 0,
+          "maxHrvBaseline": 0,
+          "minHrvBaseline": 0,
+          "avgHrv": 0,
+          "breathRateDayToBaseline": 0,
+          "maxBreathRateBaseline": 0,
+          "minBreathRateBaseline": 0,
+          "avgBreathRate": 0,
+          "oxygenSaturationDayToBaseline": 0,
+          "maxOxygenSaturationBaseline": 0,
+          "minOxygenSaturationBaseline": 0,
+          "avgOxygenSaturation": 0,
+          "heartRateDayToBaseline": 0,
+          "maxHeartRateBaseline": 0,
+          "minHeartRateBaseline": 0,
+          "avgHeartRate": 0,
+          "risingTime": 0,
+          "bedTime": 0,
+          "sleepEfficiency": 255,
+          "sleepLatency": 1092,
+          "deepPart": 255,
+          "sleepDataQuality": 0,
+          "snoreFreq": 255,
+          "wakeupTime": 1778655900,
+          "fallAsleepTime": 1778651220,
+          "sleepScore": 0,
+          "_raw_fields": [
+            {
+              "dict_id": 700013786,
+              "field": "validData",
+              "data_type": 2,
+              "value": null
+            },
+            {
+              "dict_id": 700013824,
+              "field": "hrvDayToBaseline",
+              "data_type": 1,
+              "value": 0
+            },
+            {
+              "dict_id": 700013355,
+              "field": "maxHrvBaseline",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013305,
+              "field": "minHrvBaseline",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013878,
+              "field": "avgHrv",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013236,
+              "field": "breathRateDayToBaseline",
+              "data_type": 1,
+              "value": 0
+            },
+            {
+              "dict_id": 700013225,
+              "field": "maxBreathRateBaseline",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013839,
+              "field": "minBreathRateBaseline",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013886,
+              "field": "avgBreathRate",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013718,
+              "field": "oxygenSaturationDayToBaseline",
+              "data_type": 1,
+              "value": 0
+            },
+            {
+              "dict_id": 700013227,
+              "field": "maxOxygenSaturationBaseline",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013633,
+              "field": "minOxygenSaturationBaseline",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013468,
+              "field": "avgOxygenSaturation",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013810,
+              "field": "heartRateDayToBaseline",
+              "data_type": 1,
+              "value": 0
+            },
+            {
+              "dict_id": 700013841,
+              "field": "maxHeartRateBaseline",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013722,
+              "field": "minHeartRateBaseline",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013580,
+              "field": "avgHeartRate",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013973,
+              "field": "risingTime",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013298,
+              "field": "bedTime",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013232,
+              "field": "sleepEfficiency",
+              "data_type": 1,
+              "value": 255
+            },
+            {
+              "dict_id": 700013713,
+              "field": "sleepLatency",
+              "data_type": 2,
+              "value": 1092
+            },
+            {
+              "dict_id": 700013679,
+              "field": "deepPart",
+              "data_type": 1,
+              "value": 255
+            },
+            {
+              "dict_id": 700013254,
+              "field": "sleepDataQuality",
+              "data_type": 2,
+              "value": 0
+            },
+            {
+              "dict_id": 700013721,
+              "field": "snoreFreq",
+              "data_type": 1,
+              "value": 255
+            },
+            {
+              "dict_id": 700013156,
+              "field": "wakeupTime",
+              "data_type": 2,
+              "value": 1778655900
+            },
+            {
+              "dict_id": 700013686,
+              "field": "fallAsleepTime",
+              "data_type": 2,
+              "value": 1778651220
+            },
+            {
+              "dict_id": 700013245,
+              "field": "sleepScore",
+              "data_type": 1,
+              "value": 0
+            }
+          ],
+          "prepareSleepTime": null
+        },
+        "details": {
+          "stage_minute_count": 78,
+          "stage_counts": {
+            "5": 78
+          },
+          "stages": [
+            {
+              "timestamp": 1778651220,
+              "local": "2026-05-13 11:17:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778651280,
+              "local": "2026-05-13 11:18:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778651340,
+              "local": "2026-05-13 11:19:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778651400,
+              "local": "2026-05-13 11:20:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778651460,
+              "local": "2026-05-13 11:21:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778651520,
+              "local": "2026-05-13 11:22:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778651580,
+              "local": "2026-05-13 11:23:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778651640,
+              "local": "2026-05-13 11:24:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778651700,
+              "local": "2026-05-13 11:25:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778651760,
+              "local": "2026-05-13 11:26:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778651820,
+              "local": "2026-05-13 11:27:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778651880,
+              "local": "2026-05-13 11:28:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778651940,
+              "local": "2026-05-13 11:29:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778652000,
+              "local": "2026-05-13 11:30:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778652060,
+              "local": "2026-05-13 11:31:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778652120,
+              "local": "2026-05-13 11:32:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778652180,
+              "local": "2026-05-13 11:33:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778652240,
+              "local": "2026-05-13 11:34:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778652300,
+              "local": "2026-05-13 11:35:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778652360,
+              "local": "2026-05-13 11:36:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778652420,
+              "local": "2026-05-13 11:37:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778652480,
+              "local": "2026-05-13 11:38:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778652540,
+              "local": "2026-05-13 11:39:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778652600,
+              "local": "2026-05-13 11:40:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778652660,
+              "local": "2026-05-13 11:41:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778652720,
+              "local": "2026-05-13 11:42:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778652780,
+              "local": "2026-05-13 11:43:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778652840,
+              "local": "2026-05-13 11:44:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778652900,
+              "local": "2026-05-13 11:45:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778652960,
+              "local": "2026-05-13 11:46:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778653020,
+              "local": "2026-05-13 11:47:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778653080,
+              "local": "2026-05-13 11:48:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778653140,
+              "local": "2026-05-13 11:49:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778653200,
+              "local": "2026-05-13 11:50:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778653260,
+              "local": "2026-05-13 11:51:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778653320,
+              "local": "2026-05-13 11:52:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778653380,
+              "local": "2026-05-13 11:53:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778653440,
+              "local": "2026-05-13 11:54:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778653500,
+              "local": "2026-05-13 11:55:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778653560,
+              "local": "2026-05-13 11:56:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778653620,
+              "local": "2026-05-13 11:57:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778653680,
+              "local": "2026-05-13 11:58:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778653740,
+              "local": "2026-05-13 11:59:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778653800,
+              "local": "2026-05-13 12:00:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778653860,
+              "local": "2026-05-13 12:01:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778653920,
+              "local": "2026-05-13 12:02:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778653980,
+              "local": "2026-05-13 12:03:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778654040,
+              "local": "2026-05-13 12:04:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778654100,
+              "local": "2026-05-13 12:05:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778654160,
+              "local": "2026-05-13 12:06:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778654220,
+              "local": "2026-05-13 12:07:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778654280,
+              "local": "2026-05-13 12:08:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778654340,
+              "local": "2026-05-13 12:09:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778654400,
+              "local": "2026-05-13 12:10:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778654460,
+              "local": "2026-05-13 12:11:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778654520,
+              "local": "2026-05-13 12:12:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778654580,
+              "local": "2026-05-13 12:13:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778654640,
+              "local": "2026-05-13 12:14:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778654700,
+              "local": "2026-05-13 12:15:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778654760,
+              "local": "2026-05-13 12:16:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778654820,
+              "local": "2026-05-13 12:17:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778654880,
+              "local": "2026-05-13 12:18:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778654940,
+              "local": "2026-05-13 12:19:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778655000,
+              "local": "2026-05-13 12:20:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778655060,
+              "local": "2026-05-13 12:21:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778655120,
+              "local": "2026-05-13 12:22:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778655180,
+              "local": "2026-05-13 12:23:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778655240,
+              "local": "2026-05-13 12:24:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778655300,
+              "local": "2026-05-13 12:25:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778655360,
+              "local": "2026-05-13 12:26:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778655420,
+              "local": "2026-05-13 12:27:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778655480,
+              "local": "2026-05-13 12:28:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778655540,
+              "local": "2026-05-13 12:29:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778655600,
+              "local": "2026-05-13 12:30:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778655660,
+              "local": "2026-05-13 12:31:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778655720,
+              "local": "2026-05-13 12:32:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778655780,
+              "local": "2026-05-13 12:33:00",
+              "stage": 5
+            },
+            {
+              "timestamp": 1778655840,
+              "local": "2026-05-13 12:34:00",
+              "stage": 5
+            }
+          ],
+          "stage_window_start": "2026-05-13 11:17:00",
+          "stage_window_end": "2026-05-13 12:34:00",
+          "errors": []
+        }
+      }
     ],
-    "hours": 168,
+    "errors": [],
+    "hours": 48,
     "route": "sequence_data/SLEEP_DETAILS"
   }
 }

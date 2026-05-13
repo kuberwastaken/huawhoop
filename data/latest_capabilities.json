@@ -193,6 +193,7 @@
     "three_circle": true,
     "three_circle_lite": true,
     "send_site_id": true,
+    "diff_account_pairing_optimization": false,
     "device_command_dict_data": true,
     "reverse_capabilities": true,
     "external_calendar": false,

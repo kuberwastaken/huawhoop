@@ -1,0 +1,17 @@
+{
+  "trusleep": {
+    "status": "ok",
+    "tlvs": {
+      "0x7f": "000186a0"
+    }
+  },
+  "automatic_heart_rate": {
+    "status": "sent"
+  },
+  "automatic_spo2": {
+    "status": "sent"
+  },
+  "sleep_breath": {
+    "status": "unsupported"
+  }
+}

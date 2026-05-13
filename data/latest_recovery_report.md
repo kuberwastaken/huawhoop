@@ -1,16 +1,16 @@
 # Huawei Band 10 Recovery
 
-Generated: 2026-05-13 01:55:58
+Generated: 2026-05-13 16:41:31
 
-- Recovery proxy: 40 / 100
-- Strain: 14.2 / 21
-- Sleep score: 33 / 100
-- Steps: 6058
-- Sleep: 160 min
-- HR: 56 / 96.4 / 164 bpm
-- SpO2: 94 / 96.9 / 99 %
+- Recovery proxy: 33 / 100
+- Strain: 7.0 / 21
+- Sleep score: 16 / 100
+- Steps: 1778
+- Sleep: 75 min
+- HR: 56 / 85.4 / 110 bpm
+- SpO2: 94 / 97.5 / 99 %
 
-Step window: 2026-05-12 01:48:00 to 2026-05-13 01:54:00
-Sleep window: 2026-05-11 20:47:00 to 2026-05-13 01:51:00
+Step window: 2026-05-12 16:32:00 to 2026-05-13 16:40:00
+Sleep window: 2026-05-12 14:01:00 to 2026-05-13 16:06:00
 
 Note: recovery is a proxy until HRV is available from this firmware.

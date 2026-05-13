@@ -1,0 +1,91 @@
+2026-05-13 17:18:04,953 [INFO] band10: Saved data\connection_status.json
+2026-05-13 17:18:04,955 [INFO] band10: Appended data\connection_history.jsonl
+2026-05-13 17:18:08,992 [INFO] band10: Subscribed to notifications.
+2026-05-13 17:18:08,992 [INFO] band10: Step 1: Link params...
+2026-05-13 17:18:09,036 [INFO] band10:   auth_version=1 dev_support=4 auth_algo=0 bond_state=2 enc_method=0 slice_size=244
+2026-05-13 17:18:09,036 [INFO] band10:   serverNonce=ecea1ad3960bee184d9f211c9e885320
+2026-05-13 17:18:09,036 [INFO] band10: Step 2: Security negotiation...
+2026-05-13 17:18:09,127 [INFO] band10:   bandDeviceId=12f085c136868ed85519afafb4e21f271efa362b3638dcd50ea04ee1c9fec1df
+2026-05-13 17:18:09,127 [INFO] band10:   bandMac=88:8E:68:A2:E4:4F
+2026-05-13 17:18:09,127 [INFO] band10:   authType=0x6
+2026-05-13 17:18:09,127 [INFO] band10:   Mode: HiChain3
+2026-05-13 17:18:09,127 [INFO] band10:   Stored auth key found \u2192 reconnect (op=0x02)
+2026-05-13 17:18:09,128 [INFO] band10: Step 4: HiChain3 auth (op=0x2)...
+2026-05-13 17:18:09,128 [INFO] band10:   HiChain step 1...
+2026-05-13 17:18:10,630 [INFO] band10:   Peer token verified OK.
+2026-05-13 17:18:10,630 [INFO] band10:   HiChain step 2...
+2026-05-13 17:18:10,895 [INFO] band10:   returnCodeMac verified OK.
+2026-05-13 17:18:10,897 [INFO] band10:   Step 3 skipped (reconnect mode).
+2026-05-13 17:18:10,899 [INFO] band10:   HiChain step 4...
+2026-05-13 17:18:11,133 [INFO] band10:   HiChain complete (final step=4).
+2026-05-13 17:18:11,134 [INFO] band10: Saved HiChain transaction key to band.ini.
+2026-05-13 17:18:11,134 [INFO] band10:   Session transaction key stored: f3c494ba60ba77d973e61edd5e45ca6581fba7160e3e7506b47434769e433672
+2026-05-13 17:18:11,135 [INFO] band10: Handshake complete!
+2026-05-13 17:18:11,135 [INFO] band10: Post-auth init: starting Huawei connected-state bootstrap...
+2026-05-13 17:18:11,231 [INFO] band10: Product info: {'software': '5.0.0.157(SP2C00M04)', 'serial': '4PRTQ25719000451', 'model': 'Nora-B29FB', 'name': 'NOR-B29'}
+2026-05-13 17:18:11,231 [INFO] band10: Post-auth init: product info OK
+2026-05-13 17:18:11,346 [INFO] band10: Time sync: phone=1778672891 band=1778672891 delta=0s
+2026-05-13 17:18:11,346 [INFO] band10: Post-auth init: time sync OK
+2026-05-13 17:18:11,466 [INFO] band10: Post-auth init: battery OK
+2026-05-13 17:18:11,466 [INFO] band10: Battery level: 84%
+2026-05-13 17:18:11,586 [INFO] band10: Supported services: 26 active -> ['0x1', '0x2', '0x4', '0x7', '0x8', '0x9', '0xa', '0xb', '0xc', '0xf', '0x14', '0x16', '0x17', '0x18', '0x19', '0x1a', '0x1b', '0x20', '0x25', '0x27', '0x2b', '0x2e', '0x30', '0x32', '0x34', '0x35']
+2026-05-13 17:18:11,586 [INFO] band10: Post-auth init: supported services OK
+2026-05-13 17:18:14,707 [INFO] band10: Supported commands: {'0x1': ['0x4', '0x7', '0x8', '0x9', '0xd', '0xe', '0x11', '0x13', '0x1d', '0x21', '0x29', '0x2a', '0x2b', '0x31', '0x30', '0x35', '0x37'], '0x2': ['0x1', '0x4', '0x5', '0x6', '0x8'], '0x4': ['0x1'], '0x7': ['0x1', '0x3', '0x7', '0x9', '0xa', '0xe', '0x13', '0x16', '0x17', '0x18', '0x1d', '0x1e', '0x21', '0x22', '0x23', '0x24', '0x25', '0x28', '0x29', '0x6', '0x1f'], '0x8': ['0x1', '0x3'], '0x9': ['0x1', '0xc', '0xd', '0xe', '0xf'], '0xa': ['0x1', '0x9', '0xa'], '0xb': ['0x1', '0x3'], '0xc': ['0x1'], '0xf': ['0x1', '0x3', '0x5', '0x6', '0x7', '0x8', '0xa', '0xb', '0xc'], '0x14': [], '0x16': ['0x1', '0x3'], '0x17': ['0x1', '0x4', '0x6', '0x7', '0xb', '0xc', '0x12', '0x15', '0x17'], '0x18': ['0x1', '0x2', '0x4', '0x5', '0x6', '0x9'], '0x19': ['0x1'], '0x1a': ['0x1', '0x3', '0x5', '0x6'], '0x1b': ['0x1a'], '0x20': ['0x9'], '0x25': ['0x2', '0xe'], '0x27': ['0x1', '0xe'], '0x2b': ['0x12'], '0x2e': ['0x1', '0x3'], '0x30': ['0x1'], '0x32': ['0x1'], '0x34': ['0x1'], '0x35': ['0x3', '0x4']}
+2026-05-13 17:18:14,707 [INFO] band10: Post-auth init: supported commands OK
+2026-05-13 17:18:14,829 [INFO] band10: Saved data\latest_capabilities.json
+2026-05-13 17:18:14,829 [INFO] band10: Expand capabilities: {'p2p_get_app_version': False, 'send_country_code': True, 'track_p2p': True, 'multi_device': True, 'sleep_apnea': True, 'dict_sleep_sync': True, 'three_circle': True, 'three_circle_lite': True, 'send_site_id': True, 'diff_account_pairing_optimization': False, 'device_command_dict_data': True, 'reverse_capabilities': True, 'external_calendar': False, 'bed_time': True, 'emotion': True, 'hrv': False, 'notification_picture': False, 'contacts_sync': False}
+2026-05-13 17:18:14,829 [INFO] band10: Post-auth init: expand capabilities OK
+2026-05-13 17:18:14,946 [INFO] band10: Post-auth init: extended account OK
+2026-05-13 17:18:15,067 [INFO] band10:   DataSync cmd=0x2 src='in.huawei.motion' dst='hw.sport.threecircle' plain=0110696e2e6875617765692e6d6f74696f6e021468772e73706f72742e7468726565636972636c6503042fb215410401000508fe64046a03000000
+2026-05-13 17:18:15,068 [INFO] band10: Setting related: {'raw': {'0x1': '0f', '0x2': '0e', '0x3': '03'}, 'file_flags': 14, 'trusleep_new_sync': True, 'rri_new_sync': True, 'gps_new_sync': True}
+2026-05-13 17:18:15,068 [INFO] band10: Post-auth init: setting related OK
+2026-05-13 17:18:15,330 [INFO] band10:   PhoneInfo requested tags=0204080f101113141516 -> replying
+2026-05-13 17:18:15,426 [INFO] band10: Post-auth init: accept agreements OK
+2026-05-13 17:18:15,550 [INFO] band10: Post-auth init: reverse capabilities OK
+2026-05-13 17:18:15,767 [INFO] band10: Setup device status sent
+2026-05-13 17:18:15,768 [INFO] band10: Post-auth init: setup device status OK
+2026-05-13 17:18:15,848 [INFO] band10:   PhoneInfo requested tags=0204080f101113141516 -> replying
+2026-05-13 17:18:15,966 [INFO] band10: Post-auth init: wear status OK
+2026-05-13 17:18:15,966 [INFO] band10: Wear status TLVs: {'0x1': '02'}
+2026-05-13 17:18:16,087 [INFO] band10: Post-auth init: connect status OK
+2026-05-13 17:18:16,087 [INFO] band10: Connect status TLVs: {'0x7f': '000186a0'}
+2026-05-13 17:18:16,087 [INFO] band10: Post-auth init: feature config upload OK
+2026-05-13 17:18:16,087 [INFO] band10: Post-auth init: skipping country code because 0x1a/0x0a is not advertised
+2026-05-13 17:18:16,087 [INFO] band10: Post-auth init: complete
+2026-05-13 17:18:16,206 [INFO] band10:   DataSync cmd=0x1 src='featureManager' dst='hw.unitedevice.configManager' plain=010e666561747572654d616e61676572021c68772e756e6974656465766963652e636f6e6669674d616e6167657283678465050435a66fa7060102075a7b22636f6e6669674e616d65223a22636f6d2e6875617765692e6865616c74685f646576696365466561747572655f636f6e666967222c2266696c6544617461223a5b5d2c2266696c746572436f6e646974696f6e223a5b5d7d
+2026-05-13 17:18:16,206 [INFO] band10:   DataSync config items=[{'config_id': 900100007, 'action': 2, 'data': b'{"configName":"com.huawei.health_deviceFeature_config","fileData":[],"filterCondition":[]}'}]
+2026-05-13 17:18:16,206 [INFO] band10:   DataSync FeatureManager request -> replying with feature config ACK
+2026-05-13 17:18:16,266 [INFO] band10:   PhoneInfo requested tags=0204080f101113141516 -> replying
+2026-05-13 17:18:16,386 [INFO] band10:   DataSync cmd=0x4 src='hw.device.emotion' dst='hw.unitedevice.emotion' plain=011168772e6465766963652e656d6f74696f6e021668772e756e6974656465766963652e656d6f74696f6e03040007a13f06080000019e204eca1807080000019e212a8418080800000000000000000e0400000014
+2026-05-13 17:18:16,387 [INFO] band10:   DataSync cmd=0x2 src='hw.watch.dst.sync' dst='hw.unitedevice.dstsync' plain=011168772e77617463682e6473742e73796e63021668772e756e6974656465766963652e64737473796e6303042fb08eb40401000500
+2026-05-13 17:18:17,014 [INFO] band10: Saved data\latest_passive_health_settings.json
+2026-05-13 17:18:17,014 [INFO] band10: Passive health settings: {'trusleep': {'status': 'ok', 'tlvs': {'0x7f': '000186a0'}}, 'automatic_heart_rate': {'status': 'sent'}, 'automatic_spo2': {'status': 'sent'}, 'sleep_breath': {'status': 'unsupported'}}
+2026-05-13 17:18:17,015 [INFO] band10: Saved data\connection_status.json
+2026-05-13 17:18:17,018 [INFO] band10: Appended data\connection_history.jsonl
+2026-05-13 17:18:17,107 [INFO] band10:   DataSync cmd=0x1 src='hw.thirdPayment' dst='hw.unitedevice.configManager' plain=010f68772e74686972645061796d656e74021c68772e756e6974656465766963652e636f6e6669674d616e6167657283822a848227050435a66fa706010607821b7b22636f6e6669674e616d65223a22636f6d2e6875617765692e7172636f64655f7061796d656e745f7265736f75726365222c2266696c6544617461223a5b7b2276657273696f6e223a302c2266696c654e616d65223a2251525061796d656e74546f74616c4c69737453616665413335222c2266696c6553697a65223a307d5d2c227265736f7572636554797065223a332c22737263506b674e616d65223a22696e2e6875617765692e7172636f64655061796d656e74222c226175746f44656c657465223a747275652c226e6565644e6f74696365223a66616c73652c2273656c65637452756c656b6579223a227468697264706179222c2273656c65637452756c6576616c7565223a2274686972647061795f6d6375227d
+2026-05-13 17:18:17,107 [INFO] band10:   DataSync config items=[{'config_id': 900100007, 'action': 6, 'data': b'{"configName":"com.huawei.qrcode_payment_resource","fileData":[{"version":0,"fileName":"QRPaymentTotalListSafeA35","fileSize":0}],"resourceType":3,"srcPkgName":"in.huawei.qrcodePayment","autoDelete":true,"needNotice":false,"selectRulekey":"thirdpay","selectRulevalue":"thirdpay_mcu"}'}]
+2026-05-13 17:18:17,107 [INFO] band10.daemon: battery OK
+2026-05-13 17:18:18,129 [INFO] band10.daemon: fitness preview OK
+2026-05-13 17:18:18,131 [INFO] band10: Saved data\latest_fitness_preview.json
+2026-05-13 17:18:18,132 [INFO] band10: Saved data\latest_recovery_summary.json
+2026-05-13 17:18:18,134 [INFO] band10: Appended data\recovery_history.jsonl
+2026-05-13 17:18:18,247 [INFO] band10.daemon: stress/RRI file returned no new file; preserving previous artifact
+2026-05-13 17:18:18,367 [INFO] band10.daemon: trusleep file returned no new file; preserving previous artifact
+2026-05-13 17:18:18,444 [INFO] band10.daemon: insights OK
+2026-05-13 17:18:18,445 [INFO] band10: Saved data\latest_sync_status.json
+2026-05-13 17:18:18,447 [INFO] band10: Saved data\connection_status.json
+2026-05-13 17:18:18,448 [INFO] band10: Appended data\connection_history.jsonl
+2026-05-13 17:18:18,546 [INFO] band10.daemon: battery keepalive OK
+2026-05-13 17:18:18,547 [INFO] band10: Saved data\connection_status.json
+2026-05-13 17:18:18,549 [INFO] band10: Appended data\connection_history.jsonl
+2026-05-13 17:18:38,706 [INFO] band10.daemon: battery keepalive OK
+2026-05-13 17:18:38,707 [INFO] band10: Saved data\connection_status.json
+2026-05-13 17:18:38,708 [INFO] band10: Appended data\connection_history.jsonl
+2026-05-13 17:18:59,047 [INFO] band10.daemon: battery keepalive OK
+2026-05-13 17:18:59,049 [INFO] band10: Saved data\connection_status.json
+2026-05-13 17:18:59,051 [INFO] band10: Appended data\connection_history.jsonl
+2026-05-13 17:19:19,507 [INFO] band10.daemon: battery keepalive OK
+2026-05-13 17:19:19,509 [INFO] band10: Saved data\connection_status.json
+2026-05-13 17:19:19,510 [INFO] band10: Appended data\connection_history.jsonl
+2026-05-13 17:19:24,519 [INFO] band10: Saved data\connection_status.json
+2026-05-13 17:19:24,520 [INFO] band10: Appended data\connection_history.jsonl

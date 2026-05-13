@@ -639,6 +639,13 @@ def _env_enabled(name: str) -> bool:
     return os.getenv(name, "0").strip().lower() in {"1", "true", "yes", "on"}
 
 
+def bleak_client_options() -> dict:
+    options = {"timeout": float(os.getenv("BAND10_CONNECT_TIMEOUT_SECONDS", "30"))}
+    if _env_enabled("BAND10_PAIR_BEFORE_CONNECT"):
+        options["pair"] = True
+    return options
+
+
 def _parse_weather_time(value) -> int | None:
     if not value:
         return None
