@@ -1,4 +1,4 @@
-const CACHE_NAME = "huawhoop-v1";
+const CACHE_NAME = "huawhoop-v3";
 const ASSETS = [
   "./",
   "./index.html",
@@ -38,7 +38,6 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   const url = new URL(event.request.url);
   if (url.pathname.includes("/api/") || event.request.method !== "GET") {
-    event.respondWith(fetch(event.request));
     return;
   }
   event.respondWith(

@@ -198,8 +198,8 @@ function ringSvg({ value, max = 100, size = 78, stroke = 7, color = "var(--teal)
   `;
 }
 
-function ringCard(label, value, max, color, sub, decimals = 0) {
-  return `<article class="ring-card">
+function ringCard(label, value, max, color, sub, decimals = 0, target = "") {
+  return `<article class="ring-card" ${target ? `data-goto="${target}"` : ""}>
     ${ringSvg({ value, max, color, label, sub, decimals })}
   </article>`;
 }
@@ -246,8 +246,11 @@ function current() {
 
 function renderHeader() {
   const data = state.data;
-  const connected = data.connection?.state === "connected";
-  $("#connection-state").textContent = connected ? "Connected" : (data.connection?.state || "Offline");
+  const connectionState = data.connection?.state || "offline";
+  const connected = connectionState === "connected";
+  const stateNode = $("#connection-state");
+  stateNode.textContent = connected ? "Connected" : connectionState.replaceAll("_", " ");
+  stateNode.dataset.state = connectionState;
   const battery = current().battery;
   $("#battery-label").textContent = Number.isFinite(battery) ? `${battery}%` : "--%";
   $("#sync-label").textContent = data.connection?.timestamp_local || data.sync?.ended_at_local || "No sync yet";
@@ -264,9 +267,9 @@ function renderToday() {
   const steps = summary.step_total || data.fitness?.summary?.step_total || 0;
   const hrvText = Number.isFinite(values.hrv) ? `${Math.round(values.hrv)} ms` : "Collecting";
   $("#ring-row").innerHTML = [
-    ringCard("Sleep", values.sleepScore, 100, "var(--orange)", `${Math.round(values.sleepMinutes / 60)}h`, 0),
-    ringCard("Recovery", values.recovery, 100, "var(--teal)", values.recoveryLabel, 0),
-    ringCard("Strain", values.strain, 21, "var(--blue)", `${fmt.format(strain.trimp || 0)} load`, 1)
+    ringCard("Sleep", values.sleepScore, 100, "var(--orange)", `${Math.round(values.sleepMinutes / 60)}h`, 0, "sleep"),
+    ringCard("Recovery", values.recovery, 100, "var(--teal)", values.recoveryLabel, 0, "recovery"),
+    ringCard("Strain", values.strain, 21, "var(--blue)", `${fmt.format(strain.trimp || 0)} load`, 1, "strain")
   ].join("");
   $("#daily-cards").innerHTML = [
     miniCard("S", "Steps", fmt.format(steps), fmt.format(summary.step_window_samples || 0)),
@@ -356,9 +359,9 @@ function renderRecovery() {
     detailRow("V", "Heart Rate Variability", Number.isFinite(values.hrv) ? `${Math.round(values.hrv)} ms` : "--", hrv.source || "sleep sequence"),
     detailRow("R", "Resting Heart Rate", Number.isFinite(values.rhr) ? `${Math.round(values.rhr)} bpm` : "--", `${insights.resting_hr_baseline || "--"} baseline`),
     detailRow("O", "Oxygen Saturation", insights.sleep?.avg_spo2 ? `${insights.sleep.avg_spo2}%` : "--", "overnight"),
-    `<section class="panel zone-bars">
+    `<div class="zone-bars">
       ${Object.entries(components).map(([name, value]) => meter(name.toUpperCase(), number(value), 100)).join("")}
-    </section>`
+    </div>`
   ].join("");
 }
 
@@ -380,12 +383,12 @@ function renderSleep() {
     detailRow("P", "Sleep Performance", `${sleep.performance_score ?? "--"}%`, `${sleep.need_minutes || 480} min need`),
     detailRow("E", "Efficiency", sleep.sleep_efficiency ? `${sleep.sleep_efficiency}%` : "--", `${sleep.sleep_latency_min ?? "--"} min latency`),
     detailRow("B", "Breath Rate", sleep.avg_breath_rate ?? "--", "overnight average"),
-    `<section class="panel zone-bars">
+    `<div class="zone-bars">
       ${Object.entries(stages).map(([stage, value]) => {
         const names = { 1: "Light", 2: "REM", 3: "Deep", 4: "Awake", 5: "Nap" };
         return meter(names[stage] || `Stage ${stage}`, number(value), total, "var(--teal)");
       }).join("") || `<div class="empty">No stages yet</div>`}
-    </section>`
+    </div>`
   ].join("");
 }
 
@@ -456,7 +459,7 @@ function renderRoutes() {
         <strong>${esc(label)}</strong>
         <span>${esc(face.file_name || "")}${version ? ` / ${esc(version)}` : ""}</span>
       </div>
-      <button class="secondary-button compact watchface-activate" type="button"
+      <button class="pill-button secondary compact watchface-activate" type="button"
         data-file-name="${esc(face.file_name || "")}" data-version="${esc(version)}" ${disabled}>
         ${face.current ? "Current" : "Activate"}
       </button>
@@ -484,6 +487,8 @@ function renderWeather() {
       <span>${day.label}</span>
       <strong>${Math.round(day.high_temp_c)}°/${Math.round(day.low_temp_c)}°</strong>
     </div>`).join("");
+  } else {
+    $("#forecast-strip").innerHTML = `<div class="empty">Fetch weather before pushing to the band</div>`;
   }
   const lastWeather = (state.data.lastCommands || []).filter((cmd) => cmd.type === "weather").at(-1);
   $("#weather-status").innerHTML = [
@@ -504,7 +509,7 @@ function renderAll() {
 }
 
 async function command(path, payload = {}) {
-  if (!hasBridge()) throw new Error("No live bridge — configure Bridge URL in Settings");
+  if (!hasBridge()) throw new Error("No live bridge - configure Bridge URL in Settings");
   const response = await fetch(bridgePath(path), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -704,5 +709,5 @@ async function refresh() {
 
 setupNavigation();
 setupActions();
-await refresh();
+refresh().catch(console.error);
 setInterval(refresh, 30000);

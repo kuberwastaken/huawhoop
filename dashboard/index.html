@@ -1,222 +1,229 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <title>Huawhoop Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#050706">
-  <title>Huawhoop</title>
+  <meta name="theme-color" content="#000000">
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="icon" href="./icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" type="image/svg+xml" href="./icon.svg">
+  <!-- Use a modern, geometric sans-serif similar to Whoop -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="ambient" aria-hidden="true"></div>
+  <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="area-gradient" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0%" stop-color="var(--teal)" stop-opacity="1" />
+        <stop offset="100%" stop-color="var(--teal)" stop-opacity="0" />
+      </linearGradient>
+    </defs>
+  </svg>
+  <!-- Fixed App Header -->
+  <header class="app-header">
+    <div class="header-left">
+      <div id="connection-state" class="eyebrow status-dot">Connecting</div>
+    </div>
+    <div class="header-center">
+      <h1 class="logo">HUAWHOOP</h1>
+    </div>
+    <div class="header-right">
+      <span id="battery-label" class="battery-pill">--%</span>
+      <button class="icon-button" id="refresh-button" type="button" aria-label="Refresh">↻</button>
+    </div>
+  </header>
 
-  <div class="app-shell">
-    <header class="app-header">
-      <div class="identity">
-        <div class="avatar">H</div>
-        <div>
-          <div class="eyebrow" id="connection-state">Connecting</div>
-          <h1>Huawhoop</h1>
-        </div>
+  <!-- Navigation View Containers -->
+  <main class="app-container">
+
+    <!-- HOME VIEW -->
+    <div class="view active" data-view="home">
+      <!-- Sync Status Bar -->
+      <div class="sync-bar">
+        <span id="sync-label" class="sync-time">Waiting for bridge</span>
+        <button class="pill-button sync-action" id="sync-button" type="button">Sync Now</button>
       </div>
-      <div class="device-chip">
-        <span id="battery-label">--%</span>
-        <span class="band-icon" aria-hidden="true"></span>
-      </div>
-    </header>
 
-    <main class="screen-stack">
-      <section class="view active" data-view="today">
-        <div class="date-row">
-          <button class="icon-button" id="refresh-button" type="button" title="Refresh">↻</button>
-          <div>
-            <span>Today</span>
-            <strong id="sync-label">Waiting for bridge</strong>
-          </div>
-          <button class="round-button" id="sync-button" type="button">Sync</button>
+      <!-- Main Overview Rings (Whoop-style big rings) -->
+      <section class="overview-section">
+        <div class="ring-row" id="ring-row">
+          <!-- JS injects sleep/recovery/strain rings here -->
         </div>
-
-        <section class="ring-row" id="ring-row"></section>
-        <section class="card-grid" id="daily-cards"></section>
-
-        <section class="panel review-card">
-          <button class="row-button" type="button" data-goto="recovery">
-            <span>Your day in review</span>
-            <strong id="review-summary">Collecting data</strong>
-          </button>
-        </section>
-
-        <section class="panel">
-          <div class="panel-head">
-            <div>
-              <h2>Today's Activities</h2>
-              <span id="activity-count">0 events</span>
-            </div>
-            <button class="icon-button" id="light-sync-button" type="button" title="Light sync">⇄</button>
-          </div>
-          <div class="activity-list" id="activity-list"></div>
-        </section>
-
-        <section class="panel">
-          <div class="panel-head">
-            <div>
-              <h2>Weekly Trends</h2>
-              <span>Recovery and HRV</span>
-            </div>
-          </div>
-          <div class="weekly-grid">
-            <div class="trend-card">
-              <div class="mini-title">Recovery</div>
-              <div class="bar-trend" id="recovery-bars"></div>
-            </div>
-            <div class="trend-card">
-              <div class="mini-title">Heart Rate Variability</div>
-              <div class="line-trend" id="hrv-line"></div>
-            </div>
-          </div>
-        </section>
       </section>
 
-      <section class="view" data-view="recovery">
-        <div class="page-title">
-          <button class="icon-button" type="button" data-goto="today">‹</button>
-          <div>
-            <span>Today</span>
-            <h2>Recovery</h2>
-          </div>
-          <button class="icon-button" type="button" title="Info">i</button>
+      <!-- Mini Metrics (Steps, HR, HRV, SpO2) -->
+      <section class="metrics-grid">
+        <div class="card-grid" id="daily-cards">
+          <!-- JS injects mini metrics here -->
         </div>
+      </section>
+
+      <!-- Trends Section (Bars & Graphs) -->
+      <section class="app-card trends-card">
+        <div class="card-header">
+          <h2>Recovery Trend</h2>
+        </div>
+        <div class="trend-container">
+          <div class="bar-trend" id="recovery-bars"></div>
+        </div>
+      </section>
+
+      <section class="app-card trends-card">
+        <div class="card-header">
+          <h2>HRV Timeline</h2>
+        </div>
+        <div class="trend-container line-container">
+          <div class="line-trend" id="hrv-line"></div>
+        </div>
+      </section>
+
+      <!-- Activity Log -->
+      <section class="app-card activity-card">
+        <div class="card-header flex-between">
+          <h2>Today's Activities</h2>
+          <button class="icon-button outline" id="light-sync-button" type="button" title="Light sync">⇄</button>
+        </div>
+        <div class="activity-summary">
+          <strong id="review-summary">Collecting data</strong>
+          <span id="activity-count" class="muted">0 events</span>
+        </div>
+        <div class="activity-list" id="activity-list"></div>
+      </section>
+    </div>
+
+    <!-- RECOVERY VIEW -->
+    <div class="view" data-view="recovery">
+      <div class="hero-section center-content">
+        <h2 class="view-title">Recovery</h2>
         <section class="hero-ring" id="recovery-hero"></section>
-        <section class="stack" id="recovery-details"></section>
-      </section>
+      </div>
+      <section class="app-card data-stack" id="recovery-details"></section>
+    </div>
 
-      <section class="view" data-view="strain">
-        <div class="page-title">
-          <button class="icon-button" type="button" data-goto="today">‹</button>
-          <div>
-            <span>Today</span>
-            <h2>Stress Monitor</h2>
-          </div>
-          <button class="icon-button" type="button" title="Settings">⚙</button>
-        </div>
-        <section class="stress-hero" id="stress-hero"></section>
-        <section class="panel" id="stress-breakdown"></section>
-        <section class="panel weather-controls">
-          <button class="secondary-button" id="stress-calibrate-button" type="button">Calibrate Stress</button>
-          <button class="secondary-button" id="stress-enable-button" type="button">Enable Auto Stress</button>
-        </section>
-        <section class="panel" id="strain-details"></section>
-      </section>
-
-      <section class="view" data-view="sleep">
-        <div class="page-title">
-          <button class="icon-button" type="button" data-goto="today">‹</button>
-          <div>
-            <span>Today</span>
-            <h2>Sleep</h2>
-          </div>
-          <button class="icon-button" type="button" title="Info">i</button>
-        </div>
+    <!-- SLEEP VIEW -->
+    <div class="view" data-view="sleep">
+      <div class="hero-section center-content">
+        <h2 class="view-title">Sleep Performance</h2>
         <section class="hero-ring" id="sleep-hero"></section>
-        <section class="stack" id="sleep-details"></section>
+      </div>
+      <section class="app-card data-stack" id="sleep-details"></section>
+    </div>
+
+    <!-- STRAIN & STRESS VIEW -->
+    <div class="view" data-view="strain">
+      <div class="hero-section center-content">
+        <h2 class="view-title">Stress & Strain</h2>
+        <section class="stress-hero hero-ring" id="stress-hero"></section>
+      </div>
+
+      <section class="app-card padded-content">
+        <div id="stress-breakdown" class="stress-copy"></div>
+        <div class="button-group mt-20">
+          <button class="pill-button outline" id="stress-calibrate-button" type="button">Calibrate</button>
+          <button class="pill-button outline" id="stress-enable-button" type="button">Auto Stress</button>
+        </div>
       </section>
 
-      <section class="view" data-view="weather">
-        <div class="page-title">
-          <button class="icon-button" type="button" data-goto="today">‹</button>
-          <div>
-            <span>Device Push</span>
-            <h2>Weather</h2>
-          </div>
-          <button class="round-button" id="weather-send-button" type="button">Push</button>
-        </div>
+      <section class="app-card data-stack" id="strain-details"></section>
+    </div>
 
-        <section class="panel weather-panel">
-          <div class="weather-now">
-            <div>
-              <span class="mini-title">Current</span>
-              <strong id="weather-temp">--°</strong>
-              <p id="weather-location">Set location</p>
-            </div>
-            <div class="weather-orbit" aria-hidden="true"></div>
+    <!-- SETTINGS VIEW -->
+    <div class="view" data-view="settings">
+      <h2 class="view-title align-left pad-x">Settings & Device</h2>
+
+      <!-- Weather Config -->
+      <section class="app-card">
+        <div class="card-header flex-between">
+          <h2>Weather Source</h2>
+          <button class="pill-button primary" id="weather-send-button" type="button">Push to Band</button>
+        </div>
+        <div class="weather-current flex-between padded mb-10">
+          <div class="weather-info">
+            <p id="weather-location" class="muted">Set location</p>
+            <strong id="weather-temp" class="hero-text">--°</strong>
           </div>
-          <div class="weather-controls">
-            <label>
-              <span>Location</span>
-              <input id="weather-name" value="Local Weather">
-            </label>
-            <label>
-              <span>Latitude</span>
+        </div>
+        <div class="weather-form padded">
+          <div class="input-group">
+            <label>Location Name</label>
+            <input id="weather-name" value="Local Weather">
+          </div>
+          <div class="input-row">
+            <div class="input-group">
+              <label>Latitude</label>
               <input id="weather-lat" inputmode="decimal" placeholder="12.9716">
-            </label>
-            <label>
-              <span>Longitude</span>
+            </div>
+            <div class="input-group">
+              <label>Longitude</label>
               <input id="weather-lon" inputmode="decimal" placeholder="77.5946">
-            </label>
+            </div>
           </div>
-          <div class="button-row">
-            <button class="secondary-button" id="geo-button" type="button">Use Device Location</button>
-            <button class="secondary-button" id="weather-fetch-button" type="button">Fetch Weather</button>
+          <div class="button-group mt-15">
+            <button class="pill-button secondary" id="geo-button" type="button">GPS Location</button>
+            <button class="pill-button secondary" id="weather-fetch-button" type="button">Fetch Now</button>
           </div>
-          <div class="forecast-strip" id="forecast-strip"></div>
-        </section>
-
-        <section class="panel" id="weather-status"></section>
-      </section>
-
-      <section class="view" data-view="lab">
-        <div class="page-title">
-          <button class="icon-button" type="button" data-goto="today">‹</button>
-          <div>
-            <span>Protocol</span>
-            <h2>Lab</h2>
-          </div>
-          <button class="round-button" id="save-bridge-button" type="button">Save</button>
         </div>
-        <section class="panel">
-          <div class="panel-head">
-            <div>
-              <h2>Bridge</h2>
-              <span>Local daemon or remote relay</span>
-            </div>
-          </div>
-          <label class="bridge-field">
-            <span>Bridge URL</span>
-            <input id="bridge-url" placeholder="http://127.0.0.1:8765">
-          </label>
-          <div class="button-row">
-            <button class="secondary-button" id="clear-bridge-button" type="button">Use Same Origin</button>
-            <button class="secondary-button" id="full-sync-button" type="button">Full Sync</button>
-          </div>
-        </section>
-        <section class="panel" id="route-status"></section>
-        <section class="panel">
-          <div class="panel-head">
-            <div>
-              <h2>Watchfaces</h2>
-              <span>Read-only inventory first</span>
-            </div>
-            <button class="icon-button" id="watchface-scan-button" type="button">↻</button>
-          </div>
-          <div id="watchface-status"></div>
-        </section>
+        <div class="forecast-strip" id="forecast-strip"></div>
+        <div class="data-stack mt-15" id="weather-status"></div>
       </section>
-    </main>
 
-    <nav class="bottom-nav">
-      <button class="active" type="button" data-goto="today"><span>⌂</span><strong>Home</strong></button>
-      <button type="button" data-goto="sleep"><span>♡</span><strong>Sleep</strong></button>
-      <button type="button" data-goto="strain"><span>⌁</span><strong>Stress</strong></button>
-      <button type="button" data-goto="weather"><span>☼</span><strong>Weather</strong></button>
-      <button type="button" data-goto="lab"><span>W</span><strong>Lab</strong></button>
-    </nav>
-  </div>
+      <!-- Bridge / Network Config -->
+      <section class="app-card">
+        <div class="card-header flex-between">
+          <h2>Bridge URL</h2>
+          <button class="pill-button primary" id="save-bridge-button" type="button">Save</button>
+        </div>
+        <div class="padded">
+          <div class="input-group mb-15">
+            <input id="bridge-url" placeholder="http://127.0.0.1:8765">
+          </div>
+          <div class="button-group">
+            <button class="pill-button secondary" id="clear-bridge-button" type="button">Use Same Origin</button>
+            <button class="pill-button secondary" id="full-sync-button" type="button">Force Full Sync</button>
+          </div>
+        </div>
+      </section>
 
-  <script src="./app.js" type="module"></script>
+      <!-- Routes / Advanced -->
+      <section class="app-card">
+        <div class="card-header flex-between">
+          <h2>System Routing</h2>
+          <button class="icon-button outline" id="watchface-scan-button" type="button">↻</button>
+        </div>
+        <div class="data-stack" id="route-status"></div>
+        <div class="data-stack mt-10" id="watchface-status"></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Bottom Tab Navigation -->
+  <nav class="bottom-nav">
+    <button class="nav-tab active" data-goto="home" type="button">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span>Overview</span>
+    </button>
+    <button class="nav-tab" data-goto="recovery" type="button">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+      <span>Recovery</span>
+    </button>
+    <button class="nav-tab" data-goto="sleep" type="button">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      <span>Sleep</span>
+    </button>
+    <button class="nav-tab" data-goto="strain" type="button">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M2 20h20L12 4z"></path></svg>
+      <span>Strain</span>
+    </button>
+    <button class="nav-tab" data-goto="settings" type="button">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+      <span>Settings</span>
+    </button>
+  </nav>
+
+  <script src="./app.js"></script>
   <script>
-    if ("serviceWorker" in navigator) {
+    if ("serviceWorker" in navigator && location.protocol !== "file:") {
       navigator.serviceWorker.register("./service-worker.js").catch(() => {});
     }
   </script>
