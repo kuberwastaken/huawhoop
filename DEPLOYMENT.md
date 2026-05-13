@@ -8,11 +8,11 @@ Project settings:
 
 - Framework preset: Other
 - Build command: empty
-- Output directory: project root
+- Output directory: `dashboard`
 - Domain: `huawhoop.kuber.studio`
 
-`vercel.json` rewrites `/` and `/dashboard` to the PWA entrypoint. The app serves
-sanitized demo data when no bridge URL is configured.
+`vercel.json` publishes the static PWA from `dashboard/`. The app serves sanitized
+demo data when no bridge URL is configured.
 
 ## Privacy Boundary
 

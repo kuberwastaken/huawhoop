@@ -5,6 +5,9 @@ huawei-health.apk
 gadgetbridge-src/
 open-wearables-src/
 open-wearables-full/
+.github/java-upgrade/
+logs/
+rewrite_ui.py
 __pycache__/
 *.pyc
 *.log
