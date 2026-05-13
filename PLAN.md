@@ -97,17 +97,17 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Compare against Huawei Health APK weather classes where available.
 - [ ] Implement current weather payload push.
 - [ ] Implement forecast payload push if supported by Band 10.
-- [ ] Add PWA weather card and manual/API-backed push control.
+- [x] Add PWA weather card and manual/API-backed push control.
 - [ ] Record packet tags, units, and cadence in `FINDINGS.md`.
 
 ## Milestone 3: WHOOP-Like PWA
 
-- [ ] Redesign dashboard as a mobile-first dark PWA.
-- [ ] Add install manifest and service worker.
-- [ ] Add animated recovery, sleep, strain, stress, HRV, and battery cards.
-- [ ] Add weekly trends, sleep detail, stress zones, and weather views.
-- [ ] Add command controls for sync/weather without exposing raw protocol.
-- [ ] Verify responsive layout by browser screenshot on mobile and desktop widths.
+- [x] Redesign dashboard as a mobile-first dark PWA.
+- [x] Add install manifest and service worker.
+- [x] Add animated recovery, sleep, strain, stress, HRV, and battery cards.
+- [x] Add weekly trends, sleep detail, stress zones, and weather views.
+- [x] Add command controls for sync/weather without exposing raw protocol.
+- [x] Verify responsive layout by browser smoke check with local artifacts.
 
 ## Milestone 4: Algorithms
 
@@ -146,7 +146,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Audit Gadgetbridge weather and watchface source.
 - [x] Audit APK for matching weather/watchface primitives.
 - [x] Add bridge API and command queue.
-- [ ] Rebuild dashboard as PWA shell.
+- [x] Rebuild dashboard as PWA shell.
 - [ ] Implement weather push.
 
 ## Research TODO

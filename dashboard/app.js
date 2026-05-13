@@ -1,21 +1,44 @@
-const files = {
-  insights: "../data/latest_insights.json",
+const artifactFiles = {
   connection: "../data/connection_status.json",
+  sync: "../data/latest_sync_status.json",
+  insights: "../data/latest_insights.json",
   summary: "../data/latest_recovery_summary.json",
   fitness: "../data/latest_fitness_preview.json",
   capabilities: "../data/latest_capabilities.json",
-  dictionary: "../data/latest_dictionary_probe.json",
+  sequence: "../data/latest_sleep_sequence_preview.json",
   trusleep: "../data/latest_trusleep_preview.json",
   stress: "../data/latest_stress_preview.json",
-  sequence: "../data/latest_sleep_sequence_preview.json",
   liveHrv: "../data/latest_live_hrv.json",
-  history: "../data/recovery_history.jsonl",
+  recoveryHistory: "../data/recovery_history.jsonl",
   insightsHistory: "../data/insights_history.jsonl"
 };
 
-const fmt = new Intl.NumberFormat(undefined, { maximumFractionDigits: 1 });
+const state = {
+  data: {},
+  weather: null,
+  bridgeBase: localStorage.getItem("huawhoop.bridgeBase") || ""
+};
 
-async function loadJson(path, fallback = null) {
+const fmt = new Intl.NumberFormat(undefined, { maximumFractionDigits: 1 });
+const pctFmt = new Intl.NumberFormat(undefined, { maximumFractionDigits: 0 });
+
+const $ = (selector) => document.querySelector(selector);
+const $$ = (selector) => Array.from(document.querySelectorAll(selector));
+
+function clamp(value, min, max) {
+  return Math.max(min, Math.min(max, Number.isFinite(value) ? value : min));
+}
+
+function number(value, fallback = 0) {
+  return Number.isFinite(Number(value)) ? Number(value) : fallback;
+}
+
+function bridgePath(path) {
+  const base = state.bridgeBase.replace(/\/$/, "");
+  return `${base}${path}`;
+}
+
+async function fetchJson(path, fallback = {}) {
   try {
     const response = await fetch(path, { cache: "no-store" });
     if (!response.ok) return fallback;
@@ -25,7 +48,7 @@ async function loadJson(path, fallback = null) {
   }
 }
 
-async function loadText(path, fallback = "") {
+async function fetchText(path, fallback = "") {
   try {
     const response = await fetch(path, { cache: "no-store" });
     if (!response.ok) return fallback;
@@ -33,6 +56,76 @@ async function loadText(path, fallback = "") {
   } catch {
     return fallback;
   }
+}
+
+function parseJsonl(text) {
+  return text.split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .map((line) => {
+      try {
+        return JSON.parse(line);
+      } catch {
+        return null;
+      }
+    })
+    .filter(Boolean);
+}
+
+async function loadData() {
+  const api = await fetchJson(bridgePath("/api/status"), null);
+  if (api && (api.connection || api.insights || api.bridge)) {
+    const historyText = await fetchText(bridgePath("/api/artifacts/recovery_history.jsonl"), "");
+    const insightsHistoryText = await fetchText(bridgePath("/api/artifacts/insights_history.jsonl"), "");
+    state.data = {
+      connection: api.connection || {},
+      sync: api.sync || {},
+      insights: api.insights || {},
+      summary: await fetchJson(bridgePath("/api/artifacts/latest_recovery_summary.json"), {}),
+      fitness: await fetchJson(bridgePath("/api/artifacts/latest_fitness_preview.json"), {}),
+      capabilities: await fetchJson(bridgePath("/api/artifacts/latest_capabilities.json"), {}),
+      sequence: await fetchJson(bridgePath("/api/artifacts/latest_sleep_sequence_preview.json"), {}),
+      trusleep: await fetchJson(bridgePath("/api/artifacts/latest_trusleep_preview.json"), {}),
+      stress: await fetchJson(bridgePath("/api/artifacts/latest_stress_preview.json"), {}),
+      liveHrv: await fetchJson(bridgePath("/api/artifacts/latest_live_hrv.json"), {}),
+      recoveryHistory: parseJsonl(historyText),
+      insightsHistory: parseJsonl(insightsHistoryText),
+      bridge: api.bridge || {},
+      lastCommands: api.last_commands || []
+    };
+    return;
+  }
+
+  const entries = await Promise.all([
+    fetchJson(artifactFiles.connection, {}),
+    fetchJson(artifactFiles.sync, {}),
+    fetchJson(artifactFiles.insights, {}),
+    fetchJson(artifactFiles.summary, {}),
+    fetchJson(artifactFiles.fitness, {}),
+    fetchJson(artifactFiles.capabilities, {}),
+    fetchJson(artifactFiles.sequence, {}),
+    fetchJson(artifactFiles.trusleep, {}),
+    fetchJson(artifactFiles.stress, {}),
+    fetchJson(artifactFiles.liveHrv, {}),
+    fetchText(artifactFiles.recoveryHistory, ""),
+    fetchText(artifactFiles.insightsHistory, "")
+  ]);
+  state.data = {
+    connection: entries[0],
+    sync: entries[1],
+    insights: entries[2],
+    summary: entries[3],
+    fitness: entries[4],
+    capabilities: entries[5],
+    sequence: entries[6],
+    trusleep: entries[7],
+    stress: entries[8],
+    liveHrv: entries[9],
+    recoveryHistory: parseJsonl(entries[10]),
+    insightsHistory: parseJsonl(entries[11]),
+    bridge: {},
+    lastCommands: []
+  };
 }
 
 function localTime(ts) {
@@ -45,406 +138,468 @@ function localTime(ts) {
   });
 }
 
-function metric(label, value, sub) {
-  return `<article class="metric">
-    <div class="label">${label}</div>
-    <div class="value">${value}</div>
-    <div class="sub">${sub || ""}</div>
+function scoreColor(value, max = 100) {
+  const pct = max ? value / max : 0;
+  if (pct >= 0.67) return "var(--teal)";
+  if (pct >= 0.34) return "var(--yellow)";
+  return "var(--orange)";
+}
+
+function ringSvg({ value, max = 100, size = 78, stroke = 7, color = "var(--teal)", label = "", sub = "", decimals = 0 }) {
+  const radius = (size - stroke) / 2;
+  const circumference = 2 * Math.PI * radius;
+  const pct = clamp(value / max, 0, 1);
+  const offset = circumference * (1 - pct);
+  const shown = Number.isFinite(value) ? value.toFixed(decimals) : "--";
+  return `
+    <svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" aria-hidden="true">
+      <circle class="progress-track" cx="${size / 2}" cy="${size / 2}" r="${radius}" fill="none" stroke-width="${stroke}"></circle>
+      <circle class="progress-value" cx="${size / 2}" cy="${size / 2}" r="${radius}" fill="none" stroke="${color}" stroke-width="${stroke}"
+        stroke-dasharray="${circumference.toFixed(2)}" stroke-dashoffset="${offset.toFixed(2)}"></circle>
+      <text x="50%" y="45%" text-anchor="middle" dominant-baseline="middle" fill="var(--text)" font-size="${size * 0.23}" font-weight="900">${shown}</text>
+      <text x="50%" y="62%" text-anchor="middle" dominant-baseline="middle" fill="var(--muted)" font-size="${size * 0.095}" font-weight="800">${label}</text>
+    </svg>
+    ${sub ? `<div class="ring-sub">${sub}</div>` : ""}
+  `;
+}
+
+function ringCard(label, value, max, color, sub, decimals = 0) {
+  return `<article class="ring-card">
+    ${ringSvg({ value, max, color, label, sub, decimals })}
   </article>`;
 }
 
-function pill(text, cls = "") {
-  return `<span class="pill ${cls}">${text}</span>`;
+function miniCard(glyph, label, value, sub = "") {
+  return `<article class="mini-card">
+    <div class="glyph">${glyph}</div>
+    <div><strong>${value}</strong><span>${label}${sub ? ` · ${sub}` : ""}</span></div>
+  </article>`;
 }
 
-function compactStatus(status) {
-  if (status === null || status === undefined) return "n/a";
-  if (typeof status === "string") return status;
-  return `0x${Number(status).toString(16).padStart(8, "0")}`;
+function detailRow(glyph, label, value, sub = "") {
+  return `<div class="detail-row">
+    <div class="glyph">${glyph}</div>
+    <div><strong>${label}</strong><span>${sub}</span></div>
+    <strong>${value}</strong>
+  </div>`;
 }
 
-function scoreClass(value) {
-  if (!Number.isFinite(value)) return "warn";
-  if (value >= 67) return "ok";
-  if (value >= 34) return "warn";
-  return "bad";
+function meter(label, value, max, color = "linear-gradient(90deg, var(--orange), var(--teal))") {
+  const pct = clamp(value / max, 0, 1) * 100;
+  return `<div class="zone-row">
+    <div><span>${label}</span><strong>${fmt.format(value)}</strong></div>
+    <div class="meter"><i style="width:${pct.toFixed(1)}%;background:${color}"></i></div>
+  </div>`;
 }
 
-function latestValidSleepHrv(sequence) {
-  const sessions = sequence?.sessions || [];
-  const valid = sessions
-    .map(session => ({ session, summary: session.summary || {} }))
-    .filter(row => Number.isFinite(row.summary.avgHrv) && row.summary.avgHrv > 0);
-  return valid.length ? valid[valid.length - 1] : null;
-}
-
-function liveHrvTransport(insights, liveHrv) {
-  return insights?.data_quality?.live_hrv_transport || {
-    state: liveHrv?.sample_count ? "streaming" : "not_run",
-    sample_count: liveHrv?.sample_count || 0,
-    realtime_hr_sample_count: liveHrv?.realtime_hr_sample_count || 0,
-    request: liveHrv?.request || {},
-    event_count: (liveHrv?.transport_events || []).length
+function current() {
+  const insights = state.data.insights || {};
+  const sleep = insights.sleep || {};
+  const strain = insights.strain || {};
+  return {
+    recovery: number(insights.recovery_score, 0),
+    recoveryLabel: insights.recovery_label || "yellow",
+    sleepScore: number(sleep.score, 0),
+    sleepMinutes: number(sleep.minutes, 0),
+    strain: number(strain.strain, 0),
+    hrv: number(insights.hrv?.avg_hrv_ms ?? insights.hrv_rmssd_ms, NaN),
+    rhr: number(insights.resting_hr, NaN),
+    battery: number(state.data.connection?.battery ?? state.data.sync?.battery, NaN)
   };
 }
 
-function pathFromPoints(points) {
-  return points.map((p, i) => `${i === 0 ? "M" : "L"}${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(" ");
+function renderHeader() {
+  const data = state.data;
+  const connected = data.connection?.state === "connected";
+  $("#connection-state").textContent = connected ? "Connected" : (data.connection?.state || "Offline");
+  const battery = current().battery;
+  $("#battery-label").textContent = Number.isFinite(battery) ? `${battery}%` : "--%";
+  $("#sync-label").textContent = data.connection?.timestamp_local || data.sync?.ended_at_local || "No sync yet";
 }
 
-function lineChart(container, series, options = {}) {
-  const width = 760;
-  const height = options.height || 260;
-  const pad = { left: 38, right: 16, top: 18, bottom: 28 };
-  const all = series.flatMap(s => s.values.map(v => v.y)).filter(Number.isFinite);
-  if (!all.length) {
-    container.innerHTML = `<div class="empty">No samples in the current artifact.</div>`;
-    return;
-  }
-  const minY = options.minY ?? Math.min(...all);
-  const maxY = options.maxY ?? Math.max(...all);
-  const ySpan = Math.max(1, maxY - minY);
-  const maxLen = Math.max(...series.map(s => s.values.length), 1);
-  const plotW = width - pad.left - pad.right;
-  const plotH = height - pad.top - pad.bottom;
-
-  const lines = series.map(s => {
-    const pts = s.values.map((v, idx) => {
-      const x = pad.left + (idx / Math.max(1, maxLen - 1)) * plotW;
-      const y = pad.top + (1 - ((v.y - minY) / ySpan)) * plotH;
-      return [x, y];
-    });
-    return `<path class="${s.className}" d="${pathFromPoints(pts)}"></path>`;
-  }).join("");
-
-  const grid = [0, 0.25, 0.5, 0.75, 1].map(t => {
-    const y = pad.top + t * plotH;
-    const label = Math.round(maxY - t * ySpan);
-    return `<line class="grid-line" x1="${pad.left}" y1="${y}" x2="${width - pad.right}" y2="${y}"></line>
-      <text class="chart-label" x="4" y="${y + 4}">${label}</text>`;
-  }).join("");
-
-  const labels = series.map((s, i) => {
-    const x = pad.left + i * 96;
-    return `<text class="chart-label" x="${x}" y="${height - 6}">${s.label}</text>`;
-  }).join("");
-
-  container.innerHTML = `<svg viewBox="0 0 ${width} ${height}" role="img">
-    ${grid}
-    <line class="axis" x1="${pad.left}" y1="${height - pad.bottom}" x2="${width - pad.right}" y2="${height - pad.bottom}"></line>
-    ${lines}
-    ${labels}
-  </svg>`;
-}
-
-function barChart(container, values) {
-  const width = 420;
-  const height = 190;
-  const pad = 18;
-  const max = Math.max(...values, 1);
-  const shown = values.slice(-96);
-  const barW = (width - pad * 2) / Math.max(shown.length, 1);
-  const bars = shown.map((v, i) => {
-    const h = (v / max) * (height - pad * 2);
-    const x = pad + i * barW;
-    const y = height - pad - h;
-    return `<rect class="bar" x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${Math.max(1, barW - 1).toFixed(1)}" height="${h.toFixed(1)}"></rect>`;
-  }).join("");
-  container.innerHTML = `<svg viewBox="0 0 ${width} ${height}" role="img">
-    <line class="axis" x1="${pad}" y1="${height - pad}" x2="${width - pad}" y2="${height - pad}"></line>
-    ${bars}
-  </svg>`;
-}
-
-function renderMetrics(summary, insights) {
-  const grid = document.getElementById("metric-grid");
-  const hrv = insights.hrv || {};
+function renderToday() {
+  const data = state.data;
+  const values = current();
+  const insights = data.insights || {};
   const sleep = insights.sleep || {};
-  const hrvValue = hrv.rmssd_ms ?? hrv.avg_hrv_ms ?? "n/a";
-  grid.innerHTML = [
-    metric("Recovery", `${insights.recovery_score ?? summary.recovery_proxy_no_hrv ?? "n/a"}`, `${insights.recovery_label || "proxy"} readiness`),
-    metric("Strain", `${insights.strain?.strain ?? summary.strain_score ?? "n/a"}`, `${insights.strain?.trimp ?? "n/a"} TRIMP`),
-    metric("HRV", `${hrvValue}`, hrv.source ? `${hrv.source}` : "not available"),
-    metric("Sleep", `${sleep.score ?? summary.sleep_score ?? "n/a"}`, `${sleep.minutes ?? summary.sleep_minutes ?? 0} / ${sleep.need_minutes ?? 480} min (${sleep.source || "unknown"})`),
-    metric("Steps", fmt.format(summary.step_total ?? 0), summary.step_window_end || ""),
-    metric("Resting HR", `${insights.resting_hr ?? summary.resting_hr_avg ?? "n/a"}`, `${insights.resting_hr_baseline ?? "n/a"} baseline`)
-  ].join("");
-}
-
-function renderStatus(summary, capabilities, dictionary, connection, insights, liveHrv) {
-  const strip = document.getElementById("status-strip");
-  const p2pOk = dictionary && Object.keys(dictionary).length > 0;
-  const connected = connection?.state === "connected";
-  const hrvSource = insights?.data_quality?.hrv_source || "unavailable";
-  const transport = liveHrvTransport(insights, liveHrv);
-  strip.innerHTML = [
-    pill(connected ? "Connected" : connection?.state || "No daemon", connected ? "ok" : "warn"),
-    pill("Reconnect auth", "ok"),
-    pill("Fitness history", "ok"),
-    pill(capabilities?.capability_flags?.dict_sleep_sync ? "Sleep dict bit" : "Sleep dict off", capabilities?.capability_flags?.dict_sleep_sync ? "ok" : "warn"),
-    pill(p2pOk ? "P2P probed" : "P2P missing", p2pOk ? "ok" : "warn"),
-    pill(hrvSource === "unavailable" ? `HRV ${transport.state || "pending"}` : `HRV ${hrvSource}`, hrvSource === "unavailable" ? "warn" : "ok")
-  ].join("");
-  const label = connection?.timestamp_local || summary.generated_at_local || localTime(summary.generated_at);
-  document.getElementById("sync-label").textContent = `Last seen: ${label}`;
-}
-
-function renderCharts(fitness, historyRows, insightsRows) {
-  const steps = fitness.steps || [];
-  const hr = steps.filter(x => Number.isFinite(x.heart_rate)).map(x => ({ y: x.heart_rate }));
-  const spo2 = steps.filter(x => Number.isFinite(x.spo2)).map(x => ({ y: x.spo2 }));
-  document.getElementById("sample-count-pill").textContent = `${hr.length} HR / ${spo2.length} SpO2`;
-  lineChart(document.getElementById("hr-chart"), [
-    { label: "Heart rate", values: hr, className: "hr-line" },
-    { label: "SpO2", values: spo2, className: "spo2-line" }
-  ], { minY: 50, maxY: 170, height: 280 });
-
-  const loadChart = document.getElementById("load-chart");
-  if (loadChart) barChart(loadChart, steps.map(x => x.calories || 0));
-
-  const sourceRows = insightsRows.length ? insightsRows : historyRows;
-  const history = sourceRows.slice(-30).map(row => ({ y: row.recovery_score ?? row.recovery_proxy_no_hrv ?? 0 }));
-  lineChart(document.getElementById("history-chart"), [
-    { label: "Recovery", values: history, className: "history-line" }
-  ], { minY: 0, maxY: 100, height: 190 });
-}
-
-function renderRecovery(insights, liveHrv) {
-  const panel = document.getElementById("recovery-panel");
-  const components = insights.components || {};
-  const rows = Object.entries(components).map(([name, value]) => `
-    <div class="component-row">
-      <span>${name.toUpperCase()}</span>
-      <div class="component-bar"><i style="width:${Math.max(0, Math.min(100, value))}%"></i></div>
-      <strong>${Math.round(value)}</strong>
-    </div>
-  `).join("");
-  const hrv = insights.hrv || {};
-  const transport = liveHrvTransport(insights, liveHrv);
-  const request = transport.request || {};
-  panel.innerHTML = `
-    <div class="recovery-score ${insights.recovery_label || "yellow"}">${insights.recovery_score ?? "n/a"}</div>
-    <div class="component-list">${rows || `<div class="empty">No recovery components yet.</div>`}</div>
-    <div class="sleep-row"><span>HRV source</span><strong>${hrv.source || "unavailable"}</strong></div>
-    <div class="sleep-row"><span>HRV detail</span><strong>${hrv.rmssd_ms ?? hrv.avg_hrv_ms ?? hrv.reason ?? "n/a"}</strong></div>
-    <div class="sleep-row"><span>Live stream</span><strong>${transport.state || "not_run"} · ${transport.sample_count ?? 0} RRI · ${transport.realtime_hr_sample_count ?? 0} HR</strong></div>
-    <div class="sleep-row"><span>Live request</span><strong>type ${request.open_type ?? "n/a"} vol ${request.vol_status ?? "off"}</strong></div>
-    <div class="sleep-row"><span>Last HRV status</span><strong>${transport.latest_status_hex || compactStatus(transport.latest_status)}</strong></div>
-  `;
-}
-
-function renderHrvPanel(sequence, insights, insightsRows) {
-  const panel = document.getElementById("hrv-panel");
-  const hrv = insights.hrv || {};
-  const latest = latestValidSleepHrv(sequence);
-  const summary = latest?.summary || {};
-  const baselineLow = hrv.min_baseline ?? summary.minHrvBaseline;
-  const baselineHigh = hrv.max_baseline ?? summary.maxHrvBaseline;
-  const hrvValue = hrv.avg_hrv_ms ?? summary.avgHrv;
-  const baselineText = Number.isFinite(baselineLow) && Number.isFinite(baselineHigh)
-    ? `${baselineLow}-${baselineHigh} ms`
-    : "collecting";
-  const sequenceTrend = (sequence?.sessions || [])
-    .map(session => session?.summary?.avgHrv)
-    .filter(value => Number.isFinite(value) && value > 0);
-  const trend = (sequenceTrend.length ? sequenceTrend : insightsRows
-    .map(row => row.hrv_rmssd_ms)
-    .filter(value => Number.isFinite(value) && value > 0)
-  ).slice(-14);
-  const maxTrend = Math.max(...trend, 1);
-  const resilience = insights.resilience || {};
-  panel.innerHTML = `
-    <div class="hrv-headline">
-      <strong>${hrvValue ?? "n/a"}</strong>
-      <span>ms</span>
-    </div>
-    <div class="mini-spark">${trend.length ? trend.map(value => (
-      `<i style="height:${Math.max(6, (value / maxTrend) * 100).toFixed(1)}%" title="${value} ms"></i>`
-    )).join("") : `<span class="empty-inline">Collecting trend</span>`}</div>
-    <div class="sleep-row"><span>Baseline</span><strong>${baselineText}</strong></div>
-    <div class="sleep-row"><span>Session</span><strong>${latest?.session?.start_local || "n/a"}</strong></div>
-    <div class="sleep-row"><span>Sleep HRV sessions</span><strong>${hrv.sample_count ?? trend.length ?? 0}</strong></div>
-    <div class="sleep-row"><span>Resilience</span><strong>${resilience.score ?? "n/a"} (${resilience.status || "collecting"})</strong></div>
-    <div class="sleep-row"><span>HRV CV</span><strong>${resilience.cv_pct ?? "n/a"}%</strong></div>
-  `;
-}
-
-function renderStrain(insights) {
-  const panel = document.getElementById("strain-panel");
   const strain = insights.strain || {};
+  const summary = data.summary || {};
+  const steps = summary.step_total || data.fitness?.summary?.step_total || 0;
+  const hrvText = Number.isFinite(values.hrv) ? `${Math.round(values.hrv)} ms` : "Collecting";
+  $("#ring-row").innerHTML = [
+    ringCard("Sleep", values.sleepScore, 100, "var(--orange)", `${Math.round(values.sleepMinutes / 60)}h`, 0),
+    ringCard("Recovery", values.recovery, 100, "var(--teal)", values.recoveryLabel, 0),
+    ringCard("Strain", values.strain, 21, "var(--blue)", `${fmt.format(strain.trimp || 0)} load`, 1)
+  ].join("");
+  $("#daily-cards").innerHTML = [
+    miniCard("S", "Steps", fmt.format(steps), fmt.format(summary.step_window_samples || 0)),
+    miniCard("H", "Heart rate", Number.isFinite(values.rhr) ? Math.round(values.rhr) : "--", "resting"),
+    miniCard("V", "HRV", hrvText, insights.hrv?.source || "sleep"),
+    miniCard("O", "SpO2", sleep.avg_spo2 ? `${sleep.avg_spo2}%` : "--", "overnight")
+  ].join("");
+  $("#review-summary").textContent = `Recovery ${values.recovery || "--"} · Strain ${fmt.format(values.strain)}`;
   const zones = strain.zone_minutes || {};
-  const max = Math.max(...Object.values(zones), 1);
-  panel.innerHTML = Object.entries(zones).map(([name, value]) => `
-    <div class="component-row">
-      <span>${name}</span>
-      <div class="component-bar"><i style="width:${(value / max) * 100}%"></i></div>
-      <strong>${value}m</strong>
-    </div>
-  `).join("") + `
-    <div class="sleep-row"><span>Acute 7d</span><strong>${insights.training_balance?.acute_7d ?? "n/a"}</strong></div>
-    <div class="sleep-row"><span>Chronic 42d</span><strong>${insights.training_balance?.chronic_42d ?? "n/a"}</strong></div>
-    <div class="sleep-row"><span>Load ratio</span><strong>${insights.training_balance?.load_ratio ?? "n/a"} · ${insights.training_balance?.label ?? "collecting"}</strong></div>
-    <div class="sleep-row"><span>Balance</span><strong>${insights.training_balance?.balance ?? "n/a"}</strong></div>
-    <div class="sleep-row"><span>Guidance</span><strong>${insights.training_balance?.recommendation ?? "Collecting baseline."}</strong></div>
-  `;
-}
-
-function stageLabel(stage) {
-  return ({
-    "1": "Light",
-    "2": "Deep",
-    "3": "REM",
-    "4": "Awake",
-    "5": "Nap/unknown"
-  })[String(stage)] || `Stage ${stage}`;
-}
-
-function renderStageBars(stageCounts) {
-  const entries = Object.entries(stageCounts || {})
-    .map(([stage, value]) => [stage, Number(value)])
-    .filter(([, value]) => Number.isFinite(value) && value > 0);
-  const total = entries.reduce((sum, [, value]) => sum + value, 0);
-  if (!total) return `<div class="empty">No stage distribution yet.</div>`;
-  return `<div class="stage-bars">${entries.map(([stage, value]) => `
-    <div class="stage-row">
-      <span>${stageLabel(stage)}</span>
-      <div class="component-bar"><i class="stage-${stage}" style="width:${((value / total) * 100).toFixed(1)}%"></i></div>
-      <strong>${value}m</strong>
-    </div>
-  `).join("")}</div>`;
-}
-
-function renderSleep(summary, trusleep, sequence, insights) {
-  const panel = document.getElementById("sleep-panel");
-  const sequenceCount = sequence?.sequence_count ?? trusleep?.sequence?.sequence_count ?? 0;
-  const sequenceErrors = sequence?.errors || trusleep?.sequence?.errors || [];
-  const sleep = insights?.sleep || {};
-  const components = sleep.components || {};
-  const sessionWindow = sleep.session_start && sleep.session_end
-    ? `${localTime(sleep.session_start)} - ${localTime(sleep.session_end)}`
-    : (summary.sleep_window_start && summary.sleep_window_end ? `${summary.sleep_window_start} - ${summary.sleep_window_end}` : "n/a");
-  const rows = [
-    ["Source", sleep.source || "unavailable"],
-    ["Sleep minutes", `${sleep.minutes ?? summary.sleep_minutes ?? 0}`],
-    ["Sleep score", `${sleep.score ?? summary.sleep_score ?? "n/a"}`],
-    ["Huawei score", `${sleep.device_score ?? "n/a"}`],
-    ["Performance", `${sleep.performance_score ?? "n/a"}`],
-    ["Efficiency", `${sleep.sleep_efficiency ?? "n/a"}%`],
-    ["Latency", `${sleep.sleep_latency_min ?? "n/a"} min`],
-    ["Avg SpO2", `${sleep.avg_spo2 ?? "n/a"}%`],
-    ["Breath rate", `${sleep.avg_breath_rate ?? "n/a"}`],
-    ["Fragmentation", `${components.fragmentation ?? "n/a"}`],
-    ["Consistency", `${components.consistency ?? "collecting"}`],
-    ["Window", sessionWindow],
-    ["Sequence sessions", `${sequenceCount}`],
-    ["Sequence status", sequenceErrors.length ? sequenceErrors.join(", ") : "ready"]
+  const activities = [
+    ["Sleep", values.sleepScore, `${Math.floor(values.sleepMinutes / 60)}:${String(Math.round(values.sleepMinutes % 60)).padStart(2, "0")}`],
+    ["Low Stress", zones.easy || 0, "easy minutes"],
+    ["Moderate", zones.moderate || 0, "active minutes"]
   ];
-  panel.innerHTML = rows
-    .map(([a, b]) => `<div class="sleep-row"><span>${a}</span><strong>${b}</strong></div>`)
-    .join("") + renderStageBars(sleep.stage_counts);
+  $("#activity-count").textContent = `${activities.length} rows`;
+  $("#activity-list").innerHTML = activities.map(([name, score, meta]) => `<div class="activity">
+    <div class="score-pill">${score}</div>
+    <div class="activity-main"><strong>${name}</strong><span>${meta}</span></div>
+    <span>›</span>
+  </div>`).join("");
 }
 
-function renderRoutes(dictionary, stress, sequence, insights, liveHrv) {
-  const hrvSource = insights?.data_quality?.hrv_source || "unavailable";
-  const transport = liveHrvTransport(insights, liveHrv);
-  const liveDetail = hrvSource === "live_rri"
-    ? "RMSSD computed from streamed RRI/SQI."
-    : `${transport.state || "not_run"}; status ${transport.latest_status_hex || compactStatus(transport.latest_status)}; ${transport.event_count || 0} events.`;
-  const rows = [
-    ["Fitness minute history", "ok", "Steps, HR, SpO2, sleep segments are available."],
-    ["Live RRI HRV", hrvSource === "live_rri" ? "ok" : "warn", liveDetail],
-    ["Stress/RRI file", stress?.stress_count > 0 ? "ok" : "warn", stress?.stress_count > 0 ? `${stress.stress_count} stress samples` : "No file payload in latest artifact."],
-    ["Sleep sequence file", sequence?.file_size > 0 ? "ok" : "warn", sequence?.file_size > 0 ? `${sequence.sequence_count} sessions` : (sequence?.errors || ["No metadata returned"]).join(", ")],
-    ["P2P skin temperature", dictionary?.skin_temperature?.status === "ack_no_data" ? "warn" : "bad", dictionary?.skin_temperature?.status || "not probed"],
-    ["P2P HRV dictionary", dictionary?.hrv?.status === "error_tlv" ? "bad" : "warn", dictionary?.hrv?.error_tlvs?.["0x7f"] || dictionary?.hrv?.status || "not probed"]
-  ];
-  document.getElementById("route-table").innerHTML = rows.map(([name, state, detail]) => `
-    <div class="route-row">
-      <span class="route-name">${name}</span>
-      <span class="route-detail">${pill(state, state)} ${detail}</span>
-    </div>`).join("");
+function historyRows() {
+  const rows = state.data.insightsHistory?.length ? state.data.insightsHistory : state.data.recoveryHistory || [];
+  return rows.slice(-14);
 }
 
-function renderCapabilities(capabilities) {
-  const flags = capabilities?.capability_flags || {};
-  const important = [
-    "multi_device",
-    "dict_sleep_sync",
-    "bed_time",
-    "device_command_dict_data",
-    "track_p2p",
-    "sleep_apnea",
-    "emotion",
-    "hrv",
-    "notification_picture",
-    "contacts_sync"
-  ];
-  document.getElementById("capabilities").innerHTML = important.map(key => {
-    const value = Boolean(flags[key]);
-    return `<div class="cap-row">
-      <span class="cap-name">${key.replaceAll("_", " ")}</span>
-      <span class="cap-detail">${pill(value ? "true" : "false", value ? "ok" : "warn")}</span>
+function renderTrends() {
+  const rows = historyRows().slice(-7);
+  const fallback = Array.from({ length: 7 }, (_, i) => ({ recovery_score: i === 6 ? current().recovery : 0 }));
+  const shown = rows.length ? rows : fallback;
+  $("#recovery-bars").innerHTML = shown.map((row) => {
+    const score = number(row.recovery_score ?? row.recovery_proxy_no_hrv, 0);
+    const day = row.generated_at ? new Date(row.generated_at * 1000).toLocaleDateString([], { weekday: "short" }) : "";
+    return `<div class="bar-day ${score >= 67 ? "ok" : ""}">
+      <strong>${Math.round(score)}%</strong>
+      <i style="height:${clamp(score, 7, 100)}%"></i>
+      <small>${day}</small>
     </div>`;
   }).join("");
+  drawLine($("#hrv-line"), shown.map((row) => number(row.hrv_rmssd_ms ?? row.hrv?.avg_hrv_ms, NaN)).filter(Number.isFinite), {
+    min: 0,
+    maxPadding: 10,
+    color: "var(--teal)"
+  });
 }
 
-function parseHistory(text) {
-  return text.split(/\r?\n/)
-    .filter(Boolean)
-    .map(line => {
-      try { return JSON.parse(line); } catch { return null; }
-    })
-    .filter(Boolean);
-}
-
-function renderRecoveryHeatmap(insightsRows, fallbackRows) {
-  const container = document.getElementById("recovery-heatmap");
-  const rows = (insightsRows.length ? insightsRows : fallbackRows)
-    .filter(row => Number.isFinite(row.recovery_score ?? row.recovery_proxy_no_hrv))
-    .slice(-42);
-  if (!rows.length) {
-    container.innerHTML = `<div class="empty">No recovery history yet.</div>`;
+function drawLine(container, values, opts = {}) {
+  if (!values.length) {
+    container.innerHTML = `<div class="empty">Collecting trend</div>`;
     return;
   }
-  container.innerHTML = rows.map(row => {
-    const score = row.recovery_score ?? row.recovery_proxy_no_hrv;
-    const hrv = row.hrv_rmssd_ms;
-    const sleep = row.sleep?.minutes ?? row.sleep_minutes;
-    const title = `${row.generated_at_local || localTime(row.generated_at)} | recovery ${score} | HRV ${hrv ?? "n/a"} | sleep ${sleep ?? "n/a"}m`;
-    return `<div class="heat-cell ${scoreClass(score)}" title="${title}">
-      <strong>${Math.round(score)}</strong>
-      <span>${Number.isFinite(hrv) ? `${Math.round(hrv)}ms` : ""}</span>
-    </div>`;
-  }).join("");
+  const width = 320;
+  const height = 120;
+  const pad = 12;
+  const min = opts.min ?? Math.min(...values);
+  const max = Math.max(...values, min + 1) + (opts.maxPadding || 0);
+  const points = values.map((value, index) => {
+    const x = pad + (index / Math.max(1, values.length - 1)) * (width - pad * 2);
+    const y = height - pad - ((value - min) / Math.max(1, max - min)) * (height - pad * 2);
+    return [x, y, value];
+  });
+  const path = points.map(([x, y], i) => `${i ? "L" : "M"}${x.toFixed(1)},${y.toFixed(1)}`).join(" ");
+  const area = `${path} L${points.at(-1)[0].toFixed(1)},${height - pad} L${points[0][0].toFixed(1)},${height - pad} Z`;
+  container.innerHTML = `<svg viewBox="0 0 ${width} ${height}">
+    <path class="spark-area" d="${area}"></path>
+    <path class="spark-line" d="${path}" style="stroke:${opts.color || "var(--teal)"}"></path>
+    ${points.map(([x, y]) => `<circle class="spark-dot" cx="${x}" cy="${y}" r="3"></circle>`).join("")}
+  </svg>`;
 }
 
-async function boot() {
-  const [insights, connection, summary, fitness, capabilities, dictionary, trusleep, stress, sequence, liveHrv, historyText, insightsHistoryText] = await Promise.all([
-    loadJson(files.insights, {}),
-    loadJson(files.connection, {}),
-    loadJson(files.summary, {}),
-    loadJson(files.fitness, {}),
-    loadJson(files.capabilities, {}),
-    loadJson(files.dictionary, {}),
-    loadJson(files.trusleep, {}),
-    loadJson(files.stress, {}),
-    loadJson(files.sequence, {}),
-    loadJson(files.liveHrv, {}),
-    loadText(files.history, ""),
-    loadText(files.insightsHistory, "")
-  ]);
-  const historyRows = parseHistory(historyText);
-  const insightsRows = parseHistory(insightsHistoryText);
-  renderMetrics(summary, insights);
-  renderStatus(summary, capabilities, dictionary, connection, insights, liveHrv);
-  renderCharts(fitness, historyRows, insightsRows);
-  renderRecovery(insights, liveHrv);
-  renderHrvPanel(sequence, insights, insightsRows);
-  renderStrain(insights);
-  renderSleep(summary, trusleep, sequence, insights);
-  renderRoutes(dictionary, stress, sequence, insights, liveHrv);
-  renderCapabilities(capabilities);
-  renderRecoveryHeatmap(insightsRows, historyRows);
+function renderRecovery() {
+  const insights = state.data.insights || {};
+  const values = current();
+  $("#recovery-hero").innerHTML = ringSvg({
+    value: values.recovery,
+    max: 100,
+    size: 190,
+    stroke: 12,
+    color: scoreColor(values.recovery),
+    label: "Recovery",
+    sub: insights.recovery_label || ""
+  });
+  const hrv = insights.hrv || {};
+  const components = insights.components || {};
+  $("#recovery-details").innerHTML = [
+    detailRow("V", "Heart Rate Variability", Number.isFinite(values.hrv) ? `${Math.round(values.hrv)} ms` : "--", hrv.source || "sleep sequence"),
+    detailRow("R", "Resting Heart Rate", Number.isFinite(values.rhr) ? `${Math.round(values.rhr)} bpm` : "--", `${insights.resting_hr_baseline || "--"} baseline`),
+    detailRow("O", "Oxygen Saturation", insights.sleep?.avg_spo2 ? `${insights.sleep.avg_spo2}%` : "--", "overnight"),
+    `<section class="panel zone-bars">
+      ${Object.entries(components).map(([name, value]) => meter(name.toUpperCase(), number(value), 100)).join("")}
+    </section>`
+  ].join("");
 }
 
-boot();
+function renderSleep() {
+  const sleep = state.data.insights?.sleep || {};
+  const values = current();
+  $("#sleep-hero").innerHTML = ringSvg({
+    value: values.sleepScore,
+    max: 100,
+    size: 190,
+    stroke: 12,
+    color: "var(--orange)",
+    label: "Sleep",
+    sub: `${Math.floor(values.sleepMinutes / 60)}h ${Math.round(values.sleepMinutes % 60)}m`
+  });
+  const stages = sleep.stage_counts || {};
+  const total = Object.values(stages).reduce((sum, value) => sum + number(value), 0) || 1;
+  $("#sleep-details").innerHTML = [
+    detailRow("P", "Sleep Performance", `${sleep.performance_score ?? "--"}%`, `${sleep.need_minutes || 480} min need`),
+    detailRow("E", "Efficiency", sleep.sleep_efficiency ? `${sleep.sleep_efficiency}%` : "--", `${sleep.sleep_latency_min ?? "--"} min latency`),
+    detailRow("B", "Breath Rate", sleep.avg_breath_rate ?? "--", "overnight average"),
+    `<section class="panel zone-bars">
+      ${Object.entries(stages).map(([stage, value]) => {
+        const names = { 1: "Light", 2: "Deep", 3: "REM", 4: "Awake" };
+        return meter(names[stage] || `Stage ${stage}`, number(value), total, "var(--teal)");
+      }).join("") || `<div class="empty">No stages yet</div>`}
+    </section>`
+  ].join("");
+}
+
+function renderStrain() {
+  const strain = state.data.insights?.strain || {};
+  const zones = strain.zone_minutes || {};
+  const maxZone = Math.max(...Object.values(zones).map(number), 1);
+  $("#stress-hero").innerHTML = ringSvg({
+    value: current().strain,
+    max: 21,
+    size: 190,
+    stroke: 12,
+    color: "var(--blue)",
+    label: "Strain",
+    sub: state.data.insights?.training_balance?.label || ""
+  });
+  $("#stress-breakdown").innerHTML = `<div class="stress-copy">
+    ${stressSentence(zones)}
+  </div>`;
+  $("#strain-details").innerHTML = `<div class="zone-bars">
+    ${Object.entries(zones).map(([name, value]) => meter(name, number(value), maxZone, zoneColor(name))).join("")}
+    ${detailRow("L", "Load Ratio", state.data.insights?.training_balance?.load_ratio ?? "--", state.data.insights?.training_balance?.recommendation || "")}
+  </div>`;
+}
+
+function zoneColor(name) {
+  if (name.includes("hard") || name.includes("max")) return "var(--orange)";
+  if (name.includes("moderate")) return "var(--teal)";
+  return "var(--blue)";
+}
+
+function stressSentence(zones) {
+  const easy = number(zones.easy);
+  const moderate = number(zones.moderate);
+  const hard = number(zones.hard) + number(zones.max);
+  const total = easy + moderate + hard;
+  if (!total) return "Stress and strain zones will populate after the next synced heart-rate window.";
+  const lowPct = Math.round((easy / total) * 100);
+  return `${lowPct}% of tracked strain time was low intensity. Moderate load lasted ${Math.round(moderate)} minutes; high load lasted ${Math.round(hard)} minutes.`;
+}
+
+function renderRoutes() {
+  const flags = state.data.capabilities?.capability_flags || {};
+  const quality = state.data.insights?.data_quality || {};
+  const rows = [
+    ["Stored reconnect", "ready", state.data.connection?.state || "unknown"],
+    ["Sleep sequence HRV", quality.hrv_source || "pending", `${quality.sleep_sequence_sessions || 0} sessions`],
+    ["Weather push", "queued", "service 0x0f"],
+    ["Watchfaces", flags.watchface ? "supported" : "audit", "service 0x27"],
+    ["Live RRI", quality.live_hrv_transport?.state || "diagnostic", `${quality.live_hrv_transport?.sample_count || 0} samples`]
+  ];
+  $("#route-status").innerHTML = rows.map(([name, value, sub]) => detailRow("•", name, value, sub)).join("");
+  $("#watchface-status").innerHTML = [
+    detailRow("W", "Read-only watchface route", "next", "params, list, names"),
+    detailRow("U", "Upload route", "gated", "validate package before writing")
+  ].join("");
+}
+
+function renderWeather() {
+  const weather = state.weather;
+  if (weather) {
+    $("#weather-temp").textContent = `${Math.round(weather.current_temp_c)}°`;
+    $("#weather-location").textContent = weather.location || "Local Weather";
+    $("#forecast-strip").innerHTML = (weather.daily || []).slice(0, 4).map((day) => `<div class="forecast-day">
+      <span>${day.label}</span>
+      <strong>${Math.round(day.high_temp_c)}°/${Math.round(day.low_temp_c)}°</strong>
+    </div>`).join("");
+  }
+  const lastWeather = (state.data.lastCommands || []).filter((cmd) => cmd.type === "weather").at(-1);
+  $("#weather-status").innerHTML = [
+    detailRow("B", "Bridge", state.bridgeBase || "same origin", "weather command target"),
+    detailRow("Q", "Last Weather Command", lastWeather?.state || "none", lastWeather?.timestamp_local || "")
+  ].join("");
+}
+
+function renderAll() {
+  renderHeader();
+  renderToday();
+  renderTrends();
+  renderRecovery();
+  renderSleep();
+  renderStrain();
+  renderRoutes();
+  renderWeather();
+}
+
+async function command(path, payload = {}) {
+  const response = await fetch(bridgePath(path), {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload)
+  });
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  return response.json();
+}
+
+function toast(text) {
+  const existing = $(".toast");
+  if (existing) existing.remove();
+  const node = document.createElement("div");
+  node.className = "toast";
+  node.textContent = text;
+  document.body.append(node);
+  setTimeout(() => node.remove(), 2800);
+}
+
+async function queueSync(full = false) {
+  try {
+    await command("/api/commands/sync", { full, live_hrv: false });
+    toast(full ? "Full sync queued" : "Sync queued");
+    await refresh();
+  } catch (error) {
+    toast(`Sync failed: ${error.message}`);
+  }
+}
+
+function setupNavigation() {
+  document.addEventListener("click", (event) => {
+    const target = event.target.closest("[data-goto]");
+    if (!target) return;
+    showView(target.dataset.goto);
+  });
+}
+
+function showView(name) {
+  $$(".view").forEach((view) => view.classList.toggle("active", view.dataset.view === name));
+  $$(".bottom-nav button").forEach((button) => button.classList.toggle("active", button.dataset.goto === name));
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function wmoToOwm(code) {
+  if (code === 0) return 800;
+  if ([1, 2].includes(code)) return 801;
+  if (code === 3) return 804;
+  if ([45, 48].includes(code)) return 741;
+  if ([51, 53, 55, 56, 57].includes(code)) return 300;
+  if ([61, 63, 65, 66, 67, 80, 81, 82].includes(code)) return 500;
+  if ([71, 73, 75, 77, 85, 86].includes(code)) return 600;
+  if ([95, 96, 99].includes(code)) return 200;
+  return 800;
+}
+
+async function fetchWeather() {
+  const lat = Number($("#weather-lat").value);
+  const lon = Number($("#weather-lon").value);
+  if (!Number.isFinite(lat) || !Number.isFinite(lon)) {
+    toast("Set latitude and longitude first");
+    return null;
+  }
+  const params = new URLSearchParams({
+    latitude: String(lat),
+    longitude: String(lon),
+    current: "temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m,wind_direction_10m",
+    hourly: "temperature_2m,precipitation_probability,uv_index,weather_code",
+    daily: "weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max",
+    forecast_days: "4",
+    timezone: "auto"
+  });
+  const response = await fetch(`https://api.open-meteo.com/v1/forecast?${params}`);
+  if (!response.ok) throw new Error(`weather HTTP ${response.status}`);
+  const data = await response.json();
+  const currentWeather = data.current || {};
+  const daily = (data.daily?.time || []).map((date, index) => ({
+    label: new Date(date).toLocaleDateString([], { weekday: "short" }),
+    timestamp: Math.floor(new Date(date).getTime() / 1000),
+    condition_code: wmoToOwm(data.daily.weather_code?.[index] ?? currentWeather.weather_code),
+    high_temp_c: data.daily.temperature_2m_max?.[index],
+    low_temp_c: data.daily.temperature_2m_min?.[index],
+    sunrise: Math.floor(new Date(data.daily.sunrise?.[index] || date).getTime() / 1000),
+    sunset: Math.floor(new Date(data.daily.sunset?.[index] || date).getTime() / 1000),
+    uv_index: data.daily.uv_index_max?.[index] ?? 0
+  }));
+  state.weather = {
+    location: $("#weather-name").value || "Local Weather",
+    latitude: lat,
+    longitude: lon,
+    timestamp: Math.floor(Date.now() / 1000),
+    source: "Open-Meteo",
+    current_temp_c: currentWeather.temperature_2m,
+    feels_like_c: currentWeather.apparent_temperature,
+    humidity: currentWeather.relative_humidity_2m,
+    condition_code: wmoToOwm(currentWeather.weather_code),
+    wind_speed_kmh: currentWeather.wind_speed_10m,
+    wind_direction: currentWeather.wind_direction_10m,
+    low_temp_c: daily[0]?.low_temp_c ?? currentWeather.temperature_2m,
+    high_temp_c: daily[0]?.high_temp_c ?? currentWeather.temperature_2m,
+    uv_index: daily[0]?.uv_index ?? 0,
+    hourly: (data.hourly?.time || []).slice(0, 24).map((time, index) => ({
+      timestamp: Math.floor(new Date(time).getTime() / 1000),
+      condition_code: wmoToOwm(data.hourly.weather_code?.[index] ?? currentWeather.weather_code),
+      temp_c: data.hourly.temperature_2m?.[index],
+      precipitation: data.hourly.precipitation_probability?.[index] ?? 0,
+      uv_index: data.hourly.uv_index?.[index] ?? 0
+    })),
+    daily
+  };
+  renderWeather();
+  toast("Weather fetched");
+  return state.weather;
+}
+
+async function pushWeather() {
+  try {
+    const weather = state.weather || await fetchWeather();
+    if (!weather) return;
+    await command("/api/commands/weather", weather);
+    toast("Weather push queued");
+  } catch (error) {
+    toast(`Weather failed: ${error.message}`);
+  }
+}
+
+function setupActions() {
+  $("#refresh-button").addEventListener("click", refresh);
+  $("#sync-button").addEventListener("click", () => queueSync(false));
+  $("#light-sync-button").addEventListener("click", () => queueSync(false));
+  $("#full-sync-button").addEventListener("click", () => queueSync(true));
+  $("#weather-fetch-button").addEventListener("click", () => fetchWeather().catch((error) => toast(error.message)));
+  $("#weather-send-button").addEventListener("click", pushWeather);
+  $("#geo-button").addEventListener("click", () => {
+    if (!navigator.geolocation) {
+      toast("Location unavailable");
+      return;
+    }
+    navigator.geolocation.getCurrentPosition((pos) => {
+      $("#weather-lat").value = pos.coords.latitude.toFixed(5);
+      $("#weather-lon").value = pos.coords.longitude.toFixed(5);
+      toast("Location set");
+    }, () => toast("Location denied"));
+  });
+  $("#bridge-url").value = state.bridgeBase;
+  $("#save-bridge-button").addEventListener("click", async () => {
+    state.bridgeBase = $("#bridge-url").value.trim();
+    localStorage.setItem("huawhoop.bridgeBase", state.bridgeBase);
+    await refresh();
+    toast("Bridge saved");
+  });
+  $("#clear-bridge-button").addEventListener("click", async () => {
+    state.bridgeBase = "";
+    $("#bridge-url").value = "";
+    localStorage.removeItem("huawhoop.bridgeBase");
+    await refresh();
+  });
+}
+
+async function refresh() {
+  await loadData();
+  renderAll();
+}
+
+setupNavigation();
+setupActions();
+await refresh();
+setInterval(refresh, 30000);

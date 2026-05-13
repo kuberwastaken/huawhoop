@@ -25,10 +25,14 @@ ARTIFACT_ALLOWLIST = {
     "latest_recovery_report.md",
     "latest_capabilities.json",
     "latest_fitness_preview.json",
+    "latest_stress_preview.json",
     "latest_sleep_sequence_preview.json",
     "latest_trusleep_preview.json",
     "latest_live_hrv.json",
     "latest_passive_health_settings.json",
+    "recovery_history.jsonl",
+    "insights_history.jsonl",
+    "live_hrv_history.jsonl",
     "bridge_command_results.jsonl",
 }
 

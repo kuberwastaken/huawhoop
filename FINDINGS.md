@@ -705,3 +705,9 @@ Implementation choice: first add read-only params/list/name support. Only add up
   - `POST /api/commands/weather`: queues a weather push command for the active daemon session.
 - `band_daemon.py` polls `data/bridge_commands.jsonl` from inside the one authenticated BLE session and writes results to `data/bridge_command_results.jsonl`.
 - This is the first cross-device bridge: hosted PWA can point at a configured local bridge URL, while the bridge remains the only process touching BLE/auth secrets.
+
+### PWA Shell
+
+- The dashboard is now a mobile-first PWA shell rather than a static artifact viewer. It reads bridge API artifacts when served by `run_dashboard.py`, falls back to local `data/*.json` artifacts for static review, and exposes sync/weather commands without showing protocol internals.
+- Browser smoke check against local artifacts showed connected status, recovery, sleep, stress, weather, and HRV (`48 ms` from sleep sequence) without console errors.
+- The hosted version should remain a client. The BLE owner stays local because it needs stored HiChain keys, a long-lived connection, and battery-aware sync behavior near the band.

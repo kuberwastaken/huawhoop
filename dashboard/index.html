@@ -2,116 +2,210 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Huawei Band 10 Recovery Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#050706">
+  <title>Huawhoop</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <header class="topbar">
-    <div>
-      <h1>Huawei Band 10 Recovery</h1>
-      <p id="sync-label">Loading device artifacts...</p>
-    </div>
-    <div class="status-strip" id="status-strip"></div>
-  </header>
+  <div class="ambient" aria-hidden="true"></div>
 
-  <main>
-    <section class="metric-grid" id="metric-grid"></section>
-
-    <section class="content-grid">
-      <article class="panel panel-wide">
-        <div class="panel-head">
-          <div>
-            <h2>Heart Rate And SpO2</h2>
-            <p>Minute samples pulled from the fitness history route.</p>
-          </div>
-          <span class="pill" id="sample-count-pill">0 samples</span>
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="identity">
+        <div class="avatar">H</div>
+        <div>
+          <div class="eyebrow" id="connection-state">Connecting</div>
+          <h1>Huawhoop</h1>
         </div>
-        <div id="hr-chart" class="chart"></div>
-      </article>
+      </div>
+      <div class="device-chip">
+        <span id="battery-label">--%</span>
+        <span class="band-icon" aria-hidden="true"></span>
+      </div>
+    </header>
 
-      <article class="panel">
-        <div class="panel-head">
+    <main class="screen-stack">
+      <section class="view active" data-view="today">
+        <div class="date-row">
+          <button class="icon-button" id="refresh-button" type="button" title="Refresh">↻</button>
           <div>
-            <h2>Recovery Mix</h2>
-            <p>Weighted readiness components from the latest sync.</p>
+            <span>Today</span>
+            <strong id="sync-label">Waiting for bridge</strong>
           </div>
+          <button class="round-button" id="sync-button" type="button">Sync</button>
         </div>
-        <div id="recovery-panel" class="readout-panel"></div>
-      </article>
 
-      <article class="panel">
-        <div class="panel-head">
+        <section class="ring-row" id="ring-row"></section>
+        <section class="card-grid" id="daily-cards"></section>
+
+        <section class="panel review-card">
+          <button class="row-button" type="button" data-goto="recovery">
+            <span>Your day in review</span>
+            <strong id="review-summary">Collecting data</strong>
+          </button>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>Today's Activities</h2>
+              <span id="activity-count">0 events</span>
+            </div>
+            <button class="icon-button" id="light-sync-button" type="button" title="Light sync">⇄</button>
+          </div>
+          <div class="activity-list" id="activity-list"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>Weekly Trends</h2>
+              <span>Recovery and HRV</span>
+            </div>
+          </div>
+          <div class="weekly-grid">
+            <div class="trend-card">
+              <div class="mini-title">Recovery</div>
+              <div class="bar-trend" id="recovery-bars"></div>
+            </div>
+            <div class="trend-card">
+              <div class="mini-title">Heart Rate Variability</div>
+              <div class="line-trend" id="hrv-line"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="view" data-view="recovery">
+        <div class="page-title">
+          <button class="icon-button" type="button" data-goto="today">‹</button>
           <div>
-            <h2>HRV Baseline</h2>
-            <p>Sleep-sequence HRV and recent variability.</p>
+            <span>Today</span>
+            <h2>Recovery</h2>
           </div>
+          <button class="icon-button" type="button" title="Info">i</button>
         </div>
-        <div id="hrv-panel" class="readout-panel"></div>
-      </article>
+        <section class="hero-ring" id="recovery-hero"></section>
+        <section class="stack" id="recovery-details"></section>
+      </section>
 
-      <article class="panel">
-        <div class="panel-head">
+      <section class="view" data-view="strain">
+        <div class="page-title">
+          <button class="icon-button" type="button" data-goto="today">‹</button>
           <div>
-            <h2>Strain Load</h2>
-            <p>Heart-rate reserve load and training balance.</p>
+            <span>Today</span>
+            <h2>Stress Monitor</h2>
           </div>
+          <button class="icon-button" type="button" title="Settings">⚙</button>
         </div>
-        <div id="strain-panel" class="readout-panel"></div>
-      </article>
+        <section class="stress-hero" id="stress-hero"></section>
+        <section class="panel" id="stress-breakdown"></section>
+        <section class="panel" id="strain-details"></section>
+      </section>
 
-      <article class="panel">
-        <div class="panel-head">
+      <section class="view" data-view="sleep">
+        <div class="page-title">
+          <button class="icon-button" type="button" data-goto="today">‹</button>
           <div>
-            <h2>Sleep Window</h2>
-            <p>TruSleep sequence summary, stages and overnight vitals.</p>
+            <span>Today</span>
+            <h2>Sleep</h2>
           </div>
+          <button class="icon-button" type="button" title="Info">i</button>
         </div>
-        <div id="sleep-panel" class="sleep-readout"></div>
-      </article>
+        <section class="hero-ring" id="sleep-hero"></section>
+        <section class="stack" id="sleep-details"></section>
+      </section>
 
-      <article class="panel panel-wide">
-        <div class="panel-head">
+      <section class="view" data-view="weather">
+        <div class="page-title">
+          <button class="icon-button" type="button" data-goto="today">‹</button>
           <div>
-            <h2>Data Routes</h2>
-            <p>What the band exposed during the latest authenticated session.</p>
+            <span>Device Push</span>
+            <h2>Weather</h2>
           </div>
+          <button class="round-button" id="weather-send-button" type="button">Push</button>
         </div>
-        <div id="route-table" class="route-table"></div>
-      </article>
 
-      <article class="panel">
-        <div class="panel-head">
+        <section class="panel weather-panel">
+          <div class="weather-now">
+            <div>
+              <span class="mini-title">Current</span>
+              <strong id="weather-temp">--°</strong>
+              <p id="weather-location">Set location</p>
+            </div>
+            <div class="weather-orbit" aria-hidden="true"></div>
+          </div>
+          <div class="weather-controls">
+            <label>
+              <span>Location</span>
+              <input id="weather-name" value="Local Weather">
+            </label>
+            <label>
+              <span>Latitude</span>
+              <input id="weather-lat" inputmode="decimal" placeholder="12.9716">
+            </label>
+            <label>
+              <span>Longitude</span>
+              <input id="weather-lon" inputmode="decimal" placeholder="77.5946">
+            </label>
+          </div>
+          <div class="button-row">
+            <button class="secondary-button" id="geo-button" type="button">Use Device Location</button>
+            <button class="secondary-button" id="weather-fetch-button" type="button">Fetch Weather</button>
+          </div>
+          <div class="forecast-strip" id="forecast-strip"></div>
+        </section>
+
+        <section class="panel" id="weather-status"></section>
+      </section>
+
+      <section class="view" data-view="lab">
+        <div class="page-title">
+          <button class="icon-button" type="button" data-goto="today">‹</button>
           <div>
-            <h2>Capabilities</h2>
-            <p>Expanded capability bits decoded from service 0x01/0x37.</p>
+            <span>Protocol</span>
+            <h2>Lab</h2>
           </div>
+          <button class="round-button" id="save-bridge-button" type="button">Save</button>
         </div>
-        <div id="capabilities" class="cap-list"></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-head">
-          <div>
-            <h2>Recovery History</h2>
-            <p>Recent connector runs appended to recovery_history.jsonl.</p>
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>Bridge</h2>
+              <span>Local daemon or remote relay</span>
+            </div>
           </div>
-        </div>
-        <div id="history-chart" class="chart small-chart"></div>
-      </article>
-
-      <article class="panel panel-wide">
-        <div class="panel-head">
-          <div>
-            <h2>Recovery Calendar</h2>
-            <p>Recent readiness, HRV and sleep entries.</p>
+          <label class="bridge-field">
+            <span>Bridge URL</span>
+            <input id="bridge-url" placeholder="http://127.0.0.1:8765">
+          </label>
+          <div class="button-row">
+            <button class="secondary-button" id="clear-bridge-button" type="button">Use Same Origin</button>
+            <button class="secondary-button" id="full-sync-button" type="button">Full Sync</button>
           </div>
-        </div>
-        <div id="recovery-heatmap" class="heatmap"></div>
-      </article>
-    </section>
-  </main>
+        </section>
+        <section class="panel" id="route-status"></section>
+        <section class="panel" id="watchface-status"></section>
+      </section>
+    </main>
 
-  <script src="./app.js"></script>
+    <nav class="bottom-nav">
+      <button class="active" type="button" data-goto="today"><span>⌂</span><strong>Home</strong></button>
+      <button type="button" data-goto="sleep"><span>♡</span><strong>Sleep</strong></button>
+      <button type="button" data-goto="strain"><span>⌁</span><strong>Stress</strong></button>
+      <button type="button" data-goto="weather"><span>☼</span><strong>Weather</strong></button>
+      <button type="button" data-goto="lab"><span>W</span><strong>Lab</strong></button>
+    </nav>
+  </div>
+
+  <script src="./app.js" type="module"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./service-worker.js").catch(() => {});
+    }
+  </script>
 </body>
 </html>
