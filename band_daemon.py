@@ -13,6 +13,7 @@ from connect import (
     GATT_READ,
     Band,
     append_jsonl_artifact,
+    bleak_client_options,
     discover_band_device,
     load_or_create_config,
     local_time_label,
@@ -244,7 +245,7 @@ async def run_connected_session(cfg: dict):
         _status_payload("not_found", device_mac=cfg["device_mac"], timeout_sec=scan_timeout)
         raise BleakDeviceNotFoundError(cfg["device_mac"], "Band was not advertising or visible to Windows Bluetooth")
 
-    async with BleakClient(device) as client:
+    async with BleakClient(device, **bleak_client_options()) as client:
         band = Band(client=client, cfg=cfg)
         await band.connect()
         await band.handshake()
@@ -319,11 +320,20 @@ async def run_connected_session(cfg: dict):
 async def main():
     cfg = load_or_create_config()
     backoff = 5
+    max_seconds = int(os.getenv("BAND10_DAEMON_MAX_SECONDS", "0"))
+    stop_at = time.time() + max_seconds if max_seconds > 0 else None
     while True:
+        if stop_at is not None and time.time() >= stop_at:
+            _status_payload(
+                "soak_complete",
+                device_mac=cfg["device_mac"],
+                reason="bounded verification window ended before a stable session",
+            )
+            return
         try:
             _status_payload("connecting", device_mac=cfg["device_mac"])
             await run_connected_session(cfg)
-            if int(os.getenv("BAND10_DAEMON_MAX_SECONDS", "0")) > 0:
+            if stop_at is not None:
                 return
             _status_payload("disconnected", device_mac=cfg["device_mac"], reason="client session ended")
             backoff = 5
@@ -334,7 +344,12 @@ async def main():
             logger.exception("Daemon session failed")
             state = "not_found" if isinstance(e, BleakDeviceNotFoundError) else "reconnecting"
             _status_payload(state, device_mac=cfg["device_mac"], error=repr(e), retry_in_sec=backoff)
-            await asyncio.sleep(backoff)
+            sleep_for = backoff
+            if stop_at is not None:
+                sleep_for = max(0.0, min(float(backoff), stop_at - time.time()))
+                if sleep_for <= 0:
+                    continue
+            await asyncio.sleep(sleep_for)
             backoff = min(120, backoff * 2)
 
 

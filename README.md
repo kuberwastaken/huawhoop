@@ -22,6 +22,8 @@ timely syncs without repeated pairing/connect churn.
 Useful knobs:
 
 ```powershell
+$env:BAND10_SCAN_TIMEOUT_SECONDS = "30"
+$env:BAND10_CONNECT_TIMEOUT_SECONDS = "30"
 $env:BAND10_SYNC_INTERVAL_SECONDS = "300"   # minimum 60
 $env:BAND10_FULL_SYNC_EVERY = "6"
 $env:BAND10_INITIAL_FULL_SYNC = "1"
@@ -30,6 +32,10 @@ $env:BAND10_KEEPALIVE_MODE = "battery"      # connect_status is init-only on thi
 $env:BAND10_ENABLE_PASSIVE_SETTINGS = "1"   # part of the stable connected-state recipe
 ```
 
+`BAND10_PAIR_BEFORE_CONNECT=1` is available as a last-resort Windows Bluetooth
+debug knob. Leave it off for normal daemon use because stored-key reconnects should
+not trigger pairing prompts or vibrations.
+
 For a bounded connection verification run:
 
 ```powershell
@@ -37,6 +43,14 @@ $env:BAND10_DAEMON_MAX_SECONDS = "120"
 $env:BAND10_INITIAL_FULL_SYNC = "0"
 python band_daemon.py
 ```
+
+Bounded daemon runs now exit even if the band is not visible or Windows times out
+while opening GATT services, which keeps verification loops from hanging forever.
+
+Local secrets and live artifacts are intentionally ignored: `band.ini`, `data/`,
+the decompiled Huawei Health tree, Gadgetbridge, and external research clones stay
+on disk but out of commits. Use `dashboard/sample-data/` for sanitized hosted
+fixtures.
 
 HRV now comes from the sleep-sequence dictionary file (`sequence_data/SLEEP_DETAILS`)
 downloaded during full sync. This is the same route Gadgetbridge uses for TruSleep

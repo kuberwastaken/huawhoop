@@ -46,7 +46,12 @@ $env:BAND10_FULL_SYNC_EVERY = "6"
 $env:BAND10_KEEPALIVE_SECONDS = "60"
 $env:BAND10_KEEPALIVE_MODE = "battery"
 $env:BAND10_SCAN_TIMEOUT_SECONDS = "30"
+$env:BAND10_CONNECT_TIMEOUT_SECONDS = "30"
 ```
+
+For one-off Windows Bluetooth debugging only, `BAND10_PAIR_BEFORE_CONNECT=1` passes
+Bleak's pairing hint before opening the GATT session. It should stay disabled for
+normal stored-key reconnects.
 
 ## Weather
 
@@ -63,7 +68,7 @@ python connect.py
 ## Safety
 
 - `band.ini`, `data/`, the decompiled APK, and external source snapshots are
-  excluded from Vercel deployment.
+  ignored by Git and excluded from Vercel deployment.
 - The hosted PWA falls back to sanitized sample artifacts when no bridge is set.
 - LLM analysis is intentionally disabled until the deterministic bridge and
   analytics are stable.

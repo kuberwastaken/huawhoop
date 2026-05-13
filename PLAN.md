@@ -167,6 +167,8 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Add focused one-shot modes for weather, watchfaces, watchface activation, and stress.
 - [x] Align one-shot connection setup with daemon scan-before-connect behavior.
 - [x] Add shared BLE discovery fallback by advertised band name after factory reset.
+- [x] Restore repo hygiene: ignore and untrack local keys, live data, decompiled APK, Gadgetbridge, and external research clones.
+- [x] Add configurable Bleak connect timeout/pairing debug knobs and bounded daemon retry exits.
 - [ ] Live-test weather push through the daemon.
 - [ ] Live-test automatic stress calibration and `svc=0x20/cmd=0x09`.
 - [ ] Live-test watchface inventory after the reset/stored reconnect.

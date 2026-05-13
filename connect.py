@@ -4216,7 +4216,7 @@ async def run():
 
     logger.info(f"Connecting to {cfg['device_mac']}...")
 
-    async with BleakClient(device) as client:
+    async with BleakClient(device, **bleak_client_options()) as client:
         band = Band(client=client, cfg=cfg)
         await band.connect()
         await band.handshake()
