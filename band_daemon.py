@@ -118,6 +118,7 @@ async def run_connected_session(cfg: dict):
         sync_interval = max(60, int(os.getenv("BAND10_SYNC_INTERVAL_SECONDS", "300")))
         keepalive_interval = max(15, int(os.getenv("BAND10_KEEPALIVE_SECONDS", "60")))
         live_hrv_every = max(0, int(os.getenv("BAND10_LIVE_HRV_EVERY", "0")))
+        initial_full_sync = os.getenv("BAND10_INITIAL_FULL_SYNC", "1") != "0"
         max_seconds = int(os.getenv("BAND10_DAEMON_MAX_SECONDS", "0"))
         stop_at = time.time() + max_seconds if max_seconds > 0 else None
         cycle = 0
@@ -132,7 +133,7 @@ async def run_connected_session(cfg: dict):
                 now = time.time()
                 if now >= next_sync:
                     cycle += 1
-                    full = cycle == 1 or cycle % full_every == 0
+                    full = (initial_full_sync and cycle == 1) or cycle % full_every == 0
                     live_hrv = live_hrv_every > 0 and (cycle == 1 or cycle % live_hrv_every == 0)
                     sync_status = await sync_core(band, full=full, live_hrv=live_hrv)
                     _status_payload(
