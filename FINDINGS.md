@@ -127,8 +127,9 @@ dictionary identity and field validation:
   command `3` to a real-time HR list. This appears to be Huawei's newer realtime
   HR surface; it is related to, but not identical to, Gadgetbridge's RRI parser on
   `cmd=0x05`. Python now records both `cmd=0x05` RRI/SQI packets and `cmd=0x03`
-  realtime HR packets during live probes so the next run can prove which stream this
-  firmware actually emits.
+  realtime HR packets during live probes. Empirical result: `hr_type=1` opens a
+  realtime HR stream on `cmd=0x03` using extended TLV tags `0x81/0x82`; `hr_type=3`
+  is still the Gadgetbridge RRI/stress route and remains blocked by `0x0001ec38`.
 - `DicDataTypeUtil.java` confirms `SLEEP_DETAILS_AVG_HRV`,
   `SLEEP_DETAILS_HRV_DAY_TO_BASELINE`, `SLEEP_DETAILS_AVG_BREATHRATE`,
   `SLEEP_DETAILS_AVG_OXYGEN_SATURATION`, `SLEEP_DETAILS_SLEEP_SCORE`, etc.

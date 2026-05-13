@@ -152,8 +152,11 @@ def _summarize_live_hrv_transport(live_hrv: dict) -> dict:
     ]
     blocked = 126008 in data_statuses
     sample_count = live_hrv.get("sample_count", 0)
+    realtime_hr_sample_count = live_hrv.get("realtime_hr_sample_count", 0)
     if sample_count:
         state = "streaming"
+    elif realtime_hr_sample_count:
+        state = "hr_only_stream"
     elif blocked:
         state = "opened_no_stream"
     elif open_ok:
@@ -165,7 +168,7 @@ def _summarize_live_hrv_transport(live_hrv: dict) -> dict:
     return {
         "state": state,
         "sample_count": sample_count,
-        "realtime_hr_sample_count": live_hrv.get("realtime_hr_sample_count", 0),
+        "realtime_hr_sample_count": realtime_hr_sample_count,
         "request": live_hrv.get("request") or {},
         "latest_status": latest.get("status") if latest else None,
         "latest_status_hex": f"0x{latest.get('status'):08x}" if latest else None,

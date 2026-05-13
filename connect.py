@@ -2911,9 +2911,9 @@ class Band:
 
         samples = []
         now = int(time.time())
-        container = data.get(0x01, b"")
+        container = data.get(0x01) or data.get(0x81) or b""
         for tag, payload in tlv_items(container):
-            if tag != 0x02:
+            if tag not in (0x02, 0x82):
                 continue
             item = tlv_dec(payload)
             hr = self._tlv_int(item.get(0x03, b""))
