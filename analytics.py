@@ -192,20 +192,92 @@ def _sleep_fragmentation_score(sleep_segments: list[dict], sleep_minutes: float)
     return round(_clamp(100 - gap_penalty - frequency_penalty, 0, 100))
 
 
-def _sleep_quality_model(sleep_minutes: float, sleep_segments: list[dict], history: list[dict]) -> dict:
+def _sleep_stage_score(deep_minutes: float, rem_minutes: float) -> int | None:
+    if deep_minutes <= 0 and rem_minutes <= 0:
+        return None
+    deep_score = _clamp(100 * deep_minutes / 90.0, 0, 100)
+    rem_score = _clamp(100 * rem_minutes / 90.0, 0, 100)
+    return round(0.5 * deep_score + 0.5 * rem_score)
+
+
+def _sleep_interruptions_score(awake_minutes: float, awakening_durations: list[float]) -> int:
+    duration_score = 80.0
+    if awake_minutes > 20:
+        duration_score = max(0, 80.0 - ((awake_minutes - 20) / 70.0) * 80.0)
+    significant = sum(1 for duration in awakening_durations if duration > 5)
+    frequency_fractions = (1.0, 1.0, 0.75, 0.5, 0.0)
+    frequency_score = 20.0 * frequency_fractions[min(significant, len(frequency_fractions) - 1)]
+    return round(_clamp(duration_score + frequency_score, 0, 100))
+
+
+def _sleep_stage_breakdown(details: dict) -> dict:
+    # Gadgetbridge maps Huawei sequence stages as:
+    # 1 light, 2 REM, 3 deep, 4 awake, 5 nap/light.
+    counts = {int(k): int(v) for k, v in (details.get("stage_counts") or {}).items()}
+    stages = sorted(details.get("stages") or [], key=lambda row: row.get("timestamp") or 0)
+    if stages and not counts:
+        counts = {}
+        for row in stages:
+            stage = int(row.get("stage", 0) or 0)
+            counts[stage] = counts.get(stage, 0) + 1
+
+    awakening_durations = []
+    current_awake = 0
+    for row in stages:
+        stage = int(row.get("stage", 0) or 0)
+        if stage == 4:
+            current_awake += 1
+        elif current_awake:
+            awakening_durations.append(current_awake)
+            current_awake = 0
+    if current_awake:
+        awakening_durations.append(current_awake)
+
+    return {
+        "light_minutes": counts.get(1, 0) + counts.get(5, 0),
+        "rem_minutes": counts.get(2, 0),
+        "deep_minutes": counts.get(3, 0),
+        "awake_minutes": counts.get(4, 0),
+        "nap_minutes": counts.get(5, 0),
+        "awakening_durations": awakening_durations,
+        "raw_counts": {str(k): v for k, v in sorted(counts.items())},
+    }
+
+
+def _sleep_quality_model(sleep_minutes: float, sleep_segments: list[dict], history: list[dict],
+                         stage_breakdown: dict | None = None) -> dict:
     duration = _sleep_duration_score(sleep_minutes)
     fragmentation = _sleep_fragmentation_score(sleep_segments, sleep_minutes)
     consistency = _sleep_consistency_score(history, sleep_segments)
-    if consistency is None:
-        overall = duration * 0.70 + fragmentation * 0.30
+    stages = None
+    interruptions = fragmentation
+    if stage_breakdown:
+        stages = _sleep_stage_score(stage_breakdown.get("deep_minutes", 0), stage_breakdown.get("rem_minutes", 0))
+        interruptions = _sleep_interruptions_score(
+            stage_breakdown.get("awake_minutes", 0),
+            stage_breakdown.get("awakening_durations") or [],
+        )
+
+    weighted = [("duration", duration, 0.40), ("interruptions", interruptions, 0.20)]
+    if stages is not None:
+        weighted.append(("stages", stages, 0.20))
     else:
-        overall = duration * 0.55 + consistency * 0.25 + fragmentation * 0.20
+        weighted[0] = ("duration", duration, 0.55)
+        weighted[1] = ("interruptions", interruptions, 0.25)
+    if consistency is not None:
+        weighted.append(("consistency", consistency, 0.20))
+    else:
+        weighted = [(name, value, weight / 0.80) for name, value, weight in weighted]
+    overall = sum(value * weight for _name, value, weight in weighted) / sum(weight for _name, _value, weight in weighted)
     return {
         "score": round(_clamp(overall, 0, 100)),
         "duration": duration,
+        "stages": stages,
         "consistency": consistency,
+        "interruptions": interruptions,
         "fragmentation": fragmentation,
-        "method": "duration sigmoid + bedtime consistency + sleep fragmentation",
+        "stage_breakdown": stage_breakdown or {},
+        "method": "Open Wearables-inspired duration + deep/REM stages + consistency + awake interruptions",
     }
 
 
@@ -638,6 +710,7 @@ def _sleep_sequence_sessions(sequence: dict) -> list[dict]:
         if minutes < 90 or (score is None and avg_hrv is None and valid_data is None):
             continue
         details = session.get("details") or {}
+        stage_breakdown = _sleep_stage_breakdown(details)
         sessions.append({
             "start_ts": _sequence_metric(summary, "fallAsleepTime", 1) or session.get("start_ts"),
             "end_ts": _sequence_metric(summary, "wakeupTime", 1) or session.get("end_ts"),
@@ -652,6 +725,7 @@ def _sleep_sequence_sessions(sequence: dict) -> list[dict]:
             "sleep_efficiency": _sequence_metric(summary, "sleepEfficiency", 1, 100),
             "sleep_latency_min": _sequence_metric(summary, "sleepLatency", 0, 240),
             "stage_counts": details.get("stage_counts") or {},
+            "stage_breakdown": stage_breakdown,
             "stage_minutes": details.get("stage_minute_count"),
         })
     return sessions
@@ -664,6 +738,9 @@ def _extract_sleep_sequence_sleep(sequence: dict) -> dict | None:
     latest = sessions[-1]
     latest["source"] = "sleep_sequence"
     latest["session_count"] = len(sessions)
+    latest["recent_sleep_minutes"] = [row.get("sleep_minutes") for row in sessions[-14:] if row.get("sleep_minutes")]
+    if latest["recent_sleep_minutes"]:
+        latest["baseline_minutes"] = round(statistics.median(latest["recent_sleep_minutes"]))
     return latest
 
 
@@ -719,13 +796,13 @@ def build_insights(data_dir: Path = DATA_DIR) -> dict:
     spo2 = [row.get("spo2") for row in steps if isinstance(row.get("spo2"), (int, float)) and row.get("spo2") > 0]
     if not spo2 and sequence_sleep and sequence_sleep.get("avg_spo2"):
         spo2 = [sequence_sleep["avg_spo2"]]
-    sleep_minutes = summary.get("sleep_minutes") or (sequence_sleep or {}).get("sleep_minutes") or 0
+    sleep_minutes = (sequence_sleep or {}).get("sleep_minutes") or summary.get("sleep_minutes") or 0
 
     strain = _strain_from_hr(heart_rates)
     sequence_avg_hr = (sequence_sleep or {}).get("avg_heart_rate")
     rhr = _mean(resting_hrs, sequence_avg_hr or (min(heart_rates) if heart_rates else None))
     rhr_baseline = _history_baseline(history, "resting_hr_avg", rhr or 60)
-    sleep_baseline = _history_baseline(history, "sleep_minutes", 480)
+    sleep_baseline = (sequence_sleep or {}).get("baseline_minutes") or _history_baseline(history, "sleep_minutes", 480)
 
     hrv = None
     live_td = live_hrv.get("time_domain") or {}
@@ -805,10 +882,16 @@ def build_insights(data_dir: Path = DATA_DIR) -> dict:
     sleep_segments = fitness.get("sleep") or []
     if not sleep_segments and sequence_sleep and sequence_sleep.get("start_ts") and sequence_sleep.get("end_ts"):
         sleep_segments = [{"start": sequence_sleep["start_ts"], "end": sequence_sleep["end_ts"]}]
-    sleep_model = _sleep_quality_model(sleep_minutes, sleep_segments, history)
+    sleep_model = _sleep_quality_model(
+        sleep_minutes,
+        sleep_segments,
+        history,
+        (sequence_sleep or {}).get("stage_breakdown"),
+    )
     device_sleep_score = (sequence_sleep or {}).get("device_score")
     if device_sleep_score is not None:
-        sleep_score = round(_clamp(device_sleep_score * 0.65 + sleep_model["score"] * 0.35, 0, 100))
+        device_weight = 0.35 if sleep_model.get("stages") is not None else 0.65
+        sleep_score = round(_clamp(device_sleep_score * device_weight + sleep_model["score"] * (1 - device_weight), 0, 100))
     else:
         sleep_score = sleep_model["score"]
     spo2_score = None
@@ -867,10 +950,13 @@ def build_insights(data_dir: Path = DATA_DIR) -> dict:
             "avg_breath_rate": (sequence_sleep or {}).get("avg_breath_rate"),
             "avg_spo2": (sequence_sleep or {}).get("avg_spo2"),
             "stage_counts": (sequence_sleep or {}).get("stage_counts") or {},
+            "stage_breakdown": sleep_model.get("stage_breakdown") or {},
             "stage_minutes": (sequence_sleep or {}).get("stage_minutes"),
             "components": {
                 "duration": sleep_model["duration"],
+                "stages": sleep_model["stages"],
                 "consistency": sleep_model["consistency"],
+                "interruptions": sleep_model["interruptions"],
                 "fragmentation": sleep_model["fragmentation"],
             },
             "method": sleep_model["method"],

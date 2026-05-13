@@ -693,6 +693,8 @@ Implementation choice: first add read-only params/list/name support. Only add up
 - Open Wearables is the best open-source algorithm baseline found so far. It has explicit sleep scoring primitives, duration/stage/consistency/interruption scoring, and HRV resilience helpers.
 - WHOOP's public docs confirm high-level behavior, not exact formulas: recovery is driven mainly by HRV, resting HR, respiratory rate, sleep, skin temp, and SpO2; strain is cardiovascular load on a logarithmic 0-21 scale.
 - Current project code already shares Open Wearables-like sleep duration and sigmoid scoring. Next step is to port the actual sleep score breakdown cleanly and add a transparent strain/recovery model around our Huawei data availability.
+- Sleep sequence is now preferred over older fitness-history sleep fragments. Huawei sequence stages are mapped through Gadgetbridge semantics: `1=light`, `2=REM`, `3=deep`, `4=awake`, `5=nap/light`.
+- Sleep scoring now uses Open Wearables-inspired pillars: duration sigmoid, deep/REM stage target score, bedtime consistency when enough history exists, and awake-interruption penalty. Latest local artifact changed sleep minutes from the misleading 17-minute fitness fragment to the 278-minute sequence session.
 
 ### Bridge API
 

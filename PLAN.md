@@ -111,13 +111,13 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 
 ## Milestone 4: Algorithms
 
-- [ ] Lock HRV extraction and baseline logic from sleep sequence data.
-- [ ] Implement recovery score from HRV, resting HR, sleep performance, strain load, and recent trend.
+- [x] Lock HRV extraction and baseline logic from sleep sequence data.
+- [x] Implement recovery score from HRV, resting HR, sleep performance, strain load, and recent trend.
 - [ ] Implement strain score from heart-rate zones and activity duration.
-- [ ] Implement sleep performance from duration, regularity, stages, and efficiency.
+- [x] Implement sleep performance from duration, regularity, stages, and awake interruptions.
 - [ ] Implement stress summaries by low/medium/high duration where data exists.
 - [ ] Keep equations readable and cite/source each heuristic in `FINDINGS.md`.
-- [ ] Evaluate open-source wearable/WHOOP-like analytics repos before inventing complex formulas.
+- [x] Evaluate open-source wearable/WHOOP-like analytics repos before inventing complex formulas.
 
 ## Milestone 5: Watchfaces
 
