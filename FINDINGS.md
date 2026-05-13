@@ -727,6 +727,7 @@ Implementation status: `connect.py` now has watchface inventory calls for params
 - Browser smoke check against local artifacts showed connected status, recovery, sleep, stress, weather, and HRV (`48 ms` from sleep sequence) without console errors.
 - The hosted version should remain a client. The BLE owner stays local because it needs stored HiChain keys, a long-lived connection, and battery-aware sync behavior near the band.
 - Vercel is the selected static host for `huawhoop.kuber.studio`. `.vercelignore` excludes `band.ini`, `data/`, the decompiled APK, Gadgetbridge, and open-wearables source snapshots. Hosted PWA fallback data now comes from sanitized `dashboard/sample-data/*` artifacts unless the user configures a bridge URL.
+- `AUDIT.md` now tracks the Gadgetbridge/APK/Huawhoop comparison matrix so risky protocol work starts from exact source files rather than trial-and-error.
 
 ### Weather Implementation Status
 

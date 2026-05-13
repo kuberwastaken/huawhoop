@@ -24,6 +24,7 @@ The band is the source of truth for raw physiological data. Gadgetbridge and the
 - Sleep sequence download works through service `0x2C`; HRV can be extracted from sleep sequence artifacts.
 - Latest valid HRV observed from sleep sequence: 48 ms, baseline 28-51 ms.
 - The dashboard can read local JSON artifacts, but it is not yet a complete PWA or WHOOP-grade interface.
+- `AUDIT.md` is the current source-truth comparison across Gadgetbridge, Huawei Health APK, and Huawhoop implementation status.
 
 ## Architecture
 
@@ -173,9 +174,9 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 ## Research TODO
 
 - [x] Search for open-source recovery/strain/sleep algorithms.
-- [ ] Inspect `open-wearables-*` for reusable data models or algorithms.
+- [x] Inspect `open-wearables-*` for reusable data models or algorithms.
 - [ ] Investigate ECG availability on Huawei Band 10 and related Huawei devices.
-- [ ] Inspect Gadgetbridge data parsers for HRV, stress, SpO2, sleep stage, and activity semantics.
+- [x] Inspect Gadgetbridge data parsers for HRV, stress, SpO2, sleep stage, and activity semantics.
 
 ## Device Push TODO
 
