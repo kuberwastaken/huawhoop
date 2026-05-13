@@ -84,7 +84,12 @@ There are three distinct HRV-looking paths, and they are not equivalent:
 New local analytics code writes `data/latest_insights.json` and combines live RRI
 or sleep-sequence HRV, resting HR, sleep amount, SpO2, HR-load strain, and
 short/long training load into a dashboard-ready readiness model. The recovery score
-is intentionally labeled as a local model, not a WHOOP clone.
+is intentionally labeled as a local model, not a WHOOP clone. The training load
+model now uses an EWMA-style acute/chronic load calculation (7-day / 42-day time
+constants), reports load ratio, balance, monotony, and guidance, and records the
+latest live-HRV transport state/status in both `latest_insights.json` and the web
+dashboard. This keeps HRV failure modes visible while still making the reliable
+fitness, sleep, HR and SpO2 data useful.
 
 ### Gadgetbridge vs Current Implementation
 
@@ -144,7 +149,8 @@ dictionary identity and field validation:
 7. Build a local web dashboard over the JSON artifacts in `data/`, then continue
    adding panels as more routes become available. First dashboard is implemented in
    `dashboard/` and uses the reliable fitness artifacts plus explicit experimental
-   route statuses.
+   route statuses, including the exact live-HRV open/data status codes from the
+   latest probe.
 
 ## 2. Device Info
 

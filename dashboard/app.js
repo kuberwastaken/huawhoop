@@ -8,6 +8,7 @@ const files = {
   trusleep: "../data/latest_trusleep_preview.json",
   stress: "../data/latest_stress_preview.json",
   sequence: "../data/latest_sleep_sequence_preview.json",
+  liveHrv: "../data/latest_live_hrv.json",
   history: "../data/recovery_history.jsonl"
 };
 
@@ -53,6 +54,21 @@ function metric(label, value, sub) {
 
 function pill(text, cls = "") {
   return `<span class="pill ${cls}">${text}</span>`;
+}
+
+function compactStatus(status) {
+  if (status === null || status === undefined) return "n/a";
+  if (typeof status === "string") return status;
+  return `0x${Number(status).toString(16).padStart(8, "0")}`;
+}
+
+function liveHrvTransport(insights, liveHrv) {
+  return insights?.data_quality?.live_hrv_transport || {
+    state: liveHrv?.sample_count ? "streaming" : "not_run",
+    sample_count: liveHrv?.sample_count || 0,
+    request: liveHrv?.request || {},
+    event_count: (liveHrv?.transport_events || []).length
+  };
 }
 
 function pathFromPoints(points) {
@@ -137,18 +153,19 @@ function renderMetrics(summary, insights) {
   ].join("");
 }
 
-function renderStatus(summary, capabilities, dictionary, connection, insights) {
+function renderStatus(summary, capabilities, dictionary, connection, insights, liveHrv) {
   const strip = document.getElementById("status-strip");
   const p2pOk = dictionary && Object.keys(dictionary).length > 0;
   const connected = connection?.state === "connected";
   const hrvSource = insights?.data_quality?.hrv_source || "unavailable";
+  const transport = liveHrvTransport(insights, liveHrv);
   strip.innerHTML = [
     pill(connected ? "Connected" : connection?.state || "No daemon", connected ? "ok" : "warn"),
     pill("Reconnect auth", "ok"),
     pill("Fitness history", "ok"),
     pill(capabilities?.capability_flags?.dict_sleep_sync ? "Sleep dict bit" : "Sleep dict off", capabilities?.capability_flags?.dict_sleep_sync ? "ok" : "warn"),
     pill(p2pOk ? "P2P probed" : "P2P missing", p2pOk ? "ok" : "warn"),
-    pill(hrvSource === "unavailable" ? "HRV pending" : `HRV ${hrvSource}`, hrvSource === "unavailable" ? "warn" : "ok")
+    pill(hrvSource === "unavailable" ? `HRV ${transport.state || "pending"}` : `HRV ${hrvSource}`, hrvSource === "unavailable" ? "warn" : "ok")
   ].join("");
   const label = connection?.timestamp_local || summary.generated_at_local || localTime(summary.generated_at);
   document.getElementById("sync-label").textContent = `Last seen: ${label}`;
@@ -173,7 +190,7 @@ function renderCharts(fitness, historyRows) {
   ], { minY: 0, maxY: 100, height: 190 });
 }
 
-function renderRecovery(insights) {
+function renderRecovery(insights, liveHrv) {
   const panel = document.getElementById("recovery-panel");
   const components = insights.components || {};
   const rows = Object.entries(components).map(([name, value]) => `
@@ -184,11 +201,16 @@ function renderRecovery(insights) {
     </div>
   `).join("");
   const hrv = insights.hrv || {};
+  const transport = liveHrvTransport(insights, liveHrv);
+  const request = transport.request || {};
   panel.innerHTML = `
     <div class="recovery-score ${insights.recovery_label || "yellow"}">${insights.recovery_score ?? "n/a"}</div>
     <div class="component-list">${rows || `<div class="empty">No recovery components yet.</div>`}</div>
     <div class="sleep-row"><span>HRV source</span><strong>${hrv.source || "unavailable"}</strong></div>
     <div class="sleep-row"><span>HRV detail</span><strong>${hrv.rmssd_ms ?? hrv.avg_hrv_ms ?? hrv.reason ?? "n/a"}</strong></div>
+    <div class="sleep-row"><span>Live stream</span><strong>${transport.state || "not_run"} · ${transport.sample_count ?? 0} samples</strong></div>
+    <div class="sleep-row"><span>Live request</span><strong>type ${request.open_type ?? "n/a"} vol ${request.vol_status ?? "off"}</strong></div>
+    <div class="sleep-row"><span>Last HRV status</span><strong>${transport.latest_status_hex || compactStatus(transport.latest_status)}</strong></div>
   `;
 }
 
@@ -206,7 +228,9 @@ function renderStrain(insights) {
   `).join("") + `
     <div class="sleep-row"><span>Acute 7d</span><strong>${insights.training_balance?.acute_7d ?? "n/a"}</strong></div>
     <div class="sleep-row"><span>Chronic 42d</span><strong>${insights.training_balance?.chronic_42d ?? "n/a"}</strong></div>
+    <div class="sleep-row"><span>Load ratio</span><strong>${insights.training_balance?.load_ratio ?? "n/a"} · ${insights.training_balance?.label ?? "collecting"}</strong></div>
     <div class="sleep-row"><span>Balance</span><strong>${insights.training_balance?.balance ?? "n/a"}</strong></div>
+    <div class="sleep-row"><span>Guidance</span><strong>${insights.training_balance?.recommendation ?? "Collecting baseline."}</strong></div>
   `;
 }
 
@@ -223,11 +247,15 @@ function renderSleep(summary, trusleep, sequence) {
   ].map(([a, b]) => `<div class="sleep-row"><span>${a}</span><strong>${b}</strong></div>`).join("");
 }
 
-function renderRoutes(dictionary, stress, sequence, insights) {
+function renderRoutes(dictionary, stress, sequence, insights, liveHrv) {
   const hrvSource = insights?.data_quality?.hrv_source || "unavailable";
+  const transport = liveHrvTransport(insights, liveHrv);
+  const liveDetail = hrvSource === "live_rri"
+    ? "RMSSD computed from streamed RRI/SQI."
+    : `${transport.state || "not_run"}; status ${transport.latest_status_hex || compactStatus(transport.latest_status)}; ${transport.event_count || 0} events.`;
   const rows = [
     ["Fitness minute history", "ok", "Steps, HR, SpO2, sleep segments are available."],
-    ["Live RRI HRV", hrvSource === "live_rri" ? "ok" : "warn", hrvSource === "live_rri" ? "RMSSD computed from streamed RRI/SQI." : "Waiting for a successful 60s RRI stream."],
+    ["Live RRI HRV", hrvSource === "live_rri" ? "ok" : "warn", liveDetail],
     ["Stress/RRI file", stress?.stress_count > 0 ? "ok" : "warn", stress?.stress_count > 0 ? `${stress.stress_count} stress samples` : "No file payload in latest artifact."],
     ["Sleep sequence file", sequence?.file_size > 0 ? "ok" : "warn", sequence?.file_size > 0 ? `${sequence.sequence_count} sessions` : (sequence?.errors || ["No metadata returned"]).join(", ")],
     ["P2P skin temperature", dictionary?.skin_temperature?.status === "ack_no_data" ? "warn" : "bad", dictionary?.skin_temperature?.status || "not probed"],
@@ -273,7 +301,7 @@ function parseHistory(text) {
 }
 
 async function boot() {
-  const [insights, connection, summary, fitness, capabilities, dictionary, trusleep, stress, sequence, historyText] = await Promise.all([
+  const [insights, connection, summary, fitness, capabilities, dictionary, trusleep, stress, sequence, liveHrv, historyText] = await Promise.all([
     loadJson(files.insights, {}),
     loadJson(files.connection, {}),
     loadJson(files.summary, {}),
@@ -283,16 +311,17 @@ async function boot() {
     loadJson(files.trusleep, {}),
     loadJson(files.stress, {}),
     loadJson(files.sequence, {}),
+    loadJson(files.liveHrv, {}),
     loadText(files.history, "")
   ]);
   const historyRows = parseHistory(historyText);
   renderMetrics(summary, insights);
-  renderStatus(summary, capabilities, dictionary, connection, insights);
+  renderStatus(summary, capabilities, dictionary, connection, insights, liveHrv);
   renderCharts(fitness, historyRows);
-  renderRecovery(insights);
+  renderRecovery(insights, liveHrv);
   renderStrain(insights);
   renderSleep(summary, trusleep, sequence);
-  renderRoutes(dictionary, stress, sequence, insights);
+  renderRoutes(dictionary, stress, sequence, insights, liveHrv);
   renderCapabilities(capabilities);
 }
 

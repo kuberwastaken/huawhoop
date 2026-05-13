@@ -79,6 +79,101 @@ def _score_label(value: float) -> str:
     return "red"
 
 
+def _numeric(value):
+    return value if isinstance(value, (int, float)) and math.isfinite(value) else None
+
+
+def _ewma(values: list[float], tau_days: float) -> float | None:
+    alpha = 1.0 - math.exp(-1.0 / max(1.0, tau_days))
+    acc = None
+    for value in values:
+        value = _numeric(value)
+        if value is None:
+            continue
+        acc = value if acc is None else acc + alpha * (value - acc)
+    return acc
+
+
+def _trend_delta(values: list[float], short: int, long: int) -> float | None:
+    clean = [_numeric(v) for v in values]
+    clean = [v for v in clean if v is not None]
+    if len(clean) < 2:
+        return None
+    recent = _mean(clean[-short:], clean[-1])
+    baseline = _mean(clean[-long:], recent)
+    if recent is None or baseline is None:
+        return None
+    return recent - baseline
+
+
+def _classify_training_load(acute: float | None, chronic: float | None) -> dict:
+    if acute is None or chronic is None or chronic <= 0:
+        return {
+            "label": "collecting",
+            "recommendation": "Collect more connected syncs before judging load balance.",
+            "ratio": None,
+            "balance": None,
+        }
+
+    ratio = acute / chronic
+    balance = chronic - acute
+    if ratio < 0.70:
+        label = "underloaded"
+        recommendation = "Load is below recent baseline; good window for easy volume if recovery allows."
+    elif ratio <= 1.30:
+        label = "productive"
+        recommendation = "Acute load is close to chronic load; maintain or progress gradually."
+    elif ratio <= 1.55:
+        label = "strained"
+        recommendation = "Acute load is elevated; bias toward sleep and lower intensity."
+    else:
+        label = "overreaching"
+        recommendation = "Acute load is far above baseline; treat this as a recovery-priority day."
+    return {
+        "label": label,
+        "recommendation": recommendation,
+        "ratio": round(ratio, 2),
+        "balance": round(balance, 1),
+    }
+
+
+def _summarize_live_hrv_transport(live_hrv: dict) -> dict:
+    events = live_hrv.get("transport_events") or []
+    status_events = [event for event in events if isinstance(event.get("status"), int)]
+    latest = status_events[-1] if status_events else None
+    open_ok = any(
+        event.get("cmd") == 1 and event.get("status") == 100000
+        for event in status_events
+    )
+    data_statuses = [
+        event.get("status")
+        for event in status_events
+        if event.get("cmd") in (3, 5) and isinstance(event.get("status"), int)
+    ]
+    blocked = 126008 in data_statuses
+    sample_count = live_hrv.get("sample_count", 0)
+    if sample_count:
+        state = "streaming"
+    elif blocked:
+        state = "opened_no_stream"
+    elif open_ok:
+        state = "opened_waiting"
+    elif latest:
+        state = "rejected"
+    else:
+        state = "not_run"
+    return {
+        "state": state,
+        "sample_count": sample_count,
+        "request": live_hrv.get("request") or {},
+        "latest_status": latest.get("status") if latest else None,
+        "latest_status_hex": f"0x{latest.get('status'):08x}" if latest else None,
+        "open_ok": open_ok,
+        "data_blocked_status_hex": "0x0001ec38" if blocked else None,
+        "event_count": len(events),
+    }
+
+
 def _clean_rri_values(rri_ms: list[int]) -> list[int]:
     values = [int(v) for v in rri_ms if 400 < int(v) < 1400]
     if len(values) < 2:
@@ -449,11 +544,54 @@ def build_insights(data_dir: Path = DATA_DIR) -> dict:
     rhr_score = None
     if rhr is not None:
         rhr_score = _clamp(70 + ((rhr_baseline or rhr) - rhr) * 4.0, 0, 100)
-    sleep_need = _clamp(480 + max(0, (strain["strain"] or 0) - 10) * 7, 420, 600)
+
+    current_strain = _numeric(strain.get("strain")) or _numeric(summary.get("strain_score")) or 0
+    strain_values = [
+        row.get("strain_score")
+        for row in history
+        if isinstance(row.get("strain_score"), (int, float))
+    ]
+    if current_strain is not None:
+        strain_values.append(current_strain)
+    acute = _ewma(strain_values[-60:], 7)
+    chronic = _ewma(strain_values[-120:], 42)
+    load_model = _classify_training_load(acute, chronic)
+    recent_strain = [_numeric(v) for v in strain_values[-7:]]
+    recent_strain = [v for v in recent_strain if v is not None]
+    monotony = None
+    if len(recent_strain) >= 3:
+        mean_recent = _mean(recent_strain, 0)
+        sd_recent = statistics.pstdev(recent_strain) or 1
+        monotony = mean_recent / sd_recent
+
+    sleep_values = [
+        row.get("sleep_minutes")
+        for row in history
+        if isinstance(row.get("sleep_minutes"), (int, float))
+    ]
+    if sleep_minutes:
+        sleep_values.append(sleep_minutes)
+    sleep_trend = _trend_delta(sleep_values, 3, 14)
+    rhr_values = [
+        row.get("resting_hr_avg")
+        for row in history
+        if isinstance(row.get("resting_hr_avg"), (int, float))
+    ]
+    if rhr is not None:
+        rhr_values.append(rhr)
+    rhr_trend = _trend_delta(rhr_values, 3, 14)
+
+    load_ratio = load_model.get("ratio")
+    load_sleep_add = max(0, (current_strain or 0) - 10) * 7
+    if isinstance(load_ratio, (int, float)) and load_ratio > 1.25:
+        load_sleep_add += (load_ratio - 1.25) * 45
+    sleep_need = _clamp(480 + load_sleep_add, 420, 630)
     sleep_score = _clamp(100 * sleep_minutes / sleep_need, 0, 100)
     spo2_score = None
     if spo2:
         spo2_score = _clamp(100 - max(0, 96 - _mean(spo2, 96)) * 8 - max(0, 92 - min(spo2)) * 5, 0, 100)
+
+    live_transport = _summarize_live_hrv_transport(live_hrv)
 
     components = []
     if hrv_score is not None:
@@ -465,11 +603,19 @@ def build_insights(data_dir: Path = DATA_DIR) -> dict:
         components.append(("rhr", rhr_score if rhr_score is not None else 60, 0.35))
         components.append(("sleep", sleep_score, 0.45))
         components.append(("spo2", spo2_score if spo2_score is not None else 75, 0.15))
-        components.append(("load", 100 - min(40, (strain["strain"] or 0) * 2), 0.05))
+        load_component = 100 - min(45, current_strain * 2.3)
+        if isinstance(load_ratio, (int, float)) and load_ratio > 1.3:
+            load_component -= min(20, (load_ratio - 1.3) * 25)
+        components.append(("load", _clamp(load_component, 0, 100), 0.05))
 
     recovery = sum(value * weight for _name, value, weight in components) / sum(weight for _name, _value, weight in components)
-    acute = _mean([row.get("strain_score") for row in history[-7:] if isinstance(row.get("strain_score"), (int, float))], strain["strain"] or 0)
-    chronic = _mean([row.get("strain_score") for row in history[-42:] if isinstance(row.get("strain_score"), (int, float))], acute)
+    if rhr_trend is not None and rhr_trend > 3:
+        recovery -= min(8, rhr_trend * 1.2)
+    if sleep_trend is not None and sleep_trend < -60:
+        recovery -= min(8, abs(sleep_trend) / 18)
+    if isinstance(load_ratio, (int, float)) and load_ratio > 1.55:
+        recovery -= min(10, (load_ratio - 1.55) * 18)
+    recovery = _clamp(recovery, 0, 100)
 
     generated_at = int(time.time())
     insight = {
@@ -486,12 +632,18 @@ def build_insights(data_dir: Path = DATA_DIR) -> dict:
             "need_minutes": round(sleep_need),
             "baseline_minutes": round(sleep_baseline) if sleep_baseline else None,
             "score": round(sleep_score),
+            "trend_3v14_minutes": round(sleep_trend, 1) if sleep_trend is not None else None,
         },
         "strain": strain,
         "training_balance": {
-            "acute_7d": round(acute or 0, 1),
-            "chronic_42d": round(chronic or 0, 1),
-            "balance": round((chronic or 0) - (acute or 0), 1),
+            "acute_7d": round(acute, 1) if acute is not None else None,
+            "chronic_42d": round(chronic, 1) if chronic is not None else None,
+            "balance": load_model.get("balance"),
+            "load_ratio": load_model.get("ratio"),
+            "label": load_model.get("label"),
+            "recommendation": load_model.get("recommendation"),
+            "monotony": round(monotony, 2) if monotony is not None else None,
+            "method": "EWMA acute 7d / chronic 42d from synced strain history",
         },
         "data_quality": {
             "hr_samples": len(heart_rates),
@@ -500,6 +652,8 @@ def build_insights(data_dir: Path = DATA_DIR) -> dict:
             "stress_file_samples": stress.get("stress_count", 0),
             "sleep_sequence_sessions": sequence.get("sequence_count", 0),
             "hrv_source": (hrv or {}).get("source", "unavailable"),
+            "live_hrv_transport": live_transport,
+            "rhr_trend_3v14_bpm": round(rhr_trend, 1) if rhr_trend is not None else None,
         },
     }
     _write_json(data_dir / "latest_insights.json", insight)

@@ -265,6 +265,12 @@ main {
   text-align: right;
 }
 
+.sleep-row strong {
+  color: var(--ink);
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
 .component-bar {
   height: 8px;
   overflow: hidden;
