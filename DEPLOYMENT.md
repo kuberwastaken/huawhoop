@@ -42,6 +42,12 @@ $env:BAND10_DASHBOARD_HOST = "0.0.0.0"
 python run_dashboard.py
 ```
 
+or:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\start_lan_bridge.ps1
+```
+
 Then use a private network URL:
 
 ```text
@@ -54,3 +60,6 @@ happens, put the bridge behind a private HTTPS tunnel with authentication.
 The bridge exposes `GET /api/bridge-info` so the local PWA can show local/LAN
 URLs, and `GET /api/export` returns redacted data by default for future cloud
 relay work.
+
+See `CROSS_DEVICE.md` for the exact daily laptop, phone-on-LAN, hosted-PWA, and
+redacted-export workflows.

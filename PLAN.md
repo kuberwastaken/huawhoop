@@ -138,7 +138,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Add safe installed-watchface activation command path.
 - [x] Live-test installed/current watchface metadata when the band is visible.
 - [x] Live-test activation on an already installed non-current watchface.
-- [ ] Upload a known-compatible watchface file. Blocked until a real Band 10-compatible `.hwt` is selected and intentionally tested.
+- [blocked] Upload a known-compatible watchface file: blocked until a real Band 10-compatible `.hwt` is selected and intentionally tested.
 - [x] Document custom watchface/app risk before writing to device.
 
 ## Milestone 6: Custom Watchfaces And Apps
@@ -162,6 +162,14 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Implement an opt-in analysis endpoint after deterministic analytics are stable.
 - [x] Cache analysis output by compact dataset hash and expose model/usage metadata.
 - [x] Add a PWA manual analysis control with payload preview and cadence warnings.
+
+## Milestone 9: Cross-Device Operations
+
+- [x] Document the local bridge as the production BLE owner.
+- [x] Add a LAN bridge helper script for phone/tablet access.
+- [x] Expose bridge URL/token state, command timeline, and redacted export in the PWA.
+- [x] Document hosted PWA mixed-content/private-network limits and safe workarounds.
+- [x] Keep Android companion, cloud relay, Copilot OAuth, and custom app deployment as deferred platform work rather than blocking the current local/LAN end-to-end product.
 
 ## Immediate TODO
 
@@ -221,10 +229,10 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Browser DOM smoke checks after major layout pass. Screenshot capture timed out in the local browser runtime; keep DOM/API checks as the current automated fallback.
 - [x] API redaction pass before any hosted/cloud relay.
 
-## Backlog
+## Deferred Platform Roadmap
 
-- [ ] Android companion bridge.
-- [ ] Cloud summary relay.
-- [ ] Copilot OAuth analysis layer after Milestone 8 endpoint and payload preview.
-- [ ] Watchface builder.
-- [ ] Custom app deployment lab.
+- [deferred] Android companion bridge: requires native Android BLE service, foreground/background policy work, and secure key storage.
+- [deferred] Cloud summary relay: should carry only encrypted/redacted summaries, not raw files, BLE keys, or `band.ini`.
+- [deferred] Copilot OAuth analysis layer: only attach to the manual analysis endpoint after payload preview, rate limits, and model choice are explicit.
+- [deferred] Watchface builder: safe after validation plus a known-compatible upload/rollback test.
+- [deferred] Custom app deployment lab: safe after watchface upload semantics and file rollback are understood.

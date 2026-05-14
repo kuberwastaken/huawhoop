@@ -19,6 +19,12 @@ $env:BAND10_DASHBOARD_HOST = "0.0.0.0"
 python run_dashboard.py
 ```
 
+or:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\start_lan_bridge.ps1
+```
+
 Use the LAN URL printed at startup, or copy it from Settings -> Network Access.
 If you set `BAND10_BRIDGE_TOKEN`, enter the same token in the PWA settings before
 queuing sync/weather/watchface commands.
@@ -28,8 +34,8 @@ or write anything to the band.
 Use Settings -> Network Access -> Export for a redacted JSON snapshot that can be
 shared across devices without `band.ini`, MAC details, command logs, or raw files.
 
-Deployment, bridge, and source-truth audit notes live in `DEPLOYMENT.md`,
-`BRIDGE.md`, and `AUDIT.md`.
+Deployment, cross-device, bridge, and source-truth audit notes live in
+`DEPLOYMENT.md`, `CROSS_DEVICE.md`, `BRIDGE.md`, and `AUDIT.md`.
 
 `connect.py` is a diagnostic one-shot and disconnects when it exits, so the band may
 show disconnected after those runs. `run_dashboard.py` is the default workflow for

@@ -740,6 +740,7 @@ Live status on 2026-05-14:
   - `POST /api/commands/stress`: queues automatic stress enable/calibration.
 - `band_daemon.py` polls `data/bridge_commands.jsonl` from inside the one authenticated BLE session and writes results to `data/bridge_command_results.jsonl`.
 - This is the first cross-device bridge: hosted PWA can point at a configured local bridge URL, while the bridge remains the only process touching BLE/auth secrets. Same-LAN use is supported by starting with `BAND10_DASHBOARD_HOST=0.0.0.0`; the PWA shows the LAN API URL in Settings.
+- `scripts/start_lan_bridge.ps1` is the explicit same-Wi-Fi helper. It binds the dashboard to `0.0.0.0`, prints loopback and LAN dashboard URLs, then runs the same long-lived daemon. `CROSS_DEVICE.md` documents the daily laptop, phone/tablet, hosted PWA, and redacted-export modes.
 - The daemon now explicitly scans before connecting and writes `scanning`/`not_found` states when Windows cannot see the band. This makes "connection failed" distinguishable from protocol/auth failure.
 
 ### PWA Shell

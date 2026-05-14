@@ -39,6 +39,12 @@ $env:BAND10_DASHBOARD_HOST = "0.0.0.0"
 python run_dashboard.py
 ```
 
+or use the helper:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\start_lan_bridge.ps1
+```
+
 Open the LAN dashboard URL printed at startup, or copy the LAN API URL from the
 PWA settings screen and paste it into the hosted app's Bridge URL field.
 
