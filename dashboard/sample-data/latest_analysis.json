@@ -1,0 +1,18 @@
+{
+  "summary": "Recovery is ready enough for normal training; keep intensity honest if stress rises. Acute load is close to chronic load; keep the next hard session conditional on HRV/RHR.",
+  "actions": [
+    "Recovery is ready enough for normal training; keep intensity honest if stress rises.",
+    "Sleep performance is in range; maintain the current sleep window before increasing load.",
+    "Acute load is close to chronic load; keep the next hard session conditional on HRV/RHR."
+  ],
+  "confidence": "steady",
+  "model": "deterministic-rules-v1",
+  "llm_used": false,
+  "usage": {
+    "calls": 0,
+    "tokens": 0
+  },
+  "dataset_hash": "sample000000000000000000000000000000000000000000000000000000000000",
+  "cache_hit": true,
+  "generated_at_local": "sample"
+}

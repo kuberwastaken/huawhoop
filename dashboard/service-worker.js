@@ -19,6 +19,7 @@ const ASSETS = [
   "./sample-data/latest_live_hrv.json",
   "./sample-data/latest_watchfaces.json",
   "./sample-data/latest_watchface_operation.json",
+  "./sample-data/latest_analysis.json",
   "./sample-data/recovery_history.jsonl",
   "./sample-data/insights_history.jsonl"
 ];

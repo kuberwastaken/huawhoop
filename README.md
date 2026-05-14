@@ -96,6 +96,10 @@ Live RRI HRV/stress calibration is also verified after the factory reset and
 stored reconnect. The daemon captured a 62-second RRI window, computed RMSSD and
 Huawei stress features, and enabled automatic stress from that live seed.
 
+The PWA's Coach Analysis button is manual and cached by dataset hash. It currently
+uses deterministic local rules only (`llm_used=false`) and never runs from the
+BLE/weather/watchface loops.
+
 Repeated full syncs may return `00023281` for stress/sleep files when there is no
 fresh file to download; the daemon preserves the last good artifact and continues
 using sleep-sequence HRV instead of dropping back to "unavailable".

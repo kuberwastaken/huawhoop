@@ -12,6 +12,7 @@ const artifactFiles = {
   liveHrv: "latest_live_hrv.json",
   watchfaces: "latest_watchfaces.json",
   watchfaceOperation: "latest_watchface_operation.json",
+  analysis: "latest_analysis.json",
   recoveryHistory: "recovery_history.jsonl",
   insightsHistory: "insights_history.jsonl"
 };
@@ -133,6 +134,7 @@ async function loadData() {
       liveHrv: await fetchJson(bridgePath("/api/artifacts/latest_live_hrv.json"), {}),
       watchfaces: await fetchJson(bridgePath("/api/artifacts/latest_watchfaces.json"), {}),
       watchfaceOperation: await fetchJson(bridgePath("/api/artifacts/latest_watchface_operation.json"), {}),
+      analysis: await fetchJson(bridgePath("/api/artifacts/latest_analysis.json"), {}),
       recoveryHistory: parseJsonl(historyText),
       insightsHistory: parseJsonl(insightsHistoryText),
       bridge: api.bridge || {},
@@ -156,6 +158,7 @@ async function loadData() {
     fetchJson(artifactPath("liveHrv"), {}),
     fetchJson(artifactPath("watchfaces"), {}),
     fetchJson(artifactPath("watchfaceOperation"), {}),
+    fetchJson(artifactPath("analysis"), {}),
     fetchText(artifactPath("recoveryHistory"), ""),
     fetchText(artifactPath("insightsHistory"), "")
   ]);
@@ -173,8 +176,9 @@ async function loadData() {
     liveHrv: entries[10],
     watchfaces: entries[11],
     watchfaceOperation: entries[12],
-    recoveryHistory: parseJsonl(entries[13]),
-    insightsHistory: parseJsonl(entries[14]),
+    analysis: entries[13],
+    recoveryHistory: parseJsonl(entries[14]),
+    insightsHistory: parseJsonl(entries[15]),
     bridge: {},
     bridgeInfo: {},
     lastCommands: []
@@ -371,6 +375,24 @@ function signalCard(label, value, sub, chart) {
     <div class="signal-chart">${chart}</div>
     <p>${sub}</p>
   </article>`;
+}
+
+function renderAnalysis() {
+  const analysis = state.data.analysis || {};
+  const actions = analysis.actions || [];
+  if (!analysis.dataset_hash) {
+    $("#analysis-panel").innerHTML = [
+      detailRow("A", "Analysis", "ready", "manual, cached, no background model calls"),
+      detailRow("M", "Model", "deterministic", "LLM disabled until explicitly wired")
+    ].join("");
+    return;
+  }
+  $("#analysis-panel").innerHTML = [
+    detailRow("S", "Summary", analysis.confidence || "ready", analysis.summary || ""),
+    detailRow("M", "Model", analysis.model || "deterministic", analysis.llm_used ? `${analysis.usage?.tokens || 0} tokens` : "0 calls"),
+    detailRow("H", "Dataset Hash", analysis.dataset_hash.slice(0, 10), analysis.cache_hit ? "cached" : analysis.generated_at_local || ""),
+    actions.length ? `<div class="analysis-actions">${actions.map((item) => `<p>${esc(item)}</p>`).join("")}</div>` : ""
+  ].join("");
 }
 
 function drawLine(container, values, opts = {}) {
@@ -663,6 +685,7 @@ function renderAll() {
   renderToday();
   renderTrends();
   renderSignalCharts();
+  renderAnalysis();
   renderRecovery();
   renderSleep();
   renderStrain();
@@ -837,6 +860,17 @@ async function queueStress(calibrate = false) {
   }
 }
 
+async function runAnalysis() {
+  try {
+    const response = await command("/api/analysis", {});
+    state.data.analysis = response;
+    renderAnalysis();
+    toast(response.cache_hit ? "Analysis loaded from cache" : "Analysis generated");
+  } catch (error) {
+    toast(`Analysis failed: ${error.message}`);
+  }
+}
+
 function setupActions() {
   $("#weather-name").value = state.weatherConfig.name || $("#weather-name").value || "Local Weather";
   $("#weather-lat").value = state.weatherConfig.lat || "";
@@ -850,6 +884,7 @@ function setupActions() {
   $("#watchface-scan-button").addEventListener("click", queueWatchfaceScan);
   $("#stress-calibrate-button").addEventListener("click", () => queueStress(true));
   $("#stress-enable-button").addEventListener("click", () => queueStress(false));
+  $("#analysis-button").addEventListener("click", runAnalysis);
   $("#geo-button").addEventListener("click", () => {
     if (!navigator.geolocation) {
       toast("Location unavailable");

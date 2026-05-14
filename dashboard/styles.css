@@ -423,6 +423,21 @@ button:active { transform: scale(0.96); }
 .activity-main strong { font-size: 1rem; }
 .activity-main span { font-size: 0.8rem; color: var(--muted); margin-top: 2px;}
 
+.analysis-actions {
+  padding: 16px;
+  display: grid;
+  gap: 10px;
+}
+.analysis-actions p {
+  color: var(--text);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  background: var(--card-bg);
+  border: 1px solid var(--track-color);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+}
+
 /* FORMS/INPUTS */
 .input-group { display: flex; flex-direction: column; flex: 1; }
 .input-group label { font-size: 0.75rem; font-weight: 600; color: var(--muted); margin-bottom: 6px; text-transform: uppercase; }

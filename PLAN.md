@@ -159,9 +159,9 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Write strict LLM policy before adding any model calls.
 - [x] Audit `X:\Bigger-Projects\Claurst\src-rust` for Copilot/OAuth patterns.
 - [x] Decide that BLE/weather/watchface/connection loops never trigger LLM calls.
-- [ ] Implement an opt-in analysis endpoint after deterministic analytics are stable.
-- [ ] Cache LLM output by compact dataset hash and expose model/usage metadata.
-- [ ] Add a PWA manual analysis control with payload preview and cadence warnings.
+- [x] Implement an opt-in analysis endpoint after deterministic analytics are stable.
+- [x] Cache analysis output by compact dataset hash and expose model/usage metadata.
+- [x] Add a PWA manual analysis control with payload preview and cadence warnings.
 
 ## Immediate TODO
 

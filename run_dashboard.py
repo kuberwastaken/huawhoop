@@ -1,4 +1,5 @@
 import asyncio
+import hashlib
 import json
 import os
 import socket
@@ -35,6 +36,7 @@ ARTIFACT_ALLOWLIST = {
     "latest_weather_push.json",
     "latest_watchfaces.json",
     "latest_watchface_operation.json",
+    "latest_analysis.json",
     "recovery_history.jsonl",
     "insights_history.jsonl",
     "live_hrv_history.jsonl",
@@ -127,6 +129,106 @@ def save_weather_payload(payload: dict):
     saved["saved_at"] = int(time.time())
     saved["saved_at_local"] = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     (DATA_DIR / "weather_payload.json").write_text(json.dumps(saved, indent=2), encoding="utf-8")
+
+
+def compact_analysis_dataset() -> dict:
+    insights = read_json_artifact("latest_insights.json", {})
+    summary = read_json_artifact("latest_recovery_summary.json", {})
+    sync = read_json_artifact("latest_sync_status.json", {})
+    return {
+        "generated_from": {
+            "insights_generated_at": insights.get("generated_at"),
+            "sync_ended_at": sync.get("ended_at"),
+        },
+        "scores": {
+            "recovery": insights.get("recovery_score"),
+            "recovery_label": insights.get("recovery_label"),
+            "strain": (insights.get("strain") or {}).get("strain"),
+            "stress": (insights.get("stress") or {}).get("label"),
+            "sleep_score": (insights.get("sleep") or {}).get("score"),
+        },
+        "signals": {
+            "hrv": insights.get("hrv"),
+            "resting_hr": insights.get("resting_hr"),
+            "sleep": insights.get("sleep"),
+            "spo2": insights.get("spo2"),
+            "training_balance": insights.get("training_balance"),
+            "data_quality": insights.get("data_quality"),
+        },
+        "daily_summary": {
+            "steps": summary.get("step_total"),
+            "heart_rate_min": summary.get("heart_rate_min"),
+            "heart_rate_avg": summary.get("heart_rate_avg"),
+            "heart_rate_max": summary.get("heart_rate_max"),
+            "spo2_min": summary.get("spo2_min"),
+            "spo2_avg": summary.get("spo2_avg"),
+            "spo2_max": summary.get("spo2_max"),
+        },
+    }
+
+
+def dataset_hash(dataset: dict) -> str:
+    encoded = json.dumps(dataset, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
+
+
+def deterministic_analysis(dataset: dict) -> dict:
+    scores = dataset.get("scores") or {}
+    signals = dataset.get("signals") or {}
+    sleep = signals.get("sleep") or {}
+    strain = signals.get("training_balance") or {}
+    spo2 = signals.get("spo2") or {}
+    data_quality = signals.get("data_quality") or {}
+    recovery = scores.get("recovery")
+    advice = []
+    if isinstance(recovery, (int, float)) and recovery >= 67:
+        advice.append("Recovery is ready enough for normal training; keep intensity honest if stress rises.")
+    elif isinstance(recovery, (int, float)) and recovery >= 34:
+        advice.append("Recovery is moderate; bias toward technique, zone-2 work, or a shorter hard block.")
+    else:
+        advice.append("Recovery is low; prioritize sleep debt, hydration, and low strain.")
+    if sleep.get("performance_score") is not None and sleep.get("performance_score") < 75:
+        advice.append("Sleep performance is the clearest lever: extend the next sleep window before adding load.")
+    if spo2.get("minutes_below_95", 0):
+        advice.append(f"SpO2 dipped below 95% for {spo2.get('minutes_below_95')} tracked minutes; watch this trend before treating it as signal.")
+    if strain.get("load_ratio") and strain.get("load_ratio") > 1.3:
+        advice.append("Acute load is running above chronic load; keep the next hard session conditional on HRV/RHR.")
+    if data_quality.get("hrv_source") == "live_rri":
+        confidence = "good"
+    elif data_quality.get("hrv_source") == "sleep_sequence":
+        confidence = "steady"
+    else:
+        confidence = "limited"
+    return {
+        "summary": " ".join(advice[:2]),
+        "actions": advice,
+        "confidence": confidence,
+        "model": "deterministic-rules-v1",
+        "llm_used": False,
+        "usage": {"calls": 0, "tokens": 0},
+    }
+
+
+def build_analysis() -> dict:
+    DATA_DIR.mkdir(exist_ok=True)
+    dataset = compact_analysis_dataset()
+    digest = dataset_hash(dataset)
+    cache = read_json_artifact("latest_analysis.json", {})
+    if cache.get("dataset_hash") == digest:
+        cached = dict(cache)
+        cached["cache_hit"] = True
+        return cached
+    analysis = deterministic_analysis(dataset)
+    result = {
+        **analysis,
+        "dataset_hash": digest,
+        "cache_hit": False,
+        "payload_preview": dataset,
+        "generated_at": int(time.time()),
+        "generated_at_local": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
+    }
+    (DATA_DIR / "latest_analysis.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
+    return result
 
 
 class DashboardHandler(SimpleHTTPRequestHandler):
@@ -232,6 +334,12 @@ class DashboardHandler(SimpleHTTPRequestHandler):
         if path == "/api/insights":
             self._send_json(read_json_artifact("latest_insights.json", {}))
             return
+        if path == "/api/analysis":
+            self._send_json(read_json_artifact("latest_analysis.json", {
+                "status": "not_generated",
+                "message": "Run POST /api/analysis to generate an on-demand local analysis.",
+            }))
+            return
         if path == "/api/export":
             include_private = query.get("private", ["0"])[0] == "1"
             if include_private and not self._authorized():
@@ -295,6 +403,9 @@ class DashboardHandler(SimpleHTTPRequestHandler):
         if path in ("/api/commands/stress", "/api/stress"):
             command = append_bridge_command("stress", payload)
             self._send_json({"queued": True, "command": command}, status=202)
+            return
+        if path == "/api/analysis":
+            self._send_json(build_analysis(), status=200)
             return
         self._send_json({"error": "unknown_endpoint", "path": path}, status=404)
 
