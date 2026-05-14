@@ -170,6 +170,14 @@ button:active { transform: scale(0.96); }
 .sync-action {
   white-space: nowrap;
 }
+.compact-actions {
+  justify-content: flex-end;
+  gap: 6px;
+}
+.compact-actions .pill-button {
+  padding: 5px 10px;
+  font-size: 0.74rem;
+}
 
 /* CARDS & PANELS */
 .app-card {
@@ -405,6 +413,52 @@ button:active { transform: scale(0.96); }
   border-radius: 50%;
 }
 
+.coverage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 16px;
+}
+.coverage-item {
+  min-width: 0;
+  background: var(--card-bg);
+  border: 1px solid var(--track-color);
+  border-radius: var(--radius-md);
+  padding: 14px;
+}
+.coverage-item > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: flex-start;
+}
+.coverage-item span {
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.coverage-item strong {
+  text-align: right;
+  font-size: 0.92rem;
+}
+.coverage-meter {
+  height: 7px;
+  margin: 12px 0 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--track-color);
+}
+.coverage-meter i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+}
+.coverage-item p {
+  color: var(--muted);
+  font-size: 0.74rem;
+}
+
 /* ACTIVITIES */
 .activity-summary { padding: 16px; border-bottom: 1px solid var(--track-color); display: flex; flex-direction: column; }
 .activity-summary strong { font-size: 1.1rem; }
@@ -593,7 +647,8 @@ input:focus { border-color: var(--teal); }
   }
 
   .signal-grid,
-  .load-grid {
+  .load-grid,
+  .coverage-grid {
     grid-template-columns: 1fr;
   }
 }

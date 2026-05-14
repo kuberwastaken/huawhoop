@@ -1,4 +1,4 @@
-const CACHE_NAME = "huawhoop-v3";
+const CACHE_NAME = "huawhoop-v4";
 const ASSETS = [
   "./",
   "./index.html",

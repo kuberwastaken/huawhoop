@@ -25,6 +25,8 @@ queuing sync/weather/watchface commands.
 The same Settings screen also includes a Watchface Lab: paste a local `.hwt`
 path to validate package structure and Band 10 dimensions. This does not upload
 or write anything to the band.
+Use Settings -> Network Access -> Export for a redacted JSON snapshot that can be
+shared across devices without `band.ini`, MAC details, command logs, or raw files.
 
 Deployment, bridge, and source-truth audit notes live in `DEPLOYMENT.md`,
 `BRIDGE.md`, and `AUDIT.md`.

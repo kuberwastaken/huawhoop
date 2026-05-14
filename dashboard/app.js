@@ -373,6 +373,51 @@ function renderSignalCharts() {
   ].join("");
 }
 
+function routeFreshness(timestamp, fallback = "") {
+  if (!timestamp) return fallback || "waiting";
+  const ageMinutes = Math.max(0, Math.round((Date.now() / 1000 - Number(timestamp)) / 60));
+  if (ageMinutes < 2) return "just now";
+  if (ageMinutes < 90) return `${ageMinutes}m ago`;
+  const ageHours = Math.round(ageMinutes / 60);
+  return `${ageHours}h ago`;
+}
+
+function coverageItem(label, value, pct, sub, color = "var(--teal)") {
+  const width = clamp(pct, 0, 100);
+  return `<article class="coverage-item">
+    <div>
+      <span>${label}</span>
+      <strong>${value}</strong>
+    </div>
+    <div class="coverage-meter"><i style="width:${width.toFixed(0)}%;background:${color}"></i></div>
+    <p>${sub}</p>
+  </article>`;
+}
+
+function renderCoverage() {
+  const connection = state.data.connection || {};
+  const insights = state.data.insights || {};
+  const quality = insights.data_quality || {};
+  const stressRecords = state.data.stress?.records || [];
+  const watchfaces = state.data.watchfaces || {};
+  const analysis = state.data.analysis || {};
+  const weatherCommand = (state.data.lastCommands || []).filter((cmd) => cmd.type === "weather").at(-1);
+  const sleepSessions = quality.sleep_sequence_sessions || state.data.sequence?.sessions?.length || 0;
+  const hrvPct = quality.hrv_source ? 100 : 35;
+  const stressPct = stressRecords.length ? 100 : (insights.stress?.zone_minutes ? 70 : 25);
+  const weatherPct = weatherCommand?.state === "done" || weatherCommand?.state === "ok" ? 100 : (weatherCommand ? 65 : 25);
+  const watchfacePct = watchfaces.supported ? 100 : 45;
+  $("#coverage-grid").innerHTML = [
+    coverageItem("Connection", connection.state || "offline", connection.state === "connected" ? 100 : 35, connection.timestamp_local || "bridge heartbeat", connection.state === "connected" ? "var(--teal)" : "var(--orange)"),
+    coverageItem("HRV", quality.hrv_source || "pending", hrvPct, insights.hrv?.avg_hrv_ms ? `${Math.round(insights.hrv.avg_hrv_ms)} ms` : "sleep sequence or live RRI"),
+    coverageItem("Sleep", `${sleepSessions} sessions`, sleepSessions ? 100 : 30, routeFreshness(insights.generated_at, "full sync route")),
+    coverageItem("Stress", stressRecords.length ? `${stressRecords.length} records` : (insights.stress?.label || "pending"), stressPct, "rrisqi file plus zone summary"),
+    coverageItem("Weather", weatherCommand?.state || "ready", weatherPct, weatherCommand?.timestamp_local || "push when stale"),
+    coverageItem("Watchfaces", watchfaces.supported ? `${(watchfaces.installed || []).length} installed` : "scan", watchfacePct, watchfaces.generated_at_local || "read-only inventory"),
+    coverageItem("Analysis", analysis.dataset_hash ? "cached" : "manual", analysis.dataset_hash ? 100 : 50, analysis.model || "deterministic rules")
+  ].join("");
+}
+
 function signalCard(label, value, sub, chart) {
   return `<article class="signal-card">
     <div class="signal-head"><span>${label}</span><strong>${value}</strong></div>
@@ -745,6 +790,7 @@ function renderAll() {
   renderToday();
   renderTrends();
   renderSignalCharts();
+  renderCoverage();
   renderAnalysis();
   renderRecovery();
   renderSleep();
@@ -950,6 +996,32 @@ async function runAnalysis() {
   }
 }
 
+async function downloadRedactedExport() {
+  if (!hasBridge()) {
+    toast("No bridge available for export");
+    return;
+  }
+  try {
+    const headers = {};
+    if (state.bridgeToken) headers["X-Huawhoop-Token"] = state.bridgeToken;
+    const response = await fetch(bridgePath("/api/export"), { headers, cache: "no-store" });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const payload = await response.json();
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `huawhoop-export-${new Date().toISOString().slice(0, 10)}.json`;
+    document.body.append(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+    toast("Redacted export downloaded");
+  } catch (error) {
+    toast(`Export failed: ${error.message}`);
+  }
+}
+
 function setupActions() {
   $("#weather-name").value = state.weatherConfig.name || $("#weather-name").value || "Local Weather";
   $("#weather-lat").value = state.weatherConfig.lat || "";
@@ -965,6 +1037,7 @@ function setupActions() {
   $("#stress-calibrate-button").addEventListener("click", () => queueStress(true));
   $("#stress-enable-button").addEventListener("click", () => queueStress(false));
   $("#analysis-button").addEventListener("click", runAnalysis);
+  $("#export-button").addEventListener("click", downloadRedactedExport);
   $("#geo-button").addEventListener("click", () => {
     if (!navigator.geolocation) {
       toast("Location unavailable");

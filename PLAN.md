@@ -217,6 +217,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Local bridge command buttons for sync/weather/watchfaces/stress.
 - [x] Hosted static build with configurable bridge URL for `huawhoop.kuber.studio`.
 - [x] Sanitized hosted sample-data fallback.
+- [x] Add data coverage, bridge timeline, and redacted export interactions for cross-device use.
 - [x] Browser DOM smoke checks after major layout pass. Screenshot capture timed out in the local browser runtime; keep DOM/API checks as the current automated fallback.
 - [x] API redaction pass before any hosted/cloud relay.
 

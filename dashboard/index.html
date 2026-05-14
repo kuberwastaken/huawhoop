@@ -86,6 +86,14 @@
         <div class="signal-grid" id="signal-grid"></div>
       </section>
 
+      <section class="app-card trends-card">
+        <div class="card-header flex-between">
+          <h2>Data Coverage</h2>
+          <span class="tiny-label">routes</span>
+        </div>
+        <div class="coverage-grid" id="coverage-grid"></div>
+      </section>
+
       <section class="app-card">
         <div class="card-header flex-between">
           <h2>Coach Analysis</h2>
@@ -219,7 +227,10 @@
       <section class="app-card">
         <div class="card-header flex-between">
           <h2>Network Access</h2>
-          <button class="pill-button secondary" id="copy-lan-button" type="button">Copy URL</button>
+          <div class="button-group compact-actions">
+            <button class="pill-button secondary" id="copy-lan-button" type="button">Copy URL</button>
+            <button class="pill-button secondary" id="export-button" type="button">Export</button>
+          </div>
         </div>
         <div class="data-stack" id="bridge-network"></div>
       </section>
