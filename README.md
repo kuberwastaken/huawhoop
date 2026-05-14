@@ -12,6 +12,17 @@ This keeps one authenticated BLE session open and serves the dashboard at:
 http://127.0.0.1:8765/dashboard/
 ```
 
+For phone or tablet access on the same private network:
+
+```powershell
+$env:BAND10_DASHBOARD_HOST = "0.0.0.0"
+python run_dashboard.py
+```
+
+Use the LAN URL printed at startup, or copy it from Settings -> Network Access.
+If you set `BAND10_BRIDGE_TOKEN`, enter the same token in the PWA settings before
+queuing sync/weather/watchface commands.
+
 Deployment, bridge, and source-truth audit notes live in `DEPLOYMENT.md`,
 `BRIDGE.md`, and `AUDIT.md`.
 

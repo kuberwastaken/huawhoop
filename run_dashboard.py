@@ -1,13 +1,14 @@
 import asyncio
 import json
 import os
+import socket
 import threading
 import time
 import webbrowser
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from urllib.parse import unquote, urlparse
+from urllib.parse import parse_qs, unquote, urlparse
 
 import band_daemon
 
@@ -39,6 +40,46 @@ ARTIFACT_ALLOWLIST = {
     "live_hrv_history.jsonl",
     "bridge_command_results.jsonl",
 }
+
+
+def allowed_origins(port: int) -> set[str]:
+    configured = {
+        origin.strip().rstrip("/")
+        for origin in os.getenv("BAND10_ALLOWED_ORIGINS", "").split(",")
+        if origin.strip()
+    }
+    configured.update({
+        f"http://127.0.0.1:{port}",
+        f"http://localhost:{port}",
+        "https://huawhoop.kuber.studio",
+    })
+    return configured
+
+
+def is_local_origin(origin: str) -> bool:
+    try:
+        host = urlparse(origin).hostname or ""
+    except Exception:
+        return False
+    return host in {"localhost", "127.0.0.1", "::1"} or host.startswith("192.168.") or host.startswith("10.")
+
+
+def local_lan_addresses() -> list[str]:
+    addresses: set[str] = set()
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as sock:
+            sock.connect(("8.8.8.8", 80))
+            addresses.add(sock.getsockname()[0])
+    except Exception:
+        pass
+    try:
+        for info in socket.getaddrinfo(socket.gethostname(), None, socket.AF_INET):
+            address = info[4][0]
+            if not address.startswith("127."):
+                addresses.add(address)
+    except Exception:
+        pass
+    return sorted(addresses)
 
 
 def read_json_artifact(filename: str, fallback=None):
@@ -94,10 +135,16 @@ class DashboardHandler(SimpleHTTPRequestHandler):
 
     def end_headers(self):
         origin = self.headers.get("Origin")
-        self.send_header("Access-Control-Allow-Origin", origin or "*")
+        allowed = allowed_origins(self.server.server_address[1])
+        if origin and (origin.rstrip("/") in allowed or "*" in allowed or is_local_origin(origin)):
+            self.send_header("Access-Control-Allow-Origin", origin)
+        elif not origin:
+            self.send_header("Access-Control-Allow-Origin", "*")
+        else:
+            self.send_header("Access-Control-Allow-Origin", "null")
         self.send_header("Vary", "Origin")
         self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
-        self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type, X-Huawhoop-Token")
         self.send_header("Cache-Control", "no-store")
         super().end_headers()
 
@@ -131,6 +178,31 @@ class DashboardHandler(SimpleHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
+    def _authorized(self) -> bool:
+        token = os.getenv("BAND10_BRIDGE_TOKEN", "")
+        if not token:
+            return True
+        return self.headers.get("X-Huawhoop-Token", "") == token
+
+    def _bridge_info_payload(self) -> dict:
+        host, port = self.server.server_address
+        bind_host = os.getenv("BAND10_DASHBOARD_HOST", host)
+        lan_urls = [f"http://{address}:{port}/dashboard/" for address in local_lan_addresses()]
+        api_urls = [url.replace("/dashboard/", "") for url in lan_urls]
+        return {
+            "bind_host": bind_host,
+            "port": port,
+            "same_origin": "/",
+            "local_url": f"http://127.0.0.1:{port}/dashboard/",
+            "local_api": f"http://127.0.0.1:{port}",
+            "lan_urls": lan_urls,
+            "lan_api_urls": api_urls,
+            "lan_enabled": bind_host in {"0.0.0.0", "::"} or not bind_host.startswith("127."),
+            "allowed_origins": sorted(allowed_origins(port)),
+            "token_required": bool(os.getenv("BAND10_BRIDGE_TOKEN", "")),
+            "timestamp": int(time.time()),
+        }
+
     def _status_payload(self) -> dict:
         return {
             "bridge": {
@@ -139,6 +211,7 @@ class DashboardHandler(SimpleHTTPRequestHandler):
                 "port": self.server.server_address[1],
                 "timestamp": int(time.time()),
                 "timestamp_local": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
+                "lan_enabled": self._bridge_info_payload()["lan_enabled"],
             },
             "connection": read_json_artifact("connection_status.json", {}),
             "sync": read_json_artifact("latest_sync_status.json", {}),
@@ -149,15 +222,28 @@ class DashboardHandler(SimpleHTTPRequestHandler):
     def do_GET(self):
         parsed = urlparse(self.path)
         path = parsed.path
+        query = parse_qs(parsed.query)
         if path == "/api/status":
             self._send_json(self._status_payload())
+            return
+        if path == "/api/bridge-info":
+            self._send_json(self._bridge_info_payload())
             return
         if path == "/api/insights":
             self._send_json(read_json_artifact("latest_insights.json", {}))
             return
         if path == "/api/export":
+            include_private = query.get("private", ["0"])[0] == "1"
+            if include_private and not self._authorized():
+                self._send_json({"error": "unauthorized"}, status=401)
+                return
+            status = self._status_payload()
+            if not include_private:
+                status.get("connection", {}).pop("device_mac", None)
+                status["last_commands"] = []
             self._send_json({
-                "status": self._status_payload(),
+                "redacted": not include_private,
+                "status": status,
                 "recovery": read_json_artifact("latest_recovery_summary.json", {}),
                 "sleep_sequence": read_json_artifact("latest_sleep_sequence_preview.json", {}),
                 "fitness": read_json_artifact("latest_fitness_preview.json", {}),
@@ -180,6 +266,9 @@ class DashboardHandler(SimpleHTTPRequestHandler):
         super().do_GET()
 
     def do_POST(self):
+        if not self._authorized():
+            self._send_json({"error": "unauthorized"}, status=401)
+            return
         parsed = urlparse(self.path)
         path = parsed.path
         payload = self._read_request_json()
@@ -221,9 +310,13 @@ def start_dashboard_server(host: str, port: int):
 async def main():
     host = os.getenv("BAND10_DASHBOARD_HOST", "127.0.0.1")
     port = int(os.getenv("BAND10_DASHBOARD_PORT", "8765"))
-    url = f"http://{host}:{port}/dashboard/"
+    shown_host = "127.0.0.1" if host in {"0.0.0.0", "::"} else host
+    url = f"http://{shown_host}:{port}/dashboard/"
     start_dashboard_server(host, port)
     print(f"Dashboard: {url}", flush=True)
+    if host in {"0.0.0.0", "::"}:
+        for address in local_lan_addresses():
+            print(f"LAN Dashboard: http://{address}:{port}/dashboard/", flush=True)
     print("Keeping one authenticated BLE session open. Use Ctrl+C to stop.", flush=True)
     print("Live HRV probes are opt-in: set BAND10_LIVE_HRV_EVERY to a cycle interval.", flush=True)
     if os.getenv("BAND10_OPEN_BROWSER", "1") != "0":

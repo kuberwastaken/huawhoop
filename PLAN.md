@@ -152,7 +152,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Choose Vercel or GitHub Pages for `huawhoop.kuber.studio`.
 - [x] Make hosted PWA work with static sample data and configurable bridge URL.
 - [x] Document local bridge setup separately from hosted UI deployment.
-- [ ] Add production-safe defaults for no bridge, stale bridge, and offline mode.
+- [x] Add production-safe defaults for no bridge, stale bridge, and offline mode.
 
 ## Milestone 8: LLM Analysis Guardrails
 
@@ -215,10 +215,10 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 
 - [x] Installable mobile PWA shell.
 - [x] Local bridge command buttons for sync/weather/watchfaces/stress.
-- [ ] Hosted static build with configurable bridge URL for `huawhoop.kuber.studio`.
+- [x] Hosted static build with configurable bridge URL for `huawhoop.kuber.studio`.
 - [x] Sanitized hosted sample-data fallback.
 - [ ] Browser visual regression screenshots after every major layout pass.
-- [ ] API redaction pass before any hosted/cloud relay.
+- [x] API redaction pass before any hosted/cloud relay.
 
 ## Backlog
 

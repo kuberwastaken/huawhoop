@@ -28,7 +28,8 @@ const state = {
   data: {},
   weather: null,
   weatherConfig: loadJsonSetting("huawhoop.weatherConfig", {}),
-  bridgeBase: localStorage.getItem("huawhoop.bridgeBase") || ""
+  bridgeBase: localStorage.getItem("huawhoop.bridgeBase") || "",
+  bridgeToken: localStorage.getItem("huawhoop.bridgeToken") || ""
 };
 
 const fmt = new Intl.NumberFormat(undefined, { maximumFractionDigits: 1 });
@@ -64,8 +65,13 @@ function isLocalHost() {
   return ["", "localhost", "127.0.0.1", "::1"].includes(window.location.hostname);
 }
 
+function isPrivateHost() {
+  const host = window.location.hostname;
+  return /^192\.168\./.test(host) || /^10\./.test(host) || /^172\.(1[6-9]|2\d|3[0-1])\./.test(host);
+}
+
 function hasBridge() {
-  return !!state.bridgeBase || isLocalHost();
+  return !!state.bridgeBase || isLocalHost() || isPrivateHost() || window.location.port === "8765";
 }
 
 function artifactPath(key) {
@@ -110,6 +116,7 @@ function parseJsonl(text) {
 async function loadData() {
   const api = hasBridge() ? await fetchJson(bridgePath("/api/status"), null) : null;
   if (api && (api.connection || api.insights || api.bridge)) {
+    const bridgeInfo = await fetchJson(bridgePath("/api/bridge-info"), {});
     const historyText = await fetchText(bridgePath("/api/artifacts/recovery_history.jsonl"), "");
     const insightsHistoryText = await fetchText(bridgePath("/api/artifacts/insights_history.jsonl"), "");
     state.data = {
@@ -129,6 +136,7 @@ async function loadData() {
       recoveryHistory: parseJsonl(historyText),
       insightsHistory: parseJsonl(insightsHistoryText),
       bridge: api.bridge || {},
+      bridgeInfo,
       lastCommands: api.last_commands || []
     };
     return;
@@ -168,6 +176,7 @@ async function loadData() {
     recoveryHistory: parseJsonl(entries[13]),
     insightsHistory: parseJsonl(entries[14]),
     bridge: {},
+    bridgeInfo: {},
     lastCommands: []
   };
 }
@@ -326,6 +335,44 @@ function renderTrends() {
   });
 }
 
+function renderSignalCharts() {
+  const quality = state.data.insights?.data_quality || {};
+  const fitnessRows = state.data.fitness?.steps || [];
+  const hrValues = fitnessRows.map((row) => row.heart_rate).filter((value) => number(value, 0) > 0);
+  const spo2Values = fitnessRows.map((row) => row.spo2).filter((value) => number(value, 0) > 0);
+  const stressZones = state.data.insights?.stress?.zone_minutes || {};
+  const strainZones = state.data.insights?.strain?.zone_minutes || {};
+  const session = latestSleepSession();
+  const sleepSummary = session.summary || {};
+  const sleepStages = session.details?.stages || [];
+  $("#quality-label").textContent = quality.hrv_source ? `HRV · ${quality.hrv_source}` : "sample";
+  $("#signal-grid").innerHTML = [
+    signalCard("Heart rate", hrValues.length ? `${Math.round(hrValues.at(-1))} bpm` : "--", `${hrValues.length} samples`, sparkSvg(hrValues, "var(--blue)")),
+    signalCard("SpO2", spo2Values.length ? `${Math.round(Math.min(...spo2Values))}-${Math.round(Math.max(...spo2Values))}%` : "--", `${spo2Values.length} samples`, sparkSvg(spo2Values, "var(--teal)")),
+    signalCard("Stress split", state.data.insights?.stress?.label || "--", `${Math.round(number(stressZones.medium))}m medium`, stackedBar([
+      { label: "Low", value: stressZones.low || 0, color: "var(--blue)" },
+      { label: "Medium", value: stressZones.medium || 0, color: "var(--teal)" },
+      { label: "High", value: stressZones.high || 0, color: "var(--orange)" }
+    ])),
+    signalCard("Sleep stages", sleepSummary.avgHrv ? `${sleepSummary.avgHrv} ms HRV` : `${sleepStages.length}m`, sleepSummary.sleepScore ? `${sleepSummary.sleepScore}% device` : "latest session", sleepStageTimeline(sleepStages, true)),
+    signalCard("Strain zones", current().strain ? current().strain.toFixed(1) : "--", `${fmt.format(state.data.insights?.strain?.trimp || 0)} TRIMP`, stackedBar([
+      { label: "Easy", value: strainZones.easy || 0, color: "var(--blue)" },
+      { label: "Moderate", value: strainZones.moderate || 0, color: "var(--teal)" },
+      { label: "Hard", value: strainZones.hard || 0, color: "var(--yellow)" },
+      { label: "Max", value: strainZones.max || 0, color: "var(--orange)" }
+    ])),
+    signalCard("Training balance", state.data.insights?.training_balance?.load_ratio ?? "--", state.data.insights?.training_balance?.label || "waiting", meter("acute / chronic", number(state.data.insights?.training_balance?.load_ratio, 0), 2, "linear-gradient(90deg,var(--blue),var(--teal),var(--orange))"))
+  ].join("");
+}
+
+function signalCard(label, value, sub, chart) {
+  return `<article class="signal-card">
+    <div class="signal-head"><span>${label}</span><strong>${value}</strong></div>
+    <div class="signal-chart">${chart}</div>
+    <p>${sub}</p>
+  </article>`;
+}
+
 function drawLine(container, values, opts = {}) {
   if (!values.length) {
     container.innerHTML = `<div class="empty">Collecting trend</div>`;
@@ -348,6 +395,66 @@ function drawLine(container, values, opts = {}) {
     <path class="spark-line" d="${path}" style="stroke:${opts.color || "var(--teal)"}"></path>
     ${points.map(([x, y]) => `<circle class="spark-dot" cx="${x}" cy="${y}" r="3"></circle>`).join("")}
   </svg>`;
+}
+
+function sparkSvg(values, color = "var(--teal)") {
+  const clean = values.map((value) => number(value, NaN)).filter(Number.isFinite).slice(-96);
+  if (clean.length < 2) return `<div class="empty mini-empty">Collecting</div>`;
+  const width = 180;
+  const height = 52;
+  const min = Math.min(...clean);
+  const max = Math.max(...clean, min + 1);
+  const points = clean.map((value, index) => {
+    const x = (index / Math.max(1, clean.length - 1)) * width;
+    const y = height - ((value - min) / Math.max(1, max - min)) * (height - 6) - 3;
+    return [x, y];
+  });
+  const path = points.map(([x, y], index) => `${index ? "L" : "M"}${x.toFixed(1)},${y.toFixed(1)}`).join(" ");
+  return `<svg class="mini-spark" viewBox="0 0 ${width} ${height}">
+    <path d="${path}" style="stroke:${color}"></path>
+  </svg>`;
+}
+
+function stageMeta(stage) {
+  const meta = {
+    1: ["Light", "var(--blue)"],
+    2: ["REM", "var(--teal)"],
+    3: ["Deep", "var(--purple)"],
+    4: ["Awake", "var(--orange)"],
+    5: ["Nap", "var(--yellow)"]
+  };
+  return meta[stage] || [`Stage ${stage}`, "var(--muted-dark)"];
+}
+
+function latestSleepSession() {
+  const sessions = state.data.sequence?.sessions || [];
+  const scored = sessions.filter((session) => number(session.summary?.sleepScore, 0) > 0);
+  const candidates = scored.length ? scored : sessions;
+  return candidates.sort((a, b) => number(b.end_ts, 0) - number(a.end_ts, 0))[0] || {};
+}
+
+function sleepStageTimeline(stages, compact = false) {
+  if (!stages?.length) return `<div class="empty">No stage timeline yet</div>`;
+  const runs = [];
+  for (const point of stages) {
+    const last = runs.at(-1);
+    if (last && last.stage === point.stage) last.count += 1;
+    else runs.push({ stage: point.stage, count: 1 });
+  }
+  const total = runs.reduce((sum, run) => sum + run.count, 0) || 1;
+  return `<div class="stage-timeline ${compact ? "compact" : ""}">
+    ${runs.map((run) => {
+      const [label, color] = stageMeta(run.stage);
+      return `<i title="${label} ${run.count}m" style="width:${(run.count / total * 100).toFixed(2)}%;background:${color}"></i>`;
+    }).join("")}
+  </div>`;
+}
+
+function stackedBar(parts) {
+  const total = parts.reduce((sum, part) => sum + Math.max(0, number(part.value)), 0) || 1;
+  return `<div class="stacked-bar">
+    ${parts.map((part) => `<i title="${esc(part.label)} ${fmt.format(part.value)}" style="width:${(number(part.value) / total * 100).toFixed(2)}%;background:${part.color}"></i>`).join("")}
+  </div>`;
 }
 
 function renderRecovery() {
@@ -381,6 +488,8 @@ function renderRecovery() {
 function renderSleep() {
   const sleep = state.data.insights?.sleep || {};
   const values = current();
+  const session = latestSleepSession();
+  const stagesTimeline = session.details?.stages || [];
   $("#sleep-hero").innerHTML = ringSvg({
     value: values.sleepScore,
     max: 100,
@@ -402,6 +511,16 @@ function renderSleep() {
         return meter(names[stage] || `Stage ${stage}`, number(value), total, "var(--teal)");
       }).join("") || `<div class="empty">No stages yet</div>`}
     </div>`
+  ].join("");
+  $("#sleep-stage-chart").innerHTML = [
+    sleepStageTimeline(stagesTimeline),
+    `<div class="stage-legend">
+      ${[4, 1, 2, 3, 5].map((stage) => {
+        const [label, color] = stageMeta(stage);
+        return `<span><i style="background:${color}"></i>${label}</span>`;
+      }).join("")}
+    </div>`,
+    session.start_local ? `<p class="chart-note">${session.start_local} to ${session.end_local || "now"} · ${stagesTimeline.length} one-minute samples</p>` : ""
   ].join("");
 }
 
@@ -432,6 +551,19 @@ function renderStrain() {
     ${detailRow("S", "Strain", current().strain ? current().strain.toFixed(1) : "--", `${fmt.format(strain.trimp || 0)} TRIMP load`)}
     ${Object.entries(strainZones).map(([name, value]) => meter(`${name} strain`, number(value), maxStrainZone, zoneColor(name))).join("")}
     ${detailRow("L", "Load Ratio", state.data.insights?.training_balance?.load_ratio ?? "--", state.data.insights?.training_balance?.recommendation || "")}
+  </div>`;
+  $("#strain-load-chart").innerHTML = `<div class="load-grid">
+    ${signalCard("Cardio load", current().strain ? current().strain.toFixed(1) : "--", `${fmt.format(strain.trimp || 0)} TRIMP`, stackedBar([
+      { label: "Easy", value: strainZones.easy || 0, color: "var(--blue)" },
+      { label: "Moderate", value: strainZones.moderate || 0, color: "var(--teal)" },
+      { label: "Hard", value: strainZones.hard || 0, color: "var(--yellow)" },
+      { label: "Max", value: strainZones.max || 0, color: "var(--orange)" }
+    ]))}
+    ${signalCard("Stress time", stress.label || "--", `${Math.round(number(stressZones.medium))}m medium`, stackedBar([
+      { label: "Low", value: stressZones.low || 0, color: "var(--blue)" },
+      { label: "Medium", value: stressZones.medium || 0, color: "var(--teal)" },
+      { label: "High", value: stressZones.high || 0, color: "var(--orange)" }
+    ]))}
   </div>`;
 }
 
@@ -491,6 +623,19 @@ function renderRoutes() {
   });
 }
 
+function renderBridgeNetwork() {
+  const info = state.data.bridgeInfo || {};
+  const lanUrl = info.lan_urls?.[0] || "";
+  const lanApi = info.lan_api_urls?.[0] || "";
+  const rows = [
+    detailRow("H", "Local App", info.local_url || "same origin", info.local_api || ""),
+    detailRow("L", "LAN App", lanUrl || "start with 0.0.0.0", lanApi || "phone/tablet bridge URL"),
+    detailRow("C", "Cloud PWA", "huawhoop.kuber.studio", state.bridgeBase || lanApi || "set Bridge URL"),
+    detailRow("S", "Bridge Safety", info.token_required ? "token required" : "local trust", info.lan_enabled ? "LAN enabled" : "loopback only")
+  ];
+  $("#bridge-network").innerHTML = rows.join("");
+}
+
 function renderWeather() {
   const weather = state.weather;
   if (weather) {
@@ -514,18 +659,22 @@ function renderAll() {
   renderHeader();
   renderToday();
   renderTrends();
+  renderSignalCharts();
   renderRecovery();
   renderSleep();
   renderStrain();
   renderRoutes();
+  renderBridgeNetwork();
   renderWeather();
 }
 
 async function command(path, payload = {}) {
   if (!hasBridge()) throw new Error("No live bridge - configure Bridge URL in Settings");
+  const headers = { "Content-Type": "application/json" };
+  if (state.bridgeToken) headers["X-Huawhoop-Token"] = state.bridgeToken;
   const response = await fetch(bridgePath(path), {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers,
     body: JSON.stringify(payload)
   });
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -716,17 +865,34 @@ function setupActions() {
     }, () => toast("Location denied"));
   });
   $("#bridge-url").value = state.bridgeBase;
+  $("#bridge-token").value = state.bridgeToken;
   $("#save-bridge-button").addEventListener("click", async () => {
     state.bridgeBase = $("#bridge-url").value.trim();
+    state.bridgeToken = $("#bridge-token").value.trim();
     localStorage.setItem("huawhoop.bridgeBase", state.bridgeBase);
+    if (state.bridgeToken) localStorage.setItem("huawhoop.bridgeToken", state.bridgeToken);
+    else localStorage.removeItem("huawhoop.bridgeToken");
     await refresh();
     toast("Bridge saved");
   });
   $("#clear-bridge-button").addEventListener("click", async () => {
     state.bridgeBase = "";
+    state.bridgeToken = "";
     $("#bridge-url").value = "";
+    $("#bridge-token").value = "";
     localStorage.removeItem("huawhoop.bridgeBase");
+    localStorage.removeItem("huawhoop.bridgeToken");
     await refresh();
+  });
+  $("#copy-lan-button").addEventListener("click", async () => {
+    const info = state.data.bridgeInfo || {};
+    const url = info.lan_api_urls?.[0] || info.local_api || state.bridgeBase || "";
+    if (!url || !navigator.clipboard) {
+      toast(url || "No bridge URL");
+      return;
+    }
+    await navigator.clipboard.writeText(url);
+    toast("Bridge URL copied");
   });
 }
 

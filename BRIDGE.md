@@ -32,6 +32,25 @@ bridge URL. Good options:
 Do not expose the bridge publicly without an auth layer. It can queue device
 commands and reads personal health artifacts.
 
+For same-LAN phone use, start the bridge on all interfaces:
+
+```powershell
+$env:BAND10_DASHBOARD_HOST = "0.0.0.0"
+python run_dashboard.py
+```
+
+Open the LAN dashboard URL printed at startup, or copy the LAN API URL from the
+PWA settings screen and paste it into the hosted app's Bridge URL field.
+
+Optional command protection:
+
+```powershell
+$env:BAND10_BRIDGE_TOKEN = "<long-random-token>"
+```
+
+When set, dashboard command POSTs must send the same token from the settings
+screen. Status reads remain available for lightweight device checks.
+
 ## Windows Startup
 
 After live sync is stable, create a scheduled task that starts in this repo:
@@ -78,5 +97,7 @@ python connect.py
 - `band.ini`, `data/`, the decompiled APK, and external source snapshots are
   ignored by Git and excluded from Vercel deployment.
 - The hosted PWA falls back to sanitized sample artifacts when no bridge is set.
+- `/api/export` is redacted by default; `?private=1` requires
+  `BAND10_BRIDGE_TOKEN` when a token is configured.
 - LLM analysis is intentionally disabled until the deterministic bridge and
   analytics are stable.

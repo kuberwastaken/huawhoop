@@ -724,8 +724,9 @@ Live status on 2026-05-14:
 
 - `run_dashboard.py` now exposes a local bridge API while serving the static dashboard:
   - `GET /api/status`: bridge, connection, latest sync, insights, and recent command results.
+  - `GET /api/bridge-info`: loopback/LAN URLs, CORS allowlist, token requirement, and bind status for phone/hosted PWA setup.
   - `GET /api/insights`: latest analytics artifact.
-  - `GET /api/export`: compact combined export for PWA/cloud handoff.
+  - `GET /api/export`: compact combined export for PWA/cloud handoff. Redacted by default; `?private=1` requires `BAND10_BRIDGE_TOKEN` if configured.
   - `GET /api/artifacts/<allowlisted-file>`: selected runtime artifacts only.
   - `POST /api/commands/sync`: queues a daemon sync without starting a second BLE script.
   - `POST /api/commands/weather`: queues a weather push command for the active daemon session.
@@ -733,12 +734,13 @@ Live status on 2026-05-14:
   - `POST /api/commands/watchface_activate`: queues activation of an installed watchface.
   - `POST /api/commands/stress`: queues automatic stress enable/calibration.
 - `band_daemon.py` polls `data/bridge_commands.jsonl` from inside the one authenticated BLE session and writes results to `data/bridge_command_results.jsonl`.
-- This is the first cross-device bridge: hosted PWA can point at a configured local bridge URL, while the bridge remains the only process touching BLE/auth secrets.
+- This is the first cross-device bridge: hosted PWA can point at a configured local bridge URL, while the bridge remains the only process touching BLE/auth secrets. Same-LAN use is supported by starting with `BAND10_DASHBOARD_HOST=0.0.0.0`; the PWA shows the LAN API URL in Settings.
 - The daemon now explicitly scans before connecting and writes `scanning`/`not_found` states when Windows cannot see the band. This makes "connection failed" distinguishable from protocol/auth failure.
 
 ### PWA Shell
 
 - The dashboard is now a mobile-first PWA shell rather than a static artifact viewer. It reads bridge API artifacts when served by `run_dashboard.py`, falls back to local `data/*.json` artifacts for static review, and exposes sync/weather commands without showing protocol internals.
+- The dashboard now adds interactive derived charts from current artifacts: signal mini-sparklines, stress/strain stacked bars, sleep-stage architecture ribbons, watchface controls, weather controls, bridge network state, and token-aware command posting.
 - Browser smoke check against local artifacts showed connected status, recovery, sleep, stress, weather, and HRV (`48 ms` from sleep sequence) without console errors.
 - The hosted version should remain a client. The BLE owner stays local because it needs stored HiChain keys, a long-lived connection, and battery-aware sync behavior near the band.
 - Vercel is the selected static host for `huawhoop.kuber.studio`. `.vercelignore` excludes `band.ini`, `data/`, the decompiled APK, Gadgetbridge, and open-wearables source snapshots. Hosted PWA fallback data now comes from sanitized `dashboard/sample-data/*` artifacts unless the user configures a bridge URL.

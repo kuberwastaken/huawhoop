@@ -78,6 +78,14 @@
         </div>
       </section>
 
+      <section class="app-card trends-card">
+        <div class="card-header flex-between">
+          <h2>Body Signals</h2>
+          <span class="tiny-label" id="quality-label">live</span>
+        </div>
+        <div class="signal-grid" id="signal-grid"></div>
+      </section>
+
       <!-- Activity Log -->
       <section class="app-card activity-card">
         <div class="card-header flex-between">
@@ -108,6 +116,12 @@
         <section class="hero-ring" id="sleep-hero"></section>
       </div>
       <section class="app-card data-stack" id="sleep-details"></section>
+      <section class="app-card padded-content">
+        <div class="card-header flush">
+          <h2>Sleep Architecture</h2>
+        </div>
+        <div id="sleep-stage-chart"></div>
+      </section>
     </div>
 
     <!-- STRAIN & STRESS VIEW -->
@@ -126,6 +140,12 @@
       </section>
 
       <section class="app-card data-stack" id="strain-details"></section>
+      <section class="app-card padded-content">
+        <div class="card-header flush">
+          <h2>Load Map</h2>
+        </div>
+        <div id="strain-load-chart"></div>
+      </section>
     </div>
 
     <!-- SETTINGS VIEW -->
@@ -178,11 +198,22 @@
           <div class="input-group mb-15">
             <input id="bridge-url" placeholder="http://127.0.0.1:8765">
           </div>
+          <div class="input-group mb-15">
+            <input id="bridge-token" placeholder="Optional bridge token" type="password" autocomplete="current-password">
+          </div>
           <div class="button-group">
             <button class="pill-button secondary" id="clear-bridge-button" type="button">Use Same Origin</button>
             <button class="pill-button secondary" id="full-sync-button" type="button">Force Full Sync</button>
           </div>
         </div>
+      </section>
+
+      <section class="app-card">
+        <div class="card-header flex-between">
+          <h2>Network Access</h2>
+          <button class="pill-button secondary" id="copy-lan-button" type="button">Copy URL</button>
+        </div>
+        <div class="data-stack" id="bridge-network"></div>
       </section>
 
       <!-- Routes / Advanced -->
