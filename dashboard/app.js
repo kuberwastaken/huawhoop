@@ -593,7 +593,8 @@ function renderRoutes() {
     ["Sleep sequence HRV", quality.hrv_source || "pending", `${quality.sleep_sequence_sessions || 0} sessions`],
     ["Weather push", "queued", "service 0x0f"],
     ["Watchfaces", watchfaces.supported ? `${installed.length} installed` : (flags.watchface ? "supported" : "audit"), "service 0x27"],
-    ["Live RRI", quality.live_hrv_transport?.state || "diagnostic", `${quality.live_hrv_transport?.sample_count || 0} samples`]
+    ["Live RRI", quality.live_hrv_transport?.state || "diagnostic", `${quality.live_hrv_transport?.sample_count || 0} samples`],
+    ["ECG", flags.ecg || flags.ecg_open ? "advertised" : "unsupported", flags.ecg_open ? "service 0x23" : "no Band 10 route"]
   ];
   $("#route-status").innerHTML = rows.map(([name, value, sub]) => detailRow("•", name, value, sub)).join("");
   const current = installed.find((face) => face.current);

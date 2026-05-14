@@ -775,6 +775,16 @@ Project implementation:
 - `run_dashboard.py` and `band_daemon.py` now expose a `stress` bridge command. The PWA has buttons for calibration and enabling automatic stress.
 - `BAND10_ONLY_STRESS=1` is available for focused enable/calibration checks without a full data sync. Add `BAND10_STRESS_CALIBRATE=1` to run the 60-second Gadgetbridge-style RRI calibration first.
 - `analytics.py` now emits a day-level `stress` summary with low/medium/high minutes, average score, max score, gauge value `0..3`, and recent high-stress windows.
+- Automatic RRI/stress file fill is confirmed after enabling auto stress: `latest_stress_preview.json` contains parsed `rrisqi_data.bin` stress records with scores `44` and `50`, algorithm `8021`, and 12-feature vectors. Future sync can therefore use the file route without requiring a manual 60-second live calibration every time.
+
+### ECG Availability Status
+
+Gadgetbridge has a generic Huawei ECG route, but current Band 10 evidence says it is not exposed on this device/firmware:
+
+- Gadgetbridge ECG primitives: service `0x23/cmd=0x10` (`ECG.SetECGOpen`), DataSync package `hw.watch.health.ecganalysis`, config IDs `900300005` and `900300006`, file download type `0x18` as `ecg_analysis_data.bin`, and parser `HuaweiEcgFileParser.java`.
+- Gadgetbridge gates ECG on expand capability bits `106` (ECG), `27` (ECG open), and `138` (ECG notification). Arrhythmia is gated separately on bits `113`, `168`, and `255`.
+- Live Band 10 capabilities do not advertise service `0x23`; `connect.py` now records the ECG and arrhythmia expand bits explicitly for future syncs.
+- Huawei Health APK/decompile contains generic ECG models/routes, but that is not proof that Band 10 exposes ECG. Implementation stance: no ECG UI/parser route is enabled until the band advertises service `0x23`, one of the ECG expand bits, or a successful file type `0x18` response.
 
 ### Focused Live-Test Modes
 
@@ -794,5 +804,5 @@ Project implementation:
 
 Current live caveat:
 
-- The latest local `latest_stress_preview.json` has `stress_count=0`; the historical stress file is empty right now. That likely means automatic stress has not populated since the factory reset or needs a calibration/seed push first.
-- Earlier live RRI attempts opened the service but produced HR-only traffic. Retest with the exact Gadgetbridge type `3`/`4` path is still required now that the band is reset and pairing is stable.
+- ECG remains unsupported unless a future firmware/capability update exposes the service/bit/file route above.
+- Live RRI calibration is still useful as a manual quality check, but normal HRV/stress should prefer sleep-sequence HRV plus the automatic `rrisqi_data.bin` stress file when present.

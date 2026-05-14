@@ -185,7 +185,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 
 - [x] Search for open-source recovery/strain/sleep algorithms.
 - [x] Inspect `open-wearables-*` for reusable data models or algorithms.
-- [ ] Investigate ECG availability on Huawei Band 10 and related Huawei devices.
+- [x] Investigate ECG availability on Huawei Band 10 and related Huawei devices.
 - [x] Inspect Gadgetbridge data parsers for HRV, stress, SpO2, sleep stage, and activity semantics.
 
 ## Device Push TODO
@@ -199,7 +199,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Automatic stress one-shot enable/calibration mode.
 - [x] Weather live verification packet chain on the Band 10.
 - [x] Stress auto live verification through a live RRI seed and `svc=0x20/cmd=0x09`.
-- [ ] Confirm future `rrisqi_data.bin` fills without manual measurement.
+- [x] Confirm future `rrisqi_data.bin` fills without manual measurement.
 - [x] Watchface package validation before any upload operation.
 
 ## Analytics TODO
@@ -209,7 +209,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Stress zone summaries for the PWA.
 - [x] Strain refinement from activities/workouts rather than passive HR only.
 - [x] SpO2 low-duration summaries.
-- [ ] ECG parser route if Band 10 exposes ECG analysis files; otherwise document unsupported status.
+- [x] ECG parser route if Band 10 exposes ECG analysis files; otherwise document unsupported status.
 
 ## Interface TODO
 

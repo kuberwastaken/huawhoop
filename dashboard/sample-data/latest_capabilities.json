@@ -2,6 +2,12 @@
   "capability_flags": {
     "watchface": true,
     "weather": true,
-    "reverse_capabilities": true
+    "reverse_capabilities": true,
+    "ecg": false,
+    "ecg_open": false,
+    "ecg_notification": false,
+    "arrhythmia_other": false,
+    "arrhythmia_cn": false,
+    "arrhythmia_ce": false
   }
 }
