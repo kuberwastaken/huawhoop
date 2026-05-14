@@ -36,6 +36,12 @@
   "strain": {
     "strain": 12.8,
     "trimp": 98.4,
+    "activity_load": 24.6,
+    "combined_load": 123.0,
+    "active_minutes": 92,
+    "vigorous_minutes": 13,
+    "step_total": 10482,
+    "method": "Banister-style HRR/TRIMP plus conservative active-minute and step load on WHOOP-like 0-21 logarithmic scale",
     "zone_minutes": {
       "easy": 121,
       "moderate": 44,

@@ -549,6 +549,8 @@ function renderStrain() {
   $("#strain-details").innerHTML = `<div class="zone-bars">
     ${Object.entries(stressZones).map(([name, value]) => meter(`${name} stress`, number(value), maxStressZone, zoneColor(name))).join("") || `<div class="empty">No stress samples yet</div>`}
     ${detailRow("S", "Strain", current().strain ? current().strain.toFixed(1) : "--", `${fmt.format(strain.trimp || 0)} TRIMP load`)}
+    ${detailRow("A", "Active Minutes", strain.active_minutes ?? "--", `${strain.step_total || 0} detected steps`)}
+    ${detailRow("P", "Activity Load", strain.activity_load ?? "--", `${strain.vigorous_minutes || 0} vigorous minutes`)}
     ${Object.entries(strainZones).map(([name, value]) => meter(`${name} strain`, number(value), maxStrainZone, zoneColor(name))).join("")}
     ${detailRow("L", "Load Ratio", state.data.insights?.training_balance?.load_ratio ?? "--", state.data.insights?.training_balance?.recommendation || "")}
   </div>`;

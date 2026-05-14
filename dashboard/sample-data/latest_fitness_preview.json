@@ -1,5 +1,18 @@
 {
   "summary": {
     "step_total": 12844
-  }
+  },
+  "steps": [
+    {"timestamp": 1778670000, "steps": 18, "heart_rate": 63, "spo2": 98},
+    {"timestamp": 1778670060, "steps": 20, "heart_rate": 68, "spo2": 98},
+    {"timestamp": 1778670120, "steps": 34, "heart_rate": 76, "spo2": 97},
+    {"timestamp": 1778670180, "steps": 48, "heart_rate": 92, "spo2": 97},
+    {"timestamp": 1778670240, "steps": 62, "heart_rate": 108, "spo2": 96},
+    {"timestamp": 1778670300, "steps": 70, "heart_rate": 122, "spo2": 96},
+    {"timestamp": 1778670360, "steps": 44, "heart_rate": 116, "spo2": 97},
+    {"timestamp": 1778670420, "steps": 30, "heart_rate": 94, "spo2": 98},
+    {"timestamp": 1778670480, "steps": 12, "heart_rate": 72, "spo2": 98},
+    {"timestamp": 1778670540, "steps": 0, "heart_rate": 61, "spo2": 99}
+  ],
+  "sleep": []
 }

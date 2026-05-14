@@ -711,29 +711,67 @@ def _history_baseline(rows: list[dict], key: str, default=None):
     return statistics.median(values) if values else default
 
 
-def _strain_from_hr(heart_rates: list[int]) -> dict:
+def _minute_weight(prev_ts: int | None, ts: int | None) -> float:
+    if not prev_ts or not ts or ts <= prev_ts:
+        return 1.0
+    return _clamp((ts - prev_ts) / 60.0, 0.5, 5.0)
+
+
+def _strain_from_activity(samples: list[dict]) -> dict:
+    heart_rates = [
+        row.get("heart_rate")
+        for row in samples
+        if isinstance(row.get("heart_rate"), (int, float)) and row.get("heart_rate") > 0
+    ]
     if not heart_rates:
         return {"strain": None, "trimp": 0.0, "zone_minutes": {}}
-    resting = max(45, min(75, min(heart_rates)))
-    max_hr = 190
+    sorted_hr = sorted(heart_rates)
+    resting = max(45, min(80, sorted_hr[max(0, round(len(sorted_hr) * 0.10) - 1)]))
+    max_hr = max(185, min(205, max(heart_rates) + 45))
     zones = {"easy": 0, "moderate": 0, "hard": 0, "max": 0}
     trimp = 0.0
-    for hr in heart_rates:
+    active_minutes = 0.0
+    vigorous_minutes = 0.0
+    step_total = 0
+    prev_ts = None
+    for row in samples:
+        hr = row.get("heart_rate")
+        ts = row.get("timestamp")
+        minutes = _minute_weight(prev_ts, ts if isinstance(ts, int) else None)
+        if isinstance(ts, int):
+            prev_ts = ts
+        steps = row.get("steps")
+        if isinstance(steps, (int, float)) and steps > 0:
+            step_total += int(steps)
+        if not isinstance(hr, (int, float)) or hr <= 0:
+            continue
         reserve = _clamp((hr - resting) / max(1, max_hr - resting), 0, 1)
-        trimp += reserve * math.exp(1.92 * reserve)
+        trimp += reserve * math.exp(1.92 * reserve) * minutes
+        if reserve >= 0.35 or (isinstance(steps, (int, float)) and steps > 0):
+            active_minutes += minutes
+        if reserve >= 0.60:
+            vigorous_minutes += minutes
         if reserve < 0.35:
-            zones["easy"] += 1
+            zones["easy"] += minutes
         elif reserve < 0.55:
-            zones["moderate"] += 1
+            zones["moderate"] += minutes
         elif reserve < 0.75:
-            zones["hard"] += 1
+            zones["hard"] += minutes
         else:
-            zones["max"] += 1
-    strain = 21.0 * (1.0 - math.exp(-trimp / 180.0))
+            zones["max"] += minutes
+    activity_load = min(45.0, active_minutes * 0.20 + vigorous_minutes * 0.85 + (step_total / 1000.0) * 3.5)
+    combined_load = trimp + activity_load
+    strain = 21.0 * (1.0 - math.exp(-combined_load / 190.0))
     return {
         "strain": round(_clamp(strain, 0, 21), 1),
         "trimp": round(trimp, 1),
-        "zone_minutes": zones,
+        "activity_load": round(activity_load, 1),
+        "combined_load": round(combined_load, 1),
+        "active_minutes": round(active_minutes),
+        "vigorous_minutes": round(vigorous_minutes),
+        "step_total": step_total,
+        "zone_minutes": {name: round(value) for name, value in zones.items()},
+        "method": "Banister-style HRR/TRIMP plus conservative active-minute and step load on WHOOP-like 0-21 logarithmic scale",
     }
 
 
@@ -904,7 +942,7 @@ def build_insights(data_dir: Path = DATA_DIR) -> dict:
         spo2 = [sequence_sleep["avg_spo2"]]
     sleep_minutes = (sequence_sleep or {}).get("sleep_minutes") or summary.get("sleep_minutes") or 0
 
-    strain = _strain_from_hr(heart_rates)
+    strain = _strain_from_activity(steps)
     stress_summary = _stress_zone_summary(stress, live_hrv)
     sequence_avg_hr = (sequence_sleep or {}).get("avg_heart_rate")
     rhr = _mean(resting_hrs, sequence_avg_hr or (min(heart_rates) if heart_rates else None))

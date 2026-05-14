@@ -716,7 +716,9 @@ Live status on 2026-05-14:
 
 - Open Wearables is the best open-source algorithm baseline found so far. It has explicit sleep scoring primitives, duration/stage/consistency/interruption scoring, and HRV resilience helpers.
 - WHOOP's public docs confirm high-level behavior, not exact formulas: recovery is driven mainly by HRV, resting HR, respiratory rate, sleep, skin temp, and SpO2; strain is cardiovascular load on a logarithmic 0-21 scale.
-- Current project code already shares Open Wearables-like sleep duration and sigmoid scoring. Next step is to port the actual sleep score breakdown cleanly and add a transparent strain/recovery model around our Huawei data availability.
+- Huawhoop recovery remains deterministic and source-visible: HRV, resting HR, sleep performance, SpO2, and recent load trend are scored as separate components before a weighted recovery blend.
+- Sleep scoring uses the local Open Wearables reference shape from `open-wearables-full/backend/app/algorithms/sleep.py`: duration, stage quality, consistency, and awake/interruption penalties. Huawei's own sleep score is blended in when the sequence dictionary exposes it.
+- Strain now uses a transparent Banister-style HR reserve/TRIMP core plus conservative active-minute and step load. Inputs are Huawei minute samples: HR zones, active minutes, vigorous minutes, and detected step total. The output remains a WHOOP-like logarithmic 0-21 scale and records `trimp`, `activity_load`, `combined_load`, `zone_minutes`, `active_minutes`, and `method` in `latest_insights.json`.
 - Sleep sequence is now preferred over older fitness-history sleep fragments. Huawei sequence stages are mapped through Gadgetbridge semantics: `1=light`, `2=REM`, `3=deep`, `4=awake`, `5=nap/light`.
 - Sleep scoring now uses Open Wearables-inspired pillars: duration sigmoid, deep/REM stage target score, bedtime consistency when enough history exists, and awake-interruption penalty. Latest local artifact changed sleep minutes from the misleading 17-minute fitness fragment to the 278-minute sequence session.
 

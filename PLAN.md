@@ -124,10 +124,10 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Lock HRV extraction and baseline logic from sleep sequence data.
 - [x] Live-test RRI HRV/stress calibration after stored reconnect.
 - [x] Implement recovery score from HRV, resting HR, sleep performance, strain load, and recent trend.
-- [ ] Implement strain score from heart-rate zones and activity duration.
+- [x] Implement strain score from heart-rate zones and activity duration.
 - [x] Implement sleep performance from duration, regularity, stages, and awake interruptions.
 - [x] Implement stress summaries by low/medium/high duration where data exists.
-- [ ] Keep equations readable and cite/source each heuristic in `FINDINGS.md`.
+- [x] Keep equations readable and cite/source each heuristic in `FINDINGS.md`.
 - [x] Evaluate open-source wearable/WHOOP-like analytics repos before inventing complex formulas.
 
 ## Milestone 5: Watchfaces
@@ -207,7 +207,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Sleep-sequence HRV extraction.
 - [x] Huawei RRI stress feature port.
 - [x] Stress zone summaries for the PWA.
-- [ ] Strain refinement from activities/workouts rather than passive HR only.
+- [x] Strain refinement from activities/workouts rather than passive HR only.
 - [x] SpO2 low-duration summaries.
 - [ ] ECG parser route if Band 10 exposes ECG analysis files; otherwise document unsupported status.
 

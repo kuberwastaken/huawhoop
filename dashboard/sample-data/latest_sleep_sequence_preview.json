@@ -1,4 +1,57 @@
 {
   "route": "sequence_data/SLEEP_DETAILS",
-  "sequence_count": 7
+  "sequence_count": 7,
+  "sessions": [
+    {
+      "start_ts": 1778620800,
+      "end_ts": 1778646660,
+      "start_local": "2026-05-13 00:00:00",
+      "end_local": "2026-05-13 07:11:00",
+      "summary": {
+        "avgHrv": 64,
+        "sleepScore": 86,
+        "sleepEfficiency": 94,
+        "avgHeartRate": 58,
+        "avgOxygenSaturation": 98,
+        "avgBreathRate": 14,
+        "fallAsleepTime": 1778620800,
+        "wakeupTime": 1778646660
+      },
+      "details": {
+        "stage_minute_count": 24,
+        "stage_counts": {
+          "1": 10,
+          "2": 4,
+          "3": 7,
+          "4": 3
+        },
+        "stages": [
+          {"timestamp": 1778620800, "stage": 4},
+          {"timestamp": 1778620860, "stage": 1},
+          {"timestamp": 1778620920, "stage": 1},
+          {"timestamp": 1778620980, "stage": 3},
+          {"timestamp": 1778621040, "stage": 3},
+          {"timestamp": 1778621100, "stage": 3},
+          {"timestamp": 1778621160, "stage": 1},
+          {"timestamp": 1778621220, "stage": 2},
+          {"timestamp": 1778621280, "stage": 2},
+          {"timestamp": 1778621340, "stage": 1},
+          {"timestamp": 1778621400, "stage": 3},
+          {"timestamp": 1778621460, "stage": 3},
+          {"timestamp": 1778621520, "stage": 1},
+          {"timestamp": 1778621580, "stage": 1},
+          {"timestamp": 1778621640, "stage": 4},
+          {"timestamp": 1778621700, "stage": 1},
+          {"timestamp": 1778621760, "stage": 2},
+          {"timestamp": 1778621820, "stage": 2},
+          {"timestamp": 1778621880, "stage": 1},
+          {"timestamp": 1778621940, "stage": 3},
+          {"timestamp": 1778622000, "stage": 3},
+          {"timestamp": 1778622060, "stage": 1},
+          {"timestamp": 1778622120, "stage": 1},
+          {"timestamp": 1778622180, "stage": 4}
+        ]
+      }
+    }
+  ]
 }
