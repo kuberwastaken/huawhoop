@@ -92,6 +92,16 @@ $env:BAND10_WEATHER_LOCATION = "Bengaluru"
 python connect.py
 ```
 
+## Watchface Lab
+
+The dashboard can scan installed watchfaces, activate an already-installed face,
+and validate a local `.hwt` package. Validation is local-only:
+
+- `POST /api/watchface/validate` checks package structure, metadata, payload, and
+  Band 10 dimensions.
+- The saved report is `data/latest_watchface_validation.json`.
+- No upload/delete/custom write command is exposed by the bridge yet.
+
 ## Safety
 
 - `band.ini`, `data/`, the decompiled APK, and external source snapshots are
@@ -99,5 +109,7 @@ python connect.py
 - The hosted PWA falls back to sanitized sample artifacts when no bridge is set.
 - `/api/export` is redacted by default; `?private=1` requires
   `BAND10_BRIDGE_TOKEN` when a token is configured.
+- Watchface validation reports are redacted to file name and metadata only; full
+  local paths are not published through the artifact endpoint.
 - LLM analysis is intentionally disabled until the deterministic bridge and
   analytics are stable.

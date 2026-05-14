@@ -22,6 +22,9 @@ python run_dashboard.py
 Use the LAN URL printed at startup, or copy it from Settings -> Network Access.
 If you set `BAND10_BRIDGE_TOKEN`, enter the same token in the PWA settings before
 queuing sync/weather/watchface commands.
+The same Settings screen also includes a Watchface Lab: paste a local `.hwt`
+path to validate package structure and Band 10 dimensions. This does not upload
+or write anything to the band.
 
 Deployment, bridge, and source-truth audit notes live in `DEPLOYMENT.md`,
 `BRIDGE.md`, and `AUDIT.md`.
@@ -147,6 +150,9 @@ python connect.py
 
 # Validate a custom watchface package locally before any future upload attempt.
 python watchface_tool.py path\to\face.hwt --json
+
+# Or validate through the local bridge/PWA without enabling device upload.
+# POST /api/watchface/validate with {"path":"X:\\path\\to\\face.hwt"}
 
 # Automatic stress enable, or calibration + enable if RRI samples arrive.
 $env:BAND10_ONLY_STRESS = "1"

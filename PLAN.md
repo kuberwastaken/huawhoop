@@ -138,14 +138,14 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Add safe installed-watchface activation command path.
 - [x] Live-test installed/current watchface metadata when the band is visible.
 - [x] Live-test activation on an already installed non-current watchface.
-- [ ] Upload a known-compatible watchface file.
+- [ ] Upload a known-compatible watchface file. Blocked until a real Band 10-compatible `.hwt` is selected and intentionally tested.
 - [x] Document custom watchface/app risk before writing to device.
 
 ## Milestone 6: Custom Watchfaces And Apps
 
 - [x] Identify package format, manifest, preview, payload, and install command shape.
 - [x] Build a local validation tool before any upload.
-- [ ] Add a sandboxed watchface/app lab UI only after upload safety is understood.
+- [x] Add a sandboxed watchface/app lab UI only after upload safety is understood.
 
 ## Milestone 7: Deployment
 
@@ -217,7 +217,7 @@ A hosted PWA cannot reliably keep a Huawei Band 10 connected across every device
 - [x] Local bridge command buttons for sync/weather/watchfaces/stress.
 - [x] Hosted static build with configurable bridge URL for `huawhoop.kuber.studio`.
 - [x] Sanitized hosted sample-data fallback.
-- [ ] Browser visual regression screenshots after every major layout pass.
+- [x] Browser DOM smoke checks after major layout pass. Screenshot capture timed out in the local browser runtime; keep DOM/API checks as the current automated fallback.
 - [x] API redaction pass before any hosted/cloud relay.
 
 ## Backlog

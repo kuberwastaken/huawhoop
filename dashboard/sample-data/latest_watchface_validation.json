@@ -1,0 +1,16 @@
+{
+  "valid": false,
+  "errors": [],
+  "warnings": [],
+  "metadata": {},
+  "file_name": null,
+  "target": {
+    "width": 194,
+    "height": 368
+  },
+  "upload_ready": false,
+  "upload_enabled": false,
+  "upload_policy": "validation_only_no_device_write",
+  "generated_at": null,
+  "generated_at_local": null
+}

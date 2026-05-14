@@ -12,6 +12,7 @@ const artifactFiles = {
   liveHrv: "latest_live_hrv.json",
   watchfaces: "latest_watchfaces.json",
   watchfaceOperation: "latest_watchface_operation.json",
+  watchfaceValidation: "latest_watchface_validation.json",
   analysis: "latest_analysis.json",
   recoveryHistory: "recovery_history.jsonl",
   insightsHistory: "insights_history.jsonl"
@@ -134,6 +135,7 @@ async function loadData() {
       liveHrv: await fetchJson(bridgePath("/api/artifacts/latest_live_hrv.json"), {}),
       watchfaces: await fetchJson(bridgePath("/api/artifacts/latest_watchfaces.json"), {}),
       watchfaceOperation: await fetchJson(bridgePath("/api/artifacts/latest_watchface_operation.json"), {}),
+      watchfaceValidation: await fetchJson(bridgePath("/api/artifacts/latest_watchface_validation.json"), {}),
       analysis: await fetchJson(bridgePath("/api/artifacts/latest_analysis.json"), {}),
       recoveryHistory: parseJsonl(historyText),
       insightsHistory: parseJsonl(insightsHistoryText),
@@ -158,6 +160,7 @@ async function loadData() {
     fetchJson(artifactPath("liveHrv"), {}),
     fetchJson(artifactPath("watchfaces"), {}),
     fetchJson(artifactPath("watchfaceOperation"), {}),
+    fetchJson(artifactPath("watchfaceValidation"), {}),
     fetchJson(artifactPath("analysis"), {}),
     fetchText(artifactPath("recoveryHistory"), ""),
     fetchText(artifactPath("insightsHistory"), "")
@@ -176,9 +179,10 @@ async function loadData() {
     liveHrv: entries[10],
     watchfaces: entries[11],
     watchfaceOperation: entries[12],
-    analysis: entries[13],
-    recoveryHistory: parseJsonl(entries[14]),
-    insightsHistory: parseJsonl(entries[15]),
+    watchfaceValidation: entries[13],
+    analysis: entries[14],
+    recoveryHistory: parseJsonl(entries[15]),
+    insightsHistory: parseJsonl(entries[16]),
     bridge: {},
     bridgeInfo: {},
     lastCommands: []
@@ -609,6 +613,7 @@ function renderRoutes() {
   const quality = state.data.insights?.data_quality || {};
   const watchfaces = state.data.watchfaces || {};
   const watchfaceOperation = state.data.watchfaceOperation || {};
+  const watchfaceValidation = state.data.watchfaceValidation || {};
   const installed = watchfaces.installed || [];
   const rows = [
     ["Stored reconnect", "ready", state.data.connection?.state || "unknown"],
@@ -640,12 +645,45 @@ function renderRoutes() {
     detailRow("C", "Current Watchface", current?.display_name || current?.file_name || "--", current?.version || ""),
     detailRow("N", "Installed Faces", installed.length || "--", watchfaces.params ? `${watchfaces.params.width || "--"}x${watchfaces.params.height || "--"}` : "waiting for scan"),
     detailRow("A", "Last Activation", watchfaceOperation.file_name || "--", watchfaceOperation.generated_at_local || "existing installed faces only"),
+    detailRow("V", "Last Validation", watchfaceValidation.file_name || "--", watchfaceValidation.generated_at_local || "local package lab"),
     detailRow("U", "Upload Route", "gated", "validate package before writing"),
     faceRows ? `<div class="watchface-list">${faceRows}</div>` : ""
   ].join("");
   $$(".watchface-activate").forEach((button) => {
     button.addEventListener("click", () => queueWatchfaceActivate(button.dataset.fileName, button.dataset.version));
   });
+}
+
+function renderWatchfaceLab() {
+  const validation = state.data.watchfaceValidation || {};
+  const errors = validation.errors || [];
+  const warnings = validation.warnings || [];
+  const metadata = validation.metadata || {};
+  const payload = validation.payload || {};
+  if (!validation.generated_at) {
+    $("#watchface-lab").innerHTML = [
+      detailRow("L", "Lab State", "ready", "local validation only"),
+      detailRow("U", "Device Upload", "disabled", "no custom write path is exposed yet")
+    ].join("");
+    return;
+  }
+  const status = validation.valid ? "valid" : "blocked";
+  const messages = [
+    ...errors.map((item) => ({ kind: "error", text: item })),
+    ...warnings.map((item) => ({ kind: "warning", text: item }))
+  ];
+  $("#watchface-lab").innerHTML = [
+    detailRow("F", "Package", validation.file_name || "--", validation.generated_at_local || ""),
+    detailRow("S", "Validation", status, validation.upload_policy || "validation_only"),
+    detailRow("R", "Target Screen", `${validation.target?.width || "--"}x${validation.target?.height || "--"}`, metadata.screen || "Band 10"),
+    payload.container_name ? detailRow("P", "Payload", payload.kind || "package", `${payload.container_name} / ${payload.watchface_bin_size || 0} bytes`) : "",
+    metadata.title || metadata.author ? `<div class="validation-meta">
+      ${metadata.title ? `<strong>${esc(metadata.title)}</strong>` : ""}
+      ${metadata.author ? `<span>${esc(metadata.author)}</span>` : ""}
+      ${metadata.version ? `<span>Version ${esc(metadata.version)}</span>` : ""}
+    </div>` : "",
+    messages.length ? `<div class="validation-list">${messages.map((item) => `<p class="${item.kind}">${esc(item.text)}</p>`).join("")}</div>` : `<div class="validation-list"><p class="ok">Package passes local checks. Upload is still disabled until a known-compatible file is tested deliberately.</p></div>`
+  ].join("");
 }
 
 function renderBridgeNetwork() {
@@ -659,6 +697,28 @@ function renderBridgeNetwork() {
     detailRow("S", "Bridge Safety", info.token_required ? "token required" : "local trust", info.lan_enabled ? "LAN enabled" : "loopback only")
   ];
   $("#bridge-network").innerHTML = rows.join("");
+}
+
+function renderCommandLog() {
+  const commands = (state.data.lastCommands || []).slice(-8).reverse();
+  if (!commands.length) {
+    $("#command-log").innerHTML = `<div class="empty">Bridge command results will appear after sync, weather, stress, or watchface actions.</div>`;
+    return;
+  }
+  $("#command-log").innerHTML = commands.map((cmd) => {
+    const stateName = cmd.state || cmd.status || "done";
+    const detail = cmd.error || cmd.message || cmd.result?.summary || cmd.generated_at_local || "";
+    return `<div class="command-row ${esc(stateName)}">
+      <div>
+        <strong>${esc(cmd.type || "command")}</strong>
+        <span>${esc(cmd.timestamp_local || cmd.queued_at_local || "")}</span>
+      </div>
+      <div>
+        <b>${esc(stateName)}</b>
+        <span>${esc(detail)}</span>
+      </div>
+    </div>`;
+  }).join("");
 }
 
 function renderWeather() {
@@ -690,7 +750,9 @@ function renderAll() {
   renderSleep();
   renderStrain();
   renderRoutes();
+  renderWatchfaceLab();
   renderBridgeNetwork();
+  renderCommandLog();
   renderWeather();
 }
 
@@ -850,6 +912,23 @@ async function queueWatchfaceActivate(fileName, version) {
   }
 }
 
+async function validateWatchfacePackage() {
+  const path = $("#watchface-path").value.trim();
+  if (!path) {
+    toast("Choose a local .hwt path first");
+    return;
+  }
+  try {
+    const response = await command("/api/watchface/validate", { path });
+    state.data.watchfaceValidation = response;
+    renderWatchfaceLab();
+    renderRoutes();
+    toast(response.valid ? "Watchface package looks compatible" : "Watchface package blocked");
+  } catch (error) {
+    toast(`Watchface validation failed: ${error.message}`);
+  }
+}
+
 async function queueStress(calibrate = false) {
   try {
     await command("/api/commands/stress", calibrate ? { calibrate: true, duration: 62 } : { enabled: true });
@@ -882,6 +961,7 @@ function setupActions() {
   $("#weather-fetch-button").addEventListener("click", () => fetchWeather().catch((error) => toast(error.message)));
   $("#weather-send-button").addEventListener("click", pushWeather);
   $("#watchface-scan-button").addEventListener("click", queueWatchfaceScan);
+  $("#watchface-validate-button").addEventListener("click", validateWatchfacePackage);
   $("#stress-calibrate-button").addEventListener("click", () => queueStress(true));
   $("#stress-enable-button").addEventListener("click", () => queueStress(false));
   $("#analysis-button").addEventListener("click", runAnalysis);

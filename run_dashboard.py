@@ -12,6 +12,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, unquote, urlparse
 
 import band_daemon
+from watchface_tool import validate_watchface
 
 
 ROOT = Path(__file__).resolve().parent
@@ -36,6 +37,7 @@ ARTIFACT_ALLOWLIST = {
     "latest_weather_push.json",
     "latest_watchfaces.json",
     "latest_watchface_operation.json",
+    "latest_watchface_validation.json",
     "latest_analysis.json",
     "recovery_history.jsonl",
     "insights_history.jsonl",
@@ -231,6 +233,65 @@ def build_analysis() -> dict:
     return result
 
 
+def _device_watchface_size() -> tuple[int, int]:
+    watchfaces = read_json_artifact("latest_watchfaces.json", {})
+    params = watchfaces.get("params") or {}
+    width = _coerce_int(params.get("width"), 194)
+    height = _coerce_int(params.get("height"), 368)
+    return width, height
+
+
+def _coerce_int(value, fallback: int) -> int:
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return fallback
+
+
+def build_watchface_validation(payload: dict) -> dict:
+    DATA_DIR.mkdir(exist_ok=True)
+    raw_path = str(payload.get("path") or "").strip().strip('"')
+    if not raw_path:
+        device_width, device_height = _device_watchface_size()
+        result = {
+            "valid": False,
+            "errors": ["missing path"],
+            "warnings": [],
+            "metadata": {},
+            "file_name": None,
+            "target": {"width": device_width, "height": device_height},
+            "upload_ready": False,
+            "upload_enabled": False,
+            "upload_policy": "validation_only_no_device_write",
+            "generated_at": int(time.time()),
+            "generated_at_local": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
+        }
+        (DATA_DIR / "latest_watchface_validation.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
+        return result
+
+    device_width, device_height = _device_watchface_size()
+    target_width = _coerce_int(payload.get("width"), device_width)
+    target_height = _coerce_int(payload.get("height"), device_height)
+    path = Path(os.path.expandvars(raw_path)).expanduser()
+    result = validate_watchface(path, width=target_width, height=target_height)
+    redacted = {
+        key: value
+        for key, value in result.items()
+        if key != "path"
+    }
+    redacted.update({
+        "file_name": path.name,
+        "target": {"width": target_width, "height": target_height},
+        "upload_ready": bool(result.get("valid")),
+        "upload_enabled": False,
+        "upload_policy": "validation_only_no_device_write",
+        "generated_at": int(time.time()),
+        "generated_at_local": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
+    })
+    (DATA_DIR / "latest_watchface_validation.json").write_text(json.dumps(redacted, indent=2), encoding="utf-8")
+    return redacted
+
+
 class DashboardHandler(SimpleHTTPRequestHandler):
     def log_message(self, fmt, *args):
         return
@@ -399,6 +460,9 @@ class DashboardHandler(SimpleHTTPRequestHandler):
         if path in ("/api/commands/watchface_activate", "/api/watchface_activate"):
             command = append_bridge_command("watchface_activate", payload)
             self._send_json({"queued": True, "command": command}, status=202)
+            return
+        if path == "/api/watchface/validate":
+            self._send_json(build_watchface_validation(payload), status=200)
             return
         if path in ("/api/commands/stress", "/api/stress"):
             command = append_bridge_command("stress", payload)

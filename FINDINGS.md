@@ -700,7 +700,7 @@ Packaging:
 - File upload type is `1` for watchface. File name format is `<random9digits>_1.0.0`.
 - APK comparison confirms Huawei's model fields through `WatchFaceInfo.java` and `WatchFaceOperateInfo.java`: max version, width, height, support file type, current/preset/non-preset lists, watchface ID, version, operation, dimensions, sync type, and error code.
 
-Implementation choice: first add read-only params/list/name support. Activating an already installed face is now available because it is a small metadata operation. Upload/delete/custom faces remain gated until package validation is implemented.
+Implementation choice: first add read-only params/list/name support. Activating an already installed face is now available because it is a small metadata operation. Upload/delete/custom faces remain gated until a known-compatible package has been deliberately selected and tested.
 
 Implementation status: `connect.py` now has watchface inventory calls for params (`0x27/0x01`), installed list (`0x27/0x02`), names (`0x27/0x06`), and safe installed-face activation (`0x27/0x03`, operation `1`). `band_daemon.py` and the PWA expose scan and activation commands. No upload/delete path is implemented yet.
 
@@ -711,6 +711,8 @@ Live status on 2026-05-14:
 - Activation of installed non-current `SuperWatch` (`2180307753`, `2.4.2`) succeeded with response tag `0x04=00`, and inventory showed it as current.
 - Activation back to `Activity rings` also succeeded with response tag `0x04=00`. No upload/delete path has been attempted.
 - `watchface_tool.py` validates `.hwt` packages locally before any future upload attempt. It mirrors Gadgetbridge's parser: `description.xml`, root `HwTheme`/`HnTheme`, `preview/cover.jpg`, `com.huawei.watchface` or `com.honor.watchface`, nested `watchface.bin` fallback to raw payload, and Band 10 resolution `368*194` (`HWHD07`/`HNHD02`).
+- `POST /api/watchface/validate` now exposes that validator to the PWA. It saves a redacted `latest_watchface_validation.json` report with file name, metadata, payload size, target dimensions, errors, and warnings. It never queues a file upload and returns `upload_enabled=false`.
+- The dashboard Watchface Lab is validation-only. It can prove a package is structurally plausible for Band 10, but the custom upload/write path remains disabled until a known-compatible `.hwt` is intentionally tested.
 
 ### Algorithm Sources
 
@@ -734,6 +736,7 @@ Live status on 2026-05-14:
   - `POST /api/commands/weather`: queues a weather push command for the active daemon session.
   - `POST /api/commands/watchfaces`: queues read-only watchface inventory.
   - `POST /api/commands/watchface_activate`: queues activation of an installed watchface.
+  - `POST /api/watchface/validate`: validates a local `.hwt` package and writes a redacted validation report without touching the band.
   - `POST /api/commands/stress`: queues automatic stress enable/calibration.
 - `band_daemon.py` polls `data/bridge_commands.jsonl` from inside the one authenticated BLE session and writes results to `data/bridge_command_results.jsonl`.
 - This is the first cross-device bridge: hosted PWA can point at a configured local bridge URL, while the bridge remains the only process touching BLE/auth secrets. Same-LAN use is supported by starting with `BAND10_DASHBOARD_HOST=0.0.0.0`; the PWA shows the LAN API URL in Settings.
@@ -742,9 +745,10 @@ Live status on 2026-05-14:
 ### PWA Shell
 
 - The dashboard is now a mobile-first PWA shell rather than a static artifact viewer. It reads bridge API artifacts when served by `run_dashboard.py`, falls back to local `data/*.json` artifacts for static review, and exposes sync/weather commands without showing protocol internals.
-- The dashboard now adds interactive derived charts from current artifacts: signal mini-sparklines, stress/strain stacked bars, sleep-stage architecture ribbons, watchface controls, weather controls, bridge network state, and token-aware command posting.
+- The dashboard now adds interactive derived charts from current artifacts: signal mini-sparklines, stress/strain stacked bars, sleep-stage architecture ribbons, watchface controls, a sandboxed Watchface Lab validator, weather controls, bridge network state, bridge command timeline, and token-aware command posting.
 - The PWA now has a manual Coach Analysis control backed by `POST /api/analysis`. It uses a compact derived dataset hash, writes `latest_analysis.json`, exposes `model`, `llm_used`, and usage metadata, and currently runs deterministic local rules only (`llm_used=false`, zero calls). No BLE/weather/watchface loop can trigger analysis.
 - Browser smoke check against local artifacts showed connected status, recovery, sleep, stress, weather, and HRV (`48 ms` from sleep sequence) without console errors.
+- Browser DOM smoke check on 2026-05-14 confirmed the Settings view exposes Network Access, Bridge Timeline, Watchface Lab, and validation controls without visible `undefined`/`NaN` text. Screenshot capture through the local browser runtime timed out, so current automated visual QA is DOM/API based until screenshot capture is reliable.
 - The hosted version should remain a client. The BLE owner stays local because it needs stored HiChain keys, a long-lived connection, and battery-aware sync behavior near the band.
 - Vercel is the selected static host for `huawhoop.kuber.studio`. `.vercelignore` excludes `band.ini`, `data/`, the decompiled APK, Gadgetbridge, and open-wearables source snapshots. Hosted PWA fallback data now comes from sanitized `dashboard/sample-data/*` artifacts unless the user configures a bridge URL.
 - `AUDIT.md` now tracks the Gadgetbridge/APK/Huawhoop comparison matrix so risky protocol work starts from exact source files rather than trial-and-error.
