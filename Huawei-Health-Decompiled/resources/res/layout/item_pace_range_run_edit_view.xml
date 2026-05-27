@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x1"
+    orientation="1"
+    layout_width="-2"
+    layout_height="-2">
+    <com.huawei.ui.commonui.edittext.HealthEditText
+        ellipsize="3"
+        id="@+id/het_edit_value"
+        layout_width="@dimen/_2131363019_res_0x7f0a04cb"
+        layout_height="-2"
+        maxLength="4"
+        inputType="0x2002"
+        layoutDirection="3"
+        style="@style/Widget.Emui.HwEditText.Linear"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        id="@+id/htv_edit_remark"
+        layout_width="@dimen/_2131363019_res_0x7f0a04cb"
+        paddingStart="@dimen/_2131363112_res_0x7f0a0528"
+        paddingEnd="@dimen/_2131363112_res_0x7f0a0528"
+        style="@style/list_text_title_second"/>
+</LinearLayout>

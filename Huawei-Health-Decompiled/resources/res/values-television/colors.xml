@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="upsdk_color_gray_1">#262626</color>
+    <color name="upsdk_color_gray_10">#e6e6e6</color>
+    <color name="upsdk_color_text_secondary">#99ffffff</color>
+</resources>

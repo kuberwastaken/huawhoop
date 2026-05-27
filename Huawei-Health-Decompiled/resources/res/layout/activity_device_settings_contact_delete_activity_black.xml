@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/contact_delete_titlebar"
+        layout_width="-2"
+        layout_height="-2"
+        NOT_FOUND_0xa="2"
+        NOT_FOUND_0xb="4"
+        NOT_FOUND_0xc="@string/_2130841741_res_0x7f02108d"/>
+    <LinearLayout
+        orientation="1"
+        id="@+id/contact_delete_layout"
+        layout_width="-1"
+        layout_height="-2"
+        layout_above="@+id/buttomview"
+        layout_below="@+id/contact_delete_titlebar">
+        <ListView
+            id="@+id/contact_delete_listview"
+            layout_width="-1"
+            layout_height="-1"
+            divider="@null"/>
+    </LinearLayout>
+    <com.huawei.ui.commonui.toolbar.HealthToolBar
+        gravity="0x1"
+        orientation="1"
+        id="@+id/buttomview"
+        layout_width="-1"
+        layout_height="-2"
+        layout_alignParentBottom="true"/>
+</RelativeLayout>

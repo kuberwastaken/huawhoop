@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.radiobutton.HealthRadioButton xmlns:android="http://schemas.android.com/apk/res/android"
+    textSize="@dimen/_2131363702_res_0x7f0a0776"
+    textColor="@drawable/_2131432125_res_0x7f0b12bd"
+    layout_width="-1"
+    layout_height="48dp"
+    button="@null"
+    singleLine="true"
+    paddingStart="@dimen/_2131363788_res_0x7f0a07cc"
+    paddingEnd="@dimen/_2131363788_res_0x7f0a07cc"/>

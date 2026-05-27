@@ -1,0 +1,394 @@
+{
+    "routeMap":[
+        {
+            "matchPaths":"/home/main",
+            "addParameters":"homeTabName=HOME"
+        },
+        {
+            "matchPaths":"/router/faCardSettingDialog",
+            "mappingPath":"/HuaweiHealth/FaCardSettingActivity"
+        },
+        {
+            "matchPaths":"/router/weightMeasurement",
+            "pretreatmentPath":"/PluginDevice/service/weightMeasurement"
+        },
+        {
+            "matchPaths":"/router/honorCardSettingDialog",
+            "mappingPath":"/HuaweiHealth/HonorCardSettingActivity"
+        },
+        {
+            "matchPaths":"/home/device",
+            "mappingPath":"/home/main",
+            "addParameters":"homeTabName=DEVICE"
+        },
+        {
+            "matchPaths":"/home/discover",
+            "mappingPath":"/home/main",
+            "addParameters":"homeTabName=DISCOVER"
+        },
+        {
+            "matchPaths":"/home/me",
+            "mappingPath":"/home/main",
+            "addParameters":"homeTabName=ME"
+        },
+        {
+            "matchPaths":"/home/sport#/track",
+            "mappingPath":"/router/track",
+            "pretreatmentPath":"/PluginMotionTrack/service/track/pretreatment",
+            "pathExtras":"SPORT_TRACK_INIT"
+        },
+        {
+            "matchPaths":"/a1jJk451Uk#/a1mpQudURi#/messageH5/html/HwHealthQRCode.html#/qrcode",
+            "removeQueryPrefix":"content=",
+            "mappingPath":"/router/qrcode",
+            "pretreatmentPath":"/HomeHealth/service/qrcode/pretreatment",
+            "pathExtras":"LOGIN"
+        },
+        {
+            "matchPaths":"/router/openwith#/openwith",
+            "mappingPath":"/HuaweiHealth/HwHealthBrowserActionActivity",
+            "pathExtras": "SYNC_ALL_DEVICE_DATA"
+        },
+        {
+            "matchPaths":"/router/sleepBriefs",
+            "mappingPath":"/PluginSleepBriefs/EfficientRestActivity"
+        },
+        {
+            "matchPaths":"/router/historyData",
+            "mappingPath":"/Main/PrivacyDataModelActivity"
+        },
+        {
+            "matchPaths":"/router/sleepDetail",
+            "pretreatmentPath":"/Main/service/pretreatment",
+            "pathExtras":"LOGIN"
+        },
+        {
+            "matchPaths":"/router/snackControl/guideOrRecognizePage",
+            "mappingPath":"/PluginHealthAlgorithm/NutritionTableOcrGuideActivity",
+            "pathExtras":"CHECK_SYSTEM_VERSION"
+        },
+        {
+            "matchPaths":"/router/barcode",
+            "mappingPath":"/Main/BarCodeScanningActivity"
+        },
+        {
+            "matchPaths":"/router/bodyShapeAnalysis/cameraRecognizePage",
+            "mappingPath":"/PluginBodyRebuild/BodyShapeAnalysisCameraActivity"
+        },
+        {
+            "matchPaths":"/column",
+            "mappingPath":"/router/column",
+            "pretreatmentPath":"/HuaweiHealth/service/column/pretreatment",
+            "pathExtras":"LOGIN"
+        },
+        {
+            "matchPaths":"/router/device/offlineMap",
+            "pretreatmentPath":"/HomeWear21/service/mapkit/pretreatment"
+        },
+        {
+            "matchPaths":"/router/device/golf",
+            "pretreatmentPath":"/PluginMotionTrack/service/golf/pretreatment"
+        },
+        {
+            "matchPaths":"/router/fa",
+            "pretreatmentPath":"/HuaweiHealth/service/fa/pretreatment"
+        },
+        {
+            "matchPaths":"/router/AccountCenter",
+            "pretreatmentPath":"/HuaweiHealth/service/accountCenter/pretreatment",
+            "pathExtras":"LOGIN|COLDSTART"
+        },
+        {
+            "matchPaths":"/router/device/huaweipay",
+            "pretreatmentPath":"/PluginPay/service/huaweipay/pretreatment"
+        },
+        {
+            "matchPaths":"/router/device/ecologydevicediscoveryfree",
+            "pretreatmentPath":"/EcologyDevice/service/ecologydevicediscoveryfree/pretreatment",
+            "runningProcess":":PhoneService"
+        },
+        {
+            "matchPaths":"/mykaka",
+            "mappingPath":"/router/mykaka",
+            "pretreatmentPath":"/PluginAchievement/service/pretreatment",
+            "pathExtras":"LOGIN|COLDSTART|CHINA"
+        },
+        {
+            "matchPaths":"/familyhealth",
+            "mappingPath":"/router/familyhealth",
+            "pretreatmentPath":"/PluginHealthZone/service/pretreatment",
+            "pathExtras":"LOGIN|COLDSTART"
+        },
+        {
+            "matchPaths":"/router/familyHealthGlance",
+            "pretreatmentPath":"/PluginHealthZone/service/familyHealthGlanceService"
+        },
+        {
+            "matchPaths":"/groupqrcode",
+            "mappingPath":"/router/groupqrcode",
+            "pretreatmentPath":"/HuaweiHealth/service/groupqrcode/pretreatment",
+            "pathExtras":"LOGIN|COLDSTART|CHINA"
+        },
+        {
+            "matchPaths":"/achievement",
+            "mappingPath":"/router/achievement",
+            "pretreatmentPath":"/HuaweiHealth/service/achievement/pretreatment",
+            "pathExtras":"LOGIN|COLDSTART"
+        },
+        {
+            "matchPaths":"/oauth/thirdPartyAccountAuth",
+            "mappingPath":"/Main/HealthKitThirdPartyAccountAuthActivity"
+        },
+        {
+            "matchPaths":"/oauth/runtastic",
+            "mappingPath":"/FeatureDataOpen/RuntasticConnectActivity"
+        },
+        {
+            "matchPaths":"/oauth/komoot",
+            "mappingPath":"/FeatureDataOpen/KomootConnectActivity"
+        },
+        {
+            "matchPaths":"/oauth/wechatdevice",
+            "mappingPath":"/FeatureDataOpen/WeChatDeviceActivity"
+        },
+        {
+            "matchPaths":"/oauth/strava",
+            "mappingPath":"/FeatureDataOpen/StravaConnectActivity"
+        },
+        {
+            "matchPaths":"/oauth/thirdPartService#/thirdPartService",
+            "mappingPath":"/FeatureDataOpen/ThirdPartServiceActivity"
+        },
+        {
+            "matchPaths":"/oauth/linkagelogin",
+            "pretreatmentPath":"/HuaweiHealth/service/linkagelogin/pretreatment",
+            "pathExtras":"LOGIN"
+        },
+        {
+            "matchPaths":"/router/menstrualPredict",
+            "mappingPath":"/Device/MenstrualPredictActivity"
+        },
+        {
+            "matchPaths":"/router/userInfo",
+            "mappingPath":"/HWUserProfileMgr/UserInfoActivity"
+        },
+        {
+            "matchPaths":"/router/trade",
+            "pretreatmentPath":"/HuaweiHealth/service/trade/pretreatment",
+            "pathExtras":"LOGIN"
+        },
+        {
+            "matchPaths":"/router/device/welink",
+            "pretreatmentPath":"/PluginWearAbility/service/welink/pretreatment",
+            "runningProcess":":PhoneService",
+            "pathExtras":"DOWNLOAD_IGNORE"
+        },
+        {
+            "matchPaths":"/router/stepCard/ActiveHours",
+            "mappingPath":"/Main/KnitActiveHoursActivity"
+        },
+        {
+            "matchPaths":"/router/stepCard/ActiveRecord",
+            "mappingPath":"/Main/KnitActiveRecordActivity"
+        },
+        {
+            "matchPaths":"/router/threeCircleNotify",
+            "pretreatmentPath":"/Main/ThreeCirclePretreatment"
+        },
+        {
+            "matchPaths":"/router/weight/WeightGoalSetting",
+            "mappingPath":"/Main/WeightGoalActivity"
+        },
+        {
+            "matchPaths":"/router/weight/WeightGoalPreview",
+            "mappingPath":"/Main/WeightGoalPreviewActivity"
+        },
+        {
+            "matchPaths":"/router/sleepTight",
+            "mappingPath":"/Main/KnitSleepTightActivity"
+        },
+        {
+            "matchPaths":"/router/relax",
+            "mappingPath":"/Main/KnitRelaxActivity"
+        },
+        {
+            "matchPaths": "/fitnesspage",
+            "mappingPath": "/router/fitnesspage",
+            "pretreatmentPath": "/PluginFitnessAdvice/service/pretreatment"
+        },
+        {
+            "matchPaths":"/router/orderDetail",
+            "mappingPath":"/TradeService/TradeOrderDetailActivity",
+            "pretreatmentPath":"/TradeService1/service/TradePretreatmentService"
+        },
+        {
+            "matchPaths":"/router/sync",
+            "mappingPath":"/Main/ThirdPartySyncActivity",
+            "pretreatmentPath": "/ThirdPartySyncData/service/pretreatment"
+        },
+        {
+            "matchPaths":"/router/routeDetail",
+            "mappingPath":"/Main/MyRouteDetailActivity"
+        },
+        {
+            "matchPaths":"/router/runningRouteDetail",
+            "pretreatmentPath":"/PluginMotionTrack/service/routeList/pretreatment"
+        },
+        {
+            "matchPaths":"/router/runningRouteList",
+            "pretreatmentPath":"/PluginMotionTrack/service/routeList/pretreatment"
+        },
+        {
+            "matchPaths":"/router/myRouteList",
+            "pretreatmentPath":"/PluginMotionTrack/service/routeList/pretreatment"
+        },
+        {
+            "matchPaths":"/router/runningRouteHistory",
+            "mappingPath":"/PluginMotionTrack/HistoricalRoutesActivity"
+        },
+        {
+            "matchPaths":"/router/coreSleepSwitch",
+            "mappingPath":"/Device/CoreSleepSelectorActivity"
+        },
+        {
+            "matchPaths": "/router/myAward",
+            "mappingPath": "/HWUserProfileMgr/MyAwardActivity"
+        },
+        {
+            "matchPaths":"/router/redeemScan",
+            "mappingPath":"/TradeService/RedeemCodeScanActivity"
+        },
+        {
+            "matchPaths": "/router/activetarget",
+            "mappingPath": "/Main/ActiveTargetActivity",
+            "pathExtras": "LOGIN|COLDSTART"
+        },
+        {
+            "matchPaths": "/router/weightDataHistory",
+            "mappingPath": "/Main/HealthDataHistoryActivity",
+            "pathExtras": "LOGIN"
+        },
+        {
+            "matchPaths": "/router/bodyData",
+            "mappingPath": "/Main/WeightBodyDataActivity",
+            "pathExtras": "LOGIN"
+        },
+        {
+            "matchPaths": "/router/measureWeight",
+            "mappingPath": "/PluginDevice/DeviceMainActivity",
+            "pathExtras": "LOGIN"
+        },
+        {
+            "matchPaths": "/router/healthMonitor",
+            "mappingPath": "/HomeWear21/WearHomeHealthMonitoringActivity",
+            "pretreatmentPath": "/HealthMonitor/service/pretreatment"
+        },
+        {
+            "matchPaths": "/router/pressAutoMonitor",
+            "mappingPath": "/Device/PressAutoMonitorActivity"
+        },
+        {
+            "matchPaths": "/router/pressureCalibrate",
+            "mappingPath": "/Main/PressureCalibrateActivity"
+        },
+        {
+            "matchPaths": "/router/wifiPressureCalibrate",
+            "mappingPath": "/Main/WifiDevicePressureCalibrateGuideActivity"
+        },
+        {
+            "matchPaths": "/router/pressureMeasure",
+            "mappingPath": "/Main/PressureMeasureActivity"
+        },
+        {
+            "matchPaths": "/router/emotionAutoMonitor",
+            "mappingPath": "/Device/EmotionAutoMonitorActivity"
+        },
+        {
+            "matchPaths": "/router/heartRateSwitch",
+            "mappingPath": "/Device/ContinueHeartRateSettingActivity",
+            "pretreatmentPath": "/HeartRate/service/pretreatment"
+        },
+        {
+            "matchPaths": "/router/bloodOxygenSwitch",
+            "mappingPath": "/Device/CycleBloodOxygenSettingActivity"
+        },
+        {
+            "matchPaths": "/router/recognizeKit",
+            "pretreatmentPath": "/Recognize/service/pretreatment",
+            "pathExtras": "LOGIN"
+        },
+        {
+            "matchPaths": "/router/privacyCenter",
+            "mappingPath": "/Main/PrivacyCenterActivity"
+        },
+        {
+            "matchPaths": "/router/bloodMeasureHint",
+            "mappingPath": "/Main/BloodMeasureHintActivity"
+        },
+        {
+            "matchPaths": "/router/sleepBreatheSwitch",
+            "mappingPath": "/Device/SleepBreatheActivity"
+        },
+        {
+            "matchPaths":"/router/feedback",
+            "pretreatmentPath":"/FeatureUserProfile/service/feedback"
+        },
+        {
+            "matchPaths":"/router/device/screenshot",
+            "pretreatmentPath":"/DeviceScreenshot/service/pretreatment",
+            "runningProcess":":PhoneService"
+        },
+        {
+            "matchPaths":"/router/emotionHealth",
+            "pretreatmentPath":"/HuaweiHealth/Arkui/service/pretreatment"
+        },
+        {
+            "matchPaths": "/honorCard",
+            "mappingPath": "/router/honorCard",
+            "pretreatmentPath":"/HuaweiHealth/service/HonorCard/pretreatment"
+        },
+        {
+            "matchPaths":"/1Lfn1eswP6#/97J6mTfn5S",
+            "removeQueryPrefix":"content=",
+            "mappingPath":"/router/qrcode",
+            "pretreatmentPath":"/HomeHealth/service/qrcode/pretreatment",
+            "addParameters":"a=scanDevice",
+            "pathExtras":"LOGIN"
+        },
+        {
+            "matchPaths":"/router/highlandcare",
+            "pretreatmentPath": "/HuaweiHealth/service/highlandcare/pretreatment"
+        },
+        {
+            "matchPaths":"/router/emergencyContactPage",
+            "pretreatmentPath":"/EmergencyContactPage/service/pretreatment"
+        },
+        {
+            "matchPaths":"/router/sportHistory",
+            "mappingPath":"/Main/SportHistoryActivity"
+        },
+        {
+            "matchPaths":"/router/activeTarget",
+            "mappingPath":"/Main/ActiveTargetActivity"
+        },
+        {
+            "matchPaths":"/router/myOrder",
+            "pretreatmentPath":"/HuaweiHealth/service/myOrder/pretreatment"
+        },
+        {
+            "matchPaths":"/router/myCourse",
+            "mappingPath":"/Main/MyCourseActivity"
+        },
+        {
+            "matchPaths":"/router/basicSport",
+            "pretreatmentPath":"/HuaweiHealth/service/basicSport/pretreatment"
+        }
+    ],
+    "groupMap":[
+        {
+            "pluginName":"",
+            "moduleOrGroupList":""
+        }
+    ],
+    "defaultRouteUri":"huaweischeme://healthapp/home/main"
+}

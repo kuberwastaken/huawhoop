@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/target_dialog_radio_btn_select"
+    layout_width="-1"
+    layout_height="@dimen/_2131362377_res_0x7f0a0249">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131362379_res_0x7f0a024b"
+        textColor="@color/_2131298127_res_0x7f09074f"
+        gravity="0x10"
+        id="@+id/target_value_text"
+        layout_width="-2"
+        layout_height="@dimen/_2131362040_res_0x7f0a00f8"
+        layout_marginTop="@dimen/_2131362501_res_0x7f0a02c5"
+        layout_marginBottom="@dimen/_2131362501_res_0x7f0a02c5"
+        fontFamily="regular"/>
+    <ImageView
+        id="@+id/btn_select"
+        layout_width="@dimen/_2131362040_res_0x7f0a00f8"
+        layout_height="@dimen/_2131362040_res_0x7f0a00f8"
+        layout_marginTop="@dimen/_2131362501_res_0x7f0a02c5"
+        layout_marginBottom="@dimen/_2131362501_res_0x7f0a02c5"
+        src="@drawable/_2131427715_res_0x7f0b0183"
+        layout_alignParentEnd="true"/>
+    <View
+        background="@color/_2131296923_res_0x7f09029b"
+        layout_width="-1"
+        layout_height="1dp"
+        layout_alignParentBottom="true"/>
+</RelativeLayout>

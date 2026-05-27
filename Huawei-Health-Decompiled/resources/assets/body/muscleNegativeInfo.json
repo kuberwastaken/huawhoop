@@ -1,0 +1,117 @@
+[
+  {
+    "id": 1,
+    "muscleName": "IDS_muscle_neck",
+    "muscleFunction": "IDS_muscle_neck_info"
+  },
+  {
+    "id": 2,
+    "muscleName": "IDS_muscle_back_trapezius",
+    "muscleFunction": "IDS_muscle_back_trapezius_info"
+  },
+  {
+    "id": 3,
+    "muscleName": "IDS_muscle_scapular",
+    "muscleFunction": "IDS_muscle_scapular_info"
+  },
+  {
+    "id": 4,
+    "muscleName": "IDS_muscle_back_deltoid",
+    "muscleFunction": "IDS_muscle_back_deltoid_info"
+  },
+  {
+    "id": 5,
+    "muscleName": "IDS_muscle_latissimus",
+    "muscleFunction": "IDS_muscle_latissimus_info"
+  },
+  {
+    "id": 6,
+    "muscleName": "IDS_muscle_waist",
+    "muscleFunction": "IDS_muscle_waist_info"
+  },
+  {
+    "id": 7,
+    "muscleName": "IDS_muscle_back_oblique",
+    "muscleFunction": "IDS_muscle_back_oblique_info"
+  },
+  {
+    "id": 8,
+    "muscleName": "IDS_muscle_gluteus_maximus",
+    "muscleFunction": "IDS_gluteus_maximus_info"
+  },
+  {
+    "id": 9,
+    "muscleName": "IDS_muscle_gluteus_medius",
+    "muscleFunction": "IDS_muscle_gluteus_medius_info"
+  },
+  {
+    "id": 10,
+    "muscleName": "IDS_muscle_fascia",
+    "muscleFunction": "IDS_muscle_fascia_info"
+  },
+  {
+    "id": 11,
+    "muscleName": "IDS_muscle_back_biceps",
+    "muscleFunction": "IDS_muscle_back_biceps_info"
+  },
+  {
+    "id": 12,
+    "muscleName": "IDS_muscle_semitendinosus",
+    "muscleFunction": "IDS_muscle_semitendinosus_info"
+  },
+  {
+    "id": 13,
+    "muscleName": "IDS_muscle_adductor",
+    "muscleFunction": "IDS_muscle_adductor_info"
+  },
+  {
+    "id": 14,
+    "muscleName": "IDS_muscle_semimembranosus",
+    "muscleFunction": "IDS_muscle_semimembranosus_info"
+  },
+  {
+    "id": 15,
+    "muscleName": "IDS_muscle_popliteus",
+    "muscleFunction": "IDS_muscle_popliteus_info"
+  },
+  {
+    "id": 16,
+    "muscleName": "IDS_muscle_back_gastrocnemius",
+    "muscleFunction": "IDS_back_gastrocnemius_info"
+  },
+  {
+    "id": 17,
+    "muscleName": "IDS_muscle_back_gastrocnemius",
+    "muscleFunction": "IDS_back_gastrocnemius_info"
+  },
+  {
+    "id": 18,
+    "muscleName": "IDS_muscle_soleus",
+    "muscleFunction": "IDS_muscle_soleus_info"
+  },
+  {
+    "id": 19,
+    "muscleName": "IDS_muscle_back_foot",
+    "muscleFunction": "IDS_muscle_back_foot_info"
+  },
+  {
+    "id": 20,
+    "muscleName": "IDS_muscle_triceps",
+    "muscleFunction": "IDS_muscle_triceps_info"
+  },
+  {
+    "id": 21,
+    "muscleName": "IDS_muscle_flexor",
+    "muscleFunction": "IDS_muscle_flexor_info"
+  },
+  {
+    "id": 22,
+    "muscleName": "IDS_muscle_extensor",
+    "muscleFunction": "IDS_muscle_extensor_info"
+  },
+  {
+    "id": 23,
+    "muscleName": "IDS_muscle_back_hand",
+    "muscleFunction": "IDS_muscle_back_hand_info"
+  }
+]

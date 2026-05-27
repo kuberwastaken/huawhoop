@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-2"
+    layout_height="-2">
+    <ImageView
+        id="@+id/ad_image"
+        layout_width="-2"
+        layout_height="-2"
+        scaleType="1"/>
+    <ImageView
+        layout_gravity="0x800035"
+        id="@+id/ad_close"
+        layout_width="16dp"
+        layout_height="16dp"
+        src="@drawable/_2131427711_res_0x7f0b017f"/>
+</FrameLayout>

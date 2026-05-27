@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.phoneservice.feedback.widget.SquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/rl_img_item"
+    layout_width="-2"
+    layout_height="-2">
+    <ImageView
+        id="@+id/feedback_sdk_iv_pic"
+        background="@drawable/feedback_sdk_problem_photo_rectangle"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-1"
+        layout_marginTop="@dimen/_2131362815_res_0x7f0a03ff"
+        contentDescription="@string/_2130852068_res_0x7f0238e4"
+        layout_marginEnd="@dimen/_2131362815_res_0x7f0a03ff"/>
+    <ImageView
+        id="@+id/feedback_sdk_iv_add"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-1"
+        layout_marginTop="@dimen/_2131362815_res_0x7f0a03ff"
+        src="@drawable/feedback_sdk_icon_add_feedback"
+        contentDescription="@string/_2130852109_res_0x7f02390d"
+        layout_marginEnd="@dimen/_2131362815_res_0x7f0a03ff"/>
+    <ImageView
+        id="@+id/feedback_sdk_iv_del"
+        visibility="2"
+        layout_width="@dimen/_2131362801_res_0x7f0a03f1"
+        layout_height="@dimen/_2131362801_res_0x7f0a03f1"
+        src="@drawable/_2131430956_res_0x7f0b0e2c"
+        layout_alignParentTop="true"
+        contentDescription="@string/_2130852040_res_0x7f0238c8"
+        layout_alignParentEnd="true"/>
+</com.huawei.phoneservice.feedback.widget.SquareLayout>

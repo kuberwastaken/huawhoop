@@ -1,0 +1,133 @@
+{
+  "3": {
+    "encode": [
+      {
+        "tag": 2,
+        "jsonKey": "operate",
+        "type": "number32"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "electronic_card",
+        "type": "number8"
+      }
+    ]
+  },
+  "4": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "electronic_card_receive",
+        "type": "number8"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 2,
+        "jsonKey": "operate",
+        "type": "number32"
+      }
+    ]
+  },
+  "7": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "account_status",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "qr_code",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "qr_side_id",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "qr_code_sources",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 127,
+        "jsonKey": "code",
+        "type": "number",
+        "optional": true
+      }
+    ],
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "account_status",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "qr_code",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "qr_side_id",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "qr_code_sources",
+        "type": "number32",
+        "optional": true
+      }
+    ]
+  },
+  "8": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "hms_state_code",
+        "type": "string"
+      }
+    ]
+  },
+  "9": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "login_state_change",
+        "type": "string"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "login_state_change",
+        "type": "string"
+      }
+    ]
+  },
+  "10": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "country_code",
+        "type": "string"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "site_id",
+        "type": "number8"
+      }
+    ]
+  }
+}

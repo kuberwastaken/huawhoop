@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-2">
+    <include layout="@layout/sug_run_inflate_ai_plan_item_workout"/>
+</FrameLayout>

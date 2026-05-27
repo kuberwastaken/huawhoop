@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-1">
+    <SurfaceView
+        id="@+id/hiad_id_video_surface_view"
+        layout_width="-1"
+        layout_height="-1"
+        layout_centerInParent="true"/>
+</merge>

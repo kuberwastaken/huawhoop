@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    drawable="@drawable/_2131428816_res_0x7f0b05d0"
+    insetLeft="@dimen/hw_cloud_dialog_margin_start"
+    insetRight="@dimen/hw_cloud_dialog_margin_end"
+    insetTop="@dimen/hw_cloud_dialog_margin_bottom"
+    insetBottom="@dimen/hw_cloud_dialog_margin_bottom"/>

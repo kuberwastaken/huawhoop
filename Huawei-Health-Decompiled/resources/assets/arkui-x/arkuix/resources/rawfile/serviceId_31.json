@@ -1,0 +1,115 @@
+{
+  "1": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "opStruct",
+        "type": "object",
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "opType",
+            "type": "number8"
+          },
+          {
+            "tag": 3,
+            "jsonKey": "opTime",
+            "type": "number32"
+          }
+        ]
+      }
+    ],
+    "encode": [
+      {
+        "tag": 127,
+        "jsonKey": "result",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 1,
+        "jsonKey": "opStruct",
+        "type": "object",
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "opType",
+            "type": "number8"
+          },
+          {
+            "tag": 3,
+            "jsonKey": "opTime",
+            "type": "number32"
+          }
+        ],
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "fileStatus",
+        "type": "number8",
+        "optional": true
+      }
+    ]
+  },
+  "2": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "ephemerisNegotiationStruct",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "downloadUrlList",
+            "type": "anonArray",
+            "optional": true,
+            "rule": [
+              {
+                "tag": 3,
+                "jsonKey": "downloadUrl",
+                "type": "string",
+                "optional": true
+              }
+            ]
+          },
+          {
+            "tag": 4,
+            "jsonKey": "fileStatusPushInterval",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 5,
+            "jsonKey": "downloadVersion",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 6,
+            "jsonKey": "sonyUrlConfigId",
+            "type": "string",
+            "optional": true
+          }
+        ]
+      }
+    ]
+  },
+  "3": {
+    "decode": [
+      {
+        "tag": 128,
+        "jsonKey": "result",
+        "type": "number32"
+      }
+    ],
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "fileStatus",
+        "type": "number8"
+      }
+    ]
+  }
+}

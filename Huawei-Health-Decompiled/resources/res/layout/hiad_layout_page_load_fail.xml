@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-1">
+    <LinearLayout
+        gravity="0x1"
+        orientation="1"
+        layout_width="-2"
+        layout_height="-2"
+        layout_centerInParent="true">
+        <ImageView
+            id="@+id/hiad_id_load_fail_img"
+            layout_width="-2"
+            layout_height="-2"
+            src="@drawable/_2131428726_res_0x7f0b0576"
+            scaleType="7"/>
+        <TextView
+            textSize="14sp"
+            textColor="#a0a0a0"
+            gravity="0x1"
+            layout_width="-2"
+            layout_height="-2"
+            layout_marginLeft="@dimen/_2131363304_res_0x7f0a05e8"
+            layout_marginTop="@dimen/_2131363360_res_0x7f0a0620"
+            layout_marginRight="@dimen/_2131363304_res_0x7f0a05e8"
+            text="@string/_2130852295_res_0x7f0239c7"/>
+    </LinearLayout>
+</RelativeLayout>

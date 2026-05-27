@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/layout_configured_page"
+    layout_width="-1"
+    layout_height="-2"
+    paddingStart="@dimen/_2131362372_res_0x7f0a0244"
+    paddingEnd="@dimen/_2131362371_res_0x7f0a0243">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/recommend_activity_page_sub_header"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x8="3"
+        NOT_FOUND_0x9="@string/_2130844374_res_0x7f021ad6"/>
+    <RelativeLayout
+        id="@+id/recommend_activity_recycler_view_out"
+        descendantFocusability="2"
+        layout_width="-2"
+        layout_height="-2">
+        <com.huawei.ui.commonui.recycleview.HealthRecycleView
+            id="@+id/recommend_activity_recycler_view"
+            layout_width="-1"
+            layout_height="-2"
+            NOT_FOUND_0x7="false"/>
+    </RelativeLayout>
+</LinearLayout>

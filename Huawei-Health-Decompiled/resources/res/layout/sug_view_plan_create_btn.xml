@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="@dimen/_2131363138_res_0x7f0a0542">
+    <com.huawei.ui.commonui.divider.HealthDivider
+        id="@+id/divider"
+        layout_width="-1"
+        layout_height="-2"/>
+    <com.huawei.ui.commonui.button.HealthButton
+        textSize="@dimen/_2131365485_res_0x7f0a0e6d"
+        textColor="@color/_2131299847_res_0x7f090e07"
+        gravity="0x11"
+        id="@+id/sug_plan_create_btn"
+        background="@drawable/_2131431084_res_0x7f0b0eac"
+        layout_width="-1"
+        layout_height="@dimen/_2131363090_res_0x7f0a0512"
+        layout_marginTop="@dimen/_2131362934_res_0x7f0a0476"
+        layout_marginBottom="@dimen/_2131362934_res_0x7f0a0476"
+        maxWidth="@dimen/_2131363080_res_0x7f0a0508"
+        text="@string/_2130845201_res_0x7f021e11"
+        layout_centerVertical="true"
+        textAllCaps="false"
+        layout_marginStart="@dimen/_2131363166_res_0x7f0a055e"
+        layout_marginEnd="@dimen/_2131363166_res_0x7f0a055e"
+        layout_alignParentEnd="true"
+        style="@style/health_button_style_small"/>
+</LinearLayout>

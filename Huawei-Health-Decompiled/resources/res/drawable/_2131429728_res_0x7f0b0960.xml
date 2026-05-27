@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item state_pressed="true">
+        <inset
+            drawable="@drawable/_2131429712_res_0x7f0b0950"
+            insetTop="@dimen/_2131364423_res_0x7f0a0a47"
+            insetBottom="@dimen/_2131364423_res_0x7f0a0a47"/>
+    </item>
+    <item state_pressed="false">
+        <inset
+            drawable="@drawable/_2131429684_res_0x7f0b0934"
+            insetTop="@dimen/_2131364423_res_0x7f0a0a47"
+            insetBottom="@dimen/_2131364423_res_0x7f0a0a47"/>
+    </item>
+</selector>

@@ -1,0 +1,88 @@
+{
+	"applications":[],
+	"services":[
+		{
+			"name":"com.huawei.watchface",
+			"routeBy":"ser_country",
+			"servings":[
+				{
+					"countryOrAreaGroup":"DR1",
+					"addresses":{
+						"campaign":"https://campaign-drcn.music.dbankcloud.cn/",
+						"hianalytics":"https://metrics1-drcn.dt.dbankcloud.cn:443",
+						"hianalyticsV2":"https://metrics.dt.dbankcloud.cn:443",
+						"hianalyticsV3":"https://metrics1-drcn.dt.dbankcloud.cn:443",
+						"watchFace":"https://api-drcn.theme.dbankcloud.cn/",
+						"watchFaceH5":"https://h5hosting-drcn.dbankcdn.cn/",
+						"privacy": "https://privacy.consumer.huawei.com/",
+						"privacyV2": "https://legal.cloud.huawei.com.cn/"
+					}
+				},
+				{
+					"countryOrAreaGroup":"DR2",
+					"addresses":{
+						"hianalytics":"https://metrics-dra.dt.dbankcloud.com:443",
+						"hianalyticsV2":"https://metrics-dra.dt.dbankcloud.com:443",
+						"hianalyticsV3":"https://metrics-dra.dt.dbankcloud.com:443",
+						"watchFace":"https://api-dra.theme.dbankcloud.com/",
+						"watchFaceH5":"https://h5hosting-dra.dbankcdn.com/",
+						"privacy": "https://privacy.consumer.huawei.com/",
+						"privacyV2": "https://legal.cloud.huawei.com.cn/"
+					}
+				},
+				{
+					"countryOrAreaGroup":"DR3",
+					"addresses":{
+						"hianalytics":"https://metrics-dre.dt.dbankcloud.com:443",
+						"hianalyticsV2":"https://metrics-dre.dt.dbankcloud.com:443",
+						"hianalyticsV3":"https://metrics-dre.dt.dbankcloud.com:443",
+						"watchFace":"https://api-dre.theme.dbankcloud.com/",
+						"watchFaceH5":"https://h5hosting-dre.dbankcdn.com/",
+						"privacy": "https://privacy.consumer.huawei.com/",
+						"privacyV2": "https://legal.cloud.huawei.com.cn/"
+					}
+				},
+				{
+					"countryOrAreaGroup":"DR4",
+					"addresses":{
+						"campaign":"https://drru-campaign-music.cloud.huawei.ru/",
+						"hianalytics":"https://metrics5.dt.dbankcloud.ru:443",
+						"hianalyticsV2":"https://metrics5.dt.dbankcloud.ru:443",
+						"hianalyticsV3":"https://metrics5.dt.dbankcloud.ru:443",
+						"watchFace":"https://api-drru.theme.dbankcloud.ru/",
+						"watchFaceH5":"https://h5hosting-drru.dbankcdn.ru/",
+						"privacy": "https://privacy.consumer.huawei.com/",
+						"privacyV2": "https://legal.cloud.huawei.com.cn/"
+					}
+				}
+			],
+			"countryOrAreaGroups":[
+				{
+					"id":"DR1",
+					"name":"China",
+					"countriesOrAreas":["CN"],
+					"description":"China zone"
+				},
+				{
+					"id":"DR2",
+					"name":"Asian-African-Latin American",
+					"countriesOrAreas":["AE","AF","AG","AM","AR","AZ","BB","BD","BF","BH","BI","BJ","BN","BO","BR","BS","BW","BY","BZ","CD","CF","CG","CI","CK","CL","CM","CO","CR","CV","DJ","DO","DZ","EC","EG","ER","ET","FJ","GA","GD","GE","GF","GH","GM","GN","GP","GQ","GT","GW","GY","HK","HN","HT","ID","IN","IQ","JM","JO","JP","KE","KG","KH","KM","KW","KY","KZ","LA","LB","LC","LK","LR","LS","LY","MA","MG","ML","MM","MN","MO","MQ","MR","MS","MU","MV","MW","MX","MY","MZ","NA","NE","NG","NI","NP","NR","OM","PA","PE","PF","PG","PH","PK","PR","PY","QA","RE","RW","SA","SB","SC","SG","SL","SN","SO","SR","ST","SV","SZ","TD","TG","TH","TJ","TM","TN","TO","TT","TW","TZ","UG","UY","UZ","VE","VG","VN","YE","YT","ZA","ZM","ZW"],
+					"description":"Asian-African-Latin American zone"
+				},
+				{
+					"id":"DR3",
+					"name":"Europe",
+					"countriesOrAreas":["AD","AL","AT","AU","BA","BE","BG","CA","CH","CY","CZ","DE","DK","EE","ES","FI","FO","FR","GB","GI","GL","GR","HR","HU","IE","IL","IS","IT","LI","LT","LU","LV","MC","MD","ME","MK","MT","NL","NO","NZ","PL","PT","RO","RS","SE","SI","SK","SM","TR","UA","VA"],
+					"description":"Europe zone"
+				},
+				{
+					"id":"DR4",
+					"name":"Russa",
+					"countriesOrAreas":["RU"],
+					"description":"Russa zone"
+				}
+			]
+		}
+	],
+	"countryOrAreaGroups":[]
+}

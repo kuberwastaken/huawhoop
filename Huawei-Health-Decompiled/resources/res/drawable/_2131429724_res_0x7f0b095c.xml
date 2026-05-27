@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item drawable="@drawable/_2131429690_res_0x7f0b093a"/>
+    <item gravity="0x11">
+        <selector>
+            <item
+                state_enabled="false"
+                drawable="@drawable/_2131429678_res_0x7f0b092e"/>
+            <item
+                state_pressed="true"
+                drawable="@drawable/_2131429682_res_0x7f0b0932"/>
+            <item state_pressed="false">
+                <shape/>
+            </item>
+        </selector>
+    </item>
+</layer-list>

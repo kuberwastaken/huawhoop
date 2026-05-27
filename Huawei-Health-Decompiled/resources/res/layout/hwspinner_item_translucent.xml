@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    ellipsize="4"
+    id="@android:id/text1"
+    layout_width="-1"
+    layout_height="-2"
+    singleLine="true"
+    textAlignment="0"
+    style="@style/Widget.Emui.HwSpinner.HwSpinnerItem.Translucent"/>

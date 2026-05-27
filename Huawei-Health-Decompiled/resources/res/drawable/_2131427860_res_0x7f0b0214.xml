@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        state_focused="true"
+        drawable="@mipmap/_2131820673_res_0x7f110081"/>
+    <item
+        state_pressed="false"
+        drawable="@mipmap/_2131820672_res_0x7f110080"/>
+    <item
+        state_pressed="true"
+        drawable="@mipmap/_2131820673_res_0x7f110081"/>
+</selector>

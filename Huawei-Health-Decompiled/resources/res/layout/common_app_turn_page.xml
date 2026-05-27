@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/view_pager_function_menu_root"
+    layout_width="-1"
+    layout_height="-2"
+    layout_marginTop="@dimen/_2131362585_res_0x7f0a0319"
+    minHeight="@dimen/_2131363177_res_0x7f0a0569">
+    <com.huawei.ui.commonui.viewpager.HealthViewPager
+        layout_gravity="0x1"
+        id="@+id/view_pager_app_turn_page_cant_loop"
+        visibility="2"
+        clipToPadding="false"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xa="false"/>
+    <com.huawei.ui.commonui.viewpager.HealthViewPager
+        layout_gravity="0x1"
+        id="@+id/view_pager_app_turn_page"
+        visibility="2"
+        clipToPadding="false"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xa="true"/>
+    <com.huawei.ui.commonui.dotspageindicator.HealthDotsPageIndicator
+        gravity="0x11"
+        layout_gravity="0x51"
+        id="@+id/indicator_app_turn_page"
+        layout_width="-2"
+        layout_height="-2"
+        style="@style/DotsPageIndicatorStyleDots"/>
+</FrameLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.cardview.HealthCardView
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginStart="@dimen/_2131362478_res_0x7f0a02ae"
+        layout_marginEnd="@dimen/_2131362478_res_0x7f0a02ae">
+        <LinearLayout
+            gravity="0x10"
+            orientation="1"
+            layout_width="-1"
+            layout_height="-2"
+            paddingStart="@dimen/_2131362478_res_0x7f0a02ae"
+            paddingEnd="@dimen/_2131362477_res_0x7f0a02ad">
+            <com.huawei.ui.commonui.healthtextview.HealthTextView
+                textSize="@dimen/_2131365501_res_0x7f0a0e7d"
+                textColor="@color/_2131296495_res_0x7f0900ef"
+                id="@+id/benefits_title"
+                layout_width="-2"
+                layout_height="-2"
+                layout_marginTop="@dimen/_2131362478_res_0x7f0a02ae"
+                text="1.hhdjshjhbjxaxuahxhihxia"
+                fontFamily="@string/_2130852834_res_0x7f023be2"/>
+            <com.huawei.ui.commonui.healthtextview.HealthTextView
+                textSize="@dimen/_2131362719_res_0x7f0a039f"
+                textColor="@color/_2131297224_res_0x7f0903c8"
+                id="@+id/benefits_subtitle"
+                layout_width="-2"
+                layout_height="-2"
+                layout_marginTop="@dimen/_2131363855_res_0x7f0a080f"
+                layout_marginBottom="@dimen/_2131362478_res_0x7f0a02ae"
+                text="knxiahxihihihxiahxiahixhaihx"
+                fontFamily="@string/_2130852834_res_0x7f023be2"
+                NOT_FOUND_0xf="@dimen/_2131362721_res_0x7f0a03a1"
+                NOT_FOUND_0x10="@dimen/_2131365473_res_0x7f0a0e61"
+                NOT_FOUND_0x11="1"/>
+        </LinearLayout>
+    </com.huawei.ui.commonui.cardview.HealthCardView>
+</LinearLayout>

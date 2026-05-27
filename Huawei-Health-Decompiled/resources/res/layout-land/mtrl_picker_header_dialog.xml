@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-2"
+    layout_height="-1">
+    <LinearLayout
+        layout_gravity="0x800003"
+        orientation="1"
+        id="@+id/mtrl_picker_header"
+        paddingLeft="@dimen/_2131364961_res_0x7f0a0c61"
+        paddingRight="@dimen/_2131364961_res_0x7f0a0c61"
+        paddingBottom="@dimen/_2131364961_res_0x7f0a0c61"
+        layout_width="-2"
+        layout_height="-1"
+        paddingStart="@dimen/_2131364961_res_0x7f0a0c61"
+        paddingEnd="@dimen/_2131364961_res_0x7f0a0c61"
+        style="?unknown_attr_ref: 7f0605e0">
+        <FrameLayout
+            id="@+id/mtrl_picker_header_title_and_selection"
+            paddingLeft="@dimen/_2131364967_res_0x7f0a0c67"
+            focusable="true"
+            focusableInTouchMode="true"
+            layout_width="@dimen/_2131364970_res_0x7f0a0c6a"
+            layout_height="0dp"
+            layout_weight="1"
+            paddingStart="@dimen/_2131364967_res_0x7f0a0c67">
+            <include layout="@layout/mtrl_picker_header_title_text"/>
+            <include layout="@layout/mtrl_picker_header_selection_text"/>
+        </FrameLayout>
+        <include layout="@layout/mtrl_picker_header_toggle"/>
+    </LinearLayout>
+    <View
+        layout_gravity="0x800005"
+        layout_width="@dimen/_2131364963_res_0x7f0a0c63"
+        layout_height="-1"
+        style="?unknown_attr_ref: 7f0605df"/>
+</merge>

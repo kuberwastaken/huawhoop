@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.scrollview.HealthScrollView
+        scrollbars="0x0"
+        layout_width="-1"
+        layout_height="-1">
+        <ImageView
+            layout_width="-2"
+            layout_height="-2"
+            src="@drawable/_2131430810_res_0x7f0b0d9a"/>
+    </com.huawei.ui.commonui.scrollview.HealthScrollView>
+    <LinearLayout
+        gravity="0x11"
+        orientation="1"
+        clickable="true"
+        layout_width="-1"
+        layout_height="-1">
+        <ImageView
+            layout_width="-2"
+            layout_height="-2"
+            src="@drawable/_2131430811_res_0x7f0b0d9b"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+            textColor="@color/_2131299850_res_0x7f090e0a"
+            id="@+id/sug_actions_pay_lock_hint"
+            layout_width="-2"
+            layout_height="-2"
+            layout_marginTop="@dimen/_2131362970_res_0x7f0a049a"
+            fontFamily="@string/_2130852834_res_0x7f023be2"/>
+    </LinearLayout>
+</FrameLayout>

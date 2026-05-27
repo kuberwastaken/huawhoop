@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="@dimen/_2131364965_res_0x7f0a0c65">
+    <LinearLayout
+        layout_gravity="0x31"
+        orientation="0"
+        id="@+id/fullscreen_header"
+        paddingLeft="@dimen/_2131364962_res_0x7f0a0c62"
+        paddingTop="@dimen/_2131364962_res_0x7f0a0c62"
+        paddingRight="@dimen/_2131364962_res_0x7f0a0c62"
+        layout_width="-1"
+        layout_height="@dimen/_2131364965_res_0x7f0a0c65"
+        paddingStart="@dimen/_2131364962_res_0x7f0a0c62"
+        paddingEnd="@dimen/_2131364962_res_0x7f0a0c62"
+        style="?unknown_attr_ref: 7f0605e0">
+        <com.google.android.material.button.MaterialButton
+            gravity="0x11"
+            layout_gravity="0x30"
+            id="@+id/cancel_button"
+            padding="12dp"
+            layout_width="@dimen/_2131365031_res_0x7f0a0ca7"
+            layout_height="@dimen/_2131365031_res_0x7f0a0ca7"
+            insetTop="0dp"
+            insetBottom="0dp"
+            contentDescription="@string/_2130852625_res_0x7f023b11"
+            NOT_FOUND_0x15="@drawable/_2131431235_res_0x7f0b0f43"
+            style="?unknown_attr_ref: 7f0605dd"/>
+        <FrameLayout
+            id="@+id/mtrl_picker_header_title_and_selection"
+            paddingLeft="@dimen/_2131364967_res_0x7f0a0c67"
+            focusable="true"
+            focusableInTouchMode="true"
+            layout_width="0dp"
+            layout_height="-1"
+            layout_weight="1"
+            paddingStart="@dimen/_2131364967_res_0x7f0a0c67">
+            <TextView
+                gravity="0x800053"
+                layout_gravity="0x800033"
+                id="@+id/mtrl_picker_title_text"
+                layout_width="-1"
+                layout_height="-2"
+                NOT_FOUND_0x14="@dimen/_2131364984_res_0x7f0a0c78"
+                style="?unknown_attr_ref: 7f0605e2"/>
+            <TextView
+                gravity="0x800053"
+                layout_gravity="0x800033"
+                id="@+id/mtrl_picker_header_selection_text"
+                paddingBottom="@dimen/_2131364977_res_0x7f0a0c71"
+                layout_width="-1"
+                layout_height="-2"
+                NOT_FOUND_0x14="@dimen/_2131364978_res_0x7f0a0c72"
+                NOT_FOUND_0x16="@dimen/_2131364966_res_0x7f0a0c66"
+                style="?unknown_attr_ref: 7f0605e1"/>
+        </FrameLayout>
+        <LinearLayout
+            orientation="@integer/_2131624016_res_0x7f0e0050"
+            layout_width="-2"
+            layout_height="-2">
+            <com.google.android.material.button.MaterialButton
+                layout_gravity="0x800035"
+                id="@+id/confirm_button"
+                layout_width="-2"
+                layout_height="@dimen/_2131365031_res_0x7f0a0ca7"
+                text="@string/_2130852642_res_0x7f023b22"
+                contentDescription="@string/_2130852642_res_0x7f023b22"
+                style="?unknown_attr_ref: 7f0605de"/>
+            <include layout="@layout/mtrl_picker_header_toggle"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        layout_gravity="0x50"
+        layout_width="-1"
+        layout_height="@dimen/_2131364963_res_0x7f0a0c63"
+        style="?unknown_attr_ref: 7f0605df"/>
+</merge>

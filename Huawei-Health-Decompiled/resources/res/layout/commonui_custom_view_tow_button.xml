@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2"
+    layout_marginTop="@dimen/_2131362499_res_0x7f0a02c3"
+    layout_marginBottom="@dimen/_2131362497_res_0x7f0a02c1"
+    paddingStart="@dimen/_2131362493_res_0x7f0a02bd"
+    paddingEnd="@dimen/_2131362493_res_0x7f0a02bd"
+    layout_marginStart="@dimen/_2131362499_res_0x7f0a02c3"
+    layout_marginEnd="@dimen/_2131362499_res_0x7f0a02c3">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        layout_gravity="0x10"
+        id="@+id/dialog_alert_message"
+        layout_width="-2"
+        layout_height="-2"
+        lineSpacingExtra="@dimen/_2131362343_res_0x7f0a0227"
+        style="@style/CustomDialog_message"/>
+    <com.huawei.ui.commonui.button.HealthButton
+        gravity="0x11"
+        layout_gravity="0x11"
+        id="@+id/dialog_btn_upload_by_wifi"
+        background="@drawable/dialog_button_background"
+        layout_width="-1"
+        layout_height="@dimen/_2131362487_res_0x7f0a02b7"
+        layout_marginTop="@dimen/_2131362498_res_0x7f0a02c2"
+        layout_marginBottom="@dimen/_2131362337_res_0x7f0a0221"
+        style="@style/health_button_style_borderless"/>
+    <com.huawei.ui.commonui.button.HealthButton
+        gravity="0x11"
+        layout_gravity="0x11"
+        id="@+id/dialog_btn_upload_now"
+        background="@drawable/dialog_button_background"
+        layout_width="-1"
+        layout_height="@dimen/_2131362487_res_0x7f0a02b7"
+        style="@style/health_button_style_borderless"/>
+</LinearLayout>

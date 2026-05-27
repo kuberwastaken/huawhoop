@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/time_sharing_fragment_root_view"
+    descendantFocusability="2"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout
+        layout_gravity="0x1"
+        id="@+id/time_sharing_piechart_container"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xd="0">
+        <com.huawei.ui.commonui.chart.HealthRingChart
+            id="@+id/time_sharing_piechart"
+            layout_width="-1"
+            layout_height="-2"/>
+    </com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131362971_res_0x7f0a049b"
+        textColor="@color/_2131296538_res_0x7f09011a"
+        gravity="0x11"
+        id="@+id/time_sharing_middle_title"
+        layout_width="-1"
+        layout_height="@dimen/_2131363109_res_0x7f0a0525"
+        fontFamily="@string/_2130852834_res_0x7f023be2"/>
+    <com.huawei.ui.commonui.cardview.HealthCardView
+        orientation="1"
+        id="@+id/time_sharing_basic_recycler_view_cardview"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginBottom="@dimen/_2131362934_res_0x7f0a0476"
+        layout_marginStart="@dimen/_2131362934_res_0x7f0a0476"
+        layout_marginEnd="@dimen/_2131362934_res_0x7f0a0476">
+        <com.huawei.ui.commonui.recycleview.HealthRecycleView
+            id="@+id/time_sharing_basic_recycler_view"
+            layout_width="-1"
+            layout_height="-2"/>
+    </com.huawei.ui.commonui.cardview.HealthCardView>
+</LinearLayout>

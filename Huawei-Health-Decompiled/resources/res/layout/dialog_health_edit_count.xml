@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="0"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout
+        orientation="1"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xb="0">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131362954_res_0x7f0a048a"
+            textColor="@color/_2131299845_res_0x7f090e05"
+            id="@+id/health_model_edit_count_tip"
+            visibility="2"
+            layout_width="-1"
+            layout_height="-2"
+            layout_marginBottom="@dimen/_2131362578_res_0x7f0a0312"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131362970_res_0x7f0a049a"
+            textColor="@color/_2131299845_res_0x7f090e05"
+            orientation="0"
+            id="@+id/health_model_edit_result_text"
+            layout_width="-1"
+            layout_height="-2"
+            fontFamily="@string/_2130852833_res_0x7f023be1"
+            layout_marginStart="20dp"
+            layout_marginEnd="20dp"/>
+        <com.huawei.ui.commonui.seekbar.HealthSeekBar
+            id="@+id/health_model_edit_count_seekBar"
+            layout_width="-1"
+            layout_height="30dp"
+            style="@style/health_seekbar_style"/>
+        <LinearLayout
+            orientation="0"
+            id="@+id/health_model_edit_count_tip_layout"
+            layout_width="-1"
+            layout_height="-2"
+            layout_marginStart="20dp"
+            layout_marginEnd="20dp"/>
+    </com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    id="@+id/section_root_view"
+    layout_width="-1"
+    layout_height="-2">
+    <RelativeLayout
+        layout_width="-1"
+        layout_height="-2">
+        <com.huawei.ui.commonui.subheader.HealthSubHeader
+            id="@+id/section_sub_header"
+            layout_width="-1"
+            layout_height="-2"
+            NOT_FOUND_0x9="false"
+            NOT_FOUND_0xa="3"/>
+        <RelativeLayout
+            id="@+id/section1_1list_01_recycler_layout"
+            visibility="2"
+            layout_width="-1"
+            layout_height="-2"
+            layout_below="@+id/section_sub_header">
+            <com.huawei.ui.commonui.recycleview.HealthRecycleView
+                id="@+id/section1_1list_01_recycler_view"
+                layout_width="-1"
+                layout_height="-2"
+                NOT_FOUND_0x8="2"/>
+        </RelativeLayout>
+        <LinearLayout
+            id="@+id/section1_1list_01_no_data_view"
+            visibility="2"
+            layout_width="-1"
+            layout_height="-2"
+            layout_below="@+id/section_sub_header">
+            <include
+                layout_width="-1"
+                layout_height="@dimen/_2131362583_res_0x7f0a0317"
+                layout_marginTop="@dimen/_2131363112_res_0x7f0a0528"
+                layout_marginStart="@dimen/_2131362372_res_0x7f0a0244"
+                layout_marginEnd="@dimen/_2131362371_res_0x7f0a0243"
+                layout="@layout/section1_1list_01_no_data_layout"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

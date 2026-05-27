@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-2">
+    <LinearLayout
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="16dp"
+        layout_marginBottom="8dp">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365485_res_0x7f0a0e6d"
+            textColor="@color/_2131296940_res_0x7f0902ac"
+            id="@+id/not_found_device_tip"
+            layout_width="-2"
+            layout_height="-2"
+            text="@string/IDS_device_mgr_not_found_device"
+            fontFamily="@string/_2130852833_res_0x7f023be1"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,450 @@
+{
+  "1": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "package_version",
+        "type": "string"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "info_component_size",
+        "type": "number16"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "ota_work_mode",
+        "type": "number8"
+      },
+      {
+        "tag": 5,
+        "jsonKey": "special_function",
+        "type": "number8",
+        "optional": true
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "error_code",
+        "type": "number32"
+      },
+      {
+        "tag": 4,
+        "jsonKey": "battery_threshold",
+        "type": "number8",
+        "optional": true
+      }
+    ]
+  },
+  "2": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "app_wait_timeout",
+        "type": "number16"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "device_restart_timeout",
+        "type": "number16"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "ota_unit_size",
+        "type": "number16",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "interval",
+        "type": "number16",
+        "optional": true
+      },
+      {
+        "tag": 5,
+        "jsonKey": "ack_enable",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 6,
+        "jsonKey": "offset_enable",
+        "type": "number8",
+        "optional": true
+      }
+    ]
+  },
+  "3": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "file_offset",
+        "type": "number32"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "file_length",
+        "type": "number32"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "file_apply_bitmap",
+        "type": "number16",
+        "optional": true,
+        "allowEmpty": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "wifi_file_length",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 5,
+        "jsonKey": "file_type",
+        "type": "number8",
+        "optional": true
+      }
+    ]
+  },
+  "5": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "package_valid_size",
+        "type": "number32"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "received_file_size",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "progress_radio",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "file_type",
+        "type": "number8",
+        "optional": true
+      }
+    ]
+  },
+  "6": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "package_validity",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "device_restart_time",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "file_type",
+        "type": "number8",
+        "optional": true
+      }
+    ]
+  },
+  "7": {
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "error_code",
+        "type": "number32"
+      }
+    ]
+  },
+  "9": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "app_ota_status",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "switchover",
+        "type": "number8",
+        "optional": true
+      }
+    ]
+  },
+  "10": {
+    "encode": [
+      {
+        "tag": 127,
+        "jsonKey": "error_code",
+        "type": "number32"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "ota_update_request",
+        "type": "number8"
+      }
+    ]
+  },
+  "11": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "ota_need_backup_sport_data",
+        "type": "empty"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "ota_need_backup_sport_data",
+        "type": "number8"
+      }
+    ]
+  },
+  "12": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "ota_auto_upgrade_flag",
+        "type": "number8"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "error_code",
+        "type": "number32"
+      }
+    ]
+  },
+  "13": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "operate_mode",
+        "type": "number8"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "error_code",
+        "type": "number32"
+      }
+    ]
+  },
+  "14": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "package_version",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "package_valid_size",
+        "type": "number64",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "ota_check_time",
+        "type": "number32"
+      },
+      {
+        "tag": 4,
+        "jsonKey": "check_result",
+        "type": "number8"
+      },
+      {
+        "tag": 5,
+        "jsonKey": "check_mode",
+        "type": "number8"
+      },
+      {
+        "tag": 6,
+        "jsonKey": "version_type",
+        "type": "number8",
+        "optional": true
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "error_code",
+        "type": "number32"
+      }
+    ]
+  },
+  "15": {
+    "encode": [
+      {
+        "tag": 127,
+        "jsonKey": "error_code",
+        "type": "number32"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "operate",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "searchType",
+        "type": "number8"
+      }
+    ]
+  },
+  "16": {
+    "encode": [
+      {
+        "tag": 2,
+        "jsonKey": "app_upgrade_status",
+        "type": "number8"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "network_status",
+        "type": "number8"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "auto_upgrade_flag",
+        "type": "number8",
+        "optional": true
+      }
+    ]
+  },
+  "17": {
+    "encode": [
+      {
+        "tag": 2,
+        "jsonKey": "app_upgrade_status",
+        "type": "number8"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "user_confirm_result",
+        "type": "number8"
+      }
+    ]
+  },
+  "18": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "download_percent",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "download_status",
+        "type": "number8"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "download_mode",
+        "type": "number8"
+      }
+    ]
+  },
+  "19": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "transfer_model",
+        "type": "empty"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "transfer_model",
+        "type": "number8"
+      }
+    ]
+  },
+  "20": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "package_version",
+        "type": "string"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "app_result",
+        "type": "number8"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "version_changelog",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "version_url",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 5,
+        "jsonKey": "version_country",
+        "type": "string",
+        "optional": true
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "error_code",
+        "type": "number32"
+      }
+    ]
+  },
+  "21": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "package_version",
+        "type": "string"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "version_country",
+        "type": "string"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 3,
+        "jsonKey": "device_result",
+        "type": "number8"
+      },
+      {
+        "tag": 4,
+        "jsonKey": "version_url",
+        "type": "string"
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    layout_gravity="0x800003"
+    id="@+id/select_dialog_listview"
+    scrollbars="0x200"
+    fadingEdge="0x0"
+    clipToPadding="false"
+    layout_width="-1"
+    layout_height="-1"
+    cacheColorHint="@null"
+    divider="?attr/_2131101082_res_0x7f06059a"
+    overScrollMode="1"
+    textAlignment="5"
+    NOT_FOUND_0xb="@dimen/_2131361897_res_0x7f0a0069"
+    NOT_FOUND_0xc="@dimen/_2131361898_res_0x7f0a006a"
+    class="androidx.appcompat.app.AlertController$RecycleListView"
+    style="@style/Widget.AppCompat.ListView"/>

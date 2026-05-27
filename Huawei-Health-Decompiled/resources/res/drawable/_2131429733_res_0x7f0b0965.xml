@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item state_pressed="true">
+        <scale
+            android:scaleWidth="100%"
+            android:useIntrinsicSizeAsMinimum="true">
+            <inset
+                drawable="@drawable/_2131429715_res_0x7f0b0953"
+                insetTop="@dimen/_2131364443_res_0x7f0a0a5b"
+                insetBottom="@dimen/_2131364443_res_0x7f0a0a5b"/>
+        </scale>
+    </item>
+    <item state_pressed="false">
+        <clip>
+            <inset
+                drawable="@drawable/_2131429685_res_0x7f0b0935"
+                insetTop="@dimen/_2131364423_res_0x7f0a0a47"
+                insetBottom="@dimen/_2131364423_res_0x7f0a0a47"/>
+        </clip>
+    </item>
+</selector>

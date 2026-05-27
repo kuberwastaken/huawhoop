@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-2"
+    layout_height="-2"
+    layout_marginTop="16dp"
+    layout_marginStart="16dp"
+    layout_marginEnd="16dp">
+    <com.huawei.ui.commonui.scrollview.HealthScrollView
+        scrollbarStyle="0x1000000"
+        scrollbars="0x0"
+        layout_width="-2"
+        layout_height="-2"
+        fadeScrollbars="true">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131363786_res_0x7f0a07ca"
+            textColor="@color/_2131299845_res_0x7f090e05"
+            id="@+id/open_pressure_auto_detector_content"
+            layout_width="-1"
+            layout_height="-2"
+            layout_marginTop="6dp"
+            text="@string/_2130837901_res_0x7f02018d"
+            lineSpacingMultiplier="1.1"/>
+    </com.huawei.ui.commonui.scrollview.HealthScrollView>
+</LinearLayout>

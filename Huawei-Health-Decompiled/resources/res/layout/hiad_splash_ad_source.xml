@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    background="@drawable/_2131428672_res_0x7f0b0540"
+    paddingLeft="@dimen/_2131363341_res_0x7f0a060d"
+    paddingRight="@dimen/_2131363341_res_0x7f0a060d"
+    layout_width="-2"
+    layout_height="-2"
+    paddingStart="@dimen/_2131363341_res_0x7f0a060d"
+    paddingEnd="@dimen/_2131363341_res_0x7f0a060d">
+    <com.huawei.openalliance.ad.views.PPSSplashLabelView
+        gravity="0x11"
+        id="@+id/hiad_ad_label"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginLeft="@dimen/_2131363341_res_0x7f0a060d"
+        layout_marginRight="@dimen/_2131363341_res_0x7f0a060d"
+        minHeight="@dimen/_2131363318_res_0x7f0a05f6"
+        text="@string/_2130852161_res_0x7f023941"
+        singleLine="true"
+        textDirection="5"
+        layout_marginStart="@dimen/_2131363341_res_0x7f0a060d"
+        layout_marginEnd="@dimen/_2131363341_res_0x7f0a060d"
+        style="@style/HIAD_ad_source_text"/>
+    <TextView
+        gravity="0x11"
+        id="@+id/hiad_ad_source"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginLeft="@dimen/_2131363341_res_0x7f0a060d"
+        layout_marginRight="@dimen/_2131363341_res_0x7f0a060d"
+        minHeight="@dimen/_2131363318_res_0x7f0a05f6"
+        maxEms="7"
+        singleLine="true"
+        layout_marginStart="@dimen/_2131363341_res_0x7f0a060d"
+        layout_marginEnd="@dimen/_2131363341_res_0x7f0a060d"
+        style="@style/HIAD_ad_source_text"/>
+</LinearLayout>

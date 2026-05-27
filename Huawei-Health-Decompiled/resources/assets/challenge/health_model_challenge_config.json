@@ -1,0 +1,136 @@
+{
+  "challengeMotivationImage": "health_model_challenge_motivation.webp",
+  "challengeList": [
+    {
+      "versionRange": "",
+      "versionRangeBeta": "",
+      "challengeId": 200002,
+      "challengeName": "IDS_challenge_anxiety_name",
+      "challengeGuide": "IDS_challenge_anxiety",
+      "challengeIntro": "IDS_challenge_anxiety_intro",
+      "challengeImageFileName": "health_model_challenge_relieve_anxiety.webp",
+      "challengeTaskId": [
+        2,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "versionRange": "",
+      "versionRangeBeta": "",
+      "challengeId": 200003,
+      "challengeName": "IDS_challenge_weight_name",
+      "challengeGuide": "IDS_challenge_weight",
+      "challengeIntro": "IDS_challenge_weight_intro",
+      "challengeImageFileName": "health_model_challenge_managing_weight.webp",
+      "challengeTaskId": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        9,
+        10,
+        13,
+        14
+      ]
+    },
+    {
+      "versionRange": "",
+      "versionRangeBeta": "",
+      "challengeId": 200004,
+      "challengeName": "IDS_challenge_sleep_name",
+      "challengeGuide": "IDS_challenge_sleep",
+      "challengeIntro": "IDS_challenge_sleep_intro",
+      "challengeImageFileName": "health_model_challenge_improves_sleep.webp",
+      "challengeTaskId": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "versionRange": "",
+      "versionRangeBeta": "",
+      "challengeId": 200005,
+      "challengeName": "IDS_challenge_immunity_name",
+      "challengeGuide": "IDS_challenge_immunity",
+      "challengeIntro": "IDS_challenge_immunity_intro",
+      "challengeImageFileName": "health_model_challenge_immunity.webp",
+      "challengeTaskId": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        9,
+        10
+      ]
+    },
+    {
+      "versionRange": "1",
+      "versionRangeBeta": "1",
+      "challengeId": 200006,
+      "challengeTaskId": [
+        3,
+        5,
+        6,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "versionRange": "1",
+      "versionRangeBeta": "1",
+      "challengeId": 200007,
+      "challengeTaskId": [
+        3,
+        5,
+        6,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "versionRange": "1",
+      "versionRangeBeta": "1",
+      "challengeId": 200008,
+      "challengeTaskId": [
+        3,
+        5,
+        6,
+        10,
+        12,
+        13
+      ]
+    },
+    {
+      "versionRange": "",
+      "versionRangeBeta": "",
+      "challengeId": 200001,
+      "challengeName": "IDS_challenge_free_name",
+      "challengeGuide": "IDS_challenge_free",
+      "challengeIntro": "IDS_challenge_free_intro",
+      "challengeImageFileName": "health_model_challenge_free.webp",
+      "challengeTaskId": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  ]
+}

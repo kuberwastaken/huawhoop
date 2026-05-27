@@ -1,0 +1,121 @@
+{
+  "category": "mainPage",
+  "pages": [
+    {
+      "page_type": 18,
+      "position": 0,
+      "resPosId": 18,
+      "section_list": [
+        {
+          "template": 1017,
+          "dataUrl": "local:content//StepCardProvider",
+          "groupId": 1
+        },
+        {
+          "template": 1250,
+          "dataUrl": "local:content//HomeBusinessCardProvider",
+          "groupId": 1
+        },
+        {
+          "template": 1020,
+          "dataUrl": "local:content//OperaMSGCardProvider",
+          "groupId": 1
+        },
+        {
+          "template": 1019,
+          "dataUrl": "local:content//FunctionSetCardProvider",
+          "groupId": 1
+        },
+        {
+          "template": 1027,
+          "dataUrl": "local:content//HealthInsightsCardProvider",
+          "groupId": 1
+        },
+        {
+          "template": 1028,
+          "dataUrl": "local:content//OperationCardProvider",
+          "groupId": 1
+        }
+      ]
+    },
+    {
+      "page_type": 16,
+      "position": 2,
+      "resPosId": 4001,
+      "section_list": [
+        {
+          "template": 1104,
+          "dataUrl": "local:content//NewSocialKnitProvider",
+          "groupId": 1
+        }
+      ]
+    },
+    {
+      "page_type": 31,
+      "position": 2,
+      "resPosId": 4061,
+      "section_list": [
+        {
+          "template": 198,
+          "dataUrl": "local:content//MemberPlanProvider",
+          "priority": 996,
+          "groupId": 1
+        },
+        {
+          "template": 99,
+          "dataUrl": "local:content//MemberCouponProvider",
+          "groupId": 1
+        },
+        {
+          "template": 1047,
+          "dataUrl": "local:content//MemberMoreServiceProvider",
+          "priority": -1,
+          "groupId": 1
+        },
+        {
+          "template": 1048,
+          "dataUrl": "local:content//MemberTextProvider",
+          "priority": -2,
+          "groupId": 1
+        }
+      ]
+    },
+    {
+      "page_type": 32,
+      "position": 2,
+      "resPosId": 4060,
+      "section_list": [
+        {
+          "template": 80,
+          "dataUrl": "local:content//RecommendCardMajorProvider",
+          "priority": 996
+        },
+        {
+          "template": 1105,
+          "dataUrl": "local:content//MemberProductProvider",
+          "priority": -7,
+          "groupId": 1
+        },
+        {
+          "template": 1047,
+          "dataUrl": "local:content//MemberMoreServiceProvider",
+          "priority": -8,
+          "groupId": 1
+        }
+      ]
+    },
+    {
+      "page_type": 33,
+      "position": 2,
+      "resPosId": 10,
+      "section_list": [
+        {
+          "template": 1105,
+          "dataUrl": "local:content//MemberProductProvider",
+          "priority": 99,
+          "groupId": 1
+        }
+      ]
+    }
+  ]
+}

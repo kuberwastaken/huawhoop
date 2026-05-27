@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    gravity="0x11"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.seekbar.HealthSeekBarExtend
+        id="@+id/blood_sugar_seek_bar"
+        layout_width="-1"
+        layout_height="-2"
+        importantForAccessibility="4"
+        NOT_FOUND_0x6="100"
+        NOT_FOUND_0x7="@drawable/health_halthdata_weight_seekbar_background"
+        NOT_FOUND_0x8="@drawable/_2131427761_res_0x7f0b01b1"
+        NOT_FOUND_0x9="@drawable/_2131427718_res_0x7f0b0186"/>
+</LinearLayout>

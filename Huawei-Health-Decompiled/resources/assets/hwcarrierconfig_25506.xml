@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<config>
+    <dict>
+        <string key="ODSA_ESURL">https://es.mnc006.mcc255.pub.3gppnetwork.org:8443</string>
+        <int key="ODSA_PROTOCOL">2</int>
+        <bool key="ODSA_SUPPORT_URL_ENCODER_TOKEN">true</bool>
+        <bool key="ODSA_SUPPORT_NOTIFICATION_SERVICE">false</bool>
+        <bool key="ODSA_SUPPORT_CHANGE_MANAGE_SUBSCRIPTION">true</bool>
+        <bool key="ODSA_ADD_COMPANION_INFO">true</bool>
+    </dict>
+</config>

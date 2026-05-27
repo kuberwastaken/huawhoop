@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.uikit.hwspinner.widget.HwSpinnerItemLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x10"
+    orientation="0"
+    background="@drawable/_2131429750_res_0x7f0b0976"
+    clickable="true"
+    layout_width="-1"
+    layout_height="-2"
+    minHeight="@dimen/_2131364464_res_0x7f0a0a70"
+    paddingStart="@dimen/_2131364468_res_0x7f0a0a74"
+    paddingEnd="@dimen/_2131364468_res_0x7f0a0a74"
+    defaultFocusHighlightEnabled="false">
+    <ImageView
+        id="@android:id/icon"
+        layout_width="24dp"
+        layout_height="24dp"/>
+    <CheckedTextView
+        ellipsize="3"
+        id="@android:id/text1"
+        layout_width="-2"
+        layout_height="-2"
+        singleLine="true"
+        paddingStart="8dp"
+        paddingEnd="0dp"
+        style="@style/Widget.Emui.HwSpinner.HwDropDownItem.Dark"/>
+</com.huawei.uikit.hwspinner.widget.HwSpinnerItemLinearLayout>

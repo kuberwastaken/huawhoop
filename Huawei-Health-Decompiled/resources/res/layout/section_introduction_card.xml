@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.cardview.HealthCardView
+        id="@+id/hcv_introduction_container"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131362934_res_0x7f0a0476"
+        layout_marginStart="@dimen/_2131362013_res_0x7f0a00dd"
+        layout_marginEnd="@dimen/_2131362011_res_0x7f0a00db"
+        NOT_FOUND_0x9="@dimen/_2131362365_res_0x7f0a023d"
+        NOT_FOUND_0xa="@dimen/_2131362907_res_0x7f0a045b"
+        NOT_FOUND_0xb="@dimen/_2131362907_res_0x7f0a045b"
+        NOT_FOUND_0xc="@dimen/_2131362934_res_0x7f0a0476"
+        NOT_FOUND_0xd="0"
+        NOT_FOUND_0xf="0">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            layout_width="-1"
+            layout_height="-2">
+            <com.huawei.ui.commonui.healthtextview.HealthTextView
+                textSize="@dimen/_2131365501_res_0x7f0a0e7d"
+                textColor="@color/_2131299845_res_0x7f090e05"
+                id="@+id/hsh_introduction_title"
+                layout_width="-1"
+                layout_height="-2"
+                layout_marginTop="@dimen/_2131363144_res_0x7f0a0548"
+                fontFamily="@string/_2130852833_res_0x7f023be1"
+                NOT_FOUND_0xd="0"
+                NOT_FOUND_0xf="0"/>
+            <com.huawei.ui.commonui.healthtextview.HealthTextView
+                textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+                textColor="@color/_2131299850_res_0x7f090e0a"
+                id="@+id/htv_introduction_content"
+                layout_width="-1"
+                layout_height="-2"
+                layout_marginTop="@dimen/_2131363172_res_0x7f0a0564"
+                fontFamily="@string/_2130852834_res_0x7f023be2"
+                NOT_FOUND_0xe="@+id/hsh_introduction_title"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.huawei.ui.commonui.cardview.HealthCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

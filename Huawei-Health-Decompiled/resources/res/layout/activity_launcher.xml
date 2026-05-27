@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/activity_launcher"
+    background="@android:color/transparent"
+    layout_width="1dp"
+    layout_height="1dp"/>

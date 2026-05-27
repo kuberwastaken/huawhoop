@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2"
+    paddingStart="@dimen/_2131364233_res_0x7f0a0989"
+    paddingEnd="@dimen/_2131364233_res_0x7f0a0989">
+    <Space
+        layout_width="0dp"
+        layout_height="@dimen/_2131364234_res_0x7f0a098a"/>
+    <com.huawei.uikit.hwedittext.widget.HwEditText
+        gravity="0x10"
+        id="@+id/hwdialogpattern_input1"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131364219_res_0x7f0a097b"
+        layout_marginBottom="@dimen/_2131364219_res_0x7f0a097b"
+        style="@style/Widget.Emui.HwEditText.Linear"/>
+    <com.huawei.uikit.hwedittext.widget.HwEditText
+        gravity="0x10"
+        id="@+id/hwdialogpattern_input2"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131364219_res_0x7f0a097b"
+        layout_marginBottom="@dimen/_2131364219_res_0x7f0a097b"
+        style="@style/Widget.Emui.HwEditText.Linear"/>
+    <Space
+        layout_width="0dp"
+        layout_height="@dimen/_2131364232_res_0x7f0a0988"/>
+</LinearLayout>

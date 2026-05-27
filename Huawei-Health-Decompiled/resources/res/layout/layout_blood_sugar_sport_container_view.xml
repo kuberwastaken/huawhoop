@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/sport_blood_sugar_title"
+        layout_width="-1"
+        layout_height="-2"
+        paddingStart="@dimen/_2131364901_res_0x7f0a0c25"
+        paddingEnd="@dimen/_2131364900_res_0x7f0a0c24"
+        NOT_FOUND_0x8="false"
+        NOT_FOUND_0x9="2"
+        NOT_FOUND_0xa="@string/IDS_hw_show_healthdata_monitoring"/>
+    <LinearLayout
+        orientation="1"
+        id="@+id/layout_sport_view"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginStart="@dimen/_2131362372_res_0x7f0a0244"
+        layout_marginEnd="@dimen/_2131362371_res_0x7f0a0243"/>
+</LinearLayout>

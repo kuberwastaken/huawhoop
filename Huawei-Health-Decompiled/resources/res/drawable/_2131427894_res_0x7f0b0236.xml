@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        state_enabled="false"
+        drawable="@mipmap/_2131820944_res_0x7f110190"/>
+    <item
+        state_enabled="true"
+        state_checked="true"
+        drawable="@mipmap/_2131820946_res_0x7f110192"/>
+    <item
+        state_enabled="true"
+        state_checked="false"
+        drawable="@mipmap/_2131820945_res_0x7f110191"/>
+</selector>

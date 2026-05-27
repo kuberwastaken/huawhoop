@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="@dimen/_2131363132_res_0x7f0a053c">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365482_res_0x7f0a0e6a"
+        textColor="@color/_2131299845_res_0x7f090e05"
+        id="@+id/tv_name"
+        layout_width="-1"
+        layout_height="-2"
+        layout_centerInParent="true"
+        layout_centerVertical="true"
+        fontFamily="@string/_2130852833_res_0x7f023be1"
+        layout_marginEnd="@dimen/_2131362576_res_0x7f0a0310"
+        layout_toStartOf="@+id/rb_select"/>
+    <com.huawei.ui.commonui.radiobutton.HealthRadioButton
+        id="@+id/rb_select"
+        focusable="false"
+        clickable="true"
+        layout_width="-2"
+        layout_height="-2"
+        layout_centerInParent="true"
+        layout_alignParentEnd="true"/>
+    <View
+        id="@+id/divider_custom_select_item"
+        background="@color/_2131297314_res_0x7f090422"
+        layout_width="-1"
+        layout_height="@dimen/_2131362902_res_0x7f0a0456"
+        layout_alignParentBottom="true"/>
+</RelativeLayout>

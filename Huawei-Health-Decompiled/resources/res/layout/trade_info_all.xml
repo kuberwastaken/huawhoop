@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x11"
+    orientation="1"
+    id="@+id/lin_trade"
+    layout_width="-1"
+    layout_height="-2">
+    <include
+        id="@+id/layout_normal"
+        visibility="2"
+        layout="@layout/trade_info_layout"/>
+    <LinearLayout
+        gravity="0x11"
+        id="@+id/lin_content"
+        background="@color/_2131296667_res_0x7f09019b"
+        layout_width="-1"
+        layout_height="-2">
+        <include
+            id="@+id/layout_member_and_not"
+            visibility="2"
+            layout="@layout/trade_member_and_not_info_layout"/>
+    </LinearLayout>
+    <include
+        id="@+id/layout_member"
+        visibility="2"
+        layout="@layout/trade_member_info_layout"/>
+</LinearLayout>

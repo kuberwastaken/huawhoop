@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_plugin_fitnessadvice_minute">
+        <item quantity="other">%1$s မိနစ်</item>
+    </plurals>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="other">ဂရပ်တစ်ခုတွင် အညွှန်း %1$d ခုအထိ ပြသနိုင်ပါသည်။</item>
+    </plurals>
+    <plurals name="IDS_user_profile_achieve_num_day">
+        <item quantity="other">%1$s ရက်</item>
+    </plurals>
+    <plurals name="IDS_sleep_referece_title_score_string">
+        <item quantity="other">%1$s ပွိုင့်</item>
+    </plurals>
+    <plurals name="IDS_hwh_motiontrack_swim_pace_unit">
+        <item quantity="other">/%1$d မီတာ</item>
+    </plurals>
+    <plurals name="IDS_hwh_motiontrack_swim_pace_unit_mi">
+        <item quantity="other">/%1$d ကိုက်</item>
+    </plurals>
+    <plurals name="IDS_hwh_motiontrack_unit_yd">
+        <item quantity="other">ကိုက်</item>
+    </plurals>
+    <plurals name="IDS_hwh_motiontrack_ft_string">
+        <item quantity="other">ပေ</item>
+    </plurals>
+    <plurals name="IDS_band_data_golf_count_unit">
+        <item quantity="other">ရိုက်ချက် %s ချက်</item>
+    </plurals>
+    <plurals name="IDS_indoor_skipper_number_unit_value">
+        <item quantity="other">%1$s ခုန်</item>
+    </plurals>
+    <plurals name="IDS_fitness_completed_goal">
+        <item quantity="other">ခြေလှမ်း %1$s လှမ်း လို</item>
+    </plurals>
+    <plurals name="IDS_altitude_ft">
+        <item quantity="other">%1$s ft</item>
+    </plurals>
+    <plurals name="IDS_altitude_meter">
+        <item quantity="other">%1$s m</item>
+    </plurals>
+</resources>

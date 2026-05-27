@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/hiad_whythisad_wrapper"
+    layout_width="-2"
+    layout_height="-2">
+    <HorizontalScrollView
+        id="@+id/hiad_whythisad_horizontal_List"
+        scrollbars="0x0"
+        layout_width="-2"
+        layout_height="-2">
+        <LinearLayout
+            gravity="0x1"
+            orientation="0"
+            id="@+id/hiad_whythisad_horizional_ll_wrapper"
+            layout_width="-2"
+            layout_height="-2"/>
+    </HorizontalScrollView>
+    <ScrollView
+        id="@+id/hiad_whythisad_vertical_feedback_List"
+        scrollbars="0x0"
+        layout_width="-2"
+        layout_height="-2">
+        <LinearLayout
+            gravity="0x10"
+            orientation="1"
+            id="@+id/hiad_whythisad_vertical_ll_wrapper"
+            layout_width="-2"
+            layout_height="-2"/>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" drawable="@drawable/_2131429808_res_0x7f0b09b0">
+    <target
+        name="inner_border"
+        animation="@animator/_2131034170_res_0x7f05003a"/>
+    <target
+        name="track_bg"
+        animation="@animator/_2131034165_res_0x7f050035"/>
+</animated-vector>

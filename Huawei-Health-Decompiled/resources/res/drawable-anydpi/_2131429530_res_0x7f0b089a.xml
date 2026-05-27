@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item drawable="@drawable/_2131429491_res_0x7f0b0873"/>
+    <item gravity="0x11">
+        <selector>
+            <item
+                state_focused="true"
+                state_window_focused="true"
+                drawable="@drawable/_2131429488_res_0x7f0b0870"/>
+        </selector>
+    </item>
+    <item>
+        <animated-selector>
+            <item
+                state_enabled="false"
+                state_checked="true"
+                drawable="@drawable/_2131429481_res_0x7f0b0869"/>
+            <item
+                state_enabled="false"
+                state_checked="false"
+                drawable="@drawable/_2131429539_res_0x7f0b08a3"/>
+            <item
+                state_checked="true"
+                id="@+id/checked"
+                drawable="@drawable/_2131429475_res_0x7f0b0863"/>
+            <item
+                id="@+id/unchecked"
+                drawable="@drawable/_2131429533_res_0x7f0b089d"/>
+            <transition
+                drawable="@drawable/_2131429495_res_0x7f0b0877"
+                toId="@+id/checked"
+                fromId="@+id/unchecked"/>
+            <transition
+                drawable="@drawable/_2131429513_res_0x7f0b0889"
+                toId="@+id/unchecked"
+                fromId="@+id/checked"/>
+        </animated-selector>
+    </item>
+</layer-list>

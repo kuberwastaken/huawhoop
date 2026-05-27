@@ -1,0 +1,220 @@
+{
+  "3": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "categoryIdList",
+        "type": "array",
+        "elemType":"number8",
+        "optional": true
+      }
+    ]
+  },
+  "4": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "categoryId",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "eventId",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "notificationId",
+        "type": "number32",
+        "optional": true
+      }
+    ]
+  },
+  "5": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "categoryId",
+        "type": "number",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "notificationId",
+        "type": "number",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "attrID",
+        "type": "object",
+        "rule": [
+          {
+            "tag": 1,
+            "jsonKey": "packageName",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 3,
+            "jsonKey": "title",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 4,
+            "jsonKey": "subtitle",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 5,
+            "jsonKey": "message",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 6,
+            "jsonKey": "date",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 7,
+            "jsonKey": "action",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 8,
+            "jsonKey": "appCategory",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 9,
+            "jsonKey": "property",
+            "type": "number",
+            "optional": true
+          }
+        ]
+      }
+    ]
+  },
+  "133": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "categoryId",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "notificationId",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 131,
+        "jsonKey": "attrID",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 1,
+            "jsonKey": "packageName",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "tag": 3,
+            "jsonKey": "title",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "tag": 4,
+            "jsonKey": "subtitle",
+            "type": "array",
+            "elemType":"number8",
+            "optional": true
+          },
+          {
+            "tag": 5,
+            "jsonKey": "message",
+            "type": "array",
+            "elemType":"number8",
+            "optional": true
+          },
+          {
+            "tag": 6,
+            "jsonKey": "date",
+            "type": "array",
+            "elemType":"number8",
+            "optional": true
+          },
+          {
+            "tag": 7,
+            "jsonKey": "action",
+            "type": "array",
+            "elemType":"number8",
+            "optional": true
+          },
+          {
+            "tag": 8,
+            "jsonKey": "appCategory",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "tag": 9,
+            "jsonKey": "property",
+            "type": "number16",
+            "optional": true
+          }
+        ]
+      }
+    ]
+  },
+  "6": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "categoryId",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "notificationId",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "actionId",
+        "type": "number8",
+        "optional": true
+      }
+    ]
+  },
+  "134": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "categoryId",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "resultCode",
+        "type": "number32",
+        "optional": true
+      }
+    ]
+  }
+}

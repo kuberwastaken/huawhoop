@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    ellipsize="4"
+    id="@android:id/text1"
+    layout_width="-1"
+    layout_height="?attr/_2131100138_res_0x7f0601ea"
+    singleLine="true"
+    style="?attr/_2131101551_res_0x7f06076f"/>

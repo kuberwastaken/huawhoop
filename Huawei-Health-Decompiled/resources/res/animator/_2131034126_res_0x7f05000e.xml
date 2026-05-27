@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <objectAnimator
+        android:interpolator="@interpolator/_2131689480_res_0x7f0f0008"
+        android:duration="150"
+        android:valueFrom="M18,12 L32,12 L46,12"
+        android:valueTo="M16,12 L32,12 L48,12"
+        android:valueType="pathType"
+        android:propertyName="pathData"/>
+    <objectAnimator
+        android:interpolator="@interpolator/_2131689480_res_0x7f0f0008"
+        android:duration="150"
+        android:valueFrom="4"
+        android:valueTo="6"
+        android:valueType="floatType"
+        android:propertyName="strokeWidth"/>
+</set>

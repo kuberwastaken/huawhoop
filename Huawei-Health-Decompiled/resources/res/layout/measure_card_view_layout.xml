@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/measure_card_view_wrapper_with_header"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/sub_header"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x6="false"
+        NOT_FOUND_0x7="2"
+        NOT_FOUND_0x8="@string/_2130839713_res_0x7f0208a1"
+        NOT_FOUND_0x9="false"/>
+    <ViewStub
+        id="@+id/normal_card"
+        layout="@layout/measure_card_item_layout"
+        layout_width="-1"
+        layout_height="-2"/>
+    <ViewStub
+        id="@+id/arrhythmia_card"
+        layout="@layout/measure_card_item_layout"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131362012_res_0x7f0a00dc"/>
+    <ViewStub
+        id="@+id/vascular_card"
+        layout="@layout/measure_card_item_layout"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131362012_res_0x7f0a00dc"/>
+</LinearLayout>

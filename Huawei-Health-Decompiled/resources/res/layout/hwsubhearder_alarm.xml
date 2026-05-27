@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="40dp">
+    <com.huawei.ui.commonui.divider.HealthDivider
+        id="@+id/line"
+        visibility="2"
+        layout_width="-2"
+        layout_height="-2"
+        NOT_FOUND_0x11="1"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131362383_res_0x7f0a024f"
+        textColor="@color/_2131297891_res_0x7f090663"
+        ellipsize="3"
+        layout_gravity="0x800053"
+        id="@+id/heanth_data_subheader"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="14.5dp"
+        layout_marginBottom="8dp"
+        text=""
+        maxLines="1"
+        fontFamily="HwChinese-medium"
+        layout_marginStart="16dp"
+        layout_marginEnd="16dp"/>
+</LinearLayout>

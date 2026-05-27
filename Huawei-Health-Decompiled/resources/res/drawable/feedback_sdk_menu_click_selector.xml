@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        state_focused="true"
+        drawable="@drawable/feedback_sdk_menu_click_shape"/>
+    <item
+        state_pressed="true"
+        drawable="@drawable/feedback_sdk_menu_click_shape"/>
+    <item drawable="@color/faq_emui_white_bg"/>
+</selector>

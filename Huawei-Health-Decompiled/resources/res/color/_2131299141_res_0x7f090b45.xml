@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        state_selected="true"
+        state_pressed="true"
+        color="?attr/_2131099988_res_0x7f060154"
+        alpha="@dimen/_2131364787_res_0x7f0a0bb3"/>
+    <item
+        state_focused="true"
+        state_selected="true"
+        color="?attr/_2131099988_res_0x7f060154"
+        alpha="@dimen/_2131364785_res_0x7f0a0bb1"/>
+    <item
+        state_selected="true"
+        color="?attr/_2131099988_res_0x7f060154"
+        alpha="@dimen/_2131364786_res_0x7f0a0bb2"
+        state_hovered="true"/>
+    <item
+        state_selected="true"
+        color="?attr/_2131099988_res_0x7f060154"
+        alpha="@dimen/_2131364784_res_0x7f0a0bb0"/>
+    <item
+        state_pressed="true"
+        color="?attr/_2131099988_res_0x7f060154"
+        alpha="@dimen/_2131364788_res_0x7f0a0bb4"/>
+    <item
+        state_focused="true"
+        color="?unknown_attr_ref: 7f060150"
+        alpha="@dimen/_2131364785_res_0x7f0a0bb1"/>
+    <item
+        color="?unknown_attr_ref: 7f060150"
+        alpha="@dimen/_2131364786_res_0x7f0a0bb2"
+        state_hovered="true"/>
+    <item
+        color="?unknown_attr_ref: 7f060150"
+        alpha="@dimen/_2131364784_res_0x7f0a0bb0"/>
+</selector>

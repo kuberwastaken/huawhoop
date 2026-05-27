@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_plugin_fitnessadvice_minute">
+        <item quantity="one">%1$s minute</item>
+        <item quantity="other">%1$s minutes</item>
+    </plurals>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">Chaque graphique peut présenter au maximum %1$d indicateur.</item>
+        <item quantity="other">Chaque graphique peut présenter au maximum %1$d indicateurs.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">Votre glucose sanguin devrait baisser en dessous de %2$s mmol/L dans %1$s min. Veuillez suivre attentivement votre niveau de glucose.</item>
+        <item quantity="other">Votre glucose sanguin devrait baisser en dessous de %2$s mmol/L dans %1$s min. Veuillez suivre attentivement votre niveau de glucose.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">Votre glucose sanguin devrait baisser en dessous de %2$s mg/dL dans %1$s min. Veuillez suivre attentivement votre niveau de glucose.</item>
+        <item quantity="other">Votre glucose sanguin devrait baisser en dessous de %2$s mg/dL dans %1$s min. Veuillez suivre attentivement votre niveau de glucose.</item>
+    </plurals>
+    <plurals name="IDS_user_profile_achieve_num_day">
+        <item quantity="one">%1$s jour</item>
+        <item quantity="other">%1$s jours</item>
+    </plurals>
+    <plurals name="IDS_sleep_referece_title_score_string">
+        <item quantity="one">%1$s point</item>
+        <item quantity="other">%1$s points</item>
+    </plurals>
+    <plurals name="IDS_hwh_motiontrack_swim_pace_unit">
+        <item quantity="one">/%1$d m</item>
+        <item quantity="other">/%1$d m</item>
+    </plurals>
+    <plurals name="IDS_hwh_motiontrack_swim_pace_unit_mi">
+        <item quantity="one">/%1$d yard</item>
+        <item quantity="other">/%1$d yards</item>
+    </plurals>
+    <plurals name="IDS_hwh_motiontrack_unit_yd">
+        <item quantity="one">yd</item>
+        <item quantity="other">yd</item>
+    </plurals>
+    <plurals name="IDS_hwh_motiontrack_ft_string">
+        <item quantity="one">ft.</item>
+        <item quantity="other">ft.</item>
+    </plurals>
+    <plurals name="IDS_band_data_golf_count_unit">
+        <item quantity="one">%s coup</item>
+        <item quantity="other">%s coups</item>
+    </plurals>
+    <plurals name="IDS_indoor_skipper_number_unit_value">
+        <item quantity="one">%1$s saut</item>
+        <item quantity="other">%1$s sauts</item>
+    </plurals>
+    <plurals name="IDS_fitness_completed_goal">
+        <item quantity="one">À %1$s pas de l&apos;objectif</item>
+        <item quantity="other">À %1$s pas de l&apos;objectif</item>
+    </plurals>
+    <plurals name="IDS_altitude_ft">
+        <item quantity="one">%1$s pied</item>
+        <item quantity="other">%1$s pieds</item>
+    </plurals>
+    <plurals name="IDS_altitude_meter">
+        <item quantity="one">%1$s m</item>
+        <item quantity="other">%1$s m</item>
+    </plurals>
+    <plurals name="IDS_physiology_day">
+        <item quantity="one">%s jour</item>
+        <item quantity="other">%s jours</item>
+    </plurals>
+    <plurals name="IDS_single_circle_active_target_desc">
+        <item quantity="one">%1$s heure</item>
+        <item quantity="other">%1$s heures</item>
+    </plurals>
+    <plurals name="IDS_single_circle_intensity_target_desc">
+        <item quantity="one">%1$s min</item>
+        <item quantity="other">%1$s minutes</item>
+    </plurals>
+    <plurals name="IDS_min_single_unit">
+        <item quantity="one">%s min</item>
+        <item quantity="other">%s min</item>
+    </plurals>
+    <plurals name="IDS_min_insert_unit">
+        <item quantity="one">%1$s minute</item>
+        <item quantity="other">%1$s minutes</item>
+    </plurals>
+    <plurals name="IDS_hour_single_unit">
+        <item quantity="one">%1$s h</item>
+        <item quantity="other">%1$s h</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_1">
+        <item quantity="one">Encore %1$d pas à faire. Continuez comme ça !</item>
+        <item quantity="other">Encore %1$d pas à faire. Continuez comme ça !</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_2">
+        <item quantity="one">Plus qu&apos;%1$d pas vers votre objectif !</item>
+        <item quantity="other">Plus que %1$d pas vers votre objectif !</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_3">
+        <item quantity="one">Encore %1$d pas à faire. Vous pouvez le faire !</item>
+        <item quantity="other">Encore %1$d pas à faire. Vous pouvez le faire !</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_4">
+        <item quantity="one">Encore %1$d pas à faire. Vous y êtes presque !</item>
+        <item quantity="other">Encore %1$d pas à faire. Vous y êtes presque !</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_5">
+        <item quantity="one">L&apos;objectif d&apos;aujourd&apos;hui est à seulement %1$d pas !</item>
+        <item quantity="other">L&apos;objectif d&apos;aujourd&apos;hui est à seulement %1$d pas !</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_6">
+        <item quantity="one">Plus qu&apos;%1$d pas pour atteindre votre objectif</item>
+        <item quantity="other">Plus que %1$d pas pour atteindre votre objectif</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_7">
+        <item quantity="one">Encore %1$d pas à faire</item>
+        <item quantity="other">Encore %1$d pas à faire</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_1">
+        <item quantity="one">Vous avez réalisé une série pendant %1$d jour.</item>
+        <item quantity="other">Vous avez réalisé une série pendant %1$d jours.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_1_over_30_days">
+        <item quantity="one">Vous avez réalisé une série pendant plus d&apos;%1$d jour d&apos;affilée.</item>
+        <item quantity="other">Vous avez réalisé une série pendant plus de %1$d jours d&apos;affilée.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_2">
+        <item quantity="one">Vous avez complété votre objectif quotidien pendant %1$d jour.</item>
+        <item quantity="other">Vous avez complété votre objectif quotidien pendant %1$d jours consécutifs.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_2_over_30_days">
+        <item quantity="one">Vous avez complété votre objectif quotidien pendant plus d&apos;%1$d jour consécutif.</item>
+        <item quantity="other">Vous avez complété votre objectif quotidien pendant plus de %1$d jours consécutifs.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_3">
+        <item quantity="one">Vous êtes sur une série d&apos;%1$d jour. Découvrez votre nombre de pas.</item>
+        <item quantity="other">Vous êtes sur une série de %1$d jours. Découvrez votre nombre de pas.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_3_over_30_days">
+        <item quantity="one">Vous avez réalisé une série pendant plus d&apos;%1$d jour d&apos;affilée. Découvrez votre nombre de pas.</item>
+        <item quantity="other">Vous avez réalisé une série pendant plus de %1$d jours d&apos;affilée. Découvrez votre nombre de pas.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_4">
+        <item quantity="one">Votre record d&apos;%1$d jour s&apos;est maintenu.</item>
+        <item quantity="other">Votre record de %1$d jours s&apos;est maintenu.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_4_over_30_days">
+        <item quantity="one">Votre record s&apos;est maintenu pendant plus d&apos;%1$d jour.</item>
+        <item quantity="other">Votre record s&apos;est maintenu pendant plus de %1$d jours.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_5">
+        <item quantity="one">Vous avez réalisé votre objectif quotidien pendant %1$d jour.</item>
+        <item quantity="other">Vous avez réalisé votre objectif quotidien pendant %1$d jours d&apos;affilée.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_5_over_30_days">
+        <item quantity="one">Vous avez réalisé votre objectif quotidien pendant plus d&apos;%1$d jour d&apos;affilée.</item>
+        <item quantity="other">Vous avez réalisé votre objectif quotidien pendant plus de %1$d jours d&apos;affilée.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_6">
+        <item quantity="one">Génial ! Vous êtes sur une série d&apos;%1$d jour.</item>
+        <item quantity="other">Génial ! Vous êtes sur une série de %1$d jours.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_6_over_30_days">
+        <item quantity="one">Génial ! Vous êtes sur une série en continu sur plus d&apos;%1$d jour.</item>
+        <item quantity="other">Génial ! Vous êtes sur une série en continu sur plus de %1$d jours.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_7">
+        <item quantity="one">Vous avez maintenu une série pendant %1$d jour !</item>
+        <item quantity="other">Vous avez maintenu une série pendant %1$d jours !</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_7_over_30_days">
+        <item quantity="one">Vous avez maintenu une série pendant plus d&apos;%1$d jour !</item>
+        <item quantity="other">Vous avez maintenu une série pendant plus de %1$d jours !</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_1">
+        <item quantity="one">Vous êtes sur une série d&apos;%1$d jour ! Et si on continuait ?</item>
+        <item quantity="other">Vous êtes sur une série de %1$d jours ! Et si on continuait ?</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_1_over_30_days">
+        <item quantity="one">Vous êtes sur une série de plus d&apos;%1$d jour ! Et si on continuait ?</item>
+        <item quantity="other">Vous êtes sur une série de plus de %1$d jours ! Et si on continuait ?</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_2">
+        <item quantity="one">Vous êtes sur une série d&apos;%1$d jour ! Restez sur la bonne voie aujourd&apos;hui.</item>
+        <item quantity="other">Vous êtes sur une série de %1$d jours ! Restez sur la bonne voie aujourd&apos;hui.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_2_over_30_days">
+        <item quantity="one">Vous êtes sur une série de plus d&apos;%1$d jour ! Continuez comme ça aujourd&apos;hui.</item>
+        <item quantity="other">Vous êtes sur une série de plus de %1$d jours ! Continuez comme ça aujourd&apos;hui.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_3">
+        <item quantity="one">Vous avez réalisé votre objectif quotidien pendant %1$d jour. Continuez comme ça !</item>
+        <item quantity="other">Vous avez réalisé votre objectif quotidien pendant %1$d jours d&apos;affilée. Continuez comme ça !</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_3_over_30_days">
+        <item quantity="one">Vous avez réalisé votre objectif quotidien pendant plus d&apos;%1$d jour d&apos;affilée. Continuez comme ça !</item>
+        <item quantity="other">Vous avez réalisé votre objectif pendant plus de %1$d jours d&apos;affilée. Continuez comme ça !</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_5">
+        <item quantity="one">Vous êtes sur une série d&apos;%1$d jour. Continuez à avancer !</item>
+        <item quantity="other">Vous êtes sur une série de %1$d jours. Continuez à avancer !</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_5_over_30_days">
+        <item quantity="one">Vous êtes sur une série de plus d&apos;%1$d jour. Gardez le cap !</item>
+        <item quantity="other">Vous êtes sur une série de plus de %1$d jours. Gardez le cap !</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_6_p1">
+        <item quantity="one">Continuez comme ça %1$d jour de plus</item>
+        <item quantity="other">Continuez comme ça %1$d jours de plus</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_6_p2">
+        <item quantity="one">Encore %1$d pas à faire</item>
+        <item quantity="other">Encore %1$d pas à faire</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_7">
+        <item quantity="one">Vous avez maintenu une série pendant %1$d jour ! Accrochez-vous.</item>
+        <item quantity="other">Vous avez maintenu une série pendant %1$d jours ! Accrochez-vous.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_7_over_30_days">
+        <item quantity="one">Vous avez maintenu votre série pendant plus d&apos;%1$d jour ! Continuez comme ça.</item>
+        <item quantity="other">Vous avez maintenu votre série pendant plus de %1$d jours ! Continuez comme ça.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_low_step_1">
+        <item quantity="one">Le nombre de pas quotidiens a récemment été d&apos;%1$d.</item>
+        <item quantity="other">Le nombre de pas quotidiens a récemment été de %1$d.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_low_step_2_p2">
+        <item quantity="one">Vous avez marché %1$d pas/jour</item>
+        <item quantity="other">Vous avez marché %1$d pas/jour</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d pas</item>
+        <item quantity="other">%d pas</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s mile</item>
+        <item quantity="other">%s miles</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s km</item>
+        <item quantity="other">%s km</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">À %1$s pas de l&apos;objectif</item>
+        <item quantity="other">À %1$s pas de l&apos;objectif</item>
+    </plurals>
+</resources>

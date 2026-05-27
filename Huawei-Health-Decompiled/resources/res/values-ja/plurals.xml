@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="other">1つのグラフに表示できる指標は%1$d個までです</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="other">血糖値は%1$s分以内に%2$s mmol/Lを下回ると予想されます。血糖値を注意深く監視してください。</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="other">血糖値は%1$s分以内に%2$s mg/dLを下回ると予想されます。血糖値を注意深く監視してください。</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="other">%d歩</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="other">%sマイル</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="other">%s km</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="other">あと%1$s歩</item>
+    </plurals>
+</resources>

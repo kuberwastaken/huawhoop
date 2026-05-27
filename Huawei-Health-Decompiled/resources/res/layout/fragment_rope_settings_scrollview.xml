@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/fragment_rope_setting_rl"
+    background="@color/_2131296700_res_0x7f0901bc"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.scrollview.HealthScrollView
+        scrollbars="0x0"
+        layout_width="-1"
+        layout_height="-2">
+        <LinearLayout
+            orientation="1"
+            layout_width="-1"
+            layout_height="-1"
+            layout_marginBottom="@dimen/_2131363002_res_0x7f0a04ba"
+            layout_above="@+id/rope_device_btn_start_training">
+            <include layout="@layout/item_rope_settings_volume"/>
+            <com.huawei.ui.commonui.recycleview.HealthRecycleView
+                id="@+id/voice_settings_recycleview"
+                layout_width="-1"
+                layout_height="-2"
+                divider="@null"
+                layout_marginStart="@dimen/_2131362934_res_0x7f0a0476"
+                layout_marginEnd="@dimen/_2131362934_res_0x7f0a0476"/>
+        </LinearLayout>
+    </com.huawei.ui.commonui.scrollview.HealthScrollView>
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="other">Nganti %1$d indikator bisa dikatonake ing sak grafik.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="other">Glukosa getih sampeyan diprakirakake bakal anjlog sangisore %2$s mmol/L %1$s mnt engkas. Awasi kanthi tenanan tingkat glukosa sampeyan.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="other">Glukosa getih sampeyan diprakirakake bakal anjlog sangisore %2$s mg/dL %1$s mnt engkas. Awasi kanthi tenanan tingkat glukosa sampeyan.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="other">%d langkah</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="other">%s mil</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="other">%s km</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="other">Kari %1$s langkah</item>
+    </plurals>
+</resources>

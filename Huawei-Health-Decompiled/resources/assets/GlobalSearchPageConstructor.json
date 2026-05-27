@@ -1,0 +1,181 @@
+{
+  "version": "0.1",
+  "template_id": "GlobalSearchPageConstructor",
+  "template_parser": "string",
+  "template_config": {
+    "default_page": {
+      "section_list": [
+        {
+          "template": 1000,
+          "dataUrl": "local:content//RecentSearchProvider"
+        },
+        {
+          "template": 1001,
+          "dataUrl": "local:content//HotSearchProvider"
+        },
+        {
+          "template": 1002,
+          "dataUrl": "local:content//HotListProvider"
+        }
+      ]
+    },
+    "result_page": {
+      "sub_tab": [
+        {
+          "page_type": 200,
+          "section_list": [
+            {
+              "template": 1003,
+              "dataUrl": "local:content//CourseSearchProvider",
+              "extra": "201"
+            },
+            {
+              "template": 1008,
+              "dataUrl": "local:content//PlanSearchProvider",
+              "extra": "201"
+            },
+            {
+              "template": 1003,
+              "dataUrl": "local:content//ActionSearchProvider",
+              "extra": "210"
+            },
+            {
+              "template": 1003,
+              "dataUrl": "local:content//ReliefMusicSearchProvider",
+              "extra": "208"
+            },
+            {
+              "template": 1003,
+              "dataUrl": "local:content//HealthHeadLinesSearchProvider",
+              "extra": "209"
+            },
+            {
+              "template": 1003,
+              "dataUrl": "local:content//DeviceSearchProvider",
+              "extra": "203"
+            },
+            {
+              "template": 1009,
+              "dataUrl": "local:content//InformationSearchProvider",
+              "extra": "202"
+            },
+            {
+              "template": 1016,
+              "dataUrl": "local:content//FunctionSearchProvider",
+              "extra": "206"
+            },
+            {
+              "template": 1008,
+              "dataUrl": "local:content//ActivitySearchProvider",
+              "extra": "204"
+            },
+            {
+              "template": 1024,
+              "dataUrl": "local:content//HealthDictSearchProvider",
+              "extra": "301"
+            },
+            {
+              "template": 1038,
+              "dataUrl": "local:content//MaterialSearchProvider",
+              "extra": "207"
+            }
+          ]
+        },
+        {
+          "page_type": 201,
+          "section_list": [
+            {
+              "template": 1003,
+              "dataUrl": "local:content//CourseSearchProvider"
+            },
+            {
+              "template": 1008,
+              "dataUrl": "local:content//PlanSearchProvider"
+            }
+          ]
+        },
+        {
+          "page_type": 210,
+          "section_list": [
+            {
+              "template": 1003,
+              "dataUrl": "local:content//ActionSearchProvider"
+            }
+          ]
+        },
+        {
+          "page_type": 208,
+          "section_list": [
+            {
+              "template": 1003,
+              "dataUrl": "local:content//ReliefMusicSearchProvider"
+            }
+          ]
+        },
+        {
+          "page_type": 209,
+          "section_list": [
+            {
+              "template": 1003,
+              "dataUrl": "local:content//HealthHeadLinesSearchProvider"
+            }
+          ]
+        },
+        {
+          "page_type": 202,
+          "section_list": [
+            {
+              "template": 1009,
+              "dataUrl": "local:content//InformationSearchProvider"
+            }
+          ]
+        },
+        {
+          "page_type": 203,
+          "section_list": [
+            {
+              "template": 1003,
+              "dataUrl": "local:content//DeviceSearchProvider"
+            }
+          ]
+        },
+        {
+          "page_type": 204,
+          "section_list": [
+            {
+              "template": 1008,
+              "dataUrl": "local:content//ActivitySearchProvider"
+            }
+          ]
+        },
+        {
+          "page_type": 205,
+          "section_list": [
+            {
+              "template": 1010,
+              "dataUrl": "local:content//MerchandiseSearchProvider"
+            }
+          ]
+        },
+        {
+          "page_type": 206,
+          "section_list": [
+            {
+              "template": 1016,
+              "dataUrl": "local:content//FunctionSearchProvider"
+            }
+          ]
+        },
+        {
+          "page_type": 207,
+          "section_list": [
+            {
+              "template": 1038,
+              "dataUrl": "local:content//MaterialSearchProvider"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.columnlayout.HealthColumnRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="-1">
+    <include
+        id="@+id/layout_tips"
+        layout_width="-1"
+        layout_height="-2"
+        layout="@layout/sug_frag_run_plan_tips"/>
+    <com.huawei.ui.commonui.numberpicker.HealthNumberPicker
+        layout_gravity="0x11"
+        id="@+id/set_duration_num_picker"
+        background="@drawable/configured_item_image_text_background"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginBottom="@dimen/_2131362575_res_0x7f0a030f"
+        layout_above="@+id/sug_layout_btn"
+        paddingStart="@dimen/_2131362013_res_0x7f0a00dd"
+        paddingEnd="@dimen/_2131362011_res_0x7f0a00db"
+        layout_marginStart="@dimen/_2131362013_res_0x7f0a00dd"
+        layout_marginEnd="@dimen/_2131362013_res_0x7f0a00dd"/>
+    <RelativeLayout
+        gravity="0x11"
+        id="@+id/sug_layout_btn"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginBottom="@dimen/_2131362575_res_0x7f0a030f"
+        layout_alignParentBottom="true">
+        <com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout
+            layout_width="-2"
+            layout_height="-2"
+            NOT_FOUND_0xe="1">
+            <com.huawei.ui.commonui.button.HealthButton
+                id="@+id/sug_btn_next"
+                layout_width="-2"
+                layout_height="-2"
+                text="@string/_2130849486_res_0x7f022ece"
+                style="@style/Health.CommonUI.HealthButton"/>
+        </com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout>
+    </RelativeLayout>
+</com.huawei.ui.commonui.columnlayout.HealthColumnRelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    descendantFocusability="2"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.recycleview.HealthRecycleView
+        id="@+id/app_turn_page_recycler_view"
+        layout_width="-1"
+        layout_height="-2"/>
+</RelativeLayout>

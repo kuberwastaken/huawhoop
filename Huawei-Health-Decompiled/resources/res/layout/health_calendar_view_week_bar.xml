@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="0"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView style="@style/week_day_text_style"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView style="@style/week_day_text_style"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView style="@style/week_day_text_style"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView style="@style/week_day_text_style"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView style="@style/week_day_text_style"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView style="@style/week_day_text_style"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView style="@style/week_day_text_style"/>
+</merge>

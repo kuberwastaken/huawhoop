@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/offline_titlebar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x6="2"/>
+    <com.huawei.ui.commonui.subtab.HealthSubTabWidget
+        id="@+id/offline_subtab"
+        layout_width="-1"
+        layout_height="-2"
+        style="@style/health_sub_tab_style"/>
+    <com.huawei.ui.commonui.viewpager.HealthViewPager
+        id="@+id/viewPager"
+        layout_width="-1"
+        layout_height="0dp"
+        layout_weight="1"
+        overScrollMode="2"/>
+</LinearLayout>

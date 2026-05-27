@@ -1,0 +1,466 @@
+{
+  "1": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "logFileName",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 11,
+        "jsonKey": "fileList",
+        "type": "array",
+        "optional": true,
+        "elemType": "object",
+        "elemTag": 12,
+        "rule": [
+          {
+            "tag": 10,
+            "jsonKey": "runPlanRecordId",
+            "type": "number16"
+          },
+          {
+            "tag": 13,
+            "jsonKey": "fileName",
+            "type": "string"
+          },
+          {
+            "tag": 14,
+            "jsonKey": "fileEncodeType",
+            "type": "number8"
+          }
+        ]
+      }
+    ],
+    "encode": [
+      {
+        "tag": 2,
+        "jsonKey": "receiveFileType",
+        "type": "number8"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "proSleepParam",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 4,
+            "jsonKey": "proSleepStartTime",
+            "type": "number32"
+          },
+          {
+            "tag": 5,
+            "jsonKey": "proSleepEndTime",
+            "type": "number32"
+          }
+        ]
+      },
+      {
+        "tag": 6,
+        "jsonKey": "gpsParam",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 7,
+            "jsonKey": "sportType",
+            "type": "number8"
+          },
+          {
+            "tag": 8,
+            "jsonKey": "idList",
+            "type": "anonArray",
+            "optional": true,
+            "rule": [
+              {
+                "tag": 9,
+                "jsonKey": "workoutRecordId",
+                "type": "number16",
+                "optional": true
+              },
+              {
+                "tag": 10,
+                "jsonKey": "runPlanRecordId",
+                "type": "number16",
+                "optional": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": 15,
+        "jsonKey": "rriParam",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 16,
+            "jsonKey": "rriStartTime",
+            "type": "number32"
+          },
+          {
+            "tag": 17,
+            "jsonKey": "rriEndTime",
+            "type": "number32"
+          }
+        ]
+      },
+      {
+        "tag": 18,
+        "jsonKey": "atrialParam",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 19,
+            "jsonKey": "atrialStartTime",
+            "type": "number32"
+          },
+          {
+            "tag": 20,
+            "jsonKey": "atrialEndTime",
+            "type": "number32"
+          }
+        ]
+      }
+    ]
+  },
+  "2": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "fileProtocolVer",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "transferBitmapEnable",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "transferUnitSize",
+        "type": "number16",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "maxApplyData",
+        "type": "array",
+        "elemType": "number8",
+        "optional": true
+      },
+      {
+        "tag": 5,
+        "jsonKey": "timeout",
+        "type": "number16",
+        "optional": true
+      }
+    ],
+    "encode": [
+      {
+        "tag": 6,
+        "jsonKey": "receiveFileType",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 7,
+        "jsonKey": "gpsFileDecode",
+        "type": "number8",
+        "optional": true
+      }
+    ]
+  },
+  "3": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "fileName",
+        "type": "string"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "fileName",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "fileSize",
+        "type": "number32"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "fileCrc",
+        "type": "number32"
+      },
+      {
+        "tag": 4,
+        "jsonKey": "fileTransferType",
+        "type": "number8"
+      },
+      {
+        "tag": 5,
+        "jsonKey": "fileCreateTime",
+        "type": "number32"
+      },
+      {
+        "tag": 6,
+        "jsonKey": "fileDumpTransfer",
+        "type": "number8"
+      }
+    ]
+  },
+  "4": {
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "result",
+        "type": "number32"
+      },
+      {
+        "tag": 1,
+        "jsonKey": "applyFileName",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "applyOffset",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "applyFileLength",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "applyFileBitmap",
+        "type": "array",
+        "elemType": "number8",
+        "optional": true
+      }
+    ],
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "applyFileName",
+        "type": "string"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "applyOffset",
+        "type": "number32"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "applyFileLength",
+        "type": "number32"
+      },
+      {
+        "tag": 4,
+        "jsonKey": "applyFileBitmap",
+        "type": "array",
+        "elemType": "number8",
+        "optional": true
+      }
+    ]
+  },
+  "6": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "fileValidityResult",
+        "type": "number8"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "result",
+        "type": "number32"
+      },
+      {
+        "tag": 1,
+        "jsonKey": "fileValidityResult",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "enhancedFileCrc",
+        "type": "number32"
+      }
+    ]
+  },
+  "7": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "logLevel",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "logLocation",
+        "type": "number8"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "logModule",
+        "type": "number8"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "result",
+        "type": "number32"
+      }
+    ]
+  },
+  "8": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "eventLogSwitch",
+        "type": "number8"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "result",
+        "type": "number32"
+      }
+    ]
+  },
+  "10": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "fileNames",
+        "type": "string",
+        "optional": true
+      }
+    ],
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "businessType",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "workType",
+        "type": "number8"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "sensorIndex",
+        "type": "number32"
+      },
+      {
+        "tag": 4,
+        "jsonKey": "StorageMode",
+        "type": "number8"
+      }
+    ]
+  },
+  "11": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "eventStruct",
+        "type": "number16"
+      }
+    ]
+  },
+  "12": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "logCaseNumber",
+        "type": "string"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "logCaseType",
+        "type": "number32"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "result",
+        "type": "number32"
+      }
+    ]
+  },
+  "13": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "uploadType",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "eventId",
+        "type": "number32"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "priority",
+        "type": "number8"
+      },
+      {
+        "tag": 4,
+        "jsonKey": "param",
+        "type": "string"
+      }
+    ]
+  },
+  "14": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "queryType",
+        "type": "number8"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 2,
+        "jsonKey": "funcState",
+        "type": "number8"
+      }
+    ]
+  },
+  "15": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "screenCapture",
+        "type": "string"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 2,
+        "jsonKey": "response",
+        "type": "string"
+      }
+    ]
+  }
+}

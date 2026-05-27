@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x11"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.linechart.view.HwHealthLineChart
+        id="@+id/linechart"
+        layout_width="-1"
+        layout_height="-1"
+        style="@style/healthNoAxisChartLayoutStyle"/>
+</LinearLayout>

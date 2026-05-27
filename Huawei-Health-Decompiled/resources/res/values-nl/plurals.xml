@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">Er kan %1$d indicator worden weergegeven in een grafiek.</item>
+        <item quantity="other">Er kunnen tot %1$d indicatoren worden weergegeven in een grafiek.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">Uw bloedglucose zal naar verwachting binnen %1$s minuten tot onder %2$s mmol/L dalen. Houd uw glucoseniveau nauwlettend in de gaten.</item>
+        <item quantity="other">Uw bloedglucose zal naar verwachting binnen %1$s minuten tot onder %2$s mmol/L dalen. Houd uw glucoseniveau nauwlettend in de gaten.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">Uw bloedglucose zal naar verwachting binnen %1$s minuten tot onder %2$s mg/dL dalen. Houd uw glucoseniveau nauwlettend in de gaten.</item>
+        <item quantity="other">Uw bloedglucose zal naar verwachting binnen %1$s minuten tot onder %2$s mg/dL dalen. Houd uw glucoseniveau nauwlettend in de gaten.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d stap</item>
+        <item quantity="other">%d stappen</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s mijl</item>
+        <item quantity="other">%s mijl</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s km</item>
+        <item quantity="other">%s km</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">nog %1$s stap te gaan</item>
+        <item quantity="other">Nog %1$s stappen te gaan</item>
+    </plurals>
+</resources>

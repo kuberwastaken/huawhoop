@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" oneshot="false">
+    <item
+        android:duration="1000"
+        android:drawable="@drawable/hw_device_dnurse_glucose_measure_guide_1"/>
+    <item
+        android:duration="1000"
+        android:drawable="@drawable/hw_device_dnurse_glucose_measure_guide_2"/>
+    <item
+        android:duration="1000"
+        android:drawable="@drawable/hw_device_dnurse_glucose_measure_guide_3"/>
+</animation-list>

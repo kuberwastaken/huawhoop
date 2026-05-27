@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-1">
+    <ImageView
+        focusable="true"
+        layout_width="-2"
+        layout_height="-2"
+        scaleType="2"/>
+    <com.huawei.ui.commonui.button.HealthButton
+        id="@+id/hw_health_guide_done_button"
+        layout_width="@dimen/_2131363789_res_0x7f0a07cd"
+        layout_height="@dimen/_2131363821_res_0x7f0a07ed"
+        layout_marginBottom="@dimen/_2131363833_res_0x7f0a07f9"
+        text="@string/_2130841874_res_0x7f021112"
+        layout_alignParentBottom="true"
+        layout_centerHorizontal="true"/>
+</RelativeLayout>

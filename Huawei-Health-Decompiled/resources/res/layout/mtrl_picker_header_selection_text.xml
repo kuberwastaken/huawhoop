@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    gravity="0x800053"
+    layout_gravity="0x800033"
+    id="@+id/mtrl_picker_header_selection_text"
+    paddingBottom="@dimen/_2131364977_res_0x7f0a0c71"
+    layout_width="-1"
+    layout_height="-2"
+    NOT_FOUND_0x6="@dimen/_2131364981_res_0x7f0a0c75"
+    NOT_FOUND_0x7="@dimen/_2131364966_res_0x7f0a0c66"
+    style="?unknown_attr_ref: 7f0605e1"/>

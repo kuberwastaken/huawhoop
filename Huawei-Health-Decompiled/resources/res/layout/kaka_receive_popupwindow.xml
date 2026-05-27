@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-2"
+    layout_height="-2">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365484_res_0x7f0a0e6c"
+        textColor="@color/_2131299847_res_0x7f090e07"
+        ellipsize="3"
+        gravity="0x800013"
+        id="@+id/kaka_tip"
+        background="@drawable/_2131431103_res_0x7f0b0ebf"
+        layout_width="-2"
+        layout_height="-2"
+        maxLines="3"
+        fontFamily="@string/_2130852834_res_0x7f023be2"/>
+</LinearLayout>

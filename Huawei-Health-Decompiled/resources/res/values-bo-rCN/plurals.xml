@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="other">དཔེ་རིས་དང་རེའུ་མིག་ %1$d ཆབས་ཅིག་ཏུ་རྩེག་སྣོན་བྱ་བ་ཁོ་ནར་རྒྱབ་སྐྱོར་བྱེད།</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="other">མིག་སྔར་ཁྱེད་ཀྱི་ཁྲག་མངར་མྱུར་དུ་མར་ཆག་བཞིན་འདུག སྐར་མ་ %1$s ནས་ %2$s mmol/L ལས་དམའ་བར་འགྱུར་སྲིད་པས། དོ་ཁུར་ཆེན་པོ་གནང་རོགས།</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="other">མིག་སྔར་ཁྱེད་ཀྱི་ཁྲག་མངར་མྱུར་དུ་མར་ཆག་བཞིན་འདུག སྐར་མ་ %1$s ནས་ %2$s mg/dL ལས་དམའ་བར་འགྱུར་སྲིད་པས། དོ་ཁུར་ཆེན་པོ་གནང་རོགས།</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="other">གོམ་ཁ་ %d</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="other">དབྱིན་ལེ་ %s</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="other">སྤྱི་ལེ་ %s</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="other">དམིགས་འབེན་འགྲུབ་པར་གོམ་རིམ་ %1$s ཆད་ཡོད།</item>
+    </plurals>
+</resources>

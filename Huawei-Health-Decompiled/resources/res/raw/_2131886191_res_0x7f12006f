@@ -1,0 +1,38 @@
+[
+  {
+    "mapFeature": "administrative.capital",
+    "visibility": false
+  },
+  {
+    "mapFeature": "administrative.major-city",
+    "visibility": false
+  },
+  {
+    "mapFeature": "administrative.district",
+    "visibility": false
+  },
+  {
+    "mapFeature": "administrative.locality",
+    "visibility": false
+  },
+  {
+    "mapFeature": "poi",
+    "visibility": false
+  },
+  {
+    "mapFeature": "transit.bus",
+    "visibility": false
+  },
+  {
+    "mapFeature": "transit.other",
+    "visibility": false
+  },
+  {
+    "mapFeature": "transit.ferry-terminal",
+    "visibility": false
+  },
+  {
+    "mapFeature": "transit.rail-station",
+    "visibility": false
+  }
+]

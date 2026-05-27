@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        state_focused="true"
+        drawable="@drawable/device_pairguide_shape_true"/>
+    <item
+        state_pressed="true"
+        drawable="@drawable/device_pairguide_shape_true"/>
+    <item drawable="@drawable/device_pairguide_shape_false"/>
+</selector>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/head_my_fitness"
+        layout_width="@dimen/_2131365380_res_0x7f0a0e04"
+        layout_height="@dimen/_2131365453_res_0x7f0a0e4d"
+        NOT_FOUND_0x4="0"
+        NOT_FOUND_0x5="0"
+        NOT_FOUND_0x7="0"
+        NOT_FOUND_0x8="false"
+        NOT_FOUND_0x9="3"
+        NOT_FOUND_0xa="@string/_2130849646_res_0x7f022f6e"/>
+    <com.huawei.ui.commonui.recycleview.HealthRecycleView
+        id="@+id/my_fitness_recycle_view"
+        layout_width="@dimen/_2131365380_res_0x7f0a0e04"
+        layout_height="-2"
+        NOT_FOUND_0x3="2"
+        NOT_FOUND_0x4="0"
+        NOT_FOUND_0x5="0"
+        NOT_FOUND_0x6="@+id/head_my_fitness"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

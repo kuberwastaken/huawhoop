@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.cardview.HealthCardView
+        id="@+id/back_kaka_mid_layout"
+        layout_width="-1"
+        layout_height="-2"
+        minHeight="@dimen/_2131363550_res_0x7f0a06de"
+        layout_marginStart="@dimen/_2131362372_res_0x7f0a0244"
+        layout_marginEnd="@dimen/_2131362372_res_0x7f0a0244">
+        <include layout="@layout/achieve_task_level_content_child"/>
+    </com.huawei.ui.commonui.cardview.HealthCardView>
+    <View
+        id="@+id/content_line"
+        layout_width="-1"
+        layout_height="@dimen/_2131362372_res_0x7f0a0244"
+        layout_below="@+id/back_kaka_mid_layout"/>
+</RelativeLayout>

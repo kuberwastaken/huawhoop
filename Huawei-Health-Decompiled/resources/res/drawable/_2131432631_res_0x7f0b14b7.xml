@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape shape="0">
+            <corners
+                topRightRadius="@dimen/_2131362934_res_0x7f0a0476"
+                bottomRightRadius="@dimen/_2131362934_res_0x7f0a0476"/>
+            <solid color="@color/_2131296661_res_0x7f090195"/>
+        </shape>
+    </item>
+    <item
+        left="@dimen/_2131362993_res_0x7f0a04b1"
+        top="@dimen/_2131363112_res_0x7f0a0528"
+        right="@dimen/_2131363112_res_0x7f0a0528"
+        bottom="@dimen/_2131363112_res_0x7f0a0528">
+        <shape
+            shape="1"
+            useLevel="true">
+            <size
+                height="@dimen/_2131362934_res_0x7f0a0476"
+                width="@dimen/_2131362934_res_0x7f0a0476"/>
+            <solid color="@color/_2131296951_res_0x7f0902b7"/>
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    id="@+id/track_main_page_perm_bg"
+    background="@color/_2131299899_res_0x7f090e3b"
+    layout_width="-1"
+    layout_height="-1">
+    <ImageView
+        id="@+id/track_conut_down_num_round"
+        visibility="2"
+        layout_width="@dimen/_2131365549_res_0x7f0a0ead"
+        layout_height="@dimen/_2131365549_res_0x7f0a0ead"
+        src="@drawable/_2131432413_res_0x7f0b13dd"
+        layout_centerInParent="true"
+        NOT_FOUND_0x9="0"
+        NOT_FOUND_0xa="0"
+        NOT_FOUND_0xb="0"
+        NOT_FOUND_0xc="0"/>
+    <ImageView
+        id="@+id/track_conut_down_num"
+        visibility="2"
+        layout_width="@dimen/_2131365548_res_0x7f0a0eac"
+        layout_height="@dimen/_2131365548_res_0x7f0a0eac"
+        NOT_FOUND_0x9="0"
+        NOT_FOUND_0xa="0"
+        NOT_FOUND_0xb="0"
+        NOT_FOUND_0xc="0"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365550_res_0x7f0a0eae"
+        textColor="@color/_2131300016_res_0x7f090eb0"
+        id="@+id/track_conut_down_num_text"
+        visibility="2"
+        layout_width="-2"
+        layout_height="-2"
+        NOT_FOUND_0x9="0"
+        NOT_FOUND_0xa="0"
+        NOT_FOUND_0xb="0"
+        NOT_FOUND_0xc="0"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,2114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="_2130903040_res_0x7f030000">
+        <item quantity="one">%1$s person tried this</item>
+        <item quantity="other">%1$s people tried this</item>
+    </plurals>
+    <plurals name="_2130903041_res_0x7f030001">
+        <item quantity="one">%1$d minute</item>
+        <item quantity="other">%1$d minutes</item>
+    </plurals>
+    <plurals name="_2130903042_res_0x7f030002">
+        <item quantity="one">point</item>
+        <item quantity="other">points</item>
+    </plurals>
+    <plurals name="_2130903043_res_0x7f030003">
+        <item quantity="one">%s year old</item>
+        <item quantity="other">%s years old</item>
+    </plurals>
+    <plurals name="_2130903044_res_0x7f030004">
+        <item quantity="one">%1$d item selected</item>
+        <item quantity="other">%1$d items selected</item>
+    </plurals>
+    <plurals name="_2130903047_res_0x7f030007">
+        <item quantity="other">%1$d min</item>
+    </plurals>
+    <plurals name="_2130903048_res_0x7f030008">
+        <item quantity="one">Healthy range: %1$.0f-%2$.0f lbs</item>
+        <item quantity="other">Healthy range: %1$.0f-%2$.0f lbs</item>
+    </plurals>
+    <plurals name="_2130903055_res_0x7f03000f">
+        <item quantity="one">%1$d second</item>
+        <item quantity="other">%1$d seconds</item>
+    </plurals>
+    <plurals name="_2130903064_res_0x7f030018">
+        <item quantity="one">%d item selected</item>
+        <item quantity="other">%d items selected</item>
+    </plurals>
+    <plurals name="_2130903065_res_0x7f030019">
+        <item quantity="one">Delete %d record?</item>
+        <item quantity="other">Delete %d records?</item>
+    </plurals>
+    <plurals name="_2130903073_res_0x7f030021">
+        <item quantity="one">%s cal</item>
+        <item quantity="other">%s cal</item>
+    </plurals>
+    <plurals name="_2130903074_res_0x7f030022">
+        <item quantity="one">%s-h fasting window</item>
+        <item quantity="other">%s-h fasting window</item>
+    </plurals>
+    <plurals name="_2130903075_res_0x7f030023">
+        <item quantity="one">%s-h eating window</item>
+        <item quantity="other">%s-h eating window</item>
+    </plurals>
+    <plurals name="_2130903076_res_0x7f030024">
+        <item quantity="one">%s mmol/L</item>
+        <item quantity="other">%s mmol/L</item>
+    </plurals>
+    <plurals name="_2130903078_res_0x7f030026">
+        <item quantity="one">%d time</item>
+        <item quantity="other">%d times</item>
+    </plurals>
+    <plurals name="_2130903079_res_0x7f030027">
+        <item quantity="one">Completed %d day</item>
+        <item quantity="other">Completed %d days</item>
+    </plurals>
+    <plurals name="_2130903082_res_0x7f03002a">
+        <item quantity="one">You need to confirm the time for %d food record. This is used to provide more accurate information about how your blood sugar levels are changing.</item>
+        <item quantity="other">You need to confirm the times for %d food records. This is used to provide more accurate information about how your blood sugar levels are changing.</item>
+    </plurals>
+    <plurals name="_2130903083_res_0x7f03002b">
+        <item quantity="one">%1$s kcal</item>
+        <item quantity="other">%1$s kcal</item>
+    </plurals>
+    <plurals name="_2130903084_res_0x7f03002c">
+        <item quantity="other">%d bpm</item>
+    </plurals>
+    <plurals name="_2130903087_res_0x7f03002f">
+        <item quantity="one">%d item selected</item>
+        <item quantity="other">%d items selected</item>
+    </plurals>
+    <plurals name="_2130903088_res_0x7f030030">
+        <item quantity="one">%d</item>
+        <item quantity="other">%d</item>
+    </plurals>
+    <plurals name="_2130903089_res_0x7f030031">
+        <item quantity="one">%s kg</item>
+        <item quantity="other">%s kg</item>
+    </plurals>
+    <plurals name="_2130903091_res_0x7f030033">
+        <item quantity="one">Selected %1$d/%2$d</item>
+        <item quantity="other">Selected %1$d/%2$d</item>
+    </plurals>
+    <plurals name="_2130903092_res_0x7f030034">
+        <item quantity="one">Max of %d can be selected.</item>
+        <item quantity="other">Max of %d can be selected.</item>
+    </plurals>
+    <plurals name="_2130903093_res_0x7f030035">
+        <item quantity="one">Altitude: %s m</item>
+        <item quantity="other">Altitude: %s m</item>
+    </plurals>
+    <plurals name="_2130903095_res_0x7f030037">
+        <item quantity="one">%s mi</item>
+        <item quantity="other">%s mi</item>
+    </plurals>
+    <plurals name="_2130903096_res_0x7f030038">
+        <item quantity="one">%s km</item>
+        <item quantity="other">%s km</item>
+    </plurals>
+    <plurals name="_2130903097_res_0x7f030039">
+        <item quantity="one">Consulted %d day</item>
+        <item quantity="other">Consulted %d days</item>
+    </plurals>
+    <plurals name="_2130903101_res_0x7f03003d">
+        <item quantity="one">%d time</item>
+        <item quantity="other">%d times</item>
+    </plurals>
+    <plurals name="_2130903102_res_0x7f03003e">
+        <item quantity="one">%s min of moderate to high-intensity activity</item>
+        <item quantity="other">%s min of moderate to high-intensity activity</item>
+    </plurals>
+    <plurals name="_2130903105_res_0x7f030041">
+        <item quantity="one">%s half-kilo</item>
+        <item quantity="other">%s half-kilos</item>
+    </plurals>
+    <plurals name="IDS_plugin_fitnessadvice_minute">
+        <item quantity="one">%1$s minute</item>
+        <item quantity="other">%1$s minutes</item>
+    </plurals>
+    <plurals name="_2130903107_res_0x7f030043">
+        <item quantity="one">%1$s second</item>
+        <item quantity="other">%1$s seconds</item>
+    </plurals>
+    <plurals name="_2130903108_res_0x7f030044">
+        <item quantity="one">%1$s km</item>
+        <item quantity="other">%1$s km</item>
+    </plurals>
+    <plurals name="_2130903109_res_0x7f030045">
+        <item quantity="one">%1$s mi</item>
+        <item quantity="other">%1$s mi</item>
+    </plurals>
+    <plurals name="_2130903110_res_0x7f030046">
+        <item quantity="one">Warm-up %1$s second</item>
+        <item quantity="other">Warm-up %1$s seconds</item>
+    </plurals>
+    <plurals name="_2130903111_res_0x7f030047">
+        <item quantity="one">Warm-up: %1$s min</item>
+        <item quantity="other">Warm-up: %1$s min</item>
+    </plurals>
+    <plurals name="_2130903112_res_0x7f030048">
+        <item quantity="one">Rest %1$s min</item>
+        <item quantity="other">Rest %1$s min</item>
+    </plurals>
+    <plurals name="_2130903113_res_0x7f030049">
+        <item quantity="one">Run %1$s second</item>
+        <item quantity="other">Run %1$s seconds</item>
+    </plurals>
+    <plurals name="_2130903114_res_0x7f03004a">
+        <item quantity="one">Run %1$s min</item>
+        <item quantity="other">Run %1$s min</item>
+    </plurals>
+    <plurals name="_2130903115_res_0x7f03004b">
+        <item quantity="one">Cool down %1$s second</item>
+        <item quantity="other">Cool down %1$s seconds</item>
+    </plurals>
+    <plurals name="_2130903116_res_0x7f03004c">
+        <item quantity="one">Cool down: %1$s min</item>
+        <item quantity="other">Cool down: %1$s min</item>
+    </plurals>
+    <plurals name="_2130903117_res_0x7f03004d">
+        <item quantity="one">%d sleep talk clip</item>
+        <item quantity="other">%d sleep talk clips</item>
+    </plurals>
+    <plurals name="_2130903118_res_0x7f03004e">
+        <item quantity="one">%d snoring clip</item>
+        <item quantity="other">%d snoring clips</item>
+    </plurals>
+    <plurals name="_2130903119_res_0x7f03004f">
+        <item quantity="one">%1$s min</item>
+        <item quantity="other">%1$s min</item>
+    </plurals>
+    <plurals name="_2130903120_res_0x7f030050">
+        <item quantity="one">%1$s sec</item>
+        <item quantity="other">%1$s sec</item>
+    </plurals>
+    <plurals name="_2130903121_res_0x7f030051">
+        <item quantity="one">Joined %d day ago</item>
+        <item quantity="other">Joined %d days ago</item>
+    </plurals>
+    <plurals name="_2130903122_res_0x7f030052">
+        <item quantity="one">Average heart rate: %d bpm</item>
+        <item quantity="other">Average heart rate: %d bpm</item>
+    </plurals>
+    <plurals name="_2130903123_res_0x7f030053">
+        <item quantity="one">%1$s person voted</item>
+        <item quantity="other">%1$s people voted</item>
+    </plurals>
+    <plurals name="_2130903124_res_0x7f030054">
+        <item quantity="one">%s view</item>
+        <item quantity="other">%s views</item>
+    </plurals>
+    <plurals name="_2130903125_res_0x7f030055">
+        <item quantity="one">Used %s time</item>
+        <item quantity="other">Used %s times</item>
+    </plurals>
+    <plurals name="_2130903126_res_0x7f030056">
+        <item quantity="one">Rest %1$ss</item>
+        <item quantity="other">Rest %1$ss</item>
+    </plurals>
+    <plurals name="_2130903127_res_0x7f030057">
+        <item quantity="one">%sK participants</item>
+        <item quantity="other">%sK participants</item>
+    </plurals>
+    <plurals name="_2130903128_res_0x7f030058">
+        <item quantity="one">%s participant</item>
+        <item quantity="other">%s participants</item>
+    </plurals>
+    <plurals name="_2130903129_res_0x7f030059">
+        <item quantity="one">%s session</item>
+        <item quantity="other">%s sessions</item>
+    </plurals>
+    <plurals name="_2130903130_res_0x7f03005a">
+        <item quantity="one">%1$s mph</item>
+        <item quantity="other">%1$s mph</item>
+    </plurals>
+    <plurals name="_2130903131_res_0x7f03005b">
+        <item quantity="one">%1$s bpm</item>
+        <item quantity="other">%1$s bpm</item>
+    </plurals>
+    <plurals name="_2130903132_res_0x7f03005c">
+        <item quantity="one">%s/km</item>
+        <item quantity="other">%s/km</item>
+    </plurals>
+    <plurals name="_2130903133_res_0x7f03005d">
+        <item quantity="one">%d h</item>
+        <item quantity="other">%d h</item>
+    </plurals>
+    <plurals name="_2130903134_res_0x7f03005e">
+        <item quantity="one">Every %d jump</item>
+        <item quantity="other">Every %d jumps</item>
+    </plurals>
+    <plurals name="_2130903136_res_0x7f030060">
+        <item quantity="one">%d result found</item>
+        <item quantity="other">%d results found</item>
+    </plurals>
+    <plurals name="_2130903137_res_0x7f030061">
+        <item quantity="one">Checked in %1$d time</item>
+        <item quantity="other">Checked in %1$d times</item>
+    </plurals>
+    <plurals name="_2130903138_res_0x7f030062">
+        <item quantity="one">%1$s hour</item>
+        <item quantity="other">%1$s hours</item>
+    </plurals>
+    <plurals name="_2130903139_res_0x7f030063">
+        <item quantity="one">%1$s kcal</item>
+        <item quantity="other">%1$s kcal</item>
+    </plurals>
+    <plurals name="_2130903142_res_0x7f030066">
+        <item quantity="one">Distance: %s km</item>
+        <item quantity="other">Distance: %s km</item>
+    </plurals>
+    <plurals name="_2130903143_res_0x7f030067">
+        <item quantity="one">Distance: %s mi</item>
+        <item quantity="other">Distance: %s mi</item>
+    </plurals>
+    <plurals name="_2130903144_res_0x7f030068">
+        <item quantity="one">You&apos;ll need a total of %d hour to recover based on your recent exercise.</item>
+        <item quantity="other">You&apos;ll need a total of %d hours to recover based on your recent exercise.</item>
+    </plurals>
+    <plurals name="_2130903145_res_0x7f030069">
+        <item quantity="one">Connected (took %1.1fs)</item>
+        <item quantity="other">Connected (took %1.1fs)</item>
+    </plurals>
+    <plurals name="_2130903152_res_0x7f030070">
+        <item quantity="one">%1$d–%2$d bpm</item>
+        <item quantity="other">%1$d–%2$d bpm</item>
+    </plurals>
+    <plurals name="_2130903163_res_0x7f03007b">
+        <item quantity="other">%1$d blood sugar reading measurements synced. Please verify when they were taken.</item>
+    </plurals>
+    <plurals name="_2130903165_res_0x7f03007d">
+        <item quantity="one">%1$s day</item>
+        <item quantity="other">%1$s days</item>
+    </plurals>
+    <plurals name="_2130903166_res_0x7f03007e">
+        <item quantity="one">About %s chicken drumstick</item>
+        <item quantity="other">About %s chicken drumsticks</item>
+    </plurals>
+    <plurals name="_2130903167_res_0x7f03007f">
+        <item quantity="one">You have exchanged %1$d K-point.</item>
+        <item quantity="other">You have exchanged %1$d K-points.</item>
+    </plurals>
+    <plurals name="_2130903168_res_0x7f030080">
+        <item quantity="one">%s step</item>
+        <item quantity="other">%s steps</item>
+    </plurals>
+    <plurals name="_2130903169_res_0x7f030081">
+        <item quantity="one">%1$s mi</item>
+        <item quantity="other">%1$s mi</item>
+    </plurals>
+    <plurals name="_2130903170_res_0x7f030082">
+        <item quantity="one">%1$s mi in a single run</item>
+        <item quantity="other">%1$s mi in a single run</item>
+    </plurals>
+    <plurals name="_2130903171_res_0x7f030083">
+        <item quantity="one">%1$s mi in a single run, you are a legend</item>
+        <item quantity="other">%1$s mi in a single run, you are a legend</item>
+    </plurals>
+    <plurals name="_2130903172_res_0x7f030084">
+        <item quantity="one">%1$s km in a single ride</item>
+        <item quantity="other">%1$s km in a single ride</item>
+    </plurals>
+    <plurals name="_2130903173_res_0x7f030085">
+        <item quantity="one">Single ride %1$s km</item>
+        <item quantity="other">Single ride %1$s km</item>
+    </plurals>
+    <plurals name="_2130903174_res_0x7f030086">
+        <item quantity="one">%1$s mi in a single ride</item>
+        <item quantity="other">%1$s mi in a single ride</item>
+    </plurals>
+    <plurals name="_2130903175_res_0x7f030087">
+        <item quantity="one">%1$s mi in a single ride</item>
+        <item quantity="other">Single ride %1$s mi</item>
+    </plurals>
+    <plurals name="_2130903177_res_0x7f030089">
+        <item quantity="one">You need %1$s more experience point to reach %2$s.</item>
+        <item quantity="other">You need %1$s more experience points to reach %2$s.</item>
+    </plurals>
+    <plurals name="_2130903178_res_0x7f03008a">
+        <item quantity="one">About %1$s marathon</item>
+        <item quantity="other">About %1$s marathons</item>
+    </plurals>
+    <plurals name="_2130903179_res_0x7f03008b">
+        <item quantity="one">%1$d K-point</item>
+        <item quantity="other">%1$d K-points</item>
+    </plurals>
+    <plurals name="_2130903180_res_0x7f03008c">
+        <item quantity="one">Congratulations! You now have %1$d more point for shopping.</item>
+        <item quantity="other">Congratulations! You now have %1$d more points for shopping.</item>
+    </plurals>
+    <plurals name="_2130903181_res_0x7f03008d">
+        <item quantity="one">Exchange amount (up to %1$d exchange per day)</item>
+        <item quantity="other">Exchange amount (up to %1$d exchanges per day)</item>
+    </plurals>
+    <plurals name="_2130903182_res_0x7f03008e">
+        <item quantity="one">This is day %1$s of your check-in streak. You get %2$s K-point!</item>
+        <item quantity="other">This is day %1$s of your check-in streak. You get %2$s K-points!</item>
+    </plurals>
+    <plurals name="_2130903183_res_0x7f03008f">
+        <item quantity="one">You earned %s medal this month</item>
+        <item quantity="other">You earned %s medals this month</item>
+    </plurals>
+    <plurals name="_2130903184_res_0x7f030090">
+        <item quantity="one">You earned %s medal this week</item>
+        <item quantity="other">You earned %s medals this week</item>
+    </plurals>
+    <plurals name="_2130903185_res_0x7f030091">
+        <item quantity="one">%s drumstick</item>
+        <item quantity="other">%s drumsticks</item>
+    </plurals>
+    <plurals name="_2130903186_res_0x7f030092">
+        <item quantity="one">%1$s day left</item>
+        <item quantity="other">%1$s days left</item>
+    </plurals>
+    <plurals name="_2130903187_res_0x7f030093">
+        <item quantity="one">%1$s jump</item>
+        <item quantity="other">%1$s jumps</item>
+    </plurals>
+    <plurals name="_2130903188_res_0x7f030094">
+        <item quantity="one">%1$s jump/min</item>
+        <item quantity="other">%1$s jumps/min</item>
+    </plurals>
+    <plurals name="_2130903189_res_0x7f030095">
+        <item quantity="one">%1$s sec</item>
+        <item quantity="other">%1$s sec</item>
+    </plurals>
+    <plurals name="_2130903190_res_0x7f030096">
+        <item quantity="one">%1$s step</item>
+        <item quantity="other">%1$s steps</item>
+    </plurals>
+    <plurals name="_2130903191_res_0x7f030097">
+        <item quantity="one">You reached your step count goal %d day this month, that&apos;s the same as last month.</item>
+        <item quantity="other">You reached your step count goal %d days this month, that&apos;s the same as last month.</item>
+    </plurals>
+    <plurals name="_2130903192_res_0x7f030098">
+        <item quantity="one">You reached your step count goal %d day this week, that&apos;s the same as last week.</item>
+        <item quantity="other">You reached your step count goal %d days this week, that&apos;s the same as last week.</item>
+    </plurals>
+    <plurals name="_2130903193_res_0x7f030099">
+        <item quantity="one">%1$s K-point can still be exchanged today</item>
+        <item quantity="other">%1$s K-points can still be exchanged today</item>
+    </plurals>
+    <plurals name="_2130903194_res_0x7f03009a">
+        <item quantity="one">Congratulations! You&apos;ve received your %1$sst %2$s medal.</item>
+        <item quantity="other">Congratulations! You&apos;ve received the %2$s medal again, No. %1$s.</item>
+    </plurals>
+    <plurals name="_2130903195_res_0x7f03009b">
+        <item quantity="one">%1$s | Received %2$s time</item>
+        <item quantity="other">%1$s | Received %2$s times</item>
+    </plurals>
+    <plurals name="_2130903196_res_0x7f03009c">
+        <item quantity="one">You completed %1$s fitness course (%2$s – %3$s) this week.</item>
+        <item quantity="other">You completed %1$s fitness courses this week.\n\nYou seem to like %2$s courses the most. %3$s was your most used course.</item>
+    </plurals>
+    <plurals name="_2130903197_res_0x7f03009d">
+        <item quantity="one">You completed %1$s fitness course (%2$s – %3$s) this month.</item>
+        <item quantity="other">You completed %1$s fitness courses this month.\n\nYou seem to like %2$s courses the most. %3$s was your most used course.</item>
+    </plurals>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">Up to %1$d indicator can be shown on one graph.</item>
+        <item quantity="other">Up to %1$d indicators can be shown on one graph.</item>
+    </plurals>
+    <plurals name="_2130903199_res_0x7f03009f">
+        <item quantity="one">This service requires %1$d permission. You can revoke it at any time in Settings &gt; Apps &gt; Apps.</item>
+        <item quantity="other">This service requires %1$d permissions. You can revoke them at any time in Settings &gt; Apps &gt; Apps.</item>
+    </plurals>
+    <plurals name="_2130903200_res_0x7f0300a0">
+        <item quantity="one">%1$s h</item>
+        <item quantity="other">%1$s h</item>
+    </plurals>
+    <plurals name="_2130903201_res_0x7f0300a1">
+        <item quantity="one">%1$s min</item>
+        <item quantity="other">%1$s min</item>
+    </plurals>
+    <plurals name="_2130903202_res_0x7f0300a2">
+        <item quantity="one">%1$s h</item>
+        <item quantity="other">%1$s h</item>
+    </plurals>
+    <plurals name="_2130903203_res_0x7f0300a3">
+        <item quantity="one">%1$s min</item>
+        <item quantity="other">%1$s min</item>
+    </plurals>
+    <plurals name="_2130903204_res_0x7f0300a4">
+        <item quantity="one">%d week total</item>
+        <item quantity="other">%d weeks total</item>
+    </plurals>
+    <plurals name="_2130903205_res_0x7f0300a5">
+        <item quantity="one">My events: %d</item>
+        <item quantity="other">My events: %d</item>
+    </plurals>
+    <plurals name="_2130903206_res_0x7f0300a6">
+        <item quantity="one">Week %1$d (%2$d total)</item>
+        <item quantity="other">Week %1$d (%2$d total)</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">Your blood glucose is expected to drop below %2$s mmol/L in %1$s min. Please closely monitor your glucose level.</item>
+        <item quantity="other">Your blood glucose is expected to drop below %2$s mmol/L in %1$s min. Please closely monitor your glucose level.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">Your blood glucose is expected to drop below %2$s mg/dL in %1$s min. Please closely monitor your glucose level.</item>
+        <item quantity="other">Your blood glucose is expected to drop below %2$s mg/dL in %1$s min. Please closely monitor your glucose level.</item>
+    </plurals>
+    <plurals name="_2130903209_res_0x7f0300a9">
+        <item quantity="one">%d linked event</item>
+        <item quantity="other">%d linked events</item>
+    </plurals>
+    <plurals name="_2130903210_res_0x7f0300aa">
+        <item quantity="one">%d bpm</item>
+        <item quantity="other">%d bpm</item>
+    </plurals>
+    <plurals name="_2130903211_res_0x7f0300ab">
+        <item quantity="one">step</item>
+        <item quantity="other">steps</item>
+    </plurals>
+    <plurals name="_2130903212_res_0x7f0300ac">
+        <item quantity="one">%s step</item>
+        <item quantity="other">%s steps</item>
+    </plurals>
+    <plurals name="_2130903213_res_0x7f0300ad">
+        <item quantity="one">%1$s (%2$s min smart wakeup)</item>
+        <item quantity="other">%1$s (%2$s min smart wakeup)</item>
+    </plurals>
+    <plurals name="_2130903214_res_0x7f0300ae">
+        <item quantity="one">Remove selected contact?</item>
+        <item quantity="other">Remove selected contacts?</item>
+    </plurals>
+    <plurals name="_2130903215_res_0x7f0300af">
+        <item quantity="one">%d floor</item>
+        <item quantity="other">%d floors</item>
+    </plurals>
+    <plurals name="_2130903216_res_0x7f0300b0">
+        <item quantity="one">%1$s is still valid for %2$s day</item>
+        <item quantity="other">%1$s is still valid for %2$s days</item>
+    </plurals>
+    <plurals name="IDS_user_profile_achieve_num_day">
+        <item quantity="one">%1$s day</item>
+        <item quantity="other">%1$s days</item>
+    </plurals>
+    <plurals name="_2130903218_res_0x7f0300b2">
+        <item quantity="one">%1$s medal</item>
+        <item quantity="other">%1$s medals</item>
+    </plurals>
+    <plurals name="_2130903219_res_0x7f0300b3">
+        <item quantity="one">%1$s K-point</item>
+        <item quantity="other">%1$s K-points</item>
+    </plurals>
+    <plurals name="_2130903220_res_0x7f0300b4">
+        <item quantity="one">%1$s time</item>
+        <item quantity="other">%1$s times</item>
+    </plurals>
+    <plurals name="_2130903221_res_0x7f0300b5">
+        <item quantity="one">%1$s cm</item>
+        <item quantity="other">%1$s cm</item>
+    </plurals>
+    <plurals name="_2130903222_res_0x7f0300b6">
+        <item quantity="one">%s kg</item>
+        <item quantity="other">%s kg</item>
+    </plurals>
+    <plurals name="_2130903223_res_0x7f0300b7">
+        <item quantity="one">%s lb</item>
+        <item quantity="other">%s lbs</item>
+    </plurals>
+    <plurals name="_2130903224_res_0x7f0300b8">
+        <item quantity="one">%1$s ft</item>
+        <item quantity="other">%1$s ft</item>
+    </plurals>
+    <plurals name="_2130903225_res_0x7f0300b9">
+        <item quantity="one">%1$s mi</item>
+        <item quantity="other">%1$s mi</item>
+    </plurals>
+    <plurals name="_2130903226_res_0x7f0300ba">
+        <item quantity="one">%1$s in</item>
+        <item quantity="other">%1$s in</item>
+    </plurals>
+    <plurals name="_2130903227_res_0x7f0300bb">
+        <item quantity="one">%1$d hour per night</item>
+        <item quantity="other">%1$d hours per night</item>
+    </plurals>
+    <plurals name="IDS_sleep_referece_title_score_string">
+        <item quantity="one">%1$s point</item>
+        <item quantity="other">%1$s points</item>
+    </plurals>
+    <plurals name="_2130903229_res_0x7f0300bd">
+        <item quantity="one">%1$d min ago</item>
+        <item quantity="other">%1$d min ago</item>
+    </plurals>
+    <plurals name="_2130903230_res_0x7f0300be">
+        <item quantity="one">%1$s hour</item>
+        <item quantity="other">%1$s hours</item>
+    </plurals>
+    <plurals name="_2130903231_res_0x7f0300bf">
+        <item quantity="one">time/min</item>
+        <item quantity="other">times/min</item>
+    </plurals>
+    <plurals name="IDS_hwh_motiontrack_swim_pace_unit">
+        <item quantity="one">/%1$d m</item>
+        <item quantity="other">/%1$d m</item>
+    </plurals>
+    <plurals name="IDS_hwh_motiontrack_swim_pace_unit_mi">
+        <item quantity="one">/%1$d yd</item>
+        <item quantity="other">/%1$d yd</item>
+    </plurals>
+    <plurals name="IDS_hwh_motiontrack_unit_yd">
+        <item quantity="one">yd</item>
+        <item quantity="other">yd</item>
+    </plurals>
+    <plurals name="_2130903235_res_0x7f0300c3">
+        <item quantity="one">%1$s B</item>
+        <item quantity="other">%1$s B</item>
+    </plurals>
+    <plurals name="_2130903236_res_0x7f0300c4">
+        <item quantity="one">%1$s KB</item>
+        <item quantity="other">%1$s KB</item>
+    </plurals>
+    <plurals name="_2130903237_res_0x7f0300c5">
+        <item quantity="one">%1$s MB</item>
+        <item quantity="other">%1$s MB</item>
+    </plurals>
+    <plurals name="_2130903238_res_0x7f0300c6">
+        <item quantity="one">%1$s GB</item>
+        <item quantity="other">%1$s GB</item>
+    </plurals>
+    <plurals name="_2130903239_res_0x7f0300c7">
+        <item quantity="other">%1$d min</item>
+    </plurals>
+    <plurals name="_2130903240_res_0x7f0300c8">
+        <item quantity="other">min</item>
+    </plurals>
+    <plurals name="_2130903241_res_0x7f0300c9">
+        <item quantity="one">%1$s egg</item>
+        <item quantity="other">%1$s eggs</item>
+    </plurals>
+    <plurals name="_2130903242_res_0x7f0300ca">
+        <item quantity="one">%1$s scoop of ice cream</item>
+        <item quantity="other">%1$s scoops of ice cream</item>
+    </plurals>
+    <plurals name="_2130903243_res_0x7f0300cb">
+        <item quantity="one">%1$s hamburger</item>
+        <item quantity="other">%1$s hamburgers</item>
+    </plurals>
+    <plurals name="_2130903244_res_0x7f0300cc">
+        <item quantity="one">%1$s deep fried chicken leg</item>
+        <item quantity="other">%1$s deep fried chicken legs</item>
+    </plurals>
+    <plurals name="IDS_hwh_motiontrack_ft_string">
+        <item quantity="one">ft</item>
+        <item quantity="other">ft</item>
+    </plurals>
+    <plurals name="_2130903246_res_0x7f0300ce">
+        <item quantity="one">%1$s km</item>
+        <item quantity="other">%1$s km</item>
+    </plurals>
+    <plurals name="_2130903247_res_0x7f0300cf">
+        <item quantity="one">%1$s mi</item>
+        <item quantity="other">%1$s mi</item>
+    </plurals>
+    <plurals name="_2130903248_res_0x7f0300d0">
+        <item quantity="one">time</item>
+        <item quantity="other">times</item>
+    </plurals>
+    <plurals name="_2130903249_res_0x7f0300d1">
+        <item quantity="one">You have %1$s activity ongoing</item>
+        <item quantity="other">You have %1$s activities ongoing</item>
+    </plurals>
+    <plurals name="_2130903250_res_0x7f0300d2">
+        <item quantity="one">day</item>
+        <item quantity="other">days</item>
+    </plurals>
+    <plurals name="_2130903251_res_0x7f0300d3">
+        <item quantity="one">%1$d time/min</item>
+        <item quantity="other">%1$d times/min</item>
+    </plurals>
+    <plurals name="_2130903252_res_0x7f0300d4">
+        <item quantity="one">%1$d ms</item>
+        <item quantity="other">%1$d ms</item>
+    </plurals>
+    <plurals name="_2130903253_res_0x7f0300d5">
+        <item quantity="one">%1$d g</item>
+        <item quantity="other">%1$d g</item>
+    </plurals>
+    <plurals name="_2130903254_res_0x7f0300d6">
+        <item quantity="one">%1$d°</item>
+        <item quantity="other">%1$d°</item>
+    </plurals>
+    <plurals name="_2130903255_res_0x7f0300d7">
+        <item quantity="one">%d download</item>
+        <item quantity="other">%d downloads</item>
+    </plurals>
+    <plurals name="_2130903256_res_0x7f0300d8">
+        <item quantity="one">%s mph</item>
+        <item quantity="other">%s mph</item>
+    </plurals>
+    <plurals name="_2130903257_res_0x7f0300d9">
+        <item quantity="one">%s bpm</item>
+        <item quantity="other">%s bpm</item>
+    </plurals>
+    <plurals name="_2130903258_res_0x7f0300da">
+        <item quantity="one">%s</item>
+        <item quantity="other">%s</item>
+    </plurals>
+    <plurals name="_2130903259_res_0x7f0300db">
+        <item quantity="one">%s ms</item>
+        <item quantity="other">%s ms</item>
+    </plurals>
+    <plurals name="_2130903260_res_0x7f0300dc">
+        <item quantity="one">%s mi</item>
+        <item quantity="other">%s mi</item>
+    </plurals>
+    <plurals name="_2130903261_res_0x7f0300dd">
+        <item quantity="one">Overall score: %1$d</item>
+        <item quantity="other">Overall score: %1$d</item>
+    </plurals>
+    <plurals name="_2130903262_res_0x7f0300de">
+        <item quantity="one">%1$d jump</item>
+        <item quantity="other">%1$d jumps</item>
+    </plurals>
+    <plurals name="_2130903263_res_0x7f0300df">
+        <item quantity="one">%1$d</item>
+        <item quantity="other">%1$d</item>
+    </plurals>
+    <plurals name="_2130903264_res_0x7f0300e0">
+        <item quantity="one">%1$d song</item>
+        <item quantity="other">%1$d songs</item>
+    </plurals>
+    <plurals name="_2130903265_res_0x7f0300e1">
+        <item quantity="one">Storage remaining: %1$d MB (about %2$d song)</item>
+        <item quantity="other">Storage remaining: %1$d MB (about %2$d songs)</item>
+    </plurals>
+    <plurals name="_2130903266_res_0x7f0300e2">
+        <item quantity="one">Unable to transfer. The watch only has %1$d MB (about %2$d song) of space left. Change your selection or delete content from your watch (such as maps, music, apps, and watch faces) and try again.</item>
+        <item quantity="other">Unable to transfer. The watch only has %1$d MB (about %2$d songs) of space left. Change your selection or delete content from your watch (such as maps, music, apps, and watch faces) and try again.</item>
+    </plurals>
+    <plurals name="_2130903267_res_0x7f0300e3">
+        <item quantity="other">Transferring %1$d files to %2$s…</item>
+    </plurals>
+    <plurals name="_2130903268_res_0x7f0300e4">
+        <item quantity="one">%1$d file</item>
+        <item quantity="other">%1$d files</item>
+    </plurals>
+    <plurals name="_2130903269_res_0x7f0300e5">
+        <item quantity="one">Failed to save %1$d background.</item>
+        <item quantity="other">Failed to save %1$d backgrounds.</item>
+    </plurals>
+    <plurals name="_2130903270_res_0x7f0300e6">
+        <item quantity="other">A maximum of %1$d songs can be stored on the watch. Please adjust your selection and try again.</item>
+    </plurals>
+    <plurals name="_2130903271_res_0x7f0300e7">
+        <item quantity="one">%1$d song</item>
+        <item quantity="other">%1$d songs</item>
+    </plurals>
+    <plurals name="_2130903272_res_0x7f0300e8">
+        <item quantity="one">%1$d hour</item>
+        <item quantity="other">%1$d hours</item>
+    </plurals>
+    <plurals name="_2130903273_res_0x7f0300e9">
+        <item quantity="one">%1$d rpm</item>
+        <item quantity="other">%1$d rpm</item>
+    </plurals>
+    <plurals name="_2130903274_res_0x7f0300ea">
+        <item quantity="one">%1$d W</item>
+        <item quantity="other">%1$d W</item>
+    </plurals>
+    <plurals name="_2130903275_res_0x7f0300eb">
+        <item quantity="one">%1$d stroke/min</item>
+        <item quantity="other">%1$d stroke/min</item>
+    </plurals>
+    <plurals name="IDS_band_data_golf_count_unit">
+        <item quantity="one">%s stroke</item>
+        <item quantity="other">%s strokes</item>
+    </plurals>
+    <plurals name="_2130903277_res_0x7f0300ed">
+        <item quantity="one">%1$d min</item>
+        <item quantity="other">%1$d min</item>
+    </plurals>
+    <plurals name="_2130903278_res_0x7f0300ee">
+        <item quantity="one">%1$d sec</item>
+        <item quantity="other">%1$d sec</item>
+    </plurals>
+    <plurals name="_2130903279_res_0x7f0300ef">
+        <item quantity="one">%1$d</item>
+        <item quantity="other">%1$d</item>
+    </plurals>
+    <plurals name="_2130903280_res_0x7f0300f0">
+        <item quantity="one">jump</item>
+        <item quantity="other">jumps</item>
+    </plurals>
+    <plurals name="IDS_indoor_skipper_number_unit_value">
+        <item quantity="one">%1$s jump</item>
+        <item quantity="other">%1$s jumps</item>
+    </plurals>
+    <plurals name="_2130903282_res_0x7f0300f2">
+        <item quantity="one">You&apos;ve completed %1$d run.</item>
+        <item quantity="other">You&apos;ve completed %1$d runs.</item>
+    </plurals>
+    <plurals name="_2130903283_res_0x7f0300f3">
+        <item quantity="one">You&apos;ve completed %1$d walk.</item>
+        <item quantity="other">You&apos;ve completed %1$d walks.</item>
+    </plurals>
+    <plurals name="_2130903284_res_0x7f0300f4">
+        <item quantity="one">You&apos;ve completed %1$d ride.</item>
+        <item quantity="other">You&apos;ve completed %1$d rides.</item>
+    </plurals>
+    <plurals name="_2130903285_res_0x7f0300f5">
+        <item quantity="one">%1$d selected</item>
+        <item quantity="other">%1$d selected</item>
+    </plurals>
+    <plurals name="_2130903286_res_0x7f0300f6">
+        <item quantity="one">Select up to %1$d contact.</item>
+        <item quantity="other">Select up to %1$d contacts.</item>
+    </plurals>
+    <plurals name="_2130903287_res_0x7f0300f7">
+        <item quantity="one">%1$s/km</item>
+        <item quantity="other">%1$s/km</item>
+    </plurals>
+    <plurals name="_2130903288_res_0x7f0300f8">
+        <item quantity="one">%1$s/mi</item>
+        <item quantity="other">%1$s/mi</item>
+    </plurals>
+    <plurals name="_2130903289_res_0x7f0300f9">
+        <item quantity="one">Following %d person</item>
+        <item quantity="other">Following %d people</item>
+    </plurals>
+    <plurals name="_2130903290_res_0x7f0300fa">
+        <item quantity="one">%s rpm</item>
+        <item quantity="other">%s rpm</item>
+    </plurals>
+    <plurals name="_2130903291_res_0x7f0300fb">
+        <item quantity="one">%s</item>
+        <item quantity="other">%s</item>
+    </plurals>
+    <plurals name="_2130903292_res_0x7f0300fc">
+        <item quantity="one">/%s step</item>
+        <item quantity="other">/%s steps</item>
+    </plurals>
+    <plurals name="_2130903293_res_0x7f0300fd">
+        <item quantity="other">At goal (%s km)</item>
+    </plurals>
+    <plurals name="_2130903294_res_0x7f0300fe">
+        <item quantity="other">At actual distance (%s km)</item>
+    </plurals>
+    <plurals name="_2130903295_res_0x7f0300ff">
+        <item quantity="one">step/min</item>
+        <item quantity="other">steps/min</item>
+    </plurals>
+    <plurals name="_2130903296_res_0x7f030100">
+        <item quantity="one">%d min</item>
+        <item quantity="other">%d min</item>
+    </plurals>
+    <plurals name="_2130903297_res_0x7f030101">
+        <item quantity="other">At goal (%s mi)</item>
+    </plurals>
+    <plurals name="_2130903298_res_0x7f030102">
+        <item quantity="other">At actual distance (%s mi)</item>
+    </plurals>
+    <plurals name="_2130903299_res_0x7f030103">
+        <item quantity="other">Receive an alert when your heart rate rises above %1$d bpm.</item>
+    </plurals>
+    <plurals name="_2130903300_res_0x7f030104">
+        <item quantity="one">%d device found</item>
+        <item quantity="other">%d devices found</item>
+    </plurals>
+    <plurals name="_2130903301_res_0x7f030105">
+        <item quantity="one">%1$d view</item>
+        <item quantity="other">%1$d views</item>
+    </plurals>
+    <plurals name="IDS_fitness_completed_goal">
+        <item quantity="one">%1$s step away</item>
+        <item quantity="other">%1$s steps away</item>
+    </plurals>
+    <plurals name="_2130903303_res_0x7f030107">
+        <item quantity="one">Equivalent to walking %1$s lap</item>
+        <item quantity="other">Equivalent to walking %1$s laps</item>
+    </plurals>
+    <plurals name="_2130903304_res_0x7f030108">
+        <item quantity="one">Equivalent to %1$s egg</item>
+        <item quantity="other">Equivalent to %1$s eggs</item>
+    </plurals>
+    <plurals name="_2130903305_res_0x7f030109">
+        <item quantity="one">Equivalent to %1$s soft serve</item>
+        <item quantity="other">Equivalent to %1$s soft serves</item>
+    </plurals>
+    <plurals name="_2130903306_res_0x7f03010a">
+        <item quantity="one">Equivalent to %1$s hamburger</item>
+        <item quantity="other">Equivalent to %1$s hamburgers</item>
+    </plurals>
+    <plurals name="_2130903307_res_0x7f03010b">
+        <item quantity="one">Equivalent to %1$s fried drumstick</item>
+        <item quantity="other">Equivalent to %1$s fried drumsticks</item>
+    </plurals>
+    <plurals name="_2130903308_res_0x7f03010c">
+        <item quantity="one">%s km</item>
+        <item quantity="other">%s km</item>
+    </plurals>
+    <plurals name="_2130903309_res_0x7f03010d">
+        <item quantity="one">%s mi</item>
+        <item quantity="other">%s mi</item>
+    </plurals>
+    <plurals name="_2130903310_res_0x7f03010e">
+        <item quantity="one">%d bpm</item>
+        <item quantity="other">%d bpm</item>
+    </plurals>
+    <plurals name="_2130903311_res_0x7f03010f">
+        <item quantity="one">%1$s h</item>
+        <item quantity="other">%1$s h</item>
+    </plurals>
+    <plurals name="_2130903312_res_0x7f030110">
+        <item quantity="one">%1$s min</item>
+        <item quantity="other">%1$s min</item>
+    </plurals>
+    <plurals name="IDS_altitude_ft">
+        <item quantity="other">%1$s ft</item>
+    </plurals>
+    <plurals name="IDS_altitude_meter">
+        <item quantity="other">%1$s m</item>
+    </plurals>
+    <plurals name="_2130903315_res_0x7f030113">
+        <item quantity="one">%1$s step/min</item>
+        <item quantity="other">%1$s steps/min</item>
+    </plurals>
+    <plurals name="_2130903316_res_0x7f030114">
+        <item quantity="other">%1$s km/h</item>
+    </plurals>
+    <plurals name="_2130903317_res_0x7f030115">
+        <item quantity="one">Completed %d jump</item>
+        <item quantity="other">Completed %d jumps</item>
+    </plurals>
+    <plurals name="_2130903318_res_0x7f030116">
+        <item quantity="one">%1$d week</item>
+        <item quantity="other">%1$d weeks</item>
+    </plurals>
+    <plurals name="_2130903319_res_0x7f030117">
+        <item quantity="one">Running for %1$s min</item>
+        <item quantity="other">Running for %1$s min</item>
+    </plurals>
+    <plurals name="_2130903320_res_0x7f030118">
+        <item quantity="one">Week %1$d</item>
+        <item quantity="other">Week %1$d</item>
+    </plurals>
+    <plurals name="_2130903321_res_0x7f030119">
+        <item quantity="one">It&apos;s been almost %1$d week since you started. You&apos;ve ran more times than %2$s of other Health runners. %3$s</item>
+        <item quantity="other">It&apos;s been almost %1$d weeks since you started. You&apos;ve ran more times than %2$s of other Health runners. %3$s</item>
+    </plurals>
+    <plurals name="_2130903322_res_0x7f03011a">
+        <item quantity="one">%1$d jump</item>
+        <item quantity="other">%1$d jumps</item>
+    </plurals>
+    <plurals name="_2130903323_res_0x7f03011b">
+        <item quantity="one">%1$d–%2$d step/min</item>
+        <item quantity="other">%1$d–%2$d steps/min</item>
+    </plurals>
+    <plurals name="_2130903324_res_0x7f03011c">
+        <item quantity="one">%d</item>
+        <item quantity="other">%d</item>
+    </plurals>
+    <plurals name="_2130903325_res_0x7f03011d">
+        <item quantity="one">%d step</item>
+        <item quantity="other">%d steps</item>
+    </plurals>
+    <plurals name="_2130903326_res_0x7f03011e">
+        <item quantity="one">Completed %1$d/%2$d</item>
+        <item quantity="other">Completed %1$d/%2$d</item>
+    </plurals>
+    <plurals name="_2130903327_res_0x7f03011f">
+        <item quantity="one">%s kg</item>
+        <item quantity="other">%s kg</item>
+    </plurals>
+    <plurals name="_2130903328_res_0x7f030120">
+        <item quantity="one">%s lb</item>
+        <item quantity="other">%s lbs</item>
+    </plurals>
+    <plurals name="_2130903329_res_0x7f030121">
+        <item quantity="one">&gt; %1$d bpm</item>
+        <item quantity="other">&gt; %1$d bpm</item>
+    </plurals>
+    <plurals name="_2130903330_res_0x7f030122">
+        <item quantity="one">&lt; %1$d bpm</item>
+        <item quantity="other">&lt; %1$d bpm</item>
+    </plurals>
+    <plurals name="_2130903331_res_0x7f030123">
+        <item quantity="one">%s BW/s</item>
+        <item quantity="other">%s BW/s</item>
+    </plurals>
+    <plurals name="_2130903332_res_0x7f030124">
+        <item quantity="one">Successfully added %1$d song.</item>
+        <item quantity="other">Successfully added %1$d songs.</item>
+    </plurals>
+    <plurals name="_2130903333_res_0x7f030125">
+        <item quantity="one">Expires in %1$s day</item>
+        <item quantity="other">Expires in %1$s days</item>
+    </plurals>
+    <plurals name="_2130903334_res_0x7f030126">
+        <item quantity="one">Total strokes: %1$d</item>
+        <item quantity="other">Total strokes: %1$d</item>
+    </plurals>
+    <plurals name="_2130903335_res_0x7f030127">
+        <item quantity="one">%1$d map update available</item>
+        <item quantity="other">%1$d map updates available</item>
+    </plurals>
+    <plurals name="_2130903336_res_0x7f030128">
+        <item quantity="one">Trained here %1$d day ago</item>
+        <item quantity="other">Trained here %1$d days ago</item>
+    </plurals>
+    <plurals name="_2130903337_res_0x7f030129">
+        <item quantity="one">%d time</item>
+        <item quantity="other">%d times</item>
+    </plurals>
+    <plurals name="IDS_physiology_day">
+        <item quantity="one">%s day</item>
+        <item quantity="other">%s days</item>
+    </plurals>
+    <plurals name="_2130903339_res_0x7f03012b">
+        <item quantity="one">day %s</item>
+        <item quantity="other">day %s</item>
+    </plurals>
+    <plurals name="_2130903340_res_0x7f03012c">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="_2130903341_res_0x7f03012d">
+        <item quantity="one">%1$s (%2$s)</item>
+        <item quantity="other">%1$s (%2$s)</item>
+    </plurals>
+    <plurals name="_2130903342_res_0x7f03012e">
+        <item quantity="one">Last %1$d round</item>
+        <item quantity="other">Last %1$d rounds</item>
+    </plurals>
+    <plurals name="_2130903343_res_0x7f03012f">
+        <item quantity="one">(%1$d hole)</item>
+        <item quantity="other">(%1$d holes)</item>
+    </plurals>
+    <plurals name="_2130903344_res_0x7f030130">
+        <item quantity="one">%1$s BW</item>
+        <item quantity="other">%1$s BW</item>
+    </plurals>
+    <plurals name="_2130903345_res_0x7f030131">
+        <item quantity="other">Every %1$s jumps</item>
+    </plurals>
+    <plurals name="_2130903346_res_0x7f030132">
+        <item quantity="other">%1$s groups</item>
+    </plurals>
+    <plurals name="_2130903347_res_0x7f030133">
+        <item quantity="other">%1$s bpm</item>
+    </plurals>
+    <plurals name="_2130903348_res_0x7f030134">
+        <item quantity="one">%1$s mm</item>
+        <item quantity="other">%1$s mm</item>
+    </plurals>
+    <plurals name="_2130903349_res_0x7f030135">
+        <item quantity="one">%1$d yd</item>
+        <item quantity="other">%1$d yd</item>
+    </plurals>
+    <plurals name="_2130903350_res_0x7f030136">
+        <item quantity="one">Auto-generated records (%s)</item>
+        <item quantity="other">Auto-generated records (%s)</item>
+    </plurals>
+    <plurals name="_2130903351_res_0x7f030137">
+        <item quantity="one">%1$s kg</item>
+        <item quantity="other">%1$s kg</item>
+    </plurals>
+    <plurals name="_2130903352_res_0x7f030138">
+        <item quantity="one">%d</item>
+        <item quantity="other">%d</item>
+    </plurals>
+    <plurals name="_2130903353_res_0x7f030139">
+        <item quantity="one">Confirm the time period for %d record?</item>
+        <item quantity="other">Confirm the time period for %d records?</item>
+    </plurals>
+    <plurals name="_2130903354_res_0x7f03013a">
+        <item quantity="one">%1$s session</item>
+        <item quantity="other">%1$s sessions</item>
+    </plurals>
+    <plurals name="_2130903355_res_0x7f03013b">
+        <item quantity="one">%1$s cm</item>
+        <item quantity="other">%1$s cm</item>
+    </plurals>
+    <plurals name="_2130903356_res_0x7f03013c">
+        <item quantity="one">%1$s in</item>
+        <item quantity="other">%1$s in</item>
+    </plurals>
+    <plurals name="_2130903357_res_0x7f03013d">
+        <item quantity="one">%1$d song</item>
+        <item quantity="other">%1$d songs</item>
+    </plurals>
+    <plurals name="_2130903358_res_0x7f03013e">
+        <item quantity="one">%1$d second</item>
+        <item quantity="other">%1$d seconds</item>
+    </plurals>
+    <plurals name="_2130903359_res_0x7f03013f">
+        <item quantity="one">%1$d song</item>
+        <item quantity="other">%1$d songs</item>
+    </plurals>
+    <plurals name="_2130903360_res_0x7f030140">
+        <item quantity="one">%s person checked in</item>
+        <item quantity="other">%s people checked in</item>
+    </plurals>
+    <plurals name="_2130903361_res_0x7f030141">
+        <item quantity="one">%1$s/%2$s kcal</item>
+        <item quantity="other">%1$s/%2$s kcal</item>
+    </plurals>
+    <plurals name="_2130903362_res_0x7f030142">
+        <item quantity="one">%1$s day</item>
+        <item quantity="other">%1$s days</item>
+    </plurals>
+    <plurals name="_2130903363_res_0x7f030143">
+        <item quantity="one">Trained %1$d day ago</item>
+        <item quantity="other">Trained %1$d days ago</item>
+    </plurals>
+    <plurals name="IDS_single_circle_active_target_desc">
+        <item quantity="one">%1$s hour</item>
+        <item quantity="other">%1$s hours</item>
+    </plurals>
+    <plurals name="IDS_single_circle_intensity_target_desc">
+        <item quantity="one">%1$s min</item>
+        <item quantity="other">%1$s min</item>
+    </plurals>
+    <plurals name="_2130903366_res_0x7f030146">
+        <item quantity="one">%1$s step</item>
+        <item quantity="other">%1$s steps</item>
+    </plurals>
+    <plurals name="_2130903367_res_0x7f030147">
+        <item quantity="one">%s</item>
+        <item quantity="other">%s</item>
+    </plurals>
+    <plurals name="_2130903368_res_0x7f030148">
+        <item quantity="one">%s breathing exercise</item>
+        <item quantity="other">%s breathing exercises</item>
+    </plurals>
+    <plurals name="_2130903369_res_0x7f030149">
+        <item quantity="one">%s</item>
+        <item quantity="other">%s</item>
+    </plurals>
+    <plurals name="_2130903370_res_0x7f03014a">
+        <item quantity="one">%s in progress</item>
+        <item quantity="other">%s in progress</item>
+    </plurals>
+    <plurals name="_2130903371_res_0x7f03014b">
+        <item quantity="one">%1$s year</item>
+        <item quantity="other">%1$s years</item>
+    </plurals>
+    <plurals name="_2130903372_res_0x7f03014c">
+        <item quantity="one">%1$s month</item>
+        <item quantity="other">%1$s months</item>
+    </plurals>
+    <plurals name="_2130903373_res_0x7f03014d">
+        <item quantity="one">%s stand hour today</item>
+        <item quantity="other">%s stand hours today</item>
+    </plurals>
+    <plurals name="_2130903374_res_0x7f03014e">
+        <item quantity="one">%s day</item>
+        <item quantity="other">%s days</item>
+    </plurals>
+    <plurals name="IDS_min_single_unit">
+        <item quantity="one">%s min</item>
+        <item quantity="other">%s min</item>
+    </plurals>
+    <plurals name="_2130903376_res_0x7f030150">
+        <item quantity="one">%s sec</item>
+        <item quantity="other">%s sec</item>
+    </plurals>
+    <plurals name="IDS_min_insert_unit">
+        <item quantity="one">%1$s min</item>
+        <item quantity="other">%1$s min</item>
+    </plurals>
+    <plurals name="_2130903378_res_0x7f030152">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="_2130903379_res_0x7f030153">
+        <item quantity="one">%s kcal/day</item>
+        <item quantity="other">%s kcal/day</item>
+    </plurals>
+    <plurals name="_2130903380_res_0x7f030154">
+        <item quantity="one">%s min/day</item>
+        <item quantity="other">%s min/day</item>
+    </plurals>
+    <plurals name="_2130903381_res_0x7f030155">
+        <item quantity="one">%s h/day</item>
+        <item quantity="other">%s h/day</item>
+    </plurals>
+    <plurals name="_2130903382_res_0x7f030156">
+        <item quantity="one">%s abnormality</item>
+        <item quantity="other">%s abnormalities</item>
+    </plurals>
+    <plurals name="_2130903383_res_0x7f030157">
+        <item quantity="one">%s check completed</item>
+        <item quantity="other">%s checks completed</item>
+    </plurals>
+    <plurals name="_2130903384_res_0x7f030158">
+        <item quantity="one">%s report</item>
+        <item quantity="other">%s reports</item>
+    </plurals>
+    <plurals name="_2130903385_res_0x7f030159">
+        <item quantity="one">%s kcal/day</item>
+        <item quantity="other">%s kcal/day</item>
+    </plurals>
+    <plurals name="IDS_hour_single_unit">
+        <item quantity="one">%1$s h</item>
+        <item quantity="other">%1$s h</item>
+    </plurals>
+    <plurals name="_2130903387_res_0x7f03015b">
+        <item quantity="one">%s kcal</item>
+        <item quantity="other">%s kcal</item>
+    </plurals>
+    <plurals name="_2130903388_res_0x7f03015c">
+        <item quantity="one">Exercise for another %s min to reach your Exercise goal.</item>
+        <item quantity="other">Exercise for another %s min to reach your Exercise goal.</item>
+    </plurals>
+    <plurals name="_2130903389_res_0x7f03015d">
+        <item quantity="one">Exercise for another %s min to reach your Exercise goal. Stay active!</item>
+        <item quantity="other">Exercise for another %s min to reach your Exercise goal. Stay active!</item>
+    </plurals>
+    <plurals name="_2130903390_res_0x7f03015e">
+        <item quantity="one">%s h away from your Stand goal. Remember to get up every hour.</item>
+        <item quantity="other">%s h away from your Stand goal. Remember to get up every hour.</item>
+    </plurals>
+    <plurals name="_2130903391_res_0x7f03015f">
+        <item quantity="one">%s task completed</item>
+        <item quantity="other">%s tasks completed</item>
+    </plurals>
+    <plurals name="_2130903392_res_0x7f030160">
+        <item quantity="other">%1$s %2$s-day streak</item>
+    </plurals>
+    <plurals name="_2130903393_res_0x7f030161">
+        <item quantity="other">%s</item>
+    </plurals>
+    <plurals name="_2130903394_res_0x7f030162">
+        <item quantity="other">%s multi-day streaks</item>
+    </plurals>
+    <plurals name="_2130903395_res_0x7f030163">
+        <item quantity="other">%s-day streak</item>
+    </plurals>
+    <plurals name="_2130903396_res_0x7f030164">
+        <item quantity="other">%s-day streak</item>
+    </plurals>
+    <plurals name="_2130903397_res_0x7f030165">
+        <item quantity="other">%1$s %2$s-day streak</item>
+    </plurals>
+    <plurals name="_2130903398_res_0x7f030166">
+        <item quantity="other">%s+day streak</item>
+    </plurals>
+    <plurals name="_2130903399_res_0x7f030167">
+        <item quantity="other">%s multi-day streaks</item>
+    </plurals>
+    <plurals name="_2130903400_res_0x7f030168">
+        <item quantity="one">&lt;b&gt;%1$s&lt;/b&gt; time</item>
+        <item quantity="other">&lt;b&gt;%1$s&lt;/b&gt; times</item>
+    </plurals>
+    <plurals name="_2130903401_res_0x7f030169">
+        <item quantity="one">%1$s dB</item>
+        <item quantity="other">%1$s dB</item>
+    </plurals>
+    <plurals name="_2130903402_res_0x7f03016a">
+        <item quantity="one">%1$s set</item>
+        <item quantity="other">%1$s sets</item>
+    </plurals>
+    <plurals name="_2130903403_res_0x7f03016b">
+        <item quantity="other">%s points</item>
+    </plurals>
+    <plurals name="_2130903404_res_0x7f03016c">
+        <item quantity="one">File transfer error. %1$d file couldn&apos;t be added. Retrying…</item>
+        <item quantity="other">File transfer error. %1$d files couldn&apos;t be added. Retrying…</item>
+    </plurals>
+    <plurals name="_2130903405_res_0x7f03016d">
+        <item quantity="one">%1$d–%2$d brpm</item>
+        <item quantity="other">%1$d–%2$d brpm</item>
+    </plurals>
+    <plurals name="_2130903406_res_0x7f03016e">
+        <item quantity="one">%s day left.</item>
+        <item quantity="other">%s days left.</item>
+    </plurals>
+    <plurals name="_2130903407_res_0x7f03016f">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+    <plurals name="_2130903408_res_0x7f030170">
+        <item quantity="one">%1$s exclusive gift</item>
+        <item quantity="other">%1$s exclusive gifts</item>
+    </plurals>
+    <plurals name="_2130903409_res_0x7f030171">
+        <item quantity="one">Avg Exercise %s min</item>
+        <item quantity="other">Avg Exercise %s min</item>
+    </plurals>
+    <plurals name="_2130903410_res_0x7f030172">
+        <item quantity="one">Avg Move %s kcal</item>
+        <item quantity="other">Avg Move %s kcal</item>
+    </plurals>
+    <plurals name="_2130903411_res_0x7f030173">
+        <item quantity="one">Avg Stand %s h</item>
+        <item quantity="other">Avg Stand %s h</item>
+    </plurals>
+    <plurals name="_2130903412_res_0x7f030174">
+        <item quantity="one">%s perfect ring this week</item>
+        <item quantity="other">%s perfect rings this week</item>
+    </plurals>
+    <plurals name="_2130903413_res_0x7f030175">
+        <item quantity="one">Distance %s km</item>
+        <item quantity="other">Distance %s km</item>
+    </plurals>
+    <plurals name="_2130903414_res_0x7f030176">
+        <item quantity="one">Distance %s mi</item>
+        <item quantity="other">Distance %s mi</item>
+    </plurals>
+    <plurals name="_2130903415_res_0x7f030177">
+        <item quantity="one">&lt;%s km</item>
+        <item quantity="other">&lt;%s km</item>
+    </plurals>
+    <plurals name="_2130903416_res_0x7f030178">
+        <item quantity="one">&lt;%s mi</item>
+        <item quantity="other">&lt;%s mi</item>
+    </plurals>
+    <plurals name="_2130903417_res_0x7f030179">
+        <item quantity="one">%1$s–%2$s km</item>
+        <item quantity="other">%1$s–%2$s km</item>
+    </plurals>
+    <plurals name="_2130903418_res_0x7f03017a">
+        <item quantity="one">%1$s–%2$s mi</item>
+        <item quantity="other">%1$s–%2$s mi</item>
+    </plurals>
+    <plurals name="_2130903419_res_0x7f03017b">
+        <item quantity="one">&gt;%s km</item>
+        <item quantity="other">&gt;%s km</item>
+    </plurals>
+    <plurals name="_2130903420_res_0x7f03017c">
+        <item quantity="one">&gt;%s mi</item>
+        <item quantity="other">&gt;%s mi</item>
+    </plurals>
+    <plurals name="_2130903421_res_0x7f03017d">
+        <item quantity="one">%d checkpoint</item>
+        <item quantity="other">%d checkpoints</item>
+    </plurals>
+    <plurals name="_2130903422_res_0x7f03017e">
+        <item quantity="one">%1$s person ran</item>
+        <item quantity="other">%1$s people ran</item>
+    </plurals>
+    <plurals name="_2130903423_res_0x7f03017f">
+        <item quantity="one">%1$d time</item>
+        <item quantity="other">%1$d times</item>
+    </plurals>
+    <plurals name="_2130903424_res_0x7f030180">
+        <item quantity="one">Online ranking: %s</item>
+        <item quantity="other">Online ranking: %s</item>
+    </plurals>
+    <plurals name="_2130903425_res_0x7f030181">
+        <item quantity="one">&lt;b&gt;%1$s&lt;/b&gt; point</item>
+        <item quantity="other">&lt;b&gt;%1$s&lt;/b&gt; points</item>
+    </plurals>
+    <plurals name="_2130903426_res_0x7f030182">
+        <item quantity="one">%sM</item>
+        <item quantity="other">%sM</item>
+    </plurals>
+    <plurals name="_2130903427_res_0x7f030183">
+        <item quantity="one">%sK</item>
+        <item quantity="other">%sK</item>
+    </plurals>
+    <plurals name="_2130903428_res_0x7f030184">
+        <item quantity="one">Select up to %1$d more.</item>
+        <item quantity="other">Select up to %1$d more.</item>
+    </plurals>
+    <plurals name="_2130903429_res_0x7f030185">
+        <item quantity="other">%1$s kcal (total)</item>
+    </plurals>
+    <plurals name="_2130903430_res_0x7f030186">
+        <item quantity="other">%1$s kcal (total)</item>
+    </plurals>
+    <plurals name="_2130903431_res_0x7f030187">
+        <item quantity="one">%1$d course</item>
+        <item quantity="other">%1$d courses</item>
+    </plurals>
+    <plurals name="_2130903432_res_0x7f030188">
+        <item quantity="one">%s ms</item>
+        <item quantity="other">%s ms</item>
+    </plurals>
+    <plurals name="_2130903433_res_0x7f030189">
+        <item quantity="one">%s bpm</item>
+        <item quantity="other">%s bpm</item>
+    </plurals>
+    <plurals name="_2130903434_res_0x7f03018a">
+        <item quantity="one">%1$s–%2$s bpm</item>
+        <item quantity="other">%1$s–%2$s bpm</item>
+    </plurals>
+    <plurals name="_2130903435_res_0x7f03018b">
+        <item quantity="one">%1$s–%2$s ms</item>
+        <item quantity="other">%1$s–%2$s ms</item>
+    </plurals>
+    <plurals name="_2130903436_res_0x7f03018c">
+        <item quantity="one">%s night</item>
+        <item quantity="other">%s nights</item>
+    </plurals>
+    <plurals name="_2130903437_res_0x7f03018d">
+        <item quantity="one">%s-year HUAWEI Health+ membership</item>
+        <item quantity="other">%s-year HUAWEI Health+ membership</item>
+    </plurals>
+    <plurals name="_2130903438_res_0x7f03018e">
+        <item quantity="one">%s-month HUAWEI Health+ membership</item>
+        <item quantity="other">%s-month HUAWEI Health+ membership</item>
+    </plurals>
+    <plurals name="_2130903439_res_0x7f03018f">
+        <item quantity="one">%s-day HUAWEI Health+ membership</item>
+        <item quantity="other">%s-day HUAWEI Health+ membership</item>
+    </plurals>
+    <plurals name="_2130903440_res_0x7f030190">
+        <item quantity="one">%1$s/%2$s mmHg</item>
+        <item quantity="other">%1$s/%2$s mmHg</item>
+    </plurals>
+    <plurals name="_2130903441_res_0x7f030191">
+        <item quantity="one">%s brpm</item>
+        <item quantity="other">%s brpm</item>
+    </plurals>
+    <plurals name="_2130903442_res_0x7f030192">
+        <item quantity="one">%1$s–%2$s brpm</item>
+        <item quantity="other">%1$s–%2$s brpm</item>
+    </plurals>
+    <plurals name="_2130903443_res_0x7f030193">
+        <item quantity="other">Goal: %s mi</item>
+    </plurals>
+    <plurals name="_2130903444_res_0x7f030194">
+        <item quantity="other">Goal: %s km</item>
+    </plurals>
+    <plurals name="_2130903445_res_0x7f030195">
+        <item quantity="other">Goal: %s min</item>
+    </plurals>
+    <plurals name="_2130903446_res_0x7f030196">
+        <item quantity="other">Goal: %s kcal</item>
+    </plurals>
+    <plurals name="_2130903447_res_0x7f030197">
+        <item quantity="one">Heart rate %s bpm</item>
+        <item quantity="other">Heart rate %s bpm</item>
+    </plurals>
+    <plurals name="_2130903448_res_0x7f030198">
+        <item quantity="one">HRV %s ms</item>
+        <item quantity="other">HRV %s ms</item>
+    </plurals>
+    <plurals name="_2130903449_res_0x7f030199">
+        <item quantity="one">%1$s almost ready. Keep using the Health app for %2$s more day.</item>
+        <item quantity="other">%1$s almost ready. Keep using the Health app for %2$s more days in a row.</item>
+    </plurals>
+    <plurals name="_2130903450_res_0x7f03019a">
+        <item quantity="one">%1$s almost ready. Keep your wearable on for %2$s more day.</item>
+        <item quantity="other">%1$s almost ready. Keep your wearable on for %2$s more days in a row.</item>
+    </plurals>
+    <plurals name="_2130903451_res_0x7f03019b">
+        <item quantity="one">%s</item>
+        <item quantity="other">%s</item>
+    </plurals>
+    <plurals name="_2130903452_res_0x7f03019c">
+        <item quantity="one">Drank %s cup</item>
+        <item quantity="other">Drank %s cups</item>
+    </plurals>
+    <plurals name="_2130903453_res_0x7f03019d">
+        <item quantity="one">%s cup in total</item>
+        <item quantity="other">%s cups in total</item>
+    </plurals>
+    <plurals name="_2130903454_res_0x7f03019e">
+        <item quantity="one">Messages, %s unread</item>
+        <item quantity="other">Messages, %s unread</item>
+    </plurals>
+    <plurals name="_2130903455_res_0x7f03019f">
+        <item quantity="one">Exercise duration, %s minute</item>
+        <item quantity="other">Exercise duration, %s minutes</item>
+    </plurals>
+    <plurals name="_2130903456_res_0x7f0301a0">
+        <item quantity="one">Burned %s kilocalorie</item>
+        <item quantity="other">Burned %s kilocalories</item>
+    </plurals>
+    <plurals name="_2130903457_res_0x7f0301a1">
+        <item quantity="one">Goal progress, %1$d out of %2$d steps, progress %3$s</item>
+        <item quantity="other">Goal progress, %1$d out of %2$d steps, progress %3$s</item>
+    </plurals>
+    <plurals name="_2130903458_res_0x7f0301a2">
+        <item quantity="one">Goal progress, %1$d out of %2$d kilocalories, progress %3$s</item>
+        <item quantity="other">Goal progress, %1$d out of %2$d kilocalories, progress %3$s</item>
+    </plurals>
+    <plurals name="_2130903459_res_0x7f0301a3">
+        <item quantity="one">Goal progress, %1$d out of %2$d minutes, progress %3$s</item>
+        <item quantity="other">Goal progress, %1$d out of %2$d minutes, progress %3$s</item>
+    </plurals>
+    <plurals name="_2130903460_res_0x7f0301a4">
+        <item quantity="one">Recent avg RHR: %1$s bpm</item>
+        <item quantity="other">Recent avg RHR: %1$s bpm</item>
+    </plurals>
+    <plurals name="_2130903461_res_0x7f0301a5">
+        <item quantity="one">RHR high last %1$s day</item>
+        <item quantity="other">RHR high last %1$s days</item>
+    </plurals>
+    <plurals name="_2130903462_res_0x7f0301a6">
+        <item quantity="one">%1$d route</item>
+        <item quantity="other">%1$d routes</item>
+    </plurals>
+    <plurals name="_2130903463_res_0x7f0301a7">
+        <item quantity="one">High suspected premature beat ratio on %1$s day</item>
+        <item quantity="other">High suspected premature beat ratio on %1$s days</item>
+    </plurals>
+    <plurals name="_2130903464_res_0x7f0301a8">
+        <item quantity="one">Equivalent to lighting %1$s bulb (%2$s W each) at the same time</item>
+        <item quantity="other">Equivalent to lighting %1$s bulbs (%2$s W each) at the same time</item>
+    </plurals>
+    <plurals name="_2130903465_res_0x7f0301a9">
+        <item quantity="one">%s\nAbnormality</item>
+        <item quantity="other">%s\nAbnormalities</item>
+    </plurals>
+    <plurals name="_2130903466_res_0x7f0301aa">
+        <item quantity="one">%s\nChange</item>
+        <item quantity="other">%s\nChanges</item>
+    </plurals>
+    <plurals name="_2130903467_res_0x7f0301ab">
+        <item quantity="one">%s\nAnalysis</item>
+        <item quantity="other">%s\nAnalyses</item>
+    </plurals>
+    <plurals name="_2130903468_res_0x7f0301ac">
+        <item quantity="one">%1$s\nSession</item>
+        <item quantity="other">%1$s\nSessions</item>
+    </plurals>
+    <plurals name="_2130903469_res_0x7f0301ad">
+        <item quantity="one">%d</item>
+        <item quantity="other">%d</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_1">
+        <item quantity="one">Just %1$d step away. Keep it up!</item>
+        <item quantity="other">Just %1$d steps away. Keep it up!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_2">
+        <item quantity="one">Just %1$d step away from your goal!</item>
+        <item quantity="other">Just %1$d steps away from your goal!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_3">
+        <item quantity="one">Just %1$d step away. You can do it!</item>
+        <item quantity="other">Just %1$d steps away. You can do it!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_4">
+        <item quantity="one">Just %1$d step away. You&apos;re close!</item>
+        <item quantity="other">Just %1$d steps away. You&apos;re close!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_5">
+        <item quantity="one">Today&apos;s goal is just %1$d step away!</item>
+        <item quantity="other">Today&apos;s goal is just %1$d steps away!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_6">
+        <item quantity="one">%1$d step away to your goal</item>
+        <item quantity="other">%1$d steps away to your goal</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_7">
+        <item quantity="one">%1$d step to go</item>
+        <item quantity="other">%1$d steps to go</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_1">
+        <item quantity="one">Achieved %1$d-day streak.</item>
+        <item quantity="other">Achieved %1$d-day streak.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_1_over_30_days">
+        <item quantity="one">Achieved for more than %1$d day in a row.</item>
+        <item quantity="other">Achieved for more than %1$d days in a row.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_2">
+        <item quantity="one">Completed for %1$d day.</item>
+        <item quantity="other">Completed for %1$d consecutive days.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_2_over_30_days">
+        <item quantity="one">Completed for more than %1$d consecutive day.</item>
+        <item quantity="other">Completed for more than %1$d consecutive days.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_3">
+        <item quantity="one">%1$d-day streak. Check out your step count.</item>
+        <item quantity="other">%1$d-day streak. Check out your step count.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_3_over_30_days">
+        <item quantity="one">Achieved for more than %1$d day in a row. Check out your step count.</item>
+        <item quantity="other">Achieved for more than %1$d days in a row. Check out your step count.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_4">
+        <item quantity="one">Your %1$d-day record has continued.</item>
+        <item quantity="other">Your %1$d-day record has continued.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_4_over_30_days">
+        <item quantity="one">Your record has continued for more than %1$d day.</item>
+        <item quantity="other">Your record has continued for more than %1$d days.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_5">
+        <item quantity="one">Achieved goal for %1$d day.</item>
+        <item quantity="other">Achieved goal %1$d days in a row.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_5_over_30_days">
+        <item quantity="one">Achieved goal for more than %1$d day in a row.</item>
+        <item quantity="other">Achieved goal for more than %1$d days in a row.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_6">
+        <item quantity="one">Amazing! %1$d-day streak.</item>
+        <item quantity="other">Amazing! %1$d-day streak.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_6_over_30_days">
+        <item quantity="one">Amazing! Continuous streak for more than %1$d day.</item>
+        <item quantity="other">Amazing! Continuous streak for more than %1$d days.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_7">
+        <item quantity="one">Maintained %1$d-day streak!</item>
+        <item quantity="other">Maintained %1$d-day streak!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_7_over_30_days">
+        <item quantity="one">Maintained streak for more than %1$d day!</item>
+        <item quantity="other">Maintained streak for more than %1$d days!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_1">
+        <item quantity="one">%1$d-day streak! Why not keep going?</item>
+        <item quantity="other">%1$d-day streak! Why not keep going?</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_1_over_30_days">
+        <item quantity="one">Streak for more than %1$d day! Why not keep going?</item>
+        <item quantity="other">Streak for more than %1$d days! Why not keep going?</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_2">
+        <item quantity="one">%1$d-day streak! Stay on track today.</item>
+        <item quantity="other">%1$d-day streak! Stay on track today.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_2_over_30_days">
+        <item quantity="one">Streak for more than %1$d day! Keep it going today.</item>
+        <item quantity="other">Streak for more than %1$d days! Keep it going today.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_3">
+        <item quantity="one">Achieved goal for %1$d day. Keep it up!</item>
+        <item quantity="other">Achieved goal for %1$d days in a row. Keep it up!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_3_over_30_days">
+        <item quantity="one">Achieved goal for more than %1$d day in a row. Keep it up!</item>
+        <item quantity="other">Achieved goal for more than %1$d days in a row. Keep it up!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_5">
+        <item quantity="one">%1$d-day streak. Keep pushing forward!</item>
+        <item quantity="other">%1$d-day streak. Keep pushing forward!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_5_over_30_days">
+        <item quantity="one">Streak for more than %1$d day. Keep it going!</item>
+        <item quantity="other">Streak for more than %1$d days. Keep it going!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_6_p1">
+        <item quantity="one">Keep it up for %1$d more day</item>
+        <item quantity="other">Keep it up for %1$d more days</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_6_p2">
+        <item quantity="one">Just %1$d step away</item>
+        <item quantity="other">Just %1$d steps away</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_7">
+        <item quantity="one">Maintained %1$d-day streak! Hang in there.</item>
+        <item quantity="other">Maintained %1$d-day streak! Hang in there.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_7_over_30_days">
+        <item quantity="one">Streak maintained for more than %1$d day! Keep it up.</item>
+        <item quantity="other">Streak maintained for more than %1$d days! Keep it up.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_low_step_1">
+        <item quantity="one">Daily step count recently was %1$d.</item>
+        <item quantity="other">Daily step count recently was %1$d.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_low_step_2_p2">
+        <item quantity="one">Walked %1$d step/day</item>
+        <item quantity="other">Walked %1$d steps/day</item>
+    </plurals>
+    <plurals name="_2130903505_res_0x7f0301d1">
+        <item quantity="one">%1$d W</item>
+        <item quantity="other">%1$d W</item>
+    </plurals>
+    <plurals name="_2130903506_res_0x7f0301d2">
+        <item quantity="one">%1$s/%2$s Goal reached</item>
+        <item quantity="other">%1$s/%2$s Goals reached</item>
+    </plurals>
+    <plurals name="_2130903507_res_0x7f0301d3">
+        <item quantity="one">kcal/day</item>
+        <item quantity="other">kcal/day</item>
+    </plurals>
+    <plurals name="_2130903508_res_0x7f0301d4">
+        <item quantity="one">min/day</item>
+        <item quantity="other">min/day</item>
+    </plurals>
+    <plurals name="_2130903509_res_0x7f0301d5">
+        <item quantity="one">h/day</item>
+        <item quantity="other">h/day</item>
+    </plurals>
+    <plurals name="_2130903510_res_0x7f0301d6">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="_2130903511_res_0x7f0301d7">
+        <item quantity="one">%d day left</item>
+        <item quantity="other">%d days left</item>
+    </plurals>
+    <plurals name="_2130903512_res_0x7f0301d8">
+        <item quantity="one">%d hour left</item>
+        <item quantity="other">%d hours left</item>
+    </plurals>
+    <plurals name="_2130903513_res_0x7f0301d9">
+        <item quantity="one">%d min left</item>
+        <item quantity="other">%d min left</item>
+    </plurals>
+    <plurals name="_2130903514_res_0x7f0301da">
+        <item quantity="one">Mark every %s km</item>
+        <item quantity="other">Mark every %s km</item>
+    </plurals>
+    <plurals name="_2130903515_res_0x7f0301db">
+        <item quantity="one">%1$s km/h</item>
+        <item quantity="other">%1$s km/h</item>
+    </plurals>
+    <plurals name="_2130903516_res_0x7f0301dc">
+        <item quantity="one">%s kg</item>
+        <item quantity="other">%s kg</item>
+    </plurals>
+    <plurals name="_2130903517_res_0x7f0301dd">
+        <item quantity="one">%s lb</item>
+        <item quantity="other">%s lbs</item>
+    </plurals>
+    <plurals name="_2130903518_res_0x7f0301de">
+        <item quantity="one">Level %s</item>
+        <item quantity="other">Level %s</item>
+    </plurals>
+    <plurals name="_2130903519_res_0x7f0301df">
+        <item quantity="one">%s kg/m²</item>
+        <item quantity="other">%s kg/m²</item>
+    </plurals>
+    <plurals name="_2130903520_res_0x7f0301e0">
+        <item quantity="one">%s kcal/day</item>
+        <item quantity="other">%s kcal/day</item>
+    </plurals>
+    <plurals name="_2130903521_res_0x7f0301e1">
+        <item quantity="one">%s bpm</item>
+        <item quantity="other">%s bpm</item>
+    </plurals>
+    <plurals name="_2130903522_res_0x7f0301e2">
+        <item quantity="one">%s cm</item>
+        <item quantity="other">%s cm</item>
+    </plurals>
+    <plurals name="_2130903523_res_0x7f0301e3">
+        <item quantity="one">%s in</item>
+        <item quantity="other">%s in</item>
+    </plurals>
+    <plurals name="_2130903524_res_0x7f0301e4">
+        <item quantity="one">%1$d time</item>
+        <item quantity="other">%1$d times</item>
+    </plurals>
+    <plurals name="_2130903525_res_0x7f0301e5">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="_2130903526_res_0x7f0301e6">
+        <item quantity="one">%1$s day</item>
+        <item quantity="other">%1$s days</item>
+    </plurals>
+    <plurals name="_2130903527_res_0x7f0301e7">
+        <item quantity="one">%1$s month</item>
+        <item quantity="other">%1$s months</item>
+    </plurals>
+    <plurals name="_2130903528_res_0x7f0301e8">
+        <item quantity="one">%1$s year</item>
+        <item quantity="other">%1$s years</item>
+    </plurals>
+    <plurals name="_2130903529_res_0x7f0301e9">
+        <item quantity="one">%1$s floor</item>
+        <item quantity="other">%1$s floors</item>
+    </plurals>
+    <plurals name="_2130903530_res_0x7f0301ea">
+        <item quantity="one">%1$s floor/min</item>
+        <item quantity="other">%1$s floors/min</item>
+    </plurals>
+    <plurals name="_2130903531_res_0x7f0301eb">
+        <item quantity="one">%1$s km/h</item>
+        <item quantity="other">%1$s km/h</item>
+    </plurals>
+    <plurals name="_2130903532_res_0x7f0301ec">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="_2130903533_res_0x7f0301ed">
+        <item quantity="one">%1$s kg</item>
+        <item quantity="other">%1$s kg</item>
+    </plurals>
+    <plurals name="_2130903534_res_0x7f0301ee">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="_2130903535_res_0x7f0301ef">
+        <item quantity="one">%1$d question</item>
+        <item quantity="other">%1$d questions</item>
+    </plurals>
+    <plurals name="_2130903536_res_0x7f0301f0">
+        <item quantity="one">Taken by %1$s users</item>
+        <item quantity="other">Taken by %1$s users</item>
+    </plurals>
+    <plurals name="_2130903537_res_0x7f0301f1">
+        <item quantity="one">This week %s step/day</item>
+        <item quantity="other">This week %s steps/day</item>
+    </plurals>
+    <plurals name="_2130903538_res_0x7f0301f2">
+        <item quantity="one">Last week %s step/day</item>
+        <item quantity="other">Last week %s steps/day</item>
+    </plurals>
+    <plurals name="_2130903539_res_0x7f0301f3">
+        <item quantity="one">This week %s step/day</item>
+        <item quantity="other">This week %s steps/day</item>
+    </plurals>
+    <plurals name="_2130903540_res_0x7f0301f4">
+        <item quantity="one">Last week %s step/day</item>
+        <item quantity="other">Last week %s steps/day</item>
+    </plurals>
+    <plurals name="_2130903541_res_0x7f0301f5">
+        <item quantity="one">This week %s min/day</item>
+        <item quantity="other">This week %s min/day</item>
+    </plurals>
+    <plurals name="_2130903542_res_0x7f0301f6">
+        <item quantity="one">Last week %s min/day</item>
+        <item quantity="other">Last week %s min/day</item>
+    </plurals>
+    <plurals name="_2130903543_res_0x7f0301f7">
+        <item quantity="one">This week %s min/day</item>
+        <item quantity="other">This week %s min/day</item>
+    </plurals>
+    <plurals name="_2130903544_res_0x7f0301f8">
+        <item quantity="one">Last week %s min/day</item>
+        <item quantity="other">Last week %s min/day</item>
+    </plurals>
+    <plurals name="_2130903545_res_0x7f0301f9">
+        <item quantity="one">Today %s h</item>
+        <item quantity="other">Today %s h</item>
+    </plurals>
+    <plurals name="_2130903546_res_0x7f0301fa">
+        <item quantity="one">Yesterday %s h</item>
+        <item quantity="other">Yesterday %s h</item>
+    </plurals>
+    <plurals name="_2130903547_res_0x7f0301fb">
+        <item quantity="one">Today %s h</item>
+        <item quantity="other">Today %s h</item>
+    </plurals>
+    <plurals name="_2130903548_res_0x7f0301fc">
+        <item quantity="one">Yesterday %s h</item>
+        <item quantity="other">Yesterday %s h</item>
+    </plurals>
+    <plurals name="_2130903549_res_0x7f0301fd">
+        <item quantity="one">%1$d kcal/day</item>
+        <item quantity="other">%1$d kcal/day</item>
+    </plurals>
+    <plurals name="_2130903550_res_0x7f0301fe">
+        <item quantity="one">%1$d kcal</item>
+        <item quantity="other">%1$d kcal</item>
+    </plurals>
+    <plurals name="_2130903551_res_0x7f0301ff">
+        <item quantity="one">%1$d kg</item>
+        <item quantity="other">%1$d kg</item>
+    </plurals>
+    <plurals name="_2130903552_res_0x7f030200">
+        <item quantity="one">%1$d half-kilo</item>
+        <item quantity="other">%1$d half-kilos</item>
+    </plurals>
+    <plurals name="_2130903553_res_0x7f030201">
+        <item quantity="one">%1$d lb</item>
+        <item quantity="other">%1$d lbs</item>
+    </plurals>
+    <plurals name="_2130903554_res_0x7f030202">
+        <item quantity="one">%d course waiting for you</item>
+        <item quantity="other">%d courses waiting for you</item>
+    </plurals>
+    <plurals name="_2130903555_res_0x7f030203">
+        <item quantity="one">%d course left</item>
+        <item quantity="other">%d courses left</item>
+    </plurals>
+    <plurals name="_2130903556_res_0x7f030204">
+        <item quantity="one">%2$s task (%1$s) completed</item>
+        <item quantity="other">%2$s tasks (i.e. %1$s) completed</item>
+    </plurals>
+    <plurals name="_2130903557_res_0x7f030205">
+        <item quantity="one">%s chapter</item>
+        <item quantity="other">%s chapters</item>
+    </plurals>
+    <plurals name="_2130903558_res_0x7f030206">
+        <item quantity="one">%s step</item>
+        <item quantity="other">%s steps</item>
+    </plurals>
+    <plurals name="IDS_minute_no_space">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="_2130903560_res_0x7f030208">
+        <item quantity="other">%d</item>
+    </plurals>
+    <plurals name="_2130903561_res_0x7f030209">
+        <item quantity="one">%sL</item>
+        <item quantity="other">%sL</item>
+    </plurals>
+    <plurals name="_2130903562_res_0x7f03020a">
+        <item quantity="one">%d</item>
+        <item quantity="other">%d</item>
+    </plurals>
+    <plurals name="_2130903563_res_0x7f03020b">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="_2130903564_res_0x7f03020c">
+        <item quantity="one">%1$s/%2$s mmHg</item>
+        <item quantity="other">%1$s/%2$s mmHg</item>
+    </plurals>
+    <plurals name="IDS_day_no_space">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="_2130903566_res_0x7f03020e">
+        <item quantity="one">Week %d</item>
+        <item quantity="other">Week %d</item>
+    </plurals>
+    <plurals name="_2130903567_res_0x7f03020f">
+        <item quantity="one">%s person is participating</item>
+        <item quantity="other">%s people are participating</item>
+    </plurals>
+    <plurals name="_2130903568_res_0x7f030210">
+        <item quantity="one">%1$s day</item>
+        <item quantity="other">%1$s days</item>
+    </plurals>
+    <plurals name="_2130903569_res_0x7f030211">
+        <item quantity="one">%1$s exercise</item>
+        <item quantity="other">%1$s exercises</item>
+    </plurals>
+    <plurals name="_2130903573_res_0x7f030215">
+        <item quantity="one">%1$s kcal</item>
+        <item quantity="other">%1$s kcal</item>
+    </plurals>
+    <plurals name="_2130903574_res_0x7f030216">
+        <item quantity="one">%1$s sec</item>
+        <item quantity="other">%1$s sec</item>
+    </plurals>
+    <plurals name="_2130903575_res_0x7f030217">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="_2130903576_res_0x7f030218">
+        <item quantity="one">Trained %d time</item>
+        <item quantity="other">Trained %d times</item>
+    </plurals>
+    <plurals name="_2130903577_res_0x7f030219">
+        <item quantity="one">Running days (aim for %1$d)</item>
+        <item quantity="other">Running days (aim for %1$d)</item>
+    </plurals>
+    <plurals name="_2130903578_res_0x7f03021a">
+        <item quantity="one">Strength days (aim for %1$d)</item>
+        <item quantity="other">Strength days (aim for %1$d)</item>
+    </plurals>
+    <plurals name="_2130903579_res_0x7f03021b">
+        <item quantity="one">%1$d set</item>
+        <item quantity="other">%1$d sets</item>
+    </plurals>
+    <plurals name="_2130903580_res_0x7f03021c">
+        <item quantity="one">%1$s/%2$s day</item>
+        <item quantity="other">%1$s/%2$s days</item>
+    </plurals>
+    <plurals name="_2130903581_res_0x7f03021d">
+        <item quantity="other">%sK people have done this course. You can too!</item>
+    </plurals>
+    <plurals name="_2130903582_res_0x7f03021e">
+        <item quantity="one">%1$d–%2$d bpm</item>
+        <item quantity="other">%1$d–%2$d bpm</item>
+    </plurals>
+    <plurals name="_2130903583_res_0x7f03021f">
+        <item quantity="one">%1$s MB</item>
+        <item quantity="other">%1$s MB</item>
+    </plurals>
+    <plurals name="_2130903584_res_0x7f030220">
+        <item quantity="one">%1$s week</item>
+        <item quantity="other">%1$s weeks</item>
+    </plurals>
+    <plurals name="_2130903585_res_0x7f030221">
+        <item quantity="one">%1$s person</item>
+        <item quantity="other">%1$s people</item>
+    </plurals>
+    <plurals name="_2130903586_res_0x7f030222">
+        <item quantity="one">%1$s kg</item>
+        <item quantity="other">%1$s kg</item>
+    </plurals>
+    <plurals name="_2130903587_res_0x7f030223">
+        <item quantity="one">%1$s lb</item>
+        <item quantity="other">%1$s lbs</item>
+    </plurals>
+    <plurals name="_2130903588_res_0x7f030224">
+        <item quantity="one">%d session completed</item>
+        <item quantity="other">%d sessions completed</item>
+    </plurals>
+    <plurals name="_2130903589_res_0x7f030225">
+        <item quantity="one">%s training day</item>
+        <item quantity="other">%s training days</item>
+    </plurals>
+    <plurals name="_2130903590_res_0x7f030226">
+        <item quantity="one">%s training day</item>
+        <item quantity="other">%s training days</item>
+    </plurals>
+    <plurals name="_2130903591_res_0x7f030227">
+        <item quantity="one">%1$s play</item>
+        <item quantity="other">%1$s plays</item>
+    </plurals>
+    <plurals name="_2130903592_res_0x7f030228">
+        <item quantity="one">Touch and drag to reorder your schedule for the next %1$d day.</item>
+        <item quantity="other">Touch and drag to reorder your schedule for the next %1$d days.</item>
+    </plurals>
+    <plurals name="_2130903593_res_0x7f030229">
+        <item quantity="one">%d min</item>
+        <item quantity="other">%d min</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d step</item>
+        <item quantity="other">%d steps</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s mi</item>
+        <item quantity="other">%s mi</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s km</item>
+        <item quantity="other">%s km</item>
+    </plurals>
+    <plurals name="_2130903597_res_0x7f03022d">
+        <item quantity="one">%d</item>
+        <item quantity="other">%d</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">%1$s step away</item>
+        <item quantity="other">%1$s steps away</item>
+    </plurals>
+    <plurals name="_2130903599_res_0x7f03022f">
+        <item quantity="one">%1$d (field)</item>
+        <item quantity="other">%1$d (fields)</item>
+    </plurals>
+    <plurals name="_2130903600_res_0x7f030230">
+        <item quantity="one">%1$d time</item>
+        <item quantity="other">%1$d times</item>
+    </plurals>
+    <plurals name="_2130903601_res_0x7f030231">
+        <item quantity="one">day</item>
+        <item quantity="other">days</item>
+    </plurals>
+    <plurals name="_2130903602_res_0x7f030232">
+        <item quantity="one">hour</item>
+        <item quantity="other">hours</item>
+    </plurals>
+    <plurals name="_2130903603_res_0x7f030233">
+        <item quantity="one">minute</item>
+        <item quantity="other">minutes</item>
+    </plurals>
+    <plurals name="_2130903604_res_0x7f030234">
+        <item quantity="one">second</item>
+        <item quantity="other">seconds</item>
+    </plurals>
+    <plurals name="_2130903605_res_0x7f030235">
+        <item quantity="one">%1$s jump</item>
+        <item quantity="other">%1$s jumps</item>
+    </plurals>
+    <plurals name="_2130903606_res_0x7f030236">
+        <item quantity="other">%1$d file was transferred success,%2$d file was transferred fail.</item>
+    </plurals>
+    <plurals name="_2130903608_res_0x7f030238">
+        <item quantity="other">%s kcal</item>
+    </plurals>
+    <plurals name="_2130903611_res_0x7f03023b">
+        <item quantity="one">%1$s ft/s²</item>
+        <item quantity="other">%1$s ft/s²</item>
+    </plurals>
+    <plurals name="_2130903612_res_0x7f03023c">
+        <item quantity="one">%1$s m/s²</item>
+        <item quantity="other">%1$s m/s²</item>
+    </plurals>
+    <plurals name="_2130903614_res_0x7f03023e">
+        <item quantity="one">Completed all 3 rings\n%d day</item>
+        <item quantity="other">Completed all 3 rings\n%d days in a row</item>
+    </plurals>
+    <plurals name="_2130903615_res_0x7f03023f">
+        <item quantity="one">%d image has been saved to Gallery. Go to your WeChat Moments to share it.</item>
+        <item quantity="other">%d images have been saved to Gallery. Go to your WeChat Moments to share them.</item>
+    </plurals>
+    <plurals name="_2130903616_res_0x7f030240">
+        <item quantity="other">%1$s cm</item>
+    </plurals>
+    <plurals name="_2130903617_res_0x7f030241">
+        <item quantity="other">%1$s kg</item>
+    </plurals>
+    <plurals name="_2130903618_res_0x7f030242">
+        <item quantity="other">Excessive exercise can lead to injury. Try not to jump more than %1$s times in a session.</item>
+    </plurals>
+    <plurals name="_2130903619_res_0x7f030243">
+        <item quantity="other">Excessive exercise can lead to injury. Try not to exercise for more than %1$s hours at a time.</item>
+    </plurals>
+    <plurals name="_2130903620_res_0x7f030244">
+        <item quantity="other">%1$d bpm</item>
+    </plurals>
+    <plurals name="_2130903621_res_0x7f030245">
+        <item quantity="other">%1$dBPM</item>
+    </plurals>
+    <plurals name="_2130903622_res_0x7f030246">
+        <item quantity="one">(%1$d song)</item>
+        <item quantity="other">(%1$d songs)</item>
+    </plurals>
+    <plurals name="_2130903623_res_0x7f030247">
+        <item quantity="one">Fast forward %d second</item>
+        <item quantity="other">Fast forward %d seconds</item>
+    </plurals>
+    <plurals name="_2130903624_res_0x7f030248">
+        <item quantity="one">Rewind %d second</item>
+        <item quantity="other">Rewind %d seconds</item>
+    </plurals>
+    <plurals name="_2130903626_res_0x7f03024a">
+        <item quantity="one">Description must be at least %d character long. Add screenshots if possible.</item>
+        <item quantity="other">Description must be at least %d characters long. Add screenshots if possible.</item>
+    </plurals>
+    <plurals name="_2130903627_res_0x7f03024b">
+        <item quantity="one">Ad can be closed in %ds</item>
+        <item quantity="other">Ad can be closed in %ds</item>
+    </plurals>
+    <plurals name="_2130903628_res_0x7f03024c">
+        <item quantity="one">Remember choice for %1$s day</item>
+        <item quantity="other">Remember choice for %1$s days</item>
+    </plurals>
+    <plurals name="_2130903629_res_0x7f03024d">
+        <item quantity="one">Earn a reward in %ds</item>
+        <item quantity="other">Earn a reward in %ds</item>
+    </plurals>
+    <plurals name="_2130903630_res_0x7f03024e">
+        <item quantity="one">Watch for %d second to earn a reward.</item>
+        <item quantity="other">Watch for %d seconds to earn a reward.</item>
+    </plurals>
+    <plurals name="_2130903631_res_0x7f03024f">
+        <item quantity="one">%1$d sec</item>
+        <item quantity="other">%1$d sec</item>
+    </plurals>
+    <plurals name="_2130903632_res_0x7f030250">
+        <item quantity="one">%d new notification</item>
+        <item quantity="other">%d new notifications</item>
+    </plurals>
+    <plurals name="_2130903633_res_0x7f030251">
+        <item quantity="zero">Page %1$d</item>
+        <item quantity="one">Page %1$d</item>
+        <item quantity="two">Page %1$d</item>
+        <item quantity="many">Page %1$d</item>
+        <item quantity="other">Page %1$d</item>
+    </plurals>
+    <plurals name="_2130903634_res_0x7f030252">
+        <item quantity="one">Unable to save %1$d background.</item>
+        <item quantity="other">Unable to save %1$d backgrounds.</item>
+    </plurals>
+    <plurals name="_2130903635_res_0x7f030253">
+        <item quantity="zero">You have registered for the beta test. You will be able to join the BeiDou Satellite Messaging beta test after you pass the review. The review process takes %1$d working day.</item>
+        <item quantity="one">You can join the BeiDou Satellite Messaging beta test after your application passes review. This may take %1$d working day.</item>
+        <item quantity="two">You have registered for the beta test. You will be able to join the BeiDou Satellite Messaging beta test after you pass the review. The review process takes %1$d working days.</item>
+        <item quantity="few">You have registered for the beta test. You will be able to join the BeiDou Satellite Messaging beta test after you pass the review. The review process takes %1$d working days.</item>
+        <item quantity="many">You have registered for the beta test. You will be able to join the BeiDou Satellite Messaging beta test after you pass the review. The review process takes %1$d working days.</item>
+        <item quantity="other">You can join the BeiDou Satellite Messaging beta test after your application passes review. This may take %1$d working days.</item>
+    </plurals>
+    <plurals name="_2130903636_res_0x7f030254">
+        <item quantity="zero">of %1$d</item>
+        <item quantity="one">of %1$d</item>
+        <item quantity="two">of %1$d</item>
+        <item quantity="many">of %1$d</item>
+        <item quantity="other">of %1$d</item>
+    </plurals>
+    <plurals name="_2130903637_res_0x7f030255">
+        <item quantity="zero">You&apos;ve registered for the beta test. The review will take %1$d working day. You will be notified via text message after passing the review.</item>
+        <item quantity="one">You&apos;ve registered for the beta test, and will be notified via SMS with the results. The review takes %1$d working day.</item>
+        <item quantity="two">You&apos;ve registered for the beta test. The review will take %1$d working days. You will be notified via text message after passing the review.</item>
+        <item quantity="few">You&apos;ve registered for the beta test. The review will take %1$d working days. You will be notified via text message after passing the review.</item>
+        <item quantity="many">You&apos;ve registered for the beta test. The review will take %1$d working days. You will be notified via text message after passing the review.</item>
+        <item quantity="other">You&apos;ve registered for the beta test, and will be notified via SMS with the results. The review takes %1$d working days.</item>
+    </plurals>
+    <plurals name="_2130903638_res_0x7f030256">
+        <item quantity="one">Selected %ds</item>
+        <item quantity="other">Selected %ds</item>
+    </plurals>
+</resources>

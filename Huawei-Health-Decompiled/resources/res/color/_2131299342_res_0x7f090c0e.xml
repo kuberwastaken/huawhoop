@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        state_checked="true"
+        color="?attr/_2131099988_res_0x7f060154"
+        alpha="0.08"/>
+    <item
+        color="?attr/_2131099982_res_0x7f06014e"
+        alpha="0.08"
+        NOT_FOUND_0x3="true"/>
+    <item
+        state_checked="false"
+        color="@android:color/transparent"
+        NOT_FOUND_0x3="false"/>
+</selector>

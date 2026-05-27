@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<config>
+    <dict>
+        <string key="ODSA_ESURL">https://ses-prod.turkcell.com.tr:10024/resources</string>
+        <string key="ODSA_PROTOCOL">2</string>
+        <string key="ODSA_ES_VERSION">5</string>
+        <bool key="ODSA_SIMPLE_VERS">true</bool>
+        <bool key="ODSA_SUPPORT_NOTIFICATION_SERVICE">false</bool>
+        <bool key="ODSA_CHECK_COMPANION_DEVICE_SERVICES">true</bool>
+        <bool key="ODSA_ADD_COMPANION_INFO">true</bool>
+        <bool key="ODSA_SUPPORT_URL_ENCODER_TOKEN">true</bool>
+        <bool key="ODSA_SUPPORT_DYNAMIC_LOAD_WEBVIEW">true</bool>
+        <bool key="ODSA_SUPPORT_CHANGE_MANAGE_SUBSCRIPTION">true</bool>
+        <bool key="OIDC_SUPPORT_SPECIFY_LANGUAGE">true</bool>
+    </dict>
+</config>

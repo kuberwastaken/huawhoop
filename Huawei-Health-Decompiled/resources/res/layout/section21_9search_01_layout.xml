@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <RelativeLayout
+        orientation="0"
+        layout_width="-1"
+        layout_height="-2">
+        <com.huawei.ui.commonui.subheader.HealthSubHeader
+            id="@+id/section21_9_search_01_sub_header"
+            layout_width="-2"
+            layout_height="-2"
+            layout_alignParentStart="true"
+            NOT_FOUND_0x12="false"
+            NOT_FOUND_0x13="2"
+            NOT_FOUND_0x14=" "/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365486_res_0x7f0a0e6e"
+            textColor="@color/_2131296661_res_0x7f090195"
+            id="@+id/section21_9search_01_right_button"
+            paddingBottom="@dimen/_2131364497_res_0x7f0a0a91"
+            visibility="2"
+            layout_width="-2"
+            layout_height="-2"
+            layout_alignParentBottom="true"
+            fontFamily="@string/_2130852833_res_0x7f023be1"
+            layout_marginEnd="@dimen/_2131364900_res_0x7f0a0c24"
+            layout_alignParentEnd="true"
+            NOT_FOUND_0x10="@dimen/_2131365472_res_0x7f0a0e60"
+            NOT_FOUND_0x11="@dimen/_2131365473_res_0x7f0a0e61"
+            style="@style/list_text_title_right"/>
+    </RelativeLayout>
+    <com.huawei.ui.commonui.flowlayout.HealthFlowLayout
+        id="@+id/section21_9search_01_flow_layout"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131362578_res_0x7f0a0312"
+        layout_marginBottom="@dimen/_2131362578_res_0x7f0a0312"
+        layout_marginStart="@dimen/_2131364901_res_0x7f0a0c25"
+        layout_marginEnd="@dimen/_2131364901_res_0x7f0a0c25"/>
+</LinearLayout>

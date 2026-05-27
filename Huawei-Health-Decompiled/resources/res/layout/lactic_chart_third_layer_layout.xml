@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    id="@+id/linechart_value_layout_single"
+    layout_width="-1"
+    layout_height="-2">
+    <include
+        id="@+id/third_layer_1"
+        layout_width="-2"
+        layout_height="-2"
+        NOT_FOUND_0x5="@+id/third_layer_2"
+        NOT_FOUND_0x6="2"
+        NOT_FOUND_0x8="0"
+        NOT_FOUND_0x9="0"
+        layout="@layout/chart_third_layer_layout"/>
+    <include
+        id="@+id/third_layer_2"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginStart="@dimen/_2131363132_res_0x7f0a053c"
+        NOT_FOUND_0x4="0"
+        NOT_FOUND_0x7="@+id/third_layer_1"
+        NOT_FOUND_0x9="0"
+        layout="@layout/chart_third_layer_layout"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

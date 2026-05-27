@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="270"
+    android:toDegrees="270">
+    <shape
+        shape="3"
+        innerRadiusRatio="2.5"
+        useLevel="true"
+        thickness="6dp">
+        <gradient
+            startColor="@color/_2131299596_res_0x7f090d0c"
+            endColor="@color/_2131299596_res_0x7f090d0c"
+            useLevel="false"
+            angle="0"
+            type="2"
+            centerColor="@color/_2131299595_res_0x7f090d0b"/>
+    </shape>
+</rotate>

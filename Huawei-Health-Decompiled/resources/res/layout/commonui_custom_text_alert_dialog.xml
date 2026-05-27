@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2"
+    overScrollMode="2"
+    paddingStart="@dimen/_2131362493_res_0x7f0a02bd"
+    paddingEnd="@dimen/_2131362493_res_0x7f0a02bd">
+    <LinearLayout
+        orientation="1"
+        layout_width="-1"
+        layout_height="-2"
+        paddingStart="@dimen/_2131362493_res_0x7f0a02bd"
+        paddingEnd="@dimen/_2131362493_res_0x7f0a02bd">
+        <include layout="@layout/health_commonui_dialog_title_view"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            ellipsize="3"
+            gravity="0x10"
+            layout_gravity="0x10"
+            id="@+id/custom_text_alert_dialog_title_simple"
+            visibility="2"
+            layout_width="-1"
+            layout_height="-2"
+            layout_marginTop="30dp"
+            layout_marginStart="@dimen/_2131362499_res_0x7f0a02c3"
+            layout_marginEnd="@dimen/_2131362499_res_0x7f0a02c3"
+            style="@style/CustomDialog_title"/>
+        <LinearLayout
+            gravity="0x11"
+            layout_gravity="0x10"
+            layout_width="-1"
+            layout_height="-2"
+            paddingStart="0dp"
+            paddingEnd="0dp"
+            layout_marginStart="@dimen/_2131362499_res_0x7f0a02c3"
+            layout_marginEnd="@dimen/_2131362499_res_0x7f0a02c3">
+            <LinearLayout
+                gravity="0x11"
+                id="@+id/dialog_text_alert_message_layout"
+                visibility="0"
+                layout_width="-1"
+                layout_height="-2">
+                <com.huawei.ui.commonui.healthtextview.HealthTextView
+                    layout_gravity="0x10"
+                    id="@+id/dialog_text_alert_message"
+                    layout_width="-2"
+                    layout_height="-2"
+                    lineSpacingMultiplier="1.1"
+                    paddingStart="@dimen/_2131362493_res_0x7f0a02bd"
+                    paddingEnd="@dimen/_2131362493_res_0x7f0a02bd"
+                    style="@style/CustomDialog_message"/>
+            </LinearLayout>
+        </LinearLayout>
+        <include layout="@layout/health_commonui_dialog_button"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

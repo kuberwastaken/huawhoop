@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x11"
+    orientation="1"
+    layout_width="-1"
+    layout_height="@dimen/_2131365645_res_0x7f0a0f0d">
+    <RelativeLayout
+        gravity="0x10"
+        layout_width="-1"
+        layout_height="-2"
+        layout_margin="@dimen/_2131361957_res_0x7f0a00a5">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131362379_res_0x7f0a024b"
+            textColor="@color/_2131299648_res_0x7f090d40"
+            layout_width="-2"
+            layout_height="-2"
+            text="@string/_2130841870_res_0x7f02110e"
+            layout_centerVertical="true"/>
+        <com.huawei.ui.commonui.progressbar.HealthProgressBar
+            id="@+id/health_data_inserting_progressbar"
+            visibility="1"
+            layout_width="@dimen/_2131365175_res_0x7f0a0d37"
+            layout_height="@dimen/_2131365175_res_0x7f0a0d37"
+            layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        state_enabled="true"
+        state_pressed="true"
+        id="@android:id/background"
+        alpha="0.85">
+        <shape>
+            <corners radius="@dimen/_2131363318_res_0x7f0a05f6"/>
+            <solid color="@color/_2131298053_res_0x7f090705"/>
+            <stroke
+                width="@dimen/_2131363405_res_0x7f0a064d"
+                color="@color/_2131298053_res_0x7f090705"/>
+        </shape>
+    </item>
+    <item
+        state_enabled="true"
+        state_pressed="false"
+        id="@android:id/background">
+        <shape>
+            <corners radius="@dimen/_2131363318_res_0x7f0a05f6"/>
+            <solid color="@color/_2131298053_res_0x7f090705"/>
+            <stroke
+                width="@dimen/_2131363405_res_0x7f0a064d"
+                color="@color/_2131298053_res_0x7f090705"/>
+        </shape>
+    </item>
+    <item
+        state_enabled="false"
+        id="@android:id/background">
+        <shape>
+            <corners radius="@dimen/_2131363318_res_0x7f0a05f6"/>
+            <solid color="@color/_2131298053_res_0x7f090705"/>
+            <stroke
+                width="@dimen/_2131363405_res_0x7f0a064d"
+                color="@color/_2131298053_res_0x7f090705"/>
+        </shape>
+    </item>
+</selector>

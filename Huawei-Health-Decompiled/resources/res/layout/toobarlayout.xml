@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x1"
+    orientation="1"
+    id="@+id/toolbar_layout"
+    background="@color/_2131297946_res_0x7f09069a"
+    layout_width="-1"
+    layout_height="-2"/>

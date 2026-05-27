@@ -1,0 +1,14 @@
+{
+	"version": "1.0.0",
+	"updatedTime": "1622185262",
+	"plugins": [
+		{
+			"uuid": "skip_rope_audio",
+			"version": "1.0.0",
+			"fileSize": "3540815",
+			"digest": "ea4621efe0176743720d61fd0b51496575bf92a3cc4c44ea21a1146a7407b103",
+			"fileCount":"148",
+			"fileType":"2"
+		}
+	]
+}

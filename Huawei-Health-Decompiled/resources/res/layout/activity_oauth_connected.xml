@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/title_bar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xc="2"/>
+    <com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout
+        gravity="0x1"
+        orientation="1"
+        layout_width="-1"
+        layout_height="-2"
+        layout_below="@+id/title_bar"
+        layout_centerHorizontal="true"
+        NOT_FOUND_0xd="0">
+        <ImageView
+            id="@+id/logo_img"
+            style="@style/third_service_icon"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            id="@+id/sport_connected_content"
+            text="@string/_2130844754_res_0x7f021c52"
+            layout_below="@+id/ali_logo_img"
+            style="@style/third_service_text"/>
+    </com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout>
+    <com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout
+        gravity="0x1"
+        orientation="0"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginBottom="@dimen/_2131364651_res_0x7f0a0b2b"
+        layout_alignParentBottom="true"
+        layout_centerHorizontal="true"
+        NOT_FOUND_0xd="1">
+        <com.huawei.ui.commonui.button.HealthButton
+            id="@+id/health_disconnect_button"
+            layout_width="-2"
+            text="@string/_2130844756_res_0x7f021c54"
+            textAllCaps="true"
+            style="@style/health_button_style"/>
+    </com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout>
+</RelativeLayout>

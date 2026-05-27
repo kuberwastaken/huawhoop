@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="other">ตัวบ่งชี้ %1$d สามารถแสดงได้บนกราฟเดียว</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="other">คาดว่ากลูโคสในเลือดของคุณจะลดต่ำกว่า %2$s mmol/L ใน %1$s นาที โปรดเฝ้าติดตามระดับกลูโคสของคุณอย่างใกล้ชิด</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="other">คาดว่ากลูโคสในเลือดของคุณจะลดต่ำกว่า %2$s mg/dL ใน %1$s นาที โปรดเฝ้าติดตามระดับกลูโคสของคุณอย่างใกล้ชิด</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="other">%d ก้าว</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="other">%s ไมล์</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="other">%s กิโลเมตร</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="other">ขาดอีก %1$s ก้าว</item>
+    </plurals>
+</resources>

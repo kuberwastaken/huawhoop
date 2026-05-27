@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296700_res_0x7f0901bc"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/text_show_sport_type"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x6="2"/>
+    <com.huawei.ui.commonui.columnlayout.HealthColumnFrameLayout
+        layout_gravity="0x1"
+        id="@+id/frag_sport_noun_explain_list"
+        layout_width="-1"
+        layout_height="-1"
+        NOT_FOUND_0x7="0"/>
+</LinearLayout>

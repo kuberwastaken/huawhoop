@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x11"
+    orientation="0"
+    id="@+id/linear_layout_up"
+    layout_width="-1"
+    layout_height="-2"
+    layout_marginStart="@dimen/_2131362013_res_0x7f0a00dd"
+    layout_marginEnd="@dimen/_2131362011_res_0x7f0a00db">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        typeface="3"
+        textColor="@color/_2131299845_res_0x7f090e05"
+        id="@+id/tv_device_name"
+        layout_width="-2"
+        layout_height="-2"
+        layout_weight="2"
+        layout_marginStart="@dimen/_2131362013_res_0x7f0a00dd"/>
+    <com.huawei.ui.commonui.checkbox.HealthCheckBox
+        id="@+id/rb_light"
+        focusable="false"
+        visibility="2"
+        clickable="false"
+        layout_width="-2"
+        layout_height="-2"
+        checked="false"
+        layout_marginEnd="@dimen/_2131362907_res_0x7f0a045b"
+        style="@style/health_radio_button_style"/>
+    <com.huawei.ui.commonui.checkbox.HealthCheckBox
+        id="@+id/rb_light_multi"
+        focusable="false"
+        visibility="2"
+        clickable="false"
+        layout_width="-2"
+        layout_height="-2"
+        checked="false"
+        style="@style/health_checkbox_style_large"/>
+</LinearLayout>

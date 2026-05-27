@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/fragment_personalized_container"
+    background="@color/_2131299926_res_0x7f090e56"
+    layout_width="-1"
+    layout_height="-1">
+    <RelativeLayout
+        gravity="0x50"
+        layout_width="-1"
+        layout_height="-1"
+        layout_above="@+id/dynamic_track_personalized_tabs">
+        <include layout="@layout/retrack_map_custom_style_layout"/>
+        <include layout="@layout/track_personalized_music_layout"/>
+        <include layout="@layout/track_personalized_playback_layout"/>
+        <include layout="@layout/trackalbum_dialog"/>
+        <LinearLayout
+            orientation="1"
+            id="@+id/track_save_mark_layer"
+            focusable="true"
+            visibility="2"
+            clickable="true"
+            layout_width="-1"
+            layout_height="-1"/>
+        <LinearLayout
+            orientation="1"
+            id="@+id/track_save_tip_layout"
+            background="@drawable/_2131429918_res_0x7f0b0a1e"
+            visibility="2"
+            layout_width="-2"
+            layout_height="-2"
+            layout_marginTop="@dimen/_2131363736_res_0x7f0a0798"
+            layout_marginStart="@dimen/_2131364901_res_0x7f0a0c25"
+            layout_marginEnd="@dimen/_2131363811_res_0x7f0a07e3"
+            layout_alignParentEnd="true"
+            elevation="@dimen/_2131362601_res_0x7f0a0329">
+            <com.huawei.ui.commonui.healthtextview.HealthTextView
+                textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+                textColor="@color/_2131299847_res_0x7f090e07"
+                gravity="0x800003"
+                layout_width="-1"
+                layout_height="-2"
+                text="@string/_2130840082_res_0x7f020a12"
+                fontFamily="@string/_2130852834_res_0x7f023be2"/>
+            <com.huawei.ui.commonui.healthtextview.HealthTextView
+                textSize="@dimen/_2131365486_res_0x7f0a0e6e"
+                textColor="@color/_2131299847_res_0x7f090e07"
+                gravity="0x800005"
+                id="@+id/save_tip_got_it"
+                layout_width="-1"
+                layout_height="-2"
+                layout_marginTop="@dimen/_2131363776_res_0x7f0a07c0"
+                text="@string/_2130840083_res_0x7f020a13"
+                textAllCaps="true"
+                fontFamily="@string/_2130852833_res_0x7f023be1"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <com.huawei.ui.commonui.scrollview.HealthBottomView
+        gravity="0x1"
+        id="@+id/dynamic_track_personalized_tabs"
+        background="@color/_2131297876_res_0x7f090654"
+        paddingTop="@dimen/_2131362577_res_0x7f0a0311"
+        clickable="true"
+        layout_width="-1"
+        layout_height="-2"
+        layout_alignParentBottom="true"
+        NOT_FOUND_0x16="true"
+        style="@style/Health.CommonUI.HealthBottomView"/>
+    <LinearLayout
+        gravity="0x1"
+        orientation="1"
+        id="@+id/track_tab_mark_layer_layout"
+        focusable="true"
+        visibility="2"
+        clickable="true"
+        layout_width="-1"
+        layout_height="@dimen/_2131363832_res_0x7f0a07f8"
+        layout_alignParentBottom="true"/>
+</RelativeLayout>

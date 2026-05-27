@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/blood_pressure_pay_view_background"
+    layout_width="-1"
+    layout_height="-1"
+    NOT_FOUND_0x6="@dimen/_2131362365_res_0x7f0a023d">
+    <com.huawei.ui.commonui.cardview.HealthCardView
+        layout_gravity="0x50"
+        id="@+id/blood_pressure_pay_cardview"
+        layout_width="-1"
+        layout_height="-1">
+        <com.huawei.health.h5pro.core.H5ProWebView
+            id="@+id/blood_pressure_webview"
+            visibility="0"
+            layout_width="-1"
+            layout_height="-1"/>
+    </com.huawei.ui.commonui.cardview.HealthCardView>
+</FrameLayout>

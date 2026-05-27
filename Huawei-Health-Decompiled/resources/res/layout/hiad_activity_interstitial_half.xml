@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    gravity="0x11"
+    id="@+id/hiad_interstitial_half_layout"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.openalliance.ad.views.PPSInterstitialView
+        gravity="0x11"
+        id="@+id/pps_interstitial_view_half"
+        layout_width="-1"
+        layout_height="-1"
+        NOT_FOUND_0x4="1"/>
+</RelativeLayout>

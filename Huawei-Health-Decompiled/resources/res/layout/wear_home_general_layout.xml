@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    id="@+id/home_general_layout"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365500_res_0x7f0a0e7c"
+        textColor="@color/_2131299845_res_0x7f090e05"
+        gravity="0x50"
+        id="@+id/recommended_sub_header"
+        paddingBottom="8dp"
+        layout_width="-1"
+        layout_height="-2"
+        minHeight="@dimen/_2131363109_res_0x7f0a0525"
+        text="@string/_2130843649_res_0x7f021801"
+        fontFamily="@string/_2130852833_res_0x7f023be1"
+        layout_marginStart="@dimen/_2131364901_res_0x7f0a0c25"
+        layout_marginEnd="@dimen/_2131364900_res_0x7f0a0c24"/>
+    <RelativeLayout
+        layout_gravity="0x1"
+        descendantFocusability="2"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginBottom="24dp"
+        layout_marginStart="@dimen/_2131362372_res_0x7f0a0244"
+        layout_marginEnd="@dimen/_2131362371_res_0x7f0a0243">
+        <com.huawei.ui.commonui.recycleview.HealthRecycleView
+            id="@+id/general_list"
+            layout_width="-1"
+            layout_height="-2"/>
+    </RelativeLayout>
+</LinearLayout>

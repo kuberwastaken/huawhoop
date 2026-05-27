@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    descendantFocusability="2"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/sub_header"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xa="false"
+        NOT_FOUND_0xb="@string/_2130844235_res_0x7f021a4b"/>
+    <com.huawei.ui.commonui.horizontalscrollview.HealthHorizontalScrollView
+        scrollbars="0x0"
+        layout_width="-1"
+        layout_height="-2"
+        fillViewport="true"
+        layout_below="@+id/sub_header"
+        overScrollMode="0"
+        layout_marginStart="@dimen/_2131362372_res_0x7f0a0244">
+        <LinearLayout
+            orientation="0"
+            id="@+id/share_item_container"
+            layout_width="-1"
+            layout_height="-2"/>
+    </com.huawei.ui.commonui.horizontalscrollview.HealthHorizontalScrollView>
+</RelativeLayout>

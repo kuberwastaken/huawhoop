@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1"
+    layout_marginStart="@dimen/_2131365479_res_0x7f0a0e67">
+    <com.huawei.ui.commonui.recycleview.HealthRecycleView
+        id="@+id/diving_data_card"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginStart="@dimen/_2131363112_res_0x7f0a0528"/>
+</LinearLayout>

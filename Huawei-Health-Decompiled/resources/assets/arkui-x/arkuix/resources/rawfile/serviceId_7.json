@@ -1,0 +1,1141 @@
+{
+  "1": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "goalList",
+        "type": "array",
+        "elemType": "object",
+        "elemTag": 2,
+        "optional": true,
+        "rule": [
+          {
+            "tag": 3,
+            "jsonKey": "goalType",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 4,
+            "jsonKey": "motionType",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 5,
+            "jsonKey": "goalStep",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 6,
+            "jsonKey": "goalCalorie",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 7,
+            "jsonKey": "goalDistance",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 8,
+            "jsonKey": "goalDuration",
+            "type": "number16",
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32",
+        "optional": true
+      }
+    ]
+  },
+  "2": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "height",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "weight",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "age",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "birthday",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 5,
+        "jsonKey": "gender",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 6,
+        "jsonKey": "walk_step_length",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 7,
+        "jsonKey": "run_step_length",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 8,
+        "jsonKey": "latest_vo2max",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 9,
+        "jsonKey": "latest_vo2max_time",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 10,
+        "jsonKey": "query_from_device",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 11,
+        "jsonKey": "weight_decimal",
+        "type": "number32",
+        "optional": true
+      }
+    ]
+  },
+  "3": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "totalMotionList",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "totalCalorie",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 3,
+            "jsonKey": "totalMotionStruct",
+            "type": "anonArray",
+            "optional": true,
+            "rule": [
+              {
+                "tag": 4,
+                "jsonKey": "motionType",
+                "type": "number8",
+                "optional": true
+              },
+              {
+                "tag": 5,
+                "jsonKey": "step",
+                "type": "number32",
+                "optional": true
+              },
+              {
+                "tag": 6,
+                "jsonKey": "calorie",
+                "type": "number16",
+                "optional": true
+              },
+              {
+                "tag": 7,
+                "jsonKey": "distance",
+                "type": "number32",
+                "optional": true
+              },
+              {
+                "tag": 8,
+                "jsonKey": "sleepTime",
+                "type": "number16",
+                "optional": true
+              },
+              {
+                "tag": 11,
+                "jsonKey": "pushes",
+                "type": "number32",
+                "optional": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": 10,
+        "jsonKey": "elevation",
+        "type": "number32",
+        "optional": true
+      }
+    ],
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "totalMotionList",
+        "type": "empty",
+        "optional": true
+      }
+    ]
+  },
+  "4": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "realtimeFramePageList",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "realtimeFrameCount",
+            "type": "number16",
+            "optional": true
+          },
+          {
+            "tag": 5,
+            "jsonKey": "realtimeFrameIndex",
+            "type": "repeatArray",
+            "elemType": "number16",
+            "optional": false
+          }
+        ]
+      }
+    ],
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "realtimeFramePageList",
+        "type": "empty",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "frameStartTime",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "frameEndTime",
+        "type": "number32",
+        "optional": true
+      }
+    ]
+  },
+  "5": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "motionDataStruct",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "realtimeFrame",
+            "type": "number16",
+            "optional": true
+          },
+          {
+            "tag": 3,
+            "jsonKey": "motionData",
+            "type": "array",
+            "elemType": "number8",
+            "optional": true
+          }
+        ]
+      }
+    ]
+  },
+  "6": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "activityReminderStruct",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "activityReminderEnable",
+            "type": "empty",
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "activityReminderStruct",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "activityReminderEnable",
+            "type": "number8",
+            "optional": true
+          }
+        ]
+      }
+    ]
+  },
+  "7": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "activityReminderStruct",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "activityReminderEnable",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 3,
+            "jsonKey": "activityReminderInterval",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 4,
+            "jsonKey": "activityReminderStart",
+            "type": "number16",
+            "optional": true
+          },
+          {
+            "tag": 5,
+            "jsonKey": "activityReminderEnd",
+            "type": "number16",
+            "optional": true
+          },
+          {
+            "tag": 6,
+            "jsonKey": "activityReminderCycle",
+            "type": "number8",
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "decode": []
+  },
+  "9": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "height",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "weight",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "age",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "birthday",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 5,
+        "jsonKey": "gender",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 6,
+        "jsonKey": "walkStepLength",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 7,
+        "jsonKey": "runStepLength",
+        "type": "number8",
+        "optional": true
+      }
+    ],
+    "decode": []
+  },
+  "10": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "sampleFrameList",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "sampleFrameCount",
+            "type": "number16",
+            "optional": true
+          }
+        ]
+      },
+      {
+        "tag": 3,
+        "jsonKey": "sampleFrameStartTime",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "sampleFrameEndTime",
+        "type": "number32",
+        "optional": true
+      }
+    ]
+  },
+  "11": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "sampleFrame",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "frameIndex",
+            "type": "number16",
+            "optional": true
+          },
+          {
+            "tag": 3,
+            "jsonKey": "startTime",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 4,
+            "jsonKey": "sampleInfoList",
+            "type": "anonArray",
+            "optional": true,
+            "rule": [
+              {
+                "tag": 5,
+                "jsonKey": "sampleTimeOffset",
+                "type": "number8"
+              },
+              {
+                "tag": 6,
+                "jsonKey": "sampleBaseParameter",
+                "type": "bitmap",
+                "flagType": "number8",
+                "flagLen": 0,
+                "bitmapRule": [
+                  {
+                    "jsonKey": "duration",
+                    "valueType": "number16",
+                    "bit": 0
+                  },
+                  {
+                    "jsonKey": "step",
+                    "valueType": "number16",
+                    "bit": 1
+                  },
+                  {
+                    "jsonKey": "calorie",
+                    "valueType": "number16",
+                    "bit": 2
+                  },
+                  {
+                    "jsonKey": "distance",
+                    "valueType": "number16",
+                    "bit": 3
+                  },
+                  {
+                    "jsonKey": "climbHighAltitude",
+                    "valueType": "number16",
+                    "bit": 4
+                  },
+                  {
+                    "jsonKey": "oldRestBpm",
+                    "valueType": "number8",
+                    "bit": 5
+                  },
+                  {
+                    "jsonKey": "bpm",
+                    "valueType": "number8",
+                    "bit": 6
+                  },
+                  {
+                    "expand": true,
+                    "bit": 7
+                  },
+                  {
+                    "jsonKey": "spo2",
+                    "valueType": "number8",
+                    "bit": 8
+                  },
+                  {
+                    "jsonKey": "restBpm",
+                    "valueType": "number8",
+                    "bit": 9
+                  },
+                  {
+                    "jsonKey": "pushesVal",
+                    "valueType": "number16",
+                    "bit": 10
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": 8,
+            "jsonKey": "updateFlag",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 9,
+            "jsonKey": "intensiveType",
+            "type": "number8",
+            "optional": true
+          }
+        ]
+      }
+    ]
+  },
+  "12": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "statusFrameList",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "statusFrameCount",
+            "type": "number16",
+            "optional": true
+          }
+        ]
+      },
+      {
+        "tag": 3,
+        "jsonKey": "statusFrameStartTime",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "statusFrameEndTime",
+        "type": "number32",
+        "optional": true
+      }
+    ]
+  },
+  "13": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "statusFrameList",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "statusFrameIndex",
+            "type": "number16",
+            "optional": true
+          },
+          {
+            "tag": 3,
+            "jsonKey": "statusInfo",
+            "type": "anonArray",
+            "optional": true,
+            "rule": [
+              {
+                "tag": 4,
+                "jsonKey": "statusType",
+                "type": "number8",
+                "optional": true
+              },
+              {
+                "tag": 5,
+                "jsonKey": "duration",
+                "type": "dataQueue",
+                "optional": true,
+                "dataQueueRule": [
+                  {
+                    "valueType": "number32",
+                    "jsonKey": "startTime"
+                  },
+                  {
+                    "valueType": "number16",
+                    "jsonKey": "timeOffset"
+                  }
+                ]
+              },
+              {
+                "tag": 6,
+                "jsonKey": "updateFlag",
+                "type": "number8",
+                "optional": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "14": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "thresholdList",
+        "type": "array",
+        "elemType": "dataQueue",
+        "elemTag": 2,
+        "dataQueueRule": [
+          {
+            "valueType": "number8",
+            "jsonKey": "dataType"
+          },
+          {
+            "valueType": "number8",
+            "jsonKey": "valueType"
+          },
+          {
+            "valueType": "number16",
+            "jsonKey": "value"
+          },
+          {
+            "valueType": "number8",
+            "jsonKey": "action"
+          }
+        ]
+      }
+    ]
+  },
+  "15": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "action",
+        "type": "number8"
+      }
+    ]
+  },
+  "19": {
+    "default": [
+      {
+        "tag": 127,
+        "jsonKey": "responseCode",
+        "type": "number32"
+      }
+    ]
+  },
+  "22": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "truSleepSwitch",
+        "type": "number8"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "error_code",
+        "type": "number32"
+      }
+    ]
+  },
+  "23": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "measurementEnable",
+        "type": "number8"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "responseCode",
+        "type": "number32"
+      }
+    ]
+  },
+  "24": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "sleep_state",
+        "type": "number8"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "error_code",
+        "type": "number32"
+      }
+    ]
+  },
+  "28": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "measurementEnable",
+        "type": "number8"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "responseCode",
+        "type": "number32"
+      }
+    ]
+  },
+  "29": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "remindEnable",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "remindNumber",
+        "type": "number8",
+        "optional": true
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "responseCode",
+        "type": "number32"
+      }
+    ]
+  },
+  "30": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "heartRateRaiseStartTime",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "heartRateRaiseEndTime",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "heartRateRaiseList",
+        "type": "array",
+        "elemType": "object",
+        "allowEmpty": true,
+        "elemTag": 4,
+        "optional": true,
+        "rule": [
+          {
+            "tag": 5,
+            "jsonKey": "heartRateRaiseAlarmStartTime",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 6,
+            "jsonKey": "heartRateRaiseAlarmEndTime",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 7,
+            "jsonKey": "heartRateRaiseAlarmMinNumber",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 8,
+            "jsonKey": "heartRateRaiseAlarmMaxNumber",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 9,
+            "jsonKey": "heartRateRaiseAlarmPointList",
+            "type": "array",
+            "elemType": "object",
+            "optional": true,
+            "elemTag": 10,
+            "rule": [
+              {
+                "tag": 11,
+                "jsonKey": "heartRateRaiseAlarmPointTime",
+                "type": "number32",
+                "optional": true
+              },
+              {
+                "tag": 12,
+                "jsonKey": "heartRateRaiseAlarmPointData",
+                "type": "number8",
+                "optional": true
+              }
+            ]
+          },
+          {
+            "tag": 15,
+            "jsonKey": "heartRateAlarmNumber",
+            "type": "number8",
+            "optional": true
+          }
+        ]
+      },
+      {
+        "tag": 13,
+        "jsonKey": "heartRateAlarmNeedType",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 14,
+        "jsonKey": "heartRateAlarmType",
+        "type": "number8",
+        "optional": true
+      }
+    ]
+  },
+  "31": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "desFrameCount",
+        "type": "number16",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "desFrameStartTime",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "desFrameEndTime",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "desFrameType",
+        "type": "number8",
+        "optional": true
+      }
+    ]
+  },
+  "32": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "desIndex",
+        "type": "number16",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "desIntensiveList",
+        "type": "array",
+        "elemType": "object",
+        "elemTag": 3,
+        "allowEmpty": true,
+        "optional": true,
+        "rule": [
+          {
+            "tag": 4,
+            "jsonKey": "intensiveStartTime",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 5,
+            "jsonKey": "intensiveEndTime",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 6,
+            "jsonKey": "intensiveSportType",
+            "type": "number8",
+            "optional": true
+          }
+        ]
+      }
+    ]
+  },
+  "33": {
+    "default": [
+      {
+        "tag": 127,
+        "jsonKey": "responseCode",
+        "type": "number32"
+      }
+    ]
+  },
+  "34": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "remindEnable",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "remindNumber",
+        "type": "number8",
+        "optional": true
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "responseCode",
+        "type": "number32"
+      }
+    ]
+  },
+  "35": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "slienceHeartRateMeasureType",
+        "type": "number32"
+      }
+    ]
+  },
+  "36": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "periodSpO2Enable",
+        "type": "number8"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "responseCode",
+        "type": "number32"
+      }
+    ]
+  },
+  "37": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "spo2DownRemindEnable",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "spo2DownRemindNumber",
+        "type": "number8",
+        "optional": true
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "responseCode",
+        "type": "number32"
+      }
+    ]
+  },
+  "38": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "spo2DownStartTime",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "spo2DownEndTime",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "spo2DownRemindFrameCount",
+        "type": "number16",
+        "optional": true
+      }
+    ]
+  },
+  "39": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "spo2DownRemindFrameIndex",
+        "type": "number16",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "spo2DownList",
+        "type": "array",
+        "elemType": "object",
+        "elemTag": 3,
+        "optional": true,
+        "rule": [
+          {
+            "tag": 4,
+            "jsonKey": "spo2DownRemindStartTime",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 5,
+            "jsonKey": "spo2DownRemindEndTime",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 6,
+            "jsonKey": "spo2DownRemindMinNumber",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 7,
+            "jsonKey": "spo2DownRemindMaxNumber",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 8,
+            "jsonKey": "spo2DownRemindPointList",
+            "type": "array",
+            "elemType": "object",
+            "elemTag": 9,
+            "optional": true,
+            "rule": [
+              {
+                "tag": 10,
+                "jsonKey": "spo2DownRemindPointTime",
+                "type": "number32",
+                "optional": true
+              },
+              {
+                "tag": 11,
+                "jsonKey": "spo2RemindPointData",
+                "type": "number8",
+                "optional": true
+              }
+            ]
+          },
+          {
+            "tag": 12,
+            "jsonKey": "spo2RemindNumber",
+            "type": "number8",
+            "optional": true
+          }
+        ]
+      }
+    ]
+  },
+  "41": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "walkRunThreshold",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "climbThreshold",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "heartRateThreshold",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "cycleSpeedThreshold",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 5,
+        "jsonKey": "sampleThreshold",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 6,
+        "jsonKey": "countLength",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 7,
+        "jsonKey": "walkRunSpeedThreshold",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 8,
+        "jsonKey": "walkRunThresholdWithHeartRate",
+        "type": "number8",
+        "optional": true
+      }
+    ]
+  }
+}

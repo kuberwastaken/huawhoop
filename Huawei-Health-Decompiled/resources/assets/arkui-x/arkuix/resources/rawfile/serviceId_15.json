@@ -1,0 +1,690 @@
+{
+  "1": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "atmosphereStruct",
+        "type": "object",
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "weather",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 3,
+            "jsonKey": "wind",
+            "type": "number16",
+            "optional": true
+          }
+        ]
+      },
+      {
+        "tag": 4,
+        "jsonKey": "pm25",
+        "type": "number16",
+        "optional": true
+      },
+      {
+        "tag": 5,
+        "jsonKey": "temperatureStruct",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 6,
+            "jsonKey": "lowestTemperature",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 7,
+            "jsonKey": "highestTemperature",
+            "type": "number8",
+            "optional": true
+          }
+        ]
+      },
+      {
+        "tag": 8,
+        "jsonKey": "cityName",
+        "type": "array",
+        "elemType": "number8",
+        "allowEmpty": true,
+        "optional": true
+      },
+      {
+        "tag": 9,
+        "jsonKey": "realTimeTemperature",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 10,
+        "jsonKey": "temperatureUnit",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 11,
+        "jsonKey": "aqi",
+        "type": "number16",
+        "optional": true
+      },
+      {
+        "tag": 12,
+        "jsonKey": "observationTime",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 13,
+        "jsonKey": "updateTime",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 14,
+        "jsonKey": "source",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 15,
+        "jsonKey": "uvIndex",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 16,
+        "jsonKey": "humidity",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 17,
+        "jsonKey": "windSpeed",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 18,
+        "jsonKey": "somatosensoryTemperature",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 19,
+        "jsonKey": "alertList",
+        "type": "array",
+        "elemType": "object",
+        "elemTag": 20,
+        "optional": true,
+        "rule": [
+          {
+            "tag": 21,
+            "jsonKey": "alertTitle",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "tag": 22,
+            "jsonKey": "alertAreaName",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "tag": 23,
+            "jsonKey": "alertLevel",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 24,
+            "jsonKey": "alertLevelName",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "tag": 25,
+            "jsonKey": "alertType",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 26,
+            "jsonKey": "alertTypeName",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "tag": 27,
+            "jsonKey": "alertContent",
+            "type": "string",
+            "optional": true,
+            "allowEmpty": true
+          },
+          {
+            "tag": 28,
+            "jsonKey": "alertPublictime",
+            "type": "number64",
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32"
+      }
+    ]
+  },
+  "2": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "atmosphereSupport",
+        "type": "empty"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "atmosphereSupport",
+        "type": "bitmap",
+        "flagType": "number8",
+        "flagLen": 1,
+        "bitmapRule": [
+          {
+            "jsonkey": "weather",
+            "bit": 0
+          },
+          {
+            "jsonkey": "wind",
+            "bit": 1
+          },
+          {
+            "jsonkey": "pm25",
+            "bit": 2
+          },
+          {
+            "jsonkey": "temperature",
+            "bit": 3
+          },
+          {
+            "jsonkey": "cityName",
+            "bit": 4
+          },
+          {
+            "jsonkey": "realTimeTemperature",
+            "bit": 5
+          },
+          {
+            "jsonkey": "unit",
+            "bit": 6
+          },
+          {
+            "jsonkey": "aqi",
+            "bit": 7
+          }
+        ]
+      }
+    ]
+  },
+  "3": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "atmosphereSupport",
+        "type": "bitmap",
+        "flagType": "number16",
+        "flagLen": 2,
+        "bitmapRule": [
+          {
+            "jsonkey": "localPressure",
+            "bit": 0
+          }
+        ]
+      }
+    ],
+    "encode": [
+      {
+        "tag": 2,
+        "jsonKey": "pressure",
+        "type": "number16",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "pressureUnit",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "pressureDecimal",
+        "type": "number16",
+        "optional": true
+      },
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32",
+        "optional": true
+      }
+    ]
+  },
+  "4": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "requestWeather",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "requestType",
+        "type": "number8",
+        "optional": true
+      }
+    ],
+    "encode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32"
+      }
+    ]
+  },
+  "5": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "temperatureUnit",
+        "type": "number8"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32"
+      }
+    ]
+  },
+  "6": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "atmosphereSupportExpand",
+        "type": "empty"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "atmosphereSupportExpand",
+        "type": "bitmap",
+        "flagType": "number16",
+        "flagLen": 2,
+        "bitmapRule": [
+          {
+            "jsonkey": "observationTime",
+            "bit": 0
+          },
+          {
+            "jsonkey": "source",
+            "bit": 1
+          },
+          {
+            "jsonkey": "cnWeatherIcon",
+            "bit": 2
+          },
+          {
+            "jsonkey": "weatherIconExpand",
+            "bit": 3
+          }
+        ]
+      }
+    ]
+  },
+  "7": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "errorType",
+        "type": "number8"
+      }
+    ]
+  },
+  "8": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "hourForecastList",
+        "type": "array",
+        "elemType": "object",
+        "elemTag": 2,
+        "rule": [
+          {
+            "tag": 3,
+            "jsonKey": "hourForecastTime",
+            "type": "number32"
+          },
+          {
+            "tag": 4,
+            "jsonKey": "hourForecastIcon",
+            "type": "number8"
+          },
+          {
+            "tag": 5,
+            "jsonKey": "hourForecastTemperature",
+            "type": "number8"
+          },
+          {
+            "tag": 6,
+            "jsonKey": "precipitation",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 7,
+            "jsonKey": "uvIndex",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 8,
+            "jsonKey": "somatosensoryTemperature",
+            "type": "number32",
+            "optional": true
+          }
+        ]
+      },
+      {
+        "tag": 16,
+        "jsonKey": "weekForecastList",
+        "type": "array",
+        "elemType": "object",
+        "elemTag": 17,
+        "rule": [
+          {
+            "tag": 18,
+            "jsonKey": "weekForecastTime",
+            "type": "number32"
+          },
+          {
+            "tag": 19,
+            "jsonKey": "weekForecastIcon",
+            "type": "number8"
+          },
+          {
+            "tag": 20,
+            "jsonKey": "weekForecastHighestTemperature",
+            "type": "number8"
+          },
+          {
+            "tag": 21,
+            "jsonKey": "weekForecastLowestTemperature",
+            "type": "number8"
+          },
+          {
+            "tag": 22,
+            "jsonKey": "weekForecastSunriseTime",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 23,
+            "jsonKey": "weekForecastSunsetTime",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 24,
+            "jsonKey": "weekForecastSecondSunriseTime",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 25,
+            "jsonKey": "weekForecastSecondSunsetTime",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 26,
+            "jsonKey": "weekForecastMoonRise",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 27,
+            "jsonKey": "weekForecastMoonSet",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 28,
+            "jsonKey": "weekForecastSecondMoonRise",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 29,
+            "jsonKey": "weekForecastSecondMoonSet",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 30,
+            "jsonKey": "weekForecastMoonPhase",
+            "type": "number8",
+            "optional": true
+          }
+        ]
+      },
+      {
+        "tag": 35,
+        "jsonKey": "glowForecastList",
+        "type": "array",
+        "elemType": "object",
+        "elemTag": 36,
+        "optional": true,
+        "rule": [
+          {
+            "tag": 37,
+            "jsonKey": "morningGlowProb",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 38,
+            "jsonKey": "morningGlowStart",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 39,
+            "jsonKey": "morningGlowEnd",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 40,
+            "jsonKey": "morningGlowQuality",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 41,
+            "jsonKey": "morningGlowQualityProb",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 42,
+            "jsonKey": "eveningGlowProb",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 43,
+            "jsonKey": "eveningGlowStart",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 44,
+            "jsonKey": "eveningGlowEnd",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 45,
+            "jsonKey": "eveningGlowQuality",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 46,
+            "jsonKey": "eveningGlowQualityProb",
+            "type": "number8",
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32"
+      }
+    ]
+  },
+  "9": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "appWeatherCapability",
+        "type": "number8",
+        "optional": true
+      }
+    ]
+  },
+  "10": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "futureWeatherSupport",
+        "type": "empty"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "futureWeatherSupport",
+        "type": "bitmap",
+        "flagType": "number32",
+        "flagLen": 4,
+        "bitmapRule": [
+          {
+            "jsonKey": "sunriseSunset",
+            "bit": 0
+          },
+          {
+            "jsonKey": "moonPhase",
+            "bit": 1
+          }
+        ]
+      }
+    ]
+  },
+  "11": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "tideStationList",
+        "type": "array",
+        "elemType": "object",
+        "elemTag": 2,
+        "rule": [
+          {
+            "tag": 3,
+            "jsonKey": "tideStationName",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "tag": 4,
+            "jsonKey": "tideList",
+            "type": "array",
+            "elemType": "object",
+            "elemTag": 5,
+            "optional": true,
+            "rule": [
+              {
+                "tag": 6,
+                "jsonKey": "tideTime",
+                "type": "number32",
+                "optional": true
+              },
+              {
+                "tag": 7,
+                "jsonKey": "tideType",
+                "type": "number8",
+                "optional": true
+              },
+              {
+                "tag": 8,
+                "jsonKey": "tideHeight",
+                "type": "number16",
+                "optional": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32"
+      }
+    ]
+  },
+  "12": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "errorTypeStruct",
+        "type": "object",
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "errorType",
+            "type": "number8"
+          },
+          {
+            "tag": 3,
+            "jsonKey": "errorTypeExtern",
+            "type": "number8",
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32"
+      }
+    ]
+  }
+}

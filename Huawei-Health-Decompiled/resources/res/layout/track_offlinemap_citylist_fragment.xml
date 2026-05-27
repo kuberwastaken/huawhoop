@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.searchview.HealthSearchView
+        id="@+id/search_view"
+        layout_width="-1"
+        layout_height="-2"
+        paddingStart="@dimen/_2131364901_res_0x7f0a0c25"
+        paddingEnd="@dimen/_2131364900_res_0x7f0a0c24"
+        NOT_FOUND_0x11="@layout/hwsearchview_icon_hint_search_view"
+        NOT_FOUND_0x12="@string/_2130839850_res_0x7f02092a"
+        style="@style/Health.CommonUI.HealthSearchView"/>
+    <ListView
+        id="@+id/list_search_city"
+        visibility="2"
+        layout_height="-1"
+        style="@style/offlinemap_listview_common_style"/>
+    <ExpandableListView
+        id="@+id/list"
+        scrollbars="0x0"
+        layout_width="-1"
+        layout_height="-1"
+        listSelector="@android:color/transparent"
+        childDivider="@null"
+        divider="@null"
+        overScrollMode="2"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131363704_res_0x7f0a0778"
+        gravity="0x1"
+        id="@+id/txt_no_city"
+        paddingTop="@dimen/_2131363719_res_0x7f0a0787"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-2"
+        text="@string/_2130839866_res_0x7f02093a"/>
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <View
+        background="@color/_2131296700_res_0x7f0901bc"
+        layout_width="-1"
+        layout_height="@dimen/_2131363844_res_0x7f0a0804"/>
+    <ListView
+        id="@+id/list_sport_noun_explain_listview"
+        background="@color/_2131296700_res_0x7f0901bc"
+        scrollbars="0x0"
+        layout_width="-1"
+        layout_height="-1"
+        cacheColorHint="@color/_2131296995_res_0x7f0902e3"
+        groupIndicator="@null"
+        divider="@null"/>
+</LinearLayout>

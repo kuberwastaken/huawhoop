@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">ಒಂದು ಗ್ರಾಫ್‌‍ನಲ್ಲಿ ಹೆಚ್ಚೆಂದರೆ %1$d ಸೂಚಕವನ್ನು ತೋರಿಸಬಹುದು.</item>
+        <item quantity="other">ಒಂದು ಗ್ರಾಫ್‌‍ನಲ್ಲಿ ಹೆಚ್ಚೆಂದರೆ %1$d ಸೂಚಕಗಳನ್ನು ತೋರಿಸಬಹುದು.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d ಹೆಜ್ಜೆ</item>
+        <item quantity="other">%d ಹೆಜ್ಜೆಗಳು</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s ಮೈಲು</item>
+        <item quantity="other">%s ಮೈಲು</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s ಕಿ.ಮೀ</item>
+        <item quantity="other">%s ಕಿ.ಮೀ</item>
+    </plurals>
+</resources>

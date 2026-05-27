@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x11"
+    orientation="0"
+    layout_width="-1"
+    layout_height="@dimen/_2131363021_res_0x7f0a04cd">
+    <com.huawei.ui.commonui.view.Clover
+        id="@+id/item_week_clover_sunday"
+        style="@style/health_model_week_calendar_clover_view"/>
+    <com.huawei.ui.commonui.view.Clover
+        id="@+id/item_week_clover_monday"
+        style="@style/health_model_week_calendar_clover_view"/>
+    <com.huawei.ui.commonui.view.Clover
+        id="@+id/item_week_clover_thuesday"
+        style="@style/health_model_week_calendar_clover_view"/>
+    <com.huawei.ui.commonui.view.Clover
+        id="@+id/item_week_clover_wedesday"
+        style="@style/health_model_week_calendar_clover_view"/>
+    <com.huawei.ui.commonui.view.Clover
+        id="@+id/item_week_clover_thursday"
+        style="@style/health_model_week_calendar_clover_view"/>
+    <com.huawei.ui.commonui.view.Clover
+        id="@+id/item_week_clover_friday"
+        style="@style/health_model_week_calendar_clover_view"/>
+    <com.huawei.ui.commonui.view.Clover
+        id="@+id/item_week_clover_saturday"
+        style="@style/health_model_week_calendar_clover_view"/>
+</LinearLayout>

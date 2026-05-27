@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <LinearLayout
+        orientation="0"
+        id="@+id/ll_dialog_title_layout"
+        paddingTop="@dimen/_2131362540_res_0x7f0a02ec"
+        paddingBottom="@dimen/_2131362540_res_0x7f0a02ec"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginStart="@dimen/_2131362548_res_0x7f0a02f4"
+        layout_marginEnd="@dimen/_2131362548_res_0x7f0a02f4">
+        <com.huawei.uikit.phone.hwtextview.widget.HwTextView
+            ellipsize="3"
+            id="@+id/tv_dailog_title"
+            visibility="0"
+            layout_width="0dp"
+            layout_height="-2"
+            maxLines="2"
+            layout_weight="1"
+            textAlignment="5"
+            NOT_FOUND_0xe="15sp"
+            NOT_FOUND_0xf="1sp"
+            style="@style/watch_face_CustomDialog_title"/>
+        <com.huawei.uikit.hwprogressbar.widget.HwProgressBar
+            gravity="0x10"
+            id="@+id/pb_dialog_title_loading"
+            visibility="2"
+            layout_width="24dp"
+            layout_height="24dp"/>
+    </LinearLayout>
+</LinearLayout>

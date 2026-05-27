@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        state_window_focused="false"
+        drawable="@android:color/transparent"/>
+    <item
+        state_focused="true"
+        state_enabled="false"
+        state_pressed="true"
+        drawable="@drawable/hwcardview_selector_list_background_disabled_emui"/>
+    <item
+        state_focused="true"
+        state_enabled="false"
+        drawable="@drawable/hwcardview_selector_list_background_disabled_emui"/>
+    <item
+        state_pressed="true"
+        drawable="@drawable/hwcardview_selector_list_background_transition_emui"/>
+    <item
+        state_focused="true"
+        drawable="@drawable/_2131429094_res_0x7f0b06e6"/>
+</selector>

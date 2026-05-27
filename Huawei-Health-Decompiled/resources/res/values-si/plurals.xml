@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">%1$d දක්වා දර්ශකය එක් ප්‍රස්තාරයක පෙන්විය හැකිය.</item>
+        <item quantity="other">එක් ප්‍රස්තාරයක දර්ශක %1$d ක් දක්වා පෙන්විය හැකිය.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">මිනි. %1$s න් ඔබේ රුධිර ග්ලූකෝස් %2$s mmol/L ට වඩා පහත වැටෙනු ඇතැයි අපේක්ෂා කෙරේ. කරුණාකර ඔබගේ ග්ලූකෝස් මට්ටම සමීපව නිරීක්ෂණය කරන්න.</item>
+        <item quantity="other">මිනි. %1$s න් ඔබේ රුධිර ග්ලූකෝස් %2$s mmol/L ට වඩා පහත වැටෙනු ඇතැයි අපේක්ෂා කෙරේ. කරුණාකර ඔබගේ ග්ලූකෝස් මට්ටම සමීපව නිරීක්ෂණය කරන්න.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">මිනි. %1$s න් ඔබේ රුධිර ග්ලූකෝස් %2$s mg/dL ට වඩා පහත වැටෙනු ඇතැයි අපේක්ෂා කෙරේ. කරුණාකර ඔබගේ ග්ලූකෝස් මට්ටම සමීපව නිරීක්ෂණය කරන්න.</item>
+        <item quantity="other">මිනි. %1$s න් ඔබේ රුධිර ග්ලූකෝස් %2$s mg/dL ට වඩා පහත වැටෙනු ඇතැයි අපේක්ෂා කෙරේ. කරුණාකර ඔබගේ ග්ලූකෝස් මට්ටම සමීපව නිරීක්ෂණය කරන්න.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">පියවර %d</item>
+        <item quantity="other">පියවර %d</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">සැත %s</item>
+        <item quantity="other">සැත %s</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">කි.මී. %s</item>
+        <item quantity="other">කි.මී. %s</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">%1$s පියවරක් දුරින්</item>
+        <item quantity="other">පියවර %1$s ක් දුරින්</item>
+    </plurals>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="@dimen/_2131362907_res_0x7f0a045b"
+    layout_weight="1">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/ecology_question_title"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xc="@string/_2130838458_res_0x7f0203ba"/>
+    <ListView
+        id="@+id/single_listview"
+        background="@drawable/configured_item_image_text_background"
+        paddingTop="@dimen/_2131362593_res_0x7f0a0321"
+        paddingBottom="@dimen/_2131362593_res_0x7f0a0321"
+        layout_width="-1"
+        layout_height="-2"
+        divider="@drawable/_2131431162_res_0x7f0b0efa"
+        dividerHeight="1px"
+        layout_marginStart="@dimen/_2131362013_res_0x7f0a00dd"
+        layout_marginEnd="@dimen/_2131362011_res_0x7f0a00db"/>
+</LinearLayout>

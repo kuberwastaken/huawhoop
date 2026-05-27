@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/section_webview_ll"
+    descendantFocusability="2"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.divider.HealthDivider
+        id="@+id/night_sleep_layout_divider"
+        style="@style/section_expand_report_list_divide_line_1"/>
+    <LinearLayout
+        id="@+id/webview_title"
+        layout_width="-1"
+        layout_height="@dimen/_2131363109_res_0x7f0a0525">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365482_res_0x7f0a0e6a"
+            textColor="@color/_2131299845_res_0x7f090e05"
+            layout_gravity="0x800013"
+            id="@+id/section_webview_subhead"
+            layout_width="-1"
+            layout_height="-2"
+            fontFamily="@string/_2130852834_res_0x7f023be2"
+            layout_marginStart="@dimen/_2131362934_res_0x7f0a0476"/>
+    </LinearLayout>
+    <com.huawei.health.knit.section.view.CustomH5ProWebview
+        id="@+id/section_webview"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginStart="@dimen/_2131363144_res_0x7f0a0548"
+        layout_marginEnd="@dimen/_2131363144_res_0x7f0a0548"/>
+</LinearLayout>

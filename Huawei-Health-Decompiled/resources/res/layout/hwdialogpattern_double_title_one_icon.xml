@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x10"
+    layout_width="-1"
+    layout_height="-2"
+    minHeight="@dimen/_2131364242_res_0x7f0a0992"
+    paddingStart="@dimen/_2131364233_res_0x7f0a0989"
+    paddingEnd="@dimen/_2131364220_res_0x7f0a097c">
+    <include
+        layout_width="0dp"
+        layout_height="-2"
+        layout_weight="1"
+        layout="@layout/hwdialogpattern_double_title_layout"/>
+    <ImageView
+        id="@+id/hwdialogpattern_icon1"
+        background="@drawable/_2131429307_res_0x7f0b07bb"
+        padding="@dimen/_2131364221_res_0x7f0a097d"
+        focusable="true"
+        clickable="true"
+        layout_width="@dimen/_2131364244_res_0x7f0a0994"
+        layout_height="@dimen/_2131364244_res_0x7f0a0994"
+        tint="@color/emui_color_primary"
+        layout_marginStart="@dimen/_2131364231_res_0x7f0a0987"/>
+</LinearLayout>

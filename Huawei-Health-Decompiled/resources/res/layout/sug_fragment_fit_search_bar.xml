@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    id="@+id/search_titlebar"
+    layout_width="-1"
+    layout_height="-2">
+    <View
+        id="@+id/statusbar_panel"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x7="0"
+        NOT_FOUND_0x8="0"
+        NOT_FOUND_0xa="0"/>
+    <com.huawei.ui.commonui.searchview.HealthSearchView
+        id="@+id/course_search_view"
+        layout_width="-1"
+        layout_height="@dimen/_2131362345_res_0x7f0a0229"
+        paddingStart="@dimen/_2131363288_res_0x7f0a05d8"
+        paddingEnd="@dimen/_2131362636_res_0x7f0a034c"
+        NOT_FOUND_0x5="@layout/hwsearchview_back_icon_hint_search_view"
+        NOT_FOUND_0x6="0"
+        NOT_FOUND_0x7="0"
+        NOT_FOUND_0x8="0"
+        NOT_FOUND_0x9="@+id/statusbar_panel"
+        NOT_FOUND_0xb="@string/_2130849593_res_0x7f022f39"
+        style="@style/Health.CommonUI.HealthSearchView.BackIcon"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

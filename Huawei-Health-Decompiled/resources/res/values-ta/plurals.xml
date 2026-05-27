@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">%1$d காட்டி வரை ஒரே விளக்கப்படத்தில் காட்டப்படும்.</item>
+        <item quantity="other">%1$d காட்டிகள் வரை ஒரே விளக்கப்படத்தில் காட்டப்படும்.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d காலடி</item>
+        <item quantity="other">%d காலடிகள்</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s மைல்</item>
+        <item quantity="other">%s மைல்</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s கிமீ</item>
+        <item quantity="other">%s கிமீ</item>
+    </plurals>
+</resources>

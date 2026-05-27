@@ -1,0 +1,295 @@
+{
+  "1": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "gpsParaInfoStruct",
+        "type": "empty"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "gpsParaInfoStruct",
+        "type": "object",
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "gpsInfoBitmap",
+            "type": "bitmap",
+            "flagType": "number8",
+            "flagLen": 9999,
+            "bitmapRule": [
+              {
+                "jsonKey": "speed",
+                "bit": 0
+              },
+              {
+                "jsonKey": "distance",
+                "bit": 1
+              },
+              {
+                "jsonKey": "altitude",
+                "bit": 2
+              },
+              {
+                "jsonKey": "totalDistance",
+                "bit": 3
+              },
+              {
+                "jsonKey": "gpsCoordinate",
+                "bit": 4
+              },
+              {
+                "jsonKey": "gcjCoordinate",
+                "bit": 5
+              },
+              {
+                "jsonKey": "bearing",
+                "bit": 6
+              },
+              {
+                "jsonKey": "accuracy",
+                "bit": 7
+              },
+              {
+                "jsonKey": "gpsQuality",
+                "bit": 8
+              }
+            ]
+          },
+          {
+            "tag": 3,
+            "jsonKey": "gpsParaFormat",
+            "type": "number8"
+          },
+          {
+            "tag": 4,
+            "jsonKey": "gpsParaElementNum",
+            "type": "number8"
+          },
+          {
+            "tag": 5,
+            "jsonKey": "gpsThreshold",
+            "type": "number8"
+          }
+        ]
+      }
+    ]
+  },
+  "2": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "gpsParaEnable",
+        "type": "array",
+        "elemType": "number8"
+      }
+    ],
+    "encode": [
+      {
+        "tag": 127,
+        "jsonKey": "errCode",
+        "type": "number32"
+      }
+    ]
+  },
+  "3": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "gpsInfoList",
+        "type": "object",
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "gpsInfoStruct",
+            "type": "object",
+            "rule": [
+              {
+                "tag": 3,
+                "jsonKey": "gpsSpeed",
+                "type": "number16"
+              },
+              {
+                "tag": 4,
+                "jsonKey": "gpsDistance",
+                "type": "number32"
+              },
+              {
+                "tag": 5,
+                "jsonKey": "gpsAltitude",
+                "type": "number16"
+              },
+              {
+                "tag": 6,
+                "jsonKey": "gpsTotalDistance",
+                "type": "number32"
+              },
+              {
+                "tag": 7,
+                "jsonKey": "gpsStartTime",
+                "type": "number32"
+              },
+              {
+                "tag": 8,
+                "jsonKey": "gpsEndTime",
+                "type": "number32"
+              },
+              {
+                "tag": 9,
+                "jsonKey": "gpsLatitude",
+                "type": "array",
+                "elemType": "number8"
+              },
+              {
+                "tag": 10,
+                "jsonKey": "gpsLongitude",
+                "type": "array",
+                "elemType": "number8"
+              },
+              {
+                "tag": 11,
+                "jsonKey": "gcj02Latitude",
+                "type": "array",
+                "elemType": "number8"
+              },
+              {
+                "tag": 12,
+                "jsonKey": "gcj02Longitude",
+                "type": "array",
+                "elemType": "number8"
+              },
+              {
+                "tag": 13,
+                "jsonKey": "gpsBearing",
+                "type": "array",
+                "elemType": "number8"
+              },
+              {
+                "tag": 14,
+                "jsonKey": "gpsAccuracy",
+                "type": "array",
+                "elemType": "number8"
+              },
+              {
+                "tag": 15,
+                "jsonKey": "gpsQuality",
+                "type": "number16",
+                "optional": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+	"decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32"
+      }
+    ]
+  },
+  "4": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "gpsSupportBitmap",
+        "type": "bitmap",
+        "flagType": "number8",
+        "flagLen": 1,
+        "bitmapRule": [
+          {
+            "jsonKey": "speed",
+            "bit": 0
+          },
+          {
+            "jsonKey": "distance",
+            "bit": 1
+          },
+          {
+            "jsonKey": "altitude",
+            "bit": 2
+          },
+          {
+            "jsonKey": "totalDistance",
+            "bit": 3
+          },
+          {
+            "jsonKey": "gpsCoordinate",
+            "bit": 4
+          },
+          {
+            "jsonKey": "gcjCoordinate",
+            "bit": 5
+          },
+          {
+            "jsonKey": "bearing",
+            "bit": 6
+          },
+          {
+            "jsonKey": "accuracy",
+            "bit": 7
+          }
+        ]
+      },
+      {
+        "tag": 2,
+        "jsonKey": "connectGps",
+        "type": "number8"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32"
+      }
+    ]
+  },
+  "6": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "networkGpsPara",
+        "type": "number8"
+      }
+    ],
+    "encode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32"
+      }
+    ]
+  },
+  "7": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "saveTime",
+        "type": "number32"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "gpsLatitude",
+        "type": "array",
+        "elemType": "number8"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "gpsLongitude",
+        "type": "array",
+        "elemType": "number8"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32"
+      }
+    ]
+  }
+}

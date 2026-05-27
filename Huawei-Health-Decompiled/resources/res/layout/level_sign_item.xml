@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365487_res_0x7f0a0e6f"
+        gravity="0x11"
+        id="@+id/level_badge_sign"
+        background="@mipmap/_2131821535_res_0x7f1103df"
+        layout_width="-2"
+        layout_height="-2"
+        fontFamily="@string/_2130852833_res_0x7f023be1"
+        paddingStart="@dimen/_2131363112_res_0x7f0a0528"
+        paddingEnd="@dimen/_2131363112_res_0x7f0a0528"
+        layout_marginStart="@dimen/_2131363051_res_0x7f0a04eb"
+        layout_marginEnd="@dimen/_2131363051_res_0x7f0a04eb"/>
+</LinearLayout>

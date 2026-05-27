@@ -1,0 +1,581 @@
+{
+  "1": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "message_id",
+        "type": "number16",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "message_type",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "motor_enable",
+        "type": "bool",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "message_content_struct",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 12,
+            "jsonKey": "text_list",
+            "type": "array",
+            "elemType": "object",
+            "elemTag": 13,
+            "optional": true,
+            "rule": [
+              {
+                "tag": 14,
+                "jsonKey": "text_type",
+                "optional": true,
+                "type": "number8"
+              },
+              {
+                "tag": 15,
+                "jsonKey": "text_format",
+                "optional": true,
+                "type": "number8"
+              },
+              {
+                "tag": 16,
+                "jsonKey": "text_content",
+                "type": "array",
+                "elemType": "number8",
+                "optional": true,
+                "allowEmpty": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": 17,
+        "jsonKey": "message_pkgname",
+        "optional": true,
+        "type": "string"
+      },
+      {
+        "tag": 18,
+        "jsonKey": "category",
+        "optional": true,
+        "type": "string"
+      },
+      {
+        "tag": 19,
+        "jsonKey": "reminder_status",
+        "optional": true,
+        "type": "number16"
+      },
+      {
+        "tag": 20,
+        "jsonKey": "sub_id",
+        "optional": true,
+        "type": "number8"
+      },
+      {
+        "tag": 21,
+        "jsonKey": "message_time",
+        "optional": true,
+        "type": "number32",
+        "allowEmpty": true
+      },
+      {
+        "tag": 23,
+        "jsonKey": "phone_number",
+        "optional": true,
+        "type": "string"
+      },
+      {
+        "tag": 25,
+        "jsonKey": "notification_key",
+        "optional": true,
+        "type": "string"
+      },
+      {
+        "tag": 26,
+        "jsonKey": "notification_id",
+        "optional": true,
+        "type": "number32"
+      },
+      {
+        "tag": 27,
+        "jsonKey": "channel_id",
+        "optional": true,
+        "type": "string"
+      },
+      {
+        "tag": 29,
+        "jsonKey": "live_struct",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 30,
+            "jsonKey": "live_operation",
+            "optional": true,
+            "type": "number8"
+          },
+          {
+            "tag": 31,
+            "jsonKey": "live_event",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "tag": 32,
+            "jsonKey": "live_type",
+            "optional": true,
+            "type": "number8"
+          },
+          {
+            "tag": 33,
+            "jsonKey": "live_keep_time",
+            "optional": true,
+            "type": "number16"
+          },
+          {
+            "tag": 34,
+            "jsonKey": "live_title_overlay",
+            "optional": true,
+            "type": "array",
+            "elemType": "number8"
+          },
+          {
+            "tag": 35,
+            "jsonKey": "live_content_overlay",
+            "optional": true,
+            "type": "array",
+            "elemType": "number8"
+          },
+          {
+            "tag": 36,
+            "jsonKey": "live_feature_title_text",
+            "optional": true,
+            "type": "array",
+            "elemType": "number8"
+          },
+          {
+            "tag": 37,
+            "jsonKey": "live_feature_content_text",
+            "optional": true,
+            "type": "array",
+            "elemType": "number8"
+          },
+          {
+            "tag": 38,
+            "jsonKey": "live_external_enable",
+            "optional": true,
+            "type": "number8"
+          },
+          {
+            "tag": 39,
+            "jsonKey": "live_external_title",
+            "optional": true,
+            "type": "array",
+            "elemType": "number8"
+          },
+          {
+            "tag": 40,
+            "jsonKey": "live_external_body",
+            "optional": true,
+            "type": "array",
+            "elemType": "number8"
+          }
+        ]
+      },
+      {
+        "tag": 42,
+        "jsonKey": "ping_list",
+        "type": "array",
+        "elemType": "object",
+        "elemTag": 43,
+        "allowEmpty": true,
+        "optional": true,
+        "rule": [
+          {
+            "tag": 44,
+            "jsonKey": "ping_open_remote",
+            "optional": true,
+            "type": "number8"
+          },
+          {
+            "tag": 45,
+            "jsonKey": "ping_open_type",
+            "optional": true,
+            "type": "number8"
+          },
+          {
+            "tag": 46,
+            "jsonKey": "ping_package_name",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "tag": 47,
+            "jsonKey": "ping_class_name",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "tag": 48,
+            "jsonKey": "ping_url",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "tag": 49,
+            "jsonKey": "button_content",
+            "optional": true,
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "tag": 50,
+        "jsonKey": "receive_Time",
+        "optional": true,
+        "type": "number64",
+        "allowEmpty": true
+      },
+      {
+        "tag": 51,
+        "jsonKey": "extras",
+        "optional": true,
+        "type": "string",
+        "allowEmpty": true
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "messageID",
+        "type": "number16",
+        "optional": true,
+        "allowEmpty": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "messageType",
+        "type": "number8",
+        "optional": true,
+        "allowEmpty": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "message_pkgname",
+        "type": "string",
+        "optional": true,
+        "allowEmpty": true
+      },
+      {
+        "tag": 5,
+        "jsonKey": "costTime",
+        "optional": true,
+        "type": "number64",
+        "allowEmpty": true
+      }
+    ]
+  },
+  "4": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "message_enable_struct",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "notification_enable",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 3,
+            "jsonKey": "incoming_call_enable",
+            "type": "number8",
+            "optional": true
+          }
+        ]
+      }
+    ]
+  },
+  "5": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "supported_notify_message_type",
+        "type": "empty",
+        "optional": true
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "supported_notify_message_type",
+        "type": "bitmap",
+        "flagType": "number8",
+        "flagLen": 1,
+        "bitmapRule": [
+          {
+            "jsonkey": "third_app_push_notification",
+            "bit": 0
+          },
+          {
+            "jsonkey": "smart_care",
+            "bit": 1
+          },
+          {
+            "jsonkey": "outgoing_call",
+            "bit": 2
+          }
+        ]
+      }
+    ]
+  },
+  "6": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "message_type",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "package_name",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "notification_key",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "notification_id",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 5,
+        "jsonKey": "channel_id",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 6,
+        "jsonKey": "category",
+        "type": "string",
+        "optional": true
+      }
+    ]
+  },
+  "13":{
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "app_list",
+        "type": "array",
+        "elemType": "object",
+        "elemTag": 2,
+        "rule": [
+          {
+            "tag": 3,
+            "jsonKey": "app_package_name",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "tag": 4,
+            "jsonKey": "app_name",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "tag": 5,
+            "jsonKey": "app_version_code",
+            "type": "string",
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "encode": [
+      {
+        "tag": 127,
+        "jsonKey": "error_code",
+        "type": "number32",
+        "optional": true
+      }
+    ]
+  },
+  "14":{
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "app_package_name",
+        "type": "string"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "app_name",
+        "type": "string"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "app_version_code",
+        "type": "string"
+      },
+      {
+        "tag": 4,
+        "jsonKey": "app_icon",
+        "type": "string",
+        "optional": true
+      }
+    ]
+  },
+  "16": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "app_type",
+        "type": "number",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "encode_format",
+        "type": "number",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "sub_id",
+        "type": "number",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "send_destination",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 5,
+        "jsonKey": "attachment_id",
+        "type": "string",
+        "optional": true,
+        "allowEmpty": true
+      },
+      {
+        "tag": 6,
+        "jsonKey": "msg_content",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 7,
+        "jsonKey": "result_code",
+        "type": "number8",
+        "optional": true
+      }
+    ]
+  },
+  "2": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "restriction_list",
+        "type": "array",
+        "elemType": "object",
+        "elemTag": 2,
+        "rule": [
+          {
+            "tag": 3,
+            "jsonKey": "message_type",
+            "type": "number8"
+          },
+          {
+            "tag": 16,
+            "jsonKey": "text_restriction_list",
+            "type": "array",
+            "elemType": "object",
+            "elemTag": 17,
+            "optional": true,
+            "rule": [
+              {
+                "tag": 18,
+                "jsonKey": "text_type",
+                "type": "number8",
+                "optional": true
+              },
+              {
+                "tag": 19,
+                "jsonKey": "text_format_support",
+                "type": "number8",
+                "optional": true
+              },
+              {
+                "tag": 20,
+                "jsonKey": "text_content_length",
+                "type": "number",
+                "optional": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "restriction_list",
+        "type": "empty",
+        "optional": true
+      }
+    ]
+  },
+  "11":{
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "app_list",
+        "type": "array",
+        "elemType": "object",
+        "elemTag": 2,
+        "rule": [
+          {
+            "tag": 3,
+            "jsonKey": "app_id",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "tag": 4,
+            "jsonKey": "notification_enable",
+            "type": "number8",
+            "optional": true
+          }
+        ]
+      }
+    ]
+  }
+}

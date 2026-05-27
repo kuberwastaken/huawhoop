@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.recycleview.HealthRecycleView
+        id="@+id/scan_device_list"
+        layout_width="-1"
+        layout_height="-2"
+        overScrollMode="2"/>
+</LinearLayout>

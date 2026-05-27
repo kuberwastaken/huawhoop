@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="-1">
+    <LinearLayout
+        gravity="0x11"
+        orientation="1"
+        layout_width="-1"
+        layout_height="-2"
+        layout_centerInParent="true">
+        <ImageView
+            id="@+id/network_icon"
+            layout_width="72dp"
+            layout_height="72dp"
+            src="@drawable/_2131430236_res_0x7f0b0b5c"/>
+        <TextView
+            textSize="@dimen/_2131362715_res_0x7f0a039b"
+            textColor="@color/_2131297422_res_0x7f09048e"
+            id="@+id/error_tip"
+            layout_width="-2"
+            layout_height="-2"
+            text="@string/_2130851390_res_0x7f02363e"
+            layout_marginStart="@dimen/_2131362647_res_0x7f0a0357"
+            layout_marginEnd="@dimen/_2131362646_res_0x7f0a0356"/>
+    </LinearLayout>
+    <com.huawei.uikit.phone.hwcolumnlayout.widget.HwColumnLinearLayout
+        orientation="0"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginBottom="@dimen/_2131362634_res_0x7f0a034a"
+        layout_alignParentBottom="true"
+        layout_centerHorizontal="true"
+        NOT_FOUND_0x10="1">
+        <com.huawei.uikit.phone.hwbutton.widget.HwButton
+            id="@+id/setting_button"
+            visibility="2"
+            layout_width="-1"
+            layout_height="-2"
+            text="@string/_2130842408_res_0x7f021328"/>
+    </com.huawei.uikit.phone.hwcolumnlayout.widget.HwColumnLinearLayout>
+</RelativeLayout>

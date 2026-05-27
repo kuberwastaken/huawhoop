@@ -1,0 +1,86 @@
+package com.huawei.health;
+
+import android.os.Binder;
+import android.os.IBinder;
+import android.os.IInterface;
+import android.os.Parcel;
+import android.os.RemoteException;
+
+/* JADX INFO: loaded from: classes3.dex */
+public interface IBaseCommonCallback extends IInterface {
+    public static final String DESCRIPTOR = "com.huawei.health.IBaseCommonCallback";
+
+    void onResponse(int i, String str) throws RemoteException;
+
+    public static abstract class Stub extends Binder implements IBaseCommonCallback {
+        static final int TRANSACTION_onResponse = 1;
+
+        @Override // android.os.IInterface
+        public IBinder asBinder() {
+            return this;
+        }
+
+        public Stub() {
+            attachInterface(this, IBaseCommonCallback.DESCRIPTOR);
+        }
+
+        public static IBaseCommonCallback asInterface(IBinder iBinder) {
+            if (iBinder == null) {
+                return null;
+            }
+            IInterface iInterfaceQueryLocalInterface = iBinder.queryLocalInterface(IBaseCommonCallback.DESCRIPTOR);
+            if (iInterfaceQueryLocalInterface != null && (iInterfaceQueryLocalInterface instanceof IBaseCommonCallback)) {
+                return (IBaseCommonCallback) iInterfaceQueryLocalInterface;
+            }
+            return new d(iBinder);
+        }
+
+        @Override // android.os.Binder
+        public boolean onTransact(int i, Parcel parcel, Parcel parcel2, int i2) throws RemoteException {
+            if (i >= 1 && i <= 16777215) {
+                parcel.enforceInterface(IBaseCommonCallback.DESCRIPTOR);
+            }
+            if (i == 1598968902) {
+                parcel2.writeString(IBaseCommonCallback.DESCRIPTOR);
+                return true;
+            }
+            if (i == 1) {
+                onResponse(parcel.readInt(), parcel.readString());
+                parcel2.writeNoException();
+                return true;
+            }
+            return super.onTransact(i, parcel, parcel2, i2);
+        }
+
+        static class d implements IBaseCommonCallback {
+
+            /* JADX INFO: renamed from: a, reason: collision with root package name */
+            private IBinder f2209a;
+
+            d(IBinder iBinder) {
+                this.f2209a = iBinder;
+            }
+
+            @Override // android.os.IInterface
+            public IBinder asBinder() {
+                return this.f2209a;
+            }
+
+            @Override // com.huawei.health.IBaseCommonCallback
+            public void onResponse(int i, String str) throws RemoteException {
+                Parcel parcelObtain = Parcel.obtain();
+                Parcel parcelObtain2 = Parcel.obtain();
+                try {
+                    parcelObtain.writeInterfaceToken(IBaseCommonCallback.DESCRIPTOR);
+                    parcelObtain.writeInt(i);
+                    parcelObtain.writeString(str);
+                    this.f2209a.transact(1, parcelObtain, parcelObtain2, 0);
+                    parcelObtain2.readException();
+                } finally {
+                    parcelObtain2.recycle();
+                    parcelObtain.recycle();
+                }
+            }
+        }
+    }
+}

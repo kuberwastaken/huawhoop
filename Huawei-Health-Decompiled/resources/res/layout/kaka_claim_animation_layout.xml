@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-1">
+    <ImageView
+        id="@+id/kaka_convert_anim"
+        layout_width="150dp"
+        layout_height="150dp"
+        src="@drawable/_2131427480_res_0x7f0b0098"
+        layout_centerInParent="true"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365500_res_0x7f0a0e7c"
+        textColor="@color/_2131296940_res_0x7f0902ac"
+        id="@+id/kaka_exchange_result"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="20dp"
+        layout_alignTop="@+id/kaka_convert_anim"
+        layout_centerHorizontal="true"
+        fontFamily="@string/_2130852834_res_0x7f023be2"/>
+</RelativeLayout>

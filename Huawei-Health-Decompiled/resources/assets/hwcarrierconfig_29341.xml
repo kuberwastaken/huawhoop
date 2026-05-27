@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<config>
+    <dict>
+        <string key="ODSA_ESURL">https://android.entitlement.telekom.si/</string>
+        <string key="ODSA_PROTOCOL">2</string>
+        <string key="ODSA_ES_VERSION">5</string>
+        <bool key="ODSA_SUPPORT_NOTIFICATION_SERVICE">false</bool>
+        <bool key="ODSA_SUPPORT_CHANGE_MANAGE_SUBSCRIPTION">true</bool>
+        <string key="ODSA_HTTP_CONTENT_TYPE">application/vnd.gsma.eap-relay.v1.0+json</string>
+        <bool key="ODSA_ADD_COMPANION_INFO">true</bool>
+        <bool key="ODSA_SUPPORT_POST_METHOD">true</bool>
+        <bool key="ODSA_SUPPORT_DYNAMIC_LOAD_WEBVIEW">true</bool>
+    </dict>
+</config>

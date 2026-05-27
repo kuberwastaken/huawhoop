@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        gravity="0x11"
+        drawable="@drawable/_2131429698_res_0x7f0b0942"
+        left="@dimen/_2131364437_res_0x7f0a0a55"
+        top="@dimen/_2131364439_res_0x7f0a0a57"
+        right="@dimen/_2131364438_res_0x7f0a0a56"
+        bottom="@dimen/_2131364436_res_0x7f0a0a54"/>
+</layer-list>

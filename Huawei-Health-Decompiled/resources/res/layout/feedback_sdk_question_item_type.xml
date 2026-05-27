@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    paddingBottom="@dimen/_2131362815_res_0x7f0a03ff"
+    layout_width="-2"
+    layout_height="-2"
+    paddingEnd="@dimen/_2131362815_res_0x7f0a03ff">
+    <TextView
+        textSize="@dimen/_2131362821_res_0x7f0a0405"
+        textColor="@color/feedback_sdk_text_normal_black"
+        ellipsize="3"
+        gravity="0x11"
+        id="@+id/txt_question_type_item"
+        background="@drawable/feedback_common_toggle_4_corner_normal_bg"
+        layout_width="-2"
+        layout_height="-2"
+        minHeight="@dimen/_2131362802_res_0x7f0a03f2"
+        maxLines="1"
+        singleLine="true"
+        paddingStart="@dimen/_2131362815_res_0x7f0a03ff"
+        paddingEnd="@dimen/_2131362815_res_0x7f0a03ff"/>
+</LinearLayout>

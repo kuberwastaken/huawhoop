@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/head_my_fitness_course"
+        layout_width="@dimen/_2131365380_res_0x7f0a0e04"
+        layout_height="@dimen/_2131365453_res_0x7f0a0e4d"
+        NOT_FOUND_0x5="0"
+        NOT_FOUND_0x8="0"
+        NOT_FOUND_0xa="0"
+        NOT_FOUND_0xb="false"
+        NOT_FOUND_0xc="3"
+        NOT_FOUND_0xd="@string/_2130849661_res_0x7f022f7d"/>
+    <include
+        id="@+id/layout_without_course"
+        layout_width="@dimen/_2131365380_res_0x7f0a0e04"
+        layout_height="@dimen/_2131362583_res_0x7f0a0317"
+        layout_marginTop="@dimen/_2131365367_res_0x7f0a0df7"
+        NOT_FOUND_0x5="@+id/guide_end"
+        NOT_FOUND_0x8="@+id/guide_start"
+        NOT_FOUND_0x9="@+id/head_my_fitness_course"
+        layout="@layout/sug_layout_without_course"/>
+    <include
+        id="@+id/layout_with_course"
+        layout_width="@dimen/_2131365380_res_0x7f0a0e04"
+        layout_height="-2"
+        NOT_FOUND_0x5="@+id/guide_end"
+        NOT_FOUND_0x8="@+id/guide_start"
+        NOT_FOUND_0x9="@+id/head_my_fitness_course"
+        layout="@layout/sug_layout_with_course"/>
+    <androidx.constraintlayout.widget.Guideline
+        orientation="1"
+        id="@+id/guide_start"
+        layout_width="-2"
+        layout_height="-2"
+        NOT_FOUND_0x6="@dimen/_2131362372_res_0x7f0a0244"/>
+    <androidx.constraintlayout.widget.Guideline
+        orientation="1"
+        id="@+id/guide_end"
+        layout_width="-2"
+        layout_height="-2"
+        NOT_FOUND_0x7="@dimen/_2131362371_res_0x7f0a0243"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

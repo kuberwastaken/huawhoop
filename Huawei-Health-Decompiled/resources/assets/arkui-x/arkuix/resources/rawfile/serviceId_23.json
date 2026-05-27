@@ -1,0 +1,2235 @@
+{
+  "1": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "operator_struct",
+        "type": "object",
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "operator_type",
+            "type": "number8"
+          },
+          {
+            "tag": 3,
+            "jsonKey": "sport_type",
+            "type": "number8"
+          },
+          {
+            "tag": 4,
+            "jsonKey": "run_plan_start_date",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 5,
+            "jsonKey": "workout_type",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 6,
+            "jsonKey": "operation_time",
+            "type": "number32"
+          },
+          {
+            "tag": 7,
+            "jsonKey": "target_struct",
+            "type": "object",
+            "optional": true,
+            "rule": [
+              {
+                "tag": 8,
+                "jsonKey": "distance",
+                "type": "number32",
+                "optional": true
+              },
+              {
+                "tag": 9,
+                "jsonKey": "calorie",
+                "type": "number32",
+                "optional": true
+              },
+              {
+                "tag": 10,
+                "jsonKey": "duration",
+                "type": "number32",
+                "optional": true
+              }
+            ]
+          },
+          {
+            "tag": 11,
+            "jsonKey": "version",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 12,
+            "jsonKey": "start_time",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 13,
+            "jsonKey": "run_course_version",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 14,
+            "jsonKey": "forbid_pause",
+            "type": "number8",
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "responseCode",
+        "type": "number32"
+      }
+    ]
+  },
+  "2": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "operatorStruct",
+        "type": "object",
+        "optional": false,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "operatorType",
+            "type": "number8"
+          },
+          {
+            "tag": 3,
+            "jsonKey": "sportType",
+            "type": "number8"
+          },
+          {
+            "tag": 4,
+            "jsonKey": "runPlanStartDate",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 5,
+            "jsonKey": "workoutType",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 6,
+            "jsonKey": "operatorTime",
+            "type": "number32"
+          }
+        ]
+      }
+    ]
+  },
+  "3": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "queryOperatorStruct",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "traingMonitorState",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 3,
+            "jsonKey": "operatorType",
+            "type": "number8",
+            "optional": true
+          }
+        ]
+      }
+    ]
+  },
+  "7": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "workoutRecordStruct",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "workoutRecordCount",
+            "type": "number16",
+            "optional": true
+          },
+          {
+            "tag": 3,
+            "jsonKey": "queryStartTime",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 4,
+            "jsonKey": "queryEndTime",
+            "type": "number32",
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "optional": true,
+        "type": "number"
+      },
+      {
+        "tag": 1,
+        "jsonKey": "workoutRecordStruct",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "workoutRecordCount",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 3,
+            "jsonKey": "queryStartTime",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 4,
+            "jsonKey": "queryEndTime",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 5,
+            "jsonKey": "workoutRecordList",
+            "type": "anonArray",
+            "optional": true,
+            "rule": [
+              {
+                "tag": 6,
+                "jsonKey": "workoutRecordId",
+                "type": "number",
+                "optional": true
+              },
+              {
+                "tag": 7,
+                "jsonKey": "workoutIndexCount",
+                "type": "number",
+                "optional": true
+              },
+              {
+                "tag": 8,
+                "jsonKey": "paceIndexCount",
+                "type": "number",
+                "optional": true
+              },
+              {
+                "tag": 9,
+                "jsonKey": "workoutSectionIndex",
+                "type": "number",
+                "optional": true
+              },
+              {
+                "tag": 10,
+                "jsonKey": "workoutSliceNumber",
+                "type": "number",
+                "optional": true
+              },
+              {
+                "tag": 12,
+                "jsonKey": "workoutBloodOxygenIndex",
+                "type": "number",
+                "optional": true
+              },
+              {
+                "tag": 13,
+                "jsonKey": "workoutSectionNumber",
+                "type": "number",
+                "optional": true
+              },
+              {
+                "tag": 14,
+                "jsonKey": "workoutTrajectories",
+                "type": "number",
+                "optional": true
+              },
+              {
+                "tag": 15,
+                "jsonKey": "workoutDivingEvent",
+                "type": "number",
+                "optional": true
+              },
+              {
+                "tag": 16,
+                "jsonKey": "workoutAdventureMarkPoint",
+                "type": "string",
+                "optional": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "8": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "statisticStruct",
+        "type": "object",
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "workoutRecordId",
+            "type": "number16"
+          }
+        ]
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "optional": true,
+        "type": "number"
+      },
+      {
+        "tag": 1,
+        "jsonKey": "statisticStruct",
+        "type": "object",
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "workoutRecordId",
+            "type": "number"
+          },
+          {
+            "tag": 3,
+            "jsonKey": "workoutStatus",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 4,
+            "jsonKey": "workoutStartTime",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 5,
+            "jsonKey": "workoutEndTime",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 6,
+            "jsonKey": "workoutCalorie",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 7,
+            "jsonKey": "workoutDistance",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 8,
+            "jsonKey": "workoutStep",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 9,
+            "jsonKey": "workoutTotalTime",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 10,
+            "jsonKey": "workoutSpeed",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 11,
+            "jsonKey": "workoutClimb",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 12,
+            "jsonKey": "workoutHrABSPeak",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 13,
+            "jsonKey": "workoutLoadPeak",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 14,
+            "jsonKey": "workoutEtrainingEffect",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 15,
+            "jsonKey": "workoutEpoc",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 16,
+            "jsonKey": "workoutMaxMET",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 17,
+            "jsonKey": "workoutRecoveryTime",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 18,
+            "jsonKey": "workoutExerciseDuration",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 19,
+            "jsonKey": "workoutDateInfo",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 20,
+            "jsonKey": "workoutType",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 21,
+            "jsonKey": "swimType",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 22,
+            "jsonKey": "swimPullTimes",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 23,
+            "jsonKey": "swimPullRate",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 24,
+            "jsonKey": "swimPoolLength",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 25,
+            "jsonKey": "tripTimes",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 26,
+            "jsonKey": "swimAvgSwolf",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 27,
+            "jsonKey": "accumulativeDropHeight",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 28,
+            "jsonKey": "highestAltitude",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 29,
+            "jsonKey": "lowestAltitude",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 30,
+            "jsonKey": "swolfBaseKm",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 31,
+            "jsonKey": "swolfBaseMile",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 32,
+            "jsonKey": "anaerobicTrainingEffect",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 33,
+            "jsonKey": "halfMarathonTime",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 34,
+            "jsonKey": "totalMarathonTime",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 35,
+            "jsonKey": "recordFlag",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 36,
+            "jsonKey": "workoutHeartRateType",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 37,
+            "jsonKey": "workoutExerciseId",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "tag": 49,
+            "jsonKey": "highestBloodOxygen",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 50,
+            "jsonKey": "lowestBloodOxygen",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 51,
+            "jsonKey": "lowestBloodOxygen",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 52,
+            "jsonKey": "maxJumpHeight",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 53,
+            "jsonKey": "maxJumpDuration",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 54,
+            "jsonKey": "maxRunSpeed",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 55,
+            "jsonKey": "runScore",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 56,
+            "jsonKey": "moveScore",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 57,
+            "jsonKey": "jumpScore",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 58,
+            "jsonKey": "totalScore",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 59,
+            "jsonKey": "explosiveScore",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 60,
+            "jsonKey": "intenseScore",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 62,
+            "jsonKey": "golfSwingCount",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 63,
+            "jsonKey": "golfBackSwingTime",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 64,
+            "jsonKey": "golfDownSwingTime",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 65,
+            "jsonKey": "golfSwingSpeed",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 66,
+            "jsonKey": "golfMaxSwingSpeed",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 67,
+            "jsonKey": "golfSwingTempo",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 68,
+            "jsonKey": "skiMaxSlopeDegree",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 69,
+            "jsonKey": "skiMaxSlopePercent",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 70,
+            "jsonKey": "skiTotalTime",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 71,
+            "jsonKey": "skiTotalDistance",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 72,
+            "jsonKey": "tempeture",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 73,
+            "jsonKey": "weather",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 74,
+            "jsonKey": "circleNumber",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 75,
+            "jsonKey": "maxCadence",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 76,
+            "jsonKey": "avgCadence",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 77,
+            "jsonKey": "targetPercent",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 78,
+            "jsonKey": "targetPercentType",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 79,
+            "jsonKey": "exerciseLevel",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 80,
+            "jsonKey": "rompedPaceZoneMinValue",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 81,
+            "jsonKey": "marathonPaceZoneMinValue",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 82,
+            "jsonKey": "lacticAcidPaceZoneMinValue",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 83,
+            "jsonKey": "anaerobicPaceZoneMinValue",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 84,
+            "jsonKey": "maxOxygenPaceZoneMinValue",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 85,
+            "jsonKey": "maxOxygenPaceZoneMaxValue",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 86,
+            "jsonKey": "romped",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 87,
+            "jsonKey": "marathon",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 88,
+            "jsonKey": "lacticAcid",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 89,
+            "jsonKey": "anaerobic",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 90,
+            "jsonKey": "maxOxygen",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 91,
+            "jsonKey": "longestStreak",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 92,
+            "jsonKey": "tripped",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 93,
+            "jsonKey": "algType",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 94,
+            "jsonKey": "planId",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "tag": 95,
+            "jsonKey": "courseName",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "tag": 96,
+            "jsonKey": "planCourseTime",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 97,
+            "jsonKey": "courseTargetType",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 98,
+            "jsonKey": "courseTargetValue",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 99,
+            "jsonKey": "trainingPoint",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 100,
+            "jsonKey": "trainingExperience",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 101,
+            "jsonKey": "courseModifiedTime",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 102,
+            "jsonKey": "recoveryHeartRate",
+            "type": "array",
+            "elemType": "number8",
+            "optional": true
+          },
+          {
+            "tag": 103,
+            "jsonKey": "fieldStruct",
+            "type": "anonArray",
+            "optional": true,
+            "rule": [
+              {
+                "tag": 104,
+                "jsonKey": "fieldName",
+                "type": "number",
+                "optional": true
+              },
+              {
+                "tag": 105,
+                "jsonKey": "fieldValue",
+                "type": "string",
+                "optional": true,
+                "allowEmpty": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": 38,
+        "jsonKey": "relationList",
+        "type": "array",
+        "elemType": "object",
+        "elemTag": 39,
+        "optional": true,
+        "rule": [
+          {
+            "tag": 40,
+            "jsonKey": "workoutRelationType",
+            "type": "number",
+            "optional": true,
+            "allowEmpty": true
+          },
+          {
+            "tag": 41,
+            "jsonKey": "workoutLinkDetailsType",
+            "type": "number",
+            "optional": true,
+            "allowEmpty": true
+          },
+          {
+            "tag": 42,
+            "jsonKey": "workoutLinkDetailsStarttime",
+            "type": "number",
+            "optional": true,
+            "allowEmpty": true
+          },
+          {
+            "tag": 43,
+            "jsonKey": "workoutLinkDetailsEndtime",
+            "type": "number",
+            "optional": true,
+            "allowEmpty": true
+          },
+          {
+            "tag": 44,
+            "jsonKey": "workoutLinkDetailsTotaltime",
+            "type": "number",
+            "optional": true,
+            "allowEmpty": true
+          },
+          {
+            "tag": 45,
+            "jsonKey": "workoutLinkDetailsDistance",
+            "type": "number",
+            "optional": true,
+            "allowEmpty": true
+          },
+          {
+            "tag": 46,
+            "jsonKey": "workoutLinkDetailsCalorie",
+            "type": "number",
+            "optional": true,
+            "allowEmpty": true
+          },
+          {
+            "tag": 47,
+            "jsonKey": "workoutLinkTransitionTime",
+            "type": "number",
+            "optional": true,
+            "allowEmpty": true
+          },
+          {
+            "tag": 48,
+            "jsonKey": "workoutLinkHasDetail",
+            "type": "number",
+            "optional": true,
+            "allowEmpty": true
+          }
+        ]
+      }
+    ]
+  },
+  "9": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "workoutRecordStruct",
+        "type": "object",
+        "optional": false,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "workoutRecordId",
+            "type": "number16"
+          },
+          {
+            "tag": 3,
+            "jsonKey": "workoutStatus",
+            "type": "number8"
+          },
+          {
+            "tag": 4,
+            "jsonKey": "workoutStartTime",
+            "type": "number32"
+          },
+          {
+            "tag": 5,
+            "jsonKey": "workoutEndTime",
+            "type": "number32"
+          },
+          {
+            "tag": 6,
+            "jsonKey": "workoutCalorie",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 7,
+            "jsonKey": "workoutDistance",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 8,
+            "jsonKey": "workoutStep",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 9,
+            "jsonKey": "workoutTotalTime",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 10,
+            "jsonKey": "workoutSpeed",
+            "type": "number16",
+            "optional": true
+          },
+          {
+            "tag": 11,
+            "jsonKey": "workoutClimb",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 12,
+            "jsonKey": "workoutHrABSPeak",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 13,
+            "jsonKey": "workoutLoadPeak",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 14,
+            "jsonKey": "workoutEtrainingEffect",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 15,
+            "jsonKey": "workoutEpoc",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 16,
+            "jsonKey": "workoutMaxMET",
+            "type": "number16",
+            "optional": true
+          },
+          {
+            "tag": 17,
+            "jsonKey": "workoutRecoveryTime",
+            "type": "number16",
+            "optional": true
+          },
+          {
+            "tag": 18,
+            "jsonKey": "workoutExerciseDuration",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 19,
+            "jsonKey": "workoutDateInfo",
+            "type": "array",
+            "elemType": "number8",
+            "optional": true
+          },
+          {
+            "tag": 20,
+            "jsonKey": "workoutType",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 21,
+            "jsonKey": "algType",
+            "type": "number8",
+            "optional": true
+          }
+        ]
+      }
+    ]
+  },
+  "10": {
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "optional": true,
+        "type": "number"
+      },
+      {
+        "tag": 1,
+        "jsonKey": "workoutDetailStruct",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "workoutRecordId",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 3,
+            "jsonKey": "workoutDataIndex",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 4,
+            "jsonKey": "workoutDataHeader",
+            "type": "array",
+            "elemType": "number8",
+            "optional": true
+          },
+          {
+            "tag": 5,
+            "jsonKey": "workoutData",
+            "type": "array",
+            "elemType": "number8",
+            "optional": true
+          },
+          {
+            "tag": 6,
+            "jsonKey": "workoutNewData",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 7,
+            "jsonKey": "extrasData",
+            "type": "array",
+            "elemType": "number8",
+            "optional": true
+          },
+          {
+            "tag": 8,
+            "jsonKey": "extrasDataSize",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 9,
+            "jsonKey": "extrasDataBitmap",
+            "type": "array",
+            "elemType": "number8",
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "workoutDataStruct",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "workoutRecordId",
+            "type": "number16",
+            "optional": true
+          },
+          {
+            "tag": 3,
+            "jsonKey": "workoutDataIndex",
+            "type": "number16",
+            "optional": true
+          },
+          {
+            "tag": 6,
+            "jsonKey": "workoutNewData",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 7,
+            "jsonKey": "extrasData",
+            "type": "empty",
+            "optional": true
+          }
+        ]
+      }
+    ]
+  },
+  "11": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "realtimeDataStruct",
+        "type": "object",
+        "optional": false,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "exerciseDuration",
+            "type": "number32"
+          },
+          {
+            "tag": 3,
+            "jsonKey": "distance",
+            "type": "number32"
+          },
+          {
+            "tag": 4,
+            "jsonKey": "calorie",
+            "type": "number32"
+          },
+          {
+            "tag": 5,
+            "jsonKey": "speed",
+            "type": "number16"
+          },
+          {
+            "tag": 6,
+            "jsonKey": "pace",
+            "type": "number16"
+          },
+          {
+            "tag": 7,
+            "jsonKey": "hr",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 8,
+            "jsonKey": "avgSpeed",
+            "type": "number16",
+            "optional": true
+          },
+          {
+            "tag": 9,
+            "jsonKey": "avgPace",
+            "type": "number16",
+            "optional": true
+          },
+          {
+            "tag": 10,
+            "jsonKey": "totalRise",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 11,
+            "jsonKey": "totalDescend",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 12,
+            "jsonKey": "altitude",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 13,
+            "jsonKey": "aerobicTe",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 14,
+            "jsonKey": "anaerobicTe",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 15,
+            "jsonKey": "performanceCondition",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 16,
+            "jsonKey": "operatorType",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 17,
+            "jsonKey": "runningCourseNumber",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 18,
+            "jsonKey": "runningCourseActionCount",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 19,
+            "jsonKey": "runningCourseActionId",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "tag": 20,
+            "jsonKey": "runningCourseLeftType",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 21,
+            "jsonKey": "runningCourseContent",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 22,
+            "jsonKey": "stepCadence",
+            "type": "number16",
+            "optional": true
+          },
+          {
+            "tag": 23,
+            "jsonKey": "steps",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 24,
+            "jsonKey": "speedNew",
+            "type": "number16",
+            "optional": true
+          },
+          {
+            "tag": 25,
+            "jsonKey": "avgSpeedNew",
+            "type": "number16",
+            "optional": true
+          },
+          {
+            "tag": 26,
+            "jsonKey": "linkageCadence",
+            "type": "number16",
+            "optional": true
+          },
+          {
+            "tag": 27,
+            "jsonKey": "linkagePulpFrequency",
+            "type": "number16",
+            "optional": true
+          },
+          {
+            "tag": 28,
+            "jsonKey": "linkageSlurry",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 29,
+            "jsonKey": "linkagePower",
+            "type": "number16",
+            "optional": true
+          },
+          {
+            "tag": 30,
+            "jsonKey": "linkageResistanceLevel",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 31,
+            "jsonKey": "linkageResistanceLevelMax",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 32,
+            "jsonKey": "linkageResistanceLevelMin",
+            "type": "number8",
+            "optional": true
+          }
+        ]
+      }
+    ]
+  },
+  "12": {
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "optional": true,
+        "type": "number"
+      },
+      {
+        "tag": 1,
+        "jsonKey": "workoutPace",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "workoutRecordId",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 8,
+            "jsonKey": "paceIndex",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 3,
+            "jsonKey": "paceStruct",
+            "type": "anonArray",
+            "optional": true,
+            "rule": [
+              {
+                "tag": 4,
+                "jsonKey": "distance",
+                "type": "number",
+                "optional": true
+              },
+              {
+                "tag": 5,
+                "jsonKey": "unit",
+                "type": "number",
+                "optional": true
+              },
+              {
+                "tag": 6,
+                "jsonKey": "pace",
+                "type": "number",
+                "optional": true
+              },
+              {
+                "tag": 7,
+                "jsonKey": "pointIndex",
+                "type": "number",
+                "optional": true
+              },
+              {
+                "tag": 9,
+                "jsonKey": "distanceTail",
+                "type": "number",
+                "optional": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "workoutPace",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "workoutRecordId",
+            "type": "number16",
+            "optional": true
+          },
+          {
+            "tag": 8,
+            "jsonKey": "paceIndex",
+            "type": "number16",
+            "optional": true
+          }
+        ]
+      }
+    ]
+  },
+  "14": {
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "optional": true,
+        "type": "number"
+      },
+      {
+        "tag": 1,
+        "jsonKey": "swimSection",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "workoutRecordId",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 8,
+            "jsonKey": "sectionIndex",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 3,
+            "jsonKey": "sectionList",
+            "type": "anonArray",
+            "optional": true,
+            "rule": [
+              {
+                "tag": 4,
+                "jsonKey": "distance",
+                "type": "number",
+                "optional": true
+              },
+              {
+                "tag": 5,
+                "jsonKey": "unit",
+                "type": "number",
+                "optional": true
+              },
+              {
+                "tag": 6,
+                "jsonKey": "pace",
+                "type": "number",
+                "optional": true
+              },
+              {
+                "tag": 7,
+                "jsonKey": "pointIndex",
+                "type": "number",
+                "optional": true
+              },
+              {
+                "tag": 9,
+                "jsonKey": "sectionNum",
+                "type": "number",
+                "optional": true
+              },
+              {
+                "tag": 10,
+                "jsonKey": "swimType",
+                "type": "number",
+                "optional": true
+              },
+              {
+                "tag": 11,
+                "jsonKey": "swimPullTimes",
+                "type": "number",
+                "optional": true
+              },
+              {
+                "tag": 12,
+                "jsonKey": "swimAvgSwolf",
+                "type": "number",
+                "optional": true
+              },
+              {
+                "tag": 13,
+                "jsonKey": "swimTime",
+                "type": "number",
+                "optional": true
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "swimSection",
+        "type": "object",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "workoutRecordId",
+            "type": "number16",
+            "optional": true
+          },
+          {
+            "tag": 8,
+            "jsonKey": "sectionIndex",
+            "type": "number16",
+            "optional": true
+          }
+        ]
+      }
+    ]
+  },
+  "17": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "realTimeInfoStruct",
+        "type": "object",
+        "optional": false,
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "duration",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 3,
+            "jsonKey": "hr",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 4,
+            "jsonKey": "hrZone",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 5,
+            "jsonKey": "step",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 6,
+            "jsonKey": "cadence",
+            "type": "number16",
+            "optional": true
+          },
+          {
+            "tag": 7,
+            "jsonKey": "pace",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 8,
+            "jsonKey": "distance",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 9,
+            "jsonKey": "calorie",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 10,
+            "jsonKey": "totalRise",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 11,
+            "jsonKey": "totalDescend",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 12,
+            "jsonKey": "totalAltitude",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 13,
+            "jsonKey": "aerobicTe",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 14,
+            "jsonKey": "anaerobicTe",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 15,
+            "jsonKey": "performanceCondition",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 16,
+            "jsonKey": "timeInfo",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 17,
+            "jsonKey": "operatorType",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 18,
+            "jsonKey": "recoveryTime",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 19,
+            "jsonKey": "maxMET",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 20,
+            "jsonKey": "algType",
+            "type": "number8",
+            "optional": true
+          }
+        ]
+      }
+    ]
+  },
+  "18": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "operatorType",
+        "type": "number8",
+        "optional": false
+      }
+    ]
+  },
+  "20": {
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "optional": true,
+        "type": "number"
+      },
+      {
+        "tag": 1,
+        "jsonKey": "workoutRecordId",
+        "type": "number",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "bloodOxygenIndex",
+        "type": "number",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "bloodOxygenList",
+        "type": "array",
+        "elemType": "object",
+        "elemTag": 4,
+        "optional": true,
+        "rule": [
+          {
+            "tag": 5,
+            "jsonKey": "interval",
+            "type": "number",
+            "optional": true
+          },
+          {
+            "tag": 6,
+            "jsonKey": "value",
+            "type": "number",
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "workoutRecordId",
+        "type": "number16",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "bloodOxygenIndex",
+        "type": "number16",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "bloodOxygenList",
+        "type": "empty",
+        "optional": true
+      }
+    ]
+  },
+  "21": {
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "optional": true,
+        "type": "number"
+      },
+      {
+        "tag": 1,
+        "jsonKey": "workoutCapability",
+        "type": "number"
+      }
+    ],
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "workoutCapability",
+        "type": "empty"
+      }
+    ]
+  },
+  "22": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "workoutRecordId",
+        "type": "number16",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "sectionIndex",
+        "optional": true,
+        "type": "number16"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "optional": true,
+        "type": "number32"
+      },
+      {
+        "tag": 1,
+        "jsonKey": "workoutRecordId",
+        "type": "number",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "sectionIndex",
+        "optional": true,
+        "type": "number"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "sectionList",
+        "type": "array",
+        "elemType": "object",
+        "elemTag": 4,
+        "rule": [
+          {
+            "tag": 5,
+            "jsonKey": "sectionNum",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 6,
+            "jsonKey": "sectionTime",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 7,
+            "jsonKey": "sectionDistance",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 8,
+            "jsonKey": "sectionPace",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 9,
+            "jsonKey": "sectionHr",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 10,
+            "jsonKey": "sectionCadence",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 11,
+            "jsonKey": "sectionStepLength",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 12,
+            "jsonKey": "sectionTotalRise",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 13,
+            "jsonKey": "sectionTotalDescend",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 14,
+            "jsonKey": "sectionGroundContactTime",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 15,
+            "jsonKey": "sectionGroundImpactAccerleration",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 16,
+            "jsonKey": "sectionSwingAngle",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 17,
+            "jsonKey": "sectionEversionExcursion",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 18,
+            "jsonKey": "sectionBackSwingTime",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 19,
+            "jsonKey": "sectionDownSwingTime",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 20,
+            "jsonKey": "sectionHeadSpeed",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 21,
+            "jsonKey": "sectionSwingTempo",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 22,
+            "jsonKey": "sectionMaxSpeed",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 23,
+            "jsonKey": "sectionAvgSpeed",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 24,
+            "jsonKey": "sectionStartGpsPointIndex",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 25,
+            "jsonKey": "sectionEndGpsPointIndex",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 26,
+            "jsonKey": "sectionCableStartGpsPointIndex",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 27,
+            "jsonKey": "sectionCarbleEndGpsPointIndex",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 28,
+            "jsonKey": "sectionSlopeDegree",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 29,
+            "jsonKey": "sectionSlopePercent",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 30,
+            "jsonKey": "actionId",
+            "optional": true,
+            "type": "string"
+          },
+          {
+            "tag": 31,
+            "jsonKey": "actionResultType",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 32,
+            "jsonKey": "actionResultValue",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 33,
+            "jsonKey": "actionTargetValue",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 34,
+            "jsonKey": "avgCadence",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 35,
+            "jsonKey": "intervalTrainingSegmentType",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 36,
+            "jsonKey": "strengthType",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 37,
+            "jsonKey": "strengthStatistics",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 38,
+            "jsonKey": "strengthUpper",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 39,
+            "jsonKey": "strengthLower",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 40,
+            "jsonKey": "divingMaxDepth",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 41,
+            "jsonKey": "divingUnderwaterTime",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 42,
+            "jsonKey": "divingBreakTime",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 43,
+            "jsonKey": "holeId",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 44,
+            "jsonKey": "par",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 45,
+            "jsonKey": "holeScore",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 46,
+            "jsonKey": "holePutts",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 47,
+            "jsonKey": "holePenalty",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 48,
+            "jsonKey": "holeFairawyHits",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 49,
+            "jsonKey": "handicap",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 50,
+            "jsonKey": "validTracks",
+            "optional": true,
+            "type": "number"
+          },
+          {
+            "tag": 51,
+            "jsonKey": "shotTrackList",
+            "optional": true,
+            "type": "anonArray",
+            "rule": [
+              {
+                "tag": 52,
+                "jsonKey": "lon",
+                "optional": true,
+                "type": "array",
+                "elemType": "number8"
+              },
+              {
+                "tag": 53,
+                "jsonKey": "lat",
+                "optional": true,
+                "type": "array",
+                "elemType": "number8"
+              },
+              {
+                "tag": 54,
+                "jsonKey": "dis",
+                "optional": true,
+                "type": "number"
+              }
+            ]
+          },
+          {
+            "tag": 55,
+            "jsonKey": "fieldStruct",
+            "type": "anonArray",
+            "optional": true,
+            "rule": [
+              {
+                "tag": 56,
+                "jsonKey": "fieldName",
+                "type": "number"
+              },
+              {
+                "tag": 57,
+                "jsonKey": "fieldValue",
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "19": {
+    "default": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "optional": true,
+        "type": "number32"
+      },
+      {
+        "tag": 1,
+        "jsonKey": "workoutRecordId",
+        "type": "number16",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "sliceIndex",
+        "type": "number16",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "paceStruct",
+        "type": "array",
+        "elemType": "object",
+        "elemTag": 4,
+        "optional": true,
+        "rule": [
+          {
+            "tag": 5,
+            "jsonKey": "jumpTime",
+            "type": "number32",
+            "optional": true
+          },
+          {
+            "tag": 6,
+            "jsonKey": "jumpDuration",
+            "type": "number16",
+            "optional": true
+          },
+          {
+            "tag": 7,
+            "jsonKey": "jumpHeight",
+            "type": "number8",
+            "optional": true
+          },
+          {
+            "tag": 8,
+            "jsonKey": "jumpDistance",
+            "type": "number16",
+            "optional": true
+          }
+        ]
+      }
+    ]
+  },
+  "23": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "appWorkoutCapability",
+        "type": "number32"
+      }
+    ]
+  }
+}

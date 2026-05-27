@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    gravity="0x1"
+    orientation="1"
+    id="@+id/application_server_item_image_text_layout"
+    layout_width="-1"
+    layout_height="-2">
+    <ImageView
+        orientation="1"
+        id="@+id/application_server_item_image"
+        layout_width="64dp"
+        layout_height="64dp"
+        src="@drawable/_2131428042_res_0x7f0b02ca"
+        scaleType="1"/>
+    <LinearLayout
+        gravity="0x1"
+        orientation="1"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="5dp">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365487_res_0x7f0a0e6f"
+            textColor="@color/_2131299845_res_0x7f090e05"
+            ellipsize="3"
+            id="@+id/application_server_item_title"
+            layout_width="-2"
+            layout_height="-2"
+            lines="1"
+            singleLine="true"
+            fontFamily="@string/_2130852834_res_0x7f023be2"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365484_res_0x7f0a0e6c"
+            textColor="@color/_2131299850_res_0x7f090e0a"
+            ellipsize="3"
+            id="@+id/application_server_item_description"
+            visibility="2"
+            layout_width="-2"
+            layout_height="-2"
+            layout_marginTop="2dp"
+            maxLines="1"
+            fontFamily="@string/_2130852833_res_0x7f023be1"/>
+    </LinearLayout>
+</LinearLayout>

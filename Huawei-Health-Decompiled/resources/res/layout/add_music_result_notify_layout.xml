@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="0"
+    layout_width="-1"
+    layout_height="-2">
+    <TextView
+        textAppearance="@android:style/TextAppearance.Material.Notification.Title"
+        id="@+id/result_tv"
+        layout_width="-1"
+        layout_height="-2"
+        text="@string/_2130843554_res_0x7f0217a2"
+        layout_alignParentStart="true"/>
+</LinearLayout>

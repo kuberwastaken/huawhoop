@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-2"
+    layout_height="-2">
+    <ImageView
+        id="@+id/service_icon"
+        layout_width="152dp"
+        layout_height="80dp"/>
+    <RelativeLayout
+        layout_width="-2"
+        layout_height="-2">
+        <ImageView
+            id="@+id/service_icon_square"
+            visibility="2"
+            layout_width="60dp"
+            layout_height="60dp"
+            layout_marginTop="4dp"
+            layout_marginBottom="8dp"
+            layout_marginStart="0dp"
+            layout_marginEnd="30dp"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+            textColor="@color/_2131299845_res_0x7f090e05"
+            ellipsize="3"
+            id="@+id/service_name"
+            visibility="2"
+            layout_width="70dp"
+            layout_height="-2"
+            layout_marginBottom="16dp"
+            text="字符字符字符字符"
+            maxLines="2"
+            layout_below="@+id/service_icon_square"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,12 @@
+{
+  "mediaEvaluationSwitch": false,
+  "countryBlocklist": [
+    "TN",
+    "QA",
+    "SA",
+    "VN",
+    "IN",
+    "RU",
+    "KR"
+  ]
+}

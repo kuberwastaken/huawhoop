@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1"
+    layout_marginBottom="@dimen/_2131362498_res_0x7f0a02c2">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginBottom="@dimen/_2131362500_res_0x7f0a02c4"
+        NOT_FOUND_0xa="true"
+        NOT_FOUND_0xb="2"
+        NOT_FOUND_0xc="@string/_2130837882_res_0x7f02017a"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+        textColor="@color/_2131299850_res_0x7f090e0a"
+        id="@+id/weight_result_suggest_age_tips"
+        layout_width="-1"
+        layout_height="-2"
+        fontFamily="@string/_2130852834_res_0x7f023be2"
+        layout_marginStart="@dimen/_2131364901_res_0x7f0a0c25"
+        layout_marginEnd="@dimen/_2131364900_res_0x7f0a0c24"/>
+</LinearLayout>

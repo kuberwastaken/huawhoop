@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <RelativeLayout
+        layout_width="-1"
+        layout_height="-1">
+        <com.huawei.openalliance.ad.views.PPSSplashView
+            id="@+id/splash_ad_view"
+            layout_width="-1"
+            layout_height="-1"
+            layout_above="@+id/hw_health_start_page_icon_and_slogan"/>
+        <include
+            id="@+id/hw_health_start_page_icon_and_slogan"
+            visibility="2"
+            layout_width="-1"
+            layout_height="64dp"
+            layout_alignParentBottom="true"
+            layout_centerHorizontal="true"
+            layout="@layout/layout_activity_mainui_copyrights"/>
+    </RelativeLayout>
+</LinearLayout>

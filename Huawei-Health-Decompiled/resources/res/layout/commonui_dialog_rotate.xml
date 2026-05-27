@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-1">
+    <LinearLayout
+        gravity="0x11"
+        layout_gravity="0x11"
+        orientation="1"
+        id="@+id/rotate_card_dialog"
+        layout_width="-1"
+        layout_height="-1"
+        alpha="0"
+        layout_marginStart="@dimen/_2131362478_res_0x7f0a02ae"
+        layout_marginEnd="@dimen/_2131362477_res_0x7f0a02ad">
+        <ImageView
+            layout_gravity="0x11"
+            id="@+id/rotate_input_image"
+            layout_width="-2"
+            layout_height="-2"
+            scaleType="1"/>
+        <ImageView
+            layout_gravity="0x11"
+            id="@+id/rotate_card_cancel_dialog"
+            visibility="1"
+            layout_width="@dimen/_2131363021_res_0x7f0a04cd"
+            layout_height="@dimen/_2131363021_res_0x7f0a04cd"
+            layout_marginTop="@dimen/_2131363739_res_0x7f0a079b"
+            layout_marginBottom="@dimen/_2131363739_res_0x7f0a079b"
+            src="@drawable/_2131430570_res_0x7f0b0caa"
+            contentDescription="@string/_2130848057_res_0x7f022939"/>
+    </LinearLayout>
+</FrameLayout>

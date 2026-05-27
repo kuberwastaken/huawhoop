@@ -1,0 +1,359 @@
+{
+  "version": "1.0.3",
+  "template_id": "HealthDetailCommonTemplate",
+  "template_parser": "com.huawei.ui.main.stories.template.health.parser.HealthDetailCommonTemplateParser",
+  "template_config": {
+    "info": {
+      "id": "BloodPressureCardConstructor",
+      "res_package": "BloodPressureCardConstructor",
+      "name": "IDS_name_bloodpressure",
+      "desc": "IDS_desc_bloodpressure",
+      "bg_img": "pic_blood_pressure"
+    },
+    "operation_data": {
+      "page_type": 7
+    },
+    "activity_presenter": "health_common_activity_presenter",
+    "has_data_config": {
+      "content_presenter": "health_common_content_presenter",
+      "operation_data": {
+        "page_type": 7
+      },
+      "day_fragment": {
+        "fragment_presenter": "health_day_content_presenter",
+        "layout_config": {
+          "chart_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 0
+          },
+          "statistics_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 0
+          },
+          "analysis_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 0
+          },
+          "recommend_service_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 0
+          },
+          "service_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 0
+          },
+          "recommend_activity_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 0
+          },
+          "information_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 1
+          }
+        }
+      },
+      "week_fragment": {
+        "fragment_presenter": "health_week_content_presenter",
+        "layout_config": {
+          "chart_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 0
+          },
+          "statistics_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 0
+          },
+          "analysis_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 0
+          },
+          "recommend_service_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 0
+          },
+          "service_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 0
+          },
+          "recommend_activity_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 0
+          },
+          "information_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 1
+          }
+        }
+      },
+      "month_fragment": {
+        "fragment_presenter": "health_month_content_presenter",
+        "layout_config": {
+          "chart_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 0
+          },
+          "statistics_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 0
+          },
+          "analysis_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 0
+          },
+          "recommend_service_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 0
+          },
+          "service_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 0
+          },
+          "recommend_activity_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 0
+          },
+          "information_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 1
+          }
+        }
+      },
+      "year_fragment": {
+        "fragment_presenter": "health_year_content_presenter",
+        "layout_config": {
+          "chart_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 0
+          },
+          "statistics_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 0
+          },
+          "analysis_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 0
+          },
+          "recommend_service_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 0
+          },
+          "service_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 0
+          },
+          "recommend_activity_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 0
+          },
+          "information_view": {
+            "component": "",
+            "params": [
+              {
+                "name": "operation_id",
+                "value": "2002001"
+              }
+            ],
+            "oversea": 1
+          }
+        }
+      }
+    },
+    "no_device_config": {
+      "oversea": 0,
+      "content_presenter": "health_no_device_presenter",
+      "operation_data": {
+        "page_type": 34
+      },
+      "description_view": {
+        "component": "com.huawei.ui.main.stories.template.health.view.NoDataResolutionView",
+        "new_component": "no_device_resolution_view",
+        "params": [
+        ],
+        "oversea": 0
+      },
+      "buy_device_view": {
+        "component": "com.huawei.ui.main.stories.template.health.view.NoDataBuyDeviceView",
+        "new_component": "no_device_buy_device_view",
+        "params": [
+        ],
+        "oversea": 0
+      },
+      "service_view": {
+        "component": "com.huawei.ui.main.stories.template.health.view.NoDataServiceView",
+        "new_component": "no_device_service_view",
+        "params": [
+        ],
+        "oversea": 0
+      },
+      "information_view": {
+        "component": "com.huawei.ui.main.stories.template.health.view.NoDataNewsView",
+        "new_component": "no_device_news_view",
+        "params": [
+        ],
+        "oversea": 0
+      }
+    }
+  }
+}

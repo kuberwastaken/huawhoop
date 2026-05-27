@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.numberpicker.HealthNumberPicker xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    id="@+id/health_number_picker_one"
+    NOT_FOUND_0x1="@drawable/_2131431345_res_0x7f0b0fb1"/>

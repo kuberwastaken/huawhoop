@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" shape="0">
+    <solid color="@color/emui_clickeffic_default_color"/>
+    <stroke color="@color/feedback_sdk_problem_question_info_bg"/>
+    <corners radius="16dp"/>
+</shape>

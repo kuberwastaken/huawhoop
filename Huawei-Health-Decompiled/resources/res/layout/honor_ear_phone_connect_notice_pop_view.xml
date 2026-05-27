@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-2">
+    <LinearLayout
+        orientation="1"
+        background="@drawable/pic_ear_phone_notice_bg_light"
+        layout_width="@dimen/_2131361839_res_0x7f0a002f"
+        layout_height="-2"
+        layout_marginEnd="@dimen/_2131364900_res_0x7f0a0c24">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+            textColor="@color/_2131297309_res_0x7f09041d"
+            layout_gravity="0x10"
+            id="@+id/heart_rate_ear_phone_notice"
+            layout_width="-2"
+            layout_height="-2"
+            fontFamily="@string/_2130852833_res_0x7f023be1"
+            layout_marginStart="@dimen/_2131363826_res_0x7f0a07f2"/>
+    </LinearLayout>
+</LinearLayout>

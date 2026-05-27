@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <LinearLayout
+        gravity="0x10"
+        layout_gravity="0x10"
+        orientation="0"
+        layout_width="-1"
+        layout_height="-2"
+        minHeight="@dimen/_2131363125_res_0x7f0a0535"
+        layout_weight="1">
+        <com.huawei.ui.commonui.searchview.HealthSearchView
+            ellipsize="4"
+            id="@+id/contact_search_view"
+            layout_width="-1"
+            layout_height="-2"
+            layout_centerVertical="true"
+            paddingStart="@dimen/_2131364901_res_0x7f0a0c25"
+            paddingEnd="@dimen/_2131364900_res_0x7f0a0c24"
+            NOT_FOUND_0xc="@layout/hwsearchview_icon_hint_search_view"
+            NOT_FOUND_0xd="@string/_2130844204_res_0x7f021a2c"
+            style="@style/Health.CommonUI.HealthSearchView"/>
+    </LinearLayout>
+</LinearLayout>

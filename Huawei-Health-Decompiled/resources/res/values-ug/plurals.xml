@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">پەقەت %1$d تال بەلگىنىڭ بىرلا ۋاقىتتا قاتلىنىشىنى قوللايدۇ</item>
+        <item quantity="other">پەقەت %1$d تال بەلگىنىڭ بىرلا ۋاقىتتا قاتلىنىشىنى قوللايدۇ</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">قان شېكىرىڭىز %1$s مىنۇتتىن كېيىن %2$smmol/L دىن تۆۋەنلىمەكچى، دىققەت قىلىپ تۇرۇڭ.</item>
+        <item quantity="other">قان شېكىرىڭىز %1$s مىنۇتتىن كېيىن %2$smmol/L دىن تۆۋەنلىمەكچى، دىققەت قىلىپ تۇرۇڭ.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">قان شېكىرىڭىز %1$s مىنۇتتىن كېيىن %2$smg/dL دىن تۆۋەنلىمەكچى، دىققەت قىلىپ تۇرۇڭ.</item>
+        <item quantity="other">قان شېكىرىڭىز %1$s مىنۇتتىن كېيىن %2$smg/dL دىن تۆۋەنلىمەكچى، دىققەت قىلىپ تۇرۇڭ.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d قەدەم</item>
+        <item quantity="other">%d قەدەم</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s مىل</item>
+        <item quantity="other">%s مىل</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s كىلومېتىر</item>
+        <item quantity="other">%s كىلومېتىر</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">نىشانغا %1$s قەدەم قالدى!</item>
+        <item quantity="other">نىشانغا %1$s قەدەم قالدى!</item>
+    </plurals>
+</resources>

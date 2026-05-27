@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    gravity="0x1"
+    orientation="1"
+    clickable="true"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.view.ShareSquareLayout
+        layout_width="-1"
+        layout_height="-2">
+        <com.huawei.ui.commonui.cardview.HealthCardView
+            layout_width="-1"
+            layout_height="-1"
+            layout_margin="@dimen/_2131363051_res_0x7f0a04eb"
+            NOT_FOUND_0xc="@color/_2131299872_res_0x7f090e20"
+            NOT_FOUND_0xd="@dimen/_2131363172_res_0x7f0a0564"
+            NOT_FOUND_0xe="@dimen/_2131362907_res_0x7f0a045b">
+            <ImageView
+                layout_gravity="0x11"
+                id="@+id/sticker_img"
+                layout_width="-2"
+                layout_height="-2"
+                layout_margin="@dimen/_2131363087_res_0x7f0a050f"
+                src="@drawable/_2131431985_res_0x7f0b1231"/>
+            <ImageView
+                layout_gravity="0x800055"
+                id="@+id/sticker_img_mark"
+                visibility="2"
+                layout_width="@dimen/_2131363021_res_0x7f0a04cd"
+                layout_height="@dimen/_2131363021_res_0x7f0a04cd"
+                layout_marginBottom="@dimen/_2131363112_res_0x7f0a0528"
+                src="@mipmap/_2131821637_res_0x7f110445"
+                layout_marginEnd="@dimen/_2131363144_res_0x7f0a0548"/>
+        </com.huawei.ui.commonui.cardview.HealthCardView>
+    </com.huawei.ui.commonui.view.ShareSquareLayout>
+</LinearLayout>

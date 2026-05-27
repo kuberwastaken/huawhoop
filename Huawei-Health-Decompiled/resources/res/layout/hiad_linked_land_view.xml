@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.openalliance.ad.views.linkscroll.LinkScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    id="@+id/hiad_landpage_scroll_view"
+    layout_width="-1"
+    layout_height="-1">
+    <FrameLayout
+        layout_gravity="0x1"
+        id="@+id/linked_native_view"
+        background="@color/_2131298067_res_0x7f090713"
+        layout_width="-1"
+        layout_height="-2"/>
+    <FrameLayout
+        id="@+id/linked_pps_web_view"
+        layout_width="-1"
+        layout_height="-1"
+        layout_below="@+id/linked_native_view"/>
+</com.huawei.openalliance.ad.views.linkscroll.LinkScrollView>

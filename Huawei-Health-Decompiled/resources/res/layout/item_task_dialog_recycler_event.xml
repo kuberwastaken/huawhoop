@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.columnlayout.HealthColumnRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/item_task_dialog_recycler_event_layout"
+    background="@drawable/task_recycler_event_background"
+    layout_width="@dimen/_2131363140_res_0x7f0a0544"
+    layout_height="@dimen/_2131363140_res_0x7f0a0544">
+    <LinearLayout
+        gravity="0x11"
+        orientation="1"
+        layout_width="-2"
+        layout_height="-2"
+        layout_centerInParent="true">
+        <ImageView
+            id="@+id/item_task_dialog_recycler_event_icon"
+            layout_width="@dimen/_2131363021_res_0x7f0a04cd"
+            layout_height="@dimen/_2131363021_res_0x7f0a04cd"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131362916_res_0x7f0a0464"
+            textColor="@color/_2131299847_res_0x7f090e07"
+            id="@+id/item_task_dialog_recycler_event_text"
+            visibility="2"
+            layout_width="-2"
+            layout_height="-2"
+            fontFamily="@string/_2130852833_res_0x7f023be1"/>
+    </LinearLayout>
+</com.huawei.ui.commonui.columnlayout.HealthColumnRelativeLayout>

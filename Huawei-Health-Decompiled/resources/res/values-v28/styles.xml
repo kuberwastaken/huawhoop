@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.AppCompat" parent="@style/Base.V28.Theme.AppCompat">
+    </style>
+    <style name="Base.Theme.AppCompat.Light" parent="@style/Base.V28.Theme.AppCompat.Light">
+    </style>
+    <style name="Base.V14.ThemeOverlay.MaterialComponents.MaterialAlertDialog" parent="@style/ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="android:backgroundDimAmount">0.32</item>
+        <item name="android:checkedTextViewStyle">@style/Widget.MaterialComponents.CheckedTextView</item>
+        <item name="android:dialogCornerRadius">@null</item>
+        <item name="_2131099725_res_0x7f06004d">@style/MaterialAlertDialog.MaterialComponents</item>
+        <item name="_2131099838_res_0x7f0600be">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
+        <item name="_2131099839_res_0x7f0600bf">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
+        <item name="_2131099840_res_0x7f0600c0">@style/Widget.MaterialComponents.Button.TextButton.Dialog.Flush</item>
+        <item name="_2131099841_res_0x7f0600c1">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
+        <item name="_2131101137_res_0x7f0605d1">@style/MaterialAlertDialog.MaterialComponents.Body.Text</item>
+        <item name="_2131101138_res_0x7f0605d2">@integer/_2131624024_res_0x7f0e0058</item>
+    </style>
+    <style name="Base.V28.Theme.AppCompat" parent="@style/Base.V26.Theme.AppCompat">
+        <item name="_2131100101_res_0x7f0601c5">?android:attr/dialogCornerRadius</item>
+    </style>
+    <style name="Base.V28.Theme.AppCompat.Light" parent="@style/Base.V26.Theme.AppCompat.Light">
+        <item name="_2131100101_res_0x7f0601c5">?android:attr/dialogCornerRadius</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.BodyLarge" parent="@style/TextAppearance.AppCompat.Body2">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/_2130852562_res_0x7f023ad2</item>
+        <item name="android:letterSpacing">0.0312</item>
+        <item name="android:lineHeight">24sp</item>
+        <item name="_2131100270_res_0x7f06026e">@string/_2130852562_res_0x7f023ad2</item>
+        <item name="_2131101070_res_0x7f06058e">24sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.BodyMedium" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/_2130852562_res_0x7f023ad2</item>
+        <item name="android:letterSpacing">0.0179</item>
+        <item name="android:lineHeight">20sp</item>
+        <item name="_2131100270_res_0x7f06026e">@string/_2130852562_res_0x7f023ad2</item>
+        <item name="_2131101070_res_0x7f06058e">20sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.BodySmall" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/_2130852562_res_0x7f023ad2</item>
+        <item name="android:letterSpacing">0.0333</item>
+        <item name="android:lineHeight">16sp</item>
+        <item name="_2131100270_res_0x7f06026e">@string/_2130852562_res_0x7f023ad2</item>
+        <item name="_2131101070_res_0x7f06058e">16sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.DisplayLarge" parent="@style/TextAppearance.AppCompat.Display3">
+        <item name="android:textSize">57sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/_2130852560_res_0x7f023ad0</item>
+        <item name="android:letterSpacing">-0.0044</item>
+        <item name="android:lineHeight">64sp</item>
+        <item name="_2131100270_res_0x7f06026e">@string/_2130852560_res_0x7f023ad0</item>
+        <item name="_2131101070_res_0x7f06058e">64sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.DisplayMedium" parent="@style/TextAppearance.AppCompat.Display2">
+        <item name="android:textSize">45sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/_2130852560_res_0x7f023ad0</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:lineHeight">52sp</item>
+        <item name="_2131100270_res_0x7f06026e">@string/_2130852560_res_0x7f023ad0</item>
+        <item name="_2131101070_res_0x7f06058e">52sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.DisplaySmall" parent="@style/TextAppearance.AppCompat.Display1">
+        <item name="android:textSize">36sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/_2130852560_res_0x7f023ad0</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:lineHeight">44sp</item>
+        <item name="_2131100270_res_0x7f06026e">@string/_2130852560_res_0x7f023ad0</item>
+        <item name="_2131101070_res_0x7f06058e">44sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.HeadlineLarge" parent="@style/TextAppearance.AppCompat.Display1">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/_2130852560_res_0x7f023ad0</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:lineHeight">40sp</item>
+        <item name="_2131100270_res_0x7f06026e">@string/_2130852560_res_0x7f023ad0</item>
+        <item name="_2131101070_res_0x7f06058e">40sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.HeadlineMedium" parent="@style/TextAppearance.AppCompat.Headline">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/_2130852560_res_0x7f023ad0</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:lineHeight">36sp</item>
+        <item name="_2131100270_res_0x7f06026e">@string/_2130852560_res_0x7f023ad0</item>
+        <item name="_2131101070_res_0x7f06058e">36sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.HeadlineSmall" parent="@style/TextAppearance.AppCompat.Title">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/_2130852560_res_0x7f023ad0</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:lineHeight">32sp</item>
+        <item name="_2131100270_res_0x7f06026e">@string/_2130852560_res_0x7f023ad0</item>
+        <item name="_2131101070_res_0x7f06058e">32sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.LabelLarge" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/_2130852561_res_0x7f023ad1</item>
+        <item name="android:letterSpacing">0.0071</item>
+        <item name="android:lineHeight">20sp</item>
+        <item name="_2131100270_res_0x7f06026e">@string/_2130852561_res_0x7f023ad1</item>
+        <item name="_2131101070_res_0x7f06058e">20sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.LabelMedium" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/_2130852561_res_0x7f023ad1</item>
+        <item name="android:letterSpacing">0.0417</item>
+        <item name="android:lineHeight">16sp</item>
+        <item name="_2131100270_res_0x7f06026e">@string/_2130852561_res_0x7f023ad1</item>
+        <item name="_2131101070_res_0x7f06058e">16sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.LabelSmall" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/_2130852561_res_0x7f023ad1</item>
+        <item name="android:letterSpacing">0.0455</item>
+        <item name="android:lineHeight">16sp</item>
+        <item name="_2131100270_res_0x7f06026e">@string/_2130852561_res_0x7f023ad1</item>
+        <item name="_2131101070_res_0x7f06058e">16sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.TitleLarge" parent="@style/TextAppearance.AppCompat.Title">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/_2130852560_res_0x7f023ad0</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:lineHeight">28sp</item>
+        <item name="_2131100270_res_0x7f06026e">@string/_2130852560_res_0x7f023ad0</item>
+        <item name="_2131101070_res_0x7f06058e">28sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.TitleMedium" parent="@style/TextAppearance.AppCompat.Subhead">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/_2130852561_res_0x7f023ad1</item>
+        <item name="android:letterSpacing">0.0094</item>
+        <item name="android:lineHeight">24sp</item>
+        <item name="_2131100270_res_0x7f06026e">@string/_2130852561_res_0x7f023ad1</item>
+        <item name="_2131101070_res_0x7f06058e">24sp</item>
+    </style>
+    <style name="TextAppearance.M3.Sys.Typescale.TitleSmall" parent="@style/TextAppearance.AppCompat.Subhead">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">0x0</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@string/_2130852561_res_0x7f023ad1</item>
+        <item name="android:letterSpacing">0.0071</item>
+        <item name="android:lineHeight">20sp</item>
+        <item name="_2131100270_res_0x7f06026e">@string/_2130852561_res_0x7f023ad1</item>
+        <item name="_2131101070_res_0x7f06058e">20sp</item>
+    </style>
+    <style name="Widget.Emui.HwBubbleLayout" parent="@android:style/Widget.Holo">
+        <item name="android:outlineSpotShadowColor">@color/_2131298309_res_0x7f090805</item>
+        <item name="_2131100365_res_0x7f0602cd">false</item>
+        <item name="_2131100398_res_0x7f0602ee">@color/_2131297431_res_0x7f090497</item>
+        <item name="_2131100400_res_0x7f0602f0">false</item>
+        <item name="_2131100402_res_0x7f0602f2">@dimen/_2131362617_res_0x7f0a0339</item>
+        <item name="_2131100448_res_0x7f060320">false</item>
+        <item name="_2131100729_res_0x7f060439">false</item>
+        <item name="_2131100730_res_0x7f06043a">medium</item>
+        <item name="_2131100821_res_0x7f060495">light</item>
+    </style>
+    <style name="Widget.Emui.HwBubbleLayout.Dark" parent="@style/Widget.Emui.HwBubbleLayout">
+        <item name="android:outlineSpotShadowColor">@color/_2131298308_res_0x7f090804</item>
+        <item name="_2131100398_res_0x7f0602ee">@color/_2131297432_res_0x7f090498</item>
+        <item name="_2131100821_res_0x7f060495">dark</item>
+    </style>
+    <style name="Widget.Emui.HwBubbleLayout.Translucent" parent="@style/Widget.Emui.HwBubbleLayout">
+        <item name="android:outlineSpotShadowColor">@color/_2131298310_res_0x7f090806</item>
+        <item name="_2131100398_res_0x7f0602ee">@color/_2131297433_res_0x7f090499</item>
+        <item name="_2131100821_res_0x7f060495">translucent</item>
+    </style>
+    <style name="Widget.Material3.AppBarLayout" parent="@style/Widget.MaterialComponents.AppBarLayout.Surface">
+        <item name="android:outlineSpotShadowColor">@android:color/transparent</item>
+        <item name="android:outlineAmbientShadowColor">@android:color/transparent</item>
+        <item name="_2131101065_res_0x7f060589">true</item>
+    </style>
+    <style name="Widget.Material3.Toolbar" parent="@style/Widget.AppCompat.Toolbar">
+        <item name="android:outlineSpotShadowColor">@android:color/transparent</item>
+        <item name="android:outlineAmbientShadowColor">@android:color/transparent</item>
+        <item name="_2131100024_res_0x7f060178">0dp</item>
+        <item name="_2131101602_res_0x7f0607a2">?unknown_attr_ref: 7f060803</item>
+        <item name="_2131101784_res_0x7f060858">?unknown_attr_ref: 7f060802</item>
+    </style>
+</resources>

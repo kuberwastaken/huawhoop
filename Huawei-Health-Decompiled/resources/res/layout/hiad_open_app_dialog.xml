@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    paddingTop="24dp"
+    paddingRight="16dp"
+    layout_width="-1"
+    layout_height="-1"
+    paddingStart="16dp">
+    <TextView
+        textSize="15sp"
+        id="@+id/hiad_open_app_tips"
+        layout_width="-1"
+        layout_height="-2"/>
+    <CheckBox
+        textSize="13sp"
+        id="@+id/hiad_open_app_nomore_remind"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="16dp"
+        text="@string/_2130852290_res_0x7f0239c2"
+        paddingStart="8dp"/>
+</LinearLayout>

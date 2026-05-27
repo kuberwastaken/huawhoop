@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    background="?android:attr/selectableItemBackground"
+    layout_width="@dimen/_2131362808_res_0x7f0a03f8"
+    layout_height="-1">
+    <ImageView
+        id="@+id/menu_history"
+        layout_width="@dimen/_2131362801_res_0x7f0a03f1"
+        layout_height="@dimen/_2131362801_res_0x7f0a03f1"
+        src="@drawable/feedback_icon_feedback_history"
+        scaleType="7"
+        layout_centerInParent="true"
+        contentDescription="@string/_2130852086_res_0x7f0238f6"/>
+</RelativeLayout>

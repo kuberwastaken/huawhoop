@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.health.sport.view.FitnessCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    id="@+id/section21_9target_01_item_02"
+    layout_width="-1"
+    layout_height="@dimen/_2131362586_res_0x7f0a031a"
+    NOT_FOUND_0xe="@color/_2131296984_res_0x7f0902d8"
+    NOT_FOUND_0xf="@dimen/_2131362010_res_0x7f0a00da"
+    NOT_FOUND_0x10="0dp"
+    NOT_FOUND_0x11="false"
+    NOT_FOUND_0x12="9"
+    NOT_FOUND_0x13="21"
+    NOT_FOUND_0x14="true">
+    <RelativeLayout
+        layout_width="-1"
+        layout_height="-1">
+        <com.huawei.ui.commonui.imageview.HealthImageView
+            id="@+id/background_image"
+            layout_width="-1"
+            layout_height="-1"
+            scaleType="1"
+            adjustViewBounds="true"/>
+        <LinearLayout
+            gravity="0x10"
+            orientation="1"
+            layout_width="-2"
+            layout_height="-1"
+            layout_marginStart="@dimen/_2131362970_res_0x7f0a049a">
+            <com.huawei.ui.commonui.healthtextview.HealthTextView
+                textSize="@dimen/_2131365500_res_0x7f0a0e7c"
+                textColor="@color/_2131299847_res_0x7f090e07"
+                id="@+id/section_title"
+                layout_width="-2"
+                layout_height="-2"
+                fontFamily="@string/_2130852834_res_0x7f023be2"/>
+            <com.huawei.ui.commonui.healthtextview.HealthTextView
+                textSize="@dimen/_2131365484_res_0x7f0a0e6c"
+                textColor="@color/_2131299852_res_0x7f090e0c"
+                ellipsize="3"
+                id="@+id/section_description"
+                layout_width="@dimen/_2131362982_res_0x7f0a04a6"
+                layout_height="-2"
+                layout_marginTop="@dimen/_2131363051_res_0x7f0a04eb"
+                maxLines="2"
+                fontFamily="@string/_2130852834_res_0x7f023be2"/>
+        </LinearLayout>
+    </RelativeLayout>
+</com.huawei.health.sport.view.FitnessCardView>

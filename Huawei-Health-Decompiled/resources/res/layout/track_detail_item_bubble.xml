@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    layout_width="-2"
+    layout_height="-2">
+    <com.huawei.ui.commonui.bubblelayout.HealthBubbleLayout
+        id="@+id/item_bubble"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginStart="@dimen/_2131362934_res_0x7f0a0476"
+        layout_marginEnd="@dimen/_2131362934_res_0x7f0a0476"
+        NOT_FOUND_0x9="2"
+        NOT_FOUND_0xa="@dimen/_2131362934_res_0x7f0a0476"
+        NOT_FOUND_0xb="false"
+        NOT_FOUND_0xc="1">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365486_res_0x7f0a0e6e"
+            textColor="@color/_2131296950_res_0x7f0902b6"
+            id="@+id/item_bubble_content"
+            layout_width="-2"
+            layout_height="-2"
+            layout_marginTop="@dimen/_2131362934_res_0x7f0a0476"
+            layout_marginBottom="@dimen/_2131362934_res_0x7f0a0476"
+            layout_marginStart="@dimen/_2131362970_res_0x7f0a049a"
+            layout_marginEnd="@dimen/_2131362970_res_0x7f0a049a"/>
+    </com.huawei.ui.commonui.bubblelayout.HealthBubbleLayout>
+</LinearLayout>

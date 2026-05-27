@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@interpolator/_2131689480_res_0x7f0f0008"
+    android:duration="200"
+    android:valueFrom="M17,9 L32,15 L47,9"
+    android:valueTo="M17,15 L32,9 L47,15"
+    android:valueType="pathType"
+    android:propertyName="pathData"/>

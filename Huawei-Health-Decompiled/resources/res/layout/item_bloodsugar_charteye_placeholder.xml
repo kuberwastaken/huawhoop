@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x11"
+    layout_gravity="0x10"
+    orientation="1"
+    id="@+id/observer_view_item_place"
+    layout_width="-1"
+    layout_height="-2"/>

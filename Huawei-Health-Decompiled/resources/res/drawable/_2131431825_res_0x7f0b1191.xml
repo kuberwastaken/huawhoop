@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" autoMirrored="true">
+    <item state_enabled="false">
+        <nine-patch
+            src="@drawable/_2131429746_res_0x7f0b0972"
+            tint="@color/_2131297404_res_0x7f09047c"/>
+    </item>
+    <item state_pressed="true">
+        <nine-patch
+            src="@drawable/_2131429745_res_0x7f0b0971"
+            tint="@color/_2131297404_res_0x7f09047c"/>
+    </item>
+    <item
+        state_focused="true"
+        state_pressed="false">
+        <nine-patch
+            src="@drawable/_2131429745_res_0x7f0b0971"
+            tint="@color/_2131297404_res_0x7f09047c"/>
+    </item>
+    <item>
+        <nine-patch
+            src="@drawable/_2131429745_res_0x7f0b0971"
+            tint="@color/_2131297404_res_0x7f09047c"/>
+    </item>
+</selector>

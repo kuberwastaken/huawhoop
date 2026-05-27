@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="other">ຕົວ​ຊີ້​ວັດ​ເຖິງ %1$d ​ຕົວ​ສາ​ມາດ​ສະ​ແດງ​ຂຶ້ນ​ມາ​ຢູ່​ໃນ​ເສັ້ນ​ສະ​ແດງ​ໜຶ່ງ​ໄດ້.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="other">ຄາດວ່ານ້ຳຕານໃນເລືອດຂອງທ່ານຈະຫຼຸດລົງຕ່ຳກວ່າ %2$s mmol/L ໃນ %1$s ນທ. ກະລຸນາຕິດຕາມລະດັບນ້ຳຕານຂອງທ່ານຢ່າງໃກ້ຊິດ.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="other">ຄາດວ່ານ້ຳຕານໃນເລືອດຂອງທ່ານຈະຫຼຸດລົງຕ່ຳກວ່າ %2$s mg/dL ໃນ %1$s ນທ. ກະລຸນາຕິດຕາມລະດັບນ້ຳຕານຂອງທ່ານຢ່າງໃກ້ຊິດ.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="other">%d ກ້າວ​ຍ່າງ</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="other">%s ໄມ</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="other">%s ກມ</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="other">​ຫ່າງ​ອອກ​ໄປ %1$s ກ້າວ</item>
+    </plurals>
+</resources>

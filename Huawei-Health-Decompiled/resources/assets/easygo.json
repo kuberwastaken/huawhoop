@@ -1,0 +1,60 @@
+{
+  "easyGoVersion": "1.0",
+  "client": "com.huawei.health",
+  "logicEntities": [
+    {
+      "head": {
+        "function": "magicwindow",
+        "required": "true"
+      },
+      "body": {
+        "mode": "1",
+        "excludeDevice": "FOLD",
+        "activityPairs": [
+          {
+            "from": "com.huawei.health.MainActivity",
+            "to": "*"
+          }
+        ],
+        "Activities": [
+          {
+            "name": "com.huawei.indoorequip.activity.IndoorEquipDisplayActivity",
+            "defaultFullScreen": "true"
+          },
+          {
+            "name": "com.huawei.indoorequip.activity.IndoorEquipLandDisplayActivity",
+            "defaultFullScreen": "true"
+          },
+          {
+            "name": "com.huawei.ui.main.stories.me.views.privacy.ServiceItemActivity",
+            "defaultFullScreen": "true"
+          },
+          {
+            "name": "com.huawei.ui.main.stories.me.views.privacy.PrivacyStatementActivity",
+            "defaultFullScreen": "true"
+          },
+          {
+            "name": "com.huawei.healthcloud.plugintrack.ui.activity.SportBaseActivity",
+            "defaultFullScreen": "true"
+          },
+          {
+            "name": "com.huawei.health.suggestion.ui.fitness.activity.CoachActivity",
+            "defaultFullScreen": "true"
+          },
+          {
+            "name": "com.huawei.android.defaultbundle.DefaultUserConfirmationDialog",
+            "defaultFullScreen": "true"
+          },
+          {
+            "name": "com.huawei.health.HuaweiLoginActivity",
+            "defaultFullScreen": "true"
+          }
+        ],
+        "UX": {
+          "supportRotationUxCompat": "true",
+          "isDraggable": "false"
+        }
+      }
+    }
+  ]
+}

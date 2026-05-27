@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x11"
+    layout_gravity="0x11"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <ViewFlipper
+        layout_gravity="0x11"
+        id="@+id/opera_msg_flipper"
+        visibility="2"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131363112_res_0x7f0a0528"
+        layout_marginBottom="@dimen/_2131362577_res_0x7f0a0311"
+        inAnimation="@anim/_2130771989_res_0x7f010015"
+        outAnimation="@anim/_2130771990_res_0x7f010016"
+        layout_marginStart="@dimen/_2131364901_res_0x7f0a0c25"
+        layout_marginEnd="@dimen/_2131364900_res_0x7f0a0c24"/>
+</LinearLayout>

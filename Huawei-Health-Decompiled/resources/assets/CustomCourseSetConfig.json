@@ -1,0 +1,168 @@
+{
+  "version": "0.0.1",
+  "configId": "Custom.customize_courses_config",
+  "courseConfigs": [
+    {
+      "name": "IDS_sug_custom_courses_name",
+      "des": "IDS_sug_custom_courses_explain",
+      "midPictures": [],
+      "topicPreviewPics": [],
+      "courseType": 0,
+      "defaultCourseActions": [
+        {
+          "id": "RD001",
+          "name": "IDS_rate_zone_warmup_threshold"
+        },
+        {
+          "id": "RD002",
+          "name": "IDS_settings_one_level_menu_settings_item_text_id5"
+        },
+        {
+          "id": "RD005",
+          "name": "IDS_hw_pressure_relaxed"
+        },
+        {
+          "id": "RD004",
+          "name": "sug_rest_workout_name"
+        }
+      ],
+      "defaultNewAction": {
+        "id": "RD002",
+        "name": "IDS_start_track_sport_type_run"
+      },
+      "defaultCombinationActions": [
+        {
+          "id": "RD002",
+          "name": "IDS_start_track_sport_type_run"
+        },
+        {
+          "id": "RD004",
+          "name": "sug_rest_workout_name"
+        }
+      ],
+      "maxActionNum": 1000,
+      "maxListActionNum": 50,
+      "maxCombinationRepeats": 50,
+      "maxCreateNum": 500,
+      "version": "1.0.0",
+      "createTime": 100,
+      "modifiedTime": 100,
+      "defaultTargetConfigs": [
+        {
+          "id": "1",
+          "name": "IDS_start_track_target_type_time",
+          "valueType": 0,
+          "valueH": 1440,
+          "valueL": 180,
+          "unitType": "second"
+        },
+        {
+          "id": "0",
+          "name": "IDS_sport_distance",
+          "valueType": 0,
+          "valueH": 10000,
+          "valueL": 1000,
+          "unitType": "meter"
+        },
+        {
+          "id": "3",
+          "name": "IDS_start_track_target_type_calorie",
+          "valueType": 0,
+          "valueH": 5000,
+          "valueL": 100,
+          "unitType": "cal"
+        },
+        {
+          "id": "4",
+          "name": "IDS_main_watch_heart_rate_string",
+          "valueType": 0,
+          "valueH": 50,
+          "valueL": 50,
+          "unitType": "percent"
+        },
+        {
+          "id": "5",
+          "name": "IDS_main_watch_heart_rate_string",
+          "valueType": 1,
+          "valueH": 50,
+          "valueL": 50,
+          "unitType": "percent"
+        },
+        {
+          "id": "255",
+          "name": "IDS_plugin_achievement_report_none",
+          "valueType": 0,
+          "valueH": 0,
+          "valueL": 0,
+          "unitType": ""
+        }
+      ],
+      "defaultIntensityConfigs": [
+        {
+          "id": "13",
+          "name": "IDS_hwh_motiontrack_speed_range",
+          "valueType": 0,
+          "valueH": 1,
+          "valueL": 1,
+          "unitType": "IDS_second"
+        },
+        {
+          "id": "15",
+          "name": "IDS_motiontrack_show_map_sport_peisu_1",
+          "valueType": 2,
+          "valueH": 450000,
+          "valueL": 390000,
+          "unitType": "IDS_second"
+        },
+        {
+          "id": "16",
+          "name": "IDS_motiontrack_detail_fm_heart_bupin",
+          "valueType": 2,
+          "valueH": 180,
+          "valueL": 170,
+          "unitType": "IDS_motiontrack_detail_fm_heart_bupin_with_unit"
+        },
+        {
+          "id": "1",
+          "name": "IDS_hw_health_show_healthdata_heartrate_range",
+          "valueType": 2,
+          "valueH": 70,
+          "valueL": 60,
+          "unitType": "percent"
+        },
+        {
+          "id": "8",
+          "name": "IDS_rate_zone_text",
+          "valueType": 0,
+          "valueH": 1,
+          "valueL": 1,
+          "unitType": "sug_run_chart_heartrate_unit"
+        },
+        {
+          "id": "4",
+          "name": "IDS_rate_zone_text",
+          "valueType": 0,
+          "valueH": 1,
+          "valueL": 1,
+          "unitType": "sug_run_chart_heartrate_unit"
+        },
+        {
+          "id": "17",
+          "name": "IDS_rate_zone_text",
+          "valueType": 0,
+          "valueH": 1,
+          "valueL": 1,
+          "unitType": "sug_run_chart_heartrate_unit"
+        },
+        {
+          "id": "255",
+          "name": "IDS_sug_none",
+          "valueType": 0,
+          "valueH": 0,
+          "valueL": 0,
+          "unitType": ""
+        }
+      ]
+    }
+  ]
+}

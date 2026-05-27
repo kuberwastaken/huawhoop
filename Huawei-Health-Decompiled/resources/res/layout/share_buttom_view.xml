@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    gravity="0x11"
+    layout_gravity="0x1"
+    orientation="0"
+    id="@+id/oversea_share_layout"
+    paddingTop="@dimen/_2131365292_res_0x7f0a0dac"
+    paddingBottom="@dimen/_2131365292_res_0x7f0a0dac"
+    visibility="2"
+    layout_width="-1"
+    layout_height="-2"
+    weightSum="2"
+    layout_centerHorizontal="true"
+    NOT_FOUND_0x11="1">
+    <com.huawei.ui.commonui.button.HealthButton
+        textSize="@dimen/_2131362717_res_0x7f0a039d"
+        gravity="0x11"
+        id="@+id/oversea_save_local_btn"
+        layout_width="0dp"
+        layout_height="-2"
+        text="@string/_2130842718_res_0x7f02145e"
+        layout_weight="1"
+        textAllCaps="false"
+        fontFamily="HwChinese-medium"
+        style="@style/health_button_style"/>
+    <com.huawei.ui.commonui.button.HealthButton
+        textSize="@dimen/_2131362717_res_0x7f0a039d"
+        gravity="0x11"
+        id="@+id/oversea_share_btn"
+        layout_width="0dp"
+        layout_height="-2"
+        text="@string/_2130851500_res_0x7f0236ac"
+        layout_weight="1"
+        textAllCaps="false"
+        fontFamily="HwChinese-medium"
+        layout_marginStart="@dimen/_2131362575_res_0x7f0a030f"
+        style="@style/health_button_style"/>
+</com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout>

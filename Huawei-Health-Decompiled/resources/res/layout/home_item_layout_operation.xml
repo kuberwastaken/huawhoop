@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2"
+    importantForAccessibility="2">
+    <LinearLayout
+        orientation="1"
+        id="@+id/operation_card_layout"
+        layout_width="-1"
+        layout_height="-2"
+        importantForAccessibility="2">
+        <com.huawei.ui.commonui.subheader.HealthSubHeader
+            id="@+id/operation_card_sub_header"
+            layout_width="-1"
+            layout_height="-2"
+            importantForAccessibility="1"
+            NOT_FOUND_0x8="false"
+            NOT_FOUND_0x9="2"
+            NOT_FOUND_0xa="@string/_2130842935_res_0x7f021537"/>
+        <com.huawei.ui.commonui.recycleview.HealthRecycleView
+            id="@+id/operation_rv"
+            layout_width="-1"
+            layout_height="-1"
+            layout_marginBottom="@dimen/_2131362985_res_0x7f0a04a9"
+            paddingStart="@dimen/_2131362372_res_0x7f0a0244"
+            paddingEnd="@dimen/_2131362371_res_0x7f0a0243"/>
+    </LinearLayout>
+    <LinearLayout
+        orientation="1"
+        id="@+id/health_grid_operation_card"
+        layout_width="-1"
+        layout_height="-2"/>
+</LinearLayout>

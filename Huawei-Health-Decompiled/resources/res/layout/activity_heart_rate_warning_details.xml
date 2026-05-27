@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/heart_rate_alert_title_bar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xa="2"
+        NOT_FOUND_0xb="@color/_2131296700_res_0x7f0901bc"
+        NOT_FOUND_0xc="@string/_2130842197_res_0x7f021255"/>
+    <com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout
+        layout_width="-1"
+        layout_height="-2">
+        <com.huawei.ui.commonui.cardview.HealthCardView
+            layout_width="-1"
+            layout_height="-2"
+            layout_marginTop="@dimen/_2131362578_res_0x7f0a0312"
+            layout_marginBottom="@dimen/_2131362578_res_0x7f0a0312"
+            layout_marginStart="@dimen/_2131362013_res_0x7f0a00dd"
+            layout_marginEnd="@dimen/_2131362011_res_0x7f0a00db">
+            <com.huawei.ui.commonui.recycleview.HealthRecycleView
+                id="@+id/heart_rate_alert_recycler"
+                paddingTop="@dimen/_2131363112_res_0x7f0a0528"
+                paddingBottom="@dimen/_2131363112_res_0x7f0a0528"
+                layout_width="-1"
+                layout_height="-2"/>
+        </com.huawei.ui.commonui.cardview.HealthCardView>
+    </com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout>
+</LinearLayout>

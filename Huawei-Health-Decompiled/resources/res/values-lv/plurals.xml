@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="zero">Vienā grafikā var tikt parādīts līdz %1$d indikatoriem.</item>
+        <item quantity="one">Vienā grafikā var tikt parādīts līdz %1$d indikatoram.</item>
+        <item quantity="other">Vienā grafikā var tikt parādīts līdz %1$d indikatoriem.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="zero">Paredzams, ka jūsu glikozes līmenis asinīs samazināsies zem %2$s mmol/l pēc %1$s min. Lūdzu, rūpīgi uzraugiet savu glikozes līmeni.</item>
+        <item quantity="one">Paredzams, ka jūsu glikozes līmenis asinīs samazināsies zem %2$s mmol/l pēc %1$s min. Lūdzu, rūpīgi uzraugiet savu glikozes līmeni.</item>
+        <item quantity="other">Paredzams, ka jūsu glikozes līmenis asinīs samazināsies zem %2$s mmol/l pēc %1$s min. Lūdzu, rūpīgi uzraugiet savu glikozes līmeni.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="zero">Paredzams, ka jūsu glikozes līmenis asinīs samazināsies zem %2$s mg/dl pēc %1$s min. Lūdzu, rūpīgi uzraugiet savu glikozes līmeni.</item>
+        <item quantity="one">Paredzams, ka jūsu glikozes līmenis asinīs samazināsies zem %2$s mg/dl pēc %1$s min. Lūdzu, rūpīgi uzraugiet savu glikozes līmeni.</item>
+        <item quantity="other">Paredzams, ka jūsu glikozes līmenis asinīs samazināsies zem %2$s mg/dl pēc %1$s min. Lūdzu, rūpīgi uzraugiet savu glikozes līmeni.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="zero">%d soļi</item>
+        <item quantity="one">%d solis</item>
+        <item quantity="other">%d soļi</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="zero">%s mi</item>
+        <item quantity="one">%s mi</item>
+        <item quantity="other">%s mi</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="zero">%s km</item>
+        <item quantity="one">%s km</item>
+        <item quantity="other">%s km</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="zero">Vēl %1$s soļi</item>
+        <item quantity="one">Vēl %1$s solis</item>
+        <item quantity="other">Vēl %1$s soļi</item>
+    </plurals>
+</resources>

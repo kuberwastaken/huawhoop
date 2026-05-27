@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x1"
+    orientation="0"
+    id="@+id/expand_root_layout"
+    layout_width="-1"
+    layout_height="-2">
+    <LinearLayout
+        gravity="0x11"
+        layout_gravity="0x11"
+        orientation="0"
+        id="@+id/sleep_expand_btn_layout"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131363172_res_0x7f0a0564"
+        layout_marginBottom="@dimen/_2131362934_res_0x7f0a0476"
+        paddingStart="@dimen/_2131363172_res_0x7f0a0564"
+        paddingEnd="@dimen/_2131363172_res_0x7f0a0564">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365484_res_0x7f0a0e6c"
+            textColor="@color/_2131297422_res_0x7f09048e"
+            layout_gravity="0x10"
+            id="@+id/sleep_expand_title"
+            layout_width="-2"
+            layout_height="-2"
+            fontFamily="@string/_2130852833_res_0x7f023be1"
+            layout_marginEnd="@dimen/_2131362935_res_0x7f0a0477"/>
+        <ImageView
+            layout_gravity="0x10"
+            id="@+id/sleep_service_expand"
+            layout_width="@dimen/_2131362954_res_0x7f0a048a"
+            layout_height="@dimen/_2131363159_res_0x7f0a0557"
+            alpha="@dimen/_2131365229_res_0x7f0a0d6d"/>
+    </LinearLayout>
+</LinearLayout>

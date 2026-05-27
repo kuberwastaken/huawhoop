@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-2"
+    layout_height="-2">
+    <LinearLayout
+        orientation="1"
+        layout_width="@dimen/_2131363150_res_0x7f0a054e"
+        layout_height="@dimen/_2131363150_res_0x7f0a054e">
+        <ImageView
+            id="@+id/icon"
+            layout_width="-1"
+            layout_height="-1"/>
+    </LinearLayout>
+    <ImageView
+        layout_gravity="0x1"
+        id="@+id/close"
+        visibility="0"
+        layout_width="@dimen/_2131363002_res_0x7f0a04ba"
+        layout_height="@dimen/_2131363002_res_0x7f0a04ba"
+        layout_marginTop="@dimen/_2131362578_res_0x7f0a0312"
+        src="@drawable/_2131430570_res_0x7f0b0caa"
+        layout_below="@+id/icon"
+        contentDescription="@string/_2130848057_res_0x7f022939"/>
+</LinearLayout>

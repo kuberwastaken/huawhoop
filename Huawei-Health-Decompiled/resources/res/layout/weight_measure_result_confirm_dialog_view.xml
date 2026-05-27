@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <LinearLayout
+        id="@+id/weight_measure_result_confrim_list_layout"
+        layout_width="-1"
+        layout_height="-2">
+        <ListView
+            id="@+id/weight_measure_result_confrim_user_list"
+            scrollbars="0x0"
+            layout_width="-1"
+            layout_height="-1"
+            divider="@color/_2131296490_res_0x7f0900ea"/>
+    </LinearLayout>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365485_res_0x7f0a0e6d"
+        textColor="#ffff5500"
+        gravity="0x10"
+        id="@+id/weight_measure_result_confrim_add_new_user_text"
+        layout_width="-1"
+        layout_height="@dimen/_2131362345_res_0x7f0a0229"
+        text="@string/_2130843792_res_0x7f021890"
+        textAllCaps="true"
+        fontFamily="@string/_2130852833_res_0x7f023be1"/>
+</LinearLayout>

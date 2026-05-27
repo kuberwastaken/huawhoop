@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x10"
+    orientation="0"
+    id="@+id/track_main_page_gps_layout"
+    background="@drawable/_2131432020_res_0x7f0b1254"
+    layout_width="-2"
+    layout_height="-2"
+    paddingStart="@dimen/_2131363761_res_0x7f0a07b1"
+    paddingEnd="@dimen/_2131363761_res_0x7f0a07b1"
+    layout_marginEnd="@dimen/_2131363742_res_0x7f0a079e">
+    <com.huawei.ui.commonui.imageview.HealthImageView
+        id="@+id/track_main_page_gps"
+        background="@drawable/_2131432339_res_0x7f0b1393"
+        layout_width="-2"
+        layout_height="-2"
+        tint="@color/_2131297849_res_0x7f090639"/>
+    <com.huawei.ui.commonui.imageview.HealthImageView
+        id="@+id/track_main_page_gps_sign"
+        visibility="2"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginStart="@dimen/_2131363756_res_0x7f0a07ac"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131362934_res_0x7f0a0476"
+        textColor="@color/_2131299845_res_0x7f090e05"
+        ellipsize="3"
+        id="@+id/track_main_page_gps_sign_text"
+        layout_width="-2"
+        layout_height="-2"
+        text="@string/_2130839838_res_0x7f02091e"
+        maxLines="2"
+        fontFamily="@string/_2130852834_res_0x7f023be2"
+        layout_marginStart="@dimen/_2131363756_res_0x7f0a07ac"/>
+</LinearLayout>

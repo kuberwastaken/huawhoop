@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-1">
+    <ImageView
+        id="@+id/img_content"
+        layout_width="-1"
+        layout_height="-1"
+        scaleType="6"
+        radius="4dp"
+        layout_alignParentEnd="true"/>
+    <View
+        id="@+id/startView"
+        layout_width="0dp"
+        layout_height="-2"
+        layout_alignParentStart="true"/>
+    <View
+        id="@+id/coverView"
+        layout_width="0dp"
+        layout_height="-2"
+        layout_toEndOf="@+id/startView"/>
+</RelativeLayout>

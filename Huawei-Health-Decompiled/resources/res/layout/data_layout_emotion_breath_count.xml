@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    gravity="0x800003"
+    orientation="0"
+    id="@+id/activityLayout_middle"
+    layout_width="-1"
+    layout_height="-2"
+    importantForAccessibility="1">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365496_res_0x7f0a0e78"
+        textStyle="0x1"
+        textColor="@color/_2131299845_res_0x7f090e05"
+        layout_gravity="0x800013"
+        id="@+id/breath_count_value"
+        layout_width="-2"
+        layout_height="-2"
+        includeFontPadding="false"
+        fontFamily="textFontFamilyMedium"
+        NOT_FOUND_0x10="@dimen/_2131362970_res_0x7f0a049a"
+        NOT_FOUND_0x11="@dimen/_2131363051_res_0x7f0a04eb"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365484_res_0x7f0a0e6c"
+        textColor="@color/_2131299850_res_0x7f090e0a"
+        ellipsize="3"
+        layout_gravity="0x800053"
+        id="@+id/breath_count_des"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginBottom="@dimen/_2131363051_res_0x7f0a04eb"
+        text="@string/_2130841777_res_0x7f0210b1"
+        maxLines="1"
+        includeFontPadding="false"
+        fontFamily="@string/_2130852834_res_0x7f023be2"/>
+</LinearLayout>

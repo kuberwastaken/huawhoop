@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    id="@+id/notification_transmitting_view"
+    layout_width="-1"
+    layout_height="-2">
+    <LinearLayout
+        orientation="0"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginBottom="2dp">
+        <TextView
+            textAppearance="@android:style/TextAppearance.Material.Notification.Info"
+            textSize="@dimen/_2131365502_res_0x7f0a0e7e"
+            textColor="@color/_2131299845_res_0x7f090e05"
+            ellipsize="3"
+            id="@+id/touch_transfer_title"
+            layout_width="-1"
+            layout_height="-2"
+            fontFamily="@string/_2130852833_res_0x7f023be1"
+            layout_alignParentStart="true"/>
+    </LinearLayout>
+    <LinearLayout
+        orientation="0"
+        layout_width="-1"
+        layout_height="@dimen/_2131363021_res_0x7f0a04cd">
+        <ProgressBar
+            layout_gravity="0x10"
+            id="@+id/touch_transfer_progress"
+            layout_width="-1"
+            layout_height="@dimen/_2131363112_res_0x7f0a0528"
+            progressDrawable="@drawable/_2131432287_res_0x7f0b135f"
+            style="?android:attr/progressBarStyleHorizontal"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.numberpicker.HealthNumberPicker
+        layout_gravity="0x11"
+        id="@+id/userinfo_number_picker_v9"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="1dp"
+        layout_marginEnd="1dp"
+        NOT_FOUND_0x6="@drawable/_2131431345_res_0x7f0b0fb1"/>
+</RelativeLayout>

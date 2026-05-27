@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="0"
+    layout_width="-1"
+    layout_height="-2"
+    layout_marginStart="@dimen/_2131362372_res_0x7f0a0244"
+    layout_marginEnd="@dimen/_2131362371_res_0x7f0a0243">
+    <com.huawei.ui.commonui.cardview.HealthCardView
+        background="@android:color/transparent"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x9="@color/_2131296675_res_0x7f0901a3">
+        <LinearLayout
+            orientation="1"
+            id="@+id/observer_view_place"
+            layout_width="-1"
+            layout_height="-2"
+            layout_marginTop="@dimen/_2131362575_res_0x7f0a030f"
+            layout_marginBottom="@dimen/_2131362575_res_0x7f0a030f"/>
+    </com.huawei.ui.commonui.cardview.HealthCardView>
+</LinearLayout>

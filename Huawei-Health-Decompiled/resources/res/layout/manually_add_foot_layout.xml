@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.button.HealthButton xmlns:android="http://schemas.android.com/apk/res/android"
+    textSize="@dimen/_2131365501_res_0x7f0a0e7d"
+    textColor="@color/_2131296462_res_0x7f0900ce"
+    gravity="0x11"
+    layout_gravity="0x1"
+    id="@+id/manual_add_contact_button"
+    background="@null"
+    layout_width="-1"
+    layout_height="-2"
+    text="@string/_2130841737_res_0x7f021089"
+    fontFamily="@string/_2130852833_res_0x7f023be1"
+    layout_marginStart="@dimen/_2131362372_res_0x7f0a0244"
+    layout_marginEnd="@dimen/_2131362371_res_0x7f0a0243"/>

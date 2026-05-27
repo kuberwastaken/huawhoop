@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">একটি গ্রাফে %1$d পর্যন্ত সূচক নির্দেশিত হতে পারে।</item>
+        <item quantity="other">একটি গ্রাফে %1$d পর্যন্ত সূচক নির্দেশিত হতে পারে।</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">আপনার রক্তে গ্লুকোজের মাত্রা %1$s মিনিটে %2$s মিলিমোল/লিটারের নিচে নেমে যাবে বলে মনে করা হচ্ছে। গ্লুকোজের মাত্রা নিবিড় পর্যবেক্ষণে রাখুন।</item>
+        <item quantity="other">আপনার রক্তে গ্লুকোজের মাত্রা %1$s মিনিটে %2$s মিলিমোল/লিটারের নিচে নেমে যাবে বলে মনে করা হচ্ছে। গ্লুকোজের মাত্রা নিবিড় পর্যবেক্ষণে রাখুন।</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">আপনার রক্তে গ্লুকোজের মাত্রা %1$s মিনিটে %2$s mg/dL-এর নিচে নেমে যাবে বলে মনে করা হচ্ছে। গ্লুকোজের মাত্রা নিবিড় পর্যবেক্ষণে রাখুন।</item>
+        <item quantity="other">আপনার রক্তে গ্লুকোজের মাত্রা %1$s মিনিটে %2$s mg/dL-এর নিচে নেমে যাবে বলে মনে করা হচ্ছে। গ্লুকোজের মাত্রা নিবিড় পর্যবেক্ষণে রাখুন।</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%dটি পদক্ষেপ</item>
+        <item quantity="other">%dটি পর্যায়</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s মাইল</item>
+        <item quantity="other">%s মাইল</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s কিমি</item>
+        <item quantity="other">%s কিমি</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">%1$sটি পদক্ষেপ দূরে আছেন</item>
+        <item quantity="other">%1$sটি পদক্ষেপ দূরে আছেন</item>
+    </plurals>
+</resources>

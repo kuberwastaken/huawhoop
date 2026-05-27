@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item state_hovered="true">
+        <shape shape="0">
+            <corners radius="@dimen/_2131362616_res_0x7f0a0338"/>
+            <solid color="@color/_2131297446_res_0x7f0904a6"/>
+        </shape>
+    </item>
+    <item
+        state_pressed="true"
+        drawable="@drawable/_2131429347_res_0x7f0b07e3"/>
+</selector>

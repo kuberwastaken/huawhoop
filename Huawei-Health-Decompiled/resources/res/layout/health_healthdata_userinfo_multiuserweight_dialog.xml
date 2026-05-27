@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+        textColor="@color/_2131299845_res_0x7f090e05"
+        id="@+id/hw_health_multiuserWeight_dialog_tips"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131363788_res_0x7f0a07cc"
+        layout_marginBottom="8dp"
+        layout_below="@+id/multiuserweight_number_picker"/>
+    <com.huawei.ui.commonui.numberpicker.HealthNumberPicker
+        layout_gravity="0x11"
+        id="@+id/multiuserweight_number_picker"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131363766_res_0x7f0a07b6"
+        layout_marginEnd="@dimen/_2131363766_res_0x7f0a07b6"
+        NOT_FOUND_0xa="@drawable/_2131431345_res_0x7f0b0fb1"/>
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.bubblelayout.HealthBubbleLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    id="@+id/privacy_bubble_layout"
+    layout_width="-2"
+    layout_height="-2"
+    NOT_FOUND_0xa="2"
+    NOT_FOUND_0xb="true"
+    style="@style/Widget.Emui.HwBubbleLayout.Light">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131362955_res_0x7f0a048b"
+        textColor="@color/_2131297531_res_0x7f0904fb"
+        id="@+id/tips_content"
+        layout_width="@dimen/_2131362981_res_0x7f0a04a5"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131362934_res_0x7f0a0476"
+        layout_marginBottom="@dimen/_2131362934_res_0x7f0a0476"
+        text="@string/_2130839543_res_0x7f0207f7"
+        layout_marginStart="@dimen/_2131365638_res_0x7f0a0f06"
+        layout_marginEnd="@dimen/_2131365638_res_0x7f0a0f06"/>
+</com.huawei.ui.commonui.bubblelayout.HealthBubbleLayout>

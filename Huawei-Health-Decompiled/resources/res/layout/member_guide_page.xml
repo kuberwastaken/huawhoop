@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    id="@+id/member_guide_page_layout"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.viewpager.HealthViewPager
+        id="@+id/member_boot_view_pager"
+        layout_width="-1"
+        layout_height="-1"/>
+    <ImageView
+        id="@+id/close_img"
+        layout_width="@dimen/_2131363021_res_0x7f0a04cd"
+        layout_height="@dimen/_2131363021_res_0x7f0a04cd"
+        layout_marginTop="@dimen/_2131363090_res_0x7f0a0512"
+        src="@drawable/_2131430570_res_0x7f0b0caa"
+        contentDescription="@string/_2130848057_res_0x7f022939"
+        layout_marginEnd="@dimen/_2131362934_res_0x7f0a0476"
+        NOT_FOUND_0x7="0"
+        NOT_FOUND_0x8="0"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

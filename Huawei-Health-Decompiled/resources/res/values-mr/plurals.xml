@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">एका आलेखामध्ये %1$d निर्देशांक दर्शवले जाऊ शकतात.</item>
+        <item quantity="other">एका आलेखावर %1$d निर्देशांक दर्शवता येतील.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d पाऊल</item>
+        <item quantity="other">%d पावले</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s मैल</item>
+        <item quantity="other">%s मैल</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s किमी</item>
+        <item quantity="other">%s किमी</item>
+    </plurals>
+</resources>

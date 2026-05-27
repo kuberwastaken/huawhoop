@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">Ühel graafikul saab näidata kuni %1$d näidikut.</item>
+        <item quantity="other">Ühel graafikul saab näidata kuni %1$d näidikut.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">Teie veresuhkru tase langeb %1$s min jooksul eeldatavasti alla %2$s mmol/l. Jälgige oma veresuhkru taset tähelepanelikult.</item>
+        <item quantity="other">Teie veresuhkru tase langeb %1$s min jooksul eeldatavasti alla %2$s mmol/l. Jälgige oma veresuhkru taset tähelepanelikult.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">Teie veresuhkru tase langeb %1$s min jooksul eeldatavasti alla %2$s mg/dl. Jälgige oma veresuhkru taset tähelepanelikult.</item>
+        <item quantity="other">Teie veresuhkru tase langeb %1$s min jooksul eeldatavasti alla %2$s mg/dl. Jälgige oma veresuhkru taset tähelepanelikult.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d samm</item>
+        <item quantity="other">%d sammu</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s miil(i)</item>
+        <item quantity="other">%s miil(i)</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s km</item>
+        <item quantity="other">%s km</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">%1$s sammu kaugusel</item>
+        <item quantity="other">%1$s sammu kaugusel</item>
+    </plurals>
+</resources>

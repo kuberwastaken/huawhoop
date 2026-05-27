@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        state_enabled="true"
+        state_pressed="true"
+        id="@android:id/background">
+        <shape>
+            <corners radius="@dimen/_2131363407_res_0x7f0a064f"/>
+            <solid color="@color/_2131298062_res_0x7f09070e"/>
+            <stroke
+                width="@dimen/_2131363405_res_0x7f0a064d"
+                color="@color/_2131298062_res_0x7f09070e"/>
+        </shape>
+    </item>
+    <item
+        state_enabled="true"
+        state_pressed="false"
+        id="@android:id/background">
+        <shape>
+            <corners radius="@dimen/_2131363407_res_0x7f0a064f"/>
+            <solid color="@color/_2131298060_res_0x7f09070c"/>
+            <stroke
+                width="@dimen/_2131363405_res_0x7f0a064d"
+                color="@color/_2131298060_res_0x7f09070c"/>
+        </shape>
+    </item>
+    <item
+        state_enabled="false"
+        id="@android:id/background">
+        <shape>
+            <corners radius="@dimen/_2131363407_res_0x7f0a064f"/>
+            <solid color="@color/_2131298060_res_0x7f09070c"/>
+            <stroke
+                width="@dimen/_2131363405_res_0x7f0a064d"
+                color="@color/_2131298060_res_0x7f09070c"/>
+        </shape>
+    </item>
+</selector>

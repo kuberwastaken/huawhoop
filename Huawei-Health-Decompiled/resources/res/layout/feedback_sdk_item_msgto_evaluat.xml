@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-2"
+    layout_marginBottom="@dimen/_2131362797_res_0x7f0a03ed">
+    <ImageView
+        id="@+id/tb_other_user_icon"
+        layout_width="@dimen/_2131362804_res_0x7f0a03f4"
+        layout_height="@dimen/_2131362804_res_0x7f0a03f4"
+        src="@drawable/feedback_sdk_serviceavatar"
+        layout_marginEnd="@dimen/_2131362815_res_0x7f0a03ff"
+        layout_alignParentStart="true"/>
+    <LinearLayout
+        layout_width="-2"
+        layout_height="-2"
+        layout_toEndOf="@+id/tb_other_user_icon">
+        <TextView
+            textSize="@dimen/_2131362824_res_0x7f0a0408"
+            textColor="@color/feedback_sdk_text_normal_black"
+            id="@+id/from_content"
+            background="@drawable/feedback_sdk_bg_question_to"
+            padding="@dimen/_2131362815_res_0x7f0a03ff"
+            layout_width="-2"
+            layout_height="-2"
+            layout_weight="1"/>
+        <ImageView
+            id="@+id/tb_my_user_icon"
+            visibility="1"
+            layout_width="@dimen/_2131362804_res_0x7f0a03f4"
+            layout_height="@dimen/_2131362804_res_0x7f0a03f4"
+            src="@drawable/feedback_sdk_me_head_icon_def"
+            layout_marginStart="@dimen/_2131362815_res_0x7f0a03ff"
+            layout_alignParentEnd="true"/>
+    </LinearLayout>
+</RelativeLayout>

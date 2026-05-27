@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        state_enabled="true"
+        state_pressed="true"
+        id="@android:id/background">
+        <shape>
+            <corners radius="@dimen/_2131363360_res_0x7f0a0620"/>
+            <solid color="@color/_2131298015_res_0x7f0906df"/>
+        </shape>
+    </item>
+    <item
+        state_enabled="true"
+        state_pressed="false"
+        id="@android:id/background">
+        <shape>
+            <corners radius="@dimen/_2131363360_res_0x7f0a0620"/>
+            <solid color="@color/_2131298076_res_0x7f09071c"/>
+        </shape>
+    </item>
+    <item
+        state_enabled="false"
+        id="@android:id/background">
+        <shape>
+            <corners radius="@dimen/_2131363360_res_0x7f0a0620"/>
+            <solid color="@color/_2131298076_res_0x7f09071c"/>
+        </shape>
+    </item>
+</selector>

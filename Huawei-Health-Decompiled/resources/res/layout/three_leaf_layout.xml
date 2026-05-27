@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    layout_width="-2"
+    layout_height="-2">
+    <com.huawei.ui.commonui.view.Clover
+        layout_gravity="0x11"
+        id="@+id/view_task_status_clover"
+        visibility="1"
+        layout_width="@dimen/_2131362960_res_0x7f0a0490"
+        layout_height="@dimen/_2131362960_res_0x7f0a0490"
+        layout_marginTop="@dimen/_2131363051_res_0x7f0a04eb"
+        layout_marginBottom="@dimen/_2131363144_res_0x7f0a0548"
+        contentDescription="@string/IDS_health_clover_title"
+        NOT_FOUND_0x8="true"/>
+</FrameLayout>

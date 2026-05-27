@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" drawable="@drawable/_2131429478_res_0x7f0b0866">
+    <target
+        name="radiobutton"
+        animation="@animator/_2131034162_res_0x7f050032"/>
+    <target
+        name="radiobtn_inter"
+        animation="@animator/_2131034161_res_0x7f050031"/>
+    <target
+        name="radiobtn_bg"
+        animation="@animator/_2131034152_res_0x7f050028"/>
+    <target
+        name="path_inner_bg"
+        animation="@animator/_2131034155_res_0x7f05002b"/>
+</animated-vector>

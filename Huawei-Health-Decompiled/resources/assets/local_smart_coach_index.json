@@ -1,0 +1,37 @@
+{
+    "version": "1.1.1",
+    "updatedTime": "1561801664",
+    "plugins": [
+        {
+            "uuid": "audio-part1",
+            "version": "1.1.1",
+            "digest": "382233f334b1f31297b2cac0d39519faceed770d714efd72a185328b6746e375",
+            "fileType":"2"
+        },
+        {
+            "uuid": "audio-part2",
+            "version": "1.1.1",
+            "digest": "bd18694c90866bb13646203896c67c09e3d9ab314e30dca2da3feeaf715a45fa",
+            "fileType":"2"
+        },
+        {
+            "uuid": "audio-part3",
+            "version": "1.1.1",
+            "digest": "837cf685dc450b7f2cde7261136f59e5d9f2ded1f99aa16d759c8450c5daa00c",
+            "fileType":"2"
+        },
+        {
+            "uuid": "audio-part4",
+            "version": "1.1.1",
+            "digest": "11c25839a356d941322a52b8ae49f38ef0126d3544a9855da02e4486cba9bd6d",
+            "fileType":"2"
+        },
+        {
+            "uuid": "audio-part5",
+            "version": "1.1.1",
+            "digest": "09214bbf2879ad59fc8c17234a8c71149987f27969f69bf0070335b862a59ea8",
+            "fileType":"2"
+        }
+    ],
+    "hmsEnable": "false"
+}

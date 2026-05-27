@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        state_pressed="true"
+        drawable="@drawable/feedback_sdk_list_dialog_cancel_bg"/>
+    <item
+        state_selected="true"
+        drawable="@drawable/feedback_sdk_list_dialog_cancel_bg"/>
+    <item drawable="@color/feedback_sdk_dialog_bg"/>
+</selector>

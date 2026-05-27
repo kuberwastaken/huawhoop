@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x31"
+    orientation="1"
+    id="@+id/medal_item"
+    layout_width="-1"
+    layout_height="-2"
+    layout_marginBottom="24dp">
+    <ImageView
+        id="@+id/imageview_medal"
+        layout_width="74dp"
+        layout_height="74dp"
+        scaleType="1"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365484_res_0x7f0a0e6c"
+        textColor="@color/_2131299850_res_0x7f090e0a"
+        gravity="0x11"
+        id="@+id/medal_title_text"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="4dp"
+        fontFamily="@string/_2130852834_res_0x7f023be2"/>
+</LinearLayout>

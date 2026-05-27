@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/hwappbarpattern_layout_cancle_icon"
+    layout_width="-2"
+    layout_height="-1">
+    <com.huawei.uikit.hwimageview.widget.HwImageView
+        layout_gravity="0x11"
+        id="@+id/hwappbarpattern_cancel_icon"
+        background="@drawable/_2131428958_res_0x7f0b065e"
+        visibility="2"
+        layout_width="@dimen/_2131363965_res_0x7f0a087d"
+        layout_height="@dimen/_2131363965_res_0x7f0a087d"
+        src="@drawable/_2131428941_res_0x7f0b064d"
+        scaleType="7"
+        contentDescription="@android:string/cancel"
+        layout_marginStart="@dimen/_2131362637_res_0x7f0a034d"/>
+</LinearLayout>

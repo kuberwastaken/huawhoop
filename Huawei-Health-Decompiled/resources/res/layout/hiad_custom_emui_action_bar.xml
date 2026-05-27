@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-2">
+    <ImageView
+        id="@+id/hiad_id_back_btn"
+        layout_width="@dimen/_2131363347_res_0x7f0a0613"
+        layout_height="@dimen/_2131363347_res_0x7f0a0613"
+        src="@drawable/_2131428690_res_0x7f0b0552"
+        scaleType="7"/>
+    <TextView
+        textSize="14sp"
+        textColor="@color/_2131298034_res_0x7f0906f2"
+        ellipsize="3"
+        gravity="0x11"
+        id="@+id/hiad_id_title_tv"
+        layout_width="-1"
+        layout_height="@dimen/_2131363347_res_0x7f0a0613"
+        layout_marginLeft="@dimen/_2131363341_res_0x7f0a060d"
+        layout_marginRight="@dimen/_2131363341_res_0x7f0a060d"
+        text="@string/_2130852240_res_0x7f023990"
+        singleLine="true"
+        layout_toLeftOf="@+id/hiad_id_menu_btn"
+        layout_toRightOf="@+id/hiad_id_back_btn"
+        layout_marginStart="@dimen/_2131363341_res_0x7f0a060d"
+        layout_marginEnd="@dimen/_2131363341_res_0x7f0a060d"
+        layout_toStartOf="@+id/hiad_id_menu_btn"
+        layout_toEndOf="@+id/hiad_id_back_btn"/>
+    <ImageView
+        id="@+id/hiad_id_menu_btn"
+        layout_width="@dimen/_2131363347_res_0x7f0a0613"
+        layout_height="@dimen/_2131363347_res_0x7f0a0613"
+        src="@drawable/_2131428725_res_0x7f0b0575"
+        scaleType="7"
+        layout_alignParentRight="true"
+        layout_alignParentEnd="true"/>
+</merge>

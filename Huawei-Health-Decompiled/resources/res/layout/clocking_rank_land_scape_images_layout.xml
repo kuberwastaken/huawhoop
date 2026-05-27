@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.cardview.HealthCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="@dimen/_2131363028_res_0x7f0a04d4"
+    layout_height="@dimen/_2131362927_res_0x7f0a046f"
+    minHeight="@dimen/_2131362927_res_0x7f0a046f">
+    <com.huawei.ui.commonui.imageview.HealthImageView
+        id="@+id/land_scape_iv"
+        layout_width="-1"
+        layout_height="-1"/>
+</com.huawei.ui.commonui.cardview.HealthCardView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-1">
+    <WebView
+        id="@+id/sign_webView"
+        visibility="0"
+        layout_width="-1"
+        layout_height="-1"/>
+    <ProgressBar
+        id="@+id/progress_bar"
+        visibility="2"
+        layout_width="@dimen/_2131362783_res_0x7f0a03df"
+        layout_height="@dimen/_2131362783_res_0x7f0a03df"
+        layout_centerInParent="true"/>
+</RelativeLayout>

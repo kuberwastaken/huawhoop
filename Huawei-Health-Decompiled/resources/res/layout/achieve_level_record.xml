@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    id="@+id/service_item_layout"
+    background="@color/_2131298779_res_0x7f0909db"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/level_titlebar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xf="2"
+        NOT_FOUND_0x10="@color/_2131299926_res_0x7f090e56"
+        NOT_FOUND_0x11="@string/_2130841309_res_0x7f020edd"
+        NOT_FOUND_0x12="false"/>
+    <com.huawei.ui.commonui.listview.HealthExpandableListView
+        id="@+id/expandable_list_view"
+        scrollbars="0x0"
+        clipToPadding="false"
+        layout_width="-1"
+        layout_height="-1"
+        layout_marginBottom="@dimen/_2131362578_res_0x7f0a0312"
+        listSelector="@color/_2131299926_res_0x7f090e56"
+        cacheColorHint="@color/_2131296995_res_0x7f0902e3"
+        groupIndicator="@null"
+        divider="@null"
+        layout_below="@+id/level_titlebar"
+        layout_centerInParent="true"
+        layout_marginStart="@dimen/_2131362372_res_0x7f0a0244"
+        layout_marginEnd="@dimen/_2131362371_res_0x7f0a0243"/>
+</RelativeLayout>

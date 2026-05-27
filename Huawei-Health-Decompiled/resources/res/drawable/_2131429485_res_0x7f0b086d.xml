@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="@dimen/_2131364377_res_0x7f0a0a19"
+    android:width="@dimen/_2131364377_res_0x7f0a0a19"
+    android:autoMirrored="true"
+    android:viewportWidth="0.96"
+    android:viewportHeight="0.96">
+    <group
+        android:pivotX="0.48"
+        android:pivotY="0.48"
+        android:scaleX="1"
+        android:scaleY="1">
+        <path
+            android:name="box_outline"
+            android:pathData="M0.48,0.22 a0.26,0.26 0 0 1 0,0.52 a0.26,0.26 0 0 1 0,-0.52 a0,0 0 0                               0 0,0z"
+            android:strokeColor="@color/_2131297441_res_0x7f0904a1"
+            android:strokeWidth="0.04"/>
+    </group>
+    <group
+        android:name="radiobutton"
+        android:pivotX="0.48"
+        android:pivotY="0.48"
+        android:scaleX="1"
+        android:scaleY="1">
+        <path
+            android:name="radiobtn_bg"
+            android:fillColor="@color/_2131297175_res_0x7f090397"
+            android:pathData="M0.48,0.28 a0.20,0.20 0 0 1 0,0.40 a0.20,0.20 0 0 1 0,-0.40 v0.20 a0,0 0 0 0 0,0 a0,0 0 0                               0 0,0z"/>
+        <path
+            android:name="path_inner_bg"
+            android:fillColor="@color/_2131297618_res_0x7f090552"
+            android:pathData="M0.48,0.28 a0.20,0.20 0 0 1 0,0.40 a0.20,0.20 0 0 1 0,-0.40z"
+            android:fillAlpha="0"/>
+        <group
+            android:name="radiobtn_inter"
+            android:pivotX="0.48"
+            android:pivotY="0.48"
+            android:scaleX="1"
+            android:scaleY="1">
+            <path
+                android:fillColor="@color/_2131297362_res_0x7f090452"
+                android:pathData="M0.48,0.48 m-0.10,0 a0.10,0.10 0,1 1,0.20 0 a0.10,0.10 0,1 1,-0.20 0"/>
+            <path
+                android:fillColor="@color/_2131297362_res_0x7f090452"
+                android:pathData="M0.48,0.48 m0,-0.12 a0.12,0.12 0 0 1 0, 0.24 a0.12,0.12 0 0 1 0, -0.24 v0.02 a0.10,                                   0.10 0 0 0 0,0.20 a0.10,0.10 0 0 0 0,-0.20z"
+                android:fillAlpha="0.05"/>
+        </group>
+    </group>
+</vector>

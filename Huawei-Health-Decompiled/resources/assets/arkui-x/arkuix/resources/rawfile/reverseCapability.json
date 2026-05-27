@@ -1,0 +1,18 @@
+{
+  "sleep_version_aasm": {
+    "capBit": 21,
+    "coreDependent": true
+  },
+  "support_screen_shot_settings": {
+    "capBit": 32,
+    "coreDependent": true
+  },
+  "match_manage": {
+    "capBit": 40,
+    "coreDependent": true
+  },
+  "intelligence_train_plan": {
+    "capBit": 41,
+    "coreDependent": true
+  }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        id="@android:id/background"
+        height="24dp"
+        drawable="@drawable/_2131432153_res_0x7f0b12d9"/>
+    <item
+        id="@android:id/secondaryProgress"
+        height="24dp"
+        drawable="@drawable/_2131432152_res_0x7f0b12d8"/>
+    <item
+        id="@android:id/progress"
+        height="24dp"
+        drawable="@drawable/_2131432152_res_0x7f0b12d8"/>
+</layer-list>

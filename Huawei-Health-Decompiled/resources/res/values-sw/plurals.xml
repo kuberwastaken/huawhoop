@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">Hadi kiashiria %1$d kinaweza kuonyeshwa kwenye grafu moja.</item>
+        <item quantity="other">Hadi viashiria %1$d vinaweza kuonyeshwa kwenye grafu moja.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">Glukosi kwenye damu yako inatarajiwa kushuka chini ya mmol %2$s/L katika dak %1$s. Tafadhali fuatilia kwa karibu kiwango chako cha glukosi.</item>
+        <item quantity="other">Glukosi kwenye damu yako inatarajiwa kushuka chini ya mmol %2$s/L katika dak %1$s. Tafadhali fuatilia kwa karibu kiwango chako cha glukosi.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">Glukosi kwenye damu yako inatarajiwa kushuka chini ya mg %2$s/dL katika dak %1$s. Tafadhali fuatilia kwa karibu kiwango chako cha glukosi.</item>
+        <item quantity="other">Glukosi kwenye damu yako inatarajiwa kushuka chini ya mg %2$s/dL katika dak %1$s. Tafadhali fuatilia kwa karibu kiwango chako cha glukosi.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d Hatua</item>
+        <item quantity="other">%d Hatua</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">Maili %s</item>
+        <item quantity="other">Maili %s</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">Km %s</item>
+        <item quantity="other">Km %s</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">Mbali kwa hatua %1$s</item>
+        <item quantity="other">Mbali kwa hatua %1$s</item>
+    </plurals>
+</resources>

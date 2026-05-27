@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/service_country_id"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar xmlns:setting="http://schemas.android.com/apk/res-auto"
+        id="@+id/third_party_title_bar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x8="2"
+        NOT_FOUND_0x9="@string/_2130841452_res_0x7f020f6c"/>
+    <ListView
+        id="@+id/service_country_list"
+        layout_width="-2"
+        layout_height="-2"
+        divider="@color/_2131297380_res_0x7f090464"
+        layout_below="@+id/third_party_title_bar"
+        paddingStart="@dimen/_2131362647_res_0x7f0a0357"
+        paddingEnd="@dimen/_2131362646_res_0x7f0a0356"/>
+</RelativeLayout>

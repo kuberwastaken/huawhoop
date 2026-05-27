@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    background="@color/_2131298777_res_0x7f0909d9"
+    fitsSystemWindows="true"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.hms.iapfull.widget.actionbar.CustomActionBar
+        id="@+id/action_bar"
+        layout_width="-1"
+        layout_height="-2"/>
+    <FrameLayout
+        id="@+id/door_contents_fl"
+        layout_width="-1"
+        layout_height="-1"
+        layout_weight="1"/>
+    <include layout="@layout/fragment_pay"/>
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.openalliance.ad.views.CornerImageView
+        id="@+id/hiad_splash_snapshot"
+        layout_width="-1"
+        layout_height="-1"
+        scaleType="6"/>
+    <com.huawei.openalliance.ad.views.CornerImageView
+        id="@+id/hiad_splash_icon_view"
+        layout_width="-1"
+        layout_height="-2"
+        scaleType="6"
+        layout_centerInParent="true"/>
+</RelativeLayout>

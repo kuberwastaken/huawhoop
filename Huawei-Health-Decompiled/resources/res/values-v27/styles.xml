@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PrivacyTheme" parent="@style/HealthTheme">
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+</resources>

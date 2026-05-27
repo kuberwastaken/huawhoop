@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <include
+        id="@+id/layout_blood_sugar_remind"
+        visibility="2"
+        layout="@layout/layout_blood_sugar_diet_remind"/>
+    <com.huawei.ui.commonui.subtab.HealthSubTabWidget
+        id="@+id/health_detail_sub_tab_widget"
+        layout_width="-1"
+        layout_height="-2"
+        style="@style/health_sub_tab_style"/>
+    <com.huawei.ui.commonui.viewpager.HealthViewPager
+        id="@+id/health_detail_viewpager"
+        layout_width="-1"
+        layout_height="-1"/>
+</LinearLayout>

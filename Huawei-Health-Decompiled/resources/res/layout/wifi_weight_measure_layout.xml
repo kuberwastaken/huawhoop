@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-1">
+    <LinearLayout
+        gravity="0x11"
+        layout_gravity="0x11"
+        id="@+id/hw_wifi_device_measure_image_view_layout"
+        layout_width="-1"
+        layout_height="-2">
+        <ImageView
+            layout_gravity="0x11"
+            id="@+id/hw_wifi_device_measure_image_view"
+            background="@drawable/wifi_device_measure_guide"
+            layout_width="-2"
+            layout_height="-2"
+            scaleType="3"
+            adjustViewBounds="true"/>
+    </LinearLayout>
+    <com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout
+        gravity="0x1"
+        orientation="1"
+        layout_width="-1"
+        layout_height="-2"
+        layout_below="@+id/hw_wifi_device_measure_image_view_layout"
+        layout_centerHorizontal="true"
+        NOT_FOUND_0x10="0">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365500_res_0x7f0a0e7c"
+            textColor="@color/_2131299845_res_0x7f090e05"
+            gravity="0x11"
+            id="@+id/hw_wifi_device_measure_prompt"
+            layout_width="-1"
+            layout_height="-2"
+            layout_marginTop="@dimen/_2131363802_res_0x7f0a07da"
+            text="@string/IDS_device_wifi_scale_measure_guide_msg"
+            fontFamily="@string/_2130852833_res_0x7f023be1"/>
+    </com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout>
+</RelativeLayout>

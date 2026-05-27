@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x10"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <LinearLayout
+        orientation="1"
+        layout_width="-1"
+        layout_height="-2">
+        <TextView
+            textSize="@dimen/_2131365502_res_0x7f0a0e7e"
+            textColor="@color/_2131299845_res_0x7f090e05"
+            id="@+id/tv_title"
+            layout_width="-2"
+            layout_height="-2"
+            text="@string/IDS_device_nps_notify_title"
+            fontFamily="@string/_2130852833_res_0x7f023be1"/>
+        <TextView
+            textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+            textColor="@color/_2131299850_res_0x7f090e0a"
+            id="@+id/tv_content"
+            layout_width="-2"
+            layout_height="-2"
+            layout_marginTop="@dimen/_2131363051_res_0x7f0a04eb"
+            text="@string/IDS_device_nps_notify_content"
+            fontFamily="@string/_2130852833_res_0x7f023be1"/>
+    </LinearLayout>
+</LinearLayout>

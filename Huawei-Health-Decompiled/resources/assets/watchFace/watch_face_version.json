@@ -1,0 +1,42 @@
+[
+  {
+    "themeVersion": "HWHD09",
+    "screenResolution": "466*466"
+  },
+  {
+    "themeVersion": "HWHD08",
+    "screenResolution": "320*320"
+  },
+  {
+    "themeVersion": "HWHD10",
+    "screenResolution": "360*320"
+  },
+  {
+    "themeVersion": "HWHD02",
+    "screenResolution": "454*454"
+  },
+  {
+    "themeVersion": "HWHD01",
+    "screenResolution": "390*390"
+  },
+  {
+    "themeVersion": "HWHD05",
+    "screenResolution": "460*188"
+  },
+  {
+    "themeVersion": "HWHD03",
+    "screenResolution": "240*120"
+  },
+  {
+    "themeVersion": "HWHD04",
+    "screenResolution": "160*80"
+  },
+  {
+    "themeVersion": "HWHD06",
+    "screenResolution": "456*280"
+  },
+  {
+    "themeVersion": "HWHD07",
+    "screenResolution": "368*194"
+  }
+]

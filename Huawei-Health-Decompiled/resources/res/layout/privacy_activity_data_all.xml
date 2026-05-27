@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    background="@color/_2131297867_res_0x7f09064b"
+    layout_width="-1"
+    layout_height="-1">
+    <FrameLayout
+        id="@+id/fl_title_bar"
+        layout_width="-1"
+        layout_height="-2">
+        <com.huawei.ui.commonui.titlebar.CustomTitleBar
+            id="@+id/privacy_detail_title_bar"
+            layout_width="-1"
+            layout_height="-2"
+            NOT_FOUND_0x7="2"/>
+        <com.huawei.ui.commonui.titlebar.CustomTitleBar
+            id="@+id/privacy_spinner_title_bar"
+            layout_width="-1"
+            layout_height="-2"
+            NOT_FOUND_0x6="4"
+            NOT_FOUND_0x7="4"/>
+    </FrameLayout>
+    <FrameLayout
+        orientation="1"
+        id="@+id/privacy_all_data_container"
+        layout_width="-1"
+        layout_height="-1"
+        layout_below="@+id/fl_title_bar"/>
+</RelativeLayout>

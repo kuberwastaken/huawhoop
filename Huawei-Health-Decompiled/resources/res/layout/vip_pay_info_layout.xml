@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x10"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.health.h5pro.core.H5ProWebView
+        id="@+id/vip_pay_webview_bar"
+        layout_width="-1"
+        layout_height="-2"/>
+</LinearLayout>

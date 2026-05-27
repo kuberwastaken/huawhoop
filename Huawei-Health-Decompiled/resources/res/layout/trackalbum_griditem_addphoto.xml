@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x11"
+    orientation="1"
+    descendantFocusability="2"
+    layout_width="@dimen/_2131362494_res_0x7f0a02be"
+    layout_height="@dimen/_2131362494_res_0x7f0a02be">
+    <RelativeLayout
+        gravity="0x11"
+        orientation="1"
+        id="@+id/view_background"
+        layout_width="-1"
+        layout_height="-1">
+        <ImageView
+            id="@+id/photoView"
+            layout_width="@dimen/_2131363737_res_0x7f0a0799"
+            layout_height="@dimen/_2131363737_res_0x7f0a0799"
+            layout_marginTop="@dimen/_2131363722_res_0x7f0a078a"
+            layout_marginBottom="@dimen/_2131363722_res_0x7f0a078a"
+            src="@drawable/_2131432492_res_0x7f0b142c"
+            scaleType="6"
+            layout_marginStart="@dimen/_2131363722_res_0x7f0a078a"
+            layout_marginEnd="@dimen/_2131363722_res_0x7f0a078a"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            id="@+id/iv_del"
+            background="@drawable/_2131432494_res_0x7f0b142e"
+            layout_width="@dimen/_2131363707_res_0x7f0a077b"
+            layout_height="@dimen/_2131363707_res_0x7f0a077b"
+            layout_marginBottom="@dimen/_2131363720_res_0x7f0a0788"
+            scaleType="7"
+            layout_marginStart="@dimen/_2131363720_res_0x7f0a0788"/>
+    </RelativeLayout>
+</RelativeLayout>

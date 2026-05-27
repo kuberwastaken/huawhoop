@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/achieve_task_title"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x3="false"
+        NOT_FOUND_0x4="2"/>
+</RelativeLayout>

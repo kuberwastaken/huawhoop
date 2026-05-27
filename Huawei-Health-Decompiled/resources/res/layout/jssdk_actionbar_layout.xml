@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-1">
+    <LinearLayout
+        gravity="0x11"
+        id="@+id/back_to_homepage_layout"
+        layout_width="48dp"
+        layout_height="48dp"
+        layout_centerVertical="true"
+        layout_marginStart="4dp"
+        layout_alignParentStart="true">
+        <ImageView
+            id="@+id/back_to_homepage"
+            layout_width="-2"
+            layout_height="-2"/>
+    </LinearLayout>
+    <TextView
+        textSize="18sp"
+        ellipsize="3"
+        gravity="0x800013"
+        id="@+id/actionbar_title_textview"
+        layout_width="-1"
+        layout_height="-1"
+        singleLine="true"
+        layout_centerVertical="true"
+        fontFamily="HwChinese-medium"
+        layout_marginStart="4dp"
+        layout_marginEnd="16dp"
+        layout_toEndOf="@+id/back_to_homepage_layout"/>
+</RelativeLayout>

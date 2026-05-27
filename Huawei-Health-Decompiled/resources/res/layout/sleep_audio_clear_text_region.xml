@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <LinearLayout
+        layout_gravity="0x10"
+        orientation="1"
+        layout_width="-1"
+        layout_height="-2">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131362971_res_0x7f0a049b"
+            textColor="@color/_2131299845_res_0x7f090e05"
+            id="@+id/sleep_audio_clear_dialog_title"
+            layout_width="-1"
+            layout_height="-2"
+            fontFamily="HarmonyHeiTi"
+            textAlignment="5"
+            breakStrategy="1"
+            hyphenationFrequency="1"/>
+    </LinearLayout>
+</LinearLayout>

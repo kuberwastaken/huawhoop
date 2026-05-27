@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/common_banner_header"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x4="false"
+        NOT_FOUND_0x5="2"/>
+    <com.huawei.ui.commonui.recycleview.HealthRecycleView
+        id="@+id/common_banner_grid_recycler"
+        layout_width="-1"
+        layout_height="-2"/>
+</LinearLayout>

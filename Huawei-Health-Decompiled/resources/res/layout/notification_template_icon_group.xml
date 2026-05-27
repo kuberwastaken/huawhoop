@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/icon_group"
+    layout_width="@dimen/_2131365122_res_0x7f0a0d02"
+    layout_height="@dimen/_2131365121_res_0x7f0a0d01">
+    <ImageView
+        id="@+id/icon"
+        layout_width="-1"
+        layout_height="-1"
+        layout_marginTop="@dimen/_2131365119_res_0x7f0a0cff"
+        layout_marginBottom="@dimen/_2131365119_res_0x7f0a0cff"
+        scaleType="7"
+        layout_marginStart="@dimen/_2131365119_res_0x7f0a0cff"
+        layout_marginEnd="@dimen/_2131365119_res_0x7f0a0cff"/>
+    <ImageView
+        layout_gravity="0x800055"
+        id="@+id/right_icon"
+        visibility="2"
+        layout_width="@dimen/_2131365125_res_0x7f0a0d05"
+        layout_height="@dimen/_2131365125_res_0x7f0a0d05"
+        layout_marginBottom="8dp"
+        scaleType="7"
+        layout_marginEnd="8dp"/>
+</FrameLayout>

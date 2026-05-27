@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@drawable/_2131427511_res_0x7f0b00b7"
+    paddingTop="@dimen/_2131362499_res_0x7f0a02c3"
+    paddingBottom="@dimen/_2131362498_res_0x7f0a02c2"
+    layout_width="-1"
+    layout_height="-2"
+    paddingStart="@dimen/_2131362499_res_0x7f0a02c3"
+    paddingEnd="@dimen/_2131362499_res_0x7f0a02c3">
+    <include
+        layout_width="-1"
+        layout_height="-2"
+        layout="@layout/sleep_audio_clear_text_region"/>
+    <LinearLayout
+        orientation="1"
+        id="@+id/commonui_btn_menu_dialog_btn_container"
+        layout_width="-1"
+        layout_height="-2"/>
+</LinearLayout>

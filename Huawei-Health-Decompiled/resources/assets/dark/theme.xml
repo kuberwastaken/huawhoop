@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="feedback_sdk_problem_submit_normol_bg">#04324C</color>
+    <color name="feedback_sdk_problem_submit_select_bg">#0E9FFC</color>
+
+
+    <color name="feedback_sdk_problem_common_type_info_phone">#747474</color>
+    <color name="feedback_sdk_problem_select_question_type">#E6E6E6</color>
+    <color name="feedback_sdk_problem_question_info_bg">#262626</color>
+    <color name="feedback_sdk_problem_question_info_or_phone_text">#FFFFFF</color>
+    <color name="feedback_sdk_problem_question_info_or_phone_hint">#606060</color>
+    <color name="feedback_sdk_problem_question_number">#676767</color>
+    <color name="feedback_sdk_problem_question_max_number">#ff0000</color>
+    <color name="feedback_sdk_problem_submit_text">#4F7083</color>
+    <color name="feedback_sdk_problem_submit_select_text">#FFFFFF</color>
+
+    <color name="feedback_sdk_problem_recycle_select_question_type">#E6E6E6</color>
+    <color name="feedback_sdk_problem_recycle_normol_question_type_bg">#33ffffff</color>
+    <color name="feedback_sdk_problem_recycle_select_question_type_bg">#07507D</color>
+    <color name="feedback_sdk_problem_photo_bg">#191919</color>
+    <color name="feedback_sdk_text_normal_black">#99ffffff</color>
+    <color name="feedback_sdk_label_text_color_normal">#E6E6E6</color>
+    <color name="feedback_sdk_text_normal_black_50">#66ffffff</color>
+    <color name="feedback_sdk_common_btn_blue">#00AAEE</color>
+    <color name="feedback_sdk_common_black_20">#33ffffff</color>
+    <color name="feedback_sdk_moreservice_text_color">#E6E6E6</color>
+    <color name="feedback_sdk_moreservice_choose_text_color">#80E6E6E6</color>
+    <color name="feedback_sdk_common_black_40">#66ffffff</color>
+    <color name="feedback_sdk_tab_slider_bg_color_selected">#0D9FFB</color>
+    <color name="feedback_sdk_action_bar_grey">#F7262626</color>
+    <color name="feedback_sdk_notice_view_default_text_color">#80E6E6E6</color>
+    <color name="feedback_sdk_notice_view_pad_background">#000000</color>
+    <color name="feedback_sdk_notice_view_background">#000000</color>
+    <color name="feedback_sdk_list_item_hint_text_color_normal">#4DE6E6E6</color>
+    <color name="feedback_sdk_label_assist_text_color_normal">#80E6E6E6</color>
+    <color name="feedback_sdk_grid_divider_color">#33E6E6E6</color>
+    <color name="feedback_sdk_common_black_30">#4DE6E6E6</color>
+    <color name="feedback_sdk_tab_slider_bg_color_selected_50">#800D9FFB</color>
+
+    <color name="emui_color_gray_10">#E6E6E6</color>
+    <color name="emui_white">#e6e6e6</color>
+    <color name="emui_color_gray_5">#4CE6E6E6</color>
+    <color name="feedback_toggle_item_bg_color">#19FFFFFF</color>
+    <color name="feedback_tab_text_color_selected_20">#CCFB6522</color>
+
+    <!--EMUI9.0 深色主题需要添加的色值-->
+    <color name="emui_clickeffic_default_color">#19FFFFFF</color>
+    <color name="faq_emui_white_bg">@color/common_color_black</color>
+</resources>
+

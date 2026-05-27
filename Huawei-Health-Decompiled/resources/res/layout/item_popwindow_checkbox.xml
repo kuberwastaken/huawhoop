@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.togglebutton.HealthToggleButton xmlns:android="http://schemas.android.com/apk/res/android"
+    textSize="@dimen/_2131365484_res_0x7f0a0e6c"
+    textColor="@color/_2131299845_res_0x7f090e05"
+    gravity="0x11"
+    id="@+id/item_checkbox"
+    background="@drawable/_2131432127_res_0x7f0b12bf"
+    layout_width="-2"
+    layout_height="-2"
+    button="@null"
+    minWidth="@dimen/_2131362494_res_0x7f0a02be"
+    minHeight="@dimen/_2131362485_res_0x7f0a02b5"
+    singleLine="true"
+    fontFamily="@string/_2130852834_res_0x7f023be2"
+    textAlignment="4"
+    paddingStart="@dimen/_2131362220_res_0x7f0a01ac"
+    paddingEnd="@dimen/_2131362220_res_0x7f0a01ac"/>

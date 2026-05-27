@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <include
+        id="@+id/speed_interval_layout_show"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131362578_res_0x7f0a0312"
+        layout="@layout/track_share_heart_ring"/>
+    <com.huawei.ui.commonui.tablewidget.HealthTableWidget
+        id="@+id/speed_interval_table_layout"
+        visibility="2"
+        layout_width="-1"
+        layout_height="155dp"
+        layout_marginTop="@dimen/_2131362373_res_0x7f0a0245"
+        NOT_FOUND_0xa="4dp"
+        NOT_FOUND_0xb="false"
+        NOT_FOUND_0xc="false"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365486_res_0x7f0a0e6e"
+        textColor="@color/_2131296661_res_0x7f090195"
+        gravity="0x1"
+        id="@+id/speed_interval_table_tips"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131362577_res_0x7f0a0311"
+        fontFamily="@string/_2130852834_res_0x7f023be2"/>
+</LinearLayout>

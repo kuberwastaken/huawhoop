@@ -1,0 +1,161 @@
+{
+  "version": "1.0",
+  "sportTypeGroupList": [
+    {
+      "groupId": "BASE_SPORT",
+      "groupName": "base sport",
+      "groupNameRes": "IDS_base_sport_type",
+      "sportList": [
+        "SPORT_TYPE_WALK",
+        "SPORT_TYPE_RUN",
+        "SPORT_TYPE_BIKE",
+        "SPORT_TYPE_CLIMB_HILL",
+        "SPORT_TYPE_SWIM",
+        "SPORT_TYPE_OPEN_AREA_SWIM",
+        "SPORT_TYPE_OTHER_SPORT",
+        "SPORT_TYPE_INDOOR_WALKING",
+        "SPORT_TYPE_HIKING",
+        "SPORT_TYPE_CROSS_COUNTRY_RACE",
+        "SPORT_TYPE_TRIATHLON",
+        "SPORT_TYPE_ROW_MACHINE",
+        "SPORT_TYPE_TREADMILL",
+        "SPORT_TYPE_CROSS_TRAINER",
+        "SPORT_TYPE_INDOOR_BIKE"
+      ]
+    },
+    {
+      "groupId": "FITNESS_SPORT",
+      "groupName": "fitness sport",
+      "groupNameRes": "IDS_fitness_sport_type",
+      "sportList": [
+        "SPORT_TYPE_TREAD_MACHINE",
+        "SPORT_TYPE_BODY_BUILDING",
+        "SPORT_TYPE_YOGA",
+        "SPORT_TYPE_KARATE",
+        "SPORT_TYPE_PILATES",
+        "SPORT_TYPE_STRENGTH_TRAINING",
+        "SPORT_TYPE_SPINNING",
+        "SPORT_TYPE_STROLL_MACHINE",
+        "SPORT_TYPE_HLLT",
+        "SPORT_TYPE_GROUP_CALISTHENICS",
+        "SPORT_TYPE_CROSS_FIT",
+        "SPORT_TYPE_FUNCTIONAL_TRAINING",
+        "SPORT_TYPE_PHYSICAL_TRAINING",
+        "SPORT_TYPE_TAEKWONDO",
+        "SPORT_TYPE_BOXING",
+        "SPORT_TYPE_FREE_SPARRING",
+        "SPORT_TYPE_FENCING",
+        "SPORT_TYPE_BELLY_DANCE",
+        "SPORT_TYPE_JAZZ",
+        "SPORT_TYPE_LATIN",
+        "SPORT_TYPE_BALLET",
+        "SPORT_TYPE_CORE_TRAINING",
+        "SPORT_TYPE_BODY_COMBAT",
+        "SPORT_TYPE_KENDO",
+        "SPORT_TYPE_HORIZONTAL_BAR",
+        "SPORT_TYPE_PARALLEL_BAR"
+      ]
+    },
+    {
+      "groupId": "LEISURE_SPORT",
+      "groupName": "leisure sport",
+      "groupNameRes": "IDS_leisure_sport_type",
+      "sportList": [
+        "SPORT_TYPE_CLIMB_STAIRS",
+        "SPORT_TYPE_GOLF",
+        "SPORT_TYPE_HIPHOP",
+        "SPORT_TYPE_ROLLER_SKATING",
+        "SPORT_TYPE_MARTIAL",
+        "SPORT_TYPE_SQUARE_DANCE",
+        "SPORT_TYPE_TAI_CHI",
+        "SPORT_TYPE_DANCE",
+        "SPORT_TYPE_HULA_HOOP",
+        "SPORT_TYPE_FRISBEE",
+        "SPORT_TYPE_DARTS",
+        "SPORT_TYPE_ARCHERY",
+        "SPORT_TYPE_HORSE_RIDING",
+        "SPORT_TYPE_HUNTING",
+        "SPORT_TYPE_FLY_KITE",
+        "SPORT_TYPE_TUG_WAR",
+        "SPORT_TYPE_SWING",
+        "SPORT_TYPE_OBSTACLE_RACE",
+        "SPORT_TYPE_FISHING",
+        "SPORT_TYPE_E_SPORTS"
+      ]
+    },
+    {
+      "groupId": "BALL_SPORT",
+      "groupName": "ball sport",
+      "groupNameRes": "IDS_ball_sport_type",
+      "sportList": [
+        "SPORT_TYPE_BASKETBALL",
+        "SPORT_TYPE_PINGPONG",
+        "SPORT_TYPE_BADMINTON",
+        "SPORT_TYPE_TENNIS",
+        "SPORT_TYPE_VOLLEYBALL",
+        "SPORT_TYPE_BILLIARDS",
+        "SPORT_TYPE_BOWLING",
+        "SPORT_TYPE_SHUTTLECOCK",
+        "SPORT_TYPE_HANDBALL",
+        "SPORT_TYPE_BASEBALL",
+        "SPORT_TYPE_SOFTBALL",
+        "SPORT_TYPE_CRICKET",
+        "SPORT_TYPE_RUGBY",
+        "SPORT_TYPE_BEACH_SOCCER",
+        "SPORT_TYPE_BEACH_VOLLEYBALL",
+        "SPORT_TYPE_GATEBALL",
+        "SPORT_TYPE_HOCKEY",
+        "SPORT_TYPE_SQUASH",
+        "SPORT_TYPE_SEPAKTAKRAW",
+        "SPORT_TYPE_DODGE_BALL",
+        "SPORT_TYPE_PADEL",
+        "SPORT_TYPE_FOOTBALL",
+        "SPORT_TYPE_BASKETBALL",
+        "SPORT_TYPE_PICKLE_BALL"
+      ]
+    },
+    {
+      "groupId": "AQUATICS_SPORT",
+      "groupName": "aquatics sport",
+      "groupNameRes": "IDS_aquatics_sport_type",
+      "sportList": [
+        "SPORT_TYPE_SAILBOAT",
+        "SPORT_TYPE_SURFING",
+        "SPORT_TYPE_DRIFTING",
+        "SPORT_TYPE_DRAGON_BOAT",
+        "SPORT_TYPE_CANOEING",
+        "SPORT_TYPE_ROWING",
+        "SPORT_TYPE_MOTORBOAT",
+        "SPORT_TYPE_SUP"
+      ]
+    },
+    {
+      "groupId": "WINTER_SPORT",
+      "groupName": "winter sport",
+      "groupNameRes": "IDS_winter_sport_type",
+      "sportList": [
+        "SPORT_TYPE_SKATING",
+        "SPORT_TYPE_ICE_HOCKEY",
+        "SPORT_TYPE_CURLING",
+        "SPORT_TYPE_SNOW_MOBILE",
+        "SPORT_TYPE_SLED",
+        "SPORT_TYPE_BIATHLON"
+      ]
+    },
+    {
+      "groupId": "X_SPORT",
+      "groupName": "x-sport",
+      "groupNameRes": "IDS_x_sport_sport_type",
+      "sportList": [
+        "SPORT_TYPE_SKATEBOARD",
+        "SPORT_TYPE_ROCK_CLIMB",
+        "SPORT_TYPE_BUNGEE_JUMP",
+        "SPORT_TYPE_PARKOUR",
+        "SPORT_TYPE_BMX",
+        "SPORT_TYPE_ORIENTEERING",
+        "SPORT_TYPE_PARACHUTE",
+        "SPORT_TYPE_RACE"
+      ]
+    }
+  ]
+}

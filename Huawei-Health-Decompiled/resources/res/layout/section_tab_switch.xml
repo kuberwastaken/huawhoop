@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2"
+    minHeight="@dimen/_2131363053_res_0x7f0a04ed">
+    <com.huawei.ui.commonui.cardview.HealthCardView
+        id="@+id/tab_card_view"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131362934_res_0x7f0a0476"
+        minHeight="@dimen/_2131363063_res_0x7f0a04f7"
+        NOT_FOUND_0x9="@dimen/_2131363021_res_0x7f0a04cd">
+        <com.huawei.ui.commonui.tablayout.HealthTabLayout
+            id="@+id/section_tab_switch_tablayout"
+            layout_width="-1"
+            layout_height="-1"
+            layout_marginTop="-4dp"
+            layout_marginBottom="-4dp"
+            minHeight="@dimen/_2131363063_res_0x7f0a04f7"
+            layout_marginStart="@dimen/_2131363112_res_0x7f0a0528"
+            layout_marginEnd="@dimen/_2131363112_res_0x7f0a0528"
+            NOT_FOUND_0xa="0"
+            NOT_FOUND_0xb="true"
+            NOT_FOUND_0xc="@dimen/_2131362907_res_0x7f0a045b"
+            NOT_FOUND_0xd="0dp"
+            NOT_FOUND_0xe="1"
+            NOT_FOUND_0xf="0dp"
+            NOT_FOUND_0x10="0dp"
+            NOT_FOUND_0x11="@color/_2131299926_res_0x7f090e56"/>
+    </com.huawei.ui.commonui.cardview.HealthCardView>
+    <com.huawei.ui.commonui.viewpager.HealthNativeViewPager
+        id="@+id/section_tab_switch_view_pager"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131362934_res_0x7f0a0476"/>
+</LinearLayout>

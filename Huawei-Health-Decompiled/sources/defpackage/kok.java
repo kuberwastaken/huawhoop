@@ -1,0 +1,82 @@
+package defpackage;
+
+import com.huawei.pluginhealthzone.interactors.HealthZonePushReceiver;
+import java.util.HashMap;
+import java.util.Map;
+
+/* JADX INFO: loaded from: classes5.dex */
+public class kok {
+    public static Map<String, Integer> b() {
+        HashMap map = new HashMap(60);
+        map.put("1", 0);
+        map.put(HealthZonePushReceiver.CYCLE_BLOOD_OXYGEN_NOTIFY, 0);
+        map.put("2", 1);
+        map.put("3", 1);
+        map.put("4", 1);
+        map.put("6", 1);
+        map.put("7", 1);
+        map.put(HealthZonePushReceiver.BODY_TEMPERATURE_HIGH_NOTIFY, 1);
+        map.put(HealthZonePushReceiver.BODY_TEMPERATURE_LOW_NOTIFY, 1);
+        map.put(HealthZonePushReceiver.DATA_POST_COMMENTS_NOTIFY, 1);
+        map.put(HealthZonePushReceiver.COMMENT_FAILED_NOTIFY, 1);
+        map.put("8", 2);
+        map.put("75", 2);
+        map.put("12", 3);
+        map.put("13", 3);
+        map.put("14", 3);
+        map.put("18", 3);
+        map.put("39", 3);
+        map.put(HealthZonePushReceiver.FAMILY_CARE_NOTIFY, 3);
+        map.put("15", 4);
+        map.put("16", 4);
+        map.put("17", 4);
+        map.put(HealthZonePushReceiver.SOS_LOCATION_NOTIFY, 4);
+        map.put("42", 4);
+        map.put("45", 5);
+        map.put("25", 6);
+        map.put(HealthZonePushReceiver.SLEEP_TIME_NOTIFY, 6);
+        map.put("46", 7);
+        map.put("47", 8);
+        map.put("48", 9);
+        map.put("49", 10);
+        map.put("50", 11);
+        map.put("51", 12);
+        map.put("19", 13);
+        map.put(HealthZonePushReceiver.DEAUTH_EVENT_NOTIFY, 13);
+        map.put("21", 13);
+        map.put("22", 13);
+        map.put("23", 13);
+        map.put(HealthZonePushReceiver.ECG_MEASUREMENT_ABNORMAL, 13);
+        map.put("44", 13);
+        map.put("76", 13);
+        map.put("52", 14);
+        map.put("53", 15);
+        map.put("54", 16);
+        map.put("55", 17);
+        map.put("11", 18);
+        map.put("68", 18);
+        map.put("69", 18);
+        map.put("73", 18);
+        map.put("74", 18);
+        map.put("26", 19);
+        map.put("56", 20);
+        map.put("57", 21);
+        map.put("58", 22);
+        map.put("59", 23);
+        map.put("60", 24);
+        map.put("61", 25);
+        map.put("62", 26);
+        map.put("63", 27);
+        map.put("64", 28);
+        map.put("65", 29);
+        map.put("66", 30);
+        map.put("67", 31);
+        map.put("5", 53);
+        map.put(HealthZonePushReceiver.PROACTIVE_SHARING_NOTIFY, 53);
+        map.put("70", 53);
+        map.put("71", 53);
+        map.put("72", 53);
+        map.put("0", 99);
+        return map;
+    }
+}

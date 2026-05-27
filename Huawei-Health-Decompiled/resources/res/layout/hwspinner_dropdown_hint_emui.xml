@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    textAppearance="@style/Widget.Emui.HwSpinner.TextAppearance.DropDownHint"
+    id="@android:id/text1"
+    layout_width="-1"
+    layout_height="-2"
+    layout_marginTop="@dimen/_2131364461_res_0x7f0a0a6d"
+    layout_marginBottom="@dimen/_2131364461_res_0x7f0a0a6d"
+    singleLine="true"
+    layout_marginStart="@dimen/_2131364461_res_0x7f0a0a6d"
+    layout_marginEnd="@dimen/_2131364461_res_0x7f0a0a6d"/>

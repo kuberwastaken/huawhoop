@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    paddingTop="@dimen/_2131363360_res_0x7f0a0620"
+    paddingBottom="@dimen/_2131363360_res_0x7f0a0620"
+    layout_width="-2"
+    layout_height="-2"
+    paddingStart="@dimen/_2131363360_res_0x7f0a0620"
+    paddingEnd="@dimen/_2131363360_res_0x7f0a0620">
+    <TextView
+        textColor="@color/_2131298087_res_0x7f090727"
+        ellipsize="3"
+        gravity="0x11"
+        id="@+id/scroll_view_text_view"
+        background="@color/_2131298032_res_0x7f0906f0"
+        layout_width="-2"
+        layout_height="-2"
+        maxEms="50"
+        singleLine="true"
+        autoSizeTextType="1"/>
+</RelativeLayout>

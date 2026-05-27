@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">Viename grafike galima parodyti %1$d indikatorių.</item>
+        <item quantity="few">Viename grafike galima parodyti iki %1$d indikatorių.</item>
+        <item quantity="many">Viename grafike galima parodyti iki %1$d indikatorių.</item>
+        <item quantity="other">Viename grafike galima parodyti iki %1$d indikatorių.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">Numatoma, kad jūsų gliukozės kiekis kraujyje nukris iki mažiau nei %2$s mmol/L po %1$s min. Atidžiai stebėkite savo gliukozės kiekio lygį.</item>
+        <item quantity="few">Numatoma, kad jūsų gliukozės kiekis kraujyje nukris iki mažiau nei %2$s mmol/L po %1$s min. Atidžiai stebėkite savo gliukozės kiekio lygį.</item>
+        <item quantity="many">Numatoma, kad jūsų gliukozės kiekis kraujyje nukris iki mažiau nei %2$s mmol/L po %1$s min. Atidžiai stebėkite savo gliukozės kiekio lygį.</item>
+        <item quantity="other">Numatoma, kad jūsų gliukozės kiekis kraujyje nukris iki mažiau nei %2$s mmol/L po %1$s min. Atidžiai stebėkite savo gliukozės kiekio lygį.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">Numatoma, kad jūsų gliukozės kiekis kraujyje nukris iki mažiau nei %2$s mg/dL po %1$s min. Atidžiai stebėkite savo gliukozės kiekio lygį.</item>
+        <item quantity="few">Numatoma, kad jūsų gliukozės kiekis kraujyje nukris iki mažiau nei %2$s mg/dL po %1$s min. Atidžiai stebėkite savo gliukozės kiekio lygį.</item>
+        <item quantity="many">Numatoma, kad jūsų gliukozės kiekis kraujyje nukris iki mažiau nei %2$s mg/dL po %1$s min. Atidžiai stebėkite savo gliukozės kiekio lygį.</item>
+        <item quantity="other">Numatoma, kad jūsų gliukozės kiekis kraujyje nukris iki mažiau nei %2$s mg/dL po %1$s min. Atidžiai stebėkite savo gliukozės kiekio lygį.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d žngsn.</item>
+        <item quantity="few">%d žngsn.</item>
+        <item quantity="many">%d žngsn.</item>
+        <item quantity="other">%d žngsn.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s myl.</item>
+        <item quantity="few">%s myl.</item>
+        <item quantity="many">%s myl.</item>
+        <item quantity="other">%s myl.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s km</item>
+        <item quantity="few">%s km</item>
+        <item quantity="many">%s km</item>
+        <item quantity="other">%s km</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">Liko %1$s žingsnis</item>
+        <item quantity="few">Liko %1$s žingsniai</item>
+        <item quantity="many">Liko %1$s žingsnio</item>
+        <item quantity="other">Liko %1$s žingsnių</item>
+    </plurals>
+</resources>

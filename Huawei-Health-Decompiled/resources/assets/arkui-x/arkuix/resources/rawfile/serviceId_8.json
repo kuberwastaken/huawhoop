@@ -1,0 +1,86 @@
+{
+  "8": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "requestSkipHolidays",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "skipHolidaysYear",
+        "type": "number16",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "skipHolidaysVersion",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "skipHolidaysWorkdayDay",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 5,
+        "jsonKey": "skipHolidaysFreedayDay",
+        "type": "string",
+        "optional": true
+      }
+    ]
+  },
+  "9": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "alarmId",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "alarmName",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "alarmTime",
+        "type": "number64",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "alarmSnoozeDelay",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 5,
+        "jsonKey": "alarmSnoozeCount",
+        "type": "number8",
+        "optional": true
+      }
+    ]
+  },
+  "10": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "alarmId",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "alarmActionId",
+        "type": "number8",
+        "optional": true
+      }
+    ]
+  }
+}

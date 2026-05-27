@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        state_focused="true"
+        drawable="@drawable/ic_bottomtab_device_select"/>
+    <item
+        state_selected="true"
+        drawable="@drawable/ic_bottomtab_device_select"/>
+    <item drawable="@drawable/ic_bottomtab_device_normal"/>
+</selector>

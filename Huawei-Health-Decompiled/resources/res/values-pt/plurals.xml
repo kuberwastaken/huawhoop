@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">Até %1$d indicador pode ser mostrado em um gráfico.</item>
+        <item quantity="other">Até %1$d indicadores podem ser mostrados em um gráfico.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">Espera-se que o seu nível de glicose no sangue desça abaixo de %2$s mmol/L em %1$s min. Monitore atentamente o seu nível de glicose.</item>
+        <item quantity="other">Espera-se que o seu nível de glicose no sangue desça abaixo de %2$s mmol/L em %1$s min. Monitore atentamente o seu nível de glicose.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">Espera-se que o seu nível de glicose no sangue desça abaixo de %2$s mg/dL em %1$s min. Monitore atentamente o seu nível de glicose.</item>
+        <item quantity="other">Espera-se que o seu nível de glicose no sangue desça abaixo de %2$s mg/dL em %1$s min. Monitore atentamente o seu nível de glicose.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d pass</item>
+        <item quantity="other">%d passo</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s mi</item>
+        <item quantity="other">%s mi</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s km</item>
+        <item quantity="other">%s km</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">A %1$s passo</item>
+        <item quantity="other">A %1$s passos</item>
+    </plurals>
+</resources>

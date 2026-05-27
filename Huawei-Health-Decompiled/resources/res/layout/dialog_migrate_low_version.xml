@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+        textColor="@color/_2131299845_res_0x7f090e05"
+        layout_gravity="0x1"
+        id="@+id/compatibility_content"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131363761_res_0x7f0a07b1"
+        text="@string/_2130841791_res_0x7f0210bf"
+        fontFamily="@string/_2130852834_res_0x7f023be2"
+        layout_marginStart="@dimen/_2131362498_res_0x7f0a02c2"
+        layout_marginEnd="@dimen/_2131362498_res_0x7f0a02c2"/>
+    <com.huawei.ui.commonui.checkbox.HealthCheckBox
+        textSize="13sp"
+        id="@+id/compatibility_remind"
+        visibility="2"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131363739_res_0x7f0a079b"
+        checked="false"
+        text="@string/_2130841789_res_0x7f0210bd"
+        paddingStart="9dp"
+        layout_marginStart="@dimen/_2131363761_res_0x7f0a07b1"
+        style="@style/health_checkbox_style_large"/>
+</LinearLayout>

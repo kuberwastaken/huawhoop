@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    layout_width="-2"
+    layout_height="-2"
+    layout_alignParentStart="true">
+    <com.huawei.ui.commonui.checkbox.HealthCheckBox
+        id="@+id/radiobutton1"
+        clickable="true"
+        layout_width="-2"
+        layout_height="-2"
+        text="@string/_2130845588_res_0x7f021f94"
+        layout_marginStart="@dimen/_2131362907_res_0x7f0a045b"/>
+</RelativeLayout>

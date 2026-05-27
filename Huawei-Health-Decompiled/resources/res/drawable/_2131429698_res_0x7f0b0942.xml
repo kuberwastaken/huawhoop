@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" shape="0">
+    <solid color="@color/_2131298549_res_0x7f0908f5"/>
+    <size height="@dimen/_2131364441_res_0x7f0a0a59"/>
+    <stroke
+        width="@dimen/_2131364440_res_0x7f0a0a58"
+        color="@color/_2131297439_res_0x7f09049f"/>
+    <corners
+        topLeftRadius="@dimen/_2131364451_res_0x7f0a0a63"
+        topRightRadius="@dimen/_2131364451_res_0x7f0a0a63"
+        bottomLeftRadius="@dimen/_2131364451_res_0x7f0a0a63"
+        bottomRightRadius="@dimen/_2131364451_res_0x7f0a0a63"/>
+</shape>

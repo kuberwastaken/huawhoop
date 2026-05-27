@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-1">
+    <View
+        background="@color/_2131297380_res_0x7f090464"
+        layout_width="-1"
+        layout_height="@dimen/_2131365419_res_0x7f0a0e2b"
+        layout_marginStart="16dp"
+        layout_marginEnd="16dp"/>
+</merge>

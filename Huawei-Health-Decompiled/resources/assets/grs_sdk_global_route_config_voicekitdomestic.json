@@ -1,0 +1,33 @@
+{
+    "applications":[],
+    "services":[
+        {
+            "name":"com.huawei.hiassistant",
+            "routeBy":"ser_country",
+            "servings":[
+                {
+                    "countryOrAreaGroup":"DR1",
+                    "addresses":{
+                        "car":"https://hivoice-drcn.emui.dbankcloud.com",
+                        "hd":"https://hivoice-az1.cp18.ott.cibntv.net:9443",
+                        "intelligentWatch":"https://hivoice-drcn.emui.dbankcloud.com",
+                        "phone":"https://hivoice-drcn.emui.dbankcloud.com",
+                        "pad": "https://hivoice-drcn.emui.dbankcloud.com",
+                        "phoneRealMachine": "https://hivoice-bot-drcn.emui.hicloud.com",
+                        "hdRealMachine": "https://hivoice-bot.cp18.ott.cibntv.net:9443",
+                        "sportWatch":"https://hivoice-drcn.emui.dbankcloud.com"
+                    }
+                }
+            ],
+            "countryOrAreaGroups":[
+                {
+                    "id":"DR1",
+                    "name":"China",
+                    "countriesOrAreas":["CN"],
+                    "description":"China zone"
+                }
+            ]
+        }
+    ],
+    "countryOrAreaGroups":[]
+}

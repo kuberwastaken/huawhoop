@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/day_step_jump_to_sport_layout"
+    visibility="2"
+    layout_width="-1"
+    layout_height="-2"
+    layout_marginTop="@dimen/_2131363172_res_0x7f0a0564"
+    layout_marginBottom="@dimen/_2131363172_res_0x7f0a0564"
+    minHeight="@dimen/_2131363138_res_0x7f0a0542">
+    <com.huawei.ui.commonui.button.HealthButton
+        textColor="@color/_2131299730_res_0x7f090d92"
+        id="@+id/jump_to_sport_share_btn"
+        layout_width="-2"
+        layout_height="-2"
+        maxWidth="@dimen/_2131362968_res_0x7f0a0498"
+        minWidth="@dimen/_2131363150_res_0x7f0a054e"
+        minHeight="@dimen/_2131363044_res_0x7f0a04e4"
+        layout_centerVertical="true"
+        layout_alignParentEnd="true"
+        style="@style/Health.CommonUI.HealthButton.Small"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+        ellipsize="3"
+        gravity="0x10"
+        id="@+id/step_away_from_target"
+        layout_width="-2"
+        layout_height="-2"
+        layout_centerVertical="true"
+        layout_marginEnd="@dimen/_2131362575_res_0x7f0a030f"
+        layout_toStartOf="@+id/jump_to_sport_share_btn"
+        layout_alignParentStart="true"
+        style="@style/list_text_title_primary"/>
+</RelativeLayout>

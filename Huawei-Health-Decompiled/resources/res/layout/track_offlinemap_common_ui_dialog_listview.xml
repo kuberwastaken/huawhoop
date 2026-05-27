@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    background="@drawable/_2131427511_res_0x7f0b00b7"
+    layout_width="-1"
+    layout_height="-2">
+    <ListView
+        id="@+id/listView"
+        scrollbars="0x0"
+        layout_width="-1"
+        layout_height="-2"
+        listSelector="@drawable/_2131427891_res_0x7f0b0233"
+        overScrollMode="2"/>
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        drawable="@drawable/_2131428949_res_0x7f0b0655"
+        top="@dimen/_2131363952_res_0x7f0a0870"
+        bottom="@dimen/_2131363952_res_0x7f0a0870"/>
+    <item
+        top="@dimen/_2131363952_res_0x7f0a0870"
+        bottom="@dimen/_2131363952_res_0x7f0a0870">
+        <selector>
+            <item
+                state_focused="true"
+                state_window_focused="true"
+                drawable="@drawable/_2131428946_res_0x7f0b0652"/>
+        </selector>
+    </item>
+</layer-list>

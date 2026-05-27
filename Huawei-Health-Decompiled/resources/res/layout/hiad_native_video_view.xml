@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.openalliance.ad.views.VideoView
+        id="@+id/hiad_id_video_view"
+        layout_width="-1"
+        layout_height="-1"
+        layout_centerInParent="true"/>
+    <com.huawei.openalliance.ad.views.NativeVideoControlPanel
+        id="@+id/hiad_native_video_ctrl_panel"
+        layout_width="-1"
+        layout_height="-1"
+        layout_centerInParent="true"/>
+</merge>

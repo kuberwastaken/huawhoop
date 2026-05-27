@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/explain_title_bar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x7="2"/>
+    <LinearLayout
+        orientation="1"
+        id="@+id/explain_layout"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131362578_res_0x7f0a0312"
+        layout_marginStart="@dimen/_2131362038_res_0x7f0a00f6"
+        layout_marginEnd="@dimen/_2131362039_res_0x7f0a00f7"/>
+</LinearLayout>

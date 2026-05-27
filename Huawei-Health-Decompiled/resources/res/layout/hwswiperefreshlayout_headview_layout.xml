@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.uikit.hwswiperefreshlayout.widget.HwRefreshHeadView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/hwswiperefreshlayout_headview"
+    layout_width="-1"
+    layout_height="-1">
+    <RelativeLayout
+        id="@+id/hwswiperefreshlayout_layout"
+        layout_width="-1"
+        layout_height="-1"
+        layout_marginBottom="@dimen/_2131364546_res_0x7f0a0ac2">
+        <com.huawei.uikit.phone.hwprogressbar.widget.HwProgressBar
+            layout_gravity="0x11"
+            id="@+id/hwswiperefreshlayout_progressbar"
+            layout_width="@dimen/_2131364543_res_0x7f0a0abf"
+            layout_height="@dimen/_2131364543_res_0x7f0a0abf"
+            layout_centerHorizontal="true"
+            layout_centerVertical="true"
+            NOT_FOUND_0xf="@color/_2131297394_res_0x7f090472"/>
+    </RelativeLayout>
+    <com.huawei.uikit.phone.hwtextview.widget.HwTextView
+        textSize="@dimen/_2131362715_res_0x7f0a039b"
+        textColor="@color/_2131297422_res_0x7f09048e"
+        ellipsize="3"
+        gravity="0x11"
+        id="@+id/hwswiperefreshlayout_textview"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginBottom="@dimen/_2131364546_res_0x7f0a0ac2"
+        maxLines="1"
+        layout_alignParentBottom="true"
+        layout_centerHorizontal="true"
+        fontFamily="@string/_2130851948_res_0x7f02386c"/>
+</com.huawei.uikit.hwswiperefreshlayout.widget.HwRefreshHeadView>

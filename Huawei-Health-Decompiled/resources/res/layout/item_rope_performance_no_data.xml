@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.columnlayout.HealthColumnRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/rope_performance_no_data_layout"
+    visibility="2"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.imageview.HealthImageView
+        id="@+id/rope_performance_no_data_iv"
+        layout_width="@dimen/_2131362927_res_0x7f0a046f"
+        layout_height="@dimen/_2131362927_res_0x7f0a046f"
+        src="@drawable/_2131430973_res_0x7f0b0e3d"
+        layout_above="@+id/performance_no_data_tv"
+        layout_centerHorizontal="true"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365502_res_0x7f0a0e7e"
+        textColor="@color/_2131297224_res_0x7f0903c8"
+        id="@+id/performance_no_data_tv"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131362601_res_0x7f0a0329"
+        layout_marginBottom="@dimen/_2131362962_res_0x7f0a0492"
+        text="@string/_2130848804_res_0x7f022c24"
+        layout_centerInParent="true"
+        fontFamily="@string/_2130852833_res_0x7f023be1"
+        layout_marginHorizontal="@dimen/_2131363021_res_0x7f0a04cd"/>
+</com.huawei.ui.commonui.columnlayout.HealthColumnRelativeLayout>

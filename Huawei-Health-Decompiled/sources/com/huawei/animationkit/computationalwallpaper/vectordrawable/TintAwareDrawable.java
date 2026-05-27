@@ -1,0 +1,13 @@
+package com.huawei.animationkit.computationalwallpaper.vectordrawable;
+
+import android.content.res.ColorStateList;
+import android.graphics.PorterDuff;
+
+/* JADX INFO: loaded from: classes10.dex */
+public interface TintAwareDrawable {
+    void setTint(int i);
+
+    void setTintList(ColorStateList colorStateList);
+
+    void setTintMode(PorterDuff.Mode mode);
+}

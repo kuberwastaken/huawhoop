@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="0"
+    visibility="2"
+    layout_width="-2"
+    layout_height="-2">
+    <ImageView
+        id="@+id/daily_moment_media_button"
+        layout_width="@dimen/_2131363063_res_0x7f0a04f7"
+        layout_height="@dimen/_2131363063_res_0x7f0a04f7"
+        src="@drawable/_2131430304_res_0x7f0b0ba0"
+        scaleType="1"
+        adjustViewBounds="true"
+        layout_centerInParent="true"/>
+    <com.huawei.ui.commonui.progressindicator.HealthProgressIndicator
+        id="@+id/daily_moment_media_indicator"
+        layout_width="@dimen/_2131363082_res_0x7f0a050a"
+        layout_height="@dimen/_2131363082_res_0x7f0a050a"
+        layout_centerInParent="true"
+        alpha="0.65"
+        paddingHorizontal="@dimen/_2131362580_res_0x7f0a0314"
+        paddingVertical="@dimen/_2131362580_res_0x7f0a0314"
+        style="@style/daily_moment_circle_progress"/>
+</RelativeLayout>

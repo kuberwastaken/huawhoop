@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/common_no_data_layout"
+    paddingBottom="@dimen/_2131362369_res_0x7f0a0241"
+    visibility="2"
+    layout_width="-1"
+    layout_height="-1">
+    <LinearLayout
+        gravity="0x1"
+        orientation="1"
+        layout_width="-2"
+        layout_height="-2"
+        layout_centerInParent="true">
+        <ImageView
+            layout_gravity="0x1"
+            id="@+id/common_no_data_img"
+            layout_width="-2"
+            layout_height="-2"
+            style="@style/health_default_img_tint"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+            textColor="@color/_2131299853_res_0x7f090e0d"
+            gravity="0x11"
+            id="@+id/common_no_data_text"
+            layout_width="-2"
+            layout_height="-2"
+            text="sug_have_notrain_record"
+            fontFamily="@string/_2130852834_res_0x7f023be2"/>
+    </LinearLayout>
+    <com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout
+        id="@+id/button_layout"
+        layout_width="-2"
+        layout_height="-2"
+        layout_alignParentBottom="true"
+        layout_centerHorizontal="true"
+        NOT_FOUND_0xf="1">
+        <com.huawei.ui.commonui.button.HealthButton
+            id="@+id/common_no_data_btn"
+            visibility="2"
+            layout_width="-2"
+            layout_height="-2"
+            layout_alignParentBottom="true"
+            layout_centerHorizontal="true"/>
+    </com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout>
+</RelativeLayout>

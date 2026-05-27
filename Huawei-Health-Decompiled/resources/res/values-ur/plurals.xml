@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">ایک گراف پر %1$d تک اشارہ دکھایا جا سکتا ہے۔</item>
+        <item quantity="other">ایک گراف پر %1$d تک اشارے دکھائے جا سکتے ہیں۔</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">آپ کی خون میں گلوکوز کی %1$s منٹ میں %2$s ملی مول/لیٹر سے کم ہونے کی توقع ہے۔ براہ کرم اپنی گلوکوز کی سطح کی غور سے نگرانی کریں۔</item>
+        <item quantity="other">آپ کی خون میں گلوکوز کی %1$s منٹ میں %2$s ملی مول/لیٹر سے کم ہونے کی توقع ہے۔ براہ کرم اپنی گلوکوز کی سطح کی غور سے نگرانی کریں۔</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">آپ کی خون میں گلوکوز کی %1$s منٹ میں %2$s ملی گرام/ڈیسی لیٹر سے کم ہونے کی توقع ہے۔ براہ کرم اپنی گلوکوز کی سطح کی غور سے نگرانی کریں۔</item>
+        <item quantity="other">آپ کی خون میں گلوکوز کی %1$s منٹ میں %2$s ملی گرام/ڈیسی لیٹر سے کم ہونے کی توقع ہے۔ براہ کرم اپنی گلوکوز کی سطح کی غور سے نگرانی کریں۔</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d مرحلہ</item>
+        <item quantity="other">%d مراحل</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">‏mi %s</item>
+        <item quantity="other">‏mi %s</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">‏km %s</item>
+        <item quantity="other">‏km %s</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">‏%1$s قدم دور</item>
+        <item quantity="other">‏%1$s قدم دور</item>
+    </plurals>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    paddingTop="@dimen/_2131364245_res_0x7f0a0995"
+    paddingBottom="@dimen/_2131364245_res_0x7f0a0995"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.uikit.phone.hwtextview.widget.HwTextView
+        textSize="@dimen/_2131362732_res_0x7f0a03ac"
+        ellipsize="3"
+        id="@+id/hwdialogpattern_title"
+        layout_width="-1"
+        layout_height="-2"
+        maxLines="2"
+        textAlignment="5"
+        NOT_FOUND_0xa="@dimen/_2131364239_res_0x7f0a098f"
+        NOT_FOUND_0xb="1sp"
+        style="@style/Widget.Emui.HwDialogPattern.DialogWindowTitle"/>
+    <com.huawei.uikit.phone.hwtextview.widget.HwTextView
+        id="@+id/hwdialogpattern_summary"
+        layout_width="-1"
+        layout_height="-2"
+        textAlignment="5"
+        NOT_FOUND_0xa="@dimen/_2131364240_res_0x7f0a0990"
+        NOT_FOUND_0xb="1sp"
+        style="@style/Widget.Emui.HwDialogPattern.DialogSubTitle"/>
+</LinearLayout>

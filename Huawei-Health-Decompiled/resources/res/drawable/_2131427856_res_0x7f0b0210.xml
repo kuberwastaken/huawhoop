@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        state_enabled="false"
+        drawable="@drawable/_2131427855_res_0x7f0b020f"/>
+    <item
+        state_focused="true"
+        drawable="@drawable/_2131427857_res_0x7f0b0211"/>
+    <item drawable="@drawable/_2131427858_res_0x7f0b0212"/>
+</selector>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365484_res_0x7f0a0e6c"
+        gravity="0x11"
+        id="@+id/inch_height_value"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131363054_res_0x7f0a04ee"/>
+    <LinearLayout
+        gravity="0x11"
+        orientation="0"
+        id="@+id/height_number_picker"
+        layout_width="-1"
+        layout_height="-2"
+        layout_below="@+id/inch_height_value">
+        <com.huawei.ui.commonui.numberpicker.HealthNumberPicker
+            layout_gravity="0x11"
+            id="@+id/height_ft_number_picker_v9"
+            layout_width="-1"
+            layout_height="-2"
+            layout_weight="1"
+            NOT_FOUND_0xa="@drawable/_2131431345_res_0x7f0b0fb1"/>
+        <com.huawei.ui.commonui.numberpicker.HealthNumberPicker
+            layout_gravity="0x11"
+            id="@+id/height_inch_number_picker_v9"
+            layout_width="-1"
+            layout_height="-2"
+            layout_weight="1"
+            NOT_FOUND_0xa="@drawable/_2131431345_res_0x7f0b0fb1"/>
+    </LinearLayout>
+</RelativeLayout>

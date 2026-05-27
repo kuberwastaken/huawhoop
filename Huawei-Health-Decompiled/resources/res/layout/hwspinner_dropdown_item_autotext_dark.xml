@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.uikit.hwspinner.widget.HwSpinnerTextView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    ellipsize="3"
+    id="@android:id/text1"
+    background="@drawable/_2131429750_res_0x7f0b0976"
+    clickable="true"
+    layout_width="-1"
+    layout_height="-2"
+    minHeight="@dimen/_2131364464_res_0x7f0a0a70"
+    maxLines="2"
+    defaultFocusHighlightEnabled="false"
+    NOT_FOUND_0x9="@dimen/_2131364470_res_0x7f0a0a76"
+    NOT_FOUND_0xa="1sp"
+    style="@style/Widget.Emui.HwSpinner.HwDropDownItem.Dark"/>

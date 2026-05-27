@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296700_res_0x7f0901bc"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/rate_control_detail"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x9="false"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+        textColor="@color/_2131299850_res_0x7f090e0a"
+        id="@+id/rate_control_text_detail"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginStart="@dimen/_2131363021_res_0x7f0a04cd"
+        layout_marginEnd="@dimen/_2131363021_res_0x7f0a04cd"/>
+</LinearLayout>

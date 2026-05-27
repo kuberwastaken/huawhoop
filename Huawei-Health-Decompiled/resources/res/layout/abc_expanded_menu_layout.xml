@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.view.menu.ExpandedMenuView xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/expanded_menu"
+    layout_width="?attr/_2131101312_res_0x7f060680"
+    layout_height="-2"/>

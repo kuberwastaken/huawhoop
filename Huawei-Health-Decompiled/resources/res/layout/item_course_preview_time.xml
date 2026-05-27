@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-2"
+    layout_height="-2">
+    <LinearLayout
+        gravity="0x10"
+        orientation="0"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131363112_res_0x7f0a0528"
+        layout_marginBottom="@dimen/_2131363051_res_0x7f0a04eb">
+        <View
+            background="@drawable/_2131427935_res_0x7f0b025f"
+            layout_width="@dimen/_2131363144_res_0x7f0a0548"
+            layout_height="@dimen/_2131363144_res_0x7f0a0548"/>
+        <View
+            background="@color/_2131299187_res_0x7f090b73"
+            layout_width="-1"
+            layout_height="@dimen/_2131362993_res_0x7f0a04b1"/>
+    </LinearLayout>
+    <TextView
+        textSize="@dimen/_2131365484_res_0x7f0a0e6c"
+        textColor="@color/_2131299187_res_0x7f090b73"
+        ellipsize="3"
+        id="@+id/course_preview_time_title"
+        layout_width="-1"
+        layout_height="-2"
+        lines="1"
+        fontFamily="@string/_2130852834_res_0x7f023be2"
+        autoSizeTextType="1"
+        autoSizeStepGranularity="@dimen/_2131365473_res_0x7f0a0e61"
+        autoSizeMinTextSize="@dimen/_2131365488_res_0x7f0a0e70"/>
+    <LinearLayout
+        orientation="0"
+        id="@+id/course_preview_container"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131363112_res_0x7f0a0528"/>
+</LinearLayout>

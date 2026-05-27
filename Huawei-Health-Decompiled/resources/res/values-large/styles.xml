@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.AppCompat.DialogWhenLarge" parent="@style/Base.Theme.AppCompat.Dialog.FixedSize">
+    </style>
+    <style name="Base.Theme.AppCompat.Light.DialogWhenLarge" parent="@style/Base.Theme.AppCompat.Light.Dialog.FixedSize">
+    </style>
+    <style name="Base.Theme.MaterialComponents.DialogWhenLarge" parent="@style/Base.Theme.MaterialComponents.Dialog.FixedSize">
+    </style>
+    <style name="Base.Theme.MaterialComponents.Light.DialogWhenLarge" parent="@style/Base.Theme.MaterialComponents.Light.Dialog.FixedSize">
+    </style>
+    <style name="Theme.Material3.Dark.DialogWhenLarge" parent="@style/Base.Theme.Material3.Dark.Dialog">
+        <item name="_2131101893_res_0x7f0608c5">@dimen/_2131361893_res_0x7f0a0065</item>
+        <item name="_2131101894_res_0x7f0608c6">@dimen/_2131361894_res_0x7f0a0066</item>
+        <item name="_2131101895_res_0x7f0608c7">@dimen/_2131361895_res_0x7f0a0067</item>
+        <item name="_2131101896_res_0x7f0608c8">@dimen/_2131361896_res_0x7f0a0068</item>
+    </style>
+    <style name="Theme.Material3.Light.DialogWhenLarge" parent="@style/Base.Theme.Material3.Light.Dialog">
+        <item name="_2131101893_res_0x7f0608c5">@dimen/_2131361893_res_0x7f0a0065</item>
+        <item name="_2131101894_res_0x7f0608c6">@dimen/_2131361894_res_0x7f0a0066</item>
+        <item name="_2131101895_res_0x7f0608c7">@dimen/_2131361895_res_0x7f0a0067</item>
+        <item name="_2131101896_res_0x7f0608c8">@dimen/_2131361896_res_0x7f0a0068</item>
+    </style>
+</resources>

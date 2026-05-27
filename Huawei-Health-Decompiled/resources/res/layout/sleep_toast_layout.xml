@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/blood_pressure_instructions"
+    background="@drawable/_2131431968_res_0x7f0b1220"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+        textColor="@color/_2131297531_res_0x7f0904fb"
+        id="@+id/blood_pressure_description"
+        layout_width="-2"
+        layout_height="-2"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+        textColor="@color/_2131297531_res_0x7f0904fb"
+        id="@+id/know_button"
+        background="@color/_2131296984_res_0x7f0902d8"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131362934_res_0x7f0a0476"
+        layout_below="@+id/blood_pressure_description"
+        layout_alignParentEnd="true"/>
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-1"
+    keepScreenOn="true">
+    <androidx.viewpager2.widget.ViewPager2
+        orientation="1"
+        id="@+id/viewPager"
+        background="@color/_2131296502_res_0x7f0900f6"
+        clipChildren="false"
+        clipToPadding="false"
+        layout_width="-1"
+        layout_height="-1"
+        overScrollMode="2"/>
+</FrameLayout>

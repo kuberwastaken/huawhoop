@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296700_res_0x7f0901bc"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/wear_home_titlebar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x6="3"
+        NOT_FOUND_0x7="@color/_2131299970_res_0x7f090e82"
+        NOT_FOUND_0x8="@string/_2130841720_res_0x7f021078"/>
+    <com.huawei.ui.homewear21.home.card.WearHomeSyncCard
+        id="@+id/sync_card_view"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-2"/>
+    <com.huawei.ui.commonui.recycleview.HealthRecycleView
+        id="@+id/recyclerView"
+        layout_width="-1"
+        layout_height="-2"/>
+</LinearLayout>

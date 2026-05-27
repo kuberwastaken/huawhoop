@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="0"
+    layout_width="-2"
+    layout_height="-2">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131362970_res_0x7f0a049a"
+        id="@+id/multi_tab_tab"
+        layout_width="-2"
+        layout_height="-2"
+        fontFamily="@string/_2130852834_res_0x7f023be2"
+        layout_marginStart="@dimen/_2131362934_res_0x7f0a0476"
+        layout_marginEnd="@dimen/_2131362934_res_0x7f0a0476"/>
+    <View
+        id="@+id/multi_tab_line"
+        background="@color/_2131296709_res_0x7f0901c5"
+        layout_width="@dimen/_2131364246_res_0x7f0a0996"
+        layout_height="@dimen/_2131362934_res_0x7f0a0476"
+        layout_centerVertical="true"
+        layout_toEndOf="@+id/multi_tab_tab"/>
+</RelativeLayout>

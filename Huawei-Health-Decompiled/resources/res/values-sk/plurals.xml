@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">Na grafe možno zobraziť maximálne %1$d indikátor.</item>
+        <item quantity="few">Na grafe možno zobraziť maximálne %1$d indikátorov.</item>
+        <item quantity="many">Na grafe možno zobraziť maximálne %1$d indikátorov.</item>
+        <item quantity="other">Na grafe možno zobraziť maximálne %1$d indikátorov.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">Očakáva sa pokles vašej hladiny glukózy v krvi pod %2$s mmol/l do %1$s min. Pozorne monitorujte svoju hladinu glukózy.</item>
+        <item quantity="few">Očakáva sa pokles vašej hladiny glukózy v krvi pod %2$s mmol/l do %1$s min. Pozorne monitorujte svoju hladinu glukózy.</item>
+        <item quantity="many">Očakáva sa pokles vašej hladiny glukózy v krvi pod %2$s mmol/l do %1$s min. Pozorne monitorujte svoju hladinu glukózy.</item>
+        <item quantity="other">Očakáva sa pokles vašej hladiny glukózy v krvi pod %2$s mmol/l do %1$s min. Pozorne monitorujte svoju hladinu glukózy.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">Očakáva sa pokles vašej hladiny glukózy v krvi pod %2$s mg/dl do %1$s min. Pozorne monitorujte svoju hladinu glukózy.</item>
+        <item quantity="few">Očakáva sa pokles vašej hladiny glukózy v krvi pod %2$s mg/dl do %1$s min. Pozorne monitorujte svoju hladinu glukózy.</item>
+        <item quantity="many">Očakáva sa pokles vašej hladiny glukózy v krvi pod %2$s mg/dl do %1$s min. Pozorne monitorujte svoju hladinu glukózy.</item>
+        <item quantity="other">Očakáva sa pokles vašej hladiny glukózy v krvi pod %2$s mg/dl do %1$s min. Pozorne monitorujte svoju hladinu glukózy.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d krok</item>
+        <item quantity="few">%d krokov</item>
+        <item quantity="many">%d krokov</item>
+        <item quantity="other">%d krokov</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s mi</item>
+        <item quantity="few">%s mi</item>
+        <item quantity="many">%s mi</item>
+        <item quantity="other">%s mi</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s km</item>
+        <item quantity="few">%s km</item>
+        <item quantity="many">%s km</item>
+        <item quantity="other">%s km</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">Zostáva %1$s krok</item>
+        <item quantity="few">Zostávajú %1$s kroky</item>
+        <item quantity="many">Zostáva %1$s krokov</item>
+        <item quantity="other">Zostáva %1$s krokov</item>
+    </plurals>
+</resources>

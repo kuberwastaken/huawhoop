@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365484_res_0x7f0a0e6c"
+        textColor="@color/_2131299850_res_0x7f090e0a"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131362578_res_0x7f0a0312"
+        text="@string/_2130846273_res_0x7f022241"
+        fontFamily="@string/_2130852834_res_0x7f023be2"
+        paddingStart="@dimen/_2131364901_res_0x7f0a0c25"
+        paddingEnd="@dimen/_2131364900_res_0x7f0a0c24"/>
+</FrameLayout>

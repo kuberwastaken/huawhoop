@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        gravity="0x11"
+        drawable="@drawable/hwbottomsheet_indicate_background_hovered"
+        left="@dimen/_2131364031_res_0x7f0a08bf"
+        top="@dimen/_2131364034_res_0x7f0a08c2"
+        right="@dimen/_2131364031_res_0x7f0a08bf"
+        bottom="@dimen/_2131364034_res_0x7f0a08c2"/>
+    <item
+        gravity="0x11"
+        left="@dimen/_2131364031_res_0x7f0a08bf"
+        top="@dimen/_2131364034_res_0x7f0a08c2"
+        right="@dimen/_2131364031_res_0x7f0a08bf"
+        bottom="@dimen/_2131364034_res_0x7f0a08c2">
+        <selector>
+            <item
+                state_focused="true"
+                state_window_focused="true"
+                drawable="@drawable/hwbottomsheet_indicate_background_focused"/>
+        </selector>
+    </item>
+</layer-list>

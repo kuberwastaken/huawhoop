@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.healthtextview.HealthTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    textSize="@dimen/_2131362971_res_0x7f0a049b"
+    textColor="@color/_2131296661_res_0x7f090195"
+    gravity="0x11"
+    background="@drawable/_2131432111_res_0x7f0b12af"
+    layout_width="-1"
+    layout_height="@dimen/_2131363090_res_0x7f0a0512"
+    text="@string/_2130848377_res_0x7f022a79"
+    fontFamily="@string/_2130852833_res_0x7f023be1"/>

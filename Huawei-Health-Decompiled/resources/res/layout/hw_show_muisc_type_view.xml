@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/settings_gender_view_layout"
+    layout_width="-1"
+    layout_height="-2"
+    baselineAligned="false">
+    <ListView
+        id="@+id/custom_listview_layout"
+        layout_width="-1"
+        layout_height="-1"/>
+</LinearLayout>

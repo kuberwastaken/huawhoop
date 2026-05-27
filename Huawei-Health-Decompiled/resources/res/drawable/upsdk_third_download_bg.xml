@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        state_pressed="true"
+        drawable="@drawable/upsdk_cancel_bg"/>
+    <item
+        state_focused="true"
+        drawable="@drawable/upsdk_cancel_bg"/>
+</selector>

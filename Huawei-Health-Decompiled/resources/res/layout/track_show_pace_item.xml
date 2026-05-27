@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="-2"
+    layout_marginBottom="@dimen/_2131363756_res_0x7f0a07ac"
+    layout_marginStart="@dimen/_2131364901_res_0x7f0a0c25"
+    layout_marginEnd="@dimen/_2131364900_res_0x7f0a0c24">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        id="@+id/tv_title"
+        background="@drawable/_2131432482_res_0x7f0b1422"
+        layout_width="-1"
+        layout_height="@dimen/_2131363746_res_0x7f0a07a2"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+        textColor="@color/_2131299847_res_0x7f090e07"
+        gravity="0x800015"
+        id="@+id/listview_value"
+        background="@drawable/_2131432480_res_0x7f0b1420"
+        layout_width="-1"
+        layout_height="@dimen/_2131363746_res_0x7f0a07a2"
+        paddingEnd="@dimen/_2131362066_res_0x7f0a0112"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131362954_res_0x7f0a048a"
+        textColor="@color/_2131299847_res_0x7f090e07"
+        id="@+id/listview_id"
+        layout_width="-2"
+        layout_height="@dimen/_2131363746_res_0x7f0a07a2"
+        paddingStart="8dp"
+        layout_marginEnd="@dimen/_2131363752_res_0x7f0a07a8"/>
+</RelativeLayout>

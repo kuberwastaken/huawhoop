@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<config>
+    <dict>
+        <string key="ODSA_ESURL">https://android-es.u.com.my/huaweiesum/</string>
+        <string key="ODSA_PROTOCOL">2</string>
+        <bool key="ODSA_ADD_IMSI">true</bool>
+        <string key="ODSA_ES_VERSION">5</string>
+        <bool key="ODSA_SIMPLE_VERS">true</bool>
+        <bool key="ODSA_SUPPORT_NOTIFICATION_SERVICE">false</bool>
+        <bool key="ODSA_SUPPORT_CHANGE_MANAGE_SUBSCRIPTION">true</bool>
+    </dict>
+</config>

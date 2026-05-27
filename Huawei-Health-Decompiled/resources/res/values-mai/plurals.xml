@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="zero">एकटा ग्राफ पर %1$d धरि सूचकांक देखाओल जा सकैत अछि।</item>
+        <item quantity="one">एकटा ग्राफ पर %1$d धरि सूचकांक देखाओल जा सकैत अछि।</item>
+        <item quantity="two">एकटा ग्राफ पर %1$d धरि सूचकांक देखाओल जा सकैत अछि।</item>
+        <item quantity="few">एकटा ग्राफ पर %1$d धरि सूचकांक देखाओल जा सकैत अछि।</item>
+        <item quantity="many">एकटा ग्राफ पर %1$d धरि सूचकांक देखाओल जा सकैत अछि।</item>
+        <item quantity="other">एकटा ग्राफ पर %1$d धरि सूचकांक देखाओल जा सकैत अछि।</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="zero">%d चरणसब</item>
+        <item quantity="one">%d चरण</item>
+        <item quantity="two">%d चरणसब</item>
+        <item quantity="few">%d चरणसब</item>
+        <item quantity="many">%d चरणसब</item>
+        <item quantity="other">%d चरणसब</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="zero">%s मील</item>
+        <item quantity="one">%s मील</item>
+        <item quantity="two">%s मील</item>
+        <item quantity="few">%s मील</item>
+        <item quantity="many">%s मील</item>
+        <item quantity="other">%s मील</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="zero">%s किमी</item>
+        <item quantity="one">%s किमी</item>
+        <item quantity="two">%s किमी</item>
+        <item quantity="few">%s किमी</item>
+        <item quantity="many">%s किमी</item>
+        <item quantity="other">%s किमी</item>
+    </plurals>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/section_group_card_layout"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.cardview.HealthCardView
+        orientation="1"
+        id="@+id/section_group_card_view"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x4="@color/_2131296671_res_0x7f09019f"
+        NOT_FOUND_0x5="@dimen/_2131362365_res_0x7f0a023d"
+        NOT_FOUND_0x6="@dimen/_2131362907_res_0x7f0a045b"
+        NOT_FOUND_0x7="@dimen/_2131362907_res_0x7f0a045b">
+        <LinearLayout
+            orientation="1"
+            id="@+id/section_group_root_layout"
+            layout_width="-1"
+            layout_height="-2"/>
+    </com.huawei.ui.commonui.cardview.HealthCardView>
+</LinearLayout>

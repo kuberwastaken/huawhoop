@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">Do %1$d indikator se može prikazati na jednom grafikonu.</item>
+        <item quantity="few">Do %1$d indikatora se može prikazati na jednom grafikonu.</item>
+        <item quantity="other">Do %1$d indikatora se može prikazati na jednom grafikonu.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">Očekuje se da vaš nivo glukoze u krvi opadne ispod %2$s mmol/l za %1$s min. Pažljivo pratite nivo glukoze u krvi.</item>
+        <item quantity="few">Očekuje se da vaš nivo glukoze u krvi opadne ispod %2$s mmol/l za %1$s min. Pažljivo pratite nivo glukoze u krvi.</item>
+        <item quantity="other">Očekuje se da vaš nivo glukoze u krvi opadne ispod %2$s mmol/l za %1$s min. Pažljivo pratite nivo glukoze u krvi.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">Očekuje se da vaš nivo glukoze u krvi opadne ispod %2$s mg/dL za %1$s min. Pažljivo pratite nivo glukoze u krvi.</item>
+        <item quantity="few">Očekuje se da vaš nivo glukoze u krvi opadne ispod %2$s mg/dL za %1$s min. Pažljivo pratite nivo glukoze u krvi.</item>
+        <item quantity="other">Očekuje se da vaš nivo glukoze u krvi opadne ispod %2$s mg/dL za %1$s min. Pažljivo pratite nivo glukoze u krvi.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d korak</item>
+        <item quantity="few">%d koraka</item>
+        <item quantity="other">%d koraka</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s mi</item>
+        <item quantity="few">%s mi</item>
+        <item quantity="other">%s mi</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s km</item>
+        <item quantity="few">%s km</item>
+        <item quantity="other">%s km</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">Još %1$s korak do cilja</item>
+        <item quantity="few">Još %1$s koraka do cilja</item>
+        <item quantity="other">Još %1$s koraka do cilja</item>
+    </plurals>
+</resources>

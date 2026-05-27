@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" drawable="@drawable/_2131429806_res_0x7f0b09ae">
+    <target
+        name="track_bg"
+        animation="@animator/_2131034163_res_0x7f050033"/>
+</animated-vector>

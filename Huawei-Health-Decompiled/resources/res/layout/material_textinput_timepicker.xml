@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="0"
+    layout_width="-2"
+    layout_height="-2"
+    baselineAligned="false"
+    layoutDirection="0"
+    NOT_FOUND_0x7="0"
+    NOT_FOUND_0x8="0"
+    NOT_FOUND_0x9="0">
+    <include layout="@layout/material_timepicker_textinput_display"/>
+    <include
+        id="@+id/material_clock_period_toggle"
+        layout_width="@dimen/_2131364870_res_0x7f0a0c06"
+        layout_height="@dimen/_2131364868_res_0x7f0a0c04"
+        layout_marginStart="@dimen/_2131364869_res_0x7f0a0c05"
+        layout="@layout/material_clock_period_toggle"/>
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <LinearLayout
+        orientation="0"
+        id="@+id/custom_dialog_title_layout"
+        paddingTop="@dimen/_2131362498_res_0x7f0a02c2"
+        paddingBottom="@dimen/_2131362498_res_0x7f0a02c2"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginStart="@dimen/_2131362499_res_0x7f0a02c3"
+        layout_marginEnd="@dimen/_2131362499_res_0x7f0a02c3">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            ellipsize="3"
+            id="@+id/custom_dailog_title"
+            visibility="0"
+            layout_width="-1"
+            layout_height="-2"
+            maxLines="2"
+            layout_weight="1"
+            textAlignment="5"
+            NOT_FOUND_0xe="15sp"
+            NOT_FOUND_0xf="1sp"
+            style="@style/CustomDialog_title"/>
+        <FrameLayout
+            layout_width="-2"
+            layout_height="-2">
+            <com.huawei.ui.commonui.progressbar.HealthProgressBar
+                gravity="0x10"
+                id="@+id/dialog_listview_loading"
+                visibility="2"
+                layout_width="@dimen/_2131362340_res_0x7f0a0224"
+                layout_height="@dimen/_2131362340_res_0x7f0a0224"/>
+            <com.huawei.ui.commonui.button.HealthButton
+                gravity="0x10"
+                id="@+id/dialog_right_top_Button"
+                visibility="2"
+                layout_width="@dimen/_2131362340_res_0x7f0a0224"
+                layout_height="@dimen/_2131362340_res_0x7f0a0224"/>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

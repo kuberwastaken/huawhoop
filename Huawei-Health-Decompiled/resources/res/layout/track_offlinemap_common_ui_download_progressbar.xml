@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.progressbar.HealthProgressBar
+        id="@+id/download_progressbar"
+        layout_width="-1"
+        layout_height="-1"
+        progress="0"
+        progressDrawable="@drawable/_2131432456_res_0x7f0b1408"
+        style="@style/Health.CommonUI.HealthProgressBar.Horizontal"/>
+    <com.huawei.ui.commonui.button.HealthButton
+        textSize="@dimen/_2131362062_res_0x7f0a010e"
+        gravity="0x11"
+        id="@+id/download_button"
+        focusable="false"
+        layout_width="-1"
+        layout_height="-1"
+        singleLine="true"
+        layout_centerInParent="true"
+        style="@style/health_button_style_small"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131362062_res_0x7f0a010e"
+        textColor="#fb6522"
+        gravity="0x11"
+        id="@+id/download_text"
+        focusable="false"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-1"
+        singleLine="true"
+        layout_centerInParent="true"
+        style="@style/common_ui_text_size_fontfamily_chnfzxh"/>
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    background="@drawable/_2131427891_res_0x7f0b0233"
+    layout_width="-1"
+    layout_height="-2">
+    <RelativeLayout
+        layout_width="-1"
+        layout_height="@dimen/_2131363825_res_0x7f0a07f1"
+        layout_centerVertical="true">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365501_res_0x7f0a0e7d"
+            textColor="@color/_2131299845_res_0x7f090e05"
+            id="@+id/hw_show_health_data_sport_noun_father_date"
+            layout_width="-2"
+            layout_height="-2"
+            layout_centerInParent="true"
+            fontFamily="@string/_2130852834_res_0x7f023be2"
+            layout_alignParentStart="true"/>
+        <ImageView
+            id="@+id/hw_show_health_data_sport_noun_father_arrow"
+            layout_width="-2"
+            layout_height="-2"
+            layout_centerInParent="true"
+            layout_alignParentEnd="true"
+            style="@style/health_default_background_tint"/>
+        <com.huawei.ui.commonui.divider.HealthDivider
+            id="@+id/hw_show_health_data_sport_noun_father_line"
+            layout_width="-2"
+            layout_height="-2"
+            layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</LinearLayout>

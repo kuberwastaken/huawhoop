@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <RelativeLayout
+        id="@+id/health_common_notice_container"
+        layout_width="-1"
+        layout_height="-2"/>
+    <com.huawei.ui.commonui.scrollview.HealthScrollView
+        id="@+id/health_common_scroll_view"
+        scrollbars="0x0"
+        layout_width="-1"
+        layout_height="0dp"
+        fillViewport="true"
+        layout_weight="1"
+        NOT_FOUND_0x8="true">
+        <LinearLayout
+            orientation="1"
+            layout_width="-1"
+            layout_height="-2">
+            <LinearLayout
+                orientation="1"
+                id="@+id/health_common_container"
+                layout_width="-1"
+                layout_height="-2"/>
+            <LinearLayout
+                orientation="1"
+                id="@+id/marketing_resource_layout"
+                layout_width="-1"
+                layout_height="-2"
+                layout_marginBottom="@dimen/_2131362369_res_0x7f0a0241"/>
+        </LinearLayout>
+    </com.huawei.ui.commonui.scrollview.HealthScrollView>
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">Diaqramda %1$d qədər göstərici göstərilə bilər.</item>
+        <item quantity="other">Diaqramda %1$d qədər göstərici göstərilə bilər.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">Qanınızda qlükozanın səviyyəsinin %1$s dəq sonra %2$s mmol/L-dən aşağı düşməsi gözlənilir. Qlükoza səviyyənizi yaxından izləyin.</item>
+        <item quantity="other">Qanınızda qlükozanın səviyyəsinin %1$s dəq sonra %2$s mmol/L-dən aşağı düşməsi gözlənilir. Qlükoza səviyyənizi yaxından izləyin.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">Qanınızda qlükozanın səviyyəsinin %1$s dəq sonra %2$s mq/dL-dən aşağı düşməsi gözlənilir. Qlükoza səviyyənizi yaxından izləyin.</item>
+        <item quantity="other">Qanınızda qlükozanın səviyyəsinin %1$s dəq sonra %2$s mq/dL-dən aşağı düşməsi gözlənilir. Qlükoza səviyyənizi yaxından izləyin.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d addım</item>
+        <item quantity="other">%d addım</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s mil</item>
+        <item quantity="other">%s mil</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s km</item>
+        <item quantity="other">%s km</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">%1$s addım qalıb</item>
+        <item quantity="other">%1$s addım qalıb</item>
+    </plurals>
+</resources>

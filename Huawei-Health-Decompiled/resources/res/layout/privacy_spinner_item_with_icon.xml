@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x10"
+    id="@+id/spinner_item"
+    background="@drawable/_2131429749_res_0x7f0b0975"
+    layout_width="-2"
+    layout_height="-2"
+    minHeight="@dimen/_2131364464_res_0x7f0a0a70"
+    paddingHorizontal="@dimen/_2131362031_res_0x7f0a00ef">
+    <LinearLayout
+        gravity="0x11"
+        orientation="0"
+        layout_width="-2"
+        layout_height="-2">
+        <ImageView
+            id="@+id/spinner_icon"
+            layout_width="@dimen/_2131365533_res_0x7f0a0e9d"
+            layout_height="@dimen/_2131365533_res_0x7f0a0e9d"
+            layout_marginEnd="@dimen/_2131363172_res_0x7f0a0564"
+            style="@style/health_default_background_tint"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            ellipsize="4"
+            id="@+id/spinner_text"
+            layout_width="-1"
+            layout_height="-2"
+            singleLine="true"
+            style="@style/Widget.Emui.HwSpinner.HwSpinnerItem"/>
+    </LinearLayout>
+</RelativeLayout>

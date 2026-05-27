@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.cardview.HealthCardView
+        layout_gravity="0x1"
+        id="@+id/item_mask_card_view"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131362927_res_0x7f0a046f"
+        NOT_FOUND_0xb="@color/_2131296984_res_0x7f0902d8">
+        <ImageView
+            layout_gravity="0x11"
+            id="@+id/item_mask_image"
+            layout_width="-2"
+            layout_height="-2"/>
+    </com.huawei.ui.commonui.cardview.HealthCardView>
+    <com.huawei.ui.commonui.scrollview.HealthScrollView
+        layout_gravity="0x1"
+        scrollbars="0x0"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131365477_res_0x7f0a0e65">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131362970_res_0x7f0a049a"
+            textColor="@color/_2131299847_res_0x7f090e07"
+            gravity="0x11"
+            layout_gravity="0x1"
+            id="@+id/item_mask_text"
+            layout_width="-2"
+            layout_height="-2"
+            fontFamily="@string/_2130852834_res_0x7f023be2"/>
+    </com.huawei.ui.commonui.scrollview.HealthScrollView>
+</LinearLayout>

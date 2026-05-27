@@ -1,0 +1,21 @@
+{
+    "version": "1.1.1",
+    "updatedTime": "1561801664",
+    "data":{
+        "walkRunThreshold":110,
+        "climbThreshold":60,
+        "heartRateThreshold":64,
+        "cycleSpeedThreshold":80,
+        "sampleThreshold":3,
+        "countLength":5,
+        "walkRunThreshold_v2": 105,
+        "climbThreshold_v2":60,
+        "heartRateThreshold_v2":20,
+        "cycleSpeedThreshold_v2":88,
+        "sampleThreshold_v2":1,
+        "countLength_v2":1,
+        "walkRunSpeedThreshold_v2":40,
+        "walkRunThresholdWithHeartRate_v2":40,
+        "heartRateThreshold_v3":25,
+    }
+}

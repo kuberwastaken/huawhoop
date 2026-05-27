@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/section_member_type_header"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xc="false"
+        NOT_FOUND_0xd="2"
+        NOT_FOUND_0xe="@string/_2130846045_res_0x7f02215d"/>
+    <com.huawei.ui.commonui.recycleview.HealthRecycleView
+        id="@+id/section_member_type_recyclerview"
+        layout_width="-1"
+        layout_height="-2"/>
+    <LinearLayout
+        orientation="1"
+        layout_width="-1"
+        layout_height="-2">
+        <com.huawei.health.knit.section.view.SectionExpandableListView
+            id="@+id/section_member_expand_list_view"
+            layout_width="-1"
+            layout_height="-2"
+            layout_marginStart="@dimen/_2131364901_res_0x7f0a0c25"
+            layout_marginEnd="@dimen/_2131364900_res_0x7f0a0c24"/>
+    </LinearLayout>
+    <RelativeLayout
+        id="@+id/remind_text_rl"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131363186_res_0x7f0a0572"
+        layout_marginStart="@dimen/_2131362934_res_0x7f0a0476">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365484_res_0x7f0a0e6c"
+            textColor="@color/_2131299850_res_0x7f090e0a"
+            gravity="0x10"
+            id="@+id/section_member_renew_remind"
+            layout_width="-2"
+            layout_height="-2"
+            layout_centerVertical="true"
+            fontFamily="@string/_2130852834_res_0x7f023be2"/>
+    </RelativeLayout>
+</LinearLayout>

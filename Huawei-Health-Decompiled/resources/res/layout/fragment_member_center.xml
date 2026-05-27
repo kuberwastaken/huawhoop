@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    focusable="true"
+    focusableInTouchMode="true"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/member_title_bar"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-2"
+        layout_alignParentTop="true"/>
+    <LinearLayout
+        orientation="1"
+        id="@+id/social_root_lyt"
+        focusable="true"
+        focusableInTouchMode="true"
+        layout_width="-1"
+        layout_height="-2">
+        <LinearLayout
+            orientation="1"
+            id="@+id/knit_fragment_container"
+            layout_width="-1"
+            layout_height="-2"/>
+    </LinearLayout>
+    <include
+        id="@+id/loading_layout"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-1"
+        layout="@layout/common_loading_layout"/>
+    <include
+        id="@+id/member_center_error_layout"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-1"
+        layout="@layout/member_error_layout"/>
+</RelativeLayout>

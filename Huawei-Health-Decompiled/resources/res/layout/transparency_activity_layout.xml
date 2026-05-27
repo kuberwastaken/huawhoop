@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    id="@+id/transparency_layout"
+    layout_width="-1"
+    layout_height="-1">
+    <TextView
+        textSize="30sp"
+        textColor="#e5ffffff"
+        gravity="0x11"
+        id="@+id/web_appbar_tv"
+        visibility="2"
+        layout_width="-1"
+        layout_height="60dp"
+        layout_marginTop="24dp"
+        fontFamily="HwChinese-medium"/>
+    <com.huawei.openalliance.ad.views.web.PureWebView
+        id="@+id/webview"
+        layout_width="-1"
+        layout_height="-1"/>
+</LinearLayout>

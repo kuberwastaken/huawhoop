@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="other">ဂရပ်တစ်ခုတွင် အညွှန်း %1$d ခုအထိ ပြသနိုင်ပါသည်။</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="other">သင့်သွေးတွင်းဂလူးကို့စ်ပမာဏသည် %1$s min အကြာတွင် %2$s mmol/L အောက် ကျဆင်းမည်ဟု ခန့်မှန်းရသည်။ သင်၏ ဂလူးကို့စ်ပမာဏကို အနီးကပ် စောင့်ကြည့်ပေးပါ။</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="other">သင့်သွေးတွင်းဂလူးကို့စ်ပမာဏသည် %1$s min အကြာတွင် %2$s mg/dL အောက် ကျဆင်းမည်ဟု ခန့်မှန်းရသည်။ သင်၏ ဂလူးကို့စ်ပမာဏကို အနီးကပ် စောင့်ကြည့်ပေးပါ။</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="other">ခြေလှမ်း %d လှမ်း</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="other">%s မိုင်</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="other">%s km</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="other">ခြေလှမ်း %1$s လှမ်း လို</item>
+    </plurals>
+</resources>

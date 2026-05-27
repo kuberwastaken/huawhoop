@@ -1,0 +1,76 @@
+{
+  "gridContents": [
+    {
+      "priority": 0,
+      "theme": "尊享守护",
+      "themeVisibility": "true",
+      "linkValue": "huaweihealth://huaweihealth.app/openwith?address=com.huawei.health.h5.vip?h5pro=true&urlType=4&pName=com.huawei.health&path=ExclusiveGuardService&from=5"
+    },
+    {
+      "priority": 1,
+      "theme": "智能减脂",
+      "themeVisibility": "true",
+      "linkValue": "huaweischeme://healthapp/fitnesspage?skip_type=goto_plan&id=1&planTempId=JZ001&urlType=4&pName=com.huawei.health"
+    },
+    {
+      "priority": 2,
+      "theme": "饮食日记",
+      "themeVisibility": "true",
+      "linkValue": "huaweihealth://huaweihealth.app/openwith?address=com.huawei.health.h5.diet-diary?h5pro=true&urlType=4&pName=com.huawei.health"
+    },
+    {
+      "priority": 3,
+      "theme": "助眠音乐",
+      "themeVisibility": "true",
+      "linkValue": "huaweihealth://huaweihealth.app/openwith?address=com.huawei.health.h5.sleeping-music?h5pro=true&urlType=4&pName=com.huawei.health&path=audioList&audioType=2&statusBarTextBlack&isImmers"
+    },
+    {
+      "priority": 4,
+      "theme": "定制食谱",
+      "themeVisibility": "true",
+      "linkValue": "huaweihealth://huaweihealth.app/openwith?address=com.huawei.health.h5.custom-recipe?h5pro=true&urlType=4&pName=com.huawei.health&pullFrom=50"
+    },
+    {
+      "priority": 5,
+      "theme": "精品课程",
+      "themeVisibility": "true",
+      "linkValue": "huaweischeme://healthapp/fitnesspage?skip_type=main_page&fitness_type=500001&urlType=4&pName=com.huawei.health"
+    },
+    {
+      "priority": 6,
+      "theme": "睡眠监测",
+      "themeVisibility": "true",
+      "linkValue": "huaweischeme://healthapp/basicHealth?healthType=1&pageType=detection&fromType=3&urlType=4&pName=com.huawei.health"
+    },
+    {
+      "priority": 7,
+      "theme": "呼吸训练",
+      "themeVisibility": "true",
+      "linkValue": "huaweihealth://huaweihealth.app/openwith?address=com.huawei.health.h5.breath-training?h5pro=true&urlType=4&pName=com.huawei.health&statusBarTextBlack&isImmerse"
+    },
+    {
+      "priority": 8,
+      "theme": "卡卡兑换",
+      "themeVisibility": "true",
+      "linkValue": "huaweischeme://healthapp/mykaka?urlType=4&pName=com.huawei.health"
+    },
+    {
+      "priority": 9,
+      "theme": "热门活动",
+      "themeVisibility": "true",
+      "linkValue": "https://h5hosting-drcn.dbankcdn.cn/cch5/health/activity/web/html/activity.html"
+    },
+    {
+      "priority": 10,
+      "theme": "知识头条",
+      "themeVisibility": "true",
+      "linkValue": "https://messagecenter.dbankcloud.cn/messageH5/InformationPlatform/html/messageCenter.html?pageTitle=知识头条"
+    },
+    {
+      "priority": 11,
+      "theme": "精选服务",
+      "themeVisibility": "true",
+      "linkValue": "localeUrl:moduleName=openService?urlType=1"
+    }
+  ]
+}

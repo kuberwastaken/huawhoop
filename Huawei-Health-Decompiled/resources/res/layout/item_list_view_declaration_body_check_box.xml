@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="0"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.checkbox.HealthCheckBox
+        gravity="0x800013"
+        id="@+id/checkbox"
+        layout_width="20dp"
+        layout_height="20dp"
+        layout_margin="20dp"
+        layout_alignParentBottom="true"
+        layout_alignParentEnd="true"
+        style="@style/health_checkbox_style"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textColor="@color/_2131299850_res_0x7f090e0a"
+        id="@+id/text_view_description"
+        layout_width="-1"
+        layout_height="-2"
+        layout_alignParentBottom="true"
+        layout_toStartOf="@+id/checkbox"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textColor="@color/_2131299850_res_0x7f090e0a"
+        id="@+id/text_view_name"
+        layout_width="-2"
+        layout_height="-2"
+        layout_above="@+id/text_view_description"/>
+</RelativeLayout>

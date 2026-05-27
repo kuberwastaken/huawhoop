@@ -1,0 +1,453 @@
+{
+  "version": "1.0",
+  "sportWordsList": [
+    {
+      "wordName": "AEROBIC_TRAINING_STRESS",
+      "wordId": 3,
+      "wordNum": "SF-10190178_f6181__03",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "EXERCISE",
+      "secondSortNum": "SF-10190178_f6181"
+    },
+    {
+      "wordName": "RECOVERY_HEART_RATE",
+      "wordId": 25,
+      "wordNum": "SF-10190178_f6181__25",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "EXERCISE",
+      "secondSortNum": "SF-10190178_f6181"
+    },
+    {
+      "wordName": "SWIM_PULL_TIMES",
+      "wordId": 3,
+      "wordNum": "SF-10190178_f6193__03",
+      "firstSortName": "SWIM_KNOWLEDGE",
+      "secondSortName": "SWIM_PULL_TIMES",
+      "secondSortNum": "SF-10190178_f6193"
+    },
+    {
+      "wordName": "BACK_SWING",
+      "wordId": 1,
+      "wordNum": "SF-10190178_f6189__01",
+      "firstSortName": "GOLF_DATA",
+      "secondSortName": "SWING_DATA",
+      "secondSortNum": "SF-10190178_f6189"
+    },
+    {
+      "wordName": "STEP_RATE",
+      "wordId": 6,
+      "wordNum": "SF-10190178_f6186__06",
+      "firstSortName": "RUNNING_DATA",
+      "secondSortName": "FOOT_DATA",
+      "secondSortNum": "SF-10190178_f6186"
+    },
+    {
+      "wordName": "GROUND_CONTACT_TIME",
+      "wordId": 9,
+      "wordNum": "SF-10190178_f6186__09",
+      "firstSortName": "RUNNING_DATA",
+      "secondSortName": "FOOT_DATA",
+      "secondSortNum": "SF-10190178_f6186"
+    },
+    {
+      "wordName": "HANG_TIME",
+      "wordId": 10,
+      "wordNum": "SF-10190178_f6186__10",
+      "firstSortName": "RUNNING_DATA",
+      "secondSortName": "FOOT_DATA",
+      "secondSortNum": "SF-10190178_f6186"
+    },
+    {
+      "wordName": "IMPACT_HANG_TIME_RATE",
+      "wordId": 11,
+      "wordNum": "SF-10190178_f6186__11",
+      "firstSortName": "RUNNING_DATA",
+      "secondSortName": "FOOT_DATA",
+      "secondSortNum": "SF-10190178_f6186"
+    },
+    {
+      "wordName": "GROUND_IMPACT_PEAK",
+      "wordId": 14,
+      "wordNum": "SF-10190178_f6186__14",
+      "firstSortName": "RUNNING_DATA",
+      "secondSortName": "FOOT_DATA",
+      "secondSortNum": "SF-10190178_f6186"
+    },
+    {
+      "wordName": "PARAMETER_VERTICAL_OSCILLATION",
+      "wordId": 15,
+      "wordNum": "SF-10190178_f6186__15",
+      "firstSortName": "RUNNING_DATA",
+      "secondSortName": "WAIST_DATA",
+      "secondSortNum": "SF-10190178_f6186"
+    },
+    {
+      "wordName": "PARAMETER_GROUND_TIME_BALANCE",
+      "wordId": 16,
+      "wordNum": "SF-10190178_f6186__16",
+      "firstSortName": "RUNNING_DATA",
+      "secondSortName": "WAIST_DATA",
+      "secondSortNum": "SF-10190178_f6186"
+    },
+    {
+      "wordName": "VERTICAL_STRIKE_RATE",
+      "wordId": 17,
+      "wordNum": "SF-10190178_f6186__17",
+      "firstSortName": "RUNNING_DATA",
+      "secondSortName": "WAIST_DATA",
+      "secondSortNum": "SF-10190178_f6186"
+    },
+    {
+      "wordName": "LANDING_IMPACT",
+      "wordId": 19,
+      "wordNum": "SF-10190178_f6186__19",
+      "firstSortName": "RUNNING_DATA",
+      "secondSortName": "WAIST_DATA",
+      "secondSortNum": "SF-10190178_f6186"
+    },
+    {
+      "wordName": "HEART_RATE",
+      "wordId": 24,
+      "wordNum": "SF-10190178_f6181__24",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "EXERCISE",
+      "secondSortNum": "SF-10190178_f6181"
+    },
+    {
+      "wordName": "HEART_RATE_ZONE",
+      "wordId": 1,
+      "wordNum": "SF-10190178_f6181__01",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "EXERCISE",
+      "secondSortNum": "SF-10190178_f6181"
+    },
+    {
+      "wordName": "PACE_ZONE",
+      "wordId": 2,
+      "wordNum": "SF-10190178_f6181__02",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "EXERCISE",
+      "secondSortNum": "SF-10190178_f6181"
+    },
+    {
+      "wordName": "ANAEROBIC_TRAINING_STRESS",
+      "wordId": 4,
+      "wordNum": "SF-10190178_f6181__04",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "EXERCISE",
+      "secondSortNum": "SF-10190178_f6181"
+    },
+    {
+      "wordName": "RECOVERY_TIME",
+      "wordId": 5,
+      "wordNum": "SF-10190178_f6181__05",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "EXERCISE",
+      "secondSortNum": "SF-10190178_f6181"
+    },
+    {
+      "wordName": "RECOVERY_PERCENT",
+      "wordId": 6,
+      "wordNum": "SF-10190178_f6181__06",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "EXERCISE",
+      "secondSortNum": "SF-10190178_f6181"
+    },
+    {
+      "wordName": "TRAINING_SUGGESTION",
+      "wordId": 7,
+      "wordNum": "SF-10190178_f6181__07",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "EXERCISE",
+      "secondSortNum": "SF-10190178_f6181"
+    },
+    {
+      "wordName": "PHYSICAL_STATE",
+      "wordId": 8,
+      "wordNum": "SF-10190178_f6181__08",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "EXERCISE",
+      "secondSortNum": "SF-10190178_f6181"
+    },
+    {
+      "wordName": "DAY_TRAINING_LOAD",
+      "wordId": 9,
+      "wordNum": "SF-10190178_f6182__09",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "TRAINING_LOAD",
+      "secondSortNum": "SF-10190178_f6182"
+    },
+    {
+      "wordName": "WEEK_TRAINING_LOAD",
+      "wordId": 10,
+      "wordNum": "SF-10190178_f6182__10",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "TRAINING_LOAD",
+      "secondSortNum": "SF-10190178_f6182"
+    },
+    {
+      "wordName": "WEEK_TRAINING_LOAD_LEVEL",
+      "wordId": 11,
+      "wordNum": "SF-10190178_f6182__11",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "TRAINING_LOAD",
+      "secondSortNum": "SF-10190178_f6182"
+    },
+    {
+      "wordName": "WEEK_TRAINING_LOAD_CHANGE_RATE",
+      "wordId": 12,
+      "wordNum": "SF-10190178_f6182__12",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "TRAINING_LOAD",
+      "secondSortNum": "SF-10190178_f6182"
+    },
+    {
+      "wordName": "TRAINING_LOAD",
+      "wordId": 26,
+      "wordNum": "SF-10190178_f6182__26",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "TRAINING_LOAD",
+      "secondSortNum": "SF-10190178_f6182"
+    },
+    {
+      "wordName": "TRAIN_CONDITION",
+      "wordId": 27,
+      "wordNum": "SF-10190178_f6183__27",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "SPORTS_PERFORMANCE",
+      "secondSortNum": "SF-10190178_f6183"
+    },
+    {
+      "wordName": "PHYSICAL_INDEX",
+      "wordId": 28,
+      "wordNum": "SF-10190178_f6183__28",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "SPORTS_PERFORMANCE",
+      "secondSortNum": "SF-10190178_f6183"
+    },
+    {
+      "wordName": "FATIGUE_INDEX",
+      "wordId": 29,
+      "wordNum": "SF-10190178_f6183__29",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "SPORTS_PERFORMANCE",
+      "secondSortNum": "SF-10190178_f6183"
+    },
+    {
+      "wordName": "SPORTSPERFORMANCE",
+      "wordId": 13,
+      "wordNum": "SF-10190178_f6183__13",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "SPORTS_PERFORMANCE",
+      "secondSortNum": "SF-10190178_f6183"
+    },
+    {
+      "wordName": "TRAINING_STATUS",
+      "wordId": 14,
+      "wordNum": "SF-10190178_f6183__14",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "SPORTS_PERFORMANCE",
+      "secondSortNum": "SF-10190178_f6183"
+    },
+    {
+      "wordName": "PHYSICAL_VALE",
+      "wordId": 15,
+      "wordNum": "SF-10190178_f6183__15",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "SPORTS_PERFORMANCE",
+      "secondSortNum": "SF-10190178_f6183"
+    },
+    {
+      "wordName": "PHYSICAL_STATUS",
+      "wordId": 16,
+      "wordNum": "SF-10190178_f6183__16",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "SPORTS_PERFORMANCE",
+      "secondSortNum": "SF-10190178_f6183"
+    },
+    {
+      "wordName": "FATIGUE_VALUE",
+      "wordId": 17,
+      "wordNum": "SF-10190178_f6183__17",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "SPORTS_PERFORMANCE",
+      "secondSortNum": "SF-10190178_f6183"
+    },
+    {
+      "wordName": "FATIGUE_STATUS",
+      "wordId": 18,
+      "wordNum": "SF-10190178_f6183__18",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "SPORTS_PERFORMANCE",
+      "secondSortNum": "SF-10190178_f6183"
+    },
+    {
+      "wordName": "VO2_MAX",
+      "wordId": 19,
+      "wordNum": "SF-10190178_f6184__19",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "SPORTS_LEVEL",
+      "secondSortNum": "SF-10190178_f6184"
+    },
+    {
+      "wordName": "RUNNING_STATE_INDEX",
+      "wordId": 20,
+      "wordNum": "SF-10190178_f6184__20",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "SPORTS_LEVEL",
+      "secondSortNum": "SF-10190178_f6184"
+    },
+    {
+      "wordName": "LACTATE_THRESHOLD",
+      "wordId": 30,
+      "wordNum": "SF-10190178_f6184__30",
+      "firstSortName": "BASE_KNOWLEDGE",
+      "secondSortName": "SPORTS_LEVEL",
+      "secondSortNum": "SF-10190178_f6184"
+    },
+    {
+      "wordName": "STRIKE_PATTERN",
+      "wordId": 1,
+      "wordNum": "SF-10190178_f6186__01",
+      "firstSortName": "RUNNING_DATA",
+      "secondSortName": "FOOT_DATA",
+      "secondSortNum": "SF-10190178_f6186"
+    },
+    {
+      "wordName": "SWIM_LAPS",
+      "wordId": 1,
+      "wordNum": "SF-10190178_f6193__01",
+      "firstSortName": "SWIM_KNOWLEDGE",
+      "secondSortName": "SWIM_LAPS",
+      "secondSortNum": "SF-10190178_f6193"
+    },
+    {
+      "wordName": "SWIM_STROKE",
+      "wordId": 2,
+      "wordNum": "SF-10190178_f6193__02",
+      "firstSortName": "SWIM_KNOWLEDGE",
+      "secondSortName": "SWIM_STROKE",
+      "secondSortNum": "SF-10190178_f6193"
+    },
+    {
+      "wordName": "SWIM_PULL_FREQ",
+      "wordId": 4,
+      "wordNum": "SF-10190178_f6193__04",
+      "firstSortName": "SWIM_KNOWLEDGE",
+      "secondSortName": "SWIM_PULL_FREQ",
+      "secondSortNum": "SF-10190178_f6193"
+    },
+    {
+      "wordName": "SWOLF",
+      "wordId": 5,
+      "wordNum": "SF-10190178_f6193__05",
+      "firstSortName": "SWIM_KNOWLEDGE",
+      "secondSortName": "SWOLF",
+      "secondSortNum": "SF-10190178_f6193"
+    },
+    {
+      "wordName": "VALGUS_AMPLITUDE",
+      "wordId": 12,
+      "wordNum": "SF-10190178_f6186__12",
+      "firstSortName": "RUNNING_DATA",
+      "secondSortName": "FOOT_DATA",
+      "secondSortNum": "SF-10190178_f6186"
+    },
+    {
+      "wordName": "OSCILLATING_ANGLE",
+      "wordId": 13,
+      "wordNum": "SF-10190178_f6186__13",
+      "firstSortName": "RUNNING_DATA",
+      "secondSortName": "FOOT_DATA",
+      "secondSortNum": "SF-10190178_f6186"
+    },
+    {
+      "wordName": "FOOT_STRIKE_PATTERN",
+      "wordId": 1,
+      "wordNum": "SF-10190178_f6186__01",
+      "firstSortName": "RUNNING_DATA",
+      "secondSortName": "FOOT_DATA",
+      "secondSortNum": "SF-10190178_f6186"
+    },
+    {
+      "wordName": "FOOT_DATA",
+      "wordId": 0,
+      "wordNum": "SF-10190178_f6186__00",
+      "firstSortName": "RUNNING_DATA",
+      "secondSortName": "FOOT_DATA",
+      "secondSortNum": "SF-10190178_f6186"
+    },
+    {
+      "wordName": "VERTICAL_LOADING_RATE",
+      "wordId": 18,
+      "wordNum": "SF-10190178_f6186__18",
+      "firstSortName": "RUNNING_DATA",
+      "secondSortName": "FOOT_DATA",
+      "secondSortNum": "SF-10190178_f6186"
+    },
+    {
+      "wordName": "CADENCE",
+      "wordId": 1,
+      "wordNum": "SF-10190178_f6192__01",
+      "firstSortName": "RIDING_KNOWLEDGE",
+      "secondSortName": "RIDING_KNOWLEDGE",
+      "secondSortNum": "SF-10190178_f6192"
+    },
+    {
+      "wordName": "CROSS_TRAINER_STEP_RATE",
+      "wordId": 1,
+      "wordNum": "SF-10190178_f6195__01",
+      "firstSortName": "CROSSTRAINER_KNOWLEDGE",
+      "secondSortName": "CROSSTRAINER_KNOWLEDGE",
+      "secondSortNum": "SF-10190178_f6195"
+    },
+    {
+      "wordName": "CROSS_TRAINER_CADENCE",
+      "wordId": 2,
+      "wordNum": "SF-10190178_f6195__02",
+      "firstSortName": "CROSSTRAINER_KNOWLEDGE",
+      "secondSortName": "CROSSTRAINER_KNOWLEDGE",
+      "secondSortNum": "SF-10190178_f6195"
+    },
+    {
+      "wordName": "RUN_CALORIES",
+      "wordId": 3,
+      "wordNum": "SF-10190178_f6186__03",
+      "firstSortName": "RUNNING_DATA",
+      "secondSortName": "FOOT_DATA",
+      "secondSortNum": "SF-10190178_f6186"
+    },
+    {
+      "wordName": "RUN_DISTANCE",
+      "wordId": 2,
+      "wordNum": "SF-10190178_f6186__02",
+      "firstSortName": "RUNNING_DATA",
+      "secondSortName": "FOOT_DATA",
+      "secondSortNum": "SF-10190178_f6186"
+    },
+    {
+      "wordName": "REALTIME_PACE",
+      "wordId": 4,
+      "wordNum": "SF-10190178_f6186__04",
+      "firstSortName": "RUNNING_DATA",
+      "secondSortName": "FOOT_DATA",
+      "secondSortNum": "SF-10190178_f6186"
+    },
+    {
+      "wordName": "ADVENTURE_WAYPOINT",
+      "wordId": 1,
+      "wordNum": "SF-10190178_f6138__01",
+      "firstSortName": "ADVENTURE_KNOWLEDGE",
+      "secondSortName": "ADVENTURE_KNOWLEDGE",
+      "secondSortNum": "SF-10190178_f6138"
+    },
+    {
+      "wordName": "RIDE_POWER",
+      "wordId": 5,
+      "wordNum": "SF-10190178_f6192__05",
+      "firstSortName": "RIDING_KNOWLEDGE",
+      "secondSortName": "RIDING_KNOWLEDGE",
+      "secondSortNum": "SF-10190178_f6192"
+    }
+  ]
+}

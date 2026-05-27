@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    paddingLeft="16dp"
+    paddingRight="16dp"
+    layout_width="-1"
+    layout_height="-2"
+    paddingStart="16dp"
+    paddingEnd="16dp">
+    <TextView
+        textSize="13sp"
+        id="@+id/enable_service_text"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="16dp"
+        layout_marginRight="8dp"
+        text="Please enable the HMS service in settings tag"
+        layout_marginEnd="8dp"/>
+</RelativeLayout>

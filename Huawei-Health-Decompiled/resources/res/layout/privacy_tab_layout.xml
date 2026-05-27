@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    id="@+id/privacy_tab_layout"
+    visibility="2"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.subtab.HealthSubTabWidget
+        id="@+id/privacy_tab"
+        layout_width="-1"
+        layout_height="-2"
+        style="@style/health_sub_tab_style_pressure"/>
+    <com.huawei.ui.commonui.viewpager.HealthViewPager
+        id="@+id/privacy_view_pager"
+        layout_width="-1"
+        layout_height="-2"/>
+</LinearLayout>

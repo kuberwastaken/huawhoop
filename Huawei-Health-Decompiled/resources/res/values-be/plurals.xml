@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">У адной графе можа адлюстроўвацца да %1$d паказчыка.</item>
+        <item quantity="few">У адной графе могуць адлюстроўвацца да %1$d паказчыкаў.</item>
+        <item quantity="many">У адной графе могуць адлюстроўвацца да %1$d паказчыкаў.</item>
+        <item quantity="other">У адной графе могуць адлюстроўвацца да %1$d паказчыкаў.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">Чакаецца што ўзровень глюкозы ў крыві апусціцца ніжэй за %2$s ммоль/л праз %1$s хв. Пільна сачыце за ўзроўнем глюкозы ў крыві.</item>
+        <item quantity="few">Чакаецца што ўзровень глюкозы ў крыві апусціцца ніжэй за %2$s ммоль/л праз %1$s хв. Пільна сачыце за ўзроўнем глюкозы ў крыві.</item>
+        <item quantity="many">Чакаецца што ўзровень глюкозы ў крыві апусціцца ніжэй за %2$s ммоль/л праз %1$s хв. Пільна сачыце за ўзроўнем глюкозы ў крыві.</item>
+        <item quantity="other">Чакаецца што ўзровень глюкозы ў крыві апусціцца ніжэй за %2$s ммоль/л праз %1$s хв. Пільна сачыце за ўзроўнем глюкозы ў крыві.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">Чакаецца што ўзровень глюкозы ў крыві апусціцца ніжэй за %2$s мг/дл праз %1$s хв. Пільна сачыце за ўзроўнем глюкозы ў крыві.</item>
+        <item quantity="few">Чакаецца што ўзровень глюкозы ў крыві апусціцца ніжэй за %2$s мг/дл праз %1$s хв. Пільна сачыце за ўзроўнем глюкозы ў крыві.</item>
+        <item quantity="many">Чакаецца што ўзровень глюкозы ў крыві апусціцца ніжэй за %2$s мг/дл праз %1$s хв. Пільна сачыце за ўзроўнем глюкозы ў крыві.</item>
+        <item quantity="other">Чакаецца што ўзровень глюкозы ў крыві апусціцца ніжэй за %2$s мг/дл праз %1$s хв. Пільна сачыце за ўзроўнем глюкозы ў крыві.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d крок</item>
+        <item quantity="few">%d крокі</item>
+        <item quantity="many">%d крокі</item>
+        <item quantity="other">%d крокі</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s міля</item>
+        <item quantity="few">%s мілі</item>
+        <item quantity="many">%s міль</item>
+        <item quantity="other">%s міль</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s км</item>
+        <item quantity="few">%s км</item>
+        <item quantity="many">%s км</item>
+        <item quantity="other">%s км</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">%1$s крок</item>
+        <item quantity="few">%1$s крокі</item>
+        <item quantity="many">%1$s крокаў</item>
+        <item quantity="other">%1$s крокаў</item>
+    </plurals>
+</resources>

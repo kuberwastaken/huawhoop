@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="64dp"
+    layout_height="-2"
+    layout_marginTop="8dp"
+    layout_marginBottom="8dp"
+    layout_marginStart="16dp">
+    <RelativeLayout
+        gravity="0x11"
+        layout_width="64dp"
+        layout_height="64dp">
+        <ImageView
+            layout_gravity="0x11"
+            id="@+id/share_img"
+            layout_width="52dp"
+            layout_height="52dp"/>
+    </RelativeLayout>
+    <TextView
+        textSize="@dimen/_2131362716_res_0x7f0a039c"
+        textColor="@color/_2131297419_res_0x7f09048b"
+        gravity="0x11"
+        layout_gravity="0x11"
+        id="@+id/share_tv"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="3dp"
+        maxLines="1"
+        autoSizeTextType="1"
+        autoSizeStepGranularity="1sp"
+        autoSizeMinTextSize="8sp"/>
+</LinearLayout>

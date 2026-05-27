@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.viewpager.HealthViewPager
+        id="@+id/data_view_pager"
+        layout_width="-1"
+        layout_height="-1"
+        layout_centerHorizontal="true"/>
+</RelativeLayout>

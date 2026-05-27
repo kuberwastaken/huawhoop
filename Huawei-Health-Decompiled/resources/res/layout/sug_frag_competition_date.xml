@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.columnlayout.HealthColumnRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="-1">
+    <include
+        id="@+id/layout_tips"
+        layout_width="-1"
+        layout_height="-2"
+        layout="@layout/sug_frag_run_plan_tips"/>
+    <com.huawei.ui.commonui.cardview.HealthCardView
+        id="@+id/competition_date_select_layout"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginBottom="@dimen/_2131362575_res_0x7f0a030f"
+        layout_above="@+id/sug_layout_btn"
+        layout_marginStart="@dimen/_2131362013_res_0x7f0a00dd"
+        layout_marginEnd="@dimen/_2131362013_res_0x7f0a00dd">
+        <com.huawei.ui.commonui.datepicker.HealthDatePicker
+            id="@+id/event_date_picker"
+            layout_width="-1"
+            layout_height="@dimen/_2131363797_res_0x7f0a07d5"
+            paddingStart="@dimen/_2131364901_res_0x7f0a0c25"
+            paddingEnd="@dimen/_2131364900_res_0x7f0a0c24"/>
+    </com.huawei.ui.commonui.cardview.HealthCardView>
+    <RelativeLayout
+        gravity="0x11"
+        id="@+id/sug_layout_btn"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginBottom="@dimen/_2131362575_res_0x7f0a030f"
+        layout_alignParentBottom="true">
+        <com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout
+            layout_width="-2"
+            layout_height="-2"
+            NOT_FOUND_0xc="1">
+            <com.huawei.ui.commonui.button.HealthButton
+                id="@+id/sug_btn_next"
+                layout_width="-2"
+                layout_height="-2"
+                text="@string/_2130849486_res_0x7f022ece"
+                style="@style/Health.CommonUI.HealthButton"/>
+        </com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout>
+    </RelativeLayout>
+</com.huawei.ui.commonui.columnlayout.HealthColumnRelativeLayout>

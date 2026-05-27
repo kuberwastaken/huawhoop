@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        state_pressed="true"
+        id="@android:id/background">
+        <shape>
+            <corners radius="@dimen/_2131363349_res_0x7f0a0615"/>
+            <solid color="@color/_2131298069_res_0x7f090715"/>
+        </shape>
+    </item>
+    <item id="@android:id/background">
+        <shape>
+            <corners radius="@dimen/_2131363349_res_0x7f0a0615"/>
+            <solid color="@color/_2131298068_res_0x7f090714"/>
+        </shape>
+    </item>
+</selector>

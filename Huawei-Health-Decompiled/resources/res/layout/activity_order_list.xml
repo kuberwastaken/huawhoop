@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    gravity="0x1"
+    orientation="1"
+    background="@color/_2131296700_res_0x7f0901bc"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/trade_titlebar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x6="2"
+        NOT_FOUND_0x7="@color/_2131296700_res_0x7f0901bc"
+        NOT_FOUND_0x8="@string/_2130842420_res_0x7f021334"/>
+    <LinearLayout
+        gravity="0x1"
+        orientation="1"
+        id="@+id/lin_content"
+        layout_width="-1"
+        layout_height="-1"/>
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="0"
+    layout_width="-1"
+    layout_height="-1">
+    <LinearLayout
+        layout_gravity="0x11"
+        orientation="1"
+        id="@+id/toggle_linearLayout"
+        layout_width="-2"
+        layout_height="-2"
+        layout_margin="@dimen/_2131362045_res_0x7f0a00fd"
+        layout_weight="1">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="14sp"
+            textColor="@color/_2131299845_res_0x7f090e05"
+            id="@+id/toggle_text_view_name"
+            layout_width="-2"
+            layout_height="-2"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="14sp"
+            textColor="@color/_2131299845_res_0x7f090e05"
+            id="@+id/toggle_text_view_description"
+            visibility="2"
+            layout_width="-2"
+            layout_height="-2"
+            layout_marginTop="@dimen/_2131362865_res_0x7f0a0431"/>
+    </LinearLayout>
+    <com.huawei.ui.commonui.switchbutton.HealthSwitchButton
+        layout_gravity="0x11"
+        id="@+id/switch_button"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginStart="@dimen/_2131363672_res_0x7f0a0758"
+        layout_marginEnd="@dimen/_2131363672_res_0x7f0a0758"
+        style="@style/health_switch_style"/>
+</LinearLayout>

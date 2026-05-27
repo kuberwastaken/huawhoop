@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MainGuideImage1" parent="">
+        <item name="android:layout_marginTop">@dimen/_2131364850_res_0x7f0a0bf2</item>
+    </style>
+    <style name="MainGuideText1" parent="">
+        <item name="android:layout_marginBottom">@dimen/_2131362941_res_0x7f0a047d</item>
+    </style>
+</resources>

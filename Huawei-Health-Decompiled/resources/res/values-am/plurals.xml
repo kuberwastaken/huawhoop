@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">በአንድ ግራፍ ላይ እስከ %1$d አመልካች ሊታይ ይችላል።</item>
+        <item quantity="other">በአንድ ግራፍ ላይ እስከ %1$d አመልካቾች ሊታዩ ይችላሉ።</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">የእርስዎ የደም ግሉኮዝ በ%1$s ደቂቃ ውስጥ ከ%2$s ሚሞ/ሊ በታች እንደሚቀንስ ይጠበቃል። እባክዎ የደም ግሉኮዝ ደረጃዎን በቅርበት ይከታተሉ።</item>
+        <item quantity="other">የእርስዎ የደም ግሉኮዝ በ%1$s ደቂቃ ውስጥ ከ%2$s ሚሞ/ሊ በታች እንደሚቀንስ ይጠበቃል። እባክዎ የደም ግሉኮዝ ደረጃዎን በቅርበት ይከታተሉ።</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">የእርስዎ የደም ግሉኮዝ በ%1$s ደቂቃ ውስጥ ከ%2$s ሚግ/ዴሊ በታች እንደሚቀንስ ይጠበቃል። እባክዎ የደም ግሉኮዝ ደረጃዎን በቅርበት ይከታተሉ።</item>
+        <item quantity="other">የእርስዎ የደም ግሉኮዝ በ%1$s ደቂቃ ውስጥ ከ%2$s ሚግ/ዴሊ በታች እንደሚቀንስ ይጠበቃል። እባክዎ የደም ግሉኮዝ ደረጃዎን በቅርበት ይከታተሉ።</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d ደረጃ</item>
+        <item quantity="other">%d ደረጃዎች</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s ማይል</item>
+        <item quantity="other">%s ማይል</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s ኪሜ</item>
+        <item quantity="other">%s ኪሜ</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">%1$s እርምጃ ብቻ ይቀራል</item>
+        <item quantity="other">%1$s እርምጃዎች ይቀራሉ</item>
+    </plurals>
+</resources>

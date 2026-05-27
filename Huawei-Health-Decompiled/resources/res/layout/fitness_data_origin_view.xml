@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    id="@+id/settings_gender_view_layout"
+    layout_width="-1"
+    layout_height="-2"
+    baselineAligned="true">
+    <ListView
+        id="@+id/lv_fitness_data_origin_list"
+        scrollbars="0x0"
+        clickable="false"
+        layout_width="-1"
+        layout_height="0dp"
+        divider="@null"
+        layout_weight="1"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131362954_res_0x7f0a048a"
+        textColor="@color/_2131299850_res_0x7f090e0a"
+        id="@+id/info_text"
+        layout_width="-2"
+        layout_height="-2"
+        text="@string/_2130842179_res_0x7f021243"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+        textColor="@color/_2131298217_res_0x7f0907a9"
+        id="@+id/inaccurate_step_count"
+        visibility="2"
+        layout_width="-2"
+        layout_height="-2"
+        text="@string/_2130846856_res_0x7f022488"/>
+</LinearLayout>

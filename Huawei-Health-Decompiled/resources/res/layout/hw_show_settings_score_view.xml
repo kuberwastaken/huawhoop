@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/settings_score_view_layout"
+    layout_width="-1"
+    layout_height="-2"
+    baselineAligned="false">
+    <ListView
+        scrollbarStyle="0x2000000"
+        id="@+id/nps_score_lv"
+        descendantFocusability="1"
+        layout_width="-1"
+        layout_height="@dimen/_2131361835_res_0x7f0a002b"
+        listSelector="@android:color/transparent"
+        divider="@null"
+        paddingStart="@dimen/_2131361834_res_0x7f0a002a"
+        paddingEnd="@dimen/_2131361834_res_0x7f0a002a"/>
+</LinearLayout>

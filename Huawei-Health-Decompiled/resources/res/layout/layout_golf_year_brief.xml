@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.cardview.HealthCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-2"
+    paddingStart="@dimen/_2131362372_res_0x7f0a0244"
+    paddingEnd="@dimen/_2131362371_res_0x7f0a0243">
+    <com.huawei.ui.commonui.sport.base.GridBanner
+        id="@+id/golf_year_brief_banner"
+        layout_width="-1"
+        layout_height="-2"/>
+</com.huawei.ui.commonui.cardview.HealthCardView>

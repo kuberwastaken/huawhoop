@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296700_res_0x7f0901bc"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xb="2"
+        NOT_FOUND_0xc="@color/_2131296984_res_0x7f0902d8"
+        NOT_FOUND_0xd="@string/_2130846444_res_0x7f0222ec"/>
+    <androidx.core.widget.NestedScrollView
+        orientation="1"
+        background="@color/_2131299926_res_0x7f090e56"
+        scrollbars="0x0"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131363218_res_0x7f0a0592"
+        overScrollMode="2">
+        <com.huawei.ui.commonui.recycleview.HealthRecycleView
+            id="@+id/my_course"
+            scrollbars="0x0"
+            layout_width="-1"
+            layout_height="-1"
+            drawSelectorOnTop="true"
+            divider="@null"
+            dividerHeight="@dimen/_2131362907_res_0x7f0a045b"
+            overScrollMode="2"/>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

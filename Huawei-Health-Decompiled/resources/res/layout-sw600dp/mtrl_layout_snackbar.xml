@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_gravity="0x51"
+    layout_width="-2"
+    layout_height="-2"
+    class="com.google.android.material.snackbar.Snackbar$SnackbarLayout"
+    style="?attr/_2131101547_res_0x7f06076b"/>

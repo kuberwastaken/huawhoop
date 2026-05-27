@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="IDS_permission_description_contacts">This is used to add and sync contacts, as well as set emergency contacts for wearables and groups.</string>
+    <string name="IDS_details_sleep_content_4">Understanding the science behind sleep, analyzing and finding poor sleeping habits and addressing the various factors that negatively impact sleep, and making timely adjustments can improve sleep quality. Huawei/Honor wearable devices scientifically assess your sleep quality and give you suggestions according to a methodology recognized by the Center for Dynamical Biomarkers (DBIOM) at BIDMC, a major teaching hospital of Harvard Medical School.</string>
+</resources>

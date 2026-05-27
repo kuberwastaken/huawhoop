@@ -1,0 +1,36 @@
+{
+  "1": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "alert_server_action",
+        "type": "number8"
+      }
+    ]
+  },
+  "2": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "alert_action",
+        "type": "number8"
+      }
+    ]
+  },
+  "3": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "measurementEnable",
+        "type": "number8"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "responseCode",
+        "type": "number32"
+      }
+    ]
+  }
+}

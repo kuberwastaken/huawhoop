@@ -1,0 +1,27 @@
+{
+  "9": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "stress_monitoring_enable",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "stress_monitoring_number",
+        "type": "number8"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "stress_monitoring_feature",
+        "type": "array",
+        "elemType": "number32"
+      },
+      {
+        "tag": 4,
+        "jsonKey": "stress_monitoring_time",
+        "type": "number32"
+      }
+    ]
+  }
+}

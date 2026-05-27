@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    gravity="0x11"
+    background="@color/_2131296979_res_0x7f0902d3"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/qrcode_scanning_title_bar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x11="2"
+        NOT_FOUND_0x12="@string/IDS_device_mgr_device_pair_guide_note"/>
+    <RelativeLayout
+        id="@+id/qrcode_scanning_scheme_view_layout"
+        visibility="0"
+        layout_width="-1"
+        layout_height="-1"
+        layout_below="@+id/qrcode_scanning_title_bar">
+        <ImageView
+            id="@+id/qrcode_scanning_scheme_view_img"
+            background="@drawable/_2131430702_res_0x7f0b0d2e"
+            layout_width="-1"
+            layout_height="@dimen/_2131363666_res_0x7f0a0752"
+            layout_alignParentTop="true"/>
+    </RelativeLayout>
+    <com.huawei.ui.commonui.button.HealthButton
+        textSize="@dimen/_2131363881_res_0x7f0a0829"
+        gravity="0x11"
+        id="@+id/qrcode_scanning_scheme_bind_btn"
+        layout_width="@dimen/_2131365181_res_0x7f0a0d3d"
+        layout_height="@dimen/_2131365642_res_0x7f0a0f0a"
+        layout_marginBottom="@dimen/_2131365642_res_0x7f0a0f0a"
+        text="@string/IDS_device_wifi_scheme_share_scale_bind"
+        singleLine="true"
+        layout_alignParentBottom="true"
+        layout_centerHorizontal="true"
+        fontFamily="HwChinese-medium"
+        paddingStart="@dimen/_2131363739_res_0x7f0a079b"
+        paddingEnd="@dimen/_2131363739_res_0x7f0a079b"
+        style="@style/health_button_style"/>
+</RelativeLayout>

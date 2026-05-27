@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    background="@color/_2131296700_res_0x7f0901bc"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.columnlayout.HealthColumnRelativeLayout
+        id="@+id/rate_control_loading"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-1">
+        <com.huawei.ui.commonui.progressbar.HealthProgressBar
+            id="@+id/loading_progress"
+            layout_width="-1"
+            layout_height="-2"
+            layout_above="@+id/loading_tv"
+            style="@style/hw_health_progressbar_style_large"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+            textColor="@color/_2131299850_res_0x7f090e0a"
+            gravity="0x11"
+            id="@+id/loading_tv"
+            layout_width="-1"
+            layout_height="-2"
+            layout_marginTop="@dimen/_2131363172_res_0x7f0a0564"
+            layout_marginBottom="@dimen/_2131362962_res_0x7f0a0492"
+            text="@string/_2130845426_res_0x7f021ef2"
+            layout_centerInParent="true"
+            lineSpacingMultiplier="1.2"/>
+    </com.huawei.ui.commonui.columnlayout.HealthColumnRelativeLayout>
+    <include layout="@layout/item_rope_performance_no_data"/>
+    <com.huawei.ui.commonui.recycleview.HealthRecycleView
+        id="@+id/rate_control_recycle_view"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginBottom="@dimen/_2131362962_res_0x7f0a0492"
+        divider="@null"
+        layout_marginStart="@dimen/_2131362934_res_0x7f0a0476"
+        layout_marginEnd="@dimen/_2131362934_res_0x7f0a0476"/>
+</RelativeLayout>

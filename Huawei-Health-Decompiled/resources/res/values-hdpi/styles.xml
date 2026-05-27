@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Widget.AppCompat.DrawerArrowToggle" parent="@style/Base.Widget.AppCompat.DrawerArrowToggle.Common">
+        <item name="_2131099781_res_0x7f060085">18.66dp</item>
+        <item name="_2131100129_res_0x7f0601e1">24dp</item>
+        <item name="_2131100287_res_0x7f06027f">3.33dp</item>
+    </style>
+</resources>

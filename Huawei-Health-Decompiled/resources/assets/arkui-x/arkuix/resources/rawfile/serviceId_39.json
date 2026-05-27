@@ -1,0 +1,569 @@
+{
+  "1": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "maxFirmware",
+        "type": "empty"
+      }, {
+        "tag": 2,
+        "jsonKey": "screenWidth",
+        "type": "empty"
+      }, {
+        "tag": 3,
+        "jsonKey": "screenHeight",
+        "type": "empty"
+      }, {
+        "tag": 4,
+        "jsonKey": "supportFileType",
+        "type": "empty"
+      }, {
+        "tag": 5,
+        "jsonKey": "supportSort",
+        "type": "empty"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "maxFirmware",
+        "type": "array",
+        "elemType": "number8"
+      }, {
+        "tag": 2,
+        "jsonKey": "screenWidth",
+        "type": "number"
+      }, {
+        "tag": 3,
+        "jsonKey": "screenHeight",
+        "type": "number"
+      }, {
+        "tag": 4,
+        "jsonKey": "supportFileType",
+        "type": "number"
+      }, {
+        "tag": 5,
+        "jsonKey": "supportSort",
+        "type": "number"
+      }, {
+        "tag": 6,
+        "jsonKey": "supportEarlyFirmwareVersion",
+        "type": "array",
+        "allowEmpty": true,
+        "elemType": "number8"
+      }, {
+        "tag": 17,
+        "jsonKey": "supportCapability",
+        "allowEmpty": true,
+        "type": "number"
+      }, {
+        "tag": 18,
+        "jsonKey": "powerLevel",
+        "allowEmpty": true,
+        "type": "number"
+      }, {
+        "tag": 25,
+        "jsonKey": "supportOneTouch",
+        "allowEmpty": true,
+        "type": "number"
+      }, {
+        "tag": 26,
+        "jsonKey": "supportGaussColor",
+        "allowEmpty": true,
+        "type": "number"
+      }, {
+        "tag": 27,
+        "jsonKey": "supportAestheticAlbumColor",
+        "allowEmpty": true,
+        "type": "number"
+      }
+    ]
+  },
+  "2": {
+    "encode": [
+      {
+        "tag": 6,
+        "jsonKey": "serverMode",
+        "type": "number8"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "watchFaceList",
+        "type": "array",
+        "elemType": "object",
+        "elemTag": 2,
+        "rule": [
+          {
+            "tag": 3,
+            "jsonKey": "watchFaceId",
+            "type": "array",
+            "elemType": "number8"
+          }, {
+            "tag": 4,
+            "jsonKey": "watchFaceVersion",
+            "type": "array",
+            "elemType": "number8"
+          }, {
+            "tag": 5,
+            "jsonKey": "watchFaceType",
+            "type": "number8"
+          }, {
+            "tag": 7,
+            "jsonKey": "watchfaceExpandType",
+            "type": "number8",
+            "allowEmpty": true
+          }, {
+            "tag": 8,
+            "jsonKey": "isWatchfaceFull",
+            "type": "number8",
+            "allowEmpty": true
+          }, {
+            "tag": 9,
+            "jsonKey": "remainingStorageSpace",
+            "type": "number8",
+            "allowEmpty": true
+          }
+        ]
+      }
+    ]
+  },
+  "8": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "maxBackgroundImages",
+        "type": "empty"
+      }, {
+        "tag": 2,
+        "jsonKey": "canIntellectColor",
+        "type": "empty"
+      }, {
+        "tag": 3,
+        "jsonKey": "backgroundImageType",
+        "type": "empty"
+      }, {
+        "tag": 4,
+        "jsonKey": "backgroundList",
+        "type": "empty"
+      }, {
+        "tag": 8,
+        "jsonKey": "positionIndex",
+        "type": "empty"
+      }, {
+        "tag": 9,
+        "jsonKey": "styleIndex",
+        "type": "empty"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "maxBackgroundImages",
+        "type": "number8"
+      }, {
+        "tag": 2,
+        "jsonKey": "canIntellectColor",
+        "type": "number8"
+      }, {
+        "tag": 3,
+        "jsonKey": "backgroundImageType",
+        "type": "number8"
+      }, {
+        "tag": 4,
+        "jsonKey": "backgroundList",
+        "type": "array",
+        "allowEmpty": true,
+        "elemType": "object",
+        "elemTag": 5,
+        "rule": [
+          {
+            "tag": 6,
+            "jsonKey": "backgroundIndex",
+            "type": "number8",
+            "optional": true
+          }, {
+            "tag": 7,
+            "jsonKey": "backgroundName",
+            "type": "string",
+            "optional": true
+          }, {
+            "tag": 12,
+            "jsonKey": "portPositionIndex",
+            "type": "number8",
+            "optional": true
+          }, {
+            "tag": 13,
+            "jsonKey": "portraitMode",
+            "type": "number8",
+            "optional": true
+          }, {
+            "tag": 14,
+            "jsonKey": "timeStyleIndex",
+            "type": "number8",
+            "optional": true
+          }, {
+            "tag": 15,
+            "jsonKey": "timeColor",
+            "type": "string",
+            "optional": true
+          }, {
+            "tag": 16,
+            "jsonKey": "backgroundColor",
+            "type": "string",
+            "optional": true
+          }, {
+            "tag": 24,
+            "jsonKey": "smartTimeIndex",
+            "type": "number8",
+            "optional": true
+          }, {
+            "tag": 25,
+            "jsonKey": "smartFontIndex",
+            "type": "number8",
+            "optional": true
+          }, {
+            "tag": 26,
+            "jsonKey": "smartPosIndex",
+            "type": "number8",
+            "optional": true
+          }, {
+            "tag": 27,
+            "jsonKey": "gaussColorSaturation",
+            "type": "number8",
+            "optional": true
+          }, {
+            "tag": 28,
+            "jsonKey": "gaussColorBrightness",
+            "type": "number8",
+            "optional": true
+          }, {
+            "tag": 29,
+            "jsonKey": "gaussBlurRadius",
+            "type": "number8",
+            "optional": true
+          }, {
+            "tag": 30,
+            "jsonKey": "fontOpa",
+            "type": "number8",
+            "optional": true
+          }
+        ]
+      }, {
+        "tag": 8,
+        "jsonKey": "positionIndex",
+        "type": "number8"
+      }, {
+        "tag": 9,
+        "jsonKey": "styleIndex",
+        "type": "number8"
+      }, {
+        "tag": 10,
+        "jsonKey": "valueTypeIndex",
+        "type": "number8"
+      }, {
+        "tag": 11,
+        "jsonKey": "backgroundImageOption",
+        "allowEmpty": true,
+        "type": "number8"
+      }, {
+        "tag": 17,
+        "jsonKey": "wristSwitch",
+        "type": "number8",
+        "allowEmpty": true,
+        "optional": true
+      }, {
+        "tag": 18,
+        "jsonKey": "styleApplyAll",
+        "type": "number8",
+        "allowEmpty": true,
+        "optional": true
+      }, {
+        "tag": 19,
+        "jsonKey": "dataList",
+        "type": "array",
+        "optional": true,
+        "allowEmpty": true,
+        "elemType": "object",
+        "elemTag": 20,
+        "rule": [
+          {
+            "tag": 21,
+            "jsonKey": "containerIndex",
+            "type": "number8"
+          },{
+            "tag": 22,
+            "jsonKey": "optionIndex",
+            "type": "number8"
+          },{
+            "tag": 23,
+            "jsonKey": "carouselMode",
+            "type": "number8"
+          }
+        ]
+      }, {
+        "tag": 23,
+        "jsonKey": "carouselMode",
+        "type": "number8",
+        "allowEmpty": true,
+        "optional": true
+      }, {
+        "tag": 31,
+        "jsonKey": "optionSelectedList",
+        "type": "array",
+        "elemType": "object",
+        "elemTag": 32,
+        "optional": true,
+        "allowEmpty": true,
+        "rule": [
+          {
+            "tag": 33,
+            "jsonKey": "optionIdx",
+            "type": "number8"
+          }
+        ]
+      }, {
+        "tag": 34,
+        "jsonKey": "albumTypeList",
+        "type": "array",
+        "elemType": "object",
+        "elemTag": 35,
+        "optional": true,
+        "allowEmpty": true,
+        "rule": [
+          {
+            "tag": 36,
+            "jsonKey": "modeType",
+            "type": "number8"
+          }, {
+            "tag": 37,
+            "jsonKey": "videoName",
+            "type": "array",
+            "elemType": "number8",
+            "optional": true,
+            "allowEmpty": true
+          }, {
+            "tag": 38,
+            "jsonKey": "depthEffectName",
+            "type": "array",
+            "elemType": "number8",
+            "optional": true,
+            "allowEmpty": true
+          }
+        ]
+      }
+    ]
+  },
+  "9": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "backgroundImageNum",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "backgroundList",
+        "type": "array",
+        "elemType": "object",
+        "elemTag": 3,
+        "rule": [
+          {
+            "tag": 4,
+            "jsonKey": "backgroundIndex",
+            "type": "number8"
+          },
+          {
+            "tag": 5,
+            "jsonKey": "backgroundName",
+            "type": "string"
+          }, {
+            "tag": 10,
+            "jsonKey": "portPositionIndex",
+            "type": "number8",
+            "optional": true
+          }, {
+            "tag": 11,
+            "jsonKey": "portraitMode",
+            "type": "number8",
+            "optional": true
+          }, {
+            "tag": 12,
+            "jsonKey": "timeStyleIndex",
+            "type": "number8",
+            "optional": true
+          }, {
+            "tag": 13,
+            "jsonKey": "timeColor",
+            "type": "string",
+            "optional": true
+          }, {
+            "tag": 14,
+            "jsonKey": "backgroundColor",
+            "type": "string",
+            "optional": true
+          }, {
+            "tag": 21,
+            "jsonKey": "smartTimeIndex",
+            "type": "number8",
+            "optional": true
+          }, {
+            "tag": 22,
+            "jsonKey": "smartFontIndex",
+            "type": "number8",
+            "optional": true
+          }, {
+            "tag": 23,
+            "jsonKey": "smartPosIndex",
+            "type": "number8",
+            "optional": true
+          }, {
+            "tag": 24,
+            "jsonKey": "gaussColorSaturation",
+            "type": "number8",
+            "optional": true
+          }, {
+            "tag": 25,
+            "jsonKey": "gaussColorBrightness",
+            "type": "number8",
+            "optional": true
+          }, {
+            "tag": 26,
+            "jsonKey": "gaussBlurRadius",
+            "type": "number8",
+            "optional": true
+          }, {
+            "tag": 27,
+            "jsonKey": "fontOpa",
+            "type": "number8",
+            "optional": true
+          }
+        ]
+      },
+      {
+        "tag": 6,
+        "jsonKey": "positionIndex",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 7,
+        "jsonKey": "styleIndex",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 8,
+        "jsonKey": "transferNum",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 9,
+        "jsonKey": "valueTypeIndex",
+        "type": "number8",
+        "optional": true
+      }, {
+        "tag": 17,
+        "jsonKey": "dataList",
+        "type": "array",
+        "elemType": "object",
+        "elemTag": 18,
+        "optional": true,
+        "rule": [
+          {
+            "tag": 19,
+            "jsonKey": "containerIndex",
+            "type": "number8"
+          },{
+            "tag": 20,
+            "jsonKey": "optionIndex",
+            "type": "number8"
+          }
+        ]
+      }, {
+        "tag": 15,
+        "jsonKey": "wristSwitch",
+        "type": "number8",
+        "optional": true
+      }, {
+        "tag": 16,
+        "jsonKey": "styleApplyAll",
+        "type": "number8",
+        "optional": true
+      }, {
+        "tag": 28,
+        "jsonKey": "isUseGaussColor",
+        "type": "number8",
+        "optional": true
+      }, {
+        "tag": 29,
+        "jsonKey": "optionSelectedList",
+        "type": "array",
+        "elemType": "object",
+        "elemTag": 30,
+        "optional": true,
+        "rule": [
+          {
+            "tag": 31,
+            "jsonKey": "optionIdx",
+            "type": "number8"
+          }
+        ]
+      }, {
+        "tag": 32,
+        "jsonKey": "albumTypeList",
+        "type": "array",
+        "elemType": "object",
+        "elemTag": 33,
+        "optional": true,
+        "allowEmpty": true,
+        "rule": [
+          {
+            "tag": 34,
+            "jsonKey": "modeType",
+            "type": "number8"
+          }, {
+            "tag": 35,
+            "jsonKey": "videoName",
+            "type": "array",
+            "elemType": "number8",
+            "optional": true,
+            "allowEmpty": true
+          }, {
+            "tag": 36,
+            "jsonKey": "depthEffectName",
+            "type": "array",
+            "elemType": "number8",
+            "optional": true,
+            "allowEmpty": true
+          }
+        ]
+      }
+    ],
+    "decode": [
+      {
+        "tag": 8,
+        "jsonKey": "transferNum",
+        "type": "number8"
+      }
+    ]
+  },
+  "13": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "mode",
+        "type": "number8"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "mode",
+        "type": "number8"
+      }
+    ]
+  }
+}

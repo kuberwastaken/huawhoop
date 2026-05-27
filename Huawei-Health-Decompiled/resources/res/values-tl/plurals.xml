@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">Hanggang sa %1$d tagatukoy ang maaaring ipakita sa isang graph.</item>
+        <item quantity="other">Hanggang sa %1$d (na) tagatukoy ang maaaring ipakita sa isang graph.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">Inaasahang bababa sa %2$s mmol/L ang glucose sa dugo mo sa loob ng %1$s min. Pakisubaybayan nang mabuti ang antas ng glucose mo.</item>
+        <item quantity="other">Inaasahang bababa sa %2$s mmol/L ang glucose sa dugo mo sa loob ng %1$s (na) min. Pakisubaybayan nang mabuti ang antas ng glucose mo.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">Inaasahang bababa sa %2$s mg/dL ang glucose sa dugo mo sa loob ng %1$s min. Pakisubaybayan nang mabuti ang antas ng glucose mo.</item>
+        <item quantity="other">Inaasahang bababa sa %2$s mg/dL ang glucose sa dugo mo sa loob ng %1$s (na) min. Pakisubaybayan nang mabuti ang antas ng glucose mo.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d hakbang</item>
+        <item quantity="other">%d hakbang</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s mi</item>
+        <item quantity="other">%s (na) mi</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s km</item>
+        <item quantity="other">%s (na) km</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">%1$s hakbang ang layo</item>
+        <item quantity="other">%1$s (na) hakbang ang layo</item>
+    </plurals>
+</resources>

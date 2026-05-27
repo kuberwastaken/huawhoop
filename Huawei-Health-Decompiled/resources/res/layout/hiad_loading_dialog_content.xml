@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    paddingLeft="@dimen/_2131363333_res_0x7f0a0605"
+    paddingRight="@dimen/_2131363333_res_0x7f0a0605"
+    layout_width="-1"
+    layout_height="-1">
+    <TextView
+        textSize="@dimen/_2131363446_res_0x7f0a0676"
+        id="@+id/hiad_loading_dialog_content_tv"
+        layout_width="-1"
+        layout_height="-2"
+        text="@string/_2130852284_res_0x7f0239bc"
+        maxLines="2"
+        layout_centerInParent="true"
+        layout_alignParentStart="true"/>
+    <android.widget.ProgressBar
+        id="@+id/loading_progress"
+        layout_width="-2"
+        layout_height="@dimen/_2131363358_res_0x7f0a061e"
+        layout_centerInParent="true"
+        layout_alignParentEnd="true"/>
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365482_res_0x7f0a0e6a"
+        textColor="@color/_2131299845_res_0x7f090e05"
+        layout_gravity="0x1"
+        id="@+id/pay_error_text"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131363021_res_0x7f0a04cd"
+        text="@string/_2130845129_res_0x7f021dc9"
+        fontFamily="@string/_2130851948_res_0x7f02386c"
+        layout_marginStart="@dimen/_2131362500_res_0x7f0a02c4"
+        layout_marginEnd="@dimen/_2131362500_res_0x7f0a02c4"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365482_res_0x7f0a0e6a"
+        textColor="@color/emui_accent"
+        layout_gravity="0x1"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131363021_res_0x7f0a04cd"
+        layout_marginBottom="@dimen/_2131363021_res_0x7f0a04cd"
+        text="@string/_2130844005_res_0x7f021965"
+        fontFamily="@string/_2130851948_res_0x7f02386c"
+        layout_marginStart="@dimen/_2131362500_res_0x7f0a02c4"
+        layout_marginEnd="@dimen/_2131362500_res_0x7f0a02c4"/>
+</LinearLayout>

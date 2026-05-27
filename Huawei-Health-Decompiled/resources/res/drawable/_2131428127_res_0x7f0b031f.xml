@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners radius="@dimen/_2131365207_res_0x7f0a0d57"/>
+    <padding
+        left="@dimen/_2131363196_res_0x7f0a057c"
+        top="@dimen/_2131363196_res_0x7f0a057c"
+        right="@dimen/_2131363196_res_0x7f0a057c"
+        bottom="@dimen/_2131363196_res_0x7f0a057c"/>
+    <stroke
+        width="@dimen/_2131363200_res_0x7f0a0580"
+        color="@color/_2131297891_res_0x7f090663"/>
+</shape>

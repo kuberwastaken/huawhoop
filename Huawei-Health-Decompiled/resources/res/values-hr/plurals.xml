@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">Do najviše %1$d pokazatelj prikazuje se na jednom grafikonu.</item>
+        <item quantity="few">Do najviše %1$d pokazatelja prikazuje se na jednom grafikonu.</item>
+        <item quantity="other">Do najviše %1$d pokazatelja prikazuje se na jednom grafikonu.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">Očekuje se pad razine glukoze u krvi ispod %2$s mmol/L za %1$s min. Pozorno pratite razinu glukoze u krvi.</item>
+        <item quantity="few">Očekuje se pad razine glukoze u krvi ispod %2$s mmol/L za %1$s min. Pozorno pratite razinu glukoze u krvi.</item>
+        <item quantity="other">Očekuje se pad razine glukoze u krvi ispod %2$s mmol/L za %1$s min. Pozorno pratite razinu glukoze u krvi.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">Očekuje se pad razine glukoze u krvi ispod %2$s mg/dL za %1$s min. Pozorno pratite razinu glukoze u krvi.</item>
+        <item quantity="few">Očekuje se pad razine glukoze u krvi ispod %2$s mg/dL za %1$s min. Pozorno pratite razinu glukoze u krvi.</item>
+        <item quantity="other">Očekuje se pad razine glukoze u krvi ispod %2$s mg/dL za %1$s min. Pozorno pratite razinu glukoze u krvi.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d korak</item>
+        <item quantity="few">%d koraka</item>
+        <item quantity="other">%d koraka</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s mi</item>
+        <item quantity="few">%s mi</item>
+        <item quantity="other">%s mi</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s km</item>
+        <item quantity="few">%s km</item>
+        <item quantity="other">%s km</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">Nedostaje vam %1$s korak</item>
+        <item quantity="few">Nedostaju vam %1$s koraka</item>
+        <item quantity="other">Nedostaje vam %1$s koraka</item>
+    </plurals>
+</resources>

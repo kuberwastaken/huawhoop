@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.uikit.phone.hwprogressbar.widget.HwProgressBar
+        layout_width="72dp"
+        layout_height="72dp"
+        layout_centerInParent="true"/>
+</RelativeLayout>

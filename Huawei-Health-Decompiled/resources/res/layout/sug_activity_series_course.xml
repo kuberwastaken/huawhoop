@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    id="@+id/series_course"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar xmlns:setting="http://schemas.android.com/apk/res-auto"
+        id="@+id/sug_series_course_title"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x9="2"
+        NOT_FOUND_0xa="@string/_2130849662_res_0x7f022f7e"/>
+    <com.huawei.health.suggestion.ui.view.PullRecyclerViewGroup
+        layout_width="-1"
+        layout_height="-1">
+        <com.huawei.ui.commonui.recycleview.HealthRecycleView
+            id="@+id/recyclerview_series_course"
+            layout_width="-1"
+            layout_height="-1"
+            layout_marginStart="@dimen/_2131362372_res_0x7f0a0244"
+            layout_marginEnd="@dimen/_2131362371_res_0x7f0a0243"/>
+    </com.huawei.health.suggestion.ui.view.PullRecyclerViewGroup>
+    <ImageView
+        id="@+id/blank_img"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-1"
+        src="@drawable/_2131427627_res_0x7f0b012b"
+        scaleType="1"/>
+</LinearLayout>

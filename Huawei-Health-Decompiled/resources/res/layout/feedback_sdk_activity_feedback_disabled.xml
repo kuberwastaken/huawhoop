@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    background="@color/faq_emui_white_bg"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.phoneservice.feedback.widget.FeedbackNoticeView
+        id="@+id/feedback_disabled_noticeView"
+        visibility="0"
+        layout_width="-1"
+        layout_height="-1"
+        NOT_FOUND_0x5="true"
+        NOT_FOUND_0x6="1"/>
+</RelativeLayout>

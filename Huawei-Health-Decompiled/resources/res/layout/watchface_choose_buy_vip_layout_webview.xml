@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_gravity="0x50"
+    id="@+id/service_item_layout"
+    background="@color/_2131299926_res_0x7f090e56"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.secure.android.common.webview.SafeWebView
+        id="@+id/web_view"
+        background="@color/_2131296333_res_0x7f09004d"
+        layout_width="-1"
+        layout_height="-1"/>
+</LinearLayout>

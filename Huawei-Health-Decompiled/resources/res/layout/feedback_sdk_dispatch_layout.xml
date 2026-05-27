@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="-1">
+    <FrameLayout
+        layout_width="-1"
+        layout_height="-1"/>
+    <WebView
+        id="@+id/feedback_dispatch_web_view"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-1"/>
+    <ProgressBar
+        id="@+id/fbsdkProgressbar"
+        visibility="2"
+        layout_width="-1"
+        layout_height="2dp"
+        progress="0"
+        style="?android:attr/progressBarStyleHorizontal"/>
+    <com.huawei.phoneservice.feedback.widget.FeedbackNoticeView
+        id="@+id/feedback_dispatch_noticeView"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-1"
+        NOT_FOUND_0x5="true"
+        NOT_FOUND_0x6="1"/>
+</FrameLayout>

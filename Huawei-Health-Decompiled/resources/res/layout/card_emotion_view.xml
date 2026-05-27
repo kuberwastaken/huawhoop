@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <ViewStub
+        id="@+id/barchart"
+        layout="@layout/card_stress_chart"
+        layout_width="-1"
+        layout_height="-1"/>
+    <ViewStub
+        id="@+id/emotion_chart"
+        layout="@layout/card_emotion_chart"
+        layout_width="-1"
+        layout_height="-1"
+        layout_marginTop="@dimen/_2131362916_res_0x7f0a0464"
+        layout_marginBottom="@dimen/_2131363051_res_0x7f0a04eb"/>
+</LinearLayout>

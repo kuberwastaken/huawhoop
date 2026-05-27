@@ -1,0 +1,14 @@
+package com.huawei.hms.opendevice;
+
+import com.huawei.secure.android.common.encrypt.utils.HexUtil;
+
+/* JADX INFO: loaded from: classes5.dex */
+public abstract class d {
+    public static String a(byte[] bArr) {
+        return HexUtil.byteArray2HexStr(bArr);
+    }
+
+    public static byte[] a(String str) {
+        return HexUtil.hexStr2ByteArray(str);
+    }
+}

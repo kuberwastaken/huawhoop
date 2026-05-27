@@ -1,0 +1,396 @@
+{
+  "version": "1.0.15",
+  "configId": "functionSetCardConfig",
+  "updateConfigs": [
+  ],
+  "cardConfigList": [
+    {
+      "cardId": "SPORTS_CARD_KEY_NEW",
+      "cardName": "SPORT_CARD",
+      "cardNameRes": "IDS_motiontrack_my_health_data",
+      "desc": "运动记录",
+      "group": "SPORT",
+      "deviceCapability": [
+      ],
+      "dataTypes": [
+      ],
+      "isSupportOversea": true,
+      "appVersionType": 0,
+      "showFlag": 0,
+      "noDataDescRes": "IDS_hw_show_main_home_page_sports_description",
+      "defaultMarketingDescRes": "IDS_default_description_sport_record",
+      "noDataBgRes": "home_functionset_sports_card_background",
+      "defaultBgRes": "colorCardBg",
+      "defaultMarketingImageRes": "marketing_default_img_sport_record",
+      "cardIconRes": "",
+      "defaultOrder": 0,
+      "biKey": "2010015",
+      "cardConstructorCls": "com.huawei.ui.homehealth.functionsetcard.manager.constructor.SportRecordCardConstructor",
+      "extendConfig": []
+    },
+    {
+      "cardId": "HEARTRATE_CARD_KAY_NEW",
+      "cardName": "HEARTRATE_CARD",
+      "cardNameRes": "IDS_main_heart_health_string",
+      "desc": "心脏健康",
+      "group": "HEALTH",
+      "deviceCapability": [
+      ],
+      "dataTypes": [
+        46019,
+        2002
+      ],
+      "isSupportOversea": true,
+      "appVersionType": 0,
+      "showFlag": 0,
+      "noDataDescRes": "IDS_hw_health_show_healthdata_heart_description",
+      "defaultMarketingDescRes": "IDS_default_description_heart_rate",
+      "noDataBgRes": "home_rate_card_background",
+      "defaultBgRes": "colorCardBg",
+      "defaultMarketingImageRes": "marketing_default_img_heartrate",
+      "cardIconRes": "",
+      "defaultOrder": 0,
+      "biKey": "2010029",
+      "cardConstructorCls": "com.huawei.ui.homehealth.functionsetcard.manager.constructor.HeartRateConstructor",
+      "extendConfig": []
+    },
+    {
+      "cardId": "SLEEP_CARD_KEY_NEW",
+      "cardName": "SLEEP_CARD",
+      "cardNameRes": "IDS_hw_show_main_home_page_sleep",
+      "desc": "睡眠",
+      "group": "HEALTH",
+      "deviceCapability": [
+      ],
+      "dataTypes": [
+        44102,
+        44103,
+        44101,
+        44105,
+        44001,
+        44002,
+        44108,
+        44104
+      ],
+      "isSupportOversea": true,
+      "appVersionType": 0,
+      "showFlag": 0,
+      "noDataDescRes": "IDS_hw_show_main_home_page_sleep_description",
+      "defaultMarketingDescRes": "IDS_function_set_card_des_sleep",
+      "noDataBgRes": "home_sleep_card_background",
+      "defaultBgRes": "colorCardBg",
+      "defaultMarketingImageRes": "marketing_default_img_sleep",
+      "cardIconRes": "",
+      "defaultOrder": 3,
+      "biKey": "2010011",
+      "cardConstructorCls": "com.huawei.ui.homehealth.functionsetcard.manager.constructor.SleepCardConstructor",
+      "extendConfig": []
+    },
+    {
+      "cardId": "WEIGHT_CARD_KEY_NEW",
+      "cardName": "WEIGHT_CARD",
+      "cardNameRes": "IDS_health_weight_manager",
+      "desc": "体重",
+      "group": "HEALTH",
+      "deviceCapability": [
+      ],
+      "dataTypes": [
+        10006
+      ],
+      "isSupportOversea": true,
+      "appVersionType": 0,
+      "showFlag": 0,
+      "noDataDescRes": "IDS_hw_show_main_home_page_weight_description",
+      "defaultMarketingDescRes": "IDS_default_description_weight",
+      "noDataBgRes": "home_weight_card_background",
+      "defaultBgRes": "colorCardBg",
+      "defaultMarketingImageRes": "marketing_default_img_weight",
+      "cardIconRes": "",
+      "defaultOrder": 0,
+      "biKey": "2010023",
+      "cardConstructorCls": "com.huawei.ui.homehealth.functionsetcard.manager.constructor.WeightCardConstructor",
+      "extendConfig": []
+    },
+    {
+      "cardId": "STRESS_CARD_KEY_NEW",
+      "cardName": "STRESS_CARD",
+      "cardNameRes": "IDS_settings_one_level_menu_settings_item_text_id14",
+      "desc": "压力",
+      "group": "HEALTH",
+      "deviceCapability": [
+      ],
+      "dataTypes": [
+        44307,
+        2034
+      ],
+      "isSupportOversea": true,
+      "appVersionType": 0,
+      "showFlag": 0,
+      "noDataDescRes": "IDS_hw_show_main_home_page_card_stress",
+      "defaultMarketingDescRes": "IDS_default_description_pressure",
+      "noDataBgRes": "home_pressure_card_background",
+      "defaultBgRes": "colorCardBg",
+      "defaultMarketingImageRes": "marketing_default_img_pressure",
+      "cardIconRes": "",
+      "defaultOrder": 0,
+      "biKey": "2160001",
+      "cardConstructorCls": "com.huawei.ui.homehealth.functionsetcard.manager.constructor.StressCardConstructor",
+      "extendConfig": []
+    },
+    {
+      "cardId": "BLOODOXYGEN_CARD_KEY_NEW",
+      "cardName": "BLOOD_OXYGEN_CARD",
+      "cardNameRes": "IDS_hw_health_blood_oxygen",
+      "desc": "血氧",
+      "group": "HEALTH",
+      "deviceCapability": [
+      ],
+      "dataTypes": [
+        47204
+      ],
+      "isSupportOversea": true,
+      "appVersionType": 0,
+      "showFlag": 0,
+      "noDataDescRes": "IDS_hw_health_blood_oxygen_description",
+      "defaultMarketingDescRes": "IDS_default_description_blood_oxygen",
+      "noDataBgRes": "ic_home_card_blood_oxygen_background",
+      "defaultBgRes": "colorCardBg",
+      "defaultMarketingImageRes": "marketing_default_img_bloodoxygen",
+      "cardIconRes": "",
+      "defaultOrder": 0,
+      "biKey": "2010099",
+      "cardConstructorCls": "com.huawei.ui.homehealth.functionsetcard.manager.constructor.BloodOxygenCardConstructor",
+      "extendConfig": []
+    },
+    {
+      "cardId": "BLOODSUGAR_CARD_KEY_NEW",
+      "cardName": "BLOOD_SUGAR_CARD",
+      "cardNameRes": "IDS_hwh_home_bloodsg_service_suggest_title",
+      "desc": "血糖管理",
+      "group": "BLOOD_SUGAR",
+      "deviceCapability": [
+      ],
+      "dataTypes": [
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2108
+      ],
+      "isSupportOversea": false,
+      "appVersionType": 0,
+      "showFlag": 0,
+      "noDataDescRes": "IDS_hw_show_main_home_page_bloodsugar_description",
+      "defaultMarketingDescRes": "IDS_default_description_blood_sugar",
+      "noDataBgRes": "home_bloodsugar_card_background",
+      "defaultBgRes": "colorCardBg",
+      "defaultMarketingImageRes": "marketing_default_img_bloodsugar",
+      "cardIconRes": "",
+      "defaultOrder": 0,
+      "biKey": "2010027",
+      "cardConstructorCls": "com.huawei.ui.homehealth.functionsetcard.manager.constructor.BloodSugarRecordCardConstructor",
+      "extendConfig": []
+    },
+    {
+      "cardId": "BLOODPRESSURE_CARD_KEY_NEW",
+      "cardName": "BLOOD_PRESSURE_CARD",
+      "cardNameRes": "IDS_hw_show_main_home_page_bloodpressure",
+      "desc": "血压",
+      "group": "BLOOD_PRESSURE",
+      "deviceCapability": [
+      ],
+      "dataTypes": [
+        2006,
+        2007
+      ],
+      "isSupportOversea": true,
+      "appVersionType": 0,
+      "showFlag": 0,
+      "noDataDescRes": "IDS_hw_show_main_home_page_bloodpressure_description",
+      "defaultMarketingDescRes": "IDS_default_description_blood_pressure",
+      "noDataBgRes": "home_bloodpressure_card_background",
+      "defaultBgRes": "colorCardBg",
+      "defaultMarketingImageRes": "marketing_default_img_bloodpressure",
+      "cardIconRes": "",
+      "defaultOrder": 0,
+      "biKey": "2010025",
+      "cardConstructorCls": "com.huawei.ui.homehealth.functionsetcard.manager.constructor.BloodPressureRecordCardConstructor",
+      "extendConfig": []
+    },
+    {
+      "cardId": "TEMPERATURE_CARD_KEY_NEW",
+      "cardName": "TEMPERATURE_CARD",
+      "cardNameRes": "IDS_settings_health_temperature",
+      "desc": "体温",
+      "group": "TEMPERATURE",
+      "deviceCapability": [
+      ],
+      "dataTypes": [
+        2104,
+        400011975,
+        400012430
+      ],
+      "isSupportOversea": true,
+      "appVersionType": 0,
+      "showFlag": 0,
+      "noDataDescRes": "IDS_health_temperature_desc",
+      "defaultMarketingDescRes": "IDS_default_description_temperature",
+      "noDataBgRes": "home_temperature_card_background",
+      "defaultBgRes": "colorCardBg",
+      "defaultMarketingImageRes": "marketing_default_img_temperature",
+      "cardIconRes": "",
+      "defaultOrder": 0,
+      "biKey": "",
+      "cardConstructorCls": "com.huawei.ui.homehealth.functionsetcard.manager.constructor.BodyTemperatureCardConstructor",
+      "extendConfig": []
+    },
+    {
+      "cardId": "PHYSIOLOGICAL_CYCLE_CARD_KEY_NEW",
+      "cardName": "PHYSIOLOGICAL_CYCLE_CARD",
+      "cardNameRes": "IDS_physiological_cycle",
+      "desc": "生理周期",
+      "group": "HEALTH",
+      "deviceCapability": [
+      ],
+      "dataTypes": [],
+      "isSupportOversea": true,
+      "appVersionType": 0,
+      "showFlag": 0,
+      "noDataDescRes": "IDS_physiological_cycle_description",
+      "defaultMarketingDescRes": "IDS_default_description_cycle",
+      "noDataBgRes": "home_physiological_cycle_card_background",
+      "defaultBgRes": "home_physiological_cycle_card_background",
+      "defaultMarketingImageRes": "marketing_default_img_physiological_cycle",
+      "cardIconRes": "",
+      "defaultOrder": 0,
+      "biKey": "2010102",
+      "cardConstructorCls": "com.huawei.ui.homehealth.functionsetcard.manager.constructor.PhysiologicalCycleCardConstructor",
+      "extendConfig": []
+    },
+    {
+      "cardId": "HEALTH_MODEL_CARD_KEY_NEW",
+      "cardName": "HEALTH_MODEL_CARD",
+      "cardNameRes": "IDS_health_model_lifestyle",
+      "desc": "健康生活",
+      "group": "HEALTH",
+      "deviceCapability": [
+      ],
+      "dataTypes": [
+      ],
+      "isSupportOversea": true,
+      "appVersionType": 0,
+      "showFlag": 0,
+      "noDataDescRes": "IDS_health_model_home_card_description",
+      "defaultMarketingDescRes": "IDS_function_set_card_des_health_life",
+      "noDataBgRes": "home_health_model_card_new_background",
+      "defaultBgRes": "colorCardBg",
+      "defaultMarketingImageRes": "marketing_default_img_health_life",
+      "cardIconRes": "",
+      "defaultOrder": 0,
+      "biKey": "2119001",
+      "cardConstructorCls": "com.huawei.ui.homehealth.functionsetcard.manager.constructor.HealthModelCardConstructor",
+      "extendConfig": []
+    },
+    {
+      "cardId": "THREE_CIRCLE_CARD_KEY_NEW",
+      "cardName": "THREE_CIRCLE_CARD",
+      "cardNameRes": "IDS_three_circle_title",
+      "desc": "活力三环",
+      "group": "SPORT",
+      "deviceCapability": [
+      ],
+      "dataTypes": [
+      ],
+      "isSupportOversea": true,
+      "appVersionType": 0,
+      "showFlag": 0,
+      "noDataDescRes": "IDS_three_circle_subtitle",
+      "defaultMarketingDescRes": "IDS_three_circle_subtitle",
+      "noDataBgRes": "three_circle_default_img",
+      "defaultBgRes": "colorCardBg",
+      "defaultMarketingImageRes": "ic_three_circle",
+      "cardIconRes": "",
+      "defaultOrder": 0,
+      "biKey": "1040091",
+      "cardConstructorCls": "com.huawei.ui.homehealth.functionsetcard.manager.constructor.ThreeCircleCardConstructor",
+      "extendConfig": []
+    },
+    {
+      "cardId": "Health_Record_CARD_KEY_NEW",
+      "cardName": "Health_Record_CARD",
+      "cardNameRes": "IDS_health_record",
+      "desc": "健康档案",
+      "group": "HEALTH",
+      "deviceCapability": [
+      ],
+      "dataTypes": [
+      ],
+      "isSupportOversea": true,
+      "appVersionType": 0,
+      "showFlag": 2,
+      "noDataDescRes": "IDS_health_onekey_examination",
+      "defaultMarketingDescRes": "IDS_health_onekey_examination",
+      "noDataBgRes": "health_card_oversea",
+      "defaultBgRes": "colorCardBg",
+      "defaultMarketingImageRes": "health_card_default_img_small",
+      "cardIconRes": "",
+      "defaultOrder": 0,
+      "biKey": "",
+      "cardConstructorCls": "com.huawei.ui.homehealth.functionsetcard.manager.constructor.HealthRecordCardConstructor",
+      "extendConfig": []
+    }
+  ],
+  "cardShowGroups": [
+    {
+      "groupType": 1,
+      "cardIds": [
+        "SPORTS_CARD_KEY_NEW",
+        "HEALTH_MODEL_CARD_KEY_NEW",
+        "HEARTRATE_CARD_KAY_NEW",
+        "WEIGHT_CARD_KEY_NEW",
+        "SLEEP_CARD_KEY_NEW",
+        "Health_Record_CARD_KEY_NEW"
+      ]
+    },
+    {
+      "groupType": 2,
+      "cardIds": [
+        "SPORTS_CARD_KEY_NEW",
+        "HEALTH_MODEL_CARD_KEY_NEW",
+        "PHYSIOLOGICAL_CYCLE_CARD_KEY_NEW",
+        "WEIGHT_CARD_KEY_NEW",
+        "HEARTRATE_CARD_KAY_NEW",
+        "Health_Record_CARD_KEY_NEW"
+      ]
+    },
+    {
+      "groupType": 3,
+      "cardIds": [
+        "SPORTS_CARD_KEY_NEW",
+        "HEALTH_MODEL_CARD_KEY_NEW",
+        "Health_Record_CARD_KEY_NEW"
+      ]
+    },
+    {
+      "groupType": 4,
+      "cardIds": [
+        "SPORTS_CARD_KEY_NEW",
+        "HEALTH_MODEL_CARD_KEY_NEW",
+        "SLEEP_CARD_KEY_NEW",
+        "WEIGHT_CARD_KEY_NEW",
+        "HEARTRATE_CARD_KAY_NEW",
+        "PHYSIOLOGICAL_CYCLE_CARD_KEY_NEW",
+        "STRESS_CARD_KEY_NEW",
+        "BLOODPRESSURE_CARD_KEY_NEW",
+        "BLOODOXYGEN_CARD_KEY_NEW",
+        "BLOODSUGAR_CARD_KEY_NEW",
+        "TEMPERATURE_CARD_KEY_NEW",
+        "Health_Record_CARD_KEY_NEW"
+      ]
+    }
+  ]
+}

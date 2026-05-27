@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    drawable="@drawable/feedback_sdk_ic_progress"
+    fromDegrees="0"
+    toDegrees="720"
+    pivotX="50%"
+    pivotY="50%"/>

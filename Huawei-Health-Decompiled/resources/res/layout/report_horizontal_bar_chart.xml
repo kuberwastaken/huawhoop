@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="0"
+    id="@+id/item_horizontal_bar_view"
+    layout_width="-1"
+    layout_height="-1"
+    layout_marginBottom="10dp">
+    <LinearLayout
+        orientation="1"
+        layout_width="-2"
+        layout_height="-2">
+        <com.huawei.ui.commonui.reporthorizontalpercentageview.DottedPercentageView
+            id="@+id/report_weekly_distribution_percentage_view"
+            layout_width="78dp"
+            layout_height="10dp"
+            layout_marginEnd="@dimen/_2131362576_res_0x7f0a0310"
+            NOT_FOUND_0xb="#f5f6fa"
+            NOT_FOUND_0xc="#b1b8dc"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365489_res_0x7f0a0e71"
+            textColor="@color/_2131299853_res_0x7f090e0d"
+            layout_gravity="0x800003"
+            id="@+id/report_weekly_distribution_date"
+            layout_width="-2"
+            layout_height="-2"
+            fontFamily="@string/_2130852834_res_0x7f023be2"/>
+    </LinearLayout>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365484_res_0x7f0a0e6c"
+        textColor="@color/_2131299850_res_0x7f090e0a"
+        gravity="0x800033"
+        id="@+id/report_weekly_distribution_time"
+        layout_width="-1"
+        layout_height="-2"
+        fontFamily="@string/_2130852833_res_0x7f023be1"/>
+</LinearLayout>

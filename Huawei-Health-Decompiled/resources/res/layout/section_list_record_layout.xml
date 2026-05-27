@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    id="@+id/section_blood_pressure_rl"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/section_blood_pressure_sub_header"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xd="false"
+        NOT_FOUND_0xe="3"
+        NOT_FOUND_0xf="--"/>
+    <com.huawei.ui.commonui.cardview.HealthCardView
+        orientation="1"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131363112_res_0x7f0a0528"
+        layout_below="@+id/section_blood_pressure_sub_header"
+        layout_marginStart="@dimen/_2131362013_res_0x7f0a00dd"
+        layout_marginEnd="@dimen/_2131362011_res_0x7f0a00db">
+        <LinearLayout
+            orientation="1"
+            layout_width="-1"
+            layout_height="-2"
+            layout_marginTop="@dimen/_2131363112_res_0x7f0a0528">
+            <com.huawei.ui.commonui.recycleview.HealthRecycleView
+                id="@+id/abnormal_blood_pressure_recyclerview"
+                layout_width="-1"
+                layout_height="-2"/>
+            <com.huawei.ui.commonui.button.HealthButton
+                textSize="@dimen/_2131365482_res_0x7f0a0e6a"
+                textColor="@color/_2131296536_res_0x7f090118"
+                layout_gravity="0x1"
+                id="@+id/show_more_button"
+                layout_width="-2"
+                layout_height="-2"
+                layout_marginBottom="@dimen/_2131363112_res_0x7f0a0528"
+                fontFamily="@string/_2130852833_res_0x7f023be1"
+                style="@style/Health.CommonUI.HealthButton.Small.Borderless"/>
+        </LinearLayout>
+    </com.huawei.ui.commonui.cardview.HealthCardView>
+</RelativeLayout>

@@ -1,0 +1,54 @@
+[{
+  "requestKey": "queryWeightFirstData",
+  "moduleName": "healthengine",
+  "methodName": "queryData",
+  "isAsync": true,
+  "params": {
+    "from": "home_first",
+    "type": 10006,
+    "startTime": 0,
+    "endTime": "${TimeFunctions.getCurrentMilliSeconds()}",
+    "queryOption": {
+      "limit": 1,
+      "order": 0
+    },
+    "bundle": {
+      "metadata": "NULL"
+    }
+  }
+}, {
+  "requestKey": "queryWeightLastData",
+  "moduleName": "healthengine",
+  "methodName": "queryData",
+  "isAsync": true,
+  "params": {
+    "from": "home_last",
+    "type": 10006,
+    "startTime": 0,
+    "endTime": "${TimeFunctions.getCurrentMilliSeconds()}",
+    "queryOption": {
+      "limit": 2,
+      "order": 1
+    },
+    "bundle": {
+      "metadata": "NULL"
+    }
+  }
+}, {
+  "requestKey": "queryClaimingWeightData",
+  "moduleName": "healthengine",
+  "methodName": "queryData",
+  "isAsync": true,
+  "params": {
+    "from": "home_claiming",
+    "type": 10006,
+    "startTime": "${TimeFunctions.getMilliSecondsBeforeTime(0,7,D)}",
+    "endTime": "${TimeFunctions.getCurrentMilliSeconds()}",
+    "queryOption": {
+      "order": 1
+    },
+    "bundle": {
+      "metadata": "-1"
+    }
+  }
+}]

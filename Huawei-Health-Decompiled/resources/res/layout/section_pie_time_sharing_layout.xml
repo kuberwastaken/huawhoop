@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <LinearLayout
+        layout_width="-1"
+        layout_height="@dimen/_2131363109_res_0x7f0a0525">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365482_res_0x7f0a0e6a"
+            textColor="@color/_2131299845_res_0x7f090e05"
+            layout_gravity="0x800013"
+            id="@+id/time_sharing_sub_header"
+            layout_width="-1"
+            layout_height="-2"
+            fontFamily="@string/_2130852834_res_0x7f023be2"
+            layout_marginStart="@dimen/_2131362934_res_0x7f0a0476"/>
+    </LinearLayout>
+    <LinearLayout
+        orientation="1"
+        layout_width="-1"
+        layout_height="-2">
+        <com.huawei.ui.commonui.subtab.HealthSubTabWidget
+            id="@+id/time_sharing_tab_widget"
+            background="@color/_2131299926_res_0x7f090e56"
+            layout_width="-1"
+            layout_height="@dimen/_2131363109_res_0x7f0a0525"
+            style="@style/health_sub_tab_style_blood_pressure"/>
+        <com.huawei.ui.commonui.viewpager.HealthViewPager
+            id="@+id/time_sharing_view_pager"
+            layout_width="-1"
+            layout_height="-2"/>
+    </LinearLayout>
+</LinearLayout>

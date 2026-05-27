@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.homehealth.functionsetcard.view.EmotionChartView xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_gravity="0x50"
+    id="@+id/emotion_chart"
+    layout_width="-1"
+    layout_height="-1"/>

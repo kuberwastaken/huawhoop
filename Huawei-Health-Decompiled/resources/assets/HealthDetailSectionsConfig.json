@@ -1,0 +1,1188 @@
+{
+  "category": "healthDetail",
+  "pages": [
+    {
+      "page_type": 7,
+      "noDataPage":
+      {
+        "resPosId": 4034,
+        "section_list": [
+          {
+            "template": 1039,
+            "isShare" : "true",
+            "dataUrl": "local:content//BloodPressureNoDataTopProvider",
+            "groupId": 2
+          },
+          {
+            "template": 1037,
+            "isShare" : "true",
+            "dataUrl": "local:content//BloodPressureNoDataHintProvider",
+            "groupId": 2
+          },
+          {
+            "template": 1045,
+            "dataUrl": "local:content//BloodPressureButtonProvider",
+            "groupId": 1
+          },
+          {
+            "template": 1201,
+            "dataUrl": "local:content//BloodPressureMessageProvider",
+            "groupId": 1
+          }
+        ]
+      },
+      "subPages":
+      [
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_day",
+          "subTitle": "",
+          "resPosId": 4011,
+          "section_list": [
+            {
+              "template": 1004,
+              "dataUrl": "local:content//BloodPressureLineChartProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1005,
+              "dataUrl": "local:content//BloodPressurePieChartProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1045,
+              "dataUrl": "local:content//BloodPressureButtonProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1006,
+              "dataUrl": "local:content//BloodPressureListRecordProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1074,
+              "dataUrl": "local:content//BloodPressureDynamicProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1077,
+              "dataUrl": "local:content//BloodPressureSummaryProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1201,
+              "dataUrl": "local:content//BloodPressureMessageProvider",
+              "groupId": 1
+            }
+          ]
+        },
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_week",
+          "subTitle": "",
+          "resPosId": 4011,
+          "section_list": [
+            {
+              "template": 1004,
+              "dataUrl": "local:content//BloodPressureLineChartProvider",
+              "groupId": 2
+            },
+            {
+              "template": 1005,
+              "dataUrl": "local:content//BloodPressurePieChartProvider",
+              "groupId": 2
+            },
+            {
+              "template": 1045,
+              "dataUrl": "local:content//BloodPressureButtonProvider",
+              "groupId": 2
+            },
+            {
+              "template": 1007,
+              "dataUrl": "local:content//BloodPressureGridRecordProvider",
+              "groupId": 2
+            },
+            {
+              "template": 1074,
+              "dataUrl": "local:content//BloodPressureDynamicProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1077,
+              "dataUrl": "local:content//BloodPressureSummaryProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1201,
+              "dataUrl": "local:content//BloodPressureMessageProvider",
+              "groupId": 1
+            }
+          ]
+        },
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_month",
+          "subTitle": "",
+          "resPosId": 4011,
+          "section_list": [
+            {
+              "template": 1004,
+              "dataUrl": "local:content//BloodPressureLineChartProvider",
+              "groupId": 3
+            },
+            {
+              "template": 1005,
+              "dataUrl": "local:content//BloodPressurePieChartProvider",
+              "groupId": 3
+            },
+            {
+              "template": 1045,
+              "dataUrl": "local:content//BloodPressureButtonProvider",
+              "groupId": 3
+            },
+            {
+              "template": 1007,
+              "dataUrl": "local:content//BloodPressureGridRecordProvider",
+              "groupId": 3
+            },
+            {
+              "template": 1074,
+              "dataUrl": "local:content//BloodPressureDynamicProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1077,
+              "dataUrl": "local:content//BloodPressureSummaryProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1201,
+              "dataUrl": "local:content//BloodPressureMessageProvider",
+              "groupId": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_type": 30,
+      "noDataPage": {
+        "resPosId": 4058
+      }
+    },
+    {
+      "page_type": 35,
+      "noDataPage": {
+        "resPosId": 4082
+      }
+    },
+    {
+      "page_type": 36,
+      "noDataPage": {
+        "resPosId": 4083
+      }
+    },
+    {
+      "page_type": 107,
+      "subPages":
+      [
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_day_analysis_recommendation",
+          "subTitle": "",
+          "resPosId": 4126,
+          "section_list": [
+            {
+              "template": 1063,
+              "isShare" : "true",
+              "dataUrl":  "local:content//SleepReportDataOrigin02Provider",
+              "groupId": 1
+            },
+            {
+              "template": 1069,
+              "isShare" : "true",
+              "dataUrl": "local:content//SleepCollapsibleProviderGroup;local:content//SleepScoringProvider;local:content//SleepDialogProvider;local:content//SleepTimeProvider;local:content//SleepDayExpandListProvider;local:content//SleepWebviewProvider;local:content//SleepEnvNoiseLineChartProvider;local:content//SleepReportTextProvider;local:content//SleepReportDataOriginProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1108,
+              "isShare" : "true",
+              "dataUrl": "local:content//SleepInterpretationsProvider;",
+              "groupId": 1
+            },
+            {
+              "template": 1065,
+              "isShare" : "false",
+              "dataUrl": "local:content//SleepManagementProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1072,
+              "isShare" : "true",
+              "dataUrl": "local:content//SleepBreatheBannerProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1073,
+              "isShare" : "false",
+              "dataUrl": "local:content//SleepSummaryProvider",
+              "groupId": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_type": 108,
+      "subPages":
+      [
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_day_sleep_music",
+          "subTitle": "",
+          "resPosId": 4008,
+          "section_list":
+          [
+            {
+              "template": 79,
+              "isShare" : "false",
+              "dataUrl": "local:content//FavoritesProvider",
+              "groupId": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_type": 1,
+      "noDataPage":
+      {
+        "resPosId": 4031,
+        "section_list": [
+          {
+            "template": 1039,
+            "isShare" : "true",
+            "dataUrl": "local:content//SleepNoDataTopProvider",
+            "groupId": 2
+          },
+          {
+            "template": 1044,
+            "isShare" : "false",
+            "dataUrl": "local:content//CoreSleepToastProvider",
+            "groupId": 1
+          },
+          {
+            "template": 1055,
+            "isShare" : "false",
+            "dataUrl": "local:content//SmartWearableSleepProvider",
+            "groupId": 1
+          },
+          {
+            "template": 1068,
+            "isShare" : "true",
+            "dataUrl": "local:content//SleepRecordEntryProvider",
+            "versionControl": "!com.huawei.ui.commonui.utils.versioncontrol.VersionControlUtil#isShownOversea",
+            "groupId": 1
+          },
+          {
+            "template": 1014,
+            "isShare" : "true",
+            "dataUrl": "local:content//SleepRecordEntryProvider",
+            "versionControl": "com.huawei.ui.commonui.utils.versioncontrol.VersionControlUtil#isShownOversea",
+            "groupId": 1
+          },
+          {
+            "template": 79,
+            "isShare" : "false",
+            "dataUrl": "local:content//FavoritesProvider",
+            "groupId": 100
+          }
+        ]
+      },
+      "subPages":
+      [
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_day",
+          "subTitle": "",
+          "resPosId": 4008,
+          "resVersionType": "com.huawei.ui.commonui.utils.versioncontrol.VersionControlUtil#isShownOversea",
+          "section_list": [
+            {
+              "template": 1012,
+              "isShare" : "true",
+              "dataUrl": "local:content//SleepDayBarChartProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1031,
+              "isShare" : "true",
+              "dataUrl":  "local:content//SleepReportText02Provider",
+              "groupId": 1
+            },
+            {
+              "template": 1068,
+              "isShare" : "true",
+              "dataUrl": "local:content//SleepRecordEntryProvider",
+              "versionControl": "!com.huawei.ui.commonui.utils.versioncontrol.VersionControlUtil#isShownOversea",
+              "groupId": 1
+            },
+            {
+              "template": 1014,
+              "isShare" : "true",
+              "dataUrl": "local:content//SleepRecordEntryProvider",
+              "versionControl": "com.huawei.ui.commonui.utils.versioncontrol.VersionControlUtil#isShownOversea",
+              "groupId": 1
+            },
+            {
+              "template": 1066,
+              "isShare" : "true",
+              "dataUrl": "local:content//SleepTabSwitchProvider",
+              "versionControl": "!com.huawei.ui.commonui.utils.versioncontrol.VersionControlUtil#isShownOversea",
+              "groupId": 1
+            },
+            {
+              "template": 1063,
+              "isShare" : "true",
+              "dataUrl":  "local:content//SleepReportDataOrigin02Provider",
+              "versionControl": "com.huawei.ui.commonui.utils.versioncontrol.VersionControlUtil#isShownOversea",
+              "groupId": 1
+            },
+            {
+              "template": 1069,
+              "isShare" : "true",
+              "dataUrl": "local:content//SleepCollapsibleProviderGroup;local:content//SleepScoringProvider;local:content//SleepDialogProvider;local:content//SleepTimeProvider;local:content//SleepDayExpandListProvider;local:content//SleepWebviewProvider;local:content//SleepEnvNoiseLineChartProvider;local:content//SleepReportTextProvider;local:content//SleepReportDataOriginProvider",
+              "versionControl": "com.huawei.ui.commonui.utils.versioncontrol.VersionControlUtil#isShownOversea",
+              "groupId": 1
+            },
+            {
+              "template": 1108,
+              "isShare" : "true",
+              "dataUrl": "local:content//SleepInterpretationsProvider;",
+              "versionControl": "com.huawei.ui.commonui.utils.versioncontrol.VersionControlUtil#isShownOversea",
+              "groupId": 1
+            },
+            {
+              "template": 1072,
+              "isShare" : "false",
+              "dataUrl": "local:content//SleepBreatheBannerProvider",
+              "versionControl": "com.huawei.ui.commonui.utils.versioncontrol.VersionControlUtil#isShownOversea",
+              "groupId": 1
+            },
+            {
+              "template": 1073,
+              "isShare" : "false",
+              "dataUrl": "local:content//SleepSummaryProvider",
+              "versionControl": "com.huawei.ui.commonui.utils.versioncontrol.VersionControlUtil#isShownOversea",
+              "groupId": 1
+            },
+            {
+              "template": 79,
+              "isShare" : "false",
+              "dataUrl": "local:content//FavoritesProvider",
+              "versionControl": "com.huawei.ui.commonui.utils.versioncontrol.VersionControlUtil#isShownOversea",
+              "groupId": 100
+            }
+          ]
+        },
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_week",
+          "subTitle": "",
+          "resPosId": 4008,
+          "section_list": [
+            {
+              "template": 1013,
+              "dataUrl": "local:content//SleepWeekBarLineChartProvider",
+              "groupId": 2
+            },
+            {
+              "template": 1031,
+              "isShare" : "true",
+              "dataUrl":  "local:content//SleepReportText02Provider",
+              "groupId": 2
+            },
+            {
+              "template": 1100,
+              "dataUrl": "local:content//SleepCollapsibleProviderGroup;local:content//SleepScoringProvider;local:content//SleepTimeProvider;local:content//SleepWeekExpandListProvider",
+              "groupId": 2
+            },
+            {
+              "template": 1072,
+              "dataUrl": "local:content//SleepBreatheBannerProvider",
+              "groupId": 2
+            },
+            {
+              "template": 1068,
+              "isShare" : "true",
+              "dataUrl": "local:content//SleepRecordEntryProvider",
+              "versionControl": "!com.huawei.ui.commonui.utils.versioncontrol.VersionControlUtil#isShownOversea",
+              "groupId": 1
+            },
+            {
+              "template": 1014,
+              "isShare" : "true",
+              "dataUrl": "local:content//SleepRecordEntryProvider",
+              "versionControl": "com.huawei.ui.commonui.utils.versioncontrol.VersionControlUtil#isShownOversea",
+              "groupId": 1
+            },
+            {
+              "template": 1073,
+              "isShare" : "false",
+              "dataUrl": "local:content//SleepSummaryProvider",
+              "groupId": 2
+            },
+            {
+              "template": 79,
+              "isShare" : "false",
+              "dataUrl": "local:content//FavoritesProvider",
+              "groupId": 100
+            }
+          ]
+        },
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_month",
+          "subTitle": "",
+          "resPosId": 4008,
+          "section_list": [
+            {
+              "template": 1013,
+              "dataUrl": "local:content//SleepMonthBarLineChartProvider",
+              "groupId": 3
+            },
+            {
+              "template": 1031,
+              "isShare" : "true",
+              "dataUrl":  "local:content//SleepReportText02Provider",
+              "groupId": 3
+            },
+            {
+              "template": 1100,
+              "dataUrl": "local:content//SleepCollapsibleProviderGroup;local:content//SleepScoringProvider;local:content//SleepTimeProvider;local:content//SleepMonthExpandListProvider",
+              "groupId": 3
+            },
+            {
+              "template": 1072,
+              "dataUrl": "local:content//SleepBreatheBannerProvider",
+              "groupId": 3
+            },
+            {
+              "template": 1068,
+              "isShare" : "true",
+              "dataUrl": "local:content//SleepRecordEntryProvider",
+              "versionControl": "!com.huawei.ui.commonui.utils.versioncontrol.VersionControlUtil#isShownOversea",
+              "groupId": 1
+            },
+            {
+              "template": 1014,
+              "isShare" : "true",
+              "dataUrl": "local:content//SleepRecordEntryProvider",
+              "versionControl": "com.huawei.ui.commonui.utils.versioncontrol.VersionControlUtil#isShownOversea",
+              "groupId": 1
+            },
+            {
+              "template": 1073,
+              "isShare" : "false",
+              "dataUrl": "local:content//SleepSummaryProvider",
+              "groupId": 3
+            },
+            {
+              "template": 79,
+              "isShare" : "false",
+              "dataUrl": "local:content//FavoritesProvider",
+              "groupId": 100
+            }
+          ]
+        },
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_year",
+          "subTitle": "",
+          "resPosId": 4008,
+          "section_list": [
+            {
+              "template": 1013,
+              "dataUrl": "local:content//SleepYearBarLineChartProvider",
+              "groupId": 4
+            },
+            {
+              "template": 1031,
+              "isShare" : "true",
+              "dataUrl":  "local:content//SleepReportText02Provider",
+              "groupId": 4
+            },
+            {
+              "template": 1107,
+              "dataUrl": "local:content//SleepCollapsibleProviderGroup;local:content//SleepScoringProvider;local:content//SleepYearWearCoreExpandListProvider;local:content//SleepTimeProvider;local:content//SleepYearManualExpandListProvider;local:content//SleepYearPhoneExpandListProvider;local:content//SleepYearWearCommonExpandListProvider;local:content//SleepYearCommonTimeProvider",
+              "groupId": 4
+            },
+            {
+              "template": 1072,
+              "dataUrl": "local:content//SleepBreatheBannerProvider",
+              "groupId": 4
+            },
+            {
+              "template": 1068,
+              "isShare" : "true",
+              "dataUrl": "local:content//SleepRecordEntryProvider",
+              "versionControl": "!com.huawei.ui.commonui.utils.versioncontrol.VersionControlUtil#isShownOversea",
+              "groupId": 1
+            },
+            {
+              "template": 1014,
+              "isShare" : "true",
+              "dataUrl": "local:content//SleepRecordEntryProvider",
+              "versionControl": "com.huawei.ui.commonui.utils.versioncontrol.VersionControlUtil#isShownOversea",
+              "groupId": 1
+            },
+            {
+              "template": 1073,
+              "isShare" : "false",
+              "dataUrl": "local:content//SleepSummaryProvider",
+              "groupId": 4
+            },
+            {
+              "template": 79,
+              "isShare" : "false",
+              "dataUrl": "local:content//FavoritesProvider",
+              "groupId": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_type": 9,
+      "subPages":
+      [
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_day",
+          "subTitle": "",
+          "resPosId": 4005,
+          "section_list": [
+            {
+              "template": 1035,
+              "isShare" : "true",
+              "dataUrl": "local:content//HeartRateChartProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1021,
+              "isShare" : "true",
+              "dataUrl": "local:content//HeartRateCardSelectProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1036,
+              "isShare" : "true",
+              "dataUrl": "local:content//HeartRateHistoryRecordProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1037,
+              "isShare" : "true",
+              "dataUrl":  "local:content//HeartRateIntroduceProvider",
+              "groupId": 1
+            }
+          ]
+        },
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_week",
+          "subTitle": "",
+          "resPosId": 4005,
+          "section_list": [
+            {
+              "template": 1035,
+              "dataUrl": "local:content//HeartRateChartProvider",
+              "groupId": 2
+            },
+            {
+              "template": 1021,
+              "isShare" : "true",
+              "dataUrl": "local:content//HeartRateCardSelectProvider",
+              "groupId": 2
+            },
+            {
+              "template": 1036,
+              "isShare" : "true",
+              "dataUrl": "local:content//HeartRateHistoryRecordProvider",
+              "groupId": 2
+            },
+            {
+              "template": 1037,
+              "isShare" : "true",
+              "dataUrl":  "local:content//HeartRateIntroduceProvider",
+              "groupId": 2
+            }
+          ]
+        },
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_month",
+          "subTitle": "",
+          "resPosId": 4005,
+          "section_list": [
+            {
+              "template": 1035,
+              "dataUrl": "local:content//HeartRateChartProvider",
+              "groupId": 3
+            },
+            {
+              "template": 1021,
+              "isShare" : "true",
+              "dataUrl": "local:content//HeartRateCardSelectProvider",
+              "groupId": 3
+            },
+            {
+              "template": 1036,
+              "isShare" : "true",
+              "dataUrl": "local:content//HeartRateHistoryRecordProvider",
+              "groupId": 3
+            },
+            {
+              "template": 1037,
+              "isShare" : "true",
+              "dataUrl":  "local:content//HeartRateIntroduceProvider",
+              "groupId": 3
+            }
+          ]
+        },
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_year",
+          "subTitle": "",
+          "resPosId": 4005,
+          "section_list": [
+            {
+              "template": 1035,
+              "dataUrl": "local:content//HeartRateChartProvider",
+              "groupId": 4
+            },
+            {
+              "template": 1021,
+              "isShare" : "true",
+              "dataUrl": "local:content//HeartRateCardSelectProvider",
+              "groupId": 4
+            },
+            {
+              "template": 1036,
+              "isShare" : "true",
+              "dataUrl": "local:content//HeartRateHistoryRecordProvider",
+              "groupId": 4
+            },
+            {
+              "template": 1037,
+              "isShare" : "true",
+              "dataUrl":  "local:content//HeartRateIntroduceProvider",
+              "groupId": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_type": 28,
+      "subPages":
+      [
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_month",
+          "subTitle": "",
+          "resPosId": -1,
+          "section_list": [
+            {
+              "template": 1025,
+              "dataUrl": "local:content//LacticLineChartProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1021,
+              "dataUrl": "local:content//LacticCardSelectProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1026,
+              "dataUrl": "local:content//LacticTextProvider",
+              "groupId": 1
+            }
+          ]
+        },
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_year",
+          "subTitle": "",
+          "resPosId": -1,
+          "section_list": [
+            {
+              "template": 1025,
+              "dataUrl": "local:content//LacticLineChartProvider",
+              "groupId": 2
+            },
+            {
+              "template": 1021,
+              "dataUrl": "local:content//LacticCardSelectProvider",
+              "groupId": 2
+            },
+            {
+              "template": 1026,
+              "dataUrl": "local:content//LacticTextProvider",
+              "groupId": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_type": 24,
+      "noDataPage":
+      {
+        "resPosId": 4035,
+        "section_list": [
+          {
+            "template": 1067,
+            "dataUrl": "local:content//TemperatureNoDataDesProvider",
+            "groupId": 1
+          }
+        ]
+      },
+      "subPages":
+      [
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_day",
+          "subTitle": "",
+          "resPosId": 4027,
+          "section_list": [
+            {
+              "template": 1041,
+              "dataUrl": "local:content//TemperatureBarChartProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1042,
+              "dataUrl": "local:content//TemperatureDayCardProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1043,
+              "dataUrl": "local:content//TemperatureDayCardProvider",
+              "groupId": 1
+            }
+          ]
+        },
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_week",
+          "subTitle": "",
+          "resPosId": 4027,
+          "section_list": [
+            {
+              "template": 1041,
+              "dataUrl": "local:content//TemperatureBarChartProvider",
+              "groupId": 2
+            },
+            {
+              "template": 1042,
+              "dataUrl": "local:content//TemperatureWeekCardProvider",
+              "groupId": 2
+            },
+            {
+              "template": 1043,
+              "dataUrl": "local:content//TemperatureWeekCardProvider",
+              "groupId": 2
+            }
+          ]
+        },
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_month",
+          "subTitle": "",
+          "resPosId": 4027,
+          "section_list": [
+            {
+              "template": 1041,
+              "dataUrl": "local:content//TemperatureBarChartProvider",
+              "groupId": 3
+            },
+            {
+              "template": 1042,
+              "dataUrl": "local:content//TemperatureMonthCardProvider",
+              "groupId": 3
+            },
+            {
+              "template": 1043,
+              "dataUrl": "local:content//TemperatureMonthCardProvider",
+              "groupId": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_type": 3,
+      "noDataPage":
+      {
+        "resPosId": 4030,
+        "section_list": [
+          {
+            "template": 1039,
+            "dataUrl": "local:content//PressureNoDataTopProvider",
+            "groupId": 2
+          },
+          {
+            "template": 1044,
+            "dataUrl": "local:content//PressureToastProvider",
+            "groupId": 1
+          },
+          {
+            "template": 1055,
+            "dataUrl": "local:content//SmartWearablePressureProvider",
+            "groupId": 1
+          },
+          {
+            "template": 1014,
+            "dataUrl": "local:content//PressureEntryProvider",
+            "groupId": 1
+          },
+          {
+            "template": 92,
+            "dataUrl": "local:content//PressureFavoriteProvider",
+            "groupId": 1
+          }
+        ]
+      },
+      "subPages":
+      [
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_day",
+          "subTitle": "",
+          "resPosId": 4007,
+          "section_list": [
+            {
+              "template": 1200,
+              "dataUrl": "local:content//PressureLineChartProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1106,
+              "dataUrl": "local:content//PressureCollapsibleProviderGroup;local:content//PressureDayStatisticProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1014,
+              "dataUrl": "local:content//PressureEntryProvider",
+              "groupId": 1
+            },
+            {
+              "template": 92,
+              "dataUrl": "local:content//PressureFavoriteProvider",
+              "groupId": 1
+            }
+          ]
+        },
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_week",
+          "subTitle": "",
+          "resPosId": 4007,
+          "section_list": [
+            {
+              "template": 1200,
+              "dataUrl": "local:content//PressureLineChartProvider",
+              "groupId": 2
+            },
+            {
+              "template": 1106,
+              "dataUrl": "local:content//PressureCollapsibleProviderGroup;local:content//PressureWeekStatisticProvider",
+              "groupId": 2
+            },
+            {
+              "template": 1014,
+              "dataUrl": "local:content//PressureEntryProvider",
+              "groupId": 2
+            },
+            {
+              "template": 92,
+              "dataUrl": "local:content//PressureFavoriteProvider",
+              "groupId": 2
+            }
+          ]
+        },
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_month",
+          "subTitle": "",
+          "resPosId": 4007,
+          "section_list": [
+            {
+              "template": 1200,
+              "dataUrl": "local:content//PressureLineChartProvider",
+              "groupId": 3
+            },
+            {
+              "template": 1106,
+              "dataUrl": "local:content//PressureCollapsibleProviderGroup;local:content//PressureMonthStatisticProvider",
+              "groupId": 3
+            },
+            {
+              "template": 1014,
+              "dataUrl": "local:content//PressureEntryProvider",
+              "groupId": 3
+            },
+            {
+              "template": 92,
+              "dataUrl": "local:content//PressureFavoriteProvider",
+              "groupId": 3
+            }
+          ]
+        },
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_year",
+          "subTitle": "",
+          "resPosId": 4007,
+          "section_list": [
+            {
+              "template": 1200,
+              "dataUrl": "local:content//PressureLineChartProvider",
+              "groupId": 4
+            },
+            {
+              "template": 1106,
+              "dataUrl": "local:content//PressureCollapsibleProviderGroup;local:content//PressureYearStatisticProvider",
+              "groupId": 4
+            },
+            {
+              "template": 1014,
+              "dataUrl": "local:content//PressureEntryProvider",
+              "groupId": 4
+            },
+            {
+              "template": 92,
+              "dataUrl": "local:content//PressureFavoriteProvider",
+              "groupId": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_type": 20,
+      "subPages":
+      [
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_day",
+          "subTitle": "",
+          "resPosId": 4006,
+          "section_list": [
+            {
+              "template": 1032,
+              "dataUrl": "local:content//BloodOxygenDayChartProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1118,
+              "dataUrl": "local:content//BloodOxygenRangeProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1119,
+              "dataUrl": "local:content//BloodOxygenRecordProvider",
+              "groupId": 1
+            }
+          ]
+        },
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_week",
+          "subTitle": "",
+          "resPosId": 4006,
+          "section_list": [
+            {
+              "template": 1034,
+              "dataUrl": "local:content//BloodOxygenWeekChartProvider",
+              "groupId": 2
+            },
+            {
+              "template": 1118,
+              "dataUrl": "local:content//BloodOxygenRangeProvider",
+              "groupId": 2
+            },
+            {
+              "template": 1119,
+              "dataUrl": "local:content//BloodOxygenRecordProvider",
+              "groupId": 2
+            }
+          ]
+        },
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_month",
+          "subTitle": "",
+          "resPosId": 4006,
+          "section_list": [
+            {
+              "template": 1034,
+              "dataUrl": "local:content//BloodOxygenMonthChartProvider",
+              "groupId": 3
+            },
+            {
+              "template": 1118,
+              "dataUrl": "local:content//BloodOxygenRangeProvider",
+              "groupId": 3
+            },
+            {
+              "template": 1119,
+              "dataUrl": "local:content//BloodOxygenRecordProvider",
+              "groupId": 3
+            }
+          ]
+        },
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_year",
+          "subTitle": "",
+          "resPosId": 4006,
+          "section_list": [
+            {
+              "template": 1034,
+              "dataUrl": "local:content//BloodOxygenYearChartProvider",
+              "groupId": 4
+            },
+            {
+              "template": 1118,
+              "dataUrl": "local:content//BloodOxygenRangeProvider",
+              "groupId": 4
+            },
+            {
+              "template": 1119,
+              "dataUrl": "local:content//BloodOxygenRecordProvider",
+              "groupId": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_type": 34,
+      "subPages":
+      [
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_day",
+          "subTitle": "",
+          "resPosId": 4171,
+          "section_list": [
+            {
+              "template": 1058,
+              "dataUrl": "local:content//ActiveHoursDayBarChartProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1057,
+              "dataUrl": "local:content//ActiveHoursStandProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1056,
+              "dataUrl": "local:content//ActiveHoursIntroductionProvider",
+              "groupId": 1
+            }
+          ]
+        },
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_week",
+          "subTitle": "",
+          "resPosId": 4171,
+          "section_list": [
+            {
+              "template": 1058,
+              "dataUrl": "local:content//ActiveHoursWeekBarChartProvider",
+              "groupId": 2
+            },
+            {
+              "template": 1064,
+              "dataUrl": "local:content//ActiveCumulatveAndAverageProvider",
+              "groupId": 2
+            },
+            {
+              "template": 1056,
+              "dataUrl": "local:content//ActiveHoursIntroductionProvider",
+              "groupId": 2
+            }
+          ]
+        },
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_month",
+          "subTitle": "",
+          "resPosId": 4171,
+          "section_list": [
+            {
+              "template": 1058,
+              "dataUrl": "local:content//ActiveHoursMonthBarChartProvider",
+              "groupId": 3
+            },
+            {
+              "template": 1064,
+              "dataUrl": "local:content//ActiveCumulatveAndAverageProvider",
+              "groupId": 3
+            },
+            {
+              "template": 1056,
+              "dataUrl": "local:content//ActiveHoursIntroductionProvider",
+              "groupId": 3
+            }
+          ]
+        },
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_year",
+          "subTitle": "",
+          "resPosId": 4171,
+          "section_list": [
+            {
+              "template": 1058,
+              "dataUrl": "local:content//ActiveHoursYearBarChartProvider",
+              "groupId": 4
+            },
+            {
+              "template": 1064,
+              "dataUrl": "local:content//ActiveCumulatveAndAverageProvider",
+              "groupId": 4
+            },
+            {
+              "template": 1056,
+              "dataUrl": "local:content//ActiveHoursIntroductionProvider",
+              "groupId": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_type": 37,
+      "subPages":
+      [
+        {
+          "subTitleRes":"IDS_fitness_detail_radio_button_tab_day",
+          "subTitle": "",
+          "resPosId": 4169,
+          "section_list": [
+            {
+              "template": 1059,
+              "dataUrl": "local:content//ActiveRecordCalendarProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1060,
+              "dataUrl": "local:content//ActiveRecordThreeCircleProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1061,
+              "dataUrl": "local:content//ActiveRecordTipsProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1080,
+              "dataUrl": "local:content//ActiveRecordMicroWorkoutProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1062,
+              "dataUrl": "local:content//ActiveRecordTrendListProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1070,
+              "dataUrl": "local:content//ActiveRecordWeekProvider",
+              "groupId": 1
+            },
+            {
+              "template": 1075,
+              "dataUrl": "local:content//ActiveRecordSummaryProvider",
+              "groupId": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x11"
+    layout_gravity="0x11"
+    orientation="0"
+    paddingTop="@dimen/_2131362934_res_0x7f0a0476"
+    layout_width="-1"
+    layout_height="-2"
+    layout_marginStart="@dimen/_2131362478_res_0x7f0a02ae"
+    layout_marginEnd="@dimen/_2131362478_res_0x7f0a02ae">
+    <ImageView
+        layout_gravity="0x11"
+        id="@+id/opera_msg_layout_icon"
+        background="@mipmap/_2131821696_res_0x7f110480"
+        layout_width="@dimen/_2131362970_res_0x7f0a049a"
+        layout_height="@dimen/_2131362970_res_0x7f0a049a"
+        style="@style/health_default_background_tint"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+        textColor="@color/_2131299850_res_0x7f090e0a"
+        ellipsize="3"
+        gravity="0x1"
+        layout_gravity="0x11"
+        id="@+id/opera_msg_text"
+        layout_width="-2"
+        layout_height="-2"
+        singleLine="true"
+        fontFamily="@string/_2130852834_res_0x7f023be2"
+        textDirection="5"
+        layout_marginStart="@dimen/_2131363172_res_0x7f0a0564"/>
+</LinearLayout>

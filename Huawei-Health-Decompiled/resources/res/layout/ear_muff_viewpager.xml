@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.viewpager.HealthViewPager
+        id="@+id/viewpager"
+        layout_width="-1"
+        layout_height="-2"/>
+    <com.huawei.ui.commonui.dotspageindicator.HealthDotsPageIndicator
+        gravity="0x11"
+        layout_gravity="0x1"
+        id="@+id/indicator"
+        layout_width="-2"
+        layout_height="-2"
+        style="@style/DotsPageIndicatorStyleDots"/>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar xmlns:setting="http://schemas.android.com/apk/res-auto"
+        id="@+id/open_service_detail_title_bar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x4="2"
+        NOT_FOUND_0x5="@string/_2130842460_res_0x7f02135c"/>
+</LinearLayout>

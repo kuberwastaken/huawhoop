@@ -1,0 +1,53 @@
+{
+  "1": {
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32"
+      }
+    ],
+    "encode": [
+      {
+        "tag": 129,
+        "jsonKey": "feature_list",
+        "type": "array",
+        "elemType": "number32"
+      }
+    ]
+  },
+  "2": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "feature_list",
+        "type": "anonArray",
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "feature_info",
+            "type": "array",
+            "elemType": "number8",
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "feature_list",
+        "type": "anonArray",
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "feature_info",
+            "type": "array",
+            "elemType": "number8",
+            "optional": true
+          }
+        ]
+      }
+    ]
+  }
+}

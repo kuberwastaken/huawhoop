@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <FrameLayout
+        id="@+id/hw_health_sport_noun_explain"
+        background="@color/_2131296700_res_0x7f0901bc"
+        layout_width="-1"
+        layout_height="-1">
+        <ExpandableListView
+            id="@+id/list_sport_noun_explain_simplify"
+            scrollbars="0x0"
+            layout_width="-1"
+            layout_height="-1"
+            listSelector="@android:color/transparent"
+            cacheColorHint="@color/_2131296995_res_0x7f0902e3"
+            groupIndicator="@null"
+            divider="@null"/>
+    </FrameLayout>
+</LinearLayout>

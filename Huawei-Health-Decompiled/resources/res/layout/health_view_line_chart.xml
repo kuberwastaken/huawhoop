@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    gravity="0x11"
+    layout_gravity="0x11"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.ruler.circlescaleruler.CircleScaleRuler
+        layout_gravity="0x11"
+        id="@+id/circle_scale_ruler"
+        visibility="2"
+        layout_width="-1"
+        layout_height="@dimen/_2131363127_res_0x7f0a0537"
+        importantForAccessibility="4"
+        NOT_FOUND_0x8="@drawable/circle_scale_ruler_background"
+        NOT_FOUND_0x9="@drawable/_2131430966_res_0x7f0b0e36"
+        NOT_FOUND_0xa="@dimen/_2131363054_res_0x7f0a04ee"
+        NOT_FOUND_0xb="false"
+        NOT_FOUND_0xc="true"
+        NOT_FOUND_0xd="@dimen/_2131363110_res_0x7f0a0526"
+        NOT_FOUND_0xe="@dimen/_2131363144_res_0x7f0a0548"
+        NOT_FOUND_0xf="@dimen/_2131363087_res_0x7f0a050f"
+        NOT_FOUND_0x10="@dimen/_2131363087_res_0x7f0a050f"
+        NOT_FOUND_0x11="@dimen/_2131363079_res_0x7f0a0507"
+        NOT_FOUND_0x12="@dimen/_2131363081_res_0x7f0a0509"
+        NOT_FOUND_0x13="@dimen/_2131363144_res_0x7f0a0548"/>
+    <com.huawei.ui.commonui.linechart.view.HwHealthLineChart
+        layout_gravity="0x11"
+        id="@+id/line_chart"
+        layout_width="-1"
+        layout_height="-1"
+        style="@style/healthNoAxisChartLayoutStyle"/>
+</LinearLayout>

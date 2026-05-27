@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/contact_orderby_titlebar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x8="1"
+        NOT_FOUND_0x9="@string/_2130841739_res_0x7f02108b"/>
+    <LinearLayout
+        orientation="1"
+        id="@+id/ll_contact_orderby_list"
+        layout_width="-1"
+        layout_height="-1"
+        layout_below="@+id/contact_orderby_titlebar">
+        <com.huawei.ui.commonui.recycleview.HealthRecycleView
+            id="@+id/contact_orderby_drag_list"
+            scrollbars="0x0"
+            layout_width="-1"
+            layout_height="-2"
+            divider="@null"/>
+    </LinearLayout>
+</RelativeLayout>

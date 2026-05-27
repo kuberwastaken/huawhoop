@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    id="@+id/section_layout_root"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/section_sub_header"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xe="false"
+        NOT_FOUND_0xf="0"
+        NOT_FOUND_0x10="--"/>
+    <LinearLayout
+        orientation="1"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131363112_res_0x7f0a0528"
+        layout_marginBottom="@dimen/_2131363112_res_0x7f0a0528"
+        layout_below="@+id/section_sub_header"
+        layout_marginStart="@dimen/_2131362013_res_0x7f0a00dd"
+        layout_marginEnd="@dimen/_2131362011_res_0x7f0a00db">
+        <com.huawei.ui.commonui.recycleview.HealthRecycleView
+            id="@+id/abnormal_section_recyclerview"
+            layout_width="-1"
+            layout_height="-2"/>
+        <com.huawei.ui.commonui.button.HealthButton
+            textSize="@dimen/_2131365501_res_0x7f0a0e7d"
+            textColor="@color/_2131296506_res_0x7f0900fa"
+            layout_gravity="0x1"
+            id="@+id/show_more_button"
+            layout_width="-2"
+            layout_height="-2"
+            minHeight="@dimen/_2131362907_res_0x7f0a045b"
+            fontFamily="@string/_2130852833_res_0x7f023be1"
+            style="@style/Health.CommonUI.HealthButton.Small.Borderless"/>
+    </LinearLayout>
+</RelativeLayout>

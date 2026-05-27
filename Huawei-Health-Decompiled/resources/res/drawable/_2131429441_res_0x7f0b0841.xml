@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        gravity="0x17"
+        id="@android:id/background"
+        drawable="@drawable/_2131429437_res_0x7f0b083d"/>
+    <item
+        gravity="0x17"
+        id="@android:id/secondaryProgress">
+        <scale
+            android:drawable="@drawable/_2131429449_res_0x7f0b0849"
+            android:scaleWidth="100%"/>
+    </item>
+    <item
+        gravity="0x17"
+        id="@android:id/progress">
+        <scale
+            android:drawable="@drawable/_2131429445_res_0x7f0b0845"
+            android:scaleWidth="100%"/>
+    </item>
+</layer-list>

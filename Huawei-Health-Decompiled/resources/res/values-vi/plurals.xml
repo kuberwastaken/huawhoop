@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="other">Tối đa %1$d chỉ số có thể được hiển thị trên một biểu đồ.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="other">Mức đường huyết được dự đoán sẽ giảm xuống dưới %2$s mmol/L sau %1$s phút nữa. Vui lòng theo dõi chặt chẽ mức đường huyết của bạn.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="other">Mức đường huyết được dự đoán sẽ giảm xuống dưới %2$s mg/dL sau %1$s phút nữa. Vui lòng theo dõi chặt chẽ mức đường huyết của bạn.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="other">%d bước</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="other">%s dặm</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="other">%s km</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="other">Còn %1$s bước</item>
+    </plurals>
+</resources>

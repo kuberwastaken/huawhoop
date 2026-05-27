@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    background="@color/_2131297848_res_0x7f090638"
+    layout_width="-1"
+    layout_height="-1">
+    <RelativeLayout
+        id="@+id/hiad_click_hand_container"
+        layout_width="-2"
+        layout_height="-2"
+        layout_centerInParent="true">
+        <ImageView
+            id="@+id/hiad_click_hand"
+            padding="@dimen/_2131363373_res_0x7f0a062d"
+            layout_width="46dp"
+            layout_height="40dp"
+            src="@drawable/_2131428689_res_0x7f0b0551"
+            layout_centerHorizontal="true"
+            layout_centerVertical="true"/>
+    </RelativeLayout>
+    <RelativeLayout
+        id="@+id/hiad_click_arc_container"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginBottom="-18dp"
+        layout_above="@+id/hiad_click_hand_container"
+        layout_centerHorizontal="true">
+        <ImageView
+            id="@+id/hiad_click_arc"
+            padding="@dimen/_2131363373_res_0x7f0a062d"
+            layout_width="35dp"
+            layout_height="25dp"
+            layout_marginRight="@dimen/_2131363341_res_0x7f0a060d"
+            src="@drawable/_2131428688_res_0x7f0b0550"/>
+    </RelativeLayout>
+</RelativeLayout>

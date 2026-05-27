@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    background="@drawable/share_half_rect_bg"
+    layout_width="-1"
+    layout_height="-1">
+    <ImageView
+        id="@+id/bottom_line"
+        background="@drawable/share_bottom_sheet_line_bg"
+        layout_width="@dimen/_2131363109_res_0x7f0a0525"
+        layout_height="@dimen/_2131363112_res_0x7f0a0528"
+        layout_marginTop="@dimen/_2131363144_res_0x7f0a0548"
+        layout_centerHorizontal="true"/>
+    <LinearLayout
+        orientation="1"
+        id="@+id/bottom_sheet_tab"
+        layout_width="-1"
+        layout_height="-1"
+        layout_marginTop="@dimen/_2131362916_res_0x7f0a0464"
+        layout_below="@+id/bottom_line"
+        paddingStart="@dimen/_2131362970_res_0x7f0a049a"
+        paddingEnd="@dimen/_2131362970_res_0x7f0a049a">
+        <com.huawei.pluginsocialshare.view.ShareTabLayout
+            id="@+id/share_bottom_tab_switch_layout"
+            background="@drawable/share_all_rect_bg"
+            layout_width="-1"
+            layout_height="@dimen/_2131363090_res_0x7f0a0512"
+            NOT_FOUND_0xc="0"
+            NOT_FOUND_0xd="true"
+            NOT_FOUND_0xe="@dimen/_2131362907_res_0x7f0a045b"
+            NOT_FOUND_0xf="0dp"
+            NOT_FOUND_0x10="1"
+            NOT_FOUND_0x11="@color/_2131299926_res_0x7f090e56"
+            style="@style/CustomTabLayout"/>
+        <com.huawei.ui.commonui.viewpager.HealthViewPager
+            id="@+id/bottom_sheet_view_pager"
+            paddingTop="@dimen/_2131362970_res_0x7f0a049a"
+            layout_width="-1"
+            layout_height="-1"
+            nestedScrollingEnabled="true"/>
+    </LinearLayout>
+</RelativeLayout>

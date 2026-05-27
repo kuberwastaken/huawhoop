@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.healthtextview.HealthTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    textSize="@dimen/_2131365486_res_0x7f0a0e6e"
+    textColor="@color/_2131299845_res_0x7f090e05"
+    gravity="0x11"
+    background="@drawable/_2131432143_res_0x7f0b12cf"
+    layout_width="-2"
+    layout_height="28dp"
+    text="ssssssss"
+    maxLines="1"
+    paddingStart="12dp"
+    paddingEnd="12dp"
+    layout_marginEnd="8dp"/>

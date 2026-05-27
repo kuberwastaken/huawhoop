@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.uikit.phone.hwrecyclerview.widget.HwRecyclerView
+        id="@+id/hwsubheader_recyclerview"
+        saveEnabled="false"
+        layout_width="-1"
+        layout_height="-2"/>
+    <FrameLayout
+        id="@+id/hwsubheader_header"
+        layout_width="-1"
+        layout_height="-2"/>
+</FrameLayout>

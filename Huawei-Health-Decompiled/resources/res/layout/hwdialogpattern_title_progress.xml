@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    gravity="0x10"
+    paddingTop="@dimen/_2131364245_res_0x7f0a0995"
+    paddingBottom="@dimen/_2131364245_res_0x7f0a0995"
+    layout_width="-1"
+    layout_height="-2"
+    minHeight="@dimen/_2131364243_res_0x7f0a0993"
+    paddingStart="@dimen/_2131364233_res_0x7f0a0989"
+    paddingEnd="@dimen/_2131364233_res_0x7f0a0989">
+    <com.huawei.uikit.phone.hwtextview.widget.HwTextView
+        textSize="@dimen/_2131362732_res_0x7f0a03ac"
+        ellipsize="3"
+        id="@+id/hwdialogpattern_title"
+        layout_width="0dp"
+        layout_height="-2"
+        maxLines="2"
+        layout_weight="1"
+        textAlignment="5"
+        NOT_FOUND_0xf="@dimen/_2131364239_res_0x7f0a098f"
+        NOT_FOUND_0x10="1sp"
+        style="@style/Widget.Emui.HwDialogPattern.DialogWindowTitle"/>
+    <com.huawei.uikit.phone.hwprogressbar.widget.HwProgressBar
+        id="@+id/hwdialogpattern_progressbar"
+        layout_width="@dimen/_2131364236_res_0x7f0a098c"
+        layout_height="@dimen/_2131364236_res_0x7f0a098c"
+        layout_marginStart="@dimen/_2131362642_res_0x7f0a0352"/>
+</LinearLayout>

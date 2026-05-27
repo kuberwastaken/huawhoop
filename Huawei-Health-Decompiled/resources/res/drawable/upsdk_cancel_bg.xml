@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <size
+        height="40dp"
+        width="40dp"/>
+    <corners radius="4dp"/>
+    <stroke color="@color/upsdk_color_gray_1"/>
+    <solid color="@color/upsdk_color_gray_1"/>
+</shape>

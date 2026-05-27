@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" constantSize="true">
+    <item
+        state_enabled="false"
+        state_pressed="true">
+        <bitmap
+            gravity="0x11"
+            src="@drawable/_2131427442_res_0x7f0b0072"/>
+    </item>
+    <item state_enabled="false">
+        <bitmap
+            gravity="0x11"
+            src="@drawable/_2131427442_res_0x7f0b0072"/>
+    </item>
+    <item state_pressed="true">
+        <bitmap
+            gravity="0x11"
+            src="@drawable/_2131427444_res_0x7f0b0074"/>
+    </item>
+    <item>
+        <bitmap
+            gravity="0x11"
+            src="@drawable/_2131427443_res_0x7f0b0073"/>
+    </item>
+</selector>

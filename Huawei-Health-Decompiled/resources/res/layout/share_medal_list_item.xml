@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/share_medal_list_item_ll"
+    padding="@dimen/_2131363503_res_0x7f0a06af"
+    layout_width="-1"
+    layout_height="-1">
+    <ImageView
+        layout_gravity="0x11"
+        id="@+id/share_medal_list_item_iv"
+        padding="@dimen/_2131363503_res_0x7f0a06af"
+        layout_width="@dimen/_2131363555_res_0x7f0a06e3"
+        layout_height="@dimen/_2131363555_res_0x7f0a06e3"
+        src="@mipmap/_2131821193_res_0x7f110289"
+        scaleType="3"
+        cropToPadding="true"
+        layout_marginStart="@dimen/_2131363503_res_0x7f0a06af"
+        layout_marginEnd="@dimen/_2131363503_res_0x7f0a06af"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131363508_res_0x7f0a06b4"
+        textColor="@color/_2131298145_res_0x7f090761"
+        gravity="0x11"
+        layout_gravity="0x1"
+        id="@+id/share_medal_list_item_tv"
+        layout_width="-2"
+        layout_height="@dimen/_2131363532_res_0x7f0a06cc"
+        layout_marginTop="@dimen/_2131363537_res_0x7f0a06d1"
+        text="挑战跑步1000公里"/>
+</LinearLayout>

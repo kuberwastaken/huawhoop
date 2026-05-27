@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_gravity="0x10"
+    layout_width="-1"
+    layout_height="-2"
+    layout_marginTop="@dimen/_2131362578_res_0x7f0a0312">
+    <ImageView
+        layout_gravity="0x10"
+        id="@+id/item_blood_pressure_result_status"
+        layout_width="@dimen/_2131363172_res_0x7f0a0564"
+        layout_height="@dimen/_2131363172_res_0x7f0a0564"
+        src="@drawable/_2131428589_res_0x7f0b04ed"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+        textColor="@color/_2131299847_res_0x7f090e07"
+        ellipsize="3"
+        id="@+id/item_blood_pressure_result_value"
+        layout_width="-2"
+        layout_height="-2"
+        maxLines="1"
+        fontFamily="@string/_2130852834_res_0x7f023be2"
+        layout_marginStart="@dimen/_2131363172_res_0x7f0a0564"/>
+</LinearLayout>

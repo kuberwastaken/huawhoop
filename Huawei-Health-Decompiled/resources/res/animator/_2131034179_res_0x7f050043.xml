@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        state_enabled="true"
+        state_hovered="true">
+        <objectAnimator
+            android:interpolator="@interpolator/_2131689485_res_0x7f0f000d"
+            android:duration="@integer/_2131623987_res_0x7f0e0033"
+            android:valueTo="@dimen/_2131364741_res_0x7f0a0b85"
+            android:valueType="floatType"
+            android:propertyName="translationZ"
+            android:startDelay="@integer/_2131623986_res_0x7f0e0032"/>
+    </item>
+    <item
+        state_enabled="true"
+        NOT_FOUND_0x8="true">
+        <objectAnimator
+            android:interpolator="@interpolator/_2131689485_res_0x7f0f000d"
+            android:duration="@integer/_2131623987_res_0x7f0e0033"
+            android:valueTo="@dimen/_2131364739_res_0x7f0a0b83"
+            android:valueType="floatType"
+            android:propertyName="translationZ"
+            android:startDelay="@integer/_2131623986_res_0x7f0e0032"/>
+    </item>
+    <item>
+        <set>
+            <objectAnimator
+                android:interpolator="@anim/_2130772068_res_0x7f010064"
+                android:duration="@integer/_2131623987_res_0x7f0e0033"
+                android:valueTo="0dp"
+                android:valueType="floatType"
+                android:propertyName="translationZ"/>
+        </set>
+    </item>
+    <item>
+        <objectAnimator
+            android:duration="0"
+            android:valueTo="0dp"
+            android:valueType="floatType"
+            android:propertyName="translationZ"/>
+    </item>
+</selector>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.recycleview.HealthRecycleView
+        id="@+id/hrv_pace_range_distance"
+        layout_width="-1"
+        layout_height="-1"/>
+</LinearLayout>

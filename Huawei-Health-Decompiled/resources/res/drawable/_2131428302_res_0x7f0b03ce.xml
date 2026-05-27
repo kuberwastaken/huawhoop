@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape shape="1">
+            <stroke
+                width="@dimen/_2131363129_res_0x7f0a0539"
+                color="@color/_2131299926_res_0x7f090e56"/>
+        </shape>
+    </item>
+    <item
+        left="@dimen/_2131363129_res_0x7f0a0539"
+        top="@dimen/_2131363129_res_0x7f0a0539"
+        right="@dimen/_2131363129_res_0x7f0a0539"
+        bottom="@dimen/_2131363129_res_0x7f0a0539">
+        <shape shape="1">
+            <stroke
+                width="@dimen/_2131363051_res_0x7f0a04eb"
+                color="@color/_2131297007_res_0x7f0902ef"/>
+            <size
+                height="@dimen/_2131362916_res_0x7f0a0464"
+                width="@dimen/_2131362916_res_0x7f0a0464"/>
+        </shape>
+    </item>
+</layer-list>

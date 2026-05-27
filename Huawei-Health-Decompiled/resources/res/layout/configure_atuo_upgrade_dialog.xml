@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="0"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.checkbox.HealthCheckBox
+        layout_gravity="0x10"
+        id="@+id/id_device_auto_upgrade_switch"
+        layout_width="-2"
+        layout_height="-2"
+        checked="true"
+        style="@style/health_checkbox_style_large"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+        textColor="@color/_2131299845_res_0x7f090e05"
+        layout_gravity="0x10"
+        layout_width="-2"
+        layout_height="-2"
+        text="@string/IDS_device_auto_upgrade"
+        fontFamily="@string/_2130852834_res_0x7f023be2"/>
+</LinearLayout>

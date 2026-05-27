@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="0"
+    id="@+id/layout_tablayout"
+    visibility="2"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.subtab.HealthSubTabWidget
+        id="@+id/track_sport_tab"
+        background="@color/_2131296984_res_0x7f0902d8"
+        layout_width="-1"
+        layout_height="-2"
+        style="@style/health_sub_tab_headline_style"/>
+</FrameLayout>

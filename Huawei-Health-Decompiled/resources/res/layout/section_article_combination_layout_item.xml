@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.cardview.HealthCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    id="@+id/section_article_combine_card"
+    layout_width="-2"
+    layout_height="-2"
+    layout_marginBottom="@dimen/_2131362012_res_0x7f0a00dc"
+    layout_marginEnd="@dimen/_2131362012_res_0x7f0a00dc"
+    NOT_FOUND_0x7="@dimen/_2131362366_res_0x7f0a023e">
+    <ImageView
+        id="@+id/article_member_benefit"
+        layout_width="@dimen/_2131363148_res_0x7f0a054c"
+        layout_height="@dimen/_2131363154_res_0x7f0a0552"
+        scaleType="1"
+        minHeight="@dimen/_2131363054_res_0x7f0a04ee"/>
+</com.huawei.ui.commonui.cardview.HealthCardView>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.healthcloud.plugintrack.ui.view.ToolsLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    id="@+id/sport_control_layout"
+    visibility="2"
+    layout_width="-1"
+    layout_height="-1">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        layout_gravity="0x51"
+        id="@+id/bottom_panel"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginBottom="@dimen/_2131362369_res_0x7f0a0241">
+        <ImageButton
+            id="@+id/switch_camera_in_sport_button"
+            background="@drawable/_2131430736_res_0x7f0b0d50"
+            layout_width="-2"
+            layout_height="-2"
+            importantForAccessibility="1"
+            layout_marginEnd="@dimen/_2131363116_res_0x7f0a052c"
+            NOT_FOUND_0xb="0"
+            NOT_FOUND_0xc="0"
+            NOT_FOUND_0xe="0"/>
+        <com.huawei.healthcloud.plugintrack.ui.view.CircleProgressButton
+            id="@+id/sport_control_button"
+            focusable="true"
+            layout_width="-2"
+            layout_height="-2"
+            contentDescription="@string/_2130839840_res_0x7f020920"
+            importantForAccessibility="1"
+            NOT_FOUND_0xb="0"
+            NOT_FOUND_0xc="0"
+            NOT_FOUND_0xd="0"
+            NOT_FOUND_0xe="0"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.huawei.healthcloud.plugintrack.ui.view.ToolsLayout>

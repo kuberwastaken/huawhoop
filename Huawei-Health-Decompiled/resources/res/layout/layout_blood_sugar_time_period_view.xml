@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365501_res_0x7f0a0e7d"
+        textColor="@color/_2131299845_res_0x7f090e05"
+        id="@+id/title"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginBottom="@dimen/_2131362578_res_0x7f0a0312"
+        text="@string/_2130846244_res_0x7f022224"
+        fontFamily="@string/_2130852833_res_0x7f023be1"
+        paddingHorizontal="@dimen/_2131365478_res_0x7f0a0e66"/>
+    <LinearLayout
+        orientation="0"
+        id="@+id/layout_time_period_items"
+        background="@drawable/_2131431875_res_0x7f0b11c3"
+        paddingTop="@dimen/_2131362577_res_0x7f0a0311"
+        paddingBottom="@dimen/_2131362577_res_0x7f0a0311"
+        layout_width="-1"
+        layout_height="-2"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365502_res_0x7f0a0e7e"
+        textColor="@color/_2131296543_res_0x7f09011f"
+        id="@+id/text_view_time_period_description"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131362012_res_0x7f0a00dc"
+        fontFamily="@string/_2130852834_res_0x7f023be2"
+        layout_marginHorizontal="@dimen/_2131365478_res_0x7f0a0e66"/>
+</merge>

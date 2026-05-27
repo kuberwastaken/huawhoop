@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    gravity="0x11"
+    layout_gravity="0x11"
+    background="@color/_2131299659_res_0x7f090d4b"
+    layout_width="-2"
+    layout_height="-2"
+    elevation="12dp">
+    <View
+        id="@+id/track_share_all_white"
+        layout_width="-1"
+        layout_height="0dp"
+        layout_alignParentTop="true"/>
+    <com.huawei.ui.commonui.scrollview.HealthScrollView
+        layout_gravity="0x11"
+        id="@+id/track_share_all_data_scroll"
+        scrollbars="0x0"
+        layout_width="250dp"
+        layout_height="400dp"
+        layout_below="@+id/track_share_all_white"
+        NOT_FOUND_0xc="true">
+        <com.huawei.healthcloud.plugintrack.ui.view.TrackShareViewGroup
+            id="@+id/track_scrollview_share"
+            clipChildren="false"
+            clipToPadding="false"
+            layout_width="-1"
+            layout_height="-2"/>
+    </com.huawei.ui.commonui.scrollview.HealthScrollView>
+</RelativeLayout>

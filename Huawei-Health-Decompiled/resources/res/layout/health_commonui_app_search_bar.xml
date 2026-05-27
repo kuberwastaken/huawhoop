@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    id="@+id/search_titlebar"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-2">
+    <View
+        id="@+id/statusbar_panel"
+        layout_width="-1"
+        layout_height="-2"
+        layout_alignParentTop="true"/>
+    <RelativeLayout
+        layout_gravity="0x10"
+        id="@+id/sug_activity_fit_search"
+        layout_width="-1"
+        layout_height="@dimen/_2131363961_res_0x7f0a0879"
+        layout_below="@+id/statusbar_panel"
+        layout_centerVertical="true">
+        <com.huawei.ui.commonui.searchview.HealthSearchView
+            ellipsize="4"
+            id="@+id/course_search_view"
+            layout_width="-1"
+            layout_height="-2"
+            layout_centerVertical="true"
+            NOT_FOUND_0x9="@layout/hwsearchview_back_icon_hint_search_view"
+            NOT_FOUND_0xa="@string/_2130843537_res_0x7f021791"
+            style="@style/Health.CommonUI.HealthSearchView.BackIcon"/>
+    </RelativeLayout>
+</RelativeLayout>

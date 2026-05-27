@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/configured_activity_layout"
+    layout_width="-2"
+    layout_height="-2">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/health_activity_header"
+        layout_width="-2"
+        layout_height="-2"
+        layerType="1"
+        NOT_FOUND_0x7="3"
+        NOT_FOUND_0x8="推荐活动"/>
+    <RelativeLayout
+        id="@+id/activity_recycler_view_layout"
+        descendantFocusability="2"
+        layout_width="-2"
+        layout_height="-2">
+        <com.huawei.ui.commonui.recycleview.HealthRecycleView
+            id="@+id/activity_recycle_view"
+            layout_width="-1"
+            layout_height="-2"
+            NOT_FOUND_0x6="false"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/multi_function_linear_layout"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/multi_function_sub_header"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xb="3"
+        NOT_FOUND_0xc="@string/_2130844374_res_0x7f021ad6"/>
+    <RelativeLayout
+        id="@+id/multi_function_relative_layout"
+        descendantFocusability="2"
+        layout_width="-2"
+        layout_height="-2">
+        <com.huawei.ui.commonui.viewpager.HealthViewPager
+            id="@+id/multi_function_view_pager"
+            layout_width="-1"
+            layout_height="-2"/>
+        <LinearLayout
+            id="@+id/multi_function_indicator_layout"
+            layout_width="-2"
+            layout_height="@dimen/_2131363063_res_0x7f0a04f7"
+            layout_below="@+id/multi_function_view_pager"
+            layout_alignParentBottom="true"
+            layout_centerHorizontal="true">
+            <com.huawei.ui.commonui.dotspageindicator.HealthDotsPageIndicator
+                layout_gravity="0x11"
+                id="@+id/multi_function_indicator"
+                layout_width="-2"
+                layout_height="-2"
+                NOT_FOUND_0x9="@color/_2131299950_res_0x7f090e6e"
+                NOT_FOUND_0xa="@color/_2131296680_res_0x7f0901a8"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

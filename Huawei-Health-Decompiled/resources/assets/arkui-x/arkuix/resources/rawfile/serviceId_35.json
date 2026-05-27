@@ -1,0 +1,23 @@
+{
+  "13": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "ecgAction",
+        "type": "bitmap",
+        "flagType": "number8",
+        "flagLen": 1,
+        "bitmapRule": [
+          {
+            "jsonKey": "ecg",
+            "bit": 0
+          },
+          {
+            "jsonKey": "ecgAna",
+            "bit": 1
+          }
+        ]
+      }
+    ]
+  }
+}

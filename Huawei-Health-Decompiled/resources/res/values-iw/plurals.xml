@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">ניתן להציג עד %1$d אינדיקטורים בגרף אחד.</item>
+        <item quantity="two">ניתן להציג עד %1$d אינדיקטורים בגרף אחד.</item>
+        <item quantity="many">ניתן להציג עד %1$d אינדיקטורים בגרף אחד.</item>
+        <item quantity="other">ניתן להציג עד %1$d אינדיקטורים בגרף אחד.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">רמת הגלוקוז בדם שלך צפויה לרדת אל מתחת ל-%2$s mmol/L בעוד דק&apos; %1$s. עקוב מקרוב אחר רמת הגלוקוז שלך.</item>
+        <item quantity="two">רמת הגלוקוז בדם שלך צפויה לרדת אל מתחת ל-%2$s mmol/L בעוד %1$s דק&apos;. עקוב מקרוב אחר רמת הגלוקוז שלך.</item>
+        <item quantity="many">רמת הגלוקוז בדם שלך צפויה לרדת אל מתחת ל-%2$s mmol/L בעוד %1$s דק&apos;. עקוב מקרוב אחר רמת הגלוקוז שלך.</item>
+        <item quantity="other">רמת הגלוקוז בדם שלך צפויה לרדת אל מתחת ל-%2$s mmol/L בעוד %1$s דק&apos;. עקוב מקרוב אחר רמת הגלוקוז שלך.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">רמת הגלוקוז בדם שלך צפויה לרדת אל מתחת ל-%2$s מ&quot;ג/ד&quot;ל בעוד דק&apos; %1$s. עקוב מקרוב אחר רמת הגלוקוז שלך.</item>
+        <item quantity="two">רמת הגלוקוז בדם שלך צפויה לרדת אל מתחת ל-%2$s מ&quot;ג/ד&quot;ל בעוד %1$s דק&apos;. עקוב מקרוב אחר רמת הגלוקוז שלך.</item>
+        <item quantity="many">רמת הגלוקוז בדם שלך צפויה לרדת אל מתחת ל-%2$s מ&quot;ג/ד&quot;ל בעוד %1$s דק&apos;. עקוב מקרוב אחר רמת הגלוקוז שלך.</item>
+        <item quantity="other">רמת הגלוקוז בדם שלך צפויה לרדת אל מתחת ל-%2$s מ&quot;ג/ד&quot;ל בעוד %1$s דק&apos;. עקוב מקרוב אחר רמת הגלוקוז שלך.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">צעד ‪‎%d‬</item>
+        <item quantity="two">‪‎%d‬ צעדים</item>
+        <item quantity="many">‪‎%d‬ צעדים</item>
+        <item quantity="other">‪‎%d‬ צעדים</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s מייל</item>
+        <item quantity="two">%s מייל</item>
+        <item quantity="many">%s מייל</item>
+        <item quantity="other">%s מייל</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s ק&quot;מ</item>
+        <item quantity="two">%s ק&quot;מ</item>
+        <item quantity="many">%s ק&quot;מ</item>
+        <item quantity="other">%s ק&quot;מ</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">במרחק צעד %1$s</item>
+        <item quantity="two">במרחק %1$s צעדים</item>
+        <item quantity="many">במרחק %1$s צעדים</item>
+        <item quantity="other">במרחק %1$s צעדים</item>
+    </plurals>
+</resources>

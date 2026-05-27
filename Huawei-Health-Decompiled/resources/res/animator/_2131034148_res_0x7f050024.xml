@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@interpolator/_2131689479_res_0x7f0f0007"
+    android:ordering="together">
+    <objectAnimator
+        android:duration="@integer/_2131623978_res_0x7f0e002a"
+        android:valueFrom="M0.48,0.28 a0.20,0.20 0 0 1 0,0.40 a0.20,0.20 0 0 1 0,-0.40 v0.02 a0.18,0.18 0 0 0 0,0.36                            a0.18,0.18 0 0 0 0,-0.36z"
+        android:valueTo="M0.48,0.28 a0.20,0.20 0 0 1 0,0.40 a0.20,0.20 0 0 1 0,-0.40 v0.20 a0,0 0 0 0 0,0 a0,0 0 0 0 0,                          0z"
+        android:valueType="pathType"
+        android:propertyName="pathData"/>
+</set>

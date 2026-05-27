@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    paddingTop="@dimen/_2131363761_res_0x7f0a07b1"
+    paddingBottom="@dimen/_2131363761_res_0x7f0a07b1"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.button.HealthButton
+        layout_gravity="0x11"
+        id="@+id/course_get_more"
+        layout_width="-2"
+        text="@string/IDS_device_health_expand"
+        style="@style/health_button_style_borderless"/>
+</LinearLayout>

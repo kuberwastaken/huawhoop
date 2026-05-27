@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="0"
+    background="@drawable/popup_window_background"
+    layout_width="-2"
+    layout_height="-2">
+    <com.huawei.ui.main.stories.fitness.views.heartrate.DayHeartRateDoubleViewHorizontalDataObserverView
+        id="@+id/day_heartrate_muti_data_view"
+        layout_width="-2"
+        layout_height="-2"/>
+</LinearLayout>

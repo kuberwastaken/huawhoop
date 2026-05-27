@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    layout_gravity="0x800003"
+    id="@+id/select_dialog_listview"
+    scrollbars="0x200"
+    fadingEdge="0x0"
+    clipToPadding="false"
+    layout_width="-1"
+    layout_height="-1"
+    cacheColorHint="@null"
+    divider="@android:drawable/divider_horizontal_bright"
+    overScrollMode="1"
+    textAlignment="5"
+    NOT_FOUND_0xb="@dimen/_2131363593_res_0x7f0a0709"
+    NOT_FOUND_0xc="@dimen/_2131363594_res_0x7f0a070a"
+    class="com.huawei.hms.update.ui.HwAlertController$RecycleListView"
+    style="@style/HwCloudListView"/>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.numberpicker.HealthNumberPicker
+        id="@+id/remind_number_picker"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x3="@drawable/_2131431345_res_0x7f0b0fb1"/>
+</LinearLayout>

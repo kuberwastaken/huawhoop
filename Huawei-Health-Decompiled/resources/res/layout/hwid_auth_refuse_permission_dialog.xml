@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    background="@android:color/transparent"
+    paddingLeft="16dp"
+    paddingTop="16dp"
+    paddingRight="16dp"
+    layout_width="-1"
+    layout_height="-2"
+    paddingStart="16dp"
+    paddingEnd="16dp">
+    <TextView
+        textSize="16sp"
+        textColor="@color/_2131298468_res_0x7f0908a4"
+        id="@+id/text1"
+        layout_width="-1"
+        layout_height="-2"
+        lineSpacingMultiplier="1.1"/>
+    <TextView
+        textSize="14sp"
+        textColor="@color/_2131298468_res_0x7f0908a4"
+        id="@+id/text2"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="8dp"
+        lineSpacingMultiplier="1.1"/>
+</LinearLayout>

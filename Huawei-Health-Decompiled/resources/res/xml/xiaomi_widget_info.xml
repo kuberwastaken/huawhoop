@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    minWidth="@dimen/_2131362918_res_0x7f0a0466"
+    minHeight="@dimen/_2131362918_res_0x7f0a0466"
+    updatePeriodMillis="1800000"
+    initialLayout="@layout/layout_xiaomi_widget_loading"
+    previewImage="@drawable/ic_xiaomi_widget_preview2x2"
+    resizeMode="0x0"/>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.healthcloud.plugintrack.trackanimation.trackalbum.photoselect.ui.SquareRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-2">
+    <FrameLayout
+        layout_width="-1"
+        layout_height="-1">
+        <ImageView
+            id="@+id/ivPicture"
+            layout_width="-1"
+            layout_height="-1"
+            scaleType="6"/>
+        <com.huawei.ui.commonui.checkbox.HealthCheckBox
+            layout_gravity="0x800055"
+            id="@+id/image_select_cb"
+            layout_width="-2"
+            layout_height="-2"
+            layout_marginBottom="@dimen/_2131364646_res_0x7f0a0b26"
+            layout_marginEnd="@dimen/_2131364646_res_0x7f0a0b26"
+            style="@style/Health.CommonUI.HealthCheckBox.Normal"/>
+        <View
+            layout_gravity="0x800055"
+            id="@+id/btnCheck"
+            layout_width="@dimen/_2131362041_res_0x7f0a00f9"
+            layout_height="@dimen/_2131362041_res_0x7f0a00f9"/>
+    </FrameLayout>
+</com.huawei.healthcloud.plugintrack.trackanimation.trackalbum.photoselect.ui.SquareRelativeLayout>

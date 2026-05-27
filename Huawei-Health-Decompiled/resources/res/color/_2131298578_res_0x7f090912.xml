@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        state_enabled="false"
+        color="@color/_2131297641_res_0x7f090569"
+        alpha="@dimen/_2131362658_res_0x7f0a0362"/>
+    <item
+        state_pressed="true"
+        color="@color/_2131297641_res_0x7f090569"/>
+    <item
+        state_checked="true"
+        color="@color/_2131297641_res_0x7f090569"/>
+    <item color="@color/_2131297641_res_0x7f090569"/>
+</selector>

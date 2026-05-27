@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        state_selected="true"
+        drawable="@drawable/model_device_ic_free_selected"/>
+    <item
+        state_focused="true"
+        drawable="@drawable/rope_device_ic_free_pressed"/>
+    <item
+        state_pressed="true"
+        drawable="@drawable/rope_device_ic_free_pressed"/>
+    <item drawable="@drawable/rope_device_ic_free_regular"/>
+</selector>

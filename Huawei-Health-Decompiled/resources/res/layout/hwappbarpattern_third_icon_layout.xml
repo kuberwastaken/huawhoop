@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/hwappbarpattern_layout_third_icon"
+    layout_width="-2"
+    layout_height="-1">
+    <com.huawei.uikit.hwimageview.widget.HwImageView
+        layout_gravity="0x11"
+        id="@+id/hwappbarpattern_third_icon"
+        background="@drawable/_2131428958_res_0x7f0b065e"
+        visibility="2"
+        layout_width="-2"
+        layout_height="@dimen/_2131363965_res_0x7f0a087d"
+        scaleType="7"
+        paddingStart="@dimen/_2131363964_res_0x7f0a087c"
+        paddingEnd="@dimen/_2131363964_res_0x7f0a087c"/>
+</LinearLayout>

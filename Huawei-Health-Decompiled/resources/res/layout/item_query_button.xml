@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.button.HealthButton xmlns:android="http://schemas.android.com/apk/res/android"
+    textSize="@dimen/_2131365485_res_0x7f0a0e6d"
+    textColor="@color/_2131299850_res_0x7f090e0a"
+    gravity="0x11"
+    id="@+id/btn_text"
+    background="@drawable/_2131431085_res_0x7f0b0ead"
+    layout_width="-1"
+    layout_height="-2"
+    minWidth="@dimen/_2131363116_res_0x7f0a052c"
+    minHeight="@dimen/_2131362488_res_0x7f0a02b8"
+    layout_weight="1"
+    paddingStart="@dimen/_2131362372_res_0x7f0a0244"
+    paddingEnd="@dimen/_2131362371_res_0x7f0a0243"/>

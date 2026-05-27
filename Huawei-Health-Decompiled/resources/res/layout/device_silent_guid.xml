@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-1">
+    <LinearLayout
+        orientation="1"
+        layout_width="-1"
+        layout_height="-1"
+        layout_above="@+id/hw_device_silent_ok_layout">
+        <com.huawei.ui.commonui.recycleview.HealthRecycleView
+            id="@+id/rc_card_silent_list"
+            layout_width="-1"
+            layout_height="-1"/>
+    </LinearLayout>
+    <com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout
+        orientation="1"
+        id="@+id/hw_device_silent_ok_layout"
+        layout_width="-1"
+        layout_height="-2"
+        layout_alignParentBottom="true"
+        layout_centerHorizontal="true"
+        NOT_FOUND_0xd="1">
+        <com.huawei.ui.commonui.button.HealthButton
+            gravity="0x11"
+            layout_gravity="0x11"
+            id="@+id/hw_device_silent_ok"
+            layout_width="-2"
+            layout_height="-2"
+            layout_marginBottom="@dimen/_2131362369_res_0x7f0a0241"
+            text="@string/_2130842137_res_0x7f021219"
+            fontFamily="HwChinese"
+            style="@style/health_button_style_emphasize"/>
+    </com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout>
+</RelativeLayout>

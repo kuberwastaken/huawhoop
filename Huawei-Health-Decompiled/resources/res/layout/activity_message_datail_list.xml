@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131299327_res_0x7f090bff"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/message_detail_title"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x8="2"
+        NOT_FOUND_0x9="@string/_2130842870_res_0x7f0214f6"/>
+    <ListView
+        id="@+id/items_detail_listView"
+        scrollbars="0x0"
+        layout_width="-1"
+        layout_height="-1"
+        listSelector="@android:color/transparent"
+        divider="@null"/>
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">%1$d ਤੱਕ ਸੰਕੇਤਕ ਇੱਕ ਗ੍ਰਾਫ਼ ਵਿੱਚ ਦਿਖਾਇਆ ਜਾ ਸਕਦਾ ਹੈ।</item>
+        <item quantity="other">%1$d ਤੱਕ ਸੰਕੇਤਕ ਇੱਕ ਗ੍ਰਾਫ਼ ਵਿੱਚ ਦਿਖਾਏ ਜਾ ਸਕਦੇ ਹਨ।</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d ਕਦਮ</item>
+        <item quantity="other">%d ਕਦਮ</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s ਮੀਲ</item>
+        <item quantity="other">%s ਮੀਲ</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s ਕਿਲੋਮੀਟਰ</item>
+        <item quantity="other">%s ਕਿਲੋਮੀਟਰ</item>
+    </plurals>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/section_sub_header"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xc="false"
+        NOT_FOUND_0xd="3"/>
+    <com.huawei.ui.commonui.cardview.HealthCardView
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginStart="@dimen/_2131362372_res_0x7f0a0244"
+        layout_marginEnd="@dimen/_2131362371_res_0x7f0a0243">
+        <com.huawei.ui.commonui.recycleview.HealthRecycleView
+            id="@+id/simple_list_view"
+            background="@drawable/configured_item_image_text_background"
+            paddingTop="@dimen/_2131363112_res_0x7f0a0528"
+            paddingBottom="@dimen/_2131363112_res_0x7f0a0528"
+            layout_width="-1"
+            layout_height="-2"
+            paddingStart="@dimen/_2131362013_res_0x7f0a00dd"
+            paddingEnd="@dimen/_2131362011_res_0x7f0a00db"
+            NOT_FOUND_0xb="2"/>
+    </com.huawei.ui.commonui.cardview.HealthCardView>
+</LinearLayout>

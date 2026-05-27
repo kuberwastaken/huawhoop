@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <LinearLayout
+        orientation="1"
+        id="@+id/lin_combine_product"
+        layout_width="-1"
+        layout_height="-2"/>
+    <LinearLayout
+        orientation="1"
+        id="@+id/lin_giveaway"
+        layout_width="-1"
+        layout_height="-2"/>
+</LinearLayout>

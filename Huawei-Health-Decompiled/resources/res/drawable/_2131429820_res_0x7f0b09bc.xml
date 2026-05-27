@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        state_enabled="false"
+        drawable="@drawable/_2131429831_res_0x7f0b09c7"/>
+    <item drawable="@drawable/_2131429830_res_0x7f0b09c6"/>
+</animated-selector>

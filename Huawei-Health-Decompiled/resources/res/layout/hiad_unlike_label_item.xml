@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    textSize="@dimen/_2131363304_res_0x7f0a05e8"
+    textColor="@color/_2131298044_res_0x7f0906fc"
+    ellipsize="3"
+    id="@+id/label_title"
+    background="@drawable/_2131428714_res_0x7f0b056a"
+    paddingTop="@dimen/_2131363373_res_0x7f0a062d"
+    paddingBottom="@dimen/_2131363373_res_0x7f0a062d"
+    layout_width="-2"
+    layout_height="-2"
+    lines="1"
+    fontFamily="HwChinese-regular"
+    paddingStart="@dimen/_2131363384_res_0x7f0a0638"
+    paddingEnd="@dimen/_2131363384_res_0x7f0a0638"/>

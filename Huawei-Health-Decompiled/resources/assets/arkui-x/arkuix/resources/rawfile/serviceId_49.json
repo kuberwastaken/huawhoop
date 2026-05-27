@@ -1,0 +1,322 @@
+{
+  "1": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "action",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "voicekit_status",
+        "type": "array",
+        "elemType": "number8",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "compress",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "sampling_rate",
+        "type": "number16",
+        "optional": true
+      },
+      {
+        "tag": 5,
+        "jsonKey": "channel_num",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 6,
+        "jsonKey": "tts_switch",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 7,
+        "jsonKey": "EMUI_band_version",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 8,
+        "jsonKey": "voicekit_version",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 9,
+        "jsonKey": "language",
+        "type": "string",
+        "optional": true,
+        "allowEmpty": true
+      },
+      {
+        "tag": 10,
+        "jsonKey": "ai_volume",
+        "type": "number8",
+        "optional": true
+      }
+    ],
+    "encode": [
+      {
+        "tag": 2,
+        "jsonKey": "voicekit_status",
+        "type": "array",
+        "elemType": "number8"
+      },
+      {
+        "tag": 8,
+        "jsonKey": "voicekit_version",
+        "type": "number8",
+        "optional": true
+      }
+    ]
+  },
+  "2": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "psn",
+        "type": "number16"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "module_content",
+        "type": "array",
+        "elemType": "number8"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "sdk_category",
+        "type": "number8"
+      }
+    ]
+  },
+  "3": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "content",
+        "type": "array",
+        "elemType": "number8",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "speech_end",
+        "type": "number8",
+        "optional": true
+      }
+    ]
+  },
+  "4": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "display_asr",
+        "type": "array",
+        "elemType": "number8",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "display_text",
+        "type": "array",
+        "elemType": "number8",
+        "optional": true
+      }
+    ]
+  },
+  "5": {
+    "default": [
+      {
+        "tag":1,
+        "jsonKey": "command_code",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "app_name",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "type",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "weeks",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 5,
+        "jsonKey": "time",
+        "type": "number16",
+        "optional": true
+      },
+      {
+        "tag": 6,
+        "jsonKey": "distance",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 7,
+        "jsonKey": "indoor_or_not",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 8,
+        "jsonKey": "music_code",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 9,
+        "jsonKey": "contact_list",
+        "type": "anonArray",
+        "optional": true,
+        "rule": [
+          {
+            "tag": 10,
+            "jsonKey": "contact_name",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "tag": 11,
+            "jsonKey": "contact_num",
+            "type": "string",
+            "optional": true
+          }
+        ]
+      },
+      {
+        "tag": 12,
+        "jsonKey": "calorie",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 13,
+        "jsonKey": "duration",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 14,
+        "jsonKey": "trip",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 15,
+        "jsonKey": "timer_code",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 16,
+        "jsonKey": "timer_duration",
+        "type": "number32",
+        "optional": true
+      },{
+        "tag": 17,
+        "jsonKey": "skip_amount",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 18,
+        "jsonKey": "setting_item",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 19,
+        "jsonKey": "opt_code",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 20,
+        "jsonKey": "media_type",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 21,
+        "jsonKey": "opt_type",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 22,
+        "jsonKey": "volume_type",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 23,
+        "jsonKey": "set_value",
+        "type": "string",
+        "optional": true
+      }
+    ]
+  },
+  "6": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "action",
+        "type": "number8"
+      }
+    ]
+  },
+  "7": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "result_code",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "stop_tts",
+        "type": "number8",
+        "optional": true
+      }
+    ]
+  },
+  "9": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "domain_id",
+        "type": "string"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "subdomain_id",
+        "type": "string"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "intent_id",
+        "type": "string"
+      }
+    ]
+  }
+}

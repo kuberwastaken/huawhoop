@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.scrollview.HealthScrollView
+        id="@+id/open_service_scroll_view"
+        layout_width="-1"
+        layout_height="-1"
+        NOT_FOUND_0xa="false">
+        <com.huawei.ui.openservice.ui.ScrollGridView
+            gravity="0x11"
+            id="@+id/open_service_grid_view"
+            layout_width="-1"
+            layout_height="-2"
+            layout_marginTop="16dp"
+            horizontalSpacing="12dp"
+            verticalSpacing="12dp"
+            numColumns="2"
+            layout_marginStart="@dimen/_2131362372_res_0x7f0a0244"
+            layout_marginEnd="@dimen/_2131362371_res_0x7f0a0243"/>
+    </com.huawei.ui.commonui.scrollview.HealthScrollView>
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        icon="@drawable/ic_btn_run"
+        enabled="true"
+        shortcutId="SC_EXERCISE"
+        shortcutShortLabel="@string/IDS_hw_shortcuts_start_exercise"
+        shortcutLongLabel="@string/IDS_hw_shortcuts_start_exercise"
+        shortcutDisabledMessage="@string/IDS_hw_shortcuts_disable">
+        <intent
+            targetPackage="com.huawei.health"
+            action="android.intent.action.VIEW"
+            data="SC_EXERCISE"
+            targetClass="com.huawei.health.ShortcutsActivity"/>
+    </shortcut>
+    <shortcut
+        icon="@drawable/ic_btn_device"
+        enabled="true"
+        shortcutId="SC_DEVICE"
+        shortcutShortLabel="@string/IDS_hw_shortcuts_my_device"
+        shortcutLongLabel="@string/IDS_hw_shortcuts_my_device"
+        shortcutDisabledMessage="@string/IDS_hw_shortcuts_disable">
+        <intent
+            targetPackage="com.huawei.health"
+            action="android.intent.action.VIEW"
+            data="SC_DEVICE"
+            targetClass="com.huawei.health.ShortcutsActivity"/>
+    </shortcut>
+</shortcuts>

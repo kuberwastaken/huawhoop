@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/root_view_layout"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/section_sub_header"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x5="false"
+        NOT_FOUND_0x6="3"
+        NOT_FOUND_0x7="推荐课程"/>
+    <LinearLayout
+        id="@+id/section16_9series_01_recycler_layout"
+        layout_width="-1"
+        layout_height="-2">
+        <com.huawei.ui.commonui.recycleview.HealthRecycleView
+            id="@+id/section16_9series_01_recycler_view"
+            layout_width="-1"
+            layout_height="-2"
+            NOT_FOUND_0x4="2"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    gravity="0x1"
+    id="@+id/track_main_pad_guide_bg"
+    background="@color/_2131298202_res_0x7f09079a"
+    visibility="2"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.illustration.IllustrationView
+        id="@+id/track_main_pad_guide_img"
+        visibility="2"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131362377_res_0x7f0a0249"
+        layout_centerHorizontal="true"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131362715_res_0x7f0a039b"
+        textColor="@color/_2131297527_res_0x7f0904f7"
+        id="@+id/track_main_pad_guide_txt"
+        visibility="2"
+        layout_width="-2"
+        layout_height="-2"
+        text="@string/_2130844525_res_0x7f021b6d"
+        layout_below="@+id/track_main_pad_guide_img"
+        layout_centerInParent="true"
+        fontFamily="@string/_2130852834_res_0x7f023be2"/>
+    <com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout
+        gravity="0x11"
+        orientation="1"
+        layout_width="-1"
+        layout_height="-2"
+        layout_alignParentBottom="true"
+        layout_centerHorizontal="true"
+        NOT_FOUND_0x11="1">
+        <com.huawei.ui.commonui.button.HealthButton
+            id="@+id/track_main_pad_guide_btn"
+            visibility="2"
+            layout_width="-2"
+            layout_height="-2"
+            layout_marginBottom="@dimen/_2131362369_res_0x7f0a0241"
+            text="@string/_2130841486_res_0x7f020f8e"
+            layout_centerInParent="true"
+            style="@style/health_button_style_emphasize"/>
+    </com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout>
+</RelativeLayout>

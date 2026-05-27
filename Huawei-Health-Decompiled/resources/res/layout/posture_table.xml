@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.tablewidget.HealthTableWidget
+        id="@+id/pace_table_layout"
+        visibility="2"
+        layout_width="-1"
+        layout_height="0dp"
+        layout_marginTop="18dp"
+        layout_weight="1"
+        layout_marginStart="@dimen/_2131364901_res_0x7f0a0c25"
+        layout_marginEnd="@dimen/_2131364900_res_0x7f0a0c24"
+        NOT_FOUND_0x8="4dp"
+        NOT_FOUND_0x9="false"
+        NOT_FOUND_0xa="false"/>
+</LinearLayout>

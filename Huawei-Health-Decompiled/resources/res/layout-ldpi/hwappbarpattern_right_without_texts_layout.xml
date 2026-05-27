@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    gravity="0x50"
+    id="@+id/hwappbarpattern_right_texts_layout"
+    paddingBottom="@dimen/_2131363979_res_0x7f0a088b"
+    layout_width="-2"
+    layout_height="-2"
+    maxWidth="@dimen/_2131364009_res_0x7f0a08a9"
+    minHeight="@dimen/_2131363961_res_0x7f0a0879"
+    paddingStart="@dimen/_2131362647_res_0x7f0a0357"
+    paddingEnd="@dimen/_2131362646_res_0x7f0a0356">
+    <com.huawei.uikit.hwtextview.widget.HwTextView
+        textSize="@dimen/_2131362732_res_0x7f0a03ac"
+        textColor="@color/_2131297204_res_0x7f0903b4"
+        ellipsize="3"
+        id="@+id/hwappbarpattern_title"
+        layout_width="-2"
+        layout_height="-2"
+        maxWidth="@dimen/_2131364010_res_0x7f0a08aa"
+        maxLines="1"
+        fontFamily="@string/_2130851947_res_0x7f02386b"
+        layout_alignParentStart="true"
+        NOT_FOUND_0xf="@dimen/_2131362734_res_0x7f0a03ae"
+        NOT_FOUND_0x10="1sp"/>
+</RelativeLayout>

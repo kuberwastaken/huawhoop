@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.recycleview.HealthRecycleView
+        id="@+id/recycler_view"
+        scrollbars="0x200"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xe="2"/>
+    <LinearLayout
+        gravity="0x1"
+        orientation="1"
+        id="@+id/no_pace_layout"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginStart="@dimen/_2131364901_res_0x7f0a0c25"
+        layout_marginEnd="@dimen/_2131364900_res_0x7f0a0c24">
+        <ImageView
+            layout_gravity="0x11"
+            id="@+id/img_no_pace"
+            background="@drawable/_2131432353_res_0x7f0b13a1"
+            layout_width="@dimen/_2131363758_res_0x7f0a07ae"
+            layout_height="@dimen/_2131363758_res_0x7f0a07ae"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+            textColor="@color/_2131299850_res_0x7f090e0a"
+            layout_width="-2"
+            layout_height="-2"
+            text="@string/_2130839892_res_0x7f020954"/>
+    </LinearLayout>
+    <LinearLayout
+        orientation="1"
+        id="@+id/layout_marketing"
+        layout_width="-1"
+        layout_height="-2"/>
+</LinearLayout>

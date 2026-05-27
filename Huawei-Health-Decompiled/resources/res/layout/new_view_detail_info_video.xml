@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    background="@color/_2131296947_res_0x7f0902b3"
+    layout_width="-1"
+    layout_height="-2">
+    <FrameLayout
+        id="@+id/surface_view"
+        layout_width="-1"
+        layout_height="-2"/>
+    <com.huawei.ui.commonui.progressbar.HealthProgressBar
+        id="@+id/state_progressBar"
+        visibility="2"
+        layout_width="-2"
+        layout_height="-2"
+        scaleType="3"
+        layout_centerInParent="true"
+        style="@style/hw_health_progressbar_style_large"/>
+    <ImageView
+        id="@+id/item_iv"
+        layout_width="-1"
+        layout_height="-2"
+        adjustViewBounds="true"/>
+</RelativeLayout>

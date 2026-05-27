@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365482_res_0x7f0a0e6a"
+        textColor="@color/_2131299845_res_0x7f090e05"
+        id="@+id/sug_dialog_title"
+        layout_width="-2"
+        layout_height="-2"
+        text="@string/_2130849614_res_0x7f022f4e"
+        fontFamily="@string/_2130852834_res_0x7f023be2"/>
+    <LinearLayout
+        orientation="0"
+        id="@+id/sug_privacy_layout"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131365454_res_0x7f0a0e4e">
+        <com.huawei.ui.commonui.checkbox.HealthCheckBox
+            id="@+id/sug_privacy_dialog_box"
+            layout_width="-2"
+            layout_height="-2"
+            checked="false"
+            style="@style/health_checkbox_style"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+            textColor="@color/_2131299850_res_0x7f090e0a"
+            layout_gravity="0x10"
+            id="@+id/sug_privacy_text"
+            layout_width="-2"
+            layout_height="-2"
+            text="@string/_2130841789_res_0x7f0210bd"
+            fontFamily="@string/_2130852834_res_0x7f023be2"
+            layout_marginStart="@dimen/_2131365393_res_0x7f0a0e11"/>
+    </LinearLayout>
+</LinearLayout>

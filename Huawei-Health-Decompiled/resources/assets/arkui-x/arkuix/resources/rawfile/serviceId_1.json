@@ -1,0 +1,543 @@
+{
+  "7": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "BT_version",
+        "type": "empty",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "device_type",
+        "type": "empty",
+        "optional": true
+      },
+      {
+        "tag": 7,
+        "jsonKey": "device_soft_version",
+        "type": "empty",
+        "optional": true
+      },
+      {
+        "tag": 10,
+        "jsonKey": "device_model",
+        "type": "empty",
+        "optional": true
+      },
+      {
+        "tag": 15,
+        "jsonKey": "device_ota_package_name",
+        "type": "empty",
+        "optional": true
+      },
+      {
+        "tag": 17,
+        "jsonKey": "cert_model",
+        "type": "empty",
+        "optional": true
+      },
+      {
+        "tag": 27,
+        "jsonKey": "sport_version",
+        "type": "empty",
+        "optional": true
+      },
+      {
+        "tag": 31,
+        "jsonKey": "device_factory_reset",
+        "type": "empty",
+        "optional": true
+      },
+      {
+        "tag": 39,
+        "jsonKey": "device_ota_signature_length",
+        "type": "empty",
+        "optional": true
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "BT_version",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "device_type",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 7,
+        "jsonKey": "device_soft_version",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 10,
+        "jsonKey": "device_model",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 15,
+        "jsonKey": "device_ota_package_name",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 17,
+        "jsonKey": "cert_model",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 27,
+        "jsonKey": "sport_version",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 31,
+        "jsonKey": "device_factory_reset",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 39,
+        "jsonKey": "device_ota_signature_length",
+        "type": "number16",
+        "optional": true
+      }
+    ]
+  },
+  "8": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "battery_percent",
+        "type": "empty",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "other_battery_percent",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "battery_charging_state",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "low_battery_threshold",
+        "type": "number8",
+        "optional": true
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "battery_percent",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "other_battery_percent",
+        "type": "array",
+        "elemType": "number8",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "battery_charging_state",
+        "type": "array",
+        "elemType": "number8",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "low_battery_threshold",
+        "type": "array",
+        "elemType": "number8",
+        "optional": true
+      }
+    ]
+  },
+  "9": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "auto_light_screen_enable",
+        "type": "number8",
+        "optional": true
+      }
+    ],
+    "decode": []
+  },
+  "16": {
+    "encode": [
+      {
+        "tag": 4,
+        "jsonKey": "handset_model",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 15,
+        "jsonKey": "handset_app_type",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 16,
+        "jsonKey": "handset_emui_version",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 17,
+        "jsonKey": "handset_app_version_code",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 19,
+        "jsonKey": "handset_ohos_enable",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 20,
+        "jsonKey": "handset_ohos_api_version",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 21,
+        "jsonKey": "handset_ohos_version",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 22,
+        "jsonKey": "phone_capability",
+        "type": "array",
+        "elemType": "number8",
+        "optional": true
+      }
+    ],
+    "decode": [
+      {
+        "tag": 15,
+        "jsonKey": "handset_app_type",
+        "type": "empty",
+        "optional": true
+      },
+      {
+        "tag": 16,
+        "jsonKey": "handset_emui_version",
+        "type": "empty",
+        "optional": true
+      },
+      {
+        "tag": 17,
+        "jsonKey": "handset_app_version_code",
+        "type": "empty",
+        "optional": true
+      },
+      {
+        "tag": 19,
+        "jsonKey": "handset_ohos_enable",
+        "type": "empty",
+        "optional": true
+      },
+      {
+        "tag": 20,
+        "jsonKey": "handset_ohos_api_version",
+        "type": "empty",
+        "optional": true
+      },
+      {
+        "tag": 21,
+        "jsonKey": "handset_ohos_version",
+        "type": "empty",
+        "optional": true
+      },
+      {
+        "tag": 22,
+        "jsonKey": "phone_capability",
+        "type": "empty",
+        "optional": true
+      }
+    ]
+  },
+  "23": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "package_name",
+        "type": "string"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "class_name",
+        "type": "string"
+      }
+    ]
+  },
+  "24": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "lockStatus",
+        "type": "empty"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "lockStatus",
+        "type": "number8"
+      }
+    ]
+  },
+  "41": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "camera_control",
+        "type": "number"
+      }
+    ],
+    "encode": [
+      {
+        "tag": 127,
+        "jsonKey": "errCode",
+        "type": "number32"
+      }
+    ]
+  },
+  "42": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "camera_state",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "support_cp",
+        "type": "number8",
+        "optional": true
+      }
+    ]
+  },
+  "46": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "declaration_URL",
+        "type": "string"
+      }
+    ]
+  },
+  "47": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "wifi_ssid",
+        "type": "string"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "wifi_password",
+        "type": "array",
+        "elemType": "number8"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "encode_type",
+        "type": "number8"
+      }
+    ]
+  },
+  "49": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "legalInfoState",
+        "type": "number8",
+        "optional": true,
+        "allowEmpty": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "deviceUploadDfx",
+        "type": "number8",
+        "optional": true,
+        "allowEmpty": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "smartWatchVersion",
+        "type": "number8",
+        "optional": true,
+        "allowEmpty": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "hmsCoreAutoUpdate",
+        "type": "number8",
+        "optional": true,
+        "allowEmpty": true
+      },
+      {
+        "tag": 5,
+        "jsonKey": "hmsCoreAutoUpdateWifi",
+        "type": "number8",
+        "optional": true,
+        "allowEmpty": true
+      },
+      {
+        "tag": 6,
+        "jsonKey": "hmsNotifyUpdate",
+        "type": "number8",
+        "optional": true,
+        "allowEmpty": true
+      }
+    ],
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "legalInfoState",
+        "type": "empty",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "deviceUploadDfx",
+        "type": "empty",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "smartWatchVersion",
+        "type": "empty",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "hmsCoreAutoUpdate",
+        "type": "empty",
+        "optional": true
+      },
+      {
+        "tag": 5,
+        "jsonKey": "hmsCoreAutoUpdateWifi",
+        "type": "empty",
+        "optional": true
+      },
+      {
+        "tag": 6,
+        "jsonKey": "hmsNotifyUpdate",
+        "type": "empty",
+        "optional": true
+      }
+    ]
+  },
+  "56": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "app_permission_query",
+        "type": "bitmap",
+        "flagType": "number16",
+        "flagLen": 2,
+        "bitmapRule": [
+          {
+            "jsonKey": "send_message",
+            "bit": 0
+          }
+        ]
+      },
+      {
+        "tag": 2,
+        "jsonKey": "app_permission_result",
+        "type": "bitmap",
+        "flagType": "number16",
+        "flagLen": 2,
+        "bitmapRule": [
+          {
+            "jsonKey": "send_message",
+            "bit": 0
+          }
+        ],
+        "optional": true
+      }
+    ]
+  },
+  "58": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "clone_preemption_type",
+        "type": "number8",
+        "optional": false
+      },
+      {
+        "tag": 2,
+        "jsonKey": "new_phone_bt_name",
+        "type": "string",
+        "optional": false
+      },
+      {
+        "tag": 4,
+        "jsonKey": "clone_app_capability",
+        "type": "number8",
+        "optional": false
+      }
+    ],
+    "decode": [
+      {
+        "tag": 3,
+        "jsonKey": "clone_user_confirm_result",
+        "type": "number8",
+        "optional": false
+      }
+    ]
+  },
+  "61": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "wearStatus",
+        "type": "number8"
+      }
+    ]
+  },
+  "63": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "capability",
+        "type": "array",
+        "elemType": "number8"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32",
+        "optional": true
+      }
+    ]
+  }
+}

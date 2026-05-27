@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" shape="0">
+    <solid color="@color/_2131297531_res_0x7f0904fb"/>
+    <corners
+        radius="@dimen/_2131363051_res_0x7f0a04eb"
+        topLeftRadius="@dimen/_2131362907_res_0x7f0a045b"
+        topRightRadius="@dimen/hw_cloud_dialog_corner_radius"
+        bottomLeftRadius="@dimen/_2131362907_res_0x7f0a045b"
+        bottomRightRadius="@dimen/hw_cloud_dialog_corner_radius"/>
+</shape>

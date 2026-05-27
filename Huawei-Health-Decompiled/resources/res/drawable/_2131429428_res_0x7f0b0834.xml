@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape shape="1">
+            <solid color="@color/_2131298475_res_0x7f0908ab"/>
+        </shape>
+    </item>
+    <item>
+        <selector>
+            <item
+                state_window_focused="false"
+                drawable="@android:color/transparent"/>
+            <item
+                state_pressed="true"
+                drawable="@drawable/_2131429432_res_0x7f0b0838"/>
+            <item
+                state_focused="true"
+                state_enabled="true"
+                drawable="@android:color/transparent"/>
+            <item
+                state_focused="true"
+                state_enabled="false"
+                drawable="@android:color/transparent"/>
+            <item
+                drawable="@drawable/_2131429432_res_0x7f0b0838"
+                state_hovered="true"/>
+            <item
+                state_focused="true"
+                drawable="@android:color/transparent"/>
+            <item
+                state_enabled="true"
+                drawable="@android:color/transparent"/>
+            <item drawable="@android:color/transparent"/>
+        </selector>
+    </item>
+</layer-list>

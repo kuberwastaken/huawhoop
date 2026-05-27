@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x11"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <TextView
+        ellipsize="3"
+        layout_gravity="0x10"
+        id="@+id/custom_action_bar_title"
+        layout_width="-1"
+        layout_height="-2"
+        maxLines="2"/>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item id="@+id/interval_card_shape_background">
+        <shape shape="0">
+            <corners radius="@dimen/_2131362970_res_0x7f0a049a"/>
+            <solid color="@android:color/transparent"/>
+        </shape>
+    </item>
+    <item id="@+id/interval_card_shape_gradient">
+        <shape shape="0">
+            <corners radius="@dimen/_2131362970_res_0x7f0a049a"/>
+            <gradient
+                startColor="@android:color/transparent"
+                endColor="@android:color/transparent"
+                angle="45"
+                type="0"
+                centerColor="@android:color/transparent"/>
+        </shape>
+    </item>
+</layer-list>

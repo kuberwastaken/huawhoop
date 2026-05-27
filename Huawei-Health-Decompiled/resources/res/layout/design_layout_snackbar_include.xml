@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view xmlns:android="http://schemas.android.com/apk/res/android"
+    theme="@style/ThemeOverlay.AppCompat.Dark"
+    layout_gravity="0x50"
+    layout_width="-1"
+    layout_height="-2"
+    class="com.google.android.material.snackbar.SnackbarContentLayout">
+    <TextView
+        textAppearance="@style/TextAppearance.Design.Snackbar.Message"
+        ellipsize="3"
+        layout_gravity="0x800013"
+        id="@+id/snackbar_text"
+        paddingLeft="@dimen/_2131362425_res_0x7f0a0279"
+        paddingTop="@dimen/_2131362426_res_0x7f0a027a"
+        paddingRight="@dimen/_2131362425_res_0x7f0a0279"
+        paddingBottom="@dimen/_2131362426_res_0x7f0a027a"
+        layout_width="-2"
+        layout_height="-2"
+        maxLines="@integer/_2131623946_res_0x7f0e000a"
+        layout_weight="1"
+        textAlignment="5"/>
+    <Button
+        textColor="?attr/_2131099964_res_0x7f06013c"
+        layout_gravity="0x800015"
+        id="@+id/snackbar_action"
+        visibility="2"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginLeft="@dimen/_2131362422_res_0x7f0a0276"
+        minWidth="48dp"
+        layout_marginStart="@dimen/_2131362422_res_0x7f0a0276"
+        style="?attr/_2131099813_res_0x7f0600a5"/>
+</view>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-2"
+    minHeight="@dimen/_2131364242_res_0x7f0a0992"
+    paddingStart="@dimen/_2131364233_res_0x7f0a0989"
+    paddingEnd="@dimen/_2131364233_res_0x7f0a0989">
+    <include
+        layout_gravity="0x10"
+        layout_width="-1"
+        layout_height="-2"
+        layout="@layout/hwdialogpattern_double_title_layout"/>
+</FrameLayout>

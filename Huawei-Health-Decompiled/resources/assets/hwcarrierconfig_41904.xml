@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<config>
+    <dict>
+        <string key="ODSA_ESURL">https://esmart.stc.com.kw/ts43</string>
+        <string key="ODSA_PROTOCOL">2</string>
+        <string key="ODSA_ES_VERSION">5</string>
+        <bool key="ODSA_SIMPLE_VERS">false</bool>
+        <bool key="ODSA_SUPPORT_CHANGE_MANAGE_SUBSCRIPTION">true</bool>
+    </dict>
+</config>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <LinearLayout
+        gravity="0x10"
+        orientation="1"
+        layout_width="-1"
+        layout_height="@dimen/_2131362376_res_0x7f0a0248"
+        layout_marginStart="@dimen/_2131362498_res_0x7f0a02c2"
+        layout_marginEnd="@dimen/_2131362498_res_0x7f0a02c2">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365501_res_0x7f0a0e7d"
+            textColor="@color/_2131299845_res_0x7f090e05"
+            id="@+id/htv_auto_records_title"
+            layout_width="-1"
+            layout_height="-2"
+            textAllCaps="true"
+            fontFamily="@string/_2130852833_res_0x7f023be1"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365502_res_0x7f0a0e7e"
+            textColor="@color/_2131299850_res_0x7f090e0a"
+            ellipsize="3"
+            id="@+id/htv_auto_records_time"
+            layout_width="-1"
+            layout_height="-2"
+            fontFamily="@string/_2130851948_res_0x7f02386c"
+            NOT_FOUND_0xd="@dimen/_2131363186_res_0x7f0a0572"
+            NOT_FOUND_0xe="@dimen/_2131363222_res_0x7f0a0596"/>
+    </LinearLayout>
+    <com.huawei.ui.commonui.recycleview.HealthRecycleView
+        id="@+id/hr_auto_records"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131362934_res_0x7f0a0476"
+        layout_marginStart="@dimen/_2131363112_res_0x7f0a0528"
+        layout_marginEnd="@dimen/_2131363112_res_0x7f0a0528"/>
+</LinearLayout>

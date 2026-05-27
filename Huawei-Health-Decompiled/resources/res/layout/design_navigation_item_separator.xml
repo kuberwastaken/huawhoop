@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-2">
+    <View
+        background="?android:attr/listDivider"
+        layout_width="-1"
+        layout_height="1dp"/>
+</FrameLayout>

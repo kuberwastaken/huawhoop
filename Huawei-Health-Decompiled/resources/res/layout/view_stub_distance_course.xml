@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-2"
+    layout_height="-2">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365495_res_0x7f0a0e77"
+        textColor="@color/_2131299847_res_0x7f090e07"
+        gravity="0x11"
+        id="@+id/distance_value_course"
+        layout_width="-2"
+        layout_height="-2"
+        text="@string/_2130852484_res_0x7f023a84"
+        fontFamily="@string/_2130852833_res_0x7f023be1"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131364616_res_0x7f0a0b08"
+        textColor="@color/_2131298740_res_0x7f0909b4"
+        id="@+id/distance_unit_course"
+        layout_width="-2"
+        layout_height="-2"
+        text="@string/_2130840473_res_0x7f020b99"
+        layout_alignBaseline="@+id/distance_value_course"
+        layout_marginStart="@dimen/_2131364632_res_0x7f0a0b18"
+        layout_toEndOf="@+id/distance_value_course"/>
+</RelativeLayout>

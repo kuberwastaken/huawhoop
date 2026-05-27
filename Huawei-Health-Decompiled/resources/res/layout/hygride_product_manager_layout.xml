@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_gravity="0x1"
+    orientation="1"
+    background="@color/_2131299970_res_0x7f090e82"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.scrollview.HealthScrollView
+        id="@+id/hygride_product_manager_scroll_view"
+        scrollbars="0x0"
+        layout_width="-1"
+        layout_height="-1">
+        <LinearLayout
+            orientation="1"
+            layout_width="-1"
+            layout_height="-1">
+            <include layout="@layout/hygride_view_weight_device_layout"/>
+            <com.huawei.ui.commonui.healthtextview.HealthTextView
+                textSize="@dimen/_2131365482_res_0x7f0a0e6a"
+                textColor="@color/_2131299845_res_0x7f090e05"
+                layout_width="-2"
+                layout_height="-2"
+                layout_marginTop="@dimen/_2131363844_res_0x7f0a0804"
+                layout_marginBottom="@dimen/_2131363844_res_0x7f0a0804"
+                text="@string/IDS_device_setting_other"
+                fontFamily="@string/_2130852833_res_0x7f023be1"
+                layout_marginStart="@dimen/_2131364901_res_0x7f0a0c25"/>
+            <com.huawei.health.device.ui.measure.view.ScrollViewForListView
+                id="@+id/list_device_setting"
+                focusable="true"
+                focusableInTouchMode="true"
+                scrollbars="0x0"
+                descendantFocusability="0"
+                layout_width="-1"
+                layout_height="-1"
+                divider="@null"
+                fillViewport="true"/>
+        </LinearLayout>
+    </com.huawei.ui.commonui.scrollview.HealthScrollView>
+</LinearLayout>

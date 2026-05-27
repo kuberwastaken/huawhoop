@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296979_res_0x7f0902d3"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/wirless_manager_title_bar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x11="2"
+        NOT_FOUND_0x12="@string/_2130849045_res_0x7f022d15"/>
+    <RelativeLayout
+        layout_width="-1"
+        layout_height="-1">
+        <com.huawei.ui.commonui.edittext.HealthEditText
+            textSize="@dimen/_2131365335_res_0x7f0a0dd7"
+            ellipsize="3"
+            gravity="0x10"
+            id="@+id/confirm_code"
+            layout_width="@dimen/_2131365329_res_0x7f0a0dd1"
+            layout_height="@dimen/_2131365328_res_0x7f0a0dd0"
+            layout_marginTop="8dp"
+            hint="@string/_2130849065_res_0x7f022d29"
+            singleLine="true"
+            layout_centerHorizontal="true"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="12dp"
+            textColor="@color/_2131296321_res_0x7f090041"
+            id="@+id/confirm_invilid_tips"
+            layout_width="-2"
+            layout_height="-2"
+            text="@string/_2130849026_res_0x7f022d02"
+            layout_below="@+id/confirm_code"
+            layout_marginStart="32dp"
+            layout_marginEnd="32dp"/>
+        <include layout="@layout/layout_back_next"/>
+    </RelativeLayout>
+</LinearLayout>

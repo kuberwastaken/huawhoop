@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <selector>
+            <item
+                state_enabled="false"
+                drawable="@drawable/_2131429068_res_0x7f0b06cc"/>
+            <item drawable="@drawable/_2131429071_res_0x7f0b06cf"/>
+        </selector>
+    </item>
+    <item>
+        <selector
+            enterFadeDuration="@integer/_2131623953_res_0x7f0e0011"
+            exitFadeDuration="@integer/_2131623953_res_0x7f0e0011">
+            <item
+                state_pressed="true"
+                drawable="@drawable/_2131429074_res_0x7f0b06d2"/>
+            <item drawable="@android:color/transparent"/>
+        </selector>
+    </item>
+</layer-list>

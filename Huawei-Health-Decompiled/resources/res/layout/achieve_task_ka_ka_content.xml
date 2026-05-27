@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-1">
+    <LinearLayout
+        id="@+id/back_kaka_mid_layout"
+        background="@color/_2131296374_res_0x7f090076"
+        layout_width="-1"
+        layout_height="-2"
+        minHeight="@dimen/_2131363641_res_0x7f0a0739"
+        paddingStart="@dimen/_2131362372_res_0x7f0a0244"
+        paddingEnd="@dimen/_2131362372_res_0x7f0a0244">
+        <include layout="@layout/achieve_task_ka_ka_content_child"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="-1"
+    paddingEnd="@dimen/_2131362576_res_0x7f0a0310">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365484_res_0x7f0a0e6c"
+        textColor="@color/_2131299850_res_0x7f090e0a"
+        gravity="0x10"
+        id="@+id/tvText"
+        layout_width="-1"
+        layout_height="-1"
+        fontFamily="HarmonyHeiTi-Regular"
+        NOT_FOUND_0x8="@dimen/_2131365472_res_0x7f0a0e60"
+        NOT_FOUND_0x9="@dimen/_2131365473_res_0x7f0a0e61"/>
+</RelativeLayout>

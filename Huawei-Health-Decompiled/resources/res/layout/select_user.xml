@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <LinearLayout
+        id="@+id/ll_claim_weight_data_select_user"
+        layout_width="-1"
+        layout_height="-2">
+        <ListView
+            id="@+id/lv_claim_weight_data_select_user"
+            scrollbars="0x0"
+            layout_width="-1"
+            layout_height="-1"
+            divider="@color/_2131296490_res_0x7f0900ea"/>
+    </LinearLayout>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131363646_res_0x7f0a073e"
+        textColor="@color/_2131298217_res_0x7f0907a9"
+        gravity="0x10"
+        id="@+id/tv_claim_weight_data_creat_user_info"
+        layout_width="-1"
+        layout_height="48dp"
+        text="@string/_2130843792_res_0x7f021890"
+        textAllCaps="true"/>
+</LinearLayout>

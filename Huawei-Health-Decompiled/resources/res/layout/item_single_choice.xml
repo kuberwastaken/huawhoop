@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <CheckedTextView
+        textSize="@dimen/_2131362714_res_0x7f0a039a"
+        textColor="@color/_2131299845_res_0x7f090e05"
+        gravity="0x10"
+        id="@+id/choiceRadio"
+        background="@drawable/_2131427891_res_0x7f0b0233"
+        layout_width="-1"
+        layout_height="@dimen/_2131362377_res_0x7f0a0249"
+        checkMark="@drawable/_2131431575_res_0x7f0b1097"
+        fontFamily="@string/_2130852834_res_0x7f023be2"/>
+    <com.huawei.ui.commonui.divider.HealthDivider
+        id="@+id/divide_line"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-2"/>
+</LinearLayout>

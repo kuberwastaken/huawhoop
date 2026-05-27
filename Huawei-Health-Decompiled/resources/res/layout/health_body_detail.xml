@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_gravity="0x11"
+    layout_width="-2"
+    layout_height="-2">
+    <ImageView
+        layout_gravity="0x11"
+        id="@+id/health_body_detail_head"
+        layout_width="-2"
+        layout_height="-2"/>
+    <ImageView
+        layout_gravity="0x11"
+        id="@+id/health_body_detail_trunk"
+        layout_width="-2"
+        layout_height="-2"/>
+    <ImageView
+        layout_gravity="0x11"
+        id="@+id/health_body_detail_left_hand"
+        layout_width="-2"
+        layout_height="-2"/>
+    <ImageView
+        layout_gravity="0x11"
+        id="@+id/health_body_detail_right_hand"
+        layout_width="-2"
+        layout_height="-2"/>
+    <ImageView
+        layout_gravity="0x11"
+        id="@+id/health_body_detail_left_leg"
+        layout_width="-2"
+        layout_height="-2"/>
+    <ImageView
+        layout_gravity="0x11"
+        id="@+id/health_body_detail_right_leg"
+        layout_width="-2"
+        layout_height="-2"/>
+</FrameLayout>

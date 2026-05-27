@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item state_hovered="true">
+        <shape shape="0">
+            <corners radius="@dimen/_2131362607_res_0x7f0a032f"/>
+            <solid color="@color/_2131297447_res_0x7f0904a7"/>
+        </shape>
+    </item>
+    <item state_pressed="true">
+        <shape shape="0">
+            <corners radius="@dimen/_2131362607_res_0x7f0a032f"/>
+            <solid color="@color/_2131297269_res_0x7f0903f5"/>
+        </shape>
+    </item>
+</selector>

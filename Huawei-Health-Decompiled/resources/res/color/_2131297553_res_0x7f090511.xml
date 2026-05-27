@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        color="@color/emui_accent"
+        alpha="@dimen/_2131362669_res_0x7f0a036d"/>
+</selector>

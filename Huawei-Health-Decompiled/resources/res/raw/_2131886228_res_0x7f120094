@@ -1,0 +1,54 @@
+{
+  "version": "1.0",
+  "template_id": "PrivacyDetailTemplate",
+  "template_parser": "com.huawei.ui.main.stories.privacy.template.util.PrivacyDataDetailTemplateParser",
+  "template_config": {
+    "info": {
+      "id": "PrivacyDataConstructor",
+      "res_package": "PrivacyDataConstructor",
+      "name": "IDS_name_privacy_data",
+      "desc": "IDS_desc_privacy_data",
+      "bg_img": ""
+    },
+    "operation_data": {
+      "page_type": 1
+    },
+    "activity_presenter": "privacy_model_activity_presenter",
+    "group_data_config": {
+      "fragment_presenter": "group_data_fragment_presenter",
+      "layout_config": {
+        "list_view": {
+          "component": "com.huawei.ui.main.stories.privacy.template.view.component.PrivacyGroupDataView",
+          "new_component": "privacy_group_data_view",
+          "params": [
+          ],
+          "oversea": 0
+        }
+      }
+    },
+    "day_data_config": {
+      "fragment_presenter": "day_data_fragment_presenter",
+      "layout_config": {
+        "list_view": {
+          "component": "com.huawei.ui.main.stories.privacy.template.view.component.PrivacyDayDataView",
+          "new_component": "privacy_day_data_view",
+          "params": [
+          ],
+          "oversea": 0
+        }
+      }
+    },
+    "double_group_data_config": {
+      "fragment_presenter": "double_group_data_fragment_presenter",
+      "layout_config": {
+        "list_view": {
+          "component": "com.huawei.ui.main.stories.privacy.template.view.component.PrivacyDoubleGroupDataView",
+          "new_component": "privacy_double_group_data_view",
+          "params": [
+          ],
+          "oversea": 0
+        }
+      }
+    }
+  }
+}

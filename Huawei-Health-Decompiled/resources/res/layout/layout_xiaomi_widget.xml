@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x11"
+    id="@android:id/background"
+    background="@drawable/widget_2x2_xiaomi_bg"
+    layout_width="-1"
+    layout_height="-1">
+    <include
+        layout_width="-1"
+        layout_height="-1"
+        layout="@layout/layout_xiaomi_widget_common"/>
+</RelativeLayout>

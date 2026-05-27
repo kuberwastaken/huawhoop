@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-2">
+    <TextView
+        textSize="@dimen/_2131363475_res_0x7f0a0693"
+        textColor="@color/_2131298120_res_0x7f090748"
+        id="@+id/up_hisync_dialog_content"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131363484_res_0x7f0a069c"
+        text="@string/_2130852852_res_0x7f023bf4"
+        layout_marginStart="@dimen/_2131363484_res_0x7f0a069c"
+        layout_marginEnd="@dimen/_2131363484_res_0x7f0a069c"/>
+    <LinearLayout
+        orientation="0"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131363482_res_0x7f0a069a"
+        layout_below="@+id/up_hisync_dialog_content"
+        layout_marginStart="@dimen/_2131363484_res_0x7f0a069c">
+        <ImageView
+            layout_gravity="0x11"
+            id="@+id/hisync_agreement_icon_1"
+            layout_width="16dp"
+            layout_height="16dp"
+            src="@drawable/_2131431058_res_0x7f0b0e92"/>
+        <TextView
+            textSize="@dimen/_2131363467_res_0x7f0a068b"
+            textColor="@color/_2131298120_res_0x7f090748"
+            id="@+id/up_hisync_dialog_content_tip"
+            layout_width="-2"
+            layout_height="-2"
+            text="@string/_2130852853_res_0x7f023bf5"
+            layout_marginStart="@dimen/_2131363482_res_0x7f0a069a"/>
+    </LinearLayout>
+</RelativeLayout>

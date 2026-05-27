@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.openalliance.ad.views.web.PureNetworkLoadStatusView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    id="@+id/status_view"
+    layout_width="-1"
+    layout_height="-1"
+    NOT_FOUND_0xc="@string/opendevice_network_no_available">
+    <LinearLayout
+        enabled="false"
+        gravity="0x1"
+        id="@+id/content_statement"
+        clickable="true"
+        layout_width="-1"
+        layout_height="-1">
+        <LinearLayout
+            orientation="1"
+            id="@+id/replace_layout"
+            layout_width="-1"
+            layout_height="-1">
+            <android.widget.ProgressBar
+                id="@+id/web_progress"
+                layout_width="-1"
+                layout_height="2dp"
+                max="100"
+                progress="0"
+                style="?android:attr/progressBarStyleHorizontal"/>
+            <WebView
+                scrollbarThumbVertical="@android:color/transparent"
+                id="@+id/content_webview"
+                scrollbars="0x200"
+                clipToPadding="true"
+                layout_width="-1"
+                layout_height="-1"/>
+        </LinearLayout>
+    </LinearLayout>
+</com.huawei.openalliance.ad.views.web.PureNetworkLoadStatusView>

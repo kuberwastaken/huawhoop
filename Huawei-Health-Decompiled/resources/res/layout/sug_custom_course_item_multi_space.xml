@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    paddingBottom="@dimen/_2131362012_res_0x7f0a00dc"
+    layout_width="-1"
+    layout_height="-2"
+    layout_marginStart="@dimen/_2131362372_res_0x7f0a0244"
+    layout_marginEnd="@dimen/_2131362371_res_0x7f0a0243">
+    <LinearLayout
+        background="@drawable/_2131432117_res_0x7f0b12b5"
+        layout_width="-1"
+        layout_height="@dimen/_2131361971_res_0x7f0a00b3"/>
+</FrameLayout>

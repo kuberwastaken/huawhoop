@@ -1,0 +1,285 @@
+{
+  "version": "1.0",
+  "updatedTime": "1561801664",
+  "postureJudgeBean": [
+    {
+      "type": "ground_contact_time",
+      "paceList": [
+        {
+          "pace": ["540","50000"],
+          "judgeDataList":
+            {
+            "perfect": ["0","280"],
+            "good": ["281","325"],
+            "normal": ["326","365"],
+            "suboptimal": ["366","380"],
+            "poor": ["381","50000"]
+            }
+        },
+        {
+          "pace": ["480","540"],
+          "judgeDataList":
+            {
+            "perfect": ["0","270"],
+            "good": ["271","320"],
+            "normal": ["321","359"],
+            "suboptimal": ["360","375"],
+            "poor": ["376","50000"]
+            }
+        },
+        {
+          "pace": ["420","480"],
+          "judgeDataList":
+            {
+            "perfect": ["0","260"],
+            "good": ["261","305"],
+            "normal": ["306","349"],
+            "suboptimal": ["350","373"],
+            "poor": ["374","50000"]
+            }
+        },
+        {
+          "pace": ["360","420"],
+          "judgeDataList":
+            {
+            "perfect": ["0","245"],
+            "good": ["246","284"],
+            "normal": ["285","318"],
+            "suboptimal": ["319","348"],
+            "poor": ["349","50000"]
+            }
+        },
+        {
+          "pace": ["300","360"],
+          "judgeDataList":
+            {
+            "perfect": ["0","235"],
+            "good": ["236","268"],
+            "normal": ["269","292"],
+            "suboptimal": ["293","311"],
+            "poor": ["312","50000"]
+            }
+        },
+        {
+          "pace": ["240","300"],
+          "judgeDataList":
+            {
+            "perfect": ["0","210"],
+            "good": ["211","240"],
+            "normal": ["241","260"],
+            "suboptimal": ["261","276"],
+            "poor": ["277","50000"]
+            }
+        },
+        {
+          "pace": ["180","240"],
+          "judgeDataList":
+            {
+            "perfect": ["0","195"],
+            "good": ["196","215"],
+            "normal": ["216","235"],
+            "suboptimal": ["236","260"],
+            "poor": ["261","50000"]
+            }
+        },
+        {
+          "pace": ["0","180"],
+          "judgeDataList":
+            {
+            "perfect": ["0","180"],
+            "good": ["181","200"],
+            "normal": ["201","220"],
+            "suboptimal": ["221","240"],
+            "poor": ["241","50000"]
+            }
+        }
+      ]
+    },
+    {
+      "type": "hang_time",
+      "paceList": [
+          {
+            "pace": ["540","50000"],
+            "judgeDataList":
+              {
+              "perfect": ["70","50000"],
+              "good": ["50","69"],
+              "normal": ["25","49"],
+              "suboptimal": ["10","24"],
+              "poor": ["0","9"]
+              }
+          },
+          {
+            "pace": ["480","540"],
+            "judgeDataList":
+              {
+              "perfect": ["80","50000"],
+              "good": ["58","79"],
+              "normal": ["29","57"],
+              "suboptimal": ["14","28"],
+              "poor": ["0","13"]
+              }
+          },
+          {
+            "pace": ["420","480"],
+            "judgeDataList":
+              {
+              "perfect": ["90","50000"],
+              "good": ["66","89"],
+              "normal": ["34","65"],
+              "suboptimal": ["16","33"],
+              "poor": ["0","15"]
+              }
+          },
+          {
+            "pace": ["360","420"],
+            "judgeDataList":
+              {
+              "perfect": ["100","50000"],
+              "good": ["70","99"],
+              "normal": ["43","69"],
+              "suboptimal": ["20","42"],
+              "poor": ["0","19"]
+              }
+          },
+          {
+            "pace": ["300","360"],
+            "judgeDataList":
+              {
+              "perfect": ["115","50000"],
+              "good": ["80","114"],
+              "normal": ["62","79"],
+              "suboptimal": ["41","61"],
+              "poor": ["0","40"]
+              }
+          },
+          {
+            "pace": ["240","300"],
+            "judgeDataList":
+              {
+              "perfect": ["130","50000"],
+              "good": ["103","129"],
+              "normal": ["87","102"],
+              "suboptimal": ["54","86"],
+              "poor": ["0","53"]
+              }
+          },
+          {
+            "pace": ["180","240"],
+            "judgeDataList":
+              {
+              "perfect": ["145","50000"],
+              "good": ["122","144"],
+              "normal": ["100","121"],
+              "suboptimal": ["70","99"],
+              "poor": ["0","69"]
+              }
+          },
+          {
+            "pace": ["0","180"],
+            "judgeDataList":
+              {
+              "perfect": ["160","50000"],
+              "good": ["135","159"],
+              "normal": ["120","134"],
+              "suboptimal": ["80","119"],
+              "poor": ["0","79"]
+              }
+          }
+      ]
+    },
+    {
+      "type": "contact_hang_time_rate",
+      "paceList": [
+          {
+            "pace": ["540","50000"],
+            "judgeDataList":
+              {
+              "perfect": ["0","4.0"],
+              "good": ["4.0","4.4"],
+              "normal": ["4.4","7.3"],
+              "suboptimal": ["7.3","8.1"],
+              "poor": ["8.1","50000"]
+              }
+          },
+          {
+            "pace": ["480","540"],
+            "judgeDataList":
+              {
+              "perfect": ["0","3.6"],
+              "good": ["3.6","4.2"],
+              "normal": ["4.2","7.1"],
+              "suboptimal": ["7.1","7.9"],
+              "poor": ["7.9","50000"]
+              }
+          },
+          {
+            "pace": ["420","480"],
+            "judgeDataList":
+              {
+              "perfect": ["0","2.8"],
+              "good": ["2.8","4.2"],
+              "normal": ["4.2","6.2"],
+              "suboptimal": ["6.2","7.5"],
+              "poor": ["7.5","50000"]
+              }
+          },
+          {
+            "pace": ["360","420"],
+            "judgeDataList":
+              {
+              "perfect": ["0","2.4"],
+              "good": ["2.4","3.7"],
+              "normal": ["3.7","5.4"],
+              "suboptimal": ["5.4","7.0"],
+              "poor": ["7.0","50000"]
+              }
+          },
+          {
+            "pace": ["300","360"],
+            "judgeDataList":
+              {
+              "perfect": ["0","2.0"],
+              "good": ["2.0","3.4"],
+              "normal": ["3.4","4.9"],
+              "suboptimal": ["4.9","6.3"],
+              "poor": ["6.3","50000"]
+              }
+          },
+          {
+            "pace": ["240","300"],
+            "judgeDataList":
+              {
+              "perfect": ["0","1.8"],
+              "good": ["1.8","2.4"],
+              "normal": ["2.4","3"],
+              "suboptimal": ["3","5.5"],
+              "poor": ["5.5","50000"]
+              }
+          },
+          {
+            "pace": ["180","240"],
+            "judgeDataList":
+              {
+              "perfect": ["0","1.4"],
+              "good": ["1.4","1.9"],
+              "normal": ["1.9","2.5"],
+              "suboptimal": ["2.5","5"],
+              "poor": ["5","50000"]
+              }
+          },
+          {
+            "pace": ["0","180"],
+            "judgeDataList":
+              {
+              "perfect": ["0","1.2"],
+              "good": ["1.2","1.5"],
+              "normal": ["1.5","2.0"],
+              "suboptimal": ["2.0","4.5"],
+              "poor": ["4.5","50000"]
+              }
+          }
+      ]
+    }
+  ]
+}

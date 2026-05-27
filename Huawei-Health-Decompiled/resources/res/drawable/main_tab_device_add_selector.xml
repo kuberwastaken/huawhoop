@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        state_enabled="false"
+        drawable="@mipmap/_2131821150_res_0x7f11025e"/>
+    <item
+        state_pressed="true"
+        drawable="@mipmap/_2131821151_res_0x7f11025f"/>
+    <item drawable="@mipmap/_2131821149_res_0x7f11025d"/>
+</selector>

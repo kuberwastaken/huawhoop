@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        left="@dimen/_2131364411_res_0x7f0a0a3b"
+        top="@dimen/_2131364411_res_0x7f0a0a3b"
+        right="@dimen/_2131364411_res_0x7f0a0a3b"
+        bottom="@dimen/_2131364411_res_0x7f0a0a3b">
+        <selector>
+            <item
+                state_enabled="false"
+                drawable="@android:color/transparent"/>
+            <item drawable="@drawable/_2131429564_res_0x7f0b08bc"/>
+        </selector>
+    </item>
+    <item
+        drawable="@drawable/_2131429626_res_0x7f0b08fa"
+        left="@dimen/_2131364411_res_0x7f0a0a3b"
+        top="@dimen/_2131364411_res_0x7f0a0a3b"
+        right="@dimen/_2131364411_res_0x7f0a0a3b"
+        bottom="@dimen/_2131364411_res_0x7f0a0a3b"/>
+    <item
+        left="@dimen/_2131364411_res_0x7f0a0a3b"
+        top="@dimen/_2131364411_res_0x7f0a0a3b"
+        right="@dimen/_2131364411_res_0x7f0a0a3b"
+        bottom="@dimen/_2131364411_res_0x7f0a0a3b">
+        <selector>
+            <item
+                state_focused="true"
+                state_window_focused="true"
+                drawable="@drawable/_2131429623_res_0x7f0b08f7"/>
+        </selector>
+    </item>
+</layer-list>

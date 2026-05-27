@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.cardview.HealthCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    id="@+id/tab_layout"
+    layout_width="-1"
+    layout_height="-1"
+    minHeight="@dimen/_2131363063_res_0x7f0a04f7"
+    NOT_FOUND_0xe="@color/_2131299699_res_0x7f090d73"
+    NOT_FOUND_0xf="@dimen/_2131363021_res_0x7f0a04cd">
+    <LinearLayout
+        gravity="0x10"
+        layout_gravity="0x11"
+        orientation="0"
+        layout_width="-2"
+        layout_height="-2">
+        <com.huawei.ui.commonui.imageview.HealthImageView
+            id="@+id/sleep_tab_icon_gif"
+            visibility="2"
+            layout_width="-2"
+            layout_height="@dimen/_2131363063_res_0x7f0a04f7"
+            layout_marginEnd="-18dp"/>
+        <com.huawei.ui.commonui.imageview.HealthImageView
+            id="@+id/sleep_tab_icon"
+            visibility="2"
+            layout_width="@dimen/_2131362977_res_0x7f0a04a1"
+            layout_height="@dimen/_2131362977_res_0x7f0a04a1"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131362971_res_0x7f0a049b"
+            textColor="@color/_2131299702_res_0x7f090d76"
+            id="@+id/sleep_tab_title"
+            layout_width="-2"
+            layout_height="-2"
+            fontFamily="HarmonyHeiTi"
+            textAlignment="4"
+            layout_marginStart="@dimen/_2131363112_res_0x7f0a0528"
+            NOT_FOUND_0x10="@dimen/_2131362935_res_0x7f0a0477"
+            NOT_FOUND_0x11="@dimen/_2131365473_res_0x7f0a0e61"/>
+    </LinearLayout>
+</com.huawei.ui.commonui.cardview.HealthCardView>

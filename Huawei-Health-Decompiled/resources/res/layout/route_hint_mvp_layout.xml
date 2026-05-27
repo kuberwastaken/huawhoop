@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    gravity="0x11"
+    orientation="1"
+    layout_width="-2"
+    layout_height="-2">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131362935_res_0x7f0a0477"
+        textColor="#a04902"
+        id="@+id/route_mvp"
+        background="@drawable/_2131430680_res_0x7f0b0d18"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131363044_res_0x7f0a04e4"
+        text="@string/_2130840451_res_0x7f020b83"
+        includeFontPadding="false"
+        fontFamily="@string/_2130852833_res_0x7f023be1"/>
+    <ImageView
+        id="@+id/iv_head"
+        background="@drawable/_2131430679_res_0x7f0b0d17"
+        padding="@dimen/_2131362993_res_0x7f0a04b1"
+        layout_width="@dimen/_2131363063_res_0x7f0a04f7"
+        layout_height="@dimen/_2131363063_res_0x7f0a04f7"
+        src="@mipmap/_2131821171_res_0x7f110273"
+        layout_centerHorizontal="true"/>
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.columnlayout.HealthColumnRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="-1">
+    <include
+        id="@+id/layout_tips"
+        layout_width="-1"
+        layout_height="-2"
+        layout="@layout/sug_frag_run_plan_tips"/>
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/sub_header_train_date"
+        layout_width="-1"
+        layout_height="-2"
+        layout_above="@+id/card_view_start_train_date"
+        NOT_FOUND_0xe="@string/_2130849841_res_0x7f023031"/>
+    <com.huawei.ui.commonui.cardview.HealthCardView
+        id="@+id/card_view_start_train_date"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginBottom="@dimen/_2131362369_res_0x7f0a0241"
+        layout_alignParentBottom="true"
+        layout_marginStart="@dimen/_2131362478_res_0x7f0a02ae"
+        layout_marginEnd="@dimen/_2131362477_res_0x7f0a02ad">
+        <LinearLayout
+            orientation="1"
+            layout_width="-1"
+            layout_height="-2">
+            <com.huawei.ui.commonui.healthtextview.HealthTextView
+                textSize="@dimen/_2131362735_res_0x7f0a03af"
+                textColor="@color/_2131299845_res_0x7f090e05"
+                id="@+id/start_train_time"
+                layout_width="-2"
+                layout_height="-2"
+                layout_marginTop="@dimen/_2131362577_res_0x7f0a0311"
+                layout_marginBottom="@dimen/_2131362577_res_0x7f0a0311"
+                maxLines="1"
+                fontFamily="@string/_2130852833_res_0x7f023be1"
+                layout_marginStart="@dimen/_2131363021_res_0x7f0a04cd"
+                layout_marginEnd="@dimen/_2131363021_res_0x7f0a04cd"/>
+            <com.huawei.ui.commonui.calendarview.HealthCalendarView
+                id="@+id/start_train_calendar_view"
+                layout_width="-1"
+                layout_height="-2"
+                NOT_FOUND_0xf="@color/_2131296984_res_0x7f0902d8"/>
+        </LinearLayout>
+    </com.huawei.ui.commonui.cardview.HealthCardView>
+</com.huawei.ui.commonui.columnlayout.HealthColumnRelativeLayout>

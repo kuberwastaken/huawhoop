@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">Upp till %1$d indikator kan visas på ett diagram.</item>
+        <item quantity="other">Upp till %1$d indikatorer kan visas på ett diagram.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">Ditt blodglukos förväntas sjunka under %2$s mmol/l om %1$s min. Övervaka din blodglukosnivå noggrant.</item>
+        <item quantity="other">Ditt blodglukos förväntas sjunka under %2$s mmol/l om %1$s min. Övervaka din blodglukosnivå noggrant.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">Ditt blodglukos förväntas sjunka under %2$s mg/dl om %1$s min. Övervaka din blodglukosnivå noggrant.</item>
+        <item quantity="other">Ditt blodglukos förväntas sjunka under %2$s mg/dl om %1$s min. Övervaka din blodglukosnivå noggrant.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d steg</item>
+        <item quantity="other">%d steg</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s mi</item>
+        <item quantity="other">%s mi</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s km</item>
+        <item quantity="other">%s km</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">%1$s steg kvar</item>
+        <item quantity="other">%1$s steg kvar</item>
+    </plurals>
+</resources>

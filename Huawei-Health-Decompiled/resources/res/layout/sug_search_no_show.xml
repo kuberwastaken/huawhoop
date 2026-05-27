@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    id="@+id/search_no_show"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-1">
+    <ImageView
+        id="@+id/search_no_icon"
+        layout_width="@dimen/_2131365434_res_0x7f0a0e3a"
+        layout_height="-2"
+        src="@drawable/_2131431794_res_0x7f0b1172"
+        NOT_FOUND_0xa="@+id/no_data_text"
+        NOT_FOUND_0xb="0"
+        NOT_FOUND_0xd="0"
+        NOT_FOUND_0xf="0"
+        NOT_FOUND_0x10="2"
+        style="@style/health_default_img_tint"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+        textColor="@color/_2131299850_res_0x7f090e0a"
+        id="@+id/no_data_text"
+        layout_width="-2"
+        layout_height="-2"
+        text="@string/_2130849594_res_0x7f022f3a"
+        fontFamily="@string/_2130852834_res_0x7f023be2"
+        NOT_FOUND_0x9="0"
+        NOT_FOUND_0xb="0"
+        NOT_FOUND_0xc="2"
+        NOT_FOUND_0xd="0"
+        NOT_FOUND_0xe="@+id/search_no_icon"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

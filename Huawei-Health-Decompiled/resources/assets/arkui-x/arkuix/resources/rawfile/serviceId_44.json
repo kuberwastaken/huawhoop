@@ -1,0 +1,597 @@
+{
+  "1": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "fileName",
+        "type": "string"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "fileType",
+        "type": "number8"
+      },
+      {
+        "tag": 5,
+        "jsonKey": "startTime",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 6,
+        "jsonKey": "endTime",
+        "type": "number32",
+        "optional": true
+      },
+      {
+        "tag": 7,
+        "jsonKey": "srcPkgName",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 8,
+        "jsonKey": "desPkgName",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 9,
+        "jsonKey": "fileDescription",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 10,
+        "jsonKey": "srcCertificate",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 11,
+        "jsonKey": "destCertificate",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 12,
+        "jsonKey": "dicTypeId",
+        "type": "number32",
+        "optional": true
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "fileName",
+        "type": "string"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "fileType",
+        "type": "number"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "fileId",
+        "type": "number",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "fileSize",
+        "type": "number"
+      },
+      {
+        "tag": 5,
+        "jsonKey": "startTime",
+        "type": "number",
+        "optional": true
+      },
+      {
+        "tag": 6,
+        "jsonKey": "endTime",
+        "type": "number",
+        "optional": true
+      },
+      {
+        "tag": 7,
+        "jsonKey": "srcPkgName",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 8,
+        "jsonKey": "desPkgName",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 9,
+        "jsonKey": "fileDescription",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 10,
+        "jsonKey": "srcCertificate",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 11,
+        "jsonKey": "destCertificate",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 12,
+        "jsonKey": "dicTypeId",
+        "type": "number",
+        "optional": true
+      },
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number",
+        "optional": true
+      }
+    ]
+  },
+  "2": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "fileId",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "checkMode",
+        "type": "number8"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "fileId",
+        "type": "number"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "checkResult",
+        "type": "array",
+        "elemType": "number8"
+      },
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number",
+        "optional": true
+      }
+    ]
+  },
+  "3": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "fileId",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "deviceWaitTimeout",
+        "type": "empty"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "transferUnitSize",
+        "type": "empty"
+      },
+      {
+        "tag": 4,
+        "jsonKey": "maxApplyDataSize",
+        "type": "empty"
+      },
+      {
+        "tag": 5,
+        "jsonKey": "transferEncrptStatus",
+        "type": "empty"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "fileId",
+        "type": "number"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "deviceWaitTimeout",
+        "type": "number"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "transferUnitSize",
+        "type": "number"
+      },
+      {
+        "tag": 4,
+        "jsonKey": "maxApplyDataSize",
+        "type": "number"
+      },
+      {
+        "tag": 5,
+        "jsonKey": "transferEncrptStatus",
+        "type": "number"
+      },
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number",
+        "optional": true
+      }
+    ]
+  },
+  "4": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "fileId",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "applyOffset",
+        "type": "number32"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "applyFileLength",
+        "type": "number32"
+      },
+      {
+        "tag": 4,
+        "jsonKey": "dicTypeId",
+        "type": "number32",
+        "optional": true
+      }
+    ]
+  },
+  "6": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "fileId",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "notifyStatus",
+        "type": "number8"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "fileName",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "srcPkgName",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 5,
+        "jsonKey": "desPkgName",
+        "type": "string",
+        "optional": true
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "fileId",
+        "type": "number",
+        "allowEmpty": true,
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "notifyStatus",
+        "type": "number",
+        "allowEmpty": true,
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "fileName",
+        "type": "string",
+        "allowEmpty": true,
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "srcPkgName",
+        "type": "string",
+        "allowEmpty": true,
+        "optional": true
+      },
+      {
+        "tag": 5,
+        "jsonKey": "desPkgName",
+        "type": "string",
+        "allowEmpty": true,
+        "optional": true
+      },
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number",
+        "optional": true
+      }
+    ]
+  },
+  "7": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "fileName",
+        "type": "string"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "fileType",
+        "type": "number8"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "fileId",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "fileSize",
+        "type": "number32"
+      },
+      {
+        "tag": 7,
+        "jsonKey": "fileDescription",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 8,
+        "jsonKey": "srcPkgName",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 9,
+        "jsonKey": "desPkgName",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 10,
+        "jsonKey": "srcCertificate",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 11,
+        "jsonKey": "destCertificate",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 13,
+        "jsonKey": "responseCode",
+        "type": "number8",
+        "optional": true
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "fileName",
+        "type": "string"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "fileType",
+        "type": "number"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "fileId",
+        "type": "number",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "fileSize",
+        "type": "number"
+      },
+      {
+        "tag": 5,
+        "jsonKey": "startTime",
+        "type": "number",
+        "optional": true
+      },
+      {
+        "tag": 6,
+        "jsonKey": "endTime",
+        "type": "number",
+        "optional": true
+      },
+      {
+        "tag": 7,
+        "jsonKey": "fileDescription",
+        "type": "string",
+        "optional": true,
+        "allowEmpty": true
+      },
+      {
+        "tag": 8,
+        "jsonKey": "srcPkgName",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 9,
+        "jsonKey": "desPkgName",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 10,
+        "jsonKey": "srcCertificate",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 11,
+        "jsonKey": "destCertificate",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 12,
+        "jsonKey": "cancelTransmission",
+        "type": "number",
+        "optional": true
+      },
+      {
+        "tag": 13,
+        "jsonKey": "responseCode",
+        "type": "number",
+        "optional": true
+      },
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number",
+        "optional": true
+      }
+    ]
+  },
+  "8": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "fileId",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "fileName",
+        "type": "string"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "srcPkgName",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "desPkgName",
+        "type": "string",
+        "optional": true
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "fileId",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "fileName",
+        "type": "string"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "srcPkgName",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "desPkgName",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number",
+        "optional": true
+      }
+    ]
+  },
+  "9": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "fileId",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "fileName",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "srcPackageName",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "desPackageName",
+        "type": "string",
+        "optional": true
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "fileId",
+        "type": "number"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "fileName",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "srcPackageName",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "desPackageName",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number",
+        "optional": true
+      }
+    ]
+  }
+}

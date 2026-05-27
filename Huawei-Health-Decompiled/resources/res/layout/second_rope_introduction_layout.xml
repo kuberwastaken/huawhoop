@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <RelativeLayout
+        id="@+id/rope_mode_layout"
+        background="@drawable/_2131432613_res_0x7f0b14a5"
+        paddingTop="@dimen/_2131363002_res_0x7f0a04ba"
+        paddingBottom="@dimen/_2131363002_res_0x7f0a04ba"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginBottom="@dimen/_2131362012_res_0x7f0a00dc"
+        paddingStart="@dimen/_2131362970_res_0x7f0a049a"
+        paddingEnd="@dimen/_2131362970_res_0x7f0a049a">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365500_res_0x7f0a0e7c"
+            textColor="@color/_2131299845_res_0x7f090e05"
+            id="@+id/second_rope_model"
+            layout_width="-2"
+            layout_height="-2"
+            text="@string/_2130846144_res_0x7f0221c0"
+            layout_centerVertical="true"
+            fontFamily="@string/_2130852833_res_0x7f023be1"
+            layout_marginEnd="@dimen/_2131362916_res_0x7f0a0464"
+            layout_toStartOf="@+id/rope_mode_desc_layout"
+            layout_alignParentStart="true"/>
+        <LinearLayout
+            gravity="0x1"
+            orientation="1"
+            id="@+id/rope_mode_desc_layout"
+            layout_width="-2"
+            layout_height="-2"
+            layout_centerInParent="true">
+            <com.huawei.ui.commonui.healthtextview.HealthTextView
+                textSize="@dimen/_2131362732_res_0x7f0a03ac"
+                textColor="@color/_2131299845_res_0x7f090e05"
+                id="@+id/rope_mode_tv"
+                layout_width="-2"
+                layout_height="-2"
+                fontFamily="@string/_2130852833_res_0x7f023be1"/>
+            <com.huawei.ui.commonui.healthtextview.HealthTextView
+                textSize="@dimen/_2131365484_res_0x7f0a0e6c"
+                textColor="@color/_2131299850_res_0x7f090e0a"
+                id="@+id/rope_mode_value_tv"
+                visibility="2"
+                layout_width="-2"
+                layout_height="-2"
+                fontFamily="@string/_2130852834_res_0x7f023be2"/>
+        </LinearLayout>
+        <com.huawei.ui.commonui.imageview.HealthImageView
+            id="@+id/rope_start_iv"
+            background="@drawable/hw_health_device_rope_play"
+            layout_width="@dimen/_2131363109_res_0x7f0a0525"
+            layout_height="@dimen/_2131363109_res_0x7f0a0525"
+            layout_centerVertical="true"
+            layout_marginEnd="@dimen/_2131363172_res_0x7f0a0564"
+            layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <include layout="@layout/product_mode_layout"/>
+    <include layout="@layout/fitting_light_effect_setting"/>
+    <include layout="@layout/product_last_record"/>
+    <com.huawei.ui.commonui.recycleview.HealthRecycleView
+        id="@+id/rv_second_menu_item"
+        layout_width="-1"
+        layout_height="-2"/>
+</LinearLayout>

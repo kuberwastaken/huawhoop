@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/sporting_mini_bar_layout"
+    background="@drawable/_2131432012_res_0x7f0b124c"
+    visibility="2"
+    layout_width="-2"
+    layout_height="@dimen/_2131362486_res_0x7f0a02b6">
+    <com.huawei.ui.commonui.imageview.HealthImageView
+        layout_gravity="0x10"
+        id="@+id/sporting_mini_bar_icon"
+        background="@drawable/_2131432043_res_0x7f0b126b"
+        layout_width="@dimen/_2131363710_res_0x7f0a077e"
+        layout_height="@dimen/_2131363710_res_0x7f0a077e"
+        layout_marginStart="@dimen/_2131362491_res_0x7f0a02bb"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131362882_res_0x7f0a0442"
+        textColor="@color/_2131299667_res_0x7f090d53"
+        layout_gravity="0x10"
+        id="@+id/sporting_mini_bar_text"
+        layout_width="-2"
+        layout_height="-2"
+        text="@string/_2130848334_res_0x7f022a4e"
+        fontFamily="HarmonyHeiTi"
+        layout_marginStart="@dimen/_2131363752_res_0x7f0a07a8"/>
+    <com.huawei.ui.commonui.imageview.HealthImageView
+        layout_gravity="0x10"
+        id="@+id/sporting_mini_bar_cancel"
+        background="@drawable/_2131432042_res_0x7f0b126a"
+        layout_width="@dimen/_2131362970_res_0x7f0a049a"
+        layout_height="@dimen/_2131362970_res_0x7f0a049a"
+        layout_marginStart="@dimen/_2131363756_res_0x7f0a07ac"
+        layout_marginEnd="@dimen/_2131362491_res_0x7f0a02bb"/>
+</LinearLayout>

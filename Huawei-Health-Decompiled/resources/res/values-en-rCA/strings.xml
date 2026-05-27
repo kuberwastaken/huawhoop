@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="IDS_permission_description_contacts">This is used to add and sync contacts, as well as set emergency contacts for wearables and groups.</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365482_res_0x7f0a0e6a"
+        textColor="@color/_2131299845_res_0x7f090e05"
+        gravity="0x800013"
+        id="@+id/htv_local_import"
+        layout_width="-1"
+        layout_height="@dimen/_2131363109_res_0x7f0a0525"
+        text="@string/_2130838847_res_0x7f02053f"
+        fontFamily="@string/_2130852834_res_0x7f023be2"/>
+    <com.huawei.ui.commonui.divider.HealthDivider
+        id="@+id/divider_line"
+        visibility="0"
+        layout_width="-1"
+        layout_height="-2"
+        layout_alignParentBottom="true"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365482_res_0x7f0a0e6a"
+        textColor="@color/_2131299845_res_0x7f090e05"
+        gravity="0x800013"
+        id="@+id/htv_komoot_import"
+        layout_width="-1"
+        layout_height="@dimen/_2131363109_res_0x7f0a0525"
+        text="@string/_2130838846_res_0x7f02053e"
+        fontFamily="@string/_2130852834_res_0x7f023be2"/>
+    <com.huawei.ui.commonui.divider.HealthDivider
+        visibility="0"
+        layout_width="-1"
+        layout_height="-2"
+        layout_alignParentBottom="true"/>
+</LinearLayout>

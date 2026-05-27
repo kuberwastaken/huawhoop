@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_plugin_fitnessadvice_minute">
+        <item quantity="zero">[CS_742371]_%1$s minutes</item>
+        <item quantity="one">[CS_742449]_%1$s minute</item>
+        <item quantity="two">[CS_742426]_%1$s minutes</item>
+        <item quantity="few">[CS_742650]_%1$s minutes</item>
+        <item quantity="many">[CS_742453]_%1$s minutes</item>
+        <item quantity="other">[CS_742585]_%1$s minutes</item>
+    </plurals>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="zero">[CS_455934]_Up to %1$d indicators can be shown on one graph.</item>
+        <item quantity="one">[CS_455919]_Up to %1$d indicator can be shown on one graph.</item>
+        <item quantity="two">[CS_455932]_Up to %1$d indicators can be shown on one graph.</item>
+        <item quantity="few">[CS_455855]_Up to %1$d indicators can be shown on one graph.</item>
+        <item quantity="many">[CS_455869]_Up to %1$d indicators can be shown on one graph.</item>
+        <item quantity="other">[CS_455926]_Up to %1$d indicators can be shown on one graph.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="zero">[CS_1178545]_Your blood glucose is expected to drop below %2$s mmol/L in %1$s min. Please closely monitor your glucose level.</item>
+        <item quantity="one">[CS_1178544]_Your blood glucose is expected to drop below %2$s mmol/L in %1$s min. Please closely monitor your glucose level.</item>
+        <item quantity="two">[CS_1178529]_Your blood glucose is expected to drop below %2$s mmol/L in %1$s min. Please closely monitor your glucose level.</item>
+        <item quantity="few">[CS_1178507]_Your blood glucose is expected to drop below %2$s mmol/L in %1$s min. Please closely monitor your glucose level.</item>
+        <item quantity="many">[CS_1178512]_Your blood glucose is expected to drop below %2$s mmol/L in %1$s min. Please closely monitor your glucose level.</item>
+        <item quantity="other">[CS_1178522]_Your blood glucose is expected to drop below %2$s mmol/L in %1$s min. Please closely monitor your glucose level.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="zero">[CS_1178551]_Your blood glucose is expected to drop below %2$s mg/dL in %1$s min. Please closely monitor your glucose level.</item>
+        <item quantity="one">[CS_1178510]_Your blood glucose is expected to drop below %2$s mg/dL in %1$s min. Please closely monitor your glucose level.</item>
+        <item quantity="two">[CS_1178528]_Your blood glucose is expected to drop below %2$s mg/dL in %1$s min. Please closely monitor your glucose level.</item>
+        <item quantity="few">[CS_1178546]_Your blood glucose is expected to drop below %2$s mg/dL in %1$s min. Please closely monitor your glucose level.</item>
+        <item quantity="many">[CS_1178537]_Your blood glucose is expected to drop below %2$s mg/dL in %1$s min. Please closely monitor your glucose level.</item>
+        <item quantity="other">[CS_1178548]_Your blood glucose is expected to drop below %2$s mg/dL in %1$s min. Please closely monitor your glucose level.</item>
+    </plurals>
+    <plurals name="IDS_user_profile_achieve_num_day">
+        <item quantity="zero">[CS_345284]_%1$s days</item>
+        <item quantity="one">[CS_345301]_%1$s day</item>
+        <item quantity="two">[CS_345298]_%1$s days</item>
+        <item quantity="few">[CS_345255]_%1$s days</item>
+        <item quantity="many">[CS_345282]_%1$s days</item>
+        <item quantity="other">[CS_345254]_%1$s days</item>
+    </plurals>
+    <plurals name="IDS_sleep_referece_title_score_string">
+        <item quantity="zero">[CS_324838]_%1$s points</item>
+        <item quantity="one">[CS_324843]_%1$s point</item>
+        <item quantity="two">[CS_324858]_%1$s points</item>
+        <item quantity="few">[CS_324866]_%1$s points</item>
+        <item quantity="many">[CS_324854]_%1$s points</item>
+        <item quantity="other">[CS_324846]_%1$s points</item>
+    </plurals>
+    <plurals name="IDS_hwh_motiontrack_swim_pace_unit">
+        <item quantity="zero">[CS_335031]_/%1$d m</item>
+        <item quantity="one">[CS_335042]_/%1$d m</item>
+        <item quantity="two">[CS_335041]_/%1$d m</item>
+        <item quantity="few">[CS_335019]_/%1$d m</item>
+        <item quantity="many">[CS_335000]_/%1$d m</item>
+        <item quantity="other">[CS_335029]_/%1$d m</item>
+    </plurals>
+    <plurals name="IDS_hwh_motiontrack_swim_pace_unit_mi">
+        <item quantity="zero">[CS_335028]_/%1$d yd</item>
+        <item quantity="one">[CS_335014]_/%1$d yd</item>
+        <item quantity="two">[CS_335017]_/%1$d yd</item>
+        <item quantity="few">[CS_335038]_/%1$d yd</item>
+        <item quantity="many">[CS_335012]_/%1$d yd</item>
+        <item quantity="other">[CS_335030]_/%1$d yd</item>
+    </plurals>
+    <plurals name="IDS_hwh_motiontrack_unit_yd">
+        <item quantity="zero">[CS_335039]_yd</item>
+        <item quantity="one">[CS_335010]_yd</item>
+        <item quantity="two">[CS_335027]_yd</item>
+        <item quantity="few">[CS_335015]_yd</item>
+        <item quantity="many">[CS_335009]_yd</item>
+        <item quantity="other">[CS_335035]_yd</item>
+    </plurals>
+    <plurals name="IDS_hwh_motiontrack_ft_string">
+        <item quantity="zero">[CS_388096]_ft</item>
+        <item quantity="one">[CS_388091]_ft</item>
+        <item quantity="two">[CS_388072]_ft</item>
+        <item quantity="few">[CS_388048]_ft</item>
+        <item quantity="many">[CS_388064]_ft</item>
+        <item quantity="other">[CS_388105]_ft</item>
+    </plurals>
+    <plurals name="IDS_band_data_golf_count_unit">
+        <item quantity="zero">[CS_654573]_%s strokes</item>
+        <item quantity="one">[CS_654576]_%s stroke</item>
+        <item quantity="two">[CS_654578]_%s strokes</item>
+        <item quantity="few">[CS_654575]_%s strokes</item>
+        <item quantity="many">[CS_654574]_%s strokes</item>
+        <item quantity="other">[CS_654577]_%s strokes</item>
+    </plurals>
+    <plurals name="IDS_indoor_skipper_number_unit_value">
+        <item quantity="zero">[CS_661743]_%1$s jumps</item>
+        <item quantity="one">[CS_661738]_%1$s jump</item>
+        <item quantity="two">[CS_661742]_%1$s jumps</item>
+        <item quantity="few">[CS_661744]_%1$s jumps</item>
+        <item quantity="many">[CS_661739]_%1$s jumps</item>
+        <item quantity="other">[CS_661740]_%1$s jumps</item>
+    </plurals>
+    <plurals name="IDS_fitness_completed_goal">
+        <item quantity="zero">[CS_762510]_%1$s steps away</item>
+        <item quantity="one">[CS_762588]_%1$s step away</item>
+        <item quantity="two">[CS_762548]_%1$s steps away</item>
+        <item quantity="few">[CS_762571]_%1$s steps away</item>
+        <item quantity="many">[CS_762541]_%1$s steps away</item>
+        <item quantity="other">[CS_762606]_%1$s steps away</item>
+    </plurals>
+    <plurals name="IDS_altitude_ft">
+        <item quantity="zero">[CS_791000]_%1$s ft</item>
+        <item quantity="one">[CS_790994]_%1$s ft</item>
+        <item quantity="two">[CS_791020]_%1$s ft</item>
+        <item quantity="few">[CS_790997]_%1$s ft</item>
+        <item quantity="many">[CS_791009]_%1$s ft</item>
+        <item quantity="other">[CS_791018]_%1$s ft</item>
+    </plurals>
+    <plurals name="IDS_altitude_meter">
+        <item quantity="zero">[CS_791006]_%1$s m</item>
+        <item quantity="one">[CS_791017]_%1$s m</item>
+        <item quantity="two">[CS_791010]_%1$s m</item>
+        <item quantity="few">[CS_791008]_%1$s m</item>
+        <item quantity="many">[CS_791005]_%1$s m</item>
+        <item quantity="other">[CS_791019]_%1$s m</item>
+    </plurals>
+    <plurals name="IDS_physiology_day">
+        <item quantity="zero">[CS_922280]_%s days</item>
+        <item quantity="one">[CS_922288]_%s day</item>
+        <item quantity="two">[CS_922281]_%s days</item>
+        <item quantity="few">[CS_922293]_%s days</item>
+        <item quantity="many">[CS_922284]_%s days</item>
+        <item quantity="other">[CS_922283]_%s days</item>
+    </plurals>
+    <plurals name="IDS_single_circle_active_target_desc">
+        <item quantity="zero">[CS_972896]_%1$s hours</item>
+        <item quantity="one">[CS_972894]_%1$s hour</item>
+        <item quantity="two">[CS_972917]_%1$s hours</item>
+        <item quantity="few">[CS_972953]_%1$s hours</item>
+        <item quantity="many">[CS_972914]_%1$s hours</item>
+        <item quantity="other">[CS_972962]_%1$s hours</item>
+    </plurals>
+    <plurals name="IDS_single_circle_intensity_target_desc">
+        <item quantity="zero">[CS_972933]_%1$s min</item>
+        <item quantity="one">[CS_972915]_%1$s min</item>
+        <item quantity="two">[CS_972923]_%1$s min</item>
+        <item quantity="few">[CS_972958]_%1$s min</item>
+        <item quantity="many">[CS_972887]_%1$s min</item>
+        <item quantity="other">[CS_972892]_%1$s min</item>
+    </plurals>
+    <plurals name="IDS_min_single_unit">
+        <item quantity="zero">[CS_1012834]_%s min</item>
+        <item quantity="one">[CS_1012837]_%s min</item>
+        <item quantity="two">[CS_1012854]_%s min</item>
+        <item quantity="few">[CS_1012832]_%s min</item>
+        <item quantity="many">[CS_1012839]_%s min</item>
+        <item quantity="other">[CS_1012844]_%s min</item>
+    </plurals>
+    <plurals name="IDS_min_insert_unit">
+        <item quantity="zero">[CS_1014379]_%1$s min</item>
+        <item quantity="one">[CS_1014382]_%1$s min</item>
+        <item quantity="two">[CS_1014380]_%1$s min</item>
+        <item quantity="few">[CS_1014383]_%1$s min</item>
+        <item quantity="many">[CS_1014381]_%1$s min</item>
+        <item quantity="other">[CS_1014384]_%1$s min</item>
+    </plurals>
+    <plurals name="IDS_hour_single_unit">
+        <item quantity="zero">[CS_1021676]_%1$s h</item>
+        <item quantity="one">[CS_1021675]_%1$s h</item>
+        <item quantity="two">[CS_1021684]_%1$s h</item>
+        <item quantity="few">[CS_1021668]_%1$s h</item>
+        <item quantity="many">[CS_1021685]_%1$s h</item>
+        <item quantity="other">[CS_1021679]_%1$s h</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_1">
+        <item quantity="zero">[CS_1154274]_Just %1$d steps away. Keep it up!</item>
+        <item quantity="one">[CS_1154302]_Just %1$d step away. Keep it up!</item>
+        <item quantity="two">[CS_1154276]_Just %1$d steps away. Keep it up!</item>
+        <item quantity="few">[CS_1154268]_Just %1$d steps away. Keep it up!</item>
+        <item quantity="many">[CS_1154266]_Just %1$d steps away. Keep it up!</item>
+        <item quantity="other">[CS_1154283]_Just %1$d steps away. Keep it up!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_2">
+        <item quantity="zero">[CS_1154285]_Just %1$d steps away from your goal!</item>
+        <item quantity="one">[CS_1154284]_Just %1$d step away from your goal!</item>
+        <item quantity="two">[CS_1154298]_Just %1$d steps away from your goal!</item>
+        <item quantity="few">[CS_1154291]_Just %1$d steps away from your goal!</item>
+        <item quantity="many">[CS_1154275]_Just %1$d steps away from your goal!</item>
+        <item quantity="other">[CS_1154295]_Just %1$d steps away from your goal!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_3">
+        <item quantity="zero">[CS_1154292]_Just %1$d steps away. You can do it!</item>
+        <item quantity="one">[CS_1154301]_Just %1$d step away. You can do it!</item>
+        <item quantity="two">[CS_1154279]_Just %1$d steps away. You can do it!</item>
+        <item quantity="few">[CS_1154272]_Just %1$d steps away. You can do it!</item>
+        <item quantity="many">[CS_1154286]_Just %1$d steps away. You can do it!</item>
+        <item quantity="other">[CS_1154303]_Just %1$d steps away. You can do it!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_4">
+        <item quantity="zero">[CS_1154289]_Just %1$d steps away. You&apos;re close!</item>
+        <item quantity="one">[CS_1154287]_Just %1$d step away. You&apos;re close!</item>
+        <item quantity="two">[CS_1154300]_Just %1$d steps away. You&apos;re close!</item>
+        <item quantity="few">[CS_1154293]_Just %1$d steps away. You&apos;re close!</item>
+        <item quantity="many">[CS_1154294]_Just %1$d steps away. You&apos;re close!</item>
+        <item quantity="other">[CS_1154269]_Just %1$d steps away. You&apos;re close!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_5">
+        <item quantity="zero">[CS_1154296]_Today&apos;s goal is just %1$d steps away!</item>
+        <item quantity="one">[CS_1154304]_Today&apos;s goal is just %1$d step away!</item>
+        <item quantity="two">[CS_1154281]_Today&apos;s goal is just %1$d steps away!</item>
+        <item quantity="few">[CS_1154273]_Today&apos;s goal is just %1$d steps away!</item>
+        <item quantity="many">[CS_1154299]_Today&apos;s goal is just %1$d steps away!</item>
+        <item quantity="other">[CS_1154277]_Today&apos;s goal is just %1$d steps away!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_6">
+        <item quantity="zero">[CS_1154270]_%1$d steps away to your goal</item>
+        <item quantity="one">[CS_1154288]_%1$d step away to your goal</item>
+        <item quantity="two">[CS_1154271]_%1$d steps away to your goal</item>
+        <item quantity="few">[CS_1154278]_%1$d steps away to your goal</item>
+        <item quantity="many">[CS_1154264]_%1$d steps away to your goal</item>
+        <item quantity="other">[CS_1154305]_%1$d steps away to your goal</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_7">
+        <item quantity="zero">[CS_1154280]_%1$d steps to go</item>
+        <item quantity="one">[CS_1154265]_%1$d step to go</item>
+        <item quantity="two">[CS_1154290]_%1$d steps to go</item>
+        <item quantity="few">[CS_1154297]_%1$d steps to go</item>
+        <item quantity="many">[CS_1154282]_%1$d steps to go</item>
+        <item quantity="other">[CS_1154267]_%1$d steps to go</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_1">
+        <item quantity="zero">[CS_1154146]_Achieved %1$d-day streak.</item>
+        <item quantity="one">[CS_1154113]_Achieved %1$d-day streak.</item>
+        <item quantity="two">[CS_1154214]_Achieved %1$d-day streak.</item>
+        <item quantity="few">[CS_1154100]_Achieved %1$d-day streak.</item>
+        <item quantity="many">[CS_1154102]_Achieved %1$d-day streak.</item>
+        <item quantity="other">[CS_1154198]_Achieved %1$d-day streak.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_1_over_30_days">
+        <item quantity="zero">[CS_1154120]_Achieved for more than %1$d days in a row.</item>
+        <item quantity="one">[CS_1154237]_Achieved for more than %1$d day in a row.</item>
+        <item quantity="two">[CS_1154227]_Achieved for more than %1$d days in a row.</item>
+        <item quantity="few">[CS_1154196]_Achieved for more than %1$d days in a row.</item>
+        <item quantity="many">[CS_1154160]_Achieved for more than %1$d days in a row.</item>
+        <item quantity="other">[CS_1154118]_Achieved for more than %1$d days in a row.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_2">
+        <item quantity="zero">[CS_1154188]_Completed for %1$d consecutive days.</item>
+        <item quantity="one">[CS_1154132]_Completed for %1$d day.</item>
+        <item quantity="two">[CS_1154156]_Completed for %1$d consecutive days.</item>
+        <item quantity="few">[CS_1154199]_Completed for %1$d consecutive days.</item>
+        <item quantity="many">[CS_1154230]_Completed for %1$d consecutive days.</item>
+        <item quantity="other">[CS_1154163]_Completed for %1$d consecutive days.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_2_over_30_days">
+        <item quantity="zero">[CS_1154151]_Completed for more than %1$d consecutive days.</item>
+        <item quantity="one">[CS_1154178]_Completed for more than %1$d consecutive day.</item>
+        <item quantity="two">[CS_1154172]_Completed for more than %1$d consecutive days.</item>
+        <item quantity="few">[CS_1154208]_Completed for more than %1$d consecutive days.</item>
+        <item quantity="many">[CS_1154189]_Completed for more than %1$d consecutive days.</item>
+        <item quantity="other">[CS_1154108]_Completed for more than %1$d consecutive days.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_3">
+        <item quantity="zero">[CS_1154123]_%1$d-day streak. Check out your step count.</item>
+        <item quantity="one">[CS_1154228]_%1$d-day streak. Check out your step count.</item>
+        <item quantity="two">[CS_1154175]_%1$d-day streak. Check out your step count.</item>
+        <item quantity="few">[CS_1154216]_%1$d-day streak. Check out your step count.</item>
+        <item quantity="many">[CS_1154158]_%1$d-day streak. Check out your step count.</item>
+        <item quantity="other">[CS_1154171]_%1$d-day streak. Check out your step count.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_3_over_30_days">
+        <item quantity="zero">[CS_1154122]_Achieved for more than %1$d days in a row. Check out your step count.</item>
+        <item quantity="one">[CS_1154116]_Achieved for more than %1$d day in a row. Check out your step count.</item>
+        <item quantity="two">[CS_1154125]_Achieved for more than %1$d days in a row. Check out your step count.</item>
+        <item quantity="few">[CS_1154164]_Achieved for more than %1$d days in a row. Check out your step count.</item>
+        <item quantity="many">[CS_1154101]_Achieved for more than %1$d days in a row. Check out your step count.</item>
+        <item quantity="other">[CS_1154091]_Achieved for more than %1$d days in a row. Check out your step count.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_4">
+        <item quantity="zero">[CS_1154173]_Your %1$d-day record has continued.</item>
+        <item quantity="one">[CS_1154097]_Your %1$d-day record has continued.</item>
+        <item quantity="two">[CS_1154109]_Your %1$d-day record has continued.</item>
+        <item quantity="few">[CS_1154165]_Your %1$d-day record has continued.</item>
+        <item quantity="many">[CS_1154205]_Your %1$d-day record has continued.</item>
+        <item quantity="other">[CS_1154181]_Your %1$d-day record has continued.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_4_over_30_days">
+        <item quantity="zero">[CS_1154207]_Your record has continued for more than %1$d days.</item>
+        <item quantity="one">[CS_1154202]_Your record has continued for more than %1$d day.</item>
+        <item quantity="two">[CS_1154223]_Your record has continued for more than %1$d days.</item>
+        <item quantity="few">[CS_1154179]_Your record has continued for more than %1$d days.</item>
+        <item quantity="many">[CS_1154170]_Your record has continued for more than %1$d days.</item>
+        <item quantity="other">[CS_1154233]_Your record has continued for more than %1$d days.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_5">
+        <item quantity="zero">[CS_1154106]_Achieved goal %1$d days in a row.</item>
+        <item quantity="one">[CS_1154194]_Achieved goal for %1$d day.</item>
+        <item quantity="two">[CS_1154139]_Achieved goal %1$d days in a row.</item>
+        <item quantity="few">[CS_1154186]_Achieved goal %1$d days in a row.</item>
+        <item quantity="many">[CS_1154136]_Achieved goal %1$d days in a row.</item>
+        <item quantity="other">[CS_1154161]_Achieved goal %1$d days in a row.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_5_over_30_days">
+        <item quantity="zero">[CS_1154147]_Achieved goal for more than %1$d days in a row.</item>
+        <item quantity="one">[CS_1154183]_Achieved goal for more than %1$d day in a row.</item>
+        <item quantity="two">[CS_1154174]_Achieved goal for more than %1$d days in a row.</item>
+        <item quantity="few">[CS_1154220]_Achieved goal for more than %1$d days in a row.</item>
+        <item quantity="many">[CS_1154093]_Achieved goal for more than %1$d days in a row.</item>
+        <item quantity="other">[CS_1154140]_Achieved goal for more than %1$d days in a row.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_6">
+        <item quantity="zero">[CS_1154157]_Amazing! %1$d-day streak.</item>
+        <item quantity="one">[CS_1154211]_Amazing! %1$d-day streak.</item>
+        <item quantity="two">[CS_1154235]_Amazing! %1$d-day streak.</item>
+        <item quantity="few">[CS_1154129]_Amazing! %1$d-day streak.</item>
+        <item quantity="many">[CS_1154219]_Amazing! %1$d-day streak.</item>
+        <item quantity="other">[CS_1154203]_Amazing! %1$d-day streak.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_6_over_30_days">
+        <item quantity="zero">[CS_1154126]_Amazing! Continuous streak for more than %1$d days.</item>
+        <item quantity="one">[CS_1154121]_Amazing! Continuous streak for more than %1$d day.</item>
+        <item quantity="two">[CS_1154124]_Amazing! Continuous streak for more than %1$d days.</item>
+        <item quantity="few">[CS_1154150]_Amazing! Continuous streak for more than %1$d days.</item>
+        <item quantity="many">[CS_1154236]_Amazing! Continuous streak for more than %1$d days.</item>
+        <item quantity="other">[CS_1154213]_Amazing! Continuous streak for more than %1$d days.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_7">
+        <item quantity="zero">[CS_1154239]_Maintained %1$d-day streak!</item>
+        <item quantity="one">[CS_1154103]_Maintained %1$d-day streak!</item>
+        <item quantity="two">[CS_1154098]_Maintained %1$d-day streak!</item>
+        <item quantity="few">[CS_1154148]_Maintained %1$d-day streak!</item>
+        <item quantity="many">[CS_1154197]_Maintained %1$d-day streak!</item>
+        <item quantity="other">[CS_1154217]_Maintained %1$d-day streak!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_7_over_30_days">
+        <item quantity="zero">[CS_1154229]_Maintained streak for more than %1$d days!</item>
+        <item quantity="one">[CS_1154238]_Maintained streak for more than %1$d day!</item>
+        <item quantity="two">[CS_1154221]_Maintained streak for more than %1$d days!</item>
+        <item quantity="few">[CS_1154176]_Maintained streak for more than %1$d days!</item>
+        <item quantity="many">[CS_1154111]_Maintained streak for more than %1$d days!</item>
+        <item quantity="other">[CS_1154193]_Maintained streak for more than %1$d days!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_1">
+        <item quantity="zero">[CS_1154182]_%1$d-day streak! Why not keep going?</item>
+        <item quantity="one">[CS_1154134]_%1$d-day streak! Why not keep going?</item>
+        <item quantity="two">[CS_1154152]_%1$d-day streak! Why not keep going?</item>
+        <item quantity="few">[CS_1154184]_%1$d-day streak! Why not keep going?</item>
+        <item quantity="many">[CS_1154218]_%1$d-day streak! Why not keep going?</item>
+        <item quantity="other">[CS_1154153]_%1$d-day streak! Why not keep going?</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_1_over_30_days">
+        <item quantity="zero">[CS_1154215]_Streak for more than %1$d days! Why not keep going?</item>
+        <item quantity="one">[CS_1154180]_Streak for more than %1$d day! Why not keep going?</item>
+        <item quantity="two">[CS_1154195]_Streak for more than %1$d days! Why not keep going?</item>
+        <item quantity="few">[CS_1154226]_Streak for more than %1$d days! Why not keep going?</item>
+        <item quantity="many">[CS_1154201]_Streak for more than %1$d days! Why not keep going?</item>
+        <item quantity="other">[CS_1154210]_Streak for more than %1$d days! Why not keep going?</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_2">
+        <item quantity="zero">[CS_1154096]_%1$d-day streak! Stay on track today.</item>
+        <item quantity="one">[CS_1154231]_%1$d-day streak! Stay on track today.</item>
+        <item quantity="two">[CS_1154168]_%1$d-day streak! Stay on track today.</item>
+        <item quantity="few">[CS_1154127]_%1$d-day streak! Stay on track today.</item>
+        <item quantity="many">[CS_1154133]_%1$d-day streak! Stay on track today.</item>
+        <item quantity="other">[CS_1154104]_%1$d-day streak! Stay on track today.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_2_over_30_days">
+        <item quantity="zero">[CS_1154130]_Streak for more than %1$d days! Keep it going today.</item>
+        <item quantity="one">[CS_1154135]_Streak for more than %1$d day! Keep it going today.</item>
+        <item quantity="two">[CS_1154166]_Streak for more than %1$d days! Keep it going today.</item>
+        <item quantity="few">[CS_1154095]_Streak for more than %1$d days! Keep it going today.</item>
+        <item quantity="many">[CS_1154099]_Streak for more than %1$d days! Keep it going today.</item>
+        <item quantity="other">[CS_1154112]_Streak for more than %1$d days! Keep it going today.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_3">
+        <item quantity="zero">[CS_1154162]_Achieved goal for %1$d days in a row. Keep it up!</item>
+        <item quantity="one">[CS_1154107]_Achieved goal for %1$d day. Keep it up!</item>
+        <item quantity="two">[CS_1154110]_Achieved goal for %1$d days in a row. Keep it up!</item>
+        <item quantity="few">[CS_1154143]_Achieved goal for %1$d days in a row. Keep it up!</item>
+        <item quantity="many">[CS_1154212]_Achieved goal for %1$d days in a row. Keep it up!</item>
+        <item quantity="other">[CS_1154128]_Achieved goal for %1$d days in a row. Keep it up!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_3_over_30_days">
+        <item quantity="zero">[CS_1154138]_Achieved goal for more than %1$d days in a row. Keep it up!</item>
+        <item quantity="one">[CS_1154114]_Achieved goal for more than %1$d day in a row. Keep it up!</item>
+        <item quantity="two">[CS_1154092]_Achieved goal for more than %1$d days in a row. Keep it up!</item>
+        <item quantity="few">[CS_1154159]_Achieved goal for more than %1$d days in a row. Keep it up!</item>
+        <item quantity="many">[CS_1154185]_Achieved goal for more than %1$d days in a row. Keep it up!</item>
+        <item quantity="other">[CS_1154131]_Achieved goal for more than %1$d days in a row. Keep it up!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_5">
+        <item quantity="zero">[CS_1154191]_%1$d-day streak. Keep pushing forward!</item>
+        <item quantity="one">[CS_1154222]_%1$d-day streak. Keep pushing forward!</item>
+        <item quantity="two">[CS_1154232]_%1$d-day streak. Keep pushing forward!</item>
+        <item quantity="few">[CS_1154117]_%1$d-day streak. Keep pushing forward!</item>
+        <item quantity="many">[CS_1154115]_%1$d-day streak. Keep pushing forward!</item>
+        <item quantity="other">[CS_1154224]_%1$d-day streak. Keep pushing forward!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_5_over_30_days">
+        <item quantity="zero">[CS_1154119]_Streak for more than %1$d days. Keep it going!</item>
+        <item quantity="one">[CS_1154144]_Streak for more than %1$d day. Keep it going!</item>
+        <item quantity="two">[CS_1154167]_Streak for more than %1$d days. Keep it going!</item>
+        <item quantity="few">[CS_1154088]_Streak for more than %1$d days. Keep it going!</item>
+        <item quantity="many">[CS_1154154]_Streak for more than %1$d days. Keep it going!</item>
+        <item quantity="other">[CS_1154155]_Streak for more than %1$d days. Keep it going!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_6_p1">
+        <item quantity="zero">[CS_1153687]_Keep it up for %1$d more days</item>
+        <item quantity="one">[CS_1153698]_Keep it up for %1$d more day</item>
+        <item quantity="two">[CS_1153715]_Keep it up for %1$d more days</item>
+        <item quantity="few">[CS_1153620]_Keep it up for %1$d more days</item>
+        <item quantity="many">[CS_1153568]_Keep it up for %1$d more days</item>
+        <item quantity="other">[CS_1153727]_Keep it up for %1$d more days</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_6_p2">
+        <item quantity="zero">[CS_1153619]_Just %1$d steps away</item>
+        <item quantity="one">[CS_1153596]_Just %1$d step away</item>
+        <item quantity="two">[CS_1153614]_Just %1$d steps away</item>
+        <item quantity="few">[CS_1153718]_Just %1$d steps away</item>
+        <item quantity="many">[CS_1153539]_Just %1$d steps away</item>
+        <item quantity="other">[CS_1153631]_Just %1$d steps away</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_7">
+        <item quantity="zero">[CS_1154200]_Maintained %1$d-day streak! Hang in there.</item>
+        <item quantity="one">[CS_1154187]_Maintained %1$d-day streak! Hang in there.</item>
+        <item quantity="two">[CS_1154192]_Maintained %1$d-day streak! Hang in there.</item>
+        <item quantity="few">[CS_1154234]_Maintained %1$d-day streak! Hang in there.</item>
+        <item quantity="many">[CS_1154089]_Maintained %1$d-day streak! Hang in there.</item>
+        <item quantity="other">[CS_1154149]_Maintained %1$d-day streak! Hang in there.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_7_over_30_days">
+        <item quantity="zero">[CS_1154090]_Streak maintained for more than %1$d days! Keep it up.</item>
+        <item quantity="one">[CS_1154177]_Streak maintained for more than %1$d day! Keep it up.</item>
+        <item quantity="two">[CS_1154190]_Streak maintained for more than %1$d days! Keep it up.</item>
+        <item quantity="few">[CS_1154225]_Streak maintained for more than %1$d days! Keep it up.</item>
+        <item quantity="many">[CS_1154204]_Streak maintained for more than %1$d days! Keep it up.</item>
+        <item quantity="other">[CS_1154142]_Streak maintained for more than %1$d days! Keep it up.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_low_step_1">
+        <item quantity="zero">[CS_1154209]_Daily step count recently was %1$d.</item>
+        <item quantity="one">[CS_1154137]_Daily step count recently was %1$d.</item>
+        <item quantity="two">[CS_1154145]_Daily step count recently was %1$d.</item>
+        <item quantity="few">[CS_1154105]_Daily step count recently was %1$d.</item>
+        <item quantity="many">[CS_1154094]_Daily step count recently was %1$d.</item>
+        <item quantity="other">[CS_1154206]_Daily step count recently was %1$d.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_low_step_2_p2">
+        <item quantity="zero">[CS_1153732]_Walked %1$d steps/day</item>
+        <item quantity="one">[CS_1153636]_Walked %1$d step/day</item>
+        <item quantity="two">[CS_1153630]_Walked %1$d steps/day</item>
+        <item quantity="few">[CS_1153721]_Walked %1$d steps/day</item>
+        <item quantity="many">[CS_1153548]_Walked %1$d steps/day</item>
+        <item quantity="other">[CS_1153617]_Walked %1$d steps/day</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="zero">[CS_309382]_%d steps</item>
+        <item quantity="one">[CS_309390]_%d step</item>
+        <item quantity="two">[CS_309401]_%d steps</item>
+        <item quantity="few">[CS_309386]_%d steps</item>
+        <item quantity="many">[CS_309385]_%d steps</item>
+        <item quantity="other">[CS_309393]_%d steps</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="zero">[CS_916405]_%s mi</item>
+        <item quantity="one">[CS_916413]_%s mi</item>
+        <item quantity="two">[CS_916414]_%s mi</item>
+        <item quantity="few">[CS_916407]_%s mi</item>
+        <item quantity="many">[CS_916403]_%s mi</item>
+        <item quantity="other">[CS_916415]_%s mi</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="zero">[CS_916408]_%s km</item>
+        <item quantity="one">[CS_916406]_%s km</item>
+        <item quantity="two">[CS_916410]_%s km</item>
+        <item quantity="few">[CS_916412]_%s km</item>
+        <item quantity="many">[CS_916404]_%s km</item>
+        <item quantity="other">[CS_916411]_%s km</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="zero">[CS_1045279]_%1$s steps away</item>
+        <item quantity="one">[CS_1045282]_%1$s step away</item>
+        <item quantity="two">[CS_1045280]_%1$s steps away</item>
+        <item quantity="few">[CS_1045281]_%1$s steps away</item>
+        <item quantity="many">[CS_1045283]_%1$s steps away</item>
+        <item quantity="other">[CS_1045284]_%1$s steps away</item>
+    </plurals>
+</resources>

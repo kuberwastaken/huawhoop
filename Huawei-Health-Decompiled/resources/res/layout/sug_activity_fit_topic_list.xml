@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/fitness_recommend_course_title"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x4="3"
+        NOT_FOUND_0x5="@string/IDS_device_wifi_weight_course_for_you"/>
+    <com.huawei.ui.commonui.scrollview.HealthScrollView
+        layout_width="-1"
+        layout_height="-2">
+        <com.huawei.health.suggestion.ui.fitness.activity.fragment.TopicFitnessView
+            orientation="1"
+            id="@+id/weight_recommend_fitness_view"
+            layout_width="-1"
+            layout_height="-2"/>
+    </com.huawei.ui.commonui.scrollview.HealthScrollView>
+</LinearLayout>

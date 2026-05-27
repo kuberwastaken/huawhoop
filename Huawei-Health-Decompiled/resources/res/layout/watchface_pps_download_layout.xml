@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.openalliance.ad.views.PPSNativeView xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/pps_root_layout"
+    background="@color/emui_white"
+    layout_width="-1"
+    layout_height="-2">
+    <RelativeLayout
+        layout_width="-1"
+        layout_height="-2"
+        layout_centerVertical="true">
+        <ImageView
+            id="@+id/pps_image_iv"
+            layout_width="@dimen/_2131362551_res_0x7f0a02f7"
+            layout_height="@dimen/_2131362551_res_0x7f0a02f7"
+            scaleType="6"
+            layout_centerVertical="true"
+            layout_marginStart="@dimen/_2131362568_res_0x7f0a0308"
+            layout_alignParentStart="true"/>
+        <TextView
+            textSize="@dimen/_2131365347_res_0x7f0a0de3"
+            id="@+id/pps_label_tv"
+            layout_width="-2"
+            layout_height="-2"
+            layout_centerVertical="true"
+            layout_marginStart="@dimen/_2131362562_res_0x7f0a0302"
+            layout_toEndOf="@+id/pps_image_iv"/>
+        <com.huawei.openalliance.ad.views.AppDownloadButton xmlns:progress_button="http://schemas.android.com/apk/res-auto"
+            id="@+id/pps_download_btn"
+            paddingLeft="@dimen/_2131362545_res_0x7f0a02f1"
+            paddingRight="@dimen/_2131362545_res_0x7f0a02f1"
+            layout_width="-2"
+            layout_height="@dimen/_2131362546_res_0x7f0a02f2"
+            layout_centerVertical="true"
+            paddingStart="@dimen/_2131362545_res_0x7f0a02f1"
+            paddingEnd="@dimen/_2131362545_res_0x7f0a02f1"
+            layout_marginEnd="@dimen/_2131362534_res_0x7f0a02e6"
+            layout_alignParentEnd="true"
+            NOT_FOUND_0x10="false"
+            NOT_FOUND_0x11="@dimen/_2131362572_res_0x7f0a030c"
+            NOT_FOUND_0x12="@dimen/_2131362561_res_0x7f0a0301"
+            NOT_FOUND_0x13="@color/_2131297212_res_0x7f0903bc"
+            NOT_FOUND_0x14="@dimen/_2131365344_res_0x7f0a0de0"/>
+    </RelativeLayout>
+</com.huawei.openalliance.ad.views.PPSNativeView>

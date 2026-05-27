@@ -1,0 +1,1007 @@
+{
+  "appBundleId": "16.1.3.320_ed95bf38",
+  "appVersionName": "16.1.3.320",
+  "modules": [
+    {
+      "moduleName": "AiRopeSkippingMsPlus",
+      "url": "config://AiRopeSkippingMsPlus.zip",
+      "builtIn": false,
+      "isolated": false,
+      "zipSize": 13619364,
+      "zipFileNum": 2,
+      "size": 14500459,
+      "sha256": "6fa315b4639dc9ec1c79e14d2f960c5bbc59f3dafa960650b14cd18dffb63804",
+      "version": "1.0@1",
+      "minSdkVersion": 26,
+      "dexNumber": 1,
+      "nativeLibraries": [
+        {
+          "abi": "arm64-v8a",
+          "jniLibs": [
+            {
+              "name": "libbodyposeMS.so",
+              "sha256": "aa02ab7e1e225f48ee77f2e6273199bd9c2247895c2475bf1f611a1110aa720d",
+              "size": 5042576
+            }
+          ]
+        },
+        {
+          "abi": "armeabi-v7a",
+          "jniLibs": [
+            {
+              "name": "libbodyposeMS.so",
+              "sha256": "9f33b66859f096d582107093429f10d2aca78ebb53c58a174b7086edef3c85f0",
+              "size": 3074100
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "RopeSkippingResources"
+      ]
+    },
+    {
+      "moduleName": "MultilingualAudio",
+      "url": "config://MultilingualAudio.zip",
+      "builtIn": false,
+      "isolated": false,
+      "zipSize": 319654,
+      "zipFileNum": 1,
+      "size": 332839,
+      "sha256": "2189b56adea011c67500db1dd861aac64701cac5dadc5bbff8d65f03ceb36bc9",
+      "version": "1.0@1",
+      "minSdkVersion": 26,
+      "dexNumber": 1,
+      "nativeLibraries": [
+        {
+          "abi": "arm64-v8a",
+          "jniLibs": [
+            {
+              "name": "libduyin.so",
+              "sha256": "342921663990a8129ff5788681f2b27441b6ef35ac439cf27072cc0962c4f17f",
+              "size": 358392
+            },
+            {
+              "name": "libhuaweisecurtiy.so",
+              "sha256": "011bb085aa4b4097ced966ddcc19a208322ae88d5969a7aca1862d2da5e554cb",
+              "size": 63344
+            },
+            {
+              "name": "libnumberinflater.so",
+              "sha256": "30295c267714efc052a9f7d7f677696a54d387f46e99866362777009a1530df6",
+              "size": 30752
+            }
+          ]
+        },
+        {
+          "abi": "armeabi-v7a",
+          "jniLibs": [
+            {
+              "name": "libduyin.so",
+              "sha256": "245a44b73e7e28cdb7e2c057f3d154b315b3eb19c8da8653bc63698e958c150f",
+              "size": 202336
+            },
+            {
+              "name": "libhuaweisecurtiy.so",
+              "sha256": "1c450531612cc3b51068beebe12d90e272dd4881c787adb0c6d1723beedb3659",
+              "size": 46772
+            },
+            {
+              "name": "libnumberinflater.so",
+              "sha256": "fe82b0b3ebf523f7af4a3d2b145b0ab6f720884a03da926f10bec4c97df99b94",
+              "size": 18000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "moduleName": "PluginAiBodyPoseAlgorithm",
+      "url": "config://PluginAiBodyPoseAlgorithm.zip",
+      "builtIn": false,
+      "isolated": false,
+      "zipSize": 6976216,
+      "zipFileNum": 1,
+      "size": 9465800,
+      "sha256": "ace2ed5bc9a6aef8848b7e91be1ad7fe472c3491595d11c15b34bead8b58f61d",
+      "version": "1.0@1",
+      "minSdkVersion": 26,
+      "dexNumber": 1,
+      "dependencies": [
+        "PluginBodyRebuild"
+      ]
+    },
+    {
+      "moduleName": "PluginAiFitnessSportCommon",
+      "url": "config://PluginAiFitnessSportCommon.zip",
+      "builtIn": false,
+      "isolated": false,
+      "zipSize": 6117497,
+      "zipFileNum": 1,
+      "size": 8003777,
+      "sha256": "0c47897f4ae5c74ae378b3664f79c8b12cbdee5505dffd07e13b6f5c49bae25a",
+      "version": "1.0@1",
+      "minSdkVersion": 26,
+      "dexNumber": 1,
+      "workProcesses": [
+        ""
+      ],
+      "nativeLibraries": [
+        {
+          "abi": "arm64-v8a",
+          "jniLibs": [
+            {
+              "name": "libComparePoseJni.so",
+              "sha256": "7b83deaa4821d9aaf38dc1ebe081fb6174b9f63e9f5ca8464839a1edbe7e3dd4",
+              "size": 1376072
+            },
+            {
+              "name": "libbrightnessTemp.so",
+              "sha256": "5b3d490c8ea8e532b924b859466da1269f8d1cb64534d3613a99f391cff96ca4",
+              "size": 350296
+            }
+          ]
+        },
+        {
+          "abi": "armeabi-v7a",
+          "jniLibs": [
+            {
+              "name": "libComparePoseJni.so",
+              "sha256": "7b68cbe259b7038f4349f6fda8ca088f5aaec8b028ac57f80830d354955c9fb6",
+              "size": 1071624
+            },
+            {
+              "name": "libbrightnessTemp.so",
+              "sha256": "e53f346ea7e2b57581e1a5b85cc59f5faf46d5887730745a735645d195c755c2",
+              "size": 202344
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "moduleName": "PluginAiFitnessSportKir",
+      "url": "config://PluginAiFitnessSportKir.zip",
+      "builtIn": false,
+      "isolated": false,
+      "zipSize": 19655474,
+      "zipFileNum": 2,
+      "size": 19698835,
+      "sha256": "7405fc6113f3cbb12dac21fdebac69f07ee55450831d1a4beda11b03717ad768",
+      "version": "1.0@1",
+      "minSdkVersion": 26,
+      "dexNumber": 1,
+      "nativeLibraries": [
+        {
+          "abi": "arm64-v8a",
+          "jniLibs": [
+            {
+              "name": "libc++_sharedKir.so",
+              "sha256": "791e62491671e1d5fe5c4de1fbc5195cc21c29ba06116573b5455e592d9b76be",
+              "size": 977256
+            },
+            {
+              "name": "libhiaiKir.so",
+              "sha256": "44045f3a9813c0b8d1c07c1203aeb82ce254a3d2800741064b80b4a7c7e9a1f8",
+              "size": 298584
+            },
+            {
+              "name": "libhiai_irKir.so",
+              "sha256": "78ea9397f424ba43d3e3efb885e56e0496cbe0cabe1c8cd59655f02ab7e4721b",
+              "size": 784480
+            },
+            {
+              "name": "libskeletonKirin.so",
+              "sha256": "2e8d37d4675ab2f6a2399d02d9c9ec87851f11d6fcf95716007e4d61f7a32933",
+              "size": 4264280
+            }
+          ]
+        },
+        {
+          "abi": "armeabi-v7a",
+          "jniLibs": [
+            {
+              "name": "libc++_sharedKir.so",
+              "sha256": "1b3c917b2fa11a78bd2ca11bf62529ce895bb8174e57b68ce8d8a7ca3b721905",
+              "size": 657200
+            },
+            {
+              "name": "libhiaiKir.so",
+              "sha256": "6861bf48b8241c796f5acac75879ef7fabe4233343c07bb0827e2c267d72b420",
+              "size": 223744
+            },
+            {
+              "name": "libhiai_irKir.so",
+              "sha256": "44387e6946403f01367732d4e1b8a23ae0282ba3204343cdeb5effbfba669578",
+              "size": 579440
+            },
+            {
+              "name": "libskeletonKirin.so",
+              "sha256": "7f563d891963ee2c4430805b76b79aa09c74a62aa69a6411334aa6130a59f079",
+              "size": 2641108
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "PluginAiFitnessSportCommon"
+      ]
+    },
+    {
+      "moduleName": "PluginAiFitnessSportQua",
+      "url": "config://PluginAiFitnessSportQua.zip",
+      "builtIn": false,
+      "isolated": false,
+      "zipSize": 29567511,
+      "zipFileNum": 3,
+      "size": 29602933,
+      "sha256": "9bdd36bb66335b78032e0b9320bac490372f4bf110dba8c2f377dd85f7fbe9a9",
+      "version": "1.0@1",
+      "minSdkVersion": 26,
+      "dexNumber": 1,
+      "nativeLibraries": [
+        {
+          "abi": "arm64-v8a",
+          "jniLibs": [
+            {
+              "name": "libc++_sharedDl.so",
+              "sha256": "791e62491671e1d5fe5c4de1fbc5195cc21c29ba06116573b5455e592d9b76be",
+              "size": 977256
+            },
+            {
+              "name": "libdlliteclient.so",
+              "sha256": "6004069164920e75b530d99614dfa4cfc7ca3f07aeeb9d04b69fdf4cdaddf127",
+              "size": 75912
+            },
+            {
+              "name": "libskeletonDllite.so",
+              "sha256": "2ab801270e55d040e5e316a0357c708e0b2d3edc5338ea20d382d2178e3cb669",
+              "size": 4250664
+            }
+          ]
+        },
+        {
+          "abi": "armeabi-v7a",
+          "jniLibs": [
+            {
+              "name": "libc++_sharedDl.so",
+              "sha256": "791e62491671e1d5fe5c4de1fbc5195cc21c29ba06116573b5455e592d9b76be",
+              "size": 977256
+            },
+            {
+              "name": "libdlliteclient.so",
+              "sha256": "6004069164920e75b530d99614dfa4cfc7ca3f07aeeb9d04b69fdf4cdaddf127",
+              "size": 75912
+            },
+            {
+              "name": "libskeletonDllite.so",
+              "sha256": "2ab801270e55d040e5e316a0357c708e0b2d3edc5338ea20d382d2178e3cb669",
+              "size": 4250664
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "PluginAiFitnessSportCommon"
+      ]
+    },
+    {
+      "moduleName": "PluginAudioDevice",
+      "url": "config://PluginAudioDevice.zip",
+      "builtIn": false,
+      "isolated": false,
+      "zipSize": 9684226,
+      "zipFileNum": 1,
+      "size": 14264053,
+      "sha256": "bbd4274952906ac5e0625d68c3a4054457211c432444c23ab442206cc541f3ba",
+      "version": "1.0@1",
+      "minSdkVersion": 26,
+      "dexNumber": 1,
+      "workProcesses": [
+        ""
+      ],
+      "nativeLibraries": [
+        {
+          "abi": "arm64-v8a",
+          "jniLibs": [
+            {
+              "name": "libapmapi.so",
+              "sha256": "4f8b0faf5526d7a74eefd243d5c024fcc294fbb48dff32b5b18189be0ee8f8a5",
+              "size": 34720
+            },
+            {
+              "name": "libc++_shared.so",
+              "sha256": "bec0c1195fd3d47239c17e6e9a3e033930334e30322849e94959c8896f5370e1",
+              "size": 919888
+            },
+            {
+              "name": "libtestFitting.so",
+              "sha256": "e208a3d31897836203db3b563392b8c6815439621f677c3312a6a8d029779d54",
+              "size": 18256
+            }
+          ]
+        },
+        {
+          "abi": "armeabi-v7a",
+          "jniLibs": [
+            {
+              "name": "libapmapi.so",
+              "sha256": "7a604109d965b0d8ece0f215bc8c5591ae90a2ab97d1863d63d9e57af832266f",
+              "size": 38544
+            },
+            {
+              "name": "libc++_shared.so",
+              "sha256": "f97250ef8bf486721aea38eb9a2ee1269f7236c17c1200ac4fefbc117eb07c4e",
+              "size": 558904
+            },
+            {
+              "name": "libtestFitting.so",
+              "sha256": "6b3f2ced99c6ca09793a91ab4b12d8c72388d204f165f126efae99a896c87098",
+              "size": 22104
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "moduleName": "PluginBodyRebuild",
+      "url": "config://PluginBodyRebuild.zip",
+      "builtIn": false,
+      "isolated": false,
+      "zipSize": 31023097,
+      "zipFileNum": 4,
+      "size": 32138217,
+      "sha256": "b6760d9ebf77b2686664b31e2bad67f10a5f195c06f95919f5c910106dc75b17",
+      "version": "1.0@1",
+      "minSdkVersion": 26,
+      "dexNumber": 1,
+      "workProcesses": [
+        ""
+      ],
+      "nativeLibraries": [
+        {
+          "abi": "arm64-v8a",
+          "jniLibs": [
+            {
+              "name": "libbrightness.so",
+              "sha256": "fb3fdea361dfe2042b78612f9b3c0c912fff70cac194f1c25b5f0f9fa3d1e539",
+              "size": 350296
+            },
+            {
+              "name": "libimgnotescale.so",
+              "sha256": "594078e81fc71efd20a3c77b853c13d4216bf5f34b08930a1f0c14d04721a0ec",
+              "size": 534136
+            },
+            {
+              "name": "libpredict.so",
+              "sha256": "0befb81d8f5bd39e56b2e5eb645b708486156596cf6aa34e6672c11b49367385",
+              "size": 276432
+            },
+            {
+              "name": "libskeleton.so",
+              "sha256": "e44b53105307d8749e9989949082c6affd5b97bff4b3d12aeefcdb961b6085a2",
+              "size": 5045376
+            }
+          ]
+        },
+        {
+          "abi": "armeabi-v7a",
+          "jniLibs": [
+            {
+              "name": "libbrightness.so",
+              "sha256": "effb9630fe6dd8f7e27970fc40488a085ae0862d858f1996f685e8814a8fc883",
+              "size": 202344
+            },
+            {
+              "name": "libimgnotescale.so",
+              "sha256": "aa6f7ec464d4597260e6bd8fe0cfff94430b096b171853475436221eb0a5ec03",
+              "size": 317444
+            },
+            {
+              "name": "libpredict.so",
+              "sha256": "dc5aeca2a64cb953f29b9454dd17220a1e6bbaf73d6ac39e57a39cd8c6d87ec6",
+              "size": 153124
+            },
+            {
+              "name": "libskeleton.so",
+              "sha256": "f1784428e17666221e121ab363ac98fbfe997a92faa934e9373087a2aadafb37",
+              "size": 3082436
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "moduleName": "PluginCaaskit",
+      "url": "config://PluginCaaskit.zip",
+      "builtIn": false,
+      "isolated": false,
+      "zipSize": 10584748,
+      "zipFileNum": 2,
+      "size": 10652409,
+      "sha256": "a94b6f87cb146629f6b0ffd4ec36158d981b782c0d3b8354c84550dd70fd7a7c",
+      "version": "1.0@1",
+      "minSdkVersion": 26,
+      "dexNumber": 1,
+      "nativeLibraries": [
+        {
+          "abi": "arm64-v8a",
+          "jniLibs": [
+            {
+              "name": "libHME-Audio.so",
+              "sha256": "fc165e2e4ab63939522ae1e5a0b45a236e6b2439d31c17fe7aaaf8a25404796d",
+              "size": 881704
+            },
+            {
+              "name": "libHME-Video.so",
+              "sha256": "12f27995fd483784aed01597ca419abaae386860a0344ffb5aa22b7131c2797e",
+              "size": 8582280
+            },
+            {
+              "name": "libSRTP.so",
+              "sha256": "7f4f00f1f60c0b357229fd719b860b91c4617deb04d0643b70817602464246ed",
+              "size": 108264
+            },
+            {
+              "name": "libuspbase.so",
+              "sha256": "68a02ee875b05f7b7aee480830bf672fe01c65292abca70eabb31ecc0eb83e92",
+              "size": 362616
+            },
+            {
+              "name": "libusphiact.so",
+              "sha256": "f8120f2dcac7dfa344ef08de1492af3e7085a57c9908efb111b594cd6986900a",
+              "size": 95888
+            },
+            {
+              "name": "libusphibase.so",
+              "sha256": "58ae37099c5f5832d7d98068cc5ccbf26a88941e7134598eb9d10d17fd2ce5d0",
+              "size": 50760
+            },
+            {
+              "name": "libusphirtx.so",
+              "sha256": "77d171476a31f482916556324e719641dbcc0f928b41d0f4d0df53946c079374",
+              "size": 412680
+            },
+            {
+              "name": "libusphisign.so",
+              "sha256": "b0f7d99a887820660b46a56385cb0cc89633bdce6f170cb24c2a3c93cdfed8de",
+              "size": 153232
+            },
+            {
+              "name": "libusphisignV3.so",
+              "sha256": "a0b9ed4a1d267bb2fbda1a2390689b73513684865fb32885f771e9ef2400ce45",
+              "size": 104088
+            },
+            {
+              "name": "libusphitrace.so",
+              "sha256": "c57b984e0a1eba5da6c9cf2cd1c3d934ee0fdc419280244bab0180c5fb75d1b4",
+              "size": 58976
+            },
+            {
+              "name": "libusphitun.so",
+              "sha256": "7395b922746db7bb231413805e9590ad71cff5d983165cced2674912f6990d47",
+              "size": 63040
+            },
+            {
+              "name": "libusphttp.so",
+              "sha256": "de065824e3625abe1288bd628bf2dd3a29e44ab2fc1efc4c9c390ad92eff5677",
+              "size": 99984
+            },
+            {
+              "name": "libusplogin.so",
+              "sha256": "e9fd801ba7cddf4c3f18078e3a2213cef52a54c36506819bfb92837d67d75e8a",
+              "size": 42560
+            },
+            {
+              "name": "libuspprotocol.so",
+              "sha256": "02491ac89bef5795871e9ab9b6122923822e645335745f09f7a539509b2cb8d7",
+              "size": 190096
+            },
+            {
+              "name": "libusprest.so",
+              "sha256": "53a7feb27584191115d15f8a17a6122b0e4a3e8e329f7a666d83e0847ab4315d",
+              "size": 22080
+            },
+            {
+              "name": "libusptls.so",
+              "sha256": "0938d9c611d5f13bb2158882ad280e7ee4cb8ec22eed484f08a3bd2c498f9586",
+              "size": 3993376
+            }
+          ]
+        },
+        {
+          "abi": "armeabi-v7a",
+          "jniLibs": [
+            {
+              "name": "libHME-Audio.so",
+              "sha256": "1dc861cdd5f47c379ad930b6d3660e843c5e46b4c145c865051973f5696e8b5d",
+              "size": 696872
+            },
+            {
+              "name": "libHME-Video.so",
+              "sha256": "636995be8e5a7ebf33355dc1415fc643e4d99feee4fb8b350539c82330f2afa2",
+              "size": 5212600
+            },
+            {
+              "name": "libSRTP.so",
+              "sha256": "38c959d736c1f751e8b7dba3501ef6f2ba132c727b9fcd284bd81a75a62ea4b4",
+              "size": 116336
+            },
+            {
+              "name": "libuspbase.so",
+              "sha256": "ec748dff65ade71daf6ba211cc9a87334a39d94f6454d0a4be8240bc0793a641",
+              "size": 223040
+            },
+            {
+              "name": "libusphiact.so",
+              "sha256": "dd3b48da98d4d2efc839093c0ca6f861c2f6fc22b3cbdf98f860a151707d0488",
+              "size": 66948
+            },
+            {
+              "name": "libusphibase.so",
+              "sha256": "e04f73b9f77e26762b67e319cd9f329645deec92ac43e1cee99519d25260876d",
+              "size": 34132
+            },
+            {
+              "name": "libusphirtx.so",
+              "sha256": "ebd1048d143d7abfdc2e494c118c2c910c2f975a89753315b6686e595216de58",
+              "size": 293408
+            },
+            {
+              "name": "libusphisign.so",
+              "sha256": "1acc93d304b0015c2c1b8de1deb59b007275f5bf35c26c071887dd3398819e69",
+              "size": 103820
+            },
+            {
+              "name": "libusphisignV3.so",
+              "sha256": "1677a3f26434301c4957736476cb9c5a83155de226d801a853a5033eb6c8cf13",
+              "size": 71064
+            },
+            {
+              "name": "libusphitrace.so",
+              "sha256": "05d76e67dbde326ec9c7f4c6895880c222e4574b74f99ca0a5946803e4d90eb3",
+              "size": 42344
+            },
+            {
+              "name": "libusphitun.so",
+              "sha256": "e74a1176ac90f44ab59369c50901d3a760178571f2d08b61e73a036b02673784",
+              "size": 42320
+            },
+            {
+              "name": "libusphttp.so",
+              "sha256": "c2570def138a36f941034172d2156d0289810de5e660941f12754bea6792cf7c",
+              "size": 62912
+            },
+            {
+              "name": "libusplogin.so",
+              "sha256": "46fa61d9557bed20e2fa685ab49ee040521665bd2efa490109c4f9dfa64997e2",
+              "size": 25936
+            },
+            {
+              "name": "libuspprotocol.so",
+              "sha256": "48e427b4f461377c7f590845090a0d56a59897a5e3c97bcc2c6d0134403d2d6a",
+              "size": 112064
+            },
+            {
+              "name": "libusprest.so",
+              "sha256": "df7e32833bf81ca2288d21794f559c521310f936c5bb1206040cbaabc11ba74e",
+              "size": 13648
+            },
+            {
+              "name": "libusptls.so",
+              "sha256": "8e5b769a2cb46a67d3f461a6ace0d81545aa00942f1101a97075fd14be96ee71",
+              "size": 3539908
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "moduleName": "PluginDeviceDetectDiagnosis",
+      "url": "config://PluginDeviceDetectDiagnosis.zip",
+      "builtIn": false,
+      "isolated": false,
+      "zipSize": 3859592,
+      "zipFileNum": 1,
+      "size": 6542404,
+      "sha256": "3d59a03310879d6130b9a1f44aabe75ead8fed1800936c10a925bc31116ccbd4",
+      "version": "1.0@1",
+      "minSdkVersion": 26,
+      "dexNumber": 1,
+      "workProcesses": [
+        "",
+        ":PhoneService"
+      ]
+    },
+    {
+      "moduleName": "PluginHealthAlgorithm",
+      "url": "config://PluginHealthAlgorithm.zip",
+      "builtIn": false,
+      "isolated": false,
+      "zipSize": 6280885,
+      "zipFileNum": 1,
+      "size": 6523967,
+      "sha256": "731c628be5f1ec4807f58a9993a5428e9c235e3b1540a8fa5edcce6d1d337b56",
+      "version": "1.0@1",
+      "minSdkVersion": 26,
+      "dexNumber": 1,
+      "workProcesses": [
+        ""
+      ],
+      "nativeLibraries": [
+        {
+          "abi": "arm64-v8a",
+          "jniLibs": [
+            {
+              "name": "libAfibProcessAlg.so",
+              "sha256": "a6d5cb57a9d65eb261e29b5051bab72ca54fc64448f8c77dbbba1e17307be061",
+              "size": 1414144
+            },
+            {
+              "name": "libAfibRriAlg.so",
+              "sha256": "015f8c7a7f9e4f185ba0d97008c35dcaeaf80bb5268cadf88ac78636e74e49ac",
+              "size": 1143472
+            },
+            {
+              "name": "libAlgDetectionJNI.so",
+              "sha256": "57e1d002e63e93a6aeeba2082efe184f747cf75bd872df203f4f9e1459954491",
+              "size": 42768
+            },
+            {
+              "name": "libEcgFilterLib.so",
+              "sha256": "547718a85dd89baeabade403d85ff057e13cc327aeb2ffec94e2c872dfd4c7f6",
+              "size": 1033064
+            },
+            {
+              "name": "libPhysiologicalCycleAlg.so",
+              "sha256": "00783b8e7a3d764e9bdaab86d1e556d6bb03aa4ff4d890b6aad0351deec101a9",
+              "size": 20472
+            },
+            {
+              "name": "libecgfilterso.so",
+              "sha256": "fb66809f7906c06096c89db90fd48b275cc5547161915d4ce55ad1bc13a6934e",
+              "size": 30624
+            },
+            {
+              "name": "libmindspore-lite-jni.so",
+              "sha256": "bec0bc60c6ca02819dbe8988f75462e6535e9324e6466e7c5b6fb539e56c7f00",
+              "size": 50952
+            },
+            {
+              "name": "libmindspore-lite.so",
+              "sha256": "3a0850454cd47f2cd650f9b6320f7d97937f5eeda661c61223baa7a075af962c",
+              "size": 2546776
+            }
+          ]
+        },
+        {
+          "abi": "armeabi-v7a",
+          "jniLibs": [
+            {
+              "name": "libAfibProcessAlg.so",
+              "sha256": "d047058de751acdf9f949c8cf87658b3791b7e8f7fd12ca82465fbbde9ae4dcc",
+              "size": 929796
+            },
+            {
+              "name": "libAfibRriAlg.so",
+              "sha256": "f0530702fb3cee0807e7e3c809d81ce3159413ea389a7e1b0583aec0ec056734",
+              "size": 700184
+            },
+            {
+              "name": "libAlgDetectionJNI.so",
+              "sha256": "5c5cde7e70aa32bd6aeee314631213b75bc5010c1b200cdb23a82c6a554ae0ca",
+              "size": 34280
+            },
+            {
+              "name": "libEcgFilterLib.so",
+              "sha256": "15db0f48938c5e2516344a50e2b2f88a08641b159866b641818db79b3f6f13df",
+              "size": 633012
+            },
+            {
+              "name": "libPhysiologicalCycleAlg.so",
+              "sha256": "fa23d7f712bab4a4269fe8a7d727295bed1813e296a46eedb3dbd634e3cfd216",
+              "size": 15260
+            },
+            {
+              "name": "libecgfilterso.so",
+              "sha256": "140d38a69f16b302e2d12496474ebaaaff79687afcb19e17b8a41604e41337b5",
+              "size": 34476
+            },
+            {
+              "name": "libmindspore-lite-jni.so",
+              "sha256": "acb87dde9759682b7da3ccc5a55e1f0290c2e42e9d444f7ad264d41a747830db",
+              "size": 54876
+            },
+            {
+              "name": "libmindspore-lite.so",
+              "sha256": "f628dfdc39dc88b0ea86c6638195a8a5aff099a1b4c4f8266d4297191edea622",
+              "size": 2788612
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "moduleName": "PluginHealthModel",
+      "url": "assets://PluginHealthModel.zip",
+      "builtIn": true,
+      "isolated": false,
+      "zipSize": 0,
+      "zipFileNum": 0,
+      "size": 3521375,
+      "sha256": "d8dd2233be270a22b3fb07afd3269a2b3f30e3853c6ddd6baf6a9bdab302ba44",
+      "version": "1.0@1",
+      "minSdkVersion": 26,
+      "dexNumber": 1,
+      "workProcesses": [
+        ""
+      ]
+    },
+    {
+      "moduleName": "PluginHiAiEngine",
+      "url": "assets://PluginHiAiEngine.zip",
+      "builtIn": true,
+      "isolated": false,
+      "zipSize": 0,
+      "zipFileNum": 0,
+      "size": 1927884,
+      "sha256": "c8a055bf3d785444fa6e500f3d95c2c8d91570ccad1a3e6cbcd5d162c905a9db",
+      "version": "1.0@1",
+      "minSdkVersion": 26,
+      "dexNumber": 1,
+      "workProcesses": [
+        ""
+      ],
+      "nativeLibraries": [
+        {
+          "abi": "arm64-v8a",
+          "jniLibs": [
+            {
+              "name": "libopus_voicekit.so",
+              "sha256": "4985c0746e2c2c0dbfda6b2ead524514c160e15c4bbd32d9f04228a832fbb0e3",
+              "size": 382824
+            }
+          ]
+        },
+        {
+          "abi": "armeabi-v7a",
+          "jniLibs": [
+            {
+              "name": "libopus_voicekit.so",
+              "sha256": "235f31f2decc31e4b95bc6547c9a373dd1e07dede800da51cc71c1b0f348ceca",
+              "size": 317100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "moduleName": "PluginPay",
+      "url": "config://PluginPay.zip",
+      "builtIn": false,
+      "isolated": false,
+      "zipSize": 35434413,
+      "zipFileNum": 4,
+      "size": 41446907,
+      "sha256": "9743a5f5c4fabee7338fc46f50e6649dcefcb59c0cd4ed879d5443b58d830577",
+      "version": "1.0@1",
+      "minSdkVersion": 26,
+      "dexNumber": 3,
+      "workProcesses": [
+        ""
+      ],
+      "nativeLibraries": [
+        {
+          "abi": "arm64-v8a",
+          "jniLibs": [
+            {
+              "name": "libBankCardRecogeOCR.so",
+              "sha256": "60f050fbf5cd336e69e771cad372b48e9b7b95340760abcdd343ccd361ab4277",
+              "size": 424368
+            },
+            {
+              "name": "libTHIDLiveDetect.so",
+              "sha256": "454da4f51e1d20649a011009047d9b4b9edc750937b1282346965e510dc8c0f0",
+              "size": 2349384
+            },
+            {
+              "name": "libentryexpro.so",
+              "sha256": "de3223daa80a4b61c121071ca37141ccf82854ec2e945c7142ac7d61e0a5436e",
+              "size": 177624
+            },
+            {
+              "name": "libjniLib.so",
+              "sha256": "f92716019ce8e8e486129bb039c1203ce8ab2f73782b07e468b7857232114545",
+              "size": 211104
+            },
+            {
+              "name": "libjnidispatch.so",
+              "sha256": "7e9c0158491077e5b9f249d81e30ed873bd7dd711cbb5c06b98c291402498b76",
+              "size": 168328
+            },
+            {
+              "name": "libuptsmbleaddon.so",
+              "sha256": "571ce6b040ac9bf0f43d6cb6d73fa1a26479bccaa3e8942afc118f32ad874e36",
+              "size": 2366912
+            },
+            {
+              "name": "libuptsmblesdk.so",
+              "sha256": "89700d9050707d2cf69cf6c0ee05fd4163dfb2616aa143f8b9a651c3adbcc68b",
+              "size": 793568
+            },
+            {
+              "name": "libuptsmblesdkservice.so",
+              "sha256": "f49d17c1a79d1da943051612c91e629c28102c37c6bb66da77e72d6992240038",
+              "size": 970272
+            },
+            {
+              "name": "libwearclonecard.so",
+              "sha256": "757f0dadbc9053d12fc6440a8b6e92a661fa2278d57bb372849d6cba607cad2d",
+              "size": 51152
+            },
+            {
+              "name": "libxdjacrypto.so",
+              "sha256": "bd1909add81d434021f8af586d173c3aac5d81c05f3129d2b649455c9eca8888",
+              "size": 383488
+            }
+          ]
+        },
+        {
+          "abi": "armeabi-v7a",
+          "jniLibs": [
+            {
+              "name": "libBankCardRecogeOCR.so",
+              "sha256": "3da02de4f1235effbbfa0d06fa723ac11b03f2eabbaeedd32dcd6dd3c9d761e4",
+              "size": 317568
+            },
+            {
+              "name": "libTHIDLiveDetect.so",
+              "sha256": "15183e3282ba32156bb360371651fc0992081b7c76c662558626e783e5c3a72d",
+              "size": 1705812
+            },
+            {
+              "name": "libentryexpro.so",
+              "sha256": "9ae718b89a5333a25b2198d7adfcbccca5fe5d5ef94d16bc3773e12033011a34",
+              "size": 116072
+            },
+            {
+              "name": "libjniLib.so",
+              "sha256": "f0f19639c7d058f8ce769601a10d45be91a34d89a2e7c250583ae60a9945c682",
+              "size": 104128
+            },
+            {
+              "name": "libjnidispatch.so",
+              "sha256": "c8084b447a3a293a728bce1e4085e5a70677968393facf7dada84fd7a9ef3b3c",
+              "size": 126496
+            },
+            {
+              "name": "libuptsmbleaddon.so",
+              "sha256": "89df3e67a611eda6f0c080b8745f8fbfa19eb70a67cbf990e307a3fc07ed2aef",
+              "size": 2081080
+            },
+            {
+              "name": "libuptsmblesdk.so",
+              "sha256": "ddf54b947ea2a1e028aa5d05c873e65f8b8b04885bb1f4b1168fb9d672c2f43d",
+              "size": 591852
+            },
+            {
+              "name": "libuptsmblesdkservice.so",
+              "sha256": "49a8f5a448e5701348e06eded3d096ea26b5fac65038bb23ab71d442f31c5ea2",
+              "size": 698620
+            },
+            {
+              "name": "libwearclonecard.so",
+              "sha256": "f0a60515367671fec4e431a8f61a4603d3630d69f196b491c65ea06c201ba265",
+              "size": 46780
+            },
+            {
+              "name": "libxdjacrypto.so",
+              "sha256": "1970dfadd8ef248beeaa6ea329fd4e8511011b101ad5aeb215b6a492b8fa6a99",
+              "size": 194660
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "moduleName": "PluginSleepBriefs",
+      "url": "config://PluginSleepBriefs.zip",
+      "builtIn": false,
+      "isolated": false,
+      "zipSize": 1980097,
+      "zipFileNum": 1,
+      "size": 2223463,
+      "sha256": "94b433459c62b610f3a44227f77ffa2ef0fd0de73b8fe0901ba35e4c90cf488f",
+      "version": "1.0@1",
+      "minSdkVersion": 26,
+      "dexNumber": 1
+    },
+    {
+      "moduleName": "PluginSleepDetection",
+      "url": "config://PluginSleepDetection.zip",
+      "builtIn": false,
+      "isolated": false,
+      "zipSize": 4834478,
+      "zipFileNum": 1,
+      "size": 5851828,
+      "sha256": "d9e26ce5a633effa5bbd1039a67c2aabb63496e9f7f7e63154ad7eb135512c68",
+      "version": "1.0@1",
+      "minSdkVersion": 26,
+      "dexNumber": 1,
+      "workProcesses": [
+        ""
+      ],
+      "nativeLibraries": [
+        {
+          "abi": "arm64-v8a",
+          "jniLibs": [
+            {
+              "name": "libPhoneSleepAlg.so",
+              "sha256": "c59b455f0f6d47a287b85440678c897f96f10ddc491189afd23e09e6ba68b90d",
+              "size": 581888
+            }
+          ]
+        },
+        {
+          "abi": "armeabi-v7a",
+          "jniLibs": [
+            {
+              "name": "libPhoneSleepAlg.so",
+              "sha256": "dcade9445f0c93b5485184e68df4a1769fc39a542fecb11e834c2dc82c3a24be",
+              "size": 322816
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "moduleName": "PluginWatchFace",
+      "url": "config://PluginWatchFace.zip",
+      "builtIn": false,
+      "isolated": false,
+      "zipSize": 4012760,
+      "zipFileNum": 1,
+      "size": 4305396,
+      "sha256": "1ed45cb12d313af2e6538e8d7fa71a5a08c41c669432b3bd75feb4c37e8e5576",
+      "version": "1.0@1",
+      "minSdkVersion": 26,
+      "dexNumber": 1,
+      "workProcesses": [
+        ""
+      ]
+    },
+    {
+      "moduleName": "PluginWearAbility",
+      "url": "config://PluginWearAbility.zip",
+      "builtIn": false,
+      "isolated": false,
+      "zipSize": 845644,
+      "zipFileNum": 1,
+      "size": 1347298,
+      "sha256": "15dff0fa36f17f6616a84973534b1767dcba5375a2434188c497969c8df8c512",
+      "version": "1.0@1",
+      "minSdkVersion": 26,
+      "dexNumber": 1,
+      "workProcesses": [
+        ""
+      ]
+    },
+    {
+      "moduleName": "RopeSkippingResources",
+      "url": "config://RopeSkippingResources.zip",
+      "builtIn": false,
+      "isolated": false,
+      "zipSize": 3461992,
+      "zipFileNum": 1,
+      "size": 5199002,
+      "sha256": "c158eebd5bc670b7704c426e34503675d7cf46feaa9e588d76e9460d2ca67483",
+      "version": "1.0@1",
+      "minSdkVersion": 26,
+      "dexNumber": 1
+    }
+  ],
+  "abiFilters": [
+    "arm64-v8a",
+    "armeabi-v7a"
+  ]
+}

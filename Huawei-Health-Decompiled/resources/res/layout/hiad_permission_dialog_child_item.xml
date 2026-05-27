@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x10"
+    orientation="0"
+    paddingLeft="@dimen/_2131363384_res_0x7f0a0638"
+    layout_width="-1"
+    layout_height="-2">
+    <View
+        background="@drawable/_2131428673_res_0x7f0b0541"
+        layout_width="@dimen/_2131363360_res_0x7f0a0620"
+        layout_height="@dimen/_2131363360_res_0x7f0a0620"/>
+    <TextView
+        id="@+id/hiad_permissions_dialog_child_tv"
+        layout_width="0dp"
+        layout_height="-2"
+        layout_marginLeft="@dimen/_2131363384_res_0x7f0a0638"
+        layout_weight="1"
+        style="@style/HIAD_Permissions_child_text"/>
+</LinearLayout>

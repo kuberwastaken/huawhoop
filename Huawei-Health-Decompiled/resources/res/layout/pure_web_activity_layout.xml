@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/hiad_landing_layout"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.openalliance.ad.views.web.PureWebView
+        id="@+id/webview"
+        layout_width="-1"
+        layout_height="-1"/>
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-2">
+    <RelativeLayout
+        layout_gravity="0x10"
+        id="@+id/wear_engine_capability_all_auth_id"
+        paddingTop="10dp"
+        paddingBottom="10dp"
+        layout_width="-1"
+        layout_height="48dp"
+        paddingStart="@dimen/_2131362647_res_0x7f0a0357"
+        paddingEnd="@dimen/_2131362646_res_0x7f0a0356">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="16dp"
+            textColor="@color/_2131297419_res_0x7f09048b"
+            id="@+id/wear_engine_capability_all_auth_text_id"
+            layout_width="-2"
+            layout_height="-2"
+            text="@string/_2130838137_res_0x7f020279"
+            layout_centerVertical="true"/>
+        <com.huawei.ui.commonui.checkbox.HealthCheckBox
+            id="@+id/wear_engine_capability_all_auth_switch_id"
+            layout_width="-2"
+            layout_height="-2"
+            button="@null"
+            layout_centerVertical="true"
+            drawableStart="@drawable/_2131427794_res_0x7f0b01d2"
+            layout_marginEnd="@dimen/_2131362102_res_0x7f0a0136"
+            layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</LinearLayout>

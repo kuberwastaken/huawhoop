@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.bubblelayout.HealthBubbleLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    id="@+id/icon_bubble_layout"
+    visibility="2"
+    layout_width="-2"
+    layout_height="-2"
+    layout_marginTop="@dimen/_2131363172_res_0x7f0a0564"
+    NOT_FOUND_0xf="2"
+    NOT_FOUND_0x10="@dimen/_2131363129_res_0x7f0a0539"
+    NOT_FOUND_0x11="false"
+    NOT_FOUND_0x12="2">
+    <RelativeLayout
+        padding="@dimen/_2131362577_res_0x7f0a0311"
+        layout_width="248dp"
+        layout_height="-2">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+            textColor="@color/_2131296687_res_0x7f0901af"
+            id="@+id/tip_content"
+            layout_width="-2"
+            layout_height="-2"
+            fontFamily="@string/_2130852834_res_0x7f023be2"
+            breakStrategy="1"
+            hyphenationFrequency="1"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365486_res_0x7f0a0e6e"
+            textColor="@color/_2131296687_res_0x7f0901af"
+            gravity="0x11"
+            id="@+id/ok_text"
+            layout_width="-2"
+            layout_height="-2"
+            layout_marginTop="@dimen/_2131362577_res_0x7f0a0311"
+            text="@string/_2130842137_res_0x7f021219"
+            layout_below="@+id/tip_content"
+            fontFamily="@string/_2130852833_res_0x7f023be1"
+            layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</com.huawei.ui.commonui.bubblelayout.HealthBubbleLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x10"
+    orientation="0"
+    layout_width="-1"
+    layout_height="-2"
+    minHeight="@dimen/_2131362685_res_0x7f0a037d">
+    <ImageView
+        layout_width="@dimen/_2131362684_res_0x7f0a037c"
+        layout_height="@dimen/_2131362684_res_0x7f0a037c"
+        src="@drawable/_2131427740_res_0x7f0b019c"
+        scaleType="7"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131364668_res_0x7f0a0b3c"
+        textColor="@color/_2131299845_res_0x7f090e05"
+        id="@+id/bundle_dialog_list_item"
+        layout_width="-1"
+        layout_height="-2"
+        text=""
+        layout_marginStart="@dimen/_2131362684_res_0x7f0a037c"/>
+</RelativeLayout>

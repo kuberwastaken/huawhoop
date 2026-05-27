@@ -1,0 +1,38 @@
+{
+  "applications":[],
+  "services":[
+    {
+      "name":"com.huawei.wearablediagnosis",
+      "routeBy":"ser_country",
+      "servings":[
+        {
+          "countryOrAreaGroup":"DR1",
+          "addresses":{
+            "Watch":"https://remote-service-watch.rnd.huawei.com"
+          }
+        },
+        {
+          "countryOrAreaGroup": "DR3",
+          "addresses": {
+            "Watch": "https://remote-serviced-watch.rnd.huawei.com"
+          }
+        }
+      ],
+      "countryOrAreaGroups":[
+        {
+          "id":"DR1",
+          "name":"China",
+          "countriesOrAreas":["CN"],
+          "description":"China zone"
+        },
+        {
+          "id":"DR3",
+          "name":"Europe",
+          "countriesOrAreas":["SE","DK","FI","NO","EE","BG","CZ","LV","LT","RO","PL","CY","GR","HU","AT","SI","SK","RS","HR","MD","UA","MK","GB","IE","BE","NL","PT","ES","CH","DE","FR","IT","BR","JP","CA"],
+          "description":"Europe zone"
+        }
+      ]
+    }
+  ],
+  "countryOrAreaGroups":[]
+}

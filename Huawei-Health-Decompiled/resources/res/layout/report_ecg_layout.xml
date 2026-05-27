@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.scrollview.HealthScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    scrollbars="0x0"
+    layout_width="-1"
+    layout_height="-1">
+    <LinearLayout
+        orientation="1"
+        layout_width="-1"
+        layout_height="-2">
+        <RelativeLayout
+            id="@+id/report_ecg"
+            layout_width="@dimen/_2131363189_res_0x7f0a0575"
+            layout_height="@dimen/_2131363194_res_0x7f0a057a">
+            <ImageView
+                id="@+id/report_ecg_pic_1"
+                layout_width="@dimen/_2131363207_res_0x7f0a0587"
+                layout_height="@dimen/_2131363191_res_0x7f0a0577"
+                layout_marginTop="@dimen/_2131363197_res_0x7f0a057d"
+                layout_marginStart="@dimen/_2131362910_res_0x7f0a045e"/>
+        </RelativeLayout>
+    </LinearLayout>
+</com.huawei.ui.commonui.scrollview.HealthScrollView>

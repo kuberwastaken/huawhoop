@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.progressbar.CircleProgressBar
+        id="@+id/circleProgressBar1"
+        visibility="0"
+        layout_width="@dimen/_2131362907_res_0x7f0a045b"
+        layout_height="@dimen/_2131362907_res_0x7f0a045b"
+        NOT_FOUND_0x5="0"
+        NOT_FOUND_0x6="0"
+        NOT_FOUND_0x8="0"
+        NOT_FOUND_0xa="0"/>
+    <com.huawei.ui.commonui.progressbar.CircleProgressBar
+        id="@+id/circleProgressBar2"
+        visibility="0"
+        layout_width="@dimen/_2131362907_res_0x7f0a045b"
+        layout_height="@dimen/_2131362907_res_0x7f0a045b"
+        NOT_FOUND_0x5="0"
+        NOT_FOUND_0x6="0"
+        NOT_FOUND_0x7="0.756"
+        NOT_FOUND_0x8="0"
+        NOT_FOUND_0xa="0"
+        NOT_FOUND_0xb="0.756"/>
+    <com.huawei.ui.commonui.progressbar.CircleProgressBar
+        id="@+id/circleProgressBar3"
+        visibility="0"
+        layout_width="@dimen/_2131362907_res_0x7f0a045b"
+        layout_height="@dimen/_2131362907_res_0x7f0a045b"
+        NOT_FOUND_0x5="0"
+        NOT_FOUND_0x6="0"
+        NOT_FOUND_0x7="0.51"
+        NOT_FOUND_0x8="0"
+        NOT_FOUND_0xa="0"
+        NOT_FOUND_0xb="0.51"/>
+    <ImageView
+        id="@+id/circle_triangle"
+        visibility="2"
+        layout_width="-2"
+        layout_height="-2"
+        src="@drawable/_2131432264_res_0x7f0b1348"
+        NOT_FOUND_0x6="0"
+        NOT_FOUND_0x8="0"
+        NOT_FOUND_0x9="@+id/circleProgressBar3"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

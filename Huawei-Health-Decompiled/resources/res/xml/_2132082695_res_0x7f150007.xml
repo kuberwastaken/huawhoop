@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="files_root"
+        path="Android/data/com.huawei.hwidauth/"/>
+    <external-cache-path
+        name="tmp_cache"
+        path="tmpFiles"/>
+    <external-path
+        name="update_root"
+        path="Android/data/com.huawei.hwidauth/update"/>
+    <cache-path
+        name="cache_root"
+        path="update"/>
+</paths>

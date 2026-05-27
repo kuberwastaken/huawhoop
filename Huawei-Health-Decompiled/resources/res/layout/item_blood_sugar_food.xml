@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x1"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.columnlayout.HealthColumnRelativeLayout
+        gravity="0x11"
+        background="@drawable/_2131427651_res_0x7f0b0143"
+        layout_width="@dimen/_2131363638_res_0x7f0a0736"
+        layout_height="@dimen/_2131363638_res_0x7f0a0736">
+        <ImageView
+            id="@+id/blood_sugar_food_picture"
+            layout_width="@dimen/_2131363629_res_0x7f0a072d"
+            layout_height="@dimen/_2131363629_res_0x7f0a072d"
+            layout_centerInParent="true"/>
+    </com.huawei.ui.commonui.columnlayout.HealthColumnRelativeLayout>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+        textColor="@color/_2131299850_res_0x7f090e0a"
+        ellipsize="3"
+        gravity="0x1"
+        id="@+id/blood_sugar_food_name"
+        layout_width="@dimen/_2131363638_res_0x7f0a0736"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131365481_res_0x7f0a0e69"
+        maxLines="3"
+        fontFamily="@string/_2130852834_res_0x7f023be2"
+        autoSizeTextType="1"
+        autoSizeMinTextSize="@dimen/_2131365472_res_0x7f0a0e60"
+        autoSizeMaxTextSize="@dimen/_2131365483_res_0x7f0a0e6b"/>
+</com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout>

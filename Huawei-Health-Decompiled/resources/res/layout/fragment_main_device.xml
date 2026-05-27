@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296824_res_0x7f090238"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/device_title_bar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xc="3"
+        NOT_FOUND_0xd="8"
+        NOT_FOUND_0xe="@drawable/main_tab_device_add_selector"
+        NOT_FOUND_0xf="@string/_2130841737_res_0x7f021089"
+        NOT_FOUND_0x10="@string/IDS_device_title_use"/>
+    <LinearLayout
+        orientation="1"
+        id="@+id/device_fragment_no_device_Layout"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-2">
+        <ImageView
+            layout_gravity="0x1"
+            layout_width="70dp"
+            layout_height="70dp"
+            src="@mipmap/_2131821152_res_0x7f110260"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="13dp"
+            textColor="#7f000000"
+            layout_gravity="0x1"
+            layout_width="-2"
+            layout_height="-2"
+            text="@string/IDS_no_device_tips_text"/>
+    </LinearLayout>
+    <RelativeLayout
+        id="@+id/device_tab_list_item_layout"
+        background="@color/_2131296824_res_0x7f090238"
+        layout_width="-1"
+        layout_height="-1"
+        layout_marginBottom="@dimen/_2131364840_res_0x7f0a0be8">
+        <com.huawei.ui.commonui.recycleview.HealthRecycleView
+            id="@+id/device_tab_list_item"
+            layout_width="-1"
+            layout_height="-1"/>
+    </RelativeLayout>
+</LinearLayout>

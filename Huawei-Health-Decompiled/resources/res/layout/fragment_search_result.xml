@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <LinearLayout
+        orientation="1"
+        id="@+id/search_result_main_layout"
+        layout_width="-1"
+        layout_height="-1">
+        <com.huawei.ui.commonui.subtab.HealthSubTabWidget
+            id="@+id/search_category_tab"
+            background="@color/_2131296984_res_0x7f0902d8"
+            layout_width="-1"
+            layout_height="-2"
+            style="@style/health_sub_tab_style"/>
+        <com.huawei.ui.commonui.viewpager.HealthViewPager
+            id="@+id/search_result_vp"
+            layout_width="-1"
+            layout_height="-1"/>
+    </LinearLayout>
+    <include
+        id="@+id/search_result_loading_layout"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-1"
+        layout="@layout/common_loading_layout"/>
+    <include
+        id="@+id/search_result_empty_layout"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-1"
+        layout="@layout/search_no_result"/>
+</FrameLayout>

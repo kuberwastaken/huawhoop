@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.view.KakaClaimAnimation xmlns:android="http://schemas.android.com/apk/res/android"
+    visibility="2"
+    layout_width="@dimen/_2131363510_res_0x7f0a06b6"
+    layout_height="@dimen/_2131363510_res_0x7f0a06b6"
+    layout_centerInParent="true"/>

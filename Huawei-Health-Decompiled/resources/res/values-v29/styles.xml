@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="EmergencyTheme" parent="@style/HealthTheme">
+        <item name="android:forceDarkAllowed">true</item>
+    </style>
+    <style name="HiAdBaseThemeNoActionBar" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+    <style name="HiAdBaseThemeNoActionBarFullScreen" parent="@android:style/Theme.Material.Light.NoActionBar.Fullscreen">
+    </style>
+    <style name="OpensourceNoticeTheme" parent="@style/StartHealthTheme">
+        <item name="android:forceDarkAllowed">true</item>
+    </style>
+    <style name="OperationAppBaseTheme" parent="@style/Theme.AppCompat.Light">
+        <item name="android:colorBackground">@color/_2131296667_res_0x7f09019b</item>
+        <item name="android:forceDarkAllowed">true</item>
+    </style>
+    <style name="WebViewActivityBaseTheme" parent="@style/Theme.AppCompat.Light">
+        <item name="android:colorBackground">#ffffffff</item>
+        <item name="android:forceDarkAllowed">true</item>
+    </style>
+</resources>

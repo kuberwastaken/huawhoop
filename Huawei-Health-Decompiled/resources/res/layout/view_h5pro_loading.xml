@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    background="@android:color/transparent"
+    layout_width="-1"
+    layout_height="-1">
+    <ImageView
+        id="@+id/iv_bgView"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-1"
+        scaleType="6"/>
+    <RelativeLayout
+        id="@+id/rl_defLoadingView"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-1"
+        layout_centerInParent="true">
+        <TextView
+            textSize="@dimen/_2131362715_res_0x7f0a039b"
+            textColor="@color/_2131297422_res_0x7f09048e"
+            id="@+id/tv_loadingDes"
+            layout_width="-2"
+            layout_height="-2"
+            text="@string/_2130851389_res_0x7f02363d"
+            layout_centerInParent="true"
+            layout_centerHorizontal="true"/>
+        <com.huawei.uikit.phone.hwprogressbar.widget.HwProgressBar
+            id="@+id/hpb_loading"
+            layout_width="72dp"
+            layout_height="72dp"
+            layout_above="@+id/tv_loadingDes"
+            layout_centerInParent="true"/>
+    </RelativeLayout>
+</RelativeLayout>

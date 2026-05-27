@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/item_article_layout"
+    layout_width="-2"
+    layout_height="-2">
+    <com.huawei.ui.commonui.imageview.HealthImageView
+        layout_gravity="0x10"
+        id="@+id/account_head_picture"
+        background="@mipmap/_2131821101_res_0x7f11022d"
+        padding="@dimen/_2131363159_res_0x7f0a0557"
+        layout_width="@dimen/_2131363120_res_0x7f0a0530"
+        layout_height="@dimen/_2131363120_res_0x7f0a0530"
+        src="@drawable/pic_me_card_profile"
+        scaleType="6"/>
+</RelativeLayout>

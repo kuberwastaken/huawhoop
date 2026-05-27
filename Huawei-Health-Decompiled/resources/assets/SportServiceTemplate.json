@@ -1,0 +1,1512 @@
+{
+  "version": "1.0.1",
+  "template_id": "SportServiceTemplate",
+  "baseConfig": {
+    "sportTypeId": 0,
+    "sportMode": 0,
+    "sportTypeName": "",
+    "sportTypeRes": "",
+    "desc": "",
+    "managers": [
+      {
+        "componentUrl": "local:sportservice//SportStatusManager",
+        "componentDesc": "运动状态管理"
+      },
+      {
+        "componentUrl": "local:sportservice//BaseTargetManager",
+        "componentDesc": "运动目标管理"
+      },
+      {
+        "componentUrl": "local:sportservice//BaseIntensityManager",
+        "componentDesc": "中高强度基类管理"
+      }
+    ],
+    "producers": [
+      {
+        "componentUrl": "local:sportservice//CalorieProducer",
+        "componentDesc": "卡路里"
+      },
+      {
+        "componentUrl": "local:sportservice//ActiveCalorieProducer",
+        "componentDesc": "活动热量卡路里"
+      },
+      {
+        "componentUrl": "local:sportservice//HeartRateProducer",
+        "componentDesc": "心率"
+      },
+      {
+        "componentUrl": "local:sportservice//TimeProducer",
+        "componentDesc": "时间"
+      }
+    ],
+    "sources": []
+  },
+  "sportConfigs": [
+    {
+      "sportTypeId": 258,
+      "sportMode": 0,
+      "sportTypeName": "SPORT_TYPE_RUN",
+      "sportTypeRes": "IDS_start_track_sport_type_outdoor_run",
+      "desc": "户外跑步",
+      "managers": [
+        {
+          "componentUrl": "local:sportservice//BeatSoundManager",
+          "componentDesc": "节拍管理"
+        }
+      ],
+      "producers": [],
+      "sources": []
+    },
+    {
+      "sportTypeId": 259,
+      "sportMode": 100,
+      "sportTypeName": "SPORT_TYPE_BIKE",
+      "sportTypeRes": "IDS_start_track_sport_type_outdoor_ride",
+      "desc": "户外骑行",
+      "managers": [
+        {
+          "componentUrl": "local:sportservice//SportDataCenter",
+          "componentDesc": "运动数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//ReverseLinkageManager",
+          "componentDesc": "运动反向联动管理"
+        },
+        {
+          "componentUrl": "local:sportservice//NotificationManager",
+          "componentDesc": "通知管理"
+        },
+        {
+          "componentUrl": "local:sportservice//MusicManager",
+          "componentDesc": "音乐管理"
+        },
+        {
+          "componentUrl": "local:sportservice//AliveManager",
+          "componentDesc": "运动保活管理"
+        }
+      ],
+      "producers": [
+      ],
+      "sources": [
+        {
+          "componentUrl": "local:sportservice//MirrorLinkDataSource",
+          "componentDesc": "镜像联动数据"
+        }
+      ]
+    },
+    {
+      "sportTypeId": 264,
+      "sportMode": 0,
+      "sportTypeName": "SPORT_TYPE_TREADMILL",
+      "sportTypeRes": "IDS_start_track_sport_type_indoor_run",
+      "desc": "室内跑步",
+      "managers": [
+        {
+          "componentUrl": "local:sportservice//BeatSoundManager",
+          "componentDesc": "节拍管理"
+        }
+      ],
+      "producers": [],
+      "sources": []
+    },
+    {
+      "sportTypeId": 264,
+      "sportMode": 5,
+      "sportTypeName": "SPORT_TYPE_TREADMILL",
+      "sportTypeRes": "IDS_start_track_sport_type_indoor_run",
+      "desc": "跑步机,室内跑步",
+      "managers": [
+        {
+          "componentUrl": "local:sportservice//SportDataCenter",
+          "componentDesc": "运动数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//EcologyManager",
+          "componentDesc": "生态设备管理"
+        },
+        {
+          "componentUrl": "local:sportservice//SportDeviceManager",
+          "componentDesc": "设备管理"
+        },
+        {
+          "componentUrl": "local:sportservice//VoiceManager",
+          "componentDesc": "语音管理"
+        },
+        {
+          "componentUrl": "local:sportservice//PointDataManager",
+          "componentDesc": "打点数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//StepManager",
+          "componentDesc": "步数管理"
+        },
+        {
+          "componentUrl": "local:sportservice//DistributeSportDataManager",
+          "componentDesc": "数据下发管理"
+        },
+        {
+          "componentUrl": "local:sportservice//SportBleManager",
+          "componentDesc": "蓝牙状态管理"
+        },
+        {
+          "componentUrl": "local:sportservice//NotificationManager",
+          "componentDesc": "通知管理"
+        },
+        {
+          "componentUrl": "local:sportservice//AliveManager",
+          "componentDesc": "运动保活管理"
+        },
+        {
+          "componentUrl": "local:sportservice//MusicManager",
+          "componentDesc": "音乐管理"
+        },
+        {
+          "componentUrl": "local:sportservice//StatusDetectManager",
+          "componentDesc": "状态检测管理"
+        },
+        {
+          "componentUrl": "local:sportservice//AerobicSportTargetManager",
+          "componentDesc": "运动设备目标管理"
+        },
+        {
+          "componentUrl": "local:sportservice//BaseHeartRateControlManager",
+          "componentDesc": "心率控制管理"
+        },
+        {
+          "componentUrl": "local:sportservice//TreadmillHeartRateControlManager",
+          "componentDesc": "运动设备心率管理"
+        },
+        {
+          "componentUrl": "local:sportservice//CourseManager",
+          "componentDesc": "课程管理"
+        },
+        {
+          "componentUrl": "local:sportservice//CourseTargetManager",
+          "componentDesc": "课程目标管理"
+        }
+      ],
+      "producers": [
+        {
+          "componentUrl": "local:sportservice//DistanceProducer",
+          "componentDesc": "距离"
+        },
+        {
+          "componentUrl": "local:sportservice//PaceMapProducer",
+          "componentDesc": "配速列表"
+        },
+        {
+          "componentUrl": "local:sportservice//InclinationProducer",
+          "componentDesc": "坡度数据"
+        },
+        {
+          "componentUrl": "local:sportservice//SpeedProducer",
+          "componentDesc": "速度"
+        },
+        {
+          "componentUrl": "local:sportservice//StepProducer",
+          "componentDesc": "步数"
+        },
+        {
+          "componentUrl": "local:sportservice//StepRateProducer",
+          "componentDesc": "步频"
+        },
+        {
+          "componentUrl": "local:sportservice//RunningPostureProducer",
+          "componentDesc": "跑姿"
+        },
+        {
+          "componentUrl": "local:sportservice//TotalCreepProducer",
+          "componentDesc": "累计爬升"
+        },
+        {
+          "componentUrl": "local:sportservice//IndoorDeviceInfoProducer",
+          "componentDesc": "室内设备信息"
+        },
+        {
+          "componentUrl": "local:sportservice//UpdateViewSignalProducer",
+          "componentDesc": "触发更新 UI 的信号生产者"
+        },
+        {
+          "componentUrl": "local:sportservice//CourseDataProducer",
+          "componentDesc": "课程数据生产者"
+        }
+      ],
+      "sources": [
+        {
+          "componentUrl": "local:sportservice//CalorieIndoorSource",
+          "componentDesc": "卡路里"
+        },
+        {
+          "componentUrl": "local:sportservice//CalorieWatchSource",
+          "componentDesc": "手表卡路里"
+        },
+        {
+          "componentUrl": "local:sportservice//DistanceSource",
+          "componentDesc": "距离"
+        },
+        {
+          "componentUrl": "local:sportservice//HeartRateSource",
+          "componentDesc": "心率"
+        },
+        {
+          "componentUrl": "local:sportservice//InclinationSource",
+          "componentDesc": "坡度"
+        },
+        {
+          "componentUrl": "local:sportservice//MultiSources",
+          "componentDesc": "多个数据"
+        },
+        {
+          "componentUrl": "local:sportservice//PhoneStepSource",
+          "componentDesc": "手机步数"
+        },
+        {
+          "componentUrl": "local:sportservice//SpeedSource",
+          "componentDesc": "速度"
+        },
+        {
+          "componentUrl": "local:sportservice//StepIndoorSource",
+          "componentDesc": "室内跑步数"
+        },
+        {
+          "componentUrl": "local:sportservice//TimeIndoorSource",
+          "componentDesc": "室内时间"
+        },
+        {
+          "componentUrl": "local:sportservice//WearStepSource",
+          "componentDesc": "手表步数"
+        },
+        {
+          "componentUrl": "local:sportservice//SensorStepSource",
+          "componentDesc": "传感器步数"
+        },
+        {
+          "componentUrl": "local:sportservice//OpCodeSource",
+          "componentDesc": "OpCode和机器码"
+        },
+        {
+          "componentUrl": "local:sportservice//RunningPostureSource",
+          "componentDesc": "跑姿"
+        },
+        {
+          "componentUrl": "local:sportservice//TotalCreepSource",
+          "componentDesc": "累计爬升"
+        },
+        {
+          "componentUrl": "local:sportservice//IndoorDeviceInfoSource",
+          "componentDesc": "室内设备信息"
+        }
+      ]
+    },
+    {
+      "sportTypeId": 265,
+      "sportMode": 5,
+      "sportTypeName": "SPORT_TYPE_INDOOR_BIKE",
+      "sportTypeRes": "IDS_hwh_motiontrack_indoor_cycling",
+      "desc": "室内单车",
+      "managers": [
+        {
+          "componentUrl": "local:sportservice//SportDataCenter",
+          "componentDesc": "运动数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//EcologyManager",
+          "componentDesc": "生态设备管理"
+        },
+        {
+          "componentUrl": "local:sportservice//SportDeviceManager",
+          "componentDesc": "设备管理"
+        },
+        {
+          "componentUrl": "local:sportservice//VoiceManager",
+          "componentDesc": "语音管理"
+        },
+        {
+          "componentUrl": "local:sportservice//PointDataManager",
+          "componentDesc": "打点数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//DistributeSportDataManager",
+          "componentDesc": "数据下发管理"
+        },
+        {
+          "componentUrl": "local:sportservice//SportBleManager",
+          "componentDesc": "蓝牙状态管理"
+        },
+        {
+          "componentUrl": "local:sportservice//MusicManager",
+          "componentDesc": "音乐管理"
+        },
+        {
+          "componentUrl": "local:sportservice//IntensityManager",
+          "componentDesc": "中高强度管理"
+        },
+        {
+          "componentUrl": "local:sportservice//StatusDetectManager",
+          "componentDesc": "状态检测管理"
+        },
+        {
+          "componentUrl": "local:sportservice//AerobicSportTargetManager",
+          "componentDesc": "运动设备目标管理"
+        },
+        {
+          "componentUrl": "local:sportservice//BikeHeartRateControlManager",
+          "componentDesc": "心率控制管理"
+        },
+        {
+          "componentUrl": "local:sportservice//CourseManager",
+          "componentDesc": "课程管理"
+        },
+        {
+          "componentUrl": "local:sportservice//CourseTargetManager",
+          "componentDesc": "课程目标管理"
+        },
+        {
+          "componentUrl": "local:sportservice//NotificationManager",
+          "componentDesc": "通知管理"
+        },
+        {
+          "componentUrl": "local:sportservice//AliveManager",
+          "componentDesc": "运动保活管理"
+        }
+      ],
+      "producers": [
+        {
+          "componentUrl": "local:sportservice//DistanceProducer",
+          "componentDesc": "距离"
+        },
+        {
+          "componentUrl": "local:sportservice//PaceMapProducer",
+          "componentDesc": "配速列表"
+        },
+        {
+          "componentUrl": "local:sportservice//SpeedProducer",
+          "componentDesc": "速度"
+        },
+        {
+          "componentUrl": "local:sportservice//PowerProducer",
+          "componentDesc": "功率"
+        },
+        {
+          "componentUrl": "local:sportservice//CadenceProducer",
+          "componentDesc": "踏频"
+        },
+        {
+          "componentUrl": "local:sportservice//ResistanceProducer",
+          "componentDesc": "阻力"
+        },
+        {
+          "componentUrl": "local:sportservice//ResistanceLevelProducer",
+          "componentDesc": "阻力等级"
+        },
+        {
+          "componentUrl": "local:sportservice//IndoorDeviceInfoProducer",
+          "componentDesc": "室内设备信息"
+        },
+        {
+          "componentUrl": "local:sportservice//UpdateViewSignalProducer",
+          "componentDesc": "触发更新 UI 的信号生产者"
+        },
+        {
+          "componentUrl": "local:sportservice//CourseDataProducer",
+          "componentDesc": "课程数据生产者"
+        }
+      ],
+      "sources": [
+        {
+          "componentUrl": "local:sportservice//CalorieIndoorSource",
+          "componentDesc": "卡路里"
+        },
+        {
+          "componentUrl": "local:sportservice//CalorieWatchSource",
+          "componentDesc": "手表卡路里"
+        },
+        {
+          "componentUrl": "local:sportservice//DistanceSource",
+          "componentDesc": "距离"
+        },
+        {
+          "componentUrl": "local:sportservice//HeartRateSource",
+          "componentDesc": "心率"
+        },
+        {
+          "componentUrl": "local:sportservice//MultiSources",
+          "componentDesc": "多个数据"
+        },
+        {
+          "componentUrl": "local:sportservice//ResistanceLevelSource",
+          "componentDesc": "阻力区间"
+        },
+        {
+          "componentUrl": "local:sportservice//SpeedSource",
+          "componentDesc": "速度"
+        },
+        {
+          "componentUrl": "local:sportservice//TimeIndoorSource",
+          "componentDesc": "室内时间"
+        },
+        {
+          "componentUrl": "local:sportservice//ResistanceSource",
+          "componentDesc": "阻力"
+        },
+        {
+          "componentUrl": "local:sportservice//PowerSource",
+          "componentDesc": "功率"
+        },
+        {
+          "componentUrl": "local:sportservice//CadenceSource",
+          "componentDesc": "踏频"
+        },
+        {
+          "componentUrl": "local:sportservice//OpCodeSource",
+          "componentDesc": "OpCode和机器码"
+        },
+        {
+          "componentUrl": "local:sportservice//IndoorDeviceInfoSource",
+          "componentDesc": "室内设备信息"
+        }
+      ]
+    },
+    {
+      "sportTypeId": 265,
+      "sportMode": 100,
+      "sportTypeName": "SPORT_TYPE_INDOOR_BIKE",
+      "sportTypeRes": "IDS_hwh_motiontrack_indoor_cycling",
+      "desc": "室内单车",
+      "managers": [
+        {
+          "componentUrl": "local:sportservice//SportDataCenter",
+          "componentDesc": "运动数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//ReverseLinkageManager",
+          "componentDesc": "运动反向联动管理"
+        },
+        {
+          "componentUrl": "local:sportservice//NotificationManager",
+          "componentDesc": "通知管理"
+        },
+        {
+          "componentUrl": "local:sportservice//MusicManager",
+          "componentDesc": "音乐管理"
+        },
+        {
+          "componentUrl": "local:sportservice//AliveManager",
+          "componentDesc": "运动保活管理"
+        }
+      ],
+      "producers": [
+      ],
+      "sources": [
+        {
+          "componentUrl": "local:sportservice//MirrorLinkDataSource",
+          "componentDesc": "镜像联动数据"
+        }
+      ]
+    },
+    {
+      "sportTypeId": 273,
+      "sportMode": 5,
+      "sportTypeName": "SPORT_TYPE_CROSS_TRAINER",
+      "sportTypeRes": "IDS_hwh_sport_type_cross_trainer",
+      "desc": "椭圆机",
+      "managers": [
+        {
+          "componentUrl": "local:sportservice//SportDataCenter",
+          "componentDesc": "运动数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//EcologyManager",
+          "componentDesc": "生态设备管理"
+        },
+        {
+          "componentUrl": "local:sportservice//SportDeviceManager",
+          "componentDesc": "设备管理"
+        },
+        {
+          "componentUrl": "local:sportservice//VoiceManager",
+          "componentDesc": "语音管理"
+        },
+        {
+          "componentUrl": "local:sportservice//PointDataManager",
+          "componentDesc": "打点数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//StepManager",
+          "componentDesc": "步数管理"
+        },
+        {
+          "componentUrl": "local:sportservice//DistributeSportDataManager",
+          "componentDesc": "数据下发管理"
+        },
+        {
+          "componentUrl": "local:sportservice//SportBleManager",
+          "componentDesc": "蓝牙状态管理"
+        },
+        {
+          "componentUrl": "local:sportservice//NotificationManager",
+          "componentDesc": "通知管理"
+        },
+        {
+          "componentUrl": "local:sportservice//AliveManager",
+          "componentDesc": "运动保活管理"
+        },
+        {
+          "componentUrl": "local:sportservice//MusicManager",
+          "componentDesc": "音乐管理"
+        },
+        {
+          "componentUrl": "local:sportservice//IntensityManager",
+          "componentDesc": "中高强度管理"
+        },
+        {
+          "componentUrl": "local:sportservice//StatusDetectManager",
+          "componentDesc": "状态检测管理"
+        },
+        {
+          "componentUrl": "local:sportservice//NotificationManager",
+          "componentDesc": "通知管理"
+        },
+        {
+          "componentUrl": "local:sportservice//AliveManager",
+          "componentDesc": "运动保活管理"
+        }
+      ],
+      "producers": [
+        {
+          "componentUrl": "local:sportservice//DistanceProducer",
+          "componentDesc": "距离"
+        },
+        {
+          "componentUrl": "local:sportservice//PaceMapProducer",
+          "componentDesc": "配速列表"
+        },
+        {
+          "componentUrl": "local:sportservice//SpeedProducer",
+          "componentDesc": "速度"
+        },
+        {
+          "componentUrl": "local:sportservice//StepProducer",
+          "componentDesc": "步数"
+        },
+        {
+          "componentUrl": "local:sportservice//StepRateProducer",
+          "componentDesc": "步频"
+        },
+        {
+          "componentUrl": "local:sportservice//PowerProducer",
+          "componentDesc": "功率"
+        },
+        {
+          "componentUrl": "local:sportservice//CadenceProducer",
+          "componentDesc": "踏频"
+        },
+        {
+          "componentUrl": "local:sportservice//ResistanceProducer",
+          "componentDesc": "阻力"
+        },
+        {
+          "componentUrl": "local:sportservice//ResistanceLevelProducer",
+          "componentDesc": "阻力等级"
+        },
+        {
+          "componentUrl": "local:sportservice//IndoorDeviceInfoProducer",
+          "componentDesc": "室内设备信息"
+        },
+        {
+          "componentUrl": "local:sportservice//UpdateViewSignalProducer",
+          "componentDesc": "触发更新 UI 的信号生产者"
+        }
+      ],
+      "sources": [
+        {
+          "componentUrl": "local:sportservice//CalorieIndoorSource",
+          "componentDesc": "卡路里"
+        },
+        {
+          "componentUrl": "local:sportservice//CalorieWatchSource",
+          "componentDesc": "手表卡路里"
+        },
+        {
+          "componentUrl": "local:sportservice//DistanceSource",
+          "componentDesc": "距离"
+        },
+        {
+          "componentUrl": "local:sportservice//StepIndoorSource",
+          "componentDesc": "室内跑步数"
+        },
+        {
+          "componentUrl": "local:sportservice//HeartRateSource",
+          "componentDesc": "心率"
+        },
+        {
+          "componentUrl": "local:sportservice//MultiSources",
+          "componentDesc": "多个数据"
+        },
+        {
+          "componentUrl": "local:sportservice//SpeedSource",
+          "componentDesc": "速度"
+        },
+        {
+          "componentUrl": "local:sportservice//TimeIndoorSource",
+          "componentDesc": "室内时间"
+        },
+        {
+          "componentUrl": "local:sportservice//ResistanceLevelSource",
+          "componentDesc": "阻力区间"
+        },
+        {
+          "componentUrl": "local:sportservice//ResistanceSource",
+          "componentDesc": "阻力"
+        },
+        {
+          "componentUrl": "local:sportservice//PowerSource",
+          "componentDesc": "功率"
+        },
+        {
+          "componentUrl": "local:sportservice//CadenceSource",
+          "componentDesc": "踏频"
+        },
+        {
+          "componentUrl": "local:sportservice//OpCodeSource",
+          "componentDesc": "OpCode和机器码"
+        },
+        {
+          "componentUrl": "local:sportservice//IndoorDeviceInfoSource",
+          "componentDesc": "室内设备信息"
+        }
+      ]
+    },
+    {
+      "sportTypeId": 274,
+      "sportMode": 5,
+      "sportTypeName": "SPORT_TYPE_ROW_MACHINE",
+      "sportTypeRes": "IDS_hwh_sport_type_row_machine",
+      "desc": "划船机",
+      "managers": [
+        {
+          "componentUrl": "local:sportservice//SportDataCenter",
+          "componentDesc": "运动数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//EcologyManager",
+          "componentDesc": "生态设备管理"
+        },
+        {
+          "componentUrl": "local:sportservice//SportDeviceManager",
+          "componentDesc": "设备管理"
+        },
+        {
+          "componentUrl": "local:sportservice//VoiceManager",
+          "componentDesc": "语音管理"
+        },
+        {
+          "componentUrl": "local:sportservice//PointDataManager",
+          "componentDesc": "打点数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//DistributeSportDataManager",
+          "componentDesc": "数据下发管理"
+        },
+        {
+          "componentUrl": "local:sportservice//SportBleManager",
+          "componentDesc": "蓝牙状态管理"
+        },
+        {
+          "componentUrl": "local:sportservice//MusicManager",
+          "componentDesc": "音乐管理"
+        },
+        {
+          "componentUrl": "local:sportservice//IntensityManager",
+          "componentDesc": "中高强度管理"
+        },
+        {
+          "componentUrl": "local:sportservice//StatusDetectManager",
+          "componentDesc": "状态检测管理"
+        },
+        {
+          "componentUrl": "local:sportservice//NotificationManager",
+          "componentDesc": "通知管理"
+        },
+        {
+          "componentUrl": "local:sportservice//AliveManager",
+          "componentDesc": "运动保活管理"
+        }
+      ],
+      "producers": [
+        {
+          "componentUrl": "local:sportservice//DistanceProducer",
+          "componentDesc": "距离"
+        },
+        {
+          "componentUrl": "local:sportservice//PaceMapProducer",
+          "componentDesc": "配速列表"
+        },
+        {
+          "componentUrl": "local:sportservice//SpeedProducer",
+          "componentDesc": "速度"
+        },
+        {
+          "componentUrl": "local:sportservice//TempoProducer",
+          "componentDesc": "桨频"
+        },
+        {
+          "componentUrl": "local:sportservice//WeightProducer",
+          "componentDesc": "重量"
+        },
+        {
+          "componentUrl": "local:sportservice//ActionGroupProducer",
+          "componentDesc": "动作组数"
+        },
+        {
+          "componentUrl": "local:sportservice//GroupCountProducer",
+          "componentDesc": "每组动作次数"
+        },
+        {
+          "componentUrl": "local:sportservice//PowerProducer",
+          "componentDesc": "功率"
+        },
+        {
+          "componentUrl": "local:sportservice//PaddleProducer",
+          "componentDesc": "桨次"
+        },
+        {
+          "componentUrl": "local:sportservice//ResistanceProducer",
+          "componentDesc": "阻力"
+        },
+        {
+          "componentUrl": "local:sportservice//ResistanceLevelProducer",
+          "componentDesc": "阻力等级"
+        },
+        {
+          "componentUrl": "local:sportservice//IndoorDeviceInfoProducer",
+          "componentDesc": "室内设备信息"
+        },
+        {
+          "componentUrl": "local:sportservice//UpdateViewSignalProducer",
+          "componentDesc": "触发更新 UI 的信号生产者"
+        }
+      ],
+      "sources": [
+        {
+          "componentUrl": "local:sportservice//CalorieIndoorSource",
+          "componentDesc": "卡路里"
+        },
+        {
+          "componentUrl": "local:sportservice//CalorieWatchSource",
+          "componentDesc": "手表卡路里"
+        },
+        {
+          "componentUrl": "local:sportservice//DistanceSource",
+          "componentDesc": "距离"
+        },
+        {
+          "componentUrl": "local:sportservice//HeartRateSource",
+          "componentDesc": "心率"
+        },
+        {
+          "componentUrl": "local:sportservice//MultiSources",
+          "componentDesc": "多个数据"
+        },
+        {
+          "componentUrl": "local:sportservice//ResistanceLevelSource",
+          "componentDesc": "阻力区间"
+        },
+        {
+          "componentUrl": "local:sportservice//SpeedSource",
+          "componentDesc": "速度"
+        },
+        {
+          "componentUrl": "local:sportservice//TimeIndoorSource",
+          "componentDesc": "室内时间"
+        },
+        {
+          "componentUrl": "local:sportservice//ResistanceSource",
+          "componentDesc": "阻力"
+        },
+        {
+          "componentUrl": "local:sportservice//TempoSource",
+          "componentDesc": "浆频"
+        },
+        {
+          "componentUrl": "local:sportservice//WeightSource",
+          "componentDesc": "重量"
+        },
+        {
+          "componentUrl": "local:sportservice//ActionGroupSource",
+          "componentDesc": "动作组数"
+        },
+        {
+          "componentUrl": "local:sportservice//GroupCountSource",
+          "componentDesc": "每组动作次数"
+        },
+        {
+          "componentUrl": "local:sportservice//PowerSource",
+          "componentDesc": "功率"
+        },
+        {
+          "componentUrl": "local:sportservice//PaddleTimesSource",
+          "componentDesc": "桨次"
+        },
+        {
+          "componentUrl": "local:sportservice//OpCodeSource",
+          "componentDesc": "OpCode和机器码"
+        },
+        {
+          "componentUrl": "local:sportservice//IndoorDeviceInfoSource",
+          "componentDesc": "室内设备信息"
+        }
+      ]
+    },
+    {
+      "sportTypeId": 281,
+      "sportMode": 5,
+      "sportTypeName": "SPORT_TYPE_INDOOR_WALKING",
+      "sportTypeRes": "IDS_start_fitness_type_stepper",
+      "desc": "走步机",
+      "managers": [
+        {
+          "componentUrl": "local:sportservice//SportDataCenter",
+          "componentDesc": "运动数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//EcologyManager",
+          "componentDesc": "生态设备管理"
+        },
+        {
+          "componentUrl": "local:sportservice//SportDeviceManager",
+          "componentDesc": "设备管理"
+        },
+        {
+          "componentUrl": "local:sportservice//VoiceManager",
+          "componentDesc": "语音管理"
+        },
+        {
+          "componentUrl": "local:sportservice//PointDataManager",
+          "componentDesc": "打点数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//StepManager",
+          "componentDesc": "步数管理"
+        },
+        {
+          "componentUrl": "local:sportservice//DistributeSportDataManager",
+          "componentDesc": "数据下发管理"
+        },
+        {
+          "componentUrl": "local:sportservice//SportBleManager",
+          "componentDesc": "蓝牙状态管理"
+        },
+        {
+          "componentUrl": "local:sportservice//MusicManager",
+          "componentDesc": "音乐管理"
+        },
+        {
+          "componentUrl": "local:sportservice//StatusDetectManager",
+          "componentDesc": "状态检测管理"
+        },
+        {
+          "componentUrl": "local:sportservice//NotificationManager",
+          "componentDesc": "通知管理"
+        },
+        {
+          "componentUrl": "local:sportservice//AliveManager",
+          "componentDesc": "运动保活管理"
+        }
+      ],
+      "producers": [
+        {
+          "componentUrl": "local:sportservice//DistanceProducer",
+          "componentDesc": "距离"
+        },
+        {
+          "componentUrl": "local:sportservice//PaceMapProducer",
+          "componentDesc": "配速列表"
+        },
+        {
+          "componentUrl": "local:sportservice//SpeedProducer",
+          "componentDesc": "速度"
+        },
+        {
+          "componentUrl": "local:sportservice//StepProducer",
+          "componentDesc": "步数"
+        },
+        {
+          "componentUrl": "local:sportservice//StepRateProducer",
+          "componentDesc": "步频"
+        },
+        {
+          "componentUrl": "local:sportservice//IndoorDeviceInfoProducer",
+          "componentDesc": "室内设备信息"
+        },
+        {
+          "componentUrl": "local:sportservice//UpdateViewSignalProducer",
+          "componentDesc": "触发更新 UI 的信号生产者"
+        }
+      ],
+      "sources": [
+        {
+          "componentUrl": "local:sportservice//CalorieIndoorSource",
+          "componentDesc": "卡路里"
+        },
+        {
+          "componentUrl": "local:sportservice//CalorieWatchSource",
+          "componentDesc": "手表卡路里"
+        },
+        {
+          "componentUrl": "local:sportservice//DistanceSource",
+          "componentDesc": "距离"
+        },
+        {
+          "componentUrl": "local:sportservice//HeartRateSource",
+          "componentDesc": "心率"
+        },
+        {
+          "componentUrl": "local:sportservice//MultiSources",
+          "componentDesc": "多个数据"
+        },
+        {
+          "componentUrl": "local:sportservice//PhoneStepSource",
+          "componentDesc": "手机步数"
+        },
+        {
+          "componentUrl": "local:sportservice//SpeedSource",
+          "componentDesc": "速度"
+        },
+        {
+          "componentUrl": "local:sportservice//StepIndoorSource",
+          "componentDesc": "室内跑步数"
+        },
+        {
+          "componentUrl": "local:sportservice//TimeIndoorSource",
+          "componentDesc": "室内时间"
+        },
+        {
+          "componentUrl": "local:sportservice//WearStepSource",
+          "componentDesc": "手表步数"
+        },
+        {
+          "componentUrl": "local:sportservice//SensorStepSource",
+          "componentDesc": "传感器步数"
+        },
+        {
+          "componentUrl": "local:sportservice//OpCodeSource",
+          "componentDesc": "OpCode和机器码"
+        },
+        {
+          "componentUrl": "local:sportservice//IndoorDeviceInfoSource",
+          "componentDesc": "室内设备信息"
+        }
+      ]
+    },
+    {
+      "sportTypeId": 283,
+      "sportMode": 5,
+      "sportTypeName": "SPORT_TYPE_ROPE_SKIPPING",
+      "sportTypeRes": "track_sport_entrance_begin_normal",
+      "desc": "跳绳",
+      "managers": [
+        {
+          "componentUrl": "local:sportservice//SportDataCenter",
+          "componentDesc": "运动数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//EcologyManager",
+          "componentDesc": "生态设备管理"
+        },
+        {
+          "componentUrl": "local:sportservice//SportDeviceManager",
+          "componentDesc": "设备管理"
+        },
+        {
+          "componentUrl": "local:sportservice//VoiceManager",
+          "componentDesc": "语音管理"
+        },
+        {
+          "componentUrl": "local:sportservice//PointDataManager",
+          "componentDesc": "打点数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//SportBleManager",
+          "componentDesc": "蓝牙状态管理"
+        },
+        {
+          "componentUrl": "local:sportservice//MusicManager",
+          "componentDesc": "音乐管理"
+        },
+        {
+          "componentUrl": "local:sportservice//DistributeSportDataManager",
+          "componentDesc": "数据下发管理"
+        },
+        {
+          "componentUrl": "local:sportservice//IntensityManager",
+          "componentDesc": "中高强度管理"
+        },
+        {
+          "componentUrl": "local:sportservice//StatusDetectManager",
+          "componentDesc": "状态检测管理"
+        },
+        {
+          "componentUrl": "local:sportservice//SkipAchieveManager",
+          "componentDesc": "跳绳成就管理"
+        },
+        {
+          "componentUrl": "local:sportservice//SkipTargetManager",
+          "componentDesc": "跳绳目标管理"
+        },
+        {
+          "componentUrl": "local:sportservice//SkipVoiceManager",
+          "componentDesc": "跳绳语音管理"
+        },
+        {
+          "componentUrl": "local:sportservice//NotificationManager",
+          "componentDesc": "通知管理"
+        },
+        {
+          "componentUrl": "local:sportservice//AliveManager",
+          "componentDesc": "运动保活管理"
+        }
+      ],
+      "producers": [
+        {
+          "componentUrl": "local:sportservice//SkipGroupProducer",
+          "componentDesc": "跳绳分组数据"
+        },
+        {
+          "componentUrl": "local:sportservice//SkipProducer",
+          "componentDesc": "跳绳产生类"
+        },
+        {
+          "componentUrl": "local:sportservice//IndoorDeviceInfoProducer",
+          "componentDesc": "室内设备信息"
+        },
+        {
+          "componentUrl": "local:sportservice//UpdateViewSignalProducer",
+          "componentDesc": "触发更新 UI 的信号生产者"
+        }
+      ],
+      "sources": [
+        {
+          "componentUrl": "local:sportservice//SkipGroupSource",
+          "componentDesc": "组数"
+        },
+        {
+          "componentUrl": "local:sportservice//CalorieIndoorSource",
+          "componentDesc": "卡路里"
+        },
+        {
+          "componentUrl": "local:sportservice//CalorieWatchSource",
+          "componentDesc": "手表卡路里"
+        },
+        {
+          "componentUrl": "local:sportservice//HeartRateSource",
+          "componentDesc": "心率"
+        },
+        {
+          "componentUrl": "local:sportservice//MultiSources",
+          "componentDesc": "多个数据"
+        },
+        {
+          "componentUrl": "local:sportservice//TimeIndoorSource",
+          "componentDesc": "室内时间"
+        },
+        {
+          "componentUrl": "local:sportservice//OpCodeSource",
+          "componentDesc": "OpCode和机器码"
+        },
+        {
+          "componentUrl": "local:sportservice//SkipIndoorSource",
+          "componentDesc": "跳绳室内运动来源"
+        },
+        {
+          "componentUrl": "local:sportservice//IndoorDeviceInfoSource",
+          "componentDesc": "室内设备信息"
+        }
+      ]
+    },
+    {
+      "sportTypeId": 283,
+      "sportMode": 7,
+      "sportTypeName": "SPORT_TYPE_ROPE_SKIPPING",
+      "sportTypeRes": "track_sport_entrance_begin_normal",
+      "desc": "AI跳绳",
+      "managers": [
+        {
+          "componentUrl": "local:sportservice//SportDataCenter",
+          "componentDesc": "运动数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//ModelManager",
+          "componentDesc": "算法管理"
+        },
+        {
+          "componentUrl": "local:sportservice//SportDeviceManager",
+          "componentDesc": "设备管理"
+        },
+        {
+          "componentUrl": "local:sportservice//VoiceManager",
+          "componentDesc": "语音管理"
+        },
+        {
+          "componentUrl": "local:sportservice//PointDataManager",
+          "componentDesc": "打点数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//MusicManager",
+          "componentDesc": "音乐管理"
+        },
+        {
+          "componentUrl": "local:sportservice//IntensityManager",
+          "componentDesc": "中高强度管理"
+        },
+        {
+          "componentUrl": "local:sportservice//DistributeSportDataManager",
+          "componentDesc": "数据下发管理"
+        },
+        {
+          "componentUrl": "local:sportservice//SkipAchieveManager",
+          "componentDesc": "跳绳成就管理"
+        },
+        {
+          "componentUrl": "local:sportservice//SkipTargetManager",
+          "componentDesc": "跳绳目标管理"
+        },
+        {
+          "componentUrl": "local:sportservice//SkipVoiceManager",
+          "componentDesc": "跳绳语音管理"
+        },
+        {
+          "componentUrl": "local:sportservice//NotificationManager",
+          "componentDesc": "通知管理"
+        },
+        {
+          "componentUrl": "local:sportservice//AliveManager",
+          "componentDesc": "运动保活管理"
+        }
+      ],
+      "producers": [
+        {
+          "componentUrl": "local:sportservice//SkipProducer",
+          "componentDesc": "跳绳产生类"
+        }
+      ],
+      "sources": [
+        {
+          "componentUrl": "local:sportservice//CalorieAlgorithmSource",
+          "componentDesc": "卡路里算法"
+        },
+        {
+          "componentUrl": "local:sportservice//ActiveCalorieAlgorithmSource",
+          "componentDesc": "活动卡路里算法"
+        },
+        {
+          "componentUrl": "local:sportservice//CalorieWatchSource",
+          "componentDesc": "手表卡路里"
+        },
+        {
+          "componentUrl": "local:sportservice//HeartRateSource",
+          "componentDesc": "心率"
+        },
+        {
+          "componentUrl": "local:sportservice//MultiSources",
+          "componentDesc": "多个数据"
+        },
+        {
+          "componentUrl": "local:sportservice//TimeSelfSource",
+          "componentDesc": "自产生时间"
+        },
+        {
+          "componentUrl": "local:sportservice//SkipDataAiSource",
+          "componentDesc": "跳绳AI数据来源"
+        }
+      ]
+    },
+    {
+      "sportTypeId": 400000,
+      "sportMode": 7,
+      "sportTypeName": "SPORT_TYPE_STANDING_FLEXION",
+      "sportTypeRes": "track_sport_entrance_begin_normal",
+      "desc": "站位体前屈",
+      "managers": [
+        {
+          "componentUrl": "local:sportservice//SportDataCenter",
+          "componentDesc": "运动数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//VoiceManager",
+          "componentDesc": "语音管理"
+        },
+        {
+          "componentUrl": "local:sportservice//PointDataManager",
+          "componentDesc": "打点数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//ModelManager",
+          "componentDesc": "算法管理"
+        },
+        {
+          "componentUrl": "local:sportservice//StandFlexionAchieveManager",
+          "componentDesc": "站位体前屈成就管理"
+        },
+        {
+          "componentUrl": "local:sportservice//StandFlexionVoiceManager",
+          "componentDesc": "站位体前屈语音管理"
+        }
+      ],
+      "sources": [
+        {
+          "componentUrl": "local:sportservice//TimeSelfSource",
+          "componentDesc": "自产生时间"
+        },
+        {
+          "componentUrl": "local:sportservice//StandFlexionDataAiSource",
+          "componentDesc": "站位体前屈数据来源"
+        }
+      ]
+    },
+    {
+      "sportTypeId": 279,
+      "sportMode": 5,
+      "sportTypeName": "SPORT_TYPE_OTHER_SPORT",
+      "sportTypeRes": "",
+      "desc": "自由训练",
+      "managers": [
+        {
+          "componentUrl": "local:sportservice//SportDataCenter",
+          "componentDesc": "运动数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//SportDeviceManager",
+          "componentDesc": "设备管理"
+        },
+        {
+          "componentUrl": "local:sportservice//VoiceManager",
+          "componentDesc": "语音管理"
+        },
+        {
+          "componentUrl": "local:sportservice//PointDataManager",
+          "componentDesc": "打点数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//NotificationManager",
+          "componentDesc": "通知管理"
+        },
+        {
+          "componentUrl": "local:sportservice//AliveManager",
+          "componentDesc": "运动保活管理"
+        }
+      ],
+      "sources": [
+        {
+          "componentUrl": "local:sportservice//CalorieWatchSource",
+          "componentDesc": "手表卡路里"
+        },
+        {
+          "componentUrl": "local:sportservice//HeartRateSource",
+          "componentDesc": "心率"
+        },
+        {
+          "componentUrl": "local:sportservice//TimeSelfSource",
+          "componentDesc": "自产生时间"
+        }
+      ]
+    },
+    {
+      "sportTypeId": 400001,
+      "sportMode": 7,
+      "sportTypeName": "SPORT_TYPE_SUPINE_LEG_RAISE",
+      "sportTypeRes": "",
+      "desc": "仰卧举腿",
+      "managers": [
+        {
+          "componentUrl": "local:sportservice//SportDataCenter",
+          "componentDesc": "运动数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//VoiceManager",
+          "componentDesc": "语音管理"
+        },
+        {
+          "componentUrl": "local:sportservice//PointDataManager",
+          "componentDesc": "打点数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//ModelManager",
+          "componentDesc": "算法管理"
+        },
+        {
+          "componentUrl": "local:sportservice//SupineLegRaiseTargetManager",
+          "componentDesc": "仰卧举腿目标管理"
+        },
+        {
+          "componentUrl": "local:sportservice//SupineLegRaiseAchieveManager",
+          "componentDesc": "仰卧举腿成就管理"
+        },
+        {
+          "componentUrl": "local:sportservice//SupineLegRaiseVoiceManager",
+          "componentDesc": "仰卧举腿语音管理"
+        }
+      ],
+      "sources": [
+        {
+          "componentUrl": "local:sportservice//TimeSelfSource",
+          "componentDesc": "自产生时间"
+        },
+        {
+          "componentUrl": "local:sportservice//SupineLegRaiseDataAiSource",
+          "componentDesc": "仰卧举腿数据来源"
+        }
+      ]
+    },
+    {
+      "sportTypeId": 400002,
+      "sportMode": 7,
+      "sportTypeName": "SPORT_TYPE_LONG_JUMP",
+      "sportTypeRes": "",
+      "desc": "跳远",
+      "managers": [
+        {
+          "componentUrl": "local:sportservice//SportDataCenter",
+          "componentDesc": "运动数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//VoiceManager",
+          "componentDesc": "语音管理"
+        },
+        {
+          "componentUrl": "local:sportservice//PointDataManager",
+          "componentDesc": "打点数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//ModelManager",
+          "componentDesc": "算法管理"
+        },
+        {
+          "componentUrl": "local:sportservice//LongJumpVoiceManager",
+          "componentDesc": "跳远语音管理"
+        }
+      ],
+      "sources": [
+        {
+          "componentUrl": "local:sportservice//TimeSelfSource",
+          "componentDesc": "自产生时间"
+        },
+        {
+          "componentUrl": "local:sportservice//LongJumpDataAiSource",
+          "componentDesc": "跳远数据来源"
+        }
+      ]
+    },
+    {
+      "sportTypeId": 400003,
+      "sportMode": 7,
+      "sportTypeName": "SPORT_TYPE_CROSS_JUMP",
+      "sportTypeRes": "",
+      "desc": "十字象限跳",
+      "managers": [
+        {
+          "componentUrl": "local:sportservice//SportDataCenter",
+          "componentDesc": "运动数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//VoiceManager",
+          "componentDesc": "语音管理"
+        },
+        {
+          "componentUrl": "local:sportservice//PointDataManager",
+          "componentDesc": "打点数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//ModelManager",
+          "componentDesc": "算法管理"
+        },
+        {
+          "componentUrl": "local:sportservice//CrossJumpVoiceManager",
+          "componentDesc": "十字象限跳语音管理"
+        }
+      ],
+      "producers": [
+        {
+          "componentUrl": "local:sportservice//CrossJumpProducer",
+          "componentDesc": "十字象限跳产生类"
+        }
+      ],
+      "sources": [
+        {
+          "componentUrl": "local:sportservice//TimeSelfSource",
+          "componentDesc": "自产生时间"
+        },
+        {
+          "componentUrl": "local:sportservice//CrossJumpDataAiSource",
+          "componentDesc": "十字象限跳数据来源"
+        }
+      ]
+    },
+    {
+      "sportTypeId": 700001,
+      "sportMode": 7,
+      "sportTypeName": "SPORT_TYPE_AI_ACTION_TRAIN",
+      "sportTypeRes": "",
+      "desc": "AI动作训练",
+      "managers": [
+        {
+          "componentUrl": "local:sportservice//SportDataCenter",
+          "componentDesc": "运动数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//VoiceManager",
+          "componentDesc": "语音管理"
+        },
+        {
+          "componentUrl": "local:sportservice//PointDataManager",
+          "componentDesc": "打点数据管理"
+        },
+        {
+          "componentUrl": "local:sportservice//AiTrainModelManager",
+          "componentDesc": "AI动作训练算法管理"
+        },
+        {
+          "componentUrl": "local:sportservice//ActionTrainVoiceManager",
+          "componentDesc": "AI动作训练语音管理"
+        },
+        {
+          "componentUrl": "local:sportservice//AiActionTrainTargetManager",
+          "componentDesc": "AI动作训练目标管理"
+        }
+      ],
+      "producers": [
+        {
+          "componentUrl": "local:sportservice//StatusCodeProducer",
+          "componentDesc": "状态码产生类"
+        },{
+          "componentUrl": "local:sportservice//ResultCodeProducer",
+          "componentDesc": "AI动作训练结果产生类"
+        },{
+          "componentUrl": "local:sportservice//ValidTimesProducer",
+          "componentDesc": "AI动作训练有效次数"
+        },{
+          "componentUrl": "local:sportservice//ResultCodeMapProducer",
+          "componentDesc": "AI动作训练结果统计MAP产生类"
+        }
+      ],
+      "sources": [
+        {
+          "componentUrl": "local:sportservice//AiTrainCalorieSource",
+          "componentDesc": "AI动作训练卡路里算法"
+        },
+        {
+          "componentUrl": "local:sportservice//AiTrainActiveCalorieSource",
+          "componentDesc": "AI动作训练活动卡路里算法"
+        },
+        {
+          "componentUrl": "local:sportservice//TimeSelfSource",
+          "componentDesc": "自产生时间"
+        },
+        {
+          "componentUrl": "local:sportservice//AiActionTrainDataSource",
+          "componentDesc": "AI动作训练数据来源"
+        }
+      ]
+    }
+  ]
+}

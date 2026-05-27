@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item drawable="@drawable/_2131429117_res_0x7f0b06fd"/>
+    <item gravity="0x11">
+        <selector>
+            <item
+                state_focused="true"
+                state_window_focused="true"
+                drawable="@drawable/_2131429108_res_0x7f0b06f4"/>
+        </selector>
+    </item>
+    <item>
+        <animated-selector>
+            <item
+                state_enabled="false"
+                state_checked="true"
+                id="@+id/disable_checked"
+                drawable="@drawable/_2131429271_res_0x7f0b0797"/>
+            <item
+                state_enabled="false"
+                state_checked="false"
+                id="@+id/disable_unchecked"
+                drawable="@drawable/_2131429253_res_0x7f0b0785"/>
+            <item
+                state_checked="true"
+                id="@+id/checked"
+                drawable="@drawable/_2131429280_res_0x7f0b07a0"/>
+            <item
+                state_checked="false"
+                id="@+id/unchecked"
+                drawable="@drawable/_2131429262_res_0x7f0b078e"/>
+            <transition
+                id="@+id/off2on"
+                drawable="@drawable/_2131429126_res_0x7f0b0706"
+                toId="@+id/checked"
+                fromId="@+id/unchecked"/>
+            <transition
+                id="@+id/on2off"
+                drawable="@drawable/_2131429180_res_0x7f0b073c"
+                toId="@+id/unchecked"
+                fromId="@+id/checked"/>
+        </animated-selector>
+    </item>
+</layer-list>

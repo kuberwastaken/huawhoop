@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <LinearLayout
+        id="@+id/jump_table_chart_container"
+        layout_width="-1"
+        layout_height="-1"/>
+    <LinearLayout
+        orientation="1"
+        id="@+id/jump_table_chart_eye"
+        background="@color/_2131297867_res_0x7f09064b"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-2"/>
+</LinearLayout>

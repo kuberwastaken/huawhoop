@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        left="@dimen/_2131364459_res_0x7f0a0a6b"
+        right="@dimen/_2131364459_res_0x7f0a0a6b">
+        <selector>
+            <item
+                drawable="@android:color/transparent"
+                state_activated="true"/>
+            <item
+                state_checked="true"
+                drawable="@android:color/transparent"/>
+            <item drawable="@drawable/hwspinner_list_selector_background_hovered_or_pressed"/>
+        </selector>
+    </item>
+</layer-list>

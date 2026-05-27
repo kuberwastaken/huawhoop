@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="0dp"
+    layout_height="-2"
+    layout_weight="1">
+    <ImageView
+        layout_gravity="0x1"
+        id="@+id/image"
+        background="@mipmap/_2131821027_res_0x7f1101e3"
+        layout_width="24dp"
+        layout_height="24dp"
+        style="@style/health_default_background_tint"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textColor="@color/_2131297775_res_0x7f0905ef"
+        id="@+id/value"
+        paddingTop="4dp"
+        text="0"
+        style="@style/calorie_detail_fragment_walk_calorie_tv_style_2"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textColor="@color/_2131299850_res_0x7f090e0a"
+        id="@+id/title"
+        layout_marginBottom="@dimen/_2131362577_res_0x7f0a0311"
+        text="@string/IDS_start_track_sport_type_run"
+        breakStrategy="1"
+        hyphenationFrequency="1"
+        NOT_FOUND_0xd="@dimen/_2131365472_res_0x7f0a0e60"
+        NOT_FOUND_0xe="@dimen/_2131365473_res_0x7f0a0e61"
+        NOT_FOUND_0xf="0"
+        style="@style/calorie_detail_fragment_walk_calorie_unite_tv_style"/>
+</LinearLayout>

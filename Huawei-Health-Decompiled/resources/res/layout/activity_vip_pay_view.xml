@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/vip_pay_view_background"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.cardview.HealthCardView
+        layout_gravity="0x50"
+        id="@+id/vip_pay_cardview"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginBottom="@dimen/_2131363213_res_0x7f0a058d"
+        layout_alignParentBottom="true"
+        NOT_FOUND_0x8="@dimen/_2131362365_res_0x7f0a023d">
+        <com.huawei.health.h5pro.core.H5ProWebView
+            id="@+id/vip_pay_high_webview"
+            visibility="2"
+            layout_width="-1"
+            layout_height="@dimen/_2131363147_res_0x7f0a054b"
+            layout_marginBottom="@dimen/_2131362970_res_0x7f0a049a"
+            layout_alignParentBottom="true"/>
+        <com.huawei.health.h5pro.core.H5ProWebView
+            id="@+id/vip_pay_webview"
+            visibility="2"
+            layout_width="-1"
+            layout_height="@dimen/_2131363030_res_0x7f0a04d6"
+            layout_marginBottom="@dimen/_2131362970_res_0x7f0a049a"
+            layout_alignParentBottom="true"/>
+    </com.huawei.ui.commonui.cardview.HealthCardView>
+</FrameLayout>

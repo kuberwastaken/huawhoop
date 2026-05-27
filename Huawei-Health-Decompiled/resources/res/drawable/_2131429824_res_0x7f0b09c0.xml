@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        state_enabled="false"
+        state_checked="true"
+        drawable="@drawable/_2131429800_res_0x7f0b09a8"/>
+    <item
+        state_enabled="false"
+        state_checked="false"
+        drawable="@drawable/_2131429794_res_0x7f0b09a2"/>
+    <item
+        state_checked="true"
+        id="@+id/switch_checked"
+        drawable="@drawable/_2131429803_res_0x7f0b09ab"/>
+    <item
+        id="@+id/switch_unchecked"
+        drawable="@drawable/_2131429797_res_0x7f0b09a5"/>
+</selector>

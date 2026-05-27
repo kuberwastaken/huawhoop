@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/view_sport_banner_root"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.dotspageindicator.HealthDotsPageIndicator
+        layout_gravity="0x51"
+        id="@+id/indicator"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginBottom="@dimen/_2131363129_res_0x7f0a0539"
+        style="@style/DotsPageIndicatorStyleDots"/>
+    <com.huawei.ui.commonui.viewpager.HealthViewPager
+        layout_gravity="0x1"
+        id="@+id/view_pager_sport_banner_cant_loop"
+        visibility="2"
+        clipToPadding="false"
+        layout_width="-1"
+        layout_height="-2"
+        importantForAccessibility="2"
+        NOT_FOUND_0x9="false"/>
+    <com.huawei.ui.commonui.viewpager.HealthViewPager
+        layout_gravity="0x1"
+        id="@+id/view_pager_sport_banner"
+        visibility="2"
+        clipToPadding="false"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x9="true"/>
+</FrameLayout>

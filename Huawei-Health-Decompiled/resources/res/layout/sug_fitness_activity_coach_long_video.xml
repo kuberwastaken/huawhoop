@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.health.suggestion.ui.fitness.module.LongCoachView
+        id="@+id/sug_fitness_long_coach_view"
+        layout_width="-1"
+        layout_height="-1"/>
+</RelativeLayout>

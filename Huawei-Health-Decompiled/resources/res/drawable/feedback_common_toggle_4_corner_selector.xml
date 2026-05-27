@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        state_pressed="true"
+        drawable="@drawable/feedback_common_toggle_4_corner_press_bg"/>
+    <item
+        state_selected="true"
+        drawable="@drawable/feedback_common_toggle_4_corner_press_bg"/>
+    <item
+        state_pressed="false"
+        drawable="@drawable/feedback_common_toggle_4_corner_normal_bg"/>
+</selector>

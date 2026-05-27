@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-2"
+    layout_height="-2">
+    <com.huawei.ui.commonui.button.HealthButton
+        id="@+id/recycle_button"
+        layout_width="-2"
+        layout_height="28dp"
+        minWidth="0dp"
+        minHeight="0dp"
+        style="health_button_style_normal"/>
+</LinearLayout>

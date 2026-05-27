@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296700_res_0x7f0901bc"
+    layout_width="-1"
+    layout_height="-1">
+    <FrameLayout
+        layout_width="-1"
+        layout_height="-2">
+        <com.huawei.ui.commonui.titlebar.CustomTitleBar
+            id="@+id/sug_my_fitness_course_title"
+            layout_width="-1"
+            layout_height="-2"
+            NOT_FOUND_0x5="3"
+            NOT_FOUND_0x6="@drawable/_2131430571_res_0x7f0b0cab"
+            NOT_FOUND_0x7="@string/_2130841740_res_0x7f02108c"
+            NOT_FOUND_0x8="@color/_2131296984_res_0x7f0902d8"
+            NOT_FOUND_0x9="@string/_2130849661_res_0x7f022f7d"/>
+    </FrameLayout>
+    <LinearLayout
+        orientation="1"
+        id="@+id/sug_my_fitness_course_tab"
+        layout_width="-1"
+        layout_height="-2">
+        <com.huawei.ui.commonui.subtab.HealthSubTabWidget
+            id="@+id/sug_my_fitness_detail_tab"
+            background="@color/_2131296984_res_0x7f0902d8"
+            layout_width="-1"
+            layout_height="-2"
+            style="@style/health_sub_tab_style"/>
+        <com.huawei.ui.commonui.viewpager.HealthViewPager
+            id="@+id/sug_my_fitness_detail_vp"
+            layout_width="-1"
+            layout_height="-1"/>
+    </LinearLayout>
+</LinearLayout>

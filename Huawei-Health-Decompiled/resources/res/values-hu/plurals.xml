@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">A grafikonon maximum %1$d adat jeleníthető meg.</item>
+        <item quantity="other">A grafikonon maximum %1$d adat jeleníthető meg.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">A vércukorszintje várhatóan %2$s mmol/l alá fog csökkeni %1$s perc múlva. Gondosan figyelje a vércukorszintjét.</item>
+        <item quantity="other">A vércukorszintje várhatóan %2$s mmol/l alá fog csökkeni %1$s perc múlva. Gondosan figyelje a vércukorszintjét.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">A vércukorszintje várhatóan %2$s mg/dl alá fog csökkeni %1$s perc múlva. Gondosan figyelje a vércukorszintjét.</item>
+        <item quantity="other">A vércukorszintje várhatóan %2$s mg/dl alá fog csökkeni %1$s perc múlva. Gondosan figyelje a vércukorszintjét.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d lépés</item>
+        <item quantity="other">%d lépés</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s mf</item>
+        <item quantity="other">%s mf</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s km</item>
+        <item quantity="other">%s km</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">%1$s lépésre</item>
+        <item quantity="other">%1$s lépésre</item>
+    </plurals>
+</resources>

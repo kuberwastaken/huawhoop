@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="-1">
+    <FrameLayout
+        layout_width="-1"
+        layout_height="-1"
+        layout_below="@+id/ctb_function_menu">
+        <com.huawei.ui.commonui.recycleview.HealthRecycleView
+            id="@+id/rv_function_menu"
+            layout_width="-1"
+            layout_height="-1"/>
+        <include
+            id="@+id/layout_loading"
+            visibility="2"
+            layout="@layout/sug_loading_layout"/>
+    </FrameLayout>
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/ctb_function_menu"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x5="2"
+        NOT_FOUND_0x6="@string/_2130848715_res_0x7f022bcb"/>
+</RelativeLayout>

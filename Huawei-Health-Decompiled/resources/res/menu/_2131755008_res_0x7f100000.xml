@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        icon="@drawable/feedback_sdk_ic_cancel"
+        id="@+id/menu_feed_list_cancel"
+        title="@string/_2130852025_res_0x7f0238b9"
+        showAsAction="0x2"/>
+    <item
+        icon="@drawable/feedback_sdk_ic_delete"
+        id="@+id/menu_feed_list_delete"
+        title="@string/_2130852040_res_0x7f0238c8"
+        showAsAction="0x2"/>
+</menu>

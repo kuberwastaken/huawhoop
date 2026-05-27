@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/sport_stat_view"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/sport_data_titlebar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x9="4"/>
+    <com.huawei.ui.main.stories.fitness.views.base.chart.ClassifiedButtonList
+        id="@+id/classified_button_list"
+        layout_width="-1"
+        layout_height="-2"
+        layout_below="@+id/fitness_detail_titlebar"/>
+    <com.huawei.ui.commonui.scrollview.HealthScrollView
+        orientation="1"
+        background="@color/_2131297867_res_0x7f09064b"
+        scrollbars="0x0"
+        layout_width="-1"
+        layout_height="-1"
+        importantForAccessibility="2"
+        NOT_FOUND_0xb="true"
+        NOT_FOUND_0xc="true">
+        <LinearLayout
+            orientation="1"
+            layout_width="-1"
+            layout_height="-2">
+            <com.huawei.ui.commonui.viewpager.HealthNativeViewPager
+                id="@+id/classified_view_place"
+                layout_width="-1"
+                layout_height="-2"
+                importantForAccessibility="2"
+                NOT_FOUND_0xa="800"/>
+            <include
+                id="@+id/track_sport_data"
+                visibility="0"
+                layout="@layout/track_sport_data_container"/>
+            <include
+                id="@+id/all_sport_data"
+                visibility="2"
+                layout="@layout/layout_all_sport_data"/>
+        </LinearLayout>
+    </com.huawei.ui.commonui.scrollview.HealthScrollView>
+    <include layout="@layout/share_sport_data"/>
+</LinearLayout>

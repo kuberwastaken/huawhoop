@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x10"
+    orientation="0"
+    id="@+id/blood_sugar_diet_view"
+    paddingTop="@dimen/_2131363112_res_0x7f0a0528"
+    paddingBottom="@dimen/_2131363112_res_0x7f0a0528"
+    layout_width="-1"
+    layout_height="-2"
+    paddingStart="@dimen/_2131365145_res_0x7f0a0d19"
+    paddingEnd="@dimen/_2131365145_res_0x7f0a0d19">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365482_res_0x7f0a0e6a"
+        textColor="@color/_2131299845_res_0x7f090e05"
+        id="@+id/text_title"
+        layout_width="-1"
+        layout_height="-2"
+        text="@string/_2130838434_res_0x7f0203a2"
+        layout_centerVertical="true"
+        fontFamily="@string/_2130852833_res_0x7f023be1"
+        layout_toStartOf="@+id/text_content"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365482_res_0x7f0a0e6a"
+        textColor="@color/_2131299845_res_0x7f090e05"
+        id="@+id/text_content"
+        layout_width="-2"
+        layout_height="-2"
+        layout_centerVertical="true"
+        fontFamily="@string/_2130852833_res_0x7f023be1"
+        layout_marginStart="@dimen/_2131362575_res_0x7f0a030f"
+        layout_alignParentEnd="true"/>
+</RelativeLayout>

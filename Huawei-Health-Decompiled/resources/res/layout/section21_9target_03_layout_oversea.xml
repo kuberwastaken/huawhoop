@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2"
+    layout_marginStart="@dimen/_2131362013_res_0x7f0a00dd"
+    layout_marginEnd="@dimen/_2131362011_res_0x7f0a00db">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/sub_header"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x6="false"
+        NOT_FOUND_0x7="2"/>
+    <com.huawei.ui.commonui.recycleview.HealthRecycleView
+        id="@+id/grid_view"
+        layout_width="-1"
+        layout_height="-2"/>
+</LinearLayout>

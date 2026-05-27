@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    gravity="0x11"
+    id="@+id/sug_course_filter_spinner_item"
+    layout_width="-1"
+    layout_height="-2"
+    minHeight="@dimen/_2131363090_res_0x7f0a0512">
+    <FrameLayout
+        layout_width="-2"
+        layout_height="-1">
+        <com.huawei.ui.commonui.spinner.HealthSpinner
+            layout_gravity="0x1"
+            id="@+id/sug_filter_spinner"
+            layout_width="-2"
+            layout_height="-1"
+            NOT_FOUND_0x6="true"
+            style="@style/Health.CommonUI.HealthSpinner"/>
+    </FrameLayout>
+</LinearLayout>

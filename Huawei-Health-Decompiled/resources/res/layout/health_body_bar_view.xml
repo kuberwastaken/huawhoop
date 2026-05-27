@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <FrameLayout
+        orientation="1"
+        layout_width="-1"
+        layout_height="-2">
+        <include
+            id="@+id/weight_include_title_layout"
+            layout="@layout/weight_include_title_item"/>
+        <FrameLayout
+            layout_width="-1"
+            layout_height="-2">
+            <include
+                id="@+id/weight_include_dash_line_layout"
+                layout="@layout/weight_include_dash_line_item"/>
+            <LinearLayout
+                orientation="1"
+                layout_width="-1"
+                layout_height="-1">
+                <LinearLayout
+                    orientation="1"
+                    layout_width="-1"
+                    layout_height="-1"
+                    layout_marginTop="@dimen/_2131365639_res_0x7f0a0f07">
+                    <include
+                        id="@+id/bmi_include_content_layout"
+                        visibility="2"
+                        layout="@layout/weight_include_content_item"/>
+                    <include
+                        id="@+id/fat_include_content_layout"
+                        visibility="2"
+                        layout="@layout/weight_include_content_item"/>
+                    <include
+                        id="@+id/visceral_fat_include_content_layout"
+                        visibility="2"
+                        layout="@layout/weight_include_content_item"/>
+                    <include
+                        id="@+id/muscle_include_content_layout"
+                        visibility="2"
+                        layout="@layout/weight_include_content_item"/>
+                    <include
+                        id="@+id/limb_include_content_layout"
+                        visibility="2"
+                        layout="@layout/weight_include_content_item"/>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+    <com.huawei.ui.commonui.divider.HealthDivider
+        layout_width="-1"
+        layout_height="-2"/>
+    <include layout="@layout/health_body_bar_view_point"/>
+</LinearLayout>

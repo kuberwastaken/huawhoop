@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) Huawei Technologies Co., Ltd. 2019-2019. All rights reserved.
+  -->
+
+<resources>
+    <!-- hwresources -->
+    <color name="emui_accent">#FB6522</color>
+    <color name="colorAccent">#FB6522</color>
+
+    <!-- hwbottomnavigationview -->
+    <color name="hwbottomnavigationview_item_active">@color/colorAccent</color>
+    <color name="hwbottomnavigationview_item_title_active">@color/colorAccent</color>
+    <color name="hwbottomnavigationview_item_title_active_dark">@color/colorAccent</color>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <LinearLayout
+        gravity="0x11"
+        orientation="1"
+        id="@+id/act_lock_screen_dialog_multi_content_lly"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="24dp"
+        layout_marginStart="16dp"
+        layout_marginEnd="16dp">
+        <ImageView
+            id="@+id/set_notification_alert_dialog_image"
+            layout_width="-2"
+            layout_height="160dp"
+            layout_marginStart="36dp"
+            layout_marginEnd="36dp"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="15dp"
+            textColor="@color/_2131299845_res_0x7f090e05"
+            id="@+id/set_nitification_alert_dialog_text"
+            layout_width="-2"
+            layout_height="-2"
+            layout_marginTop="8dp"
+            text="@string/IDS_device_msgnotif_alert_dialog"/>
+    </LinearLayout>
+</LinearLayout>

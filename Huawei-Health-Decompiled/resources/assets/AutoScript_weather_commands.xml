@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BluetoothCommands>
+    <command>
+        <id>1</id>
+        <data>2909010900000190000000DC00</data>
+        <timeSleep>40</timeSleep>
+        <description>睡眠测试命令</description>
+    </command>
+    <command>
+        <id>2</id>
+        <data>2909010900000149000000DC00</data>
+        <timeSleep>40</timeSleep>
+        <description>睡眠测试命令</description>
+    </command>
+    <command>
+        <id>3</id>
+        <data>2909010900000102000000DC00</data>
+        <timeSleep>40</timeSleep>
+        <description>睡眠测试命令</description>
+    </command>
+    <command>
+        <id>4</id>
+        <data>29090109000000BB000000DC00</data>
+        <timeSleep>40</timeSleep>
+        <description>睡眠测试命令</description>
+    </command>
+    <command>
+        <id>5</id>
+        <data>2909010900000074000000DC00</data>
+        <timeSleep>40</timeSleep>
+        <description>睡眠测试命令</description>
+    </command>
+    <command>
+        <id>6</id>
+        <data>290901090000002D000000DC00</data>
+        <timeSleep>40</timeSleep>
+        <description>睡眠测试命令</description>
+    </command>
+    <command>
+        <id>7</id>
+        <data>2909010900000X1A000000DC00</data>
+        <timeSleep>40</timeSleep>
+        <description>睡眠测试命令</description>
+    </command>
+    <command>
+        <id>8</id>
+        <data>2909010900000X61000000DC01</data>
+        <timeSleep>40</timeSleep>
+        <description>睡眠测试命令</description>
+    </command>
+</BluetoothCommands>
+

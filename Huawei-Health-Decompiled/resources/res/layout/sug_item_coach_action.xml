@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="0"
+    layout_width="@dimen/_2131362996_res_0x7f0a04b4"
+    layout_height="@dimen/_2131362919_res_0x7f0a0467">
+    <RelativeLayout
+        id="@+id/sug_item_action_contain_left"
+        background="@drawable/_2131432123_res_0x7f0b12bb"
+        layout_width="-2"
+        layout_height="@dimen/_2131362919_res_0x7f0a0467"
+        layout_weight="1">
+        <ImageView
+            id="@+id/sug_item_coach_image"
+            layout_width="@dimen/_2131362996_res_0x7f0a04b4"
+            layout_height="@dimen/_2131362919_res_0x7f0a0467"
+            layout_centerHorizontal="true"/>
+        <com.huawei.ui.commonui.button.HealthButton
+            id="@+id/sug_item_coach_button"
+            visibility="2"
+            layout_marginLeft="@dimen/_2131363129_res_0x7f0a0539"
+            layout_marginTop="@dimen/_2131363129_res_0x7f0a0539"
+            layout_alignParentLeft="true"
+            layout_alignParentTop="true"
+            style="@style/health_button_style_coach_action"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            id="@+id/sug_item_coach_text"
+            layout_width="-2"
+            layout_height="-2"
+            layout_marginLeft="@dimen/_2131362916_res_0x7f0a0464"
+            layout_marginBottom="@dimen/_2131362916_res_0x7f0a0464"
+            layout_alignParentLeft="true"
+            layout_alignParentBottom="true"
+            style="@style/sug_coach_view_text"/>
+    </RelativeLayout>
+</LinearLayout>

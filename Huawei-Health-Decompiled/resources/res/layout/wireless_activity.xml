@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/wirless_manager_title_bar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x10="2"
+        NOT_FOUND_0x11="@string/_2130849055_res_0x7f022d1f"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131362714_res_0x7f0a039a"
+        textColor="@color/_2131299850_res_0x7f090e0a"
+        gravity="0x10"
+        id="@+id/wirless_manager_txt"
+        layout_width="-2"
+        layout_height="-2"
+        minWidth="@dimen/_2131365318_res_0x7f0a0dc6"
+        fontFamily="@string/_2130851948_res_0x7f02386c"
+        layout_marginStart="@dimen/_2131364901_res_0x7f0a0c25"
+        layout_marginEnd="@dimen/_2131364900_res_0x7f0a0c24"/>
+    <View
+        id="@+id/wirless_manager_lint"
+        background="@color/_2131297380_res_0x7f090464"
+        layout_width="-1"
+        layout_height="0.5dp"
+        layout_marginStart="@dimen/_2131364901_res_0x7f0a0c25"
+        layout_marginEnd="@dimen/_2131364900_res_0x7f0a0c24"/>
+    <ListView
+        id="@+id/listView"
+        layout_width="-2"
+        layout_height="-1"
+        layout_marginTop="@dimen/_2131365475_res_0x7f0a0e63"
+        divider="@color/_2131297380_res_0x7f090464"
+        dividerHeight="0.5dp"
+        footerDividersEnabled="true"
+        layout_marginStart="@dimen/_2131364901_res_0x7f0a0c25"
+        layout_marginEnd="@dimen/_2131364900_res_0x7f0a0c24"/>
+</LinearLayout>

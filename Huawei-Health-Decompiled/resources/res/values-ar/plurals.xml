@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="zero">%1$d مؤشرات يمكن أن تظهر على رسم بياني واحد</item>
+        <item quantity="one">مؤشر واحد يمكن أن يظهر على رسم بياني واحد</item>
+        <item quantity="two">مؤشران اثنان يمكن أن يظهرا على رسم بياني واحد</item>
+        <item quantity="few">%1$d مؤشرات يمكن أن تظهر على رسم بياني واحد</item>
+        <item quantity="many">%1$d مؤشرًا يمكن أن تظهر على رسم بياني واحد</item>
+        <item quantity="other">%1$d مؤشر يمكن أن تظهر على رسم بياني واحد</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="zero">من المتوقع أن ينخفض مستوى جلوكوز الدم إلى أقل من %2$s مليمول/لتر خلال %1$s دقائق. يُرجى مراقبة مستوى الجلوكوز في دمك عن كثب.</item>
+        <item quantity="one">من المتوقع أن ينخفض مستوى جلوكوز الدم إلى أقل من %2$s مليمول/لتر خلال دقيقة واحدة. يُرجى مراقبة مستوى الجلوكوز في دمك عن كثب.</item>
+        <item quantity="two">من المتوقع أن ينخفض مستوى جلوكوز الدم إلى أقل من %2$s مليمول/لتر خلال دقيقتين. يُرجى مراقبة مستوى الجلوكوز في دمك عن كثب.</item>
+        <item quantity="few">من المتوقع أن ينخفض مستوى جلوكوز الدم إلى أقل من %2$s مليمول/لتر خلال %1$s دقائق. يُرجى مراقبة مستوى الجلوكوز في دمك عن كثب.</item>
+        <item quantity="many">من المتوقع أن ينخفض مستوى جلوكوز الدم إلى أقل من %2$s مليمول/لتر خلال %1$s دقيقة. يُرجى مراقبة مستوى الجلوكوز في دمك عن كثب.</item>
+        <item quantity="other">من المتوقع أن ينخفض مستوى جلوكوز الدم إلى أقل من %2$s مليمول/لتر خلال %1$s دقيقة. يُرجى مراقبة مستوى الجلوكوز في دمك عن كثب.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="zero">من المتوقع أن ينخفض مستوى جلوكوز الدم إلى أقل من %2$s ملغم/ديسيلتر خلال %1$s دقائق. يُرجى مراقبة مستوى الجلوكوز في دمك عن كثب.</item>
+        <item quantity="one">من المتوقع أن ينخفض مستوى جلوكوز الدم إلى أقل من %2$s ملغم/ديسيلتر خلال دقيقة واحدة. يُرجى مراقبة مستوى الجلوكوز في دمك عن كثب.</item>
+        <item quantity="two">من المتوقع أن ينخفض مستوى جلوكوز الدم إلى أقل من %2$s ملغم/ديسيلتر خلال دقيقتين. يُرجى مراقبة مستوى الجلوكوز في دمك عن كثب.</item>
+        <item quantity="few">من المتوقع أن ينخفض مستوى جلوكوز الدم إلى أقل من %2$s ملغم/ديسيلتر خلال %1$s دقائق. يُرجى مراقبة مستوى الجلوكوز في دمك عن كثب.</item>
+        <item quantity="many">من المتوقع أن ينخفض مستوى جلوكوز الدم إلى أقل من %2$s ملغم/ديسيلتر خلال %1$s دقيقة. يُرجى مراقبة مستوى الجلوكوز في دمك عن كثب.</item>
+        <item quantity="other">من المتوقع أن ينخفض مستوى جلوكوز الدم إلى أقل من %2$s ملغم/ديسيلتر خلال %1$s دقيقة. يُرجى مراقبة مستوى الجلوكوز في دمك عن كثب.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="zero">%d خطوات</item>
+        <item quantity="one">خطوة واحدة</item>
+        <item quantity="two">خطوتان</item>
+        <item quantity="few">%d خطوات</item>
+        <item quantity="many">%d خطوة</item>
+        <item quantity="other">%d خطوة</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="zero">%s أميال</item>
+        <item quantity="one">ميل واحد</item>
+        <item quantity="two">ميلان</item>
+        <item quantity="few">%s أميال</item>
+        <item quantity="many">%s ميلاً</item>
+        <item quantity="other">%s ميل</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="zero">%s كيلومترات</item>
+        <item quantity="one">كيلومتر واحد</item>
+        <item quantity="two">كيلومتران</item>
+        <item quantity="few">%s كيلومترات</item>
+        <item quantity="many">%s كيلومترًا</item>
+        <item quantity="other">%s كيلومتر</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="zero">على بُعد %1$s خطوات من هدفك</item>
+        <item quantity="one">على بُعد خطوة واحدة من هدفك</item>
+        <item quantity="two">على بُعد خطوتين من هدفك</item>
+        <item quantity="few">على بُعد %1$s خطوات من هدفك</item>
+        <item quantity="many">على بُعد %1$s خطوة من هدفك</item>
+        <item quantity="other">على بُعد %1$s خطوة من هدفك</item>
+    </plurals>
+</resources>

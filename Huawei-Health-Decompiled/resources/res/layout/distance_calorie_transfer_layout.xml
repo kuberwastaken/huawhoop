@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.divider.HealthDivider
+        layout_gravity="0x1"
+        id="@+id/day_calorie_description_divider"
+        layout_width="-2"
+        layout_height="-2"
+        importantForAccessibility="2"/>
+    <LinearLayout
+        orientation="0"
+        id="@+id/day_calorie_description"
+        layout_width="-1"
+        layout_height="-2"
+        minHeight="@dimen/_2131363138_res_0x7f0a0542"/>
+    <com.huawei.ui.commonui.divider.HealthDivider
+        layout_gravity="0x1"
+        id="@+id/day_distance_description_divider"
+        layout_width="-2"
+        layout_height="-2"
+        importantForAccessibility="2"/>
+    <LinearLayout
+        orientation="0"
+        id="@+id/day_distance_description"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginBottom="@dimen/_2131363112_res_0x7f0a0528"
+        minHeight="@dimen/_2131363138_res_0x7f0a0542"/>
+</LinearLayout>

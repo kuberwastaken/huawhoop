@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="@dimen/_2131362907_res_0x7f0a045b"
+    layout_weight="1">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/ecology_file_question"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x14="@string/_2130838458_res_0x7f0203ba"/>
+    <LinearLayout
+        orientation="1"
+        background="@drawable/configured_item_image_text_background"
+        paddingTop="@dimen/_2131363664_res_0x7f0a0750"
+        paddingBottom="@dimen/_2131363664_res_0x7f0a0750"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginStart="@dimen/_2131362013_res_0x7f0a00dd"
+        layout_marginEnd="@dimen/_2131362011_res_0x7f0a00db">
+        <com.huawei.ui.commonui.edittext.HealthEditText
+            textSize="@dimen/_2131365482_res_0x7f0a0e6a"
+            textColor="@color/_2131296695_res_0x7f0901b7"
+            textColorHint="@color/_2131296695_res_0x7f0901b7"
+            gravity="0x800003"
+            id="@+id/field_content_et"
+            background="@color/_2131299926_res_0x7f090e56"
+            layout_width="-1"
+            layout_height="-2"
+            hint="@string/_2130838460_res_0x7f0203bc"
+            minLines="5"
+            maxLength="100"
+            fontFamily="@string/_2130852834_res_0x7f023be2"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131362721_res_0x7f0a03a1"
+            textColor="@color/_2131296697_res_0x7f0901b9"
+            layout_gravity="0x800005"
+            id="@+id/text_num_tip"
+            layout_width="-2"
+            layout_height="-2"
+            text="@string/_2130851461_res_0x7f023685"
+            layout_marginEnd="@dimen/_2131362540_res_0x7f0a02ec"/>
+    </LinearLayout>
+</LinearLayout>

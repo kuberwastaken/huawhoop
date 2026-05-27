@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/PreferenceCategoryContainerStyle">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        id="@+id/category_title"
+        layout_width="-2"
+        layout_height="-2"
+        style="@style/PreferenceCategoryTitleStyle"/>
+</LinearLayout>

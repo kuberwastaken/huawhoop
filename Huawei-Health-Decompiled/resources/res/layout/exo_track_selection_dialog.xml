@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-2"
+    layout_height="-1">
+    <androidx.media3.ui.TrackSelectionView
+        id="@+id/exo_track_selection_view"
+        layout_width="-2"
+        layout_height="-2"/>
+</ScrollView>

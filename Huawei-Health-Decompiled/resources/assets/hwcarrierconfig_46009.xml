@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<config>
+    <dict>
+        <string key="ODSA_ESURL">https://hw.es.10010.com/entitlement/</string>
+        <string key="ODSA_PROTOCOL">2</string>
+        <string key="ODSA_ES_VERSION">5</string>
+        <bool key="ODSA_SIMPLE_VERS">true</bool>
+        <bool key="SupportedLiveID">true</bool>
+        <bool key="ODSA_ADD_COMPANION_INFO">true</bool>
+        <bool key="ODSA_SUPPORT_CHANGE_MANAGE_SUBSCRIPTION">true</bool>
+        <bool key="ODSA_CUCC_DIFF_NUMBER_SUPPORT">true</bool>
+    </dict>
+</config>
+

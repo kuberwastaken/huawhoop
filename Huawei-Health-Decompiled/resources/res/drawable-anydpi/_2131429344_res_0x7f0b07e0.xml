@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<drawable xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    shape="0"
+    NOT_FOUND_0x4="@color/emui_clickeffic_default_color"
+    NOT_FOUND_0x5="@color/emui_clickeffic_default_color"
+    class="com.huawei.uikit.animations.drawable.HwHoverAndPressAnimatedDrawable">
+    <corners radius="@dimen/_2131362616_res_0x7f0a0338"/>
+    <stroke
+        width="@dimen/_2131364279_res_0x7f0a09b7"
+        color="@color/_2131298412_res_0x7f09086c"/>
+</drawable>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="-2">
+    <LinearLayout
+        gravity="0x1"
+        orientation="1"
+        layout_width="-2"
+        layout_height="-2"
+        NOT_FOUND_0xf="0"
+        NOT_FOUND_0x10="0">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131362916_res_0x7f0a0464"
+            textColor="@color/_2131300016_res_0x7f090eb0"
+            id="@+id/sleep_time_title"
+            background="@drawable/_2131431972_res_0x7f0b1224"
+            layout_width="-2"
+            layout_height="@dimen/_2131362970_res_0x7f0a049a"
+            text="@string/_2130851641_res_0x7f023739"
+            paddingStart="@dimen/_2131363172_res_0x7f0a0564"
+            paddingEnd="@dimen/_2131363172_res_0x7f0a0564"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131363012_res_0x7f0a04c4"
+            textColor="@color/_2131300016_res_0x7f090eb0"
+            id="@+id/sleep_time"
+            layout_width="-2"
+            layout_height="-2"
+            layout_marginTop="@dimen/_2131363112_res_0x7f0a0528"
+            text="- -"
+            includeFontPadding="false"
+            drawablePadding="@dimen/_2131363051_res_0x7f0a04eb"/>
+    </LinearLayout>
+    <LinearLayout
+        gravity="0x1"
+        orientation="1"
+        layout_width="-2"
+        layout_height="-2"
+        NOT_FOUND_0xe="0"
+        NOT_FOUND_0x10="0">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131362916_res_0x7f0a0464"
+            textColor="@color/_2131300016_res_0x7f090eb0"
+            id="@+id/wakeup_time_title"
+            background="@drawable/_2131431972_res_0x7f0b1224"
+            layout_width="-2"
+            layout_height="@dimen/_2131362970_res_0x7f0a049a"
+            text="@string/_2130842846_res_0x7f0214de"
+            paddingStart="@dimen/_2131363172_res_0x7f0a0564"
+            paddingEnd="@dimen/_2131363172_res_0x7f0a0564"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131363012_res_0x7f0a04c4"
+            textColor="@color/_2131300016_res_0x7f090eb0"
+            id="@+id/wakeup_time"
+            layout_width="-2"
+            layout_height="-2"
+            layout_marginTop="@dimen/_2131363112_res_0x7f0a0528"
+            text="- -"
+            includeFontPadding="false"
+            drawablePadding="@dimen/_2131363051_res_0x7f0a04eb"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

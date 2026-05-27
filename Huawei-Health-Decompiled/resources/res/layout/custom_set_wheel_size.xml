@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <include layout="@layout/commonui_dialog_edit_text_layout"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365484_res_0x7f0a0e6c"
+        textColor="@color/_2131299182_res_0x7f090b6e"
+        id="@+id/remind"
+        visibility="2"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131362578_res_0x7f0a0312"
+        layout_marginBottom="@dimen/_2131363749_res_0x7f0a07a5"
+        text="@string/_2130845830_res_0x7f022086"
+        fontFamily="@string/_2130852833_res_0x7f023be1"/>
+</LinearLayout>

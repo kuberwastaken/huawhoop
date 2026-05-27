@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.columnlayout.HealthColumnFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    background="@color/_2131296700_res_0x7f0901bc"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.listview.HealthExpandableListView
+        id="@+id/rope_performance_history_list"
+        background="@null"
+        scrollbars="0x0"
+        layout_width="-1"
+        layout_height="-1"
+        layout_marginTop="@dimen/_2131362578_res_0x7f0a0312"
+        layout_marginBottom="@dimen/_2131362934_res_0x7f0a0476"
+        listSelector="@color/_2131296995_res_0x7f0902e3"
+        cacheColorHint="@color/_2131296995_res_0x7f0902e3"
+        groupIndicator="@null"
+        divider="@null"
+        layout_marginStart="@dimen/_2131362013_res_0x7f0a00dd"
+        layout_marginEnd="@dimen/_2131362011_res_0x7f0a00db"/>
+    <include layout="@layout/item_rope_performance_no_data"/>
+</com.huawei.ui.commonui.columnlayout.HealthColumnFrameLayout>

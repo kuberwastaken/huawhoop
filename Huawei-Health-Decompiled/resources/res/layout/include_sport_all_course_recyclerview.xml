@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/sug_course_screen_layout"
+    layout_width="-1"
+    layout_height="-2"
+    minHeight="@dimen/_2131363090_res_0x7f0a0512">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/sug_category_name"
+        background="@color/_2131296984_res_0x7f0902d8"
+        layout_width="-2"
+        layout_height="-2"
+        minHeight="@dimen/_2131363629_res_0x7f0a072d"
+        NOT_FOUND_0x6="3"
+        NOT_FOUND_0x7="@string/_2130845953_res_0x7f022101"/>
+    <com.huawei.ui.commonui.recycleview.HealthRecycleView
+        id="@+id/recycleview_filter"
+        layout_width="-1"
+        layout_height="-1"/>
+</LinearLayout>

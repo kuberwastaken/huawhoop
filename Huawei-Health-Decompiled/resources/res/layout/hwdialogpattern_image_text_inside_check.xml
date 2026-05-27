@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    paddingTop="@dimen/_2131364216_res_0x7f0a0978"
+    layout_width="-1"
+    layout_height="0dp"
+    layout_weight="1">
+    <LinearLayout
+        gravity="0x1"
+        orientation="1"
+        layout_width="-1"
+        layout_height="-2">
+        <ImageView
+            id="@+id/hwdialogpattern_image"
+            layout_width="-2"
+            layout_height="-2"
+            adjustViewBounds="true"
+            maxHeight="@dimen/_2131364224_res_0x7f0a0980"
+            paddingStart="@dimen/_2131364233_res_0x7f0a0989"
+            paddingEnd="@dimen/_2131364233_res_0x7f0a0989"/>
+        <TextView
+            id="@+id/hwdialogpattern_title"
+            layout_width="-2"
+            layout_height="-2"
+            layout_marginTop="@dimen/_2131362644_res_0x7f0a0354"
+            paddingStart="@dimen/_2131364233_res_0x7f0a0989"
+            paddingEnd="@dimen/_2131364233_res_0x7f0a0989"
+            style="@style/Widget.Emui.HwDialogPattern.DialogSubTitle2"/>
+        <TextView
+            id="@+id/hwdialogpattern_content"
+            layout_width="-1"
+            layout_height="-2"
+            layout_marginTop="@dimen/_2131362645_res_0x7f0a0355"
+            paddingStart="@dimen/_2131364233_res_0x7f0a0989"
+            paddingEnd="@dimen/_2131364233_res_0x7f0a0989"
+            style="@style/Widget.Emui.HwDialogPattern.DialogBody1"/>
+        <FrameLayout
+            id="@+id/hwdialogpattern_widgetframe"
+            layout_width="-1"
+            layout_height="-2"/>
+        <include layout="@layout/hwdialogpattern_simple_checkbox"/>
+        <Space
+            layout_width="0dp"
+            layout_height="@dimen/_2131364232_res_0x7f0a0988"/>
+    </LinearLayout>
+</ScrollView>

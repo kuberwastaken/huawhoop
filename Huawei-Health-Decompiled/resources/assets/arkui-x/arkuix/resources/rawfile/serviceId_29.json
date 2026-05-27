@@ -1,0 +1,336 @@
+{
+  "1": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "acCode",
+        "type": "string"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "mode",
+        "type": "number16",
+        "optional": true
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32",
+        "optional": true
+      }
+    ]
+  },
+  "2": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "authenticationResult",
+        "type": "number32"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "tag",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "profileInfo",
+        "type": "object",
+        "rule": [
+          {
+            "tag": 4,
+            "jsonKey": "iccid",
+            "type": "string"
+          },
+          {
+            "tag": 5,
+            "jsonKey": "serviceProviderName",
+            "type": "string"
+          },
+          {
+            "tag": 6,
+            "jsonKey": "profileName",
+            "type": "string"
+          },
+          {
+            "tag": 7,
+            "jsonKey": "profileClass",
+            "type": "string"
+          },
+          {
+            "tag": 8,
+            "jsonKey": "iconType",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "tag": 9,
+            "jsonKey": "icon",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "tag": 10,
+            "jsonKey": "configurationInfo",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "tag": 11,
+            "jsonKey": "profileOwner",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "tag": 12,
+            "jsonKey": "profilePolicyRules",
+            "type": "bitmap",
+            "flagType": "number8",
+            "flagLen": 1,
+            "bitmapRule": [
+              {
+                "jsonkey": "activePpr1",
+                "bit": 0
+              },
+              {
+                "jsonkey": "downloadPpr1",
+                "bit": 1
+              },
+              {
+                "jsonkey": "downloadPpr2",
+                "bit": 2
+              }
+            ],
+            "optional": true
+          }
+        ]
+      }
+    ],
+    "encode": [
+      {
+        "tag": 127,
+        "jsonKey": "result",
+        "type": "number32",
+        "optional": true
+      }
+    ]
+  },
+  "3": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "confirmCode",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "operation",
+        "type": "number8"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32",
+        "optional": true
+      }
+    ]
+  },
+  "4": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "resultCode",
+        "type": "number32"
+      }
+    ],
+    "encode": [
+      {
+        "tag": 127,
+        "jsonKey": "result",
+        "type": "number32",
+        "optional": true
+      }
+    ]
+  },
+  "5": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "addProfileResult",
+        "type": "number"
+      },
+      {
+        "tag": 127,
+        "jsonKey": "code",
+        "type": "number32",
+        "optional": true
+      }
+    ]
+  },
+  "6": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "simInfo",
+        "type": "empty"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "simInfo",
+        "type": "object",
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "deviceType",
+            "type": "number8"
+          },
+          {
+            "tag": 3,
+            "jsonKey": "imei",
+            "type": "string"
+          },
+          {
+            "tag": 4,
+            "jsonKey": "sn",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "tag": 5,
+            "jsonKey": "deviceName",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "tag": 6,
+            "jsonKey": "eid",
+            "type": "string"
+          },
+          {
+            "tag": 12,
+            "jsonKey": "powerState",
+            "type": "number8"
+          }
+        ]
+      },
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32",
+        "optional": true
+      }
+    ]
+  },
+  "7": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "multiSimStatus",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "msisdn",
+        "type": "string",
+        "optional": true
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32",
+        "optional": true
+      }
+    ]
+  },
+  "8": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "profileInfoList",
+        "type": "object",
+        "rule": [
+          {
+            "tag": 2,
+            "jsonKey": "profileInfo",
+            "type": "anonArray",
+            "rule": [
+              {
+                "tag": 3,
+                "jsonKey": "imsi",
+                "type": "string",
+                "optional": true
+              },
+              {
+                "tag": 4,
+                "jsonKey": "iccid",
+                "type": "string"
+              },
+              {
+                "tag": 5,
+                "jsonKey": "status",
+                "type": "number8"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32",
+        "optional": true
+      }
+    ]
+  },
+  "9": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "deleteProfileResultCode",
+        "type": "number32"
+      },
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32",
+        "optional": true
+      }
+    ],
+    "encode": [
+      {
+        "tag": 127,
+        "jsonKey": "result",
+        "type": "number32",
+        "optional": true
+      }
+    ]
+  },
+  "10": {
+    "encode": [],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "batteryThreshold",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 127,
+        "jsonKey": "queryResult",
+        "type": "number32"
+      }
+    ]
+  }
+}

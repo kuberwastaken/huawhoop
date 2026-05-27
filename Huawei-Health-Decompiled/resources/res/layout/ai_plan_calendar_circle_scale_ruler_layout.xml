@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    gravity="0x11"
+    layout_gravity="0x11"
+    orientation="1"
+    layout_width="-2"
+    layout_height="-2">
+    <com.huawei.ui.commonui.ruler.circlescaleruler.CircleScaleRuler
+        layout_gravity="0x11"
+        id="@+id/ai_plan_calendar_layout_circle_scale_ruler"
+        layout_width="@dimen/_2131363021_res_0x7f0a04cd"
+        layout_height="@dimen/_2131362934_res_0x7f0a0476"
+        NOT_FOUND_0xb="true"
+        NOT_FOUND_0xc="@dimen/_2131363144_res_0x7f0a0548"
+        NOT_FOUND_0xd="@dimen/_2131363051_res_0x7f0a04eb"
+        NOT_FOUND_0xe="@dimen/_2131363172_res_0x7f0a0564"
+        NOT_FOUND_0xf="@dimen/_2131363051_res_0x7f0a04eb"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131362916_res_0x7f0a0464"
+        ellipsize="3"
+        gravity="0x11"
+        layout_gravity="0x11"
+        id="@+id/ai_plan_calendar_layout_text"
+        layout_width="@dimen/_2131363090_res_0x7f0a0512"
+        layout_height="-2"
+        lines="1"
+        NOT_FOUND_0x9="@dimen/_2131363186_res_0x7f0a0572"
+        NOT_FOUND_0xa="@dimen/_2131362993_res_0x7f0a04b1"
+        style="@style/text_regular_secondary_high_quality_normal"/>
+</LinearLayout>

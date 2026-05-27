@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "muscleName": "IDS_muscle_anterior",
+    "muscleFunction": "IDS_muscle_anterior_info"
+  },
+  {
+    "id": 2,
+    "muscleName": "IDS_muscle_trapezius",
+    "muscleFunction": "IDS_muscle_trapezius_info"
+  },
+  {
+    "id": 3,
+    "muscleName": "IDS_muscle_pectoralismajor",
+    "muscleFunction": "IDS_pectoralismajor_info"
+  },
+  {
+    "id": 4,
+    "muscleName": "IDS_muscle_deltoid",
+    "muscleFunction": "IDS_muscle_deltoid_info"
+  },
+  {
+    "id": 5,
+    "muscleName": "IDS_muscle_pectoralisminor",
+    "muscleFunction": "IDS_pectoralisminor_info"
+  },
+  {
+    "id": 6,
+    "muscleName": "IDS_muscle_rectus",
+    "muscleFunction": "IDS_muscle_rectus_info"
+  },
+  {
+    "id": 7,
+    "muscleName": "IDS_muscle_rectus",
+    "muscleFunction": "IDS_muscle_rectus_info"
+  },
+  {
+    "id": 8,
+    "muscleName": "IDS_muscle_rectus",
+    "muscleFunction": "IDS_muscle_rectus_info"
+  },
+  {
+    "id": 9,
+    "muscleName": "IDS_muscle_serratus",
+    "muscleFunction": "IDS_muscle_serratus_info"
+  },
+  {
+    "id": 10,
+    "muscleName": "IDS_muscle_serratus",
+    "muscleFunction": "IDS_muscle_serratus_info"
+  },
+  {
+    "id": 11,
+    "muscleName": "IDS_muscle_serratus",
+    "muscleFunction": "IDS_muscle_serratus_info"
+  },
+  {
+    "id": 12,
+    "muscleName": "IDS_muscle_serratus",
+    "muscleFunction": "IDS_muscle_serratus_info"
+  },
+  {
+    "id": 13,
+    "muscleName": "IDS_muscle_oblique",
+    "muscleFunction": "IDS_muscle_oblique_info"
+  },
+  {
+    "id": 14,
+    "muscleName": "IDS_muscle_transverse",
+    "muscleFunction": "IDS_muscle_transverse_info"
+  },
+  {
+    "id": 15,
+    "muscleName": "IDS_muscle_tensor",
+    "muscleFunction": "IDS_muscle_tensor_info"
+  },
+  {
+    "id": 16,
+    "muscleName": "IDS_muscle_adductors",
+    "muscleFunction": "IDS_muscle_adductors_info"
+  },
+  {
+    "id": 17,
+    "muscleName": "IDS_muscle_sartorius",
+    "muscleFunction": "IDS_muscle_sartorius_info"
+  },
+  {
+    "id": 18,
+    "muscleName": "IDS_muscle_quadriceps",
+    "muscleFunction": "IDS_muscle_quadriceps_info"
+  },
+  {
+    "id": 19,
+    "muscleName": "IDS_muscle_medial",
+    "muscleFunction": "IDS_muscle_medial_info"
+  },
+  {
+    "id": 20,
+    "muscleName": "IDS_muscle_knee",
+    "muscleFunction": "IDS_muscle_knee_info"
+  },
+  {
+    "id": 21,
+    "muscleName": "IDS_muscle_tibialis",
+    "muscleFunction": "IDS_muscle_tibialis_info"
+  },
+  {
+    "id": 22,
+    "muscleName": "IDS_muscle_peroneal",
+    "muscleFunction": "IDS_muscle_peroneal_info"
+  },
+  {
+    "id": 23,
+    "muscleName": "IDS_muscle_gastrocnemius",
+    "muscleFunction": "IDS_muscle_gastrocnemius_info"
+  },
+  {
+    "id": 24,
+    "muscleName": "IDS_muscle_foot",
+    "muscleFunction": "IDS_muscle_foot_info"
+  },
+  {
+    "id": 25,
+    "muscleName": "IDS_muscle_biceps",
+    "muscleFunction": "IDS_muscle_biceps_info"
+  },
+  {
+    "id": 26,
+    "muscleName": "IDS_muscle_brachioradialis",
+    "muscleFunction": "IDS_brachioradialis_info"
+  },
+  {
+    "id": 27,
+    "muscleName": "IDS_muscle_wrist",
+    "muscleFunction": "IDS_muscle_wrist_info"
+  },
+  {
+    "id": 28,
+    "muscleName": "IDS_muscle_hand",
+    "muscleFunction": "IDS_muscle_hand_info"
+  }
+]

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/popup_window_content"
+    background="@drawable/_2131428979_res_0x7f0b0673"
+    layout_width="-2"
+    layout_height="-2">
+    <ImageView
+        id="@+id/popup_window_image_view"
+        layout_width="@dimen/_2131361981_res_0x7f0a00bd"
+        layout_height="@dimen/_2131361981_res_0x7f0a00bd"
+        layout_marginTop="@dimen/_2131361983_res_0x7f0a00bf"
+        layout_centerHorizontal="true"/>
+    <TextView
+        textSize="@dimen/_2131361986_res_0x7f0a00c2"
+        textColor="@color/_2131297641_res_0x7f090569"
+        ellipsize="3"
+        gravity="0x11"
+        id="@+id/popup_window_text_view"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginLeft="@dimen/_2131361984_res_0x7f0a00c0"
+        layout_marginTop="@dimen/_2131361985_res_0x7f0a00c1"
+        layout_marginRight="@dimen/_2131361984_res_0x7f0a00c0"
+        layout_marginBottom="@dimen/_2131361982_res_0x7f0a00be"
+        layout_below="@+id/popup_window_image_view"/>
+</RelativeLayout>

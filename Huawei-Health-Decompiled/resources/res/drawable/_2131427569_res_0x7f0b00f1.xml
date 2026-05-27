@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" drawable="@drawable/_2131427331_res_0x7f0b0003">
+    <target
+        name="eye_mask"
+        animation="@drawable/_2131427332_res_0x7f0b0004"/>
+    <target
+        name="strike_through"
+        animation="@drawable/_2131427333_res_0x7f0b0005"/>
+</animated-vector>

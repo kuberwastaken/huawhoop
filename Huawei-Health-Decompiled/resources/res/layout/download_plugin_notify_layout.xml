@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x10"
+    orientation="1"
+    id="@+id/download_plugin_layout"
+    layout_width="-1"
+    layout_height="-2">
+    <LinearLayout
+        orientation="0"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131363051_res_0x7f0a04eb">
+        <TextView
+            textAppearance="@android:style/TextAppearance.Material.Notification.Info"
+            textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+            id="@+id/des_textview"
+            layout_width="@dimen/_2131362907_res_0x7f0a045b"
+            layout_height="-2"
+            layout_weight="1"
+            layout_marginEnd="@dimen/_2131363172_res_0x7f0a0564"
+            layout_alignParentStart="true"/>
+        <TextView
+            textAppearance="@android:style/TextAppearance.Material.Notification.Info"
+            textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+            textColor="@color/_2131299640_res_0x7f090d38"
+            layout_gravity="0x10"
+            id="@+id/download_textview"
+            layout_width="-2"
+            layout_height="-2"/>
+    </LinearLayout>
+</LinearLayout>

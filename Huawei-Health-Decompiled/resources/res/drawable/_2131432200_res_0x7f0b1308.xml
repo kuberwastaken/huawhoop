@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item state_enabled="false">
+        <nine-patch
+            gravity="0x11"
+            src="@drawable/_2131432089_res_0x7f0b1299"/>
+    </item>
+    <item>
+        <nine-patch
+            gravity="0x11"
+            src="@drawable/_2131432090_res_0x7f0b129a"/>
+    </item>
+</selector>

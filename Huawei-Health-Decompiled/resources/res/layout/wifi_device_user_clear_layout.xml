@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-1">
+    <LinearLayout
+        orientation="1"
+        layout_width="-1"
+        layout_height="-1">
+        <com.huawei.ui.commonui.recycleview.HealthRecycleView
+            id="@+id/_clear_user_data_recycler_view"
+            scrollbars="0x0"
+            clickable="false"
+            layout_width="-1"
+            layout_height="0dp"
+            layout_weight="1"/>
+        <com.huawei.ui.commonui.toolbar.HealthToolBar
+            id="@+id/clear_user_data_health_tool_bar"
+            layout_width="-1"
+            layout_height="-2"/>
+    </LinearLayout>
+</LinearLayout>

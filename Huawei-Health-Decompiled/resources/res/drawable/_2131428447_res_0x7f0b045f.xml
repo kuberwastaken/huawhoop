@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" shape="0">
+    <solid color="@color/_2131299183_res_0x7f090b6f"/>
+    <corners
+        topLeftRadius="@dimen/_2131363172_res_0x7f0a0564"
+        topRightRadius="@dimen/_2131363172_res_0x7f0a0564"
+        bottomLeftRadius="@dimen/_2131363172_res_0x7f0a0564"
+        bottomRightRadius="@dimen/_2131363172_res_0x7f0a0564"/>
+    <padding
+        left="@dimen/_2131363087_res_0x7f0a050f"
+        top="@dimen/_2131362902_res_0x7f0a0456"
+        right="@dimen/_2131363087_res_0x7f0a050f"
+        bottom="@dimen/_2131362902_res_0x7f0a0456"/>
+</shape>

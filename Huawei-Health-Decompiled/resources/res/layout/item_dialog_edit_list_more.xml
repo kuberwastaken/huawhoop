@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.healthtextview.HealthTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    textSize="@dimen/_2131365499_res_0x7f0a0e7b"
+    textColor="@color/_2131299845_res_0x7f090e05"
+    id="@+id/custom_courses_selected_value"
+    layout_width="-1"
+    layout_height="-2"
+    layout_alignParentTop="true"
+    fontFamily="@string/_2130852834_res_0x7f023be2"/>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x800013"
+    orientation="0"
+    id="@+id/activityLayout_middle"
+    layout_width="-1"
+    layout_height="-1"
+    importantForAccessibility="1">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365484_res_0x7f0a0e6c"
+        textColor="@color/_2131299845_res_0x7f090e05"
+        ellipsize="3"
+        gravity="0x10"
+        layout_gravity="0x10"
+        id="@+id/breath_train"
+        layout_width="-2"
+        layout_height="-2"
+        maxWidth="@dimen/_2131362947_res_0x7f0a0483"
+        minHeight="@dimen/_2131363054_res_0x7f0a04ee"
+        maxLines="2"
+        fontFamily="textFontFamilyMedium"/>
+    <ImageView
+        id="@+id/breath_array"
+        visibility="2"
+        layout_width="@dimen/_2131363172_res_0x7f0a0564"
+        layout_height="@dimen/_2131362970_res_0x7f0a049a"
+        scaleType="6"
+        adjustViewBounds="true"
+        layout_marginStart="@dimen/_2131362907_res_0x7f0a045b"/>
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    background="@color/_2131296700_res_0x7f0901bc"
+    layout_width="-1"
+    layout_height="-2">
+    <ImageView
+        id="@+id/search_location_icon"
+        layout_width="@dimen/_2131362970_res_0x7f0a049a"
+        layout_height="@dimen/_2131362970_res_0x7f0a049a"
+        src="@drawable/_2131430227_res_0x7f0b0b53"
+        layout_centerVertical="true"
+        layout_marginStart="@dimen/_2131363021_res_0x7f0a04cd"
+        layout_alignParentStart="true"
+        style="@style/health_default_img_tint"/>
+    <RelativeLayout
+        id="@+id/search_suggest_item_layout"
+        layout_width="-1"
+        layout_height="-2"
+        layout_centerVertical="true"
+        layout_marginStart="@dimen/_2131363112_res_0x7f0a0528"
+        layout_marginEnd="@dimen/_2131362011_res_0x7f0a00db"
+        layout_toEndOf="@+id/search_location_icon">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131362970_res_0x7f0a049a"
+            textColor="@color/_2131299845_res_0x7f090e05"
+            gravity="0x10"
+            id="@+id/search_suggest_view"
+            layout_width="-1"
+            layout_height="-2"
+            layout_alignParentTop="true"
+            fontFamily="@string/_2130852834_res_0x7f023be2"
+            paddingVertical="@dimen/_2131362970_res_0x7f0a049a"/>
+        <com.huawei.ui.commonui.divider.HealthDivider
+            id="@+id/search_suggest_divider"
+            layout_width="-1"
+            layout_height="-2"
+            layout_alignParentBottom="true"
+            NOT_FOUND_0x11="0"/>
+    </RelativeLayout>
+</RelativeLayout>

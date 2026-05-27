@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taboo>
+    <item name="region_TW_r_all" value="ཀྲུང་གོའི་ཐའེ་ཝན།"/>
+    <item name="region_HK_r_all" value="ཀྲུང་གོའི་ཧོང་ཀོང་དམིགས་གསལ་སྲིད་འཛིན་ས་ཁུལ།"/>
+    <item name="region_MO_r_all" value="ཀྲུང་གོའི་ཨའོ་མན་དམིགས་གསལ་སྲིད་འཛིན་ས་ཁུལ།"/>
+    <item name="region_MK_r_all" value="མེ་སི་དྲོ་ནི་ཡ་བྱང་མ།"/>
+    <item name="region_TW_hc_TW" value="ཐའེ་ཝན།"/>
+</taboo>

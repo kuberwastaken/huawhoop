@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    id="@+id/main_guide_root_layout"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.viewpager.HealthViewPager
+        id="@+id/view_pager"
+        background="@color/_2131296276_res_0x7f090014"
+        layout_width="-1"
+        layout_height="-1"/>
+    <com.huawei.ui.commonui.dotspageindicator.HealthDotsPageIndicator
+        id="@+id/dots_page_indicator"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginBottom="@dimen/_2131363162_res_0x7f0a055a"
+        NOT_FOUND_0x9="@color/_2131296661_res_0x7f090195"
+        NOT_FOUND_0xa="@color/_2131297002_res_0x7f0902ea"
+        NOT_FOUND_0xb="0"
+        NOT_FOUND_0xc="0"
+        NOT_FOUND_0xd="0"
+        style="@style/Widget.Emui.HwDotsPageIndicator.Translucent"/>
+    <ImageView
+        id="@+id/close_img"
+        layout_width="@dimen/_2131363021_res_0x7f0a04cd"
+        layout_height="@dimen/_2131363021_res_0x7f0a04cd"
+        layout_marginTop="@dimen/_2131363090_res_0x7f0a0512"
+        src="@drawable/_2131430570_res_0x7f0b0caa"
+        contentDescription="@string/_2130848057_res_0x7f022939"
+        layout_marginEnd="@dimen/_2131362934_res_0x7f0a0476"
+        NOT_FOUND_0xc="0"
+        NOT_FOUND_0xe="0"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

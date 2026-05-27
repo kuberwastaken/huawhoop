@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    id="@+id/day_progress_layout"
+    layout_width="-1"
+    layout_height="-2"
+    importantForAccessibility="1">
+    <ImageView
+        id="@+id/kaka_bubble"
+        visibility="1"
+        layout_width="@dimen/_2131362853_res_0x7f0a0425"
+        layout_height="@dimen/_2131362851_res_0x7f0a0423"
+        src="@drawable/_2131427739_res_0x7f0b019b"
+        scaleType="6"
+        layout_alignParentEnd="true"/>
+    <com.huawei.ui.commonui.progressbar.HealthProgressBar
+        layout_gravity="0x1"
+        id="@+id/day_step_progressbar"
+        layout_width="-1"
+        layout_height="@dimen/_2131363002_res_0x7f0a04ba"
+        max="100"
+        layout_below="@+id/kaka_bubble"
+        importantForAccessibility="2"
+        mirrorForRtl="true"
+        style="@style/day_step_update_progress_horizontal"/>
+    <LinearLayout
+        orientation="0"
+        id="@+id/kaka_list_layout"
+        layout_width="-1"
+        layout_height="@dimen/_2131363002_res_0x7f0a04ba"
+        layout_below="@+id/kaka_bubble"
+        layout_alignBaseline="@+id/day_step_progressbar"/>
+</RelativeLayout>

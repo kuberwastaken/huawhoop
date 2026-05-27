@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.view.threeCircle.ThreeCircleView
+        layout_gravity="0x11"
+        id="@+id/circleProgressBar"
+        layout_width="158dp"
+        layout_height="158dp"
+        layout_marginTop="@dimen/_2131363051_res_0x7f0a04eb"
+        NOT_FOUND_0x6="false"
+        NOT_FOUND_0x7="true"
+        NOT_FOUND_0x8="false"/>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    id="@+id/device_icon_layout"
+    layout_width="-2"
+    layout_height="-2"
+    paddingEnd="@dimen/_2131362934_res_0x7f0a0476">
+    <ImageView
+        layout_gravity="0x11"
+        id="@+id/device_icon"
+        layout_width="@dimen/_2131363063_res_0x7f0a04f7"
+        layout_height="@dimen/_2131363063_res_0x7f0a04f7"
+        src="@mipmap/_2131820714_res_0x7f1100aa"/>
+    <ImageView
+        layout_gravity="0x800005"
+        id="@+id/device_round_point"
+        background="@drawable/device_point_bg_unconnect"
+        layout_width="@dimen/_2131363144_res_0x7f0a0548"
+        layout_height="@dimen/_2131363144_res_0x7f0a0548"/>
+</FrameLayout>

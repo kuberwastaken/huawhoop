@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/expand_report_recyclerview_1_ll"
+    layout_width="-1"
+    layout_height="-2">
+    <LinearLayout
+        id="@+id/total_sleep_layout_item"
+        layout_marginStart="@dimen/_2131363144_res_0x7f0a0548"
+        layout_marginEnd="@dimen/_2131363144_res_0x7f0a0548"
+        style="@style/section_expand_report_list_item_layout_style">
+        <LinearLayout
+            orientation="1"
+            layout_width="0dp"
+            layout_height="-2"
+            layout_weight="1">
+            <com.huawei.ui.commonui.healthtextview.HealthTextView
+                id="@+id/item_left_top_text"
+                text="@string/_2130842288_res_0x7f0212b0"
+                style="@style/section_expand_report_list_title_style"/>
+            <com.huawei.ui.commonui.healthtextview.HealthTextView
+                id="@+id/item_left_bottom_text"
+                importantForAccessibility="2"
+                style="@style/section_expand_report_list_second_title_tow_line_style"/>
+        </LinearLayout>
+        <LinearLayout
+            gravity="0x10"
+            orientation="0"
+            layout_width="-2"
+            layout_height="-2">
+            <com.huawei.ui.commonui.healthtextview.HealthTextView
+                id="@+id/item_right_text"
+                layout_marginEnd="@dimen/_2131363112_res_0x7f0a0528"
+                style="@style/section_expand_report_list_content_style"/>
+            <ImageView
+                id="@+id/item_right_icon"
+                layout_width="-2"
+                layout_height="-2"
+                backgroundTint="@color/_2131296695_res_0x7f0901b7"
+                backgroundTintMode="5"/>
+        </LinearLayout>
+    </LinearLayout>
+    <com.huawei.ui.commonui.divider.HealthDivider
+        id="@+id/recyclerview_divider_1"
+        style="@style/section_expand_report_list_divide_line_1"/>
+</LinearLayout>

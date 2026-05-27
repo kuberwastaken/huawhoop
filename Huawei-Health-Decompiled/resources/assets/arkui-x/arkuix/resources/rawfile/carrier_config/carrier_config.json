@@ -1,0 +1,438 @@
+{
+  "46000": [
+    {
+      "name": "AuthenType",
+      "value": "2"
+    },
+    {
+      "name": "CDMURL",
+      "value": "https://hdh.10086.cn:8075/yhdk/appserver/v2.0/user/service"
+    },
+    {
+      "name": "ESURL",
+      "value": "https://zdnlpz.yhdzd.chinamobile.com:9191/"
+    },
+    {
+      "name": "BSFURL",
+      "value": "http://bsf.mnc%s.mcc%s.pub.3gppnetwork.org:8080"
+    },
+    {
+      "name": "SMDPURL",
+      "value": "LPA:1$esim.yhdzd.chinamobile.com:8015$"
+    },
+    {
+      "name": "SupportedProtocol",
+      "value": "1"
+    }
+  ],
+  "46002": [
+    {
+      "name": "AuthenType",
+      "value": "2"
+    },
+    {
+      "name": "CDMURL",
+      "value": "https://hdh.10086.cn:8075/yhdk/appserver/v2.0/user/service"
+    },
+    {
+      "name": "ESURL",
+      "value": "https://zdnlpz.yhdzd.chinamobile.com:9191/"
+    },
+    {
+      "name": "BSFURL",
+      "value": "http://bsf.mnc%s.mcc%s.pub.3gppnetwork.org:8080"
+    },
+    {
+      "name": "SMDPURL",
+      "value": "LPA:1$esim.yhdzd.chinamobile.com:8015$"
+    },
+    {
+      "name": "SupportedProtocol",
+      "value": "1"
+    }
+  ],
+  "46004": [
+    {
+      "name": "AuthenType",
+      "value": "2"
+    },
+    {
+      "name": "CDMURL",
+      "value": "https://hdh.10086.cn:8075/yhdk/appserver/v2.0/user/service"
+    },
+    {
+      "name": "ESURL",
+      "value": "https://zdnlpz.yhdzd.chinamobile.com:9191/"
+    },
+    {
+      "name": "BSFURL",
+      "value": "http://bsf.mnc%s.mcc%s.pub.3gppnetwork.org:8080"
+    },
+    {
+      "name": "SMDPURL",
+      "value": "LPA:1$esim.yhdzd.chinamobile.com:8015$"
+    },
+    {
+      "name": "SupportedProtocol",
+      "value": "1"
+    }
+  ],
+  "46007": [
+    {
+      "name": "AuthenType",
+      "value": "2"
+    },
+    {
+      "name": "CDMURL",
+      "value": "https://hdh.10086.cn:8075/yhdk/appserver/v2.0/user/service"
+    },
+    {
+      "name": "ESURL",
+      "value": "https://zdnlpz.yhdzd.chinamobile.com:9191/"
+    },
+    {
+      "name": "BSFURL",
+      "value": "http://bsf.mnc%s.mcc%s.pub.3gppnetwork.org:8080"
+    },
+    {
+      "name": "SMDPURL",
+      "value": "LPA:1$esim.yhdzd.chinamobile.com:8015$"
+    },
+    {
+      "name": "SupportedProtocol",
+      "value": "1"
+    }
+  ],
+  "46008": [
+    {
+      "name": "AuthenType",
+      "value": "2"
+    },
+    {
+      "name": "CDMURL",
+      "value": "https://hdh.10086.cn:8075/yhdk/appserver/v2.0/user/service"
+    },
+    {
+      "name": "ESURL",
+      "value": "https://zdnlpz.yhdzd.chinamobile.com:9191/"
+    },
+    {
+      "name": "BSFURL",
+      "value": "http://bsf.mnc%s.mcc%s.pub.3gppnetwork.org:8080"
+    },
+    {
+      "name": "SMDPURL",
+      "value": "LPA:1$esim.yhdzd.chinamobile.com:8015$"
+    },
+    {
+      "name": "SupportedProtocol",
+      "value": "1"
+    }
+  ],
+  "20810": [
+    {
+      "name": "ODSA_ESURL",
+      "value": "https://aes.mnc010.mcc208.pub.3gppnetwork.org"
+    },
+    {
+      "name": "ODSA_PROTOCOL",
+      "value": "2"
+    },
+    {
+      "name": "ODSA_ES_VERSION",
+      "value": "5"
+    },
+    {
+      "name": "ODSA_SIMPLE_VERS",
+      "value": "false"
+    }
+  ],
+  "22610": [
+    {
+      "name": "ODSA_ESURL",
+      "value": "https://aes-degdroid.orange.ro/DEGDROIDInterfaceTS43"
+    },
+    {
+      "name": "ODSA_PROTOCOL",
+      "value": "2"
+    },
+    {
+      "name": "ODSA_SUPPORT_URL_ENCODER_TOKEN",
+      "value": "true"
+    },
+    {
+      "name": "ODSA_SUPPORT_NOTIFICATION_SERVICE",
+      "value": "false"
+    },
+    {
+      "name": "ODSA_SUPPORT_AUTO_FINISH_WEBVIEW",
+      "value": "false"
+    },
+    {
+      "name": "ODSA_SUPPORT_DYNAMIC_LOAD_WEBVIEW",
+      "value": "true"
+    }
+  ],
+  "25506": [
+    {
+      "name": "ODSA_ESURL",
+      "value": "https://es.mnc006.mcc255.pub.3gppnetwork.org:8443"
+    },
+    {
+      "name": "ODSA_PROTOCOL",
+      "value": "2"
+    },
+    {
+      "name": "ODSA_SUPPORT_URL_ENCODER_TOKEN",
+      "value": "true"
+    },
+    {
+      "name": "ODSA_SUPPORT_NOTIFICATION_SERVICE",
+      "value": "false"
+    },
+    {
+      "name": "ODSA_SUPPORT_CHANGE_MANAGE_SUBSCRIPTION",
+      "value": "true"
+    },
+    {
+      "name": "ODSA_ADD_COMPANION_INFO",
+      "value": "true"
+    }
+  ],
+  "28601": [
+    {
+      "name": "ODSA_ESURL",
+      "value": "https://ses-prod.turkcell.com.tr:10024/resources"
+    },
+    {
+      "name": "ODSA_PROTOCOL",
+      "value": "2"
+    },
+    {
+      "name": "ODSA_ES_VERSION",
+      "value": "5"
+    },
+    {
+      "name": "ODSA_SIMPLE_VERS",
+      "value": "true"
+    },
+    {
+      "name": "ODSA_SUPPORT_NOTIFICATION_SERVICE",
+      "value": "false"
+    },
+    {
+      "name": "ODSA_CHECK_COMPANION_DEVICE_SERVICES",
+      "value": "true"
+    },
+    {
+      "name": "ODSA_ADD_COMPANION_INFO",
+      "value": "true"
+    },
+    {
+      "name": "ODSA_SUPPORT_URL_ENCODER_TOKEN",
+      "value": "true"
+    },
+    {
+      "name": "ODSA_SUPPORT_DYNAMIC_LOAD_WEBVIEW",
+      "value": "true"
+    },
+    {
+      "name": "ODSA_SUPPORT_CHANGE_MANAGE_SUBSCRIPTION",
+      "value": "true"
+    },
+    {
+      "name": "OIDC_SUPPORT_SPECIFY_LANGUAGE",
+      "value": "true"
+    }
+  ],
+  "41902": [
+    {
+      "name": "ODSA_ESURL",
+      "value": "https://es.kw.zain.com:10024"
+    },
+    {
+      "name": "ODSA_PROTOCOL",
+      "value": "2"
+    },
+    {
+      "name": "ODSA_ES_VERSION",
+      "value": "5"
+    },
+    {
+      "name": "ODSA_SIMPLE_VERS",
+      "value": "true"
+    },
+    {
+      "name": "ODSA_SUPPORT_NOTIFICATION_SERVICE",
+      "value": "false"
+    },
+    {
+      "name": "ODSA_CHECK_COMPANION_DEVICE_SERVICES",
+      "value": "true"
+    },
+    {
+      "name": "ODSA_ADD_COMPANION_INFO",
+      "value": "true"
+    },
+    {
+      "name": "ODSA_SUPPORT_URL_ENCODER_TOKEN",
+      "value": "true"
+    },
+    {
+      "name": "ODSA_SUPPORT_DYNAMIC_LOAD_WEBVIEW",
+      "value": "true"
+    },
+    {
+      "name": "ODSA_SUPPORT_CHANGE_MANAGE_SUBSCRIPTION",
+      "value": "true"
+    }
+  ],
+  "41904": [
+    {
+      "name": "ODSA_ESURL",
+      "value": "https://esmart.stc.com.kw/ts43"
+    },
+    {
+      "name": "ODSA_PROTOCOL",
+      "value": "2"
+    },
+    {
+      "name": "ODSA_ES_VERSION",
+      "value": "5"
+    },
+    {
+      "name": "ODSA_SIMPLE_VERS",
+      "value": "false"
+    },
+    {
+      "name": "ODSA_SUPPORT_CHANGE_MANAGE_SUBSCRIPTION",
+      "value": "true"
+    }
+  ],
+  "46001": [
+    {
+      "name": "ODSA_ESURL",
+      "value": "https://hw.es.10010.com/entitlement/"
+    },
+    {
+      "name": "ODSA_PROTOCOL",
+      "value": "2"
+    },
+    {
+      "name": "ODSA_ES_VERSION",
+      "value": "5"
+    },
+    {
+      "name": "ODSA_SIMPLE_VERS",
+      "value": "true"
+    },
+    {
+      "name": "SupportedLiveID",
+      "value": "true"
+    },
+    {
+      "name": "ODSA_SUPPORT_CHANGE_MANAGE_SUBSCRIPTION",
+      "value": "true"
+    }
+  ],
+  "46006": [
+    {
+      "name": "ODSA_ESURL",
+      "value": "https://hw.es.10010.com/entitlement/"
+    },
+    {
+      "name": "ODSA_PROTOCOL",
+      "value": "2"
+    },
+    {
+      "name": "ODSA_ES_VERSION",
+      "value": "5"
+    },
+    {
+      "name": "ODSA_SIMPLE_VERS",
+      "value": "true"
+    },
+    {
+      "name": "SupportedLiveID",
+      "value": "true"
+    },
+    {
+      "name": "ODSA_SUPPORT_CHANGE_MANAGE_SUBSCRIPTION",
+      "value": "true"
+    }
+  ],
+  "46009": [
+    {
+      "name": "ODSA_ESURL",
+      "value": "https://hw.es.10010.com/entitlement/"
+    },
+    {
+      "name": "ODSA_PROTOCOL",
+      "value": "2"
+    },
+    {
+      "name": "ODSA_ES_VERSION",
+      "value": "5"
+    },
+    {
+      "name": "ODSA_SIMPLE_VERS",
+      "value": "true"
+    },
+    {
+      "name": "SupportedLiveID",
+      "value": "true"
+    },
+    {
+      "name": "ODSA_SUPPORT_CHANGE_MANAGE_SUBSCRIPTION",
+      "value": "true"
+    }
+  ],
+  "51502": [
+    {
+      "name": "ODSA_ESURL",
+      "value": "https://esim-globe-es-prd.ipaas.amdocs.com/globe/inbound/executeGSMAActions/"
+    },
+    {
+      "name": "ODSA_PROTOCOL",
+      "value": "2"
+    },
+    {
+      "name": "ODSA_ES_VERSION",
+      "value": "5"
+    },
+    {
+      "name": "ODSA_SIMPLE_VERS",
+      "value": "false"
+    },
+    {
+      "name": "ODSA_SUPPORT_NOTIFICATION_SERVICE",
+      "value": "false"
+    },
+    {
+      "name": "ODSA_SUPPORT_SEND_DATA_DIRECTLY",
+      "value": "true"
+    }
+  ],
+  "52003": [
+    {
+      "name": "ODSA_ESURL",
+      "value": "https://std-es.ais.co.th/"
+    },
+    {
+      "name": "ODSA_PROTOCOL",
+      "value": "2"
+    },
+    {
+      "name": "ODSA_ADD_IMSI",
+      "value": "true"
+    },
+    {
+      "name": "ODSA_ES_VERSION",
+      "value": "5"
+    },
+    {
+      "name": "ODSA_SIMPLE_VERS",
+      "value": "false"
+    }
+  ]
+}

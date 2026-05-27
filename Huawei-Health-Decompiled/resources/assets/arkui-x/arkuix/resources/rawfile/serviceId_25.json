@@ -1,0 +1,71 @@
+{
+  "1": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "hr_type",
+        "type": "number8",
+        "optional": false
+      },
+      {
+        "tag": 2,
+        "jsonKey": "vol_status",
+        "type": "number8",
+        "optional": true
+      }
+    ]
+  },
+  "3": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "hr_list",
+        "type": "array",
+        "elemType": "object",
+        "optional": false,
+        "elemTag": 2,
+        "rule": [
+          {
+            "tag": 3,
+            "jsonKey": "hr_info",
+            "type": "number8"
+          },
+          {
+            "tag": 4,
+            "jsonKey": "time_info",
+            "type": "number32"
+          },
+          {
+            "tag": 5,
+            "jsonKey": "hr_credibility",
+            "type": "number8",
+            "optional": true
+          }
+        ]
+      },
+      {
+        "tag": 6,
+        "jsonKey": "extend_info_list",
+        "type": "array",
+        "elemType": "object",
+        "optional": true,
+        "elemTag": 7,
+        "rule": [
+          {
+            "tag": 8,
+            "jsonKey": "info_name",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "tag": 9,
+            "jsonKey": "info_value",
+            "type": "array",
+            "elemType": "number8",
+            "optional": true
+          }
+        ]
+      }
+    ]
+  }
+}

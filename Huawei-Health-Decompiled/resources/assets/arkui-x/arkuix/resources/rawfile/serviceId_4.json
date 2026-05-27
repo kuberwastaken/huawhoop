@@ -1,0 +1,37 @@
+{
+  "1": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "calling_operation_type",
+        "type": "number8"
+      }
+    ]
+  },
+  "2": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "msg_format",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "incoming_number",
+        "type": "string"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "msg_content",
+        "type": "string"
+      }
+    ],
+    "encode" : [
+      {
+        "tag": 127,
+        "jsonKey": "error_code",
+        "type": "number64"
+      }
+    ]
+  }
+}

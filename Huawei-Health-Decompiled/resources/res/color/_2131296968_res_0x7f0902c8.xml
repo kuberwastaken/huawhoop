@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        state_enabled="false"
+        color="@color/_2131296970_res_0x7f0902ca"/>
+    <item
+        state_pressed="true"
+        color="@color/_2131296972_res_0x7f0902cc"/>
+    <item
+        state_focused="true"
+        color="@color/_2131296971_res_0x7f0902cb"/>
+    <item color="@color/_2131296969_res_0x7f0902c9"/>
+</selector>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/setting_fragment"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/device_share_title_bar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x6="2"
+        NOT_FOUND_0x7="@string/IDS_user_profile_device_share"/>
+    <com.huawei.ui.commonui.recycleview.HealthRecycleView
+        layout_gravity="0x1"
+        id="@+id/rv_device_share"
+        layout_width="-2"
+        layout_height="-2"/>
+</LinearLayout>

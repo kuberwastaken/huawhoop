@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="other">អាចបង្ហាញ​សូចនាកររហូតដល់ %1$d នៅលើក្រាហ្វមួយ។</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="other">គ្លុយកូសក្នុងឈាមរបស់អ្នកត្រូវបានរំពឹងថានឹងធ្លាក់ចុះក្រោម %2$s មិល្លីម៉ូល/លីត្រ ក្នុងរយៈពេល %1$s នាទី។ សូមតាមដានកម្រិតគ្លុយកូសរបស់អ្នកឱ្យបានដិតដល់។</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="other">គ្លុយកូសក្នុងឈាមរបស់អ្នកត្រូវបានរំពឹងថានឹងធ្លាក់ចុះក្រោម %2$s mg/dL ក្នុងរយៈពេល %1$s នាទី។ សូមតាមដានកម្រិតគ្លុយកូសរបស់អ្នកឱ្យបានដិតដល់។</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="other">%d ជំហាន</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="other">%s mi</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="other">%s km</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="other">%1$s ជំហានទៀត</item>
+    </plurals>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/service_item_layout"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar xmlns:setting="http://schemas.android.com/apk/res-auto"
+        id="@+id/hw_health_opensource_title_layout"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xb="2"
+        NOT_FOUND_0xc="@string/_2130837791_res_0x7f02011f"/>
+    <com.huawei.ui.commonui.scrollview.HealthScrollView
+        id="@+id/opensource_content_layout"
+        layout_width="-1"
+        layout_height="-1"
+        layout_above="@+id/ok_btn"
+        layout_below="@+id/hw_health_opensource_title_layout">
+        <LinearLayout
+            orientation="1"
+            id="@+id/opensource_item_linear"
+            paddingBottom="@dimen/_2131363802_res_0x7f0a07da"
+            layout_width="-1"
+            layout_height="-1"
+            layout_marginTop="@dimen/_2131363776_res_0x7f0a07c0"
+            layout_marginStart="@dimen/_2131364901_res_0x7f0a0c25"
+            layout_marginEnd="@dimen/_2131364900_res_0x7f0a0c24"/>
+    </com.huawei.ui.commonui.scrollview.HealthScrollView>
+</RelativeLayout>

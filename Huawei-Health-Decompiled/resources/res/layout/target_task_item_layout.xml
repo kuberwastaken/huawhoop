@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x1"
+    orientation="1"
+    id="@+id/target_task_item_layout"
+    layout_width="-1"
+    layout_height="-1">
+    <ImageView
+        id="@+id/target_task_iv"
+        layout_width="@dimen/_2131362970_res_0x7f0a049a"
+        layout_height="@dimen/_2131362970_res_0x7f0a049a"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365487_res_0x7f0a0e6f"
+        textColor="@color/_2131299852_res_0x7f090e0c"
+        id="@+id/target_task_tv"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131365476_res_0x7f0a0e64"
+        layout_marginBottom="@dimen/_2131362578_res_0x7f0a0312"
+        fontFamily="@string/_2130852834_res_0x7f023be2"/>
+</LinearLayout>

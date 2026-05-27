@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="-2">
+    <View
+        id="@+id/health_divider_line"
+        background="@color/_2131296979_res_0x7f0902d3"
+        layout_width="-2"
+        layout_height="@dimen/_2131362575_res_0x7f0a030f"/>
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">В една графика се показва до %1$d индикатор.</item>
+        <item quantity="other">В една графика се показва до %1$d индикатора.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">Очаква се кръвната ви глюкоза да спадне под %2$s mmol/L след %1$s мин. Моля, внимателно следете нивата си на глюкоза.</item>
+        <item quantity="other">Очаква се кръвната ви глюкоза да спадне под %2$s mmol/L след %1$s мин. Моля, внимателно следете нивата си на глюкоза.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">Очаква се кръвната ви глюкоза да спадне под %2$s mg/dL след %1$s мин. Моля, внимателно следете нивата си на глюкоза.</item>
+        <item quantity="other">Очаква се кръвната ви глюкоза да спадне под %2$s mg/dL след %1$s мин. Моля, внимателно следете нивата си на глюкоза.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d стъпка</item>
+        <item quantity="other">%d стъпки</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s миля</item>
+        <item quantity="other">%s мили</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s км</item>
+        <item quantity="other">%s км</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">Остава %1$s крачка</item>
+        <item quantity="other">Остават %1$s крачки</item>
+    </plurals>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    id="@+id/service_item_layout"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/hw_health_service_title_layout"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x9="2"
+        NOT_FOUND_0xc="@string/_2130841021_res_0x7f020dbd"/>
+    <com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout
+        layout_gravity="0x11"
+        orientation="1"
+        layout_width="-1"
+        layout_height="-1"
+        layout_below="@+id/hw_health_service_title_layout"
+        layout_centerHorizontal="true"
+        NOT_FOUND_0xa="0">
+        <com.huawei.ui.commonui.scrollview.HealthScrollView
+            id="@+id/service_item_layout2"
+            scrollbars="0x0"
+            layout_width="-1"
+            layout_height="-1"
+            NOT_FOUND_0xb="true">
+            <LinearLayout
+                orientation="1"
+                id="@+id/service_item_linear"
+                layout_width="-1"
+                layout_height="-1"
+                layout_below="@+id/hw_health_service_title_layout"/>
+        </com.huawei.ui.commonui.scrollview.HealthScrollView>
+    </com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout>
+</RelativeLayout>

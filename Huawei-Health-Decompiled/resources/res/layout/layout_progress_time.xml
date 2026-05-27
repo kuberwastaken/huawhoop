@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    background="@drawable/_2131431568_res_0x7f0b1090"
+    layout_width="-2"
+    layout_height="-2"
+    minHeight="@dimen/_2131363125_res_0x7f0a0535">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365500_res_0x7f0a0e7c"
+        textColor="@color/_2131299847_res_0x7f090e07"
+        id="@+id/tv_time"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131363172_res_0x7f0a0564"
+        layout_marginBottom="@dimen/_2131362934_res_0x7f0a0476"
+        text="@string/_2130852813_res_0x7f023bcd"
+        layout_centerHorizontal="true"
+        fontFamily="@string/_2130852834_res_0x7f023be2"/>
+    <com.huawei.ui.commonui.progressbar.HealthProgressBar
+        id="@+id/time_progress_bar"
+        layout_width="-2"
+        layout_height="@dimen/_2131363051_res_0x7f0a04eb"
+        layout_marginBottom="@dimen/_2131362916_res_0x7f0a0464"
+        progressDrawable="@drawable/_2131432201_res_0x7f0b1309"
+        minWidth="@dimen/_2131363184_res_0x7f0a0570"
+        layout_below="@+id/tv_time"
+        layout_marginStart="@dimen/_2131362970_res_0x7f0a049a"
+        layout_marginEnd="@dimen/_2131362970_res_0x7f0a049a"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+</RelativeLayout>

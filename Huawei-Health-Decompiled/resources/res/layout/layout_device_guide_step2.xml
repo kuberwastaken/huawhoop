@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/main_guide_root_layout"
+    background="@drawable/device_guide_bg"
+    layout_width="-2"
+    layout_height="-2">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+        textColor="@color/_2131299845_res_0x7f090e05"
+        id="@+id/text2"
+        layout_width="-2"
+        layout_height="-2"
+        text="@string/IDS_device_guide_text2"/>
+</LinearLayout>

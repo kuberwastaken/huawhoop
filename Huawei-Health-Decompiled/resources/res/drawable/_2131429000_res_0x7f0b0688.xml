@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" drawable="@drawable/_2131429002_res_0x7f0b068a">
+    <target
+        name="indicate_up"
+        animation="@animator/_2131034131_res_0x7f050013"/>
+</animated-vector>

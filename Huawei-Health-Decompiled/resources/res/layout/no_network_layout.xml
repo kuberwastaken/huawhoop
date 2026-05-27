@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    id="@+id/net_work_layout"
+    layout_width="-1"
+    layout_height="-1">
+    <ImageView
+        id="@+id/img_no_net_work"
+        background="@drawable/_2131430932_res_0x7f0b0e14"
+        layout_width="-2"
+        layout_height="-2"
+        NOT_FOUND_0xa="@+id/tips_no_net_work"
+        NOT_FOUND_0xb="0"
+        NOT_FOUND_0xc="0"
+        NOT_FOUND_0xe="0"
+        NOT_FOUND_0xf="2"
+        style="@style/health_default_background_tint"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+        textColor="@color/_2131299850_res_0x7f090e0a"
+        id="@+id/tips_no_net_work"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="1dp"
+        text="@string/_2130842404_res_0x7f021324"
+        fontFamily="@string/_2130852834_res_0x7f023be2"
+        NOT_FOUND_0x9="0"
+        NOT_FOUND_0xb="0"
+        NOT_FOUND_0xc="0"
+        NOT_FOUND_0xd="@+id/img_no_net_work"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

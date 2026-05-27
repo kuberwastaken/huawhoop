@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewStub xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_gravity="0x1"
+    orientation="0"
+    id="@+id/view_stub_task_status"
+    layout="@layout/view_task_status"
+    layout_width="-2"
+    layout_height="-2"/>

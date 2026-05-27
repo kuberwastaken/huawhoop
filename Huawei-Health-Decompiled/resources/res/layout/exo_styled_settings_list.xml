@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/exo_settings_listview"
+    background="@color/_2131297691_res_0x7f09059b"
+    scrollbars="0x200"
+    layout_width="-1"
+    layout_height="-1"/>

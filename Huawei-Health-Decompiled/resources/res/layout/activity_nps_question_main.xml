@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296700_res_0x7f0901bc"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/question_main_title"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xc="2"
+        NOT_FOUND_0xe="@string/_2130841750_res_0x7f021096"/>
+    <LinearLayout
+        id="@+id/layout_viewpager"
+        layout_width="-1"
+        layout_height="0dp"
+        layout_weight="1">
+        <com.huawei.ui.commonui.viewpager.HealthViewPager
+            id="@+id/pager"
+            layout_width="-1"
+            layout_height="-1"/>
+    </LinearLayout>
+    <com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout
+        gravity="0x1"
+        layout_gravity="0x51"
+        orientation="0"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131363144_res_0x7f0a0548"
+        layout_marginBottom="@dimen/_2131363002_res_0x7f0a04ba"
+        NOT_FOUND_0xd="1">
+        <com.huawei.ui.commonui.button.HealthButton
+            enabled="false"
+            layout_gravity="0x51"
+            id="@+id/question_next"
+            layout_width="-2"
+            layout_height="-2"
+            textAllCaps="true"
+            style="@style/Health.CommonUI.HealthButton.Emphasize"/>
+    </com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout>
+</LinearLayout>

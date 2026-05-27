@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-2"
+    baselineAligned="false">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365482_res_0x7f0a0e6a"
+        textColor="@color/_2131299850_res_0x7f090e0a"
+        id="@+id/pop_tip"
+        layout_width="-2"
+        layout_height="-2"
+        text="@string/_2130849765_res_0x7f022fe5"
+        layout_centerInParent="true"
+        fontFamily="@string/_2130852834_res_0x7f023be2"/>
+</RelativeLayout>

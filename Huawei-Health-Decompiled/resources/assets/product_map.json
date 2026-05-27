@@ -1,0 +1,4528 @@
+[
+  {
+    "version": "20220926"
+  },
+  {
+    "productType": "weighingScale",
+    "productList": [
+      {
+        "deviceType": "A2B",
+        "smartProductId": "M0CJ",
+        "productId": "c943c933-442e-4c34-bcd0-66597f24aaed",
+        "modelName": "Dobby-B19",
+        "manufacturerId": "001",
+        "deviceId": 672
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "M00D",
+        "productId": "e835d102-af95-48a6-ae13-2983bc06f5c0",
+        "modelName": "Herm-B19",
+        "manufacturerId": "001",
+        "deviceId": 140
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "007B",
+        "productId": "8358eb90-b40d-11e9-a2a3-2a2ae2dbcce4",
+        "modelName": "HAG-B19",
+        "manufacturerId": "001",
+        "deviceId": 94
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "M00F",
+        "productId": "b29df4e3-b1f7-4e40-960d-4cfb63ccca05",
+        "modelName": "Hagrid-B29",
+        "manufacturerId": "001",
+        "deviceId": 385
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "0059",
+        "productId": "34fa0346-d46c-439d-9cb0-2f696618846b",
+        "modelName": "",
+        "manufacturerId": "001",
+        "deviceId": 57
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "0059",
+        "productId": "33123f39-7fc1-420b-9882-a4b0d6c61100",
+        "modelName": "",
+        "manufacturerId": "001",
+        "deviceId": 57
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "117K",
+        "productId": "e4b0b1d5-2003-4d88-8b5f-c4f64542040b",
+        "modelName": "",
+        "manufacturerId": "001",
+        "deviceId": 82
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "N001",
+        "productId": "25c6df38-ca23-11e9-a32f-2a2ae2dbcce4",
+        "modelName": "LUP-B19",
+        "manufacturerId": "002",
+        "deviceId": 106
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "005A",
+        "productId": "7a1063dd-0e0f-4a72-9939-461476ff0259",
+        "modelName": "",
+        "manufacturerId": "002",
+        "deviceId": 48
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "005A",
+        "productId": "ccd1f0f8-8c57-4bd7-a884-0ef38482f15f",
+        "modelName": "",
+        "manufacturerId": "002",
+        "deviceId": 48
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "117V",
+        "productId": "a8ba095d-4123-43c4-a30a-0240011c58de",
+        "modelName": "",
+        "manufacturerId": "002",
+        "deviceId": 84
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "180P",
+        "productId": "578d0675-cece-4426-bf28-43ce31eb7b5d",
+        "modelName": "CS20E",
+        "manufacturerId": "000",
+        "deviceId": 56
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "O048",
+        "productId": "ff68ecc0-4600-4eb6-810a-ae46a9eec503",
+        "modelName": "L-HW002",
+        "manufacturerId": "972",
+        "deviceId": 414
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "2C7E",
+        "productId": "f3081b52-33a8-4c50-a86d-e793dddd2577",
+        "modelName": "TY-BF9007",
+        "manufacturerId": "9a2",
+        "deviceId": 333
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "2CXX",
+        "productId": "c56c8c83-0cee-4046-b851-8cff2319bcef",
+        "modelName": "IF1120DR",
+        "manufacturerId": "8c6",
+        "deviceId": 368
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "2CXW",
+        "productId": "b032e7bf-d0f1-436e-a211-e2d6e7c7e7e7",
+        "modelName": "IF1130DR",
+        "manufacturerId": "8c6",
+        "deviceId": 369
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "2CXN",
+        "productId": "e59bc812-77f9-42e0-9809-5af06662c9a9",
+        "modelName": "IF1947BR",
+        "manufacturerId": "8c6",
+        "deviceId": 370
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "2C7D",
+        "productId": "06a1c374-a73e-4f02-a319-403730215fac",
+        "modelName": "TY-BF8003",
+        "manufacturerId": "9a2",
+        "deviceId": 331
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "2C2X",
+        "productId": "69fcbb8a-dc55-47ce-8b1d-96ce81cbbafd",
+        "modelName": "BF6027",
+        "manufacturerId": "9a2",
+        "deviceId": 327
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "180E",
+        "productId": "6ab08ad8-753b-4dd9-bf3a-798a0a1d81bf",
+        "modelName": "Latin-S",
+        "manufacturerId": "000",
+        "deviceId": 27
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "180N",
+        "productId": "9684a253-0fb5-4560-8fa3-b925163f8b67",
+        "modelName": "S1 Pro",
+        "manufacturerId": "000",
+        "deviceId": 55
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "180O",
+        "productId": "f2da0f49-aefb-4713-87a2-9fb89b491dac",
+        "modelName": "CS20K",
+        "manufacturerId": "000",
+        "deviceId": 56
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "2A19",
+        "productId": "f005e900-7dcf-49f7-a1b0-a98e46bf62ec",
+        "modelName": "FG1919B",
+        "manufacturerId": "3ea",
+        "deviceId": 133
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "2CQX",
+        "productId": "b5a59b83-abc4-4bf6-9b49-94fd9779b503",
+        "modelName": "CS20E",
+        "manufacturerId": "086",
+        "deviceId": 334
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "O041",
+        "productId": "102938ac-3acc-4c3a-aecb-08bd89f9e0ba",
+        "modelName": "BF1909",
+        "manufacturerId": "a25",
+        "deviceId": 407
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "O04Z",
+        "productId": "659b1816-babf-4248-84d1-ac338aaceb99",
+        "modelName": "InBody H20N",
+        "manufacturerId": "b29",
+        "deviceId": 472
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "O056",
+        "productId": "38abe0a0-b046-4010-b994-c72442e5fc2f",
+        "modelName": "AC215Z",
+        "manufacturerId": "0da",
+        "deviceId": 454
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "O057",
+        "productId": "5ed91ce7-3585-492e-a922-131bd830a857",
+        "modelName": "AC216Z",
+        "manufacturerId": "0da",
+        "deviceId": 455
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "2CMX",
+        "productId": "547ea556-4d7d-4971-900d-c8ad6bf19c6a",
+        "modelName": "TY-BF9009",
+        "manufacturerId": "9a2",
+        "deviceId": 359
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "2D76",
+        "productId": "92db5975-6201-4a6e-bcdc-483b1898c0d7",
+        "modelName": "TY-BF9002",
+        "manufacturerId": "9a2",
+        "deviceId": 374
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "O0AI",
+        "productId": "cc084472-f779-4a0f-ae11-3ed7439aed95",
+        "modelName": "AM-D6",
+        "manufacturerId": "e99",
+        "deviceId": 527
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "O0AO",
+        "productId": "56a84272-621a-4988-8c93-ec35ba391ccf",
+        "modelName": "AM-D6a",
+        "manufacturerId": "e99",
+        "deviceId": 528
+      },
+      {
+        "deviceType":"025",
+        "smartProductId": "O045",
+        "productId": "7cf3ebdb-29f7-4135-a906-86fc67fe53a1",
+        "modelName":"BF300",
+        "manufacturerId":"a3e",
+        "deviceId":405
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "29D8",
+        "productId": "c2412d4a-dc53-4905-b6b8-3c4ad8a4e42f",
+        "modelName": "GBF-2008-B2",
+        "manufacturerId": "01F",
+        "deviceId": 601
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "29D7",
+        "productId": "d1a5ad03-c4b3-4d65-acad-5c18d32d7455",
+        "modelName": "GBF-2008-B",
+        "manufacturerId": "01F",
+        "deviceId": 600
+      },
+      {
+        "deviceType": "025",
+        "smartProductId": "29D5",
+        "productId": "8ed6a70f-568b-4f50-9b2f-5cbd69393c31",
+        "modelName": "GBF-2011-B2",
+        "manufacturerId": "01F",
+        "deviceId": 599
+      },
+      {
+        "deviceType":"025",
+        "smartProductId":"2FDQ",
+        "productId":"44f1c1d9-5edb-4f77-85bf-fc5255a5bc4b",
+        "modelName":"iF1150",
+        "manufacturerId":"8c6",
+        "deviceId":640
+      },
+      {
+        "deviceType":"025",
+        "smartProductId":"2FDW",
+        "productId":"a71ada44-7a2c-4cbd-8e0d-bae76e012694",
+        "modelName":"M02S",
+        "manufacturerId":"g67",
+        "deviceId":632
+      },
+      {
+        "deviceType":"025",
+        "smartProductId":"2FDU",
+        "productId":"22ef4bf6-a380-40aa-8541-944a6d7f49eb",
+        "modelName":"Meilen",
+        "manufacturerId":"fu2",
+        "deviceId":631
+      },
+      {
+        "deviceType":"025",
+        "smartProductId":"2FGT",
+        "productId":"e2c494eb-cbc4-40fe-a0d5-b41cb5bf7d2f",
+        "modelName":"AM-D6-A",
+        "manufacturerId":"b34",
+        "deviceId":633
+      },
+      {
+        "deviceType":"025",
+        "smartProductId":"O0BD",
+        "productId":"c09fe365-8088-42bb-b412-e37045d1d41f",
+        "modelName":"ZJ-ADL-26",
+        "manufacturerId":"fi8",
+        "deviceId":536
+      },
+      {
+        "deviceType":"025",
+        "smartProductId":"O05H",
+        "productId":"b1a62825-f666-449e-bff5-f153e6045c15",
+        "modelName":"OMIYA-C39",
+        "manufacturerId":"be7",
+        "deviceId":468
+      },
+      {
+        "deviceType":"025",
+        "smartProductId":"O05Z",
+        "productId":"f8de76b2-7889-44c4-930d-0dd9c5f2ce96",
+        "modelName":"OMIYA-C19",
+        "manufacturerId":"be7",
+        "deviceId": 532
+      }
+    ]
+  },
+  {
+    "productType": "bloodGlucoseMeter",
+    "productList": [
+      {
+        "deviceType": "086",
+        "smartProductId": "180J",
+        "productId": "e570b133-357b-4b49-b894-600a27a0e826",
+        "modelName": "ultra",
+        "manufacturerId": "000",
+        "deviceId": 34
+      },
+      {
+        "deviceType": "086",
+        "smartProductId": "2BWN",
+        "productId": "3699cfe4-aa04-44c7-a26f-68a87b5309eb",
+        "modelName": "Guide",
+        "manufacturerId": "81f",
+        "deviceId": 304
+      },
+      {
+        "deviceType": "086",
+        "smartProductId": "2BXM",
+        "productId": "f680bdd0-bc8b-4453-b502-456e571bf3f7",
+        "modelName": "Instant",
+        "manufacturerId": "81f",
+        "deviceId": 305
+      },
+      {
+        "deviceType": "086",
+        "smartProductId": "180F",
+        "productId": "9bf158ba-49b0-46aa-9fdf-ed75da1569cf",
+        "modelName": "DnurseGlucose",
+        "manufacturerId": "000",
+        "deviceId": 28
+      },
+      {
+        "deviceType": "086",
+        "smartProductId": "180S",
+        "productId": "29308156-f677-41fc-a622-ceea3be1a0c6",
+        "modelName": "Yuwell 590",
+        "manufacturerId": "000",
+        "deviceId": 73
+      },
+      {
+        "deviceType": "086",
+        "smartProductId": "O00E",
+        "productId": "36a61fca-06a5-44fc-94f1-8d5e7104f0c8",
+        "modelName": "301",
+        "manufacturerId": "000",
+        "deviceId": 120
+      },
+      {
+        "deviceType": "086",
+        "smartProductId": "O00F",
+        "productId": "ebe9500b-ae02-4b54-b710-30e5edf49b65",
+        "modelName": "305B",
+        "manufacturerId": "000",
+        "deviceId": 121
+      },
+      {
+        "deviceType": "086",
+        "smartProductId": "O061",
+        "productId": "db83f5aa-a63d-4041-b930-24b0eac65680",
+        "modelName": "jinwen+air",
+        "manufacturerId": "6de",
+        "deviceId": 469
+      },
+      {
+        "deviceType": "086",
+        "smartProductId": "2BU4",
+        "productId": "d5959769-ad09-4385-bebd-409d0d2bc386",
+        "modelName": "UG-11 Air",
+        "manufacturerId": "6de",
+        "deviceId": 195
+      },
+      {
+        "deviceType": "086",
+        "smartProductId": "2C4W",
+        "productId": "b208e255-46e9-48ce-8957-493115ad33fa",
+        "modelName": "anwen+Air",
+        "manufacturerId": "6de",
+        "deviceId": 328
+      },
+      {
+        "deviceType": "086",
+        "smartProductId": "O0DE",
+        "productId": "015cbf5e-c704-4923-9da4-0eae4c2bdc13",
+        "modelName": "VGM60",
+        "manufacturerId": "e12",
+        "deviceId": 594
+      },
+      {
+        "deviceType": "086",
+        "smartProductId": "O0DG",
+        "productId": "e68daf05-31e2-48f4-a0c6-61b2fad4c466",
+        "modelName": "VGM6801",
+        "manufacturerId": "e12",
+        "deviceId": 596
+      },
+      {
+        "deviceType": "086",
+        "smartProductId": "167P",
+        "productId": "87c3421b-5975-49f9-8d6d-013481708278",
+        "modelName": "QinZhi",
+        "manufacturerId": "6de",
+        "deviceId": 420
+      },
+      {
+        "deviceType": "086",
+        "smartProductId": "O0DK",
+        "productId": "d0f20d02-54ab-4b73-95da-733a053dbe74",
+        "modelName": "G-777G",
+        "manufacturerId": "3b1",
+        "deviceId": 609
+      },
+      {
+        "deviceType": "086",
+        "smartProductId": "O05I",
+        "productId": "2b70dee9-9fae-4a20-8e65-cfde5517fef0",
+        "modelName": "BK6-20MD",
+        "manufacturerId": "6de",
+        "deviceId": 519
+      }
+    ]
+  },
+  {
+    "productType": "bloodPressureMonitor",
+    "productList": [
+      {
+        "deviceType": "02B",
+        "smartProductId": "180I",
+        "productId": "408553b8-0535-4561-8dbf-55c2bbd61b77",
+        "modelName": "HEM-9200T",
+        "manufacturerId": "250",
+        "deviceId": 33
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "O00R",
+        "productId": "4bf3a1e8-2a89-44f9-bd3b-0b9362c39272",
+        "modelName": "BP-88B",
+        "manufacturerId": "000",
+        "deviceId": 144
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "O00O",
+        "productId": "c2c0c990-e94d-4464-81d9-34c096dbfee8",
+        "modelName": "RBP-56",
+        "manufacturerId": "34c",
+        "deviceId": 141
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "O00P",
+        "productId": "836ca201-fa26-43fe-beae-9b4f9b87fddb",
+        "modelName": "RBP-22",
+        "manufacturerId": "000",
+        "deviceId": 142
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "O00Q",
+        "productId": "f98bccb7-f3b5-44d9-93c2-793f08b57d9c",
+        "modelName": "RBP-9804",
+        "manufacturerId": "000",
+        "deviceId": 143
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "180C",
+        "productId": "54af062d-b049-4880-beda-f0cbe64e9205",
+        "modelName": "MUMU",
+        "manufacturerId": "000",
+        "deviceId": 25
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "180Q",
+        "productId": "f3ba0c71-38e0-45fb-a7a1-4fb7388323d7",
+        "modelName": "AL_WBP",
+        "manufacturerId": "000",
+        "deviceId": 70
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "180M",
+        "productId": "c647e381-165c-44d2-8e7b-6339c7904fde",
+        "modelName": "YE680A",
+        "manufacturerId": "000",
+        "deviceId": 54
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "180A",
+        "productId": "4ff7df35-c532-4247-ab42-12b260917bc0",
+        "modelName": "YMBPA15",
+        "manufacturerId": "000",
+        "deviceId": 24
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "180H",
+        "productId": "825c82bd-84fe-44a0-9884-6a764bd73183",
+        "modelName": "HEM-7081-IT",
+        "manufacturerId": "250",
+        "deviceId": 33
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "180B",
+        "productId": "3286e144-9831-4bbc-a202-c26e1f3133c7",
+        "modelName": "A666B",
+        "manufacturerId": "000",
+        "deviceId": 24
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "180R",
+        "productId": "4a5218f8-dcff-47a0-acb7-3c4048006ca5",
+        "modelName": "YE8900A",
+        "manufacturerId": "000",
+        "deviceId": 71
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "O003",
+        "productId": "b9f15317-96b6-477c-a3b3-5535f3af7a5b",
+        "modelName": "HEM-U32J",
+        "manufacturerId": "250",
+        "deviceId": 103
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "O004",
+        "productId": "c5147fdc-72bf-40d4-8a1d-d4cccf2e95ce",
+        "modelName": "BPW1",
+        "manufacturerId": "22f",
+        "deviceId": 104
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "O008",
+        "productId": "5ae72570-bb4f-430d-8f0f-b0b206ef0b28",
+        "modelName": "BP-27B",
+        "manufacturerId": "000",
+        "deviceId": 109
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "O007",
+        "productId": "f6cd4b42-a7bd-401c-acd2-4ef41a93aff2",
+        "modelName": "RBP-2400",
+        "manufacturerId": "000",
+        "deviceId": 108
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "O006",
+        "productId": "bc23383f-d3c8-48fe-977a-da6d200696d9",
+        "modelName": "RBP-6600",
+        "manufacturerId": "000",
+        "deviceId": 107
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "O009",
+        "productId": "6d879624-9920-428b-acc4-764a42186adb",
+        "modelName": "650A",
+        "manufacturerId": "000",
+        "deviceId": 110
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "O00A",
+        "productId": "65999d72-e8bf-49c9-a09f-9b6c0fa6baa6",
+        "modelName": "8600A",
+        "manufacturerId": "000",
+        "deviceId": 111
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "O00B",
+        "productId": "42f04501-5568-432d-aa3b-a7bc916a07e6",
+        "modelName": "JPD-HA121",
+        "manufacturerId": "000",
+        "deviceId": 116
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "O00C",
+        "productId": "2f0f876a-9284-41d4-8b39-090dffa90aea",
+        "modelName": "CONTEC08A",
+        "manufacturerId": "000",
+        "deviceId": 117
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "O00G",
+        "productId": "cfd27202-8335-4f0c-bb8f-8c56c6f9fb45",
+        "modelName": "BSX502",
+        "manufacturerId": "000",
+        "deviceId": 127
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "O00H",
+        "productId": "4d7d91ea-d73d-4feb-bdd6-6e68c84f5064",
+        "modelName": "BSX530",
+        "manufacturerId": "000",
+        "deviceId": 128
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "2CLY",
+        "productId": "c370e06f-3497-4de8-b470-80e153673905",
+        "modelName": "U32K",
+        "manufacturerId": "250",
+        "deviceId": 347
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "2CLZ",
+        "productId": "4671d8cf-f58e-4bce-a15a-7386095b52ae",
+        "modelName": "U32",
+        "manufacturerId": "250",
+        "deviceId": 348
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "2CM0",
+        "productId": "f602769f-c2f8-4315-b50e-a71fb42fd2a6",
+        "modelName": "J750",
+        "manufacturerId": "250",
+        "deviceId": 349
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "2CM3",
+        "productId": "f63323b3-6838-4fa4-8c3e-7c896e68ca08",
+        "modelName": "J732",
+        "manufacturerId": "250",
+        "deviceId": 352
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "2CM2",
+        "productId": "8bd5f31d-8c03-4d5e-bc81-b24fd6bef5dd",
+        "modelName": "J730",
+        "manufacturerId": "250",
+        "deviceId": 351
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "O0DH",
+        "productId": "888bac8f-daa0-480a-9421-1a456b6447db",
+        "modelName": "RBP-9801",
+        "manufacturerId": "34c",
+        "deviceId": 595
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "O0DL",
+        "productId": "6f42d9dd-d9f4-49b2-a420-3005febd3ee5",
+        "modelName": "A223",
+        "manufacturerId": "3b1",
+        "deviceId": 607
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "O0DJ",
+        "productId": "450ec70e-025f-4b49-803e-0239af1270dd",
+        "modelName": "A666G",
+        "manufacturerId": "3b1",
+        "deviceId": 608
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "O05U",
+        "productId": "aa902dcd-5b6b-4b4f-b2b1-b7b218a2dc70",
+        "modelName": "YE680B",
+        "manufacturerId": "1b0",
+        "deviceId": 467
+      },
+      {
+        "deviceType": "02B",
+        "smartProductId": "O046",
+        "productId": "cf2e5fbc-8c2f-4742-905a-192ab37155fa",
+        "modelName": "J751",
+        "manufacturerId": "250",
+        "deviceId": 637
+      }
+    ]
+  },
+  {
+    "productType": "ecgEquipment",
+    "productList": [
+      {
+        "deviceType": "14C",
+        "smartProductId": "O06A",
+        "productId": "203358f2-9be7-4846-85dc-d22dbc53359e",
+        "modelName": "TE-5200Y-A",
+        "manufacturerId": "1a0",
+        "deviceId": 471
+      },
+      {
+        "deviceType": "14C",
+        "smartProductId": "O0A4",
+        "productId": "d79383ef-338f-4ede-8fb1-7ac03a8d7784",
+        "modelName": "ER2",
+        "manufacturerId": "9d1",
+        "deviceId": 586
+      },
+      {
+        "deviceType": "14C",
+        "smartProductId": "O0BE",
+        "productId": "58de16de-f3e1-45c3-a6f7-fc51b30f3c04",
+        "modelName": "TE-5200Y-C",
+        "manufacturerId": "1a0",
+        "deviceId": 582
+      }
+    ]
+  },
+  {
+    "productType": "heartRateDevice",
+    "productList": [
+      {
+        "deviceType": "088",
+        "smartProductId": "180K",
+        "productId": "f83a5e21-3686-42f8-9a13-7296172a7ced",
+        "modelName": "Sport Pulse",
+        "manufacturerId": "000",
+        "deviceId": 52
+      },
+      {
+        "deviceType": "088",
+        "smartProductId": "O00S",
+        "productId": "f2e6390e-4a6b-4072-8245-0d0738059084",
+        "modelName": "TKHRS-01",
+        "manufacturerId": "568",
+        "deviceId": 145
+      },
+      {
+        "deviceType": "088",
+        "smartProductId": "180D",
+        "productId": "79da9d7e-561c-4e14-8a6b-b1d5dc07198a",
+        "modelName": "Suunto",
+        "manufacturerId": "000",
+        "deviceId": 26
+      },
+      {
+        "deviceType": "088",
+        "smartProductId": "180L",
+        "productId": "fe33600f-dbb2-4382-9417-21ab8eeb6e42",
+        "modelName": "Polar H7",
+        "manufacturerId": "000",
+        "deviceId": 53
+      },
+      {
+        "deviceType": "088",
+        "smartProductId": "O002",
+        "productId": "85a59fbc-ea32-489c-8536-6a13c9a5bb01",
+        "modelName": "WR30",
+        "manufacturerId": "000",
+        "deviceId": 102
+      },
+      {
+        "deviceType": "088",
+        "smartProductId": "O001",
+        "productId": "8b0aed5d-5e48-49ed-b1f4-c1e271c6b9f1",
+        "modelName": "CR2025",
+        "manufacturerId": "000",
+        "deviceId": 101
+      },
+      {
+        "deviceType": "088",
+        "smartProductId": "O00D",
+        "productId": "4f972a06-5faa-478f-9745-354d50cc7236",
+        "modelName": "EPS H1",
+        "manufacturerId": "000",
+        "deviceId": 118
+      },
+      {
+        "deviceType": "088",
+        "smartProductId": "2CCU",
+        "productId": "c17e9256-d383-4812-935e-8ed51b993de7",
+        "modelName": "H9",
+        "manufacturerId": "2e3",
+        "deviceId": 363
+      }
+    ]
+  },
+  {
+    "productType": "thermometers",
+    "productList": [
+      {
+        "deviceType": "0B3",
+        "smartProductId": "O00I",
+        "productId": "5aed8b97-1c8c-4d0c-a497-8d11c841ad7b",
+        "modelName": "DT-8806",
+        "manufacturerId": "000",
+        "deviceId": 129
+      },
+      {
+        "deviceType": "0B3",
+        "smartProductId": "O03N",
+        "productId": "40f2a7b1-dcc7-4c81-a8dd-0623b4d76444",
+        "modelName": "JXB-320B",
+        "manufacturerId": "8c4",
+        "deviceId": 384
+      },
+      {
+        "deviceType": "0B3",
+        "smartProductId": "O04I",
+        "productId": "6b6e6114-5f3c-47cc-8075-859477e57392",
+        "modelName": "IRT101B",
+        "manufacturerId": "aae",
+        "deviceId": 522
+      }
+    ]
+  },
+  {
+    "productType": "oximeter",
+    "productList": [
+      {
+        "deviceType": "0B4",
+        "smartProductId": "O00J",
+        "productId": "ddd4543f-1d52-4492-803f-7bd695d5a2ff",
+        "modelName": "SONOSAT-W01LT",
+        "manufacturerId": "000",
+        "deviceId": 130
+      }
+    ]
+  },
+  {
+    "productType": "treadmill",
+    "productList": [
+      {
+        "deviceType": "08F",
+        "smartProductId": "2AJP",
+        "productId": "0a606b12-53a5-4803-a4b4-11ac40202495",
+        "modelName": "SH-T9119A-01",
+        "manufacturerId": "3f8",
+        "deviceId": 147
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2BMR",
+        "productId": "dca0d81d-8444-45e7-9914-01a11a7e8e7f",
+        "modelName": "X1",
+        "manufacturerId": "683",
+        "deviceId": 198
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2ADV",
+        "productId": "6cc84ff9-79d9-4c4e-bcc7-eb8da11103c5",
+        "modelName": "Will",
+        "manufacturerId": "485",
+        "deviceId": 183
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2BPL",
+        "productId": "33201c13-f7b2-4958-802c-e64afd53e272",
+        "modelName": "9600",
+        "manufacturerId": "399",
+        "deviceId": 301
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2BHC",
+        "productId": "365424d7-6646-4587-86f0-ab8f7a729051",
+        "modelName": "GTS-2",
+        "manufacturerId": "399",
+        "deviceId": 184
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2BXF",
+        "productId": "d7009a57-e86d-4d94-b09e-ec5c33507b4f",
+        "modelName": "M8",
+        "manufacturerId": "399",
+        "deviceId": 306
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2BO8",
+        "productId": "004bab6e-016a-4ac8-bfdf-cefd8bc09352",
+        "modelName": "K1042D-C7",
+        "manufacturerId": "39a",
+        "deviceId": 197
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2BWH",
+        "productId": "d1da662c-e349-4ff0-a176-77defce77f77",
+        "modelName": "U15H",
+        "manufacturerId": "252",
+        "deviceId": 310
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2BE3",
+        "productId": "388cab75-eb9e-4471-a98d-412b3db8ca09",
+        "modelName": "SH-T199P",
+        "manufacturerId": "3f8",
+        "deviceId": 316
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2BOM",
+        "productId": "ec29bfe7-e450-4ba0-a9b6-58d1f8791ede",
+        "modelName": "K1046D-C",
+        "manufacturerId": "39a",
+        "deviceId": 199
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2BA1",
+        "productId": "b8567ef9-b535-4a5e-812c-f5a5619bdf12",
+        "modelName": "K1146D-A3",
+        "manufacturerId": "39a",
+        "deviceId": 172
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2BO2",
+        "productId": "0d1f9042-9204-4baf-8ab0-b15c8d277ce6",
+        "modelName": "U3Pro-Y",
+        "manufacturerId": "4e7",
+        "deviceId": 302
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2BYB",
+        "productId": "41e57179-c0c1-49d1-9ea6-c317689ffda8",
+        "modelName": "A5H",
+        "manufacturerId": "252",
+        "deviceId": 309
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2BPA",
+        "productId": "ad80d67f-6bbb-4dcb-9f71-e4ae70421794",
+        "modelName": "F680H",
+        "manufacturerId": "252",
+        "deviceId": 315
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2AOL",
+        "productId": "d16f5038-4a58-4ce7-ae2c-1d87a6656443",
+        "modelName": "SH-T3100-T2",
+        "manufacturerId": "3f8",
+        "deviceId": 151
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2B8M",
+        "productId": "45ceb850-ff33-4837-aa17-d1ba1065a19f",
+        "modelName": "U3H",
+        "manufacturerId": "252",
+        "deviceId": 169
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2AU1",
+        "productId": "94ea7e95-2f13-4ed4-8f6c-fd696d52bb88",
+        "modelName": "X5",
+        "manufacturerId": "702",
+        "deviceId": 178
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2AV4",
+        "productId": "6e774157-ab30-4162-9bb6-c1e2fadfcc15",
+        "modelName": "HA5S",
+        "manufacturerId": "252",
+        "deviceId": 153
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2B3V",
+        "productId": "0f3af43e-c92d-4141-982a-48ccbbacdf71",
+        "modelName": "Monica T5 Tech",
+        "manufacturerId": "726",
+        "deviceId": 176
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2APB",
+        "productId": "1bfaf8c1-cec1-4e3c-98c6-435cc7c0e4ad",
+        "modelName": "YB-V8",
+        "manufacturerId": "6fc",
+        "deviceId": 170
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2AO5",
+        "productId": "1031e26d-8e36-4a1a-a5ab-88e70885d0dc",
+        "modelName": "SH-T3900-T1",
+        "manufacturerId": "3f8",
+        "deviceId": 152
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2AV6",
+        "productId": "5ba4bf25-d18b-4281-9e44-d7931040d968",
+        "modelName": "M7PH",
+        "manufacturerId": "252",
+        "deviceId": 174
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2AO7",
+        "productId": "2b937357-b16c-4dba-adf8-aed565f74227",
+        "modelName": "SH-T6700L-T1",
+        "manufacturerId": "3f8",
+        "deviceId": 150
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2AV5",
+        "productId": "fd8b9701-1d3e-4f9f-b850-1148053bd1e8",
+        "modelName": "U20H",
+        "manufacturerId": "252",
+        "deviceId": 154
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2AV2",
+        "productId": "dba7caf1-0e8a-4eca-8088-bd7fef4caa23",
+        "modelName": "F90H",
+        "manufacturerId": "252",
+        "deviceId": 155
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2AUN",
+        "productId": "4a031a67-de42-4385-bb70-29f2dc546b53",
+        "modelName": "W999H",
+        "manufacturerId": "252",
+        "deviceId": 156
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "20X0",
+        "productId": "6819b7af-9c67-4704-9ceb-e595a09f746c",
+        "modelName": "X7",
+        "manufacturerId": "3b8",
+        "deviceId": 157
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "20UZ",
+        "productId": "01f83379-c111-4800-805e-6798d45b34d9",
+        "modelName": "A6",
+        "manufacturerId": "3b8",
+        "deviceId": 158
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "21X7",
+        "productId": "bd092cc9-e357-41f1-9c7f-326cdd595c84",
+        "modelName": "JD600",
+        "manufacturerId": "3b8",
+        "deviceId": 159
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2APQ",
+        "productId": "a342b54e-01a6-4c8f-9245-a2752e1947b6",
+        "modelName": "mini-c",
+        "manufacturerId": "399",
+        "deviceId": 160
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2APS",
+        "productId": "47c41cce-81f1-4b77-99ee-e11cad0b4c7b",
+        "modelName": "mini-air",
+        "manufacturerId": "399",
+        "deviceId": 161
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2AQ3",
+        "productId": "de77a8a2-cbd1-4d94-b1cc-402d99a9610b",
+        "modelName": "GTS6",
+        "manufacturerId": "399",
+        "deviceId": 163
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2AQ4",
+        "productId": "81034b0c-dd50-4c76-9bd2-b4f48c0457ab",
+        "modelName": "GTS7",
+        "manufacturerId": "399",
+        "deviceId": 164
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2AR0",
+        "productId": "78ceb1a5-262b-4c80-a1f6-78c802fa59c2",
+        "modelName": "Jinling Pro",
+        "manufacturerId": "702",
+        "deviceId": 165
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2BHI",
+        "productId": "34eab501-6342-4c73-b96b-e14f4c0d69db",
+        "modelName": "X3 Pro",
+        "manufacturerId": "4e6",
+        "deviceId": 171
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2ATC",
+        "productId": "495f7cae-8423-4986-8301-e3627fb3174e",
+        "modelName": "A1 Pro",
+        "manufacturerId": "4e6",
+        "deviceId": 166
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "O044",
+        "productId": "cb240df8-3aef-4f34-a9a2-7fd614dbd0b3",
+        "modelName": "S7",
+        "manufacturerId": "702",
+        "deviceId": 404
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2BWH",
+        "productId": "d1da662c-e349-4ff0-a176-77defce77f77",
+        "modelName": "U15H",
+        "manufacturerId": "252",
+        "deviceId": 310
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2CE6",
+        "productId": "0431593e-a5e8-460f-a95b-d8acdc057200",
+        "modelName": "510",
+        "manufacturerId": "3b8",
+        "deviceId": 340
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2BXG",
+        "productId": "a03b6212-edb3-419d-b7f3-8b600b7d0d73",
+        "modelName": "C3",
+        "manufacturerId": "399",
+        "deviceId": 313
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2CBH",
+        "productId": "4e2765d0-802d-4920-8845-6ca99ed80fa6",
+        "modelName": "K850D-C",
+        "manufacturerId": "39a",
+        "deviceId": 336
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2CC9",
+        "productId": "28931a61-beb8-4bb5-abec-304915a44c16",
+        "modelName": "JD618",
+        "manufacturerId": "399",
+        "deviceId": 371
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "O03M",
+        "productId": "570cf479-9cac-4c82-af71-30078031ca94",
+        "modelName": "W5",
+        "manufacturerId": "399",
+        "deviceId": 403
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2D5T",
+        "productId": "b0c4c60b-c225-4c71-a926-25f4baa8a046",
+        "modelName": "SH-T9119P",
+        "manufacturerId": "3f8",
+        "deviceId": 401
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2C6Y",
+        "productId": "51e9a232-2d30-4fce-8d8a-fcc79c52fad4",
+        "modelName": "OMEGA TT Tech",
+        "manufacturerId": "726",
+        "deviceId": 329
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "O03A",
+        "productId": "e4ea9025-3d41-4ed8-9013-d8b76fcc103c",
+        "modelName": "Air-1",
+        "manufacturerId": "53c",
+        "deviceId": 373
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "O06O",
+        "productId": "152b87fe-ec4b-42a1-9212-507735a5ecc9",
+        "modelName": "MR-X1",
+        "manufacturerId": "4e7",
+        "deviceId": 477
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "21FT",
+        "productId": "f3c51279-947b-4ce0-ba28-2738cb6c0f16",
+        "modelName": "SH-T9119T",
+        "manufacturerId": "3f8",
+        "deviceId": 411
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "O04Q",
+        "productId": "f05081bf-3e02-406f-9dcc-221c4b5e7550",
+        "modelName": "H1",
+        "manufacturerId": "3b8",
+        "deviceId": 424
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "O060",
+        "productId": "c1249b8b-5dcc-4f78-9a70-de59e8e61551",
+        "modelName": "KS6H",
+        "manufacturerId": "3b8",
+        "deviceId": 252
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "O05Y",
+        "productId": "029d87d5-bb74-4e9f-b4d8-4d706191b3cb",
+        "modelName": "SH-T399T",
+        "manufacturerId": "3f8",
+        "deviceId": 478
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "O05X",
+        "productId": "4c48996e-0a06-4ca6-b61f-9e9e455d0949",
+        "modelName": "SH-T199T",
+        "manufacturerId": "3f8",
+        "deviceId": 480
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "21RN",
+        "productId": "3a131730-f81b-406d-8e4b-50fd6bc1469a",
+        "modelName": "SH-T399P",
+        "manufacturerId": "3f8",
+        "deviceId": 412
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "O05D",
+        "productId": "45ceb850-ff33-4837-aa17-d1ba1065a19f",
+        "modelName": "U3H PRO",
+        "manufacturerId": "252",
+        "deviceId": 450
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2CC7",
+        "productId": "17b31d5b-8087-447c-9069-7fca4b7a3e62",
+        "modelName": "mini pro",
+        "manufacturerId": "399",
+        "deviceId": 524
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "O062",
+        "productId": "f4e5cb39-dcd8-44d1-b16c-e98a9f155c81",
+        "modelName": "H1",
+        "manufacturerId": "252",
+        "deviceId": 541
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "25JM",
+        "productId": "b5fcb733-3e02-4cf9-bad3-9ae03ccca709",
+        "modelName": "V3",
+        "manufacturerId": "4c0",
+        "deviceId": 552
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "O06M",
+        "productId": "1a99f605-5aba-4a17-ae3c-bfc1c8106afb",
+        "modelName": "518",
+        "manufacturerId": "3b8",
+        "deviceId": 482
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "O06J",
+        "productId": "110cf7fc-444b-46ca-8571-b30a2b354abd",
+        "modelName": "ZEAL R1",
+        "manufacturerId": "b3c",
+        "deviceId": 508
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "O06P",
+        "productId": "2bd96ccc-d834-4ed2-af12-1123c18e351a",
+        "modelName": "S3",
+        "manufacturerId": "399",
+        "deviceId": 510
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "O0A7",
+        "productId": "0db08593-ba47-483b-ab17-45ad50f96018",
+        "modelName": "S5",
+        "manufacturerId": "399",
+        "deviceId": 526
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "O047",
+        "productId": "e70bfe5a-c4ba-4107-aaa1-bf4a0c67ab71",
+        "modelName": "800T",
+        "manufacturerId": "6fc",
+        "deviceId": 413
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "20SR",
+        "productId": "7067fe4a-be06-44dd-bfa7-e40504ad86b0",
+        "modelName": "F6-2",
+        "manufacturerId": "6fc",
+        "deviceId": 402
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "206A",
+        "productId": "3b12c94a-97ea-4bf3-8375-3c1d0d7bf549",
+        "modelName": "JD600",
+        "manufacturerId": "3b8",
+        "deviceId": 159
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "20UF",
+        "productId": "5cd773de-0eef-4ecd-aa7a-925dba363873",
+        "modelName": "X7",
+        "manufacturerId": "3b8",
+        "deviceId": 157
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2BUB",
+        "productId": "cfed23b9-bc8f-4321-b7b8-a6a93e4089ae",
+        "modelName": "TA-4610",
+        "manufacturerId": "3bc",
+        "deviceId": 193
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "O06V",
+        "productId": "faaa3fb1-d5c0-4bf4-9d65-8c56860a8648",
+        "modelName": "GTS5",
+        "manufacturerId": "399",
+        "deviceId": 525
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2FEL",
+        "productId": "a24a9806-8017-4a9b-8880-3d20499ac492",
+        "modelName": "GTS3",
+        "manufacturerId": "399",
+        "deviceId": 626
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "O05O",
+        "productId": "4af92612-360d-470a-805d-cdb418703a30",
+        "modelName": "P30",
+        "manufacturerId": "b6b",
+        "deviceId": 460
+      },
+      {
+        "deviceType":"08F",
+        "smartProductId":"2FKY",
+        "productId":"b923c65b-4864-4e1c-ab17-784d6cd1e3ab",
+        "modelName":"MX",
+        "manufacturerId":"399",
+        "deviceId":652
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2HPD",
+        "productId": "f428fac2-f0c7-457a-9535-92b477cc4f36",
+        "modelName": "GTS9",
+        "manufacturerId": "399",
+        "deviceId": 656
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "O0AK",
+        "productId": "3ca42444-bcdf-4ba0-a65a-a821b3ea0d99",
+        "modelName": "K15",
+        "manufacturerId": "683",
+        "deviceId": 547
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "O04F",
+        "productId": "048a8866-79f5-4ba4-8e6a-24b30a6bc5a3",
+        "modelName": "JX-667S",
+        "manufacturerId": "ad0",
+        "deviceId": 421
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2FN7",
+        "productId": "4c5a5325-a884-45ce-8812-dd0468b2bb73",
+        "modelName": "Dabai Max",
+        "manufacturerId": "702",
+        "deviceId": 657
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2CJE",
+        "productId": "5cd3a416-9e7b-4ddb-8f0e-9081a7f6341b",
+        "modelName": "530",
+        "manufacturerId": "3b8",
+        "deviceId": 346
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2CR1",
+        "productId": "32b53f4a-0523-4b8f-a4d1-91be44ed7d42",
+        "modelName": "V5",
+        "manufacturerId": "4c0",
+        "deviceId": 356
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "O07B",
+        "productId": "dfcdf7df-def2-4a48-8e12-6d1dc5b20c8a",
+        "modelName": "Jingling S8",
+        "manufacturerId": "702",
+        "deviceId": 715
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2JIJ",
+        "productId": "e3a4c281-c541-4e6f-b63f-c7112ea75f97",
+        "modelName": "A8H",
+        "manufacturerId": "6b7",
+        "deviceId": 696
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "2JRW",
+        "productId": "2c3b9128-0650-412b-bcb6-03e97ce26484",
+        "modelName": "M6",
+        "manufacturerId": "399",
+        "deviceId": 698
+      },
+      {
+        "deviceType": "08F",
+        "smartProductId": "O0AQ",
+        "productId": "cc0ad045-9d18-423e-9b84-34ec157f78df",
+        "modelName": "A7",
+        "manufacturerId": "6b7",
+        "deviceId": 733
+      }
+    ]
+  },
+  {
+    "productType": "ellipticalMachine",
+    "productList": [
+      {
+        "deviceType": "0C0",
+        "smartProductId": "2AR2",
+        "productId": "c5abf5b9-8737-4ffb-999b-362ddce63705",
+        "modelName": "T5",
+        "manufacturerId": "702",
+        "deviceId": 167
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "2BWT",
+        "productId": "f59caf50-cffb-42c0-bdf2-be2dc15027d9",
+        "modelName": "MR-568S",
+        "manufacturerId": "4e7",
+        "deviceId": 322
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "2BH4",
+        "productId": "0d7bfe58-f594-42bd-a68f-692baeb70c40",
+        "modelName": "SI0027",
+        "manufacturerId": "485",
+        "deviceId": 182
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "2BHJ",
+        "productId": "969bad04-2926-4c37-b34f-1e8f2cf77e6f",
+        "modelName": "MR-581",
+        "manufacturerId": "4e7",
+        "deviceId": 175
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "2CE9",
+        "productId": "c612c504-5ce4-4042-a7a7-55a98aa2fa7b",
+        "modelName": "K3",
+        "manufacturerId": "4e7",
+        "deviceId": 343
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "2C9I",
+        "productId": "fb196231-45eb-4c6b-8162-4680c1368bd9",
+        "modelName": "A3-E",
+        "manufacturerId": "3f8",
+        "deviceId": 362
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "2CD6",
+        "productId": "91ad256a-0934-4045-87f7-0065a063389e",
+        "modelName": "F680",
+        "manufacturerId": "7d5",
+        "deviceId": 338
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "2BYF",
+        "productId": "d064f985-2004-4c2f-be8d-45b7887662ec",
+        "modelName": "MR-535",
+        "manufacturerId": "4e7",
+        "deviceId": 326
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "2BY1",
+        "productId": "f763f073-3b54-461f-b58e-019fc8210d27",
+        "modelName": "T10",
+        "manufacturerId": "702",
+        "deviceId": 308
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "O04E",
+        "productId": "c6ac0753-78e1-4b90-a341-323d46c2e0ee",
+        "modelName": "Cross-1",
+        "manufacturerId": "53c",
+        "deviceId": 418
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "2C9W",
+        "productId": "4940dc1e-2971-493a-ba23-560077fa91a0",
+        "modelName": "E7",
+        "manufacturerId": "399",
+        "deviceId": 332
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "27Q0",
+        "productId": "ba99fe3c-fe73-4af4-81fd-a178bd97f56b",
+        "modelName": "T7",
+        "manufacturerId": "702",
+        "deviceId": 590
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "O06S",
+        "productId": "9d3a35f6-2dfa-42db-acbc-1c9c2d5bee99",
+        "modelName": "MR-K50",
+        "manufacturerId": "4e7",
+        "deviceId": 542
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "O05W",
+        "productId": "37c38368-39cf-4e0c-ab9a-8fa857f65aca",
+        "modelName": "H1001",
+        "manufacturerId": "573",
+        "deviceId": 464
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "O068",
+        "productId": "39f24ee4-9f02-4a21-a0a2-850146c1efee",
+        "modelName": "F535",
+        "manufacturerId": "7d5",
+        "deviceId": 488
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "O059",
+        "productId": "9a6b9dd1-64f2-4bdf-8395-2a93ebeeb241",
+        "modelName": "E1160TECH",
+        "manufacturerId": "726",
+        "deviceId": 463
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "O058",
+        "productId": "76b96895-067e-4d4c-8e68-09995aec7572",
+        "modelName": "OMEGA E10TECH",
+        "manufacturerId": "726",
+        "deviceId": 452
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "O064",
+        "productId": "2cdab628-2571-479f-a288-fdfddbdd180a",
+        "modelName": "X7-PRO",
+        "manufacturerId": "399",
+        "deviceId": 489
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "O05A",
+        "productId": "0aaeae90-b28e-492a-b3e1-4236703eb032",
+        "modelName": "MR-569",
+        "manufacturerId": "4e7",
+        "deviceId": 462
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "O05B",
+        "productId": "a2cbe549-fdbe-48ce-b8dd-73d2cc7f7d6c",
+        "modelName": "MR-589",
+        "manufacturerId": "4e7",
+        "deviceId": 486
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "O0AL",
+        "productId": "bad20b53-236d-459a-bc6d-984e2c15bb0c",
+        "modelName": "MRK-535ZW",
+        "manufacturerId": "4e7",
+        "deviceId": 538
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "2F8J",
+        "productId": "870a05ae-9bf4-4ce9-ab59-9b2145861404",
+        "modelName": "K60",
+        "manufacturerId": "4e7",
+        "deviceId": 624
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "O0B7",
+        "productId": "7c645e83-a67c-466a-8a3b-4f306f590bd2",
+        "modelName": "E30S",
+        "manufacturerId": "b6b",
+        "deviceId": 523
+      },
+      {
+        "deviceType":"0C0",
+        "smartProductId":"O0B5",
+        "productId":"ad2da951-8efb-42dd-8ad4-728fe129204e",
+        "modelName":"MRK-535SW",
+        "manufacturerId":"4e7",
+        "deviceId":551
+      },
+      {
+        "deviceType":"0C0",
+        "smartProductId":"O0B4",
+        "productId":"6d3090b1-9146-43fc-a28d-33c5704b7a64",
+        "modelName":"OMS-E8",
+        "manufacturerId": "dc4",
+        "deviceId":518
+      },
+      {
+        "deviceType":"0C0",
+        "smartProductId":"2GD8",
+        "productId":"12a3f588-2119-4df7-ae6f-53093dfbde54",
+        "modelName":"EL520",
+        "manufacturerId":"bcf",
+        "deviceId":641
+      },
+      {
+        "deviceType":"0C0",
+        "smartProductId":"2GDD",
+        "productId":"c392ae49-45e0-425c-b76a-26bd04656325",
+        "modelName":"DKN-EL540",
+        "manufacturerId":"bcf",
+        "deviceId":649
+      },
+      {
+        "deviceType":"0C0",
+        "smartProductId":"2FUO",
+        "productId":"760e9eff-9722-42f0-81aa-f4bd723d057e",
+        "modelName":"NF885",
+        "manufacturerId":"7d5",
+        "deviceId":651
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "O05K",
+        "productId": "95035261-f83a-4762-9fd1-1e16c9e256a5",
+        "modelName": "AWAKE L1",
+        "manufacturerId": "bce",
+        "deviceId": 453
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "2IGG",
+        "productId": "d57964ed-930d-4e08-a63d-498abe5de381",
+        "modelName": "MEH3202",
+        "manufacturerId": "485",
+        "deviceId": 674
+      },
+      {
+        "deviceType": "0C0",
+        "smartProductId": "2J7Z",
+        "productId": "ae8d1876-c330-4e08-9b46-9fb0ebafa400",
+        "modelName": "U5",
+        "manufacturerId": "399",
+        "deviceId": 712
+      }
+    ]
+  },
+  {
+    "productType": "exerciseBike",
+    "productList": [
+      {
+        "deviceType": "0BF",
+        "smartProductId": "2AMJ",
+        "productId": "dce8e370-953d-448f-b54e-c1c6f70effd5",
+        "modelName": "67D",
+        "manufacturerId": "573",
+        "deviceId": 146
+      },
+      {
+        "deviceType": "0BF",
+        "smartProductId": "2BWQ",
+        "productId": "efc07b0d-65d8-44b7-b4a6-a08a7aeddb83",
+        "modelName": "MR-636",
+        "manufacturerId": "4e7",
+        "deviceId": 324
+      },
+      {
+        "deviceType": "0BF",
+        "smartProductId": "2BWR",
+        "productId": "e7779973-3119-43fc-8fd7-1a0525692696",
+        "modelName": "MR-667",
+        "manufacturerId": "4e7",
+        "deviceId": 323
+      },
+      {
+        "deviceType": "0BF",
+        "smartProductId": "2BH5",
+        "productId": "b5d89f69-1d3f-4be3-9606-ab30e610aa12",
+        "modelName": "SI0028",
+        "manufacturerId": "485",
+        "deviceId": 181
+      },
+      {
+        "deviceType": "0BF",
+        "smartProductId": "2BPF",
+        "productId": "8a5eb23b-5397-4b1b-b0b2-5aec0b0442cf",
+        "modelName": "SI0041",
+        "manufacturerId": "485",
+        "deviceId": 192
+      },
+      {
+        "deviceType": "0BF",
+        "smartProductId": "2BHG",
+        "productId": "7791b053-6cee-4473-97b2-82b7b49d331f",
+        "modelName": "S1",
+        "manufacturerId": "759",
+        "deviceId": 180
+      },
+      {
+        "deviceType": "0BF",
+        "smartProductId": "2BHF",
+        "productId": "0b4964b4-15cd-4c6d-b551-5d8447bbabbd",
+        "modelName": "M1",
+        "manufacturerId": "759",
+        "deviceId": 179
+      },
+      {
+        "deviceType": "0BF",
+        "smartProductId": "O03O",
+        "productId": "96bc3a9b-1b7c-4c31-9817-0bf0f9013c70",
+        "modelName": "A3-S",
+        "manufacturerId": "3f8",
+        "deviceId": 381
+      },
+      {
+        "deviceType": "0BF",
+        "smartProductId": "2BXW",
+        "productId": "6f1ebeda-8515-49cb-ad41-0806eb9d37a8",
+        "modelName": "QB-C01",
+        "manufacturerId": "7a0",
+        "deviceId": 307
+      },
+      {
+        "deviceType": "0BF",
+        "smartProductId": "2BWX",
+        "productId": "b7bbc6ec-5a9b-4cfa-a3dd-074eec4b7d9f",
+        "modelName": "MR-689",
+        "manufacturerId": "4e7",
+        "deviceId": 321
+      },
+      {
+        "deviceType": "0BF",
+        "smartProductId": "2CD2",
+        "productId": "b829297b-fb1f-425b-9c1a-b952906750f1",
+        "modelName": "S330",
+        "manufacturerId": "7d5",
+        "deviceId": 337
+      },
+      {
+        "deviceType": "0BF",
+        "smartProductId": "2D4Q",
+        "productId": "2d526e99-3b08-4695-9254-a87699254c4e",
+        "modelName": "B10 Tech",
+        "manufacturerId": "726",
+        "deviceId": 379
+      },
+      {
+        "deviceType": "0BF",
+        "smartProductId": "O037",
+        "productId": "c894495b-a3e3-4bb1-ba89-229379b52de1",
+        "modelName": "UB3H",
+        "manufacturerId": "252",
+        "deviceId": 380
+      },
+      {
+        "deviceType": "0BF",
+        "smartProductId": "O054",
+        "productId": "abd1f749-8cc0-4282-867a-c9aa44010720",
+        "modelName": "MBH-3208A",
+        "manufacturerId": "485",
+        "deviceId": 431
+      },
+      {
+        "deviceType": "0BF",
+        "smartProductId": "O03L",
+        "productId": "0d2999da-c074-432e-bb0d-c04e74907f42",
+        "modelName": "D8",
+        "manufacturerId": "702",
+        "deviceId": 383
+      },
+      {
+        "deviceType": "0BF",
+        "smartProductId": "O06L",
+        "productId": "25e0c15c-5555-4507-b780-0625c2b608c2",
+        "modelName": "QM-1002",
+        "manufacturerId": "573",
+        "deviceId": 504
+      },
+      {
+        "deviceType": "0BF",
+        "smartProductId": "O0A8",
+        "productId": "d9aab0e6-5a65-4f3b-bb2a-94ce3b24fa24",
+        "modelName": "Swan",
+        "manufacturerId": "4e7",
+        "deviceId": 544
+      },
+      {
+        "deviceType": "0BF",
+        "smartProductId": "O03B",
+        "productId": "28d0fd5a-cebc-4343-9bc0-1768c1aaffd3",
+        "modelName": "S501",
+        "manufacturerId": "97d",
+        "deviceId": 382
+      },
+      {
+        "deviceType": "0BF",
+        "smartProductId": "O04D",
+        "productId": "c4e13c84-9263-4130-a370-47d0a55430ff",
+        "modelName": "D3",
+        "manufacturerId": "399",
+        "deviceId": 417
+      },
+      {
+        "deviceType": "0BF",
+        "smartProductId": "O06N",
+        "productId": "eaf586da-8c79-4df1-bd54-0cd41a37659c",
+        "modelName": "D5",
+        "manufacturerId": "399",
+        "deviceId": 502
+      },
+      {
+        "deviceType": "0BF",
+        "smartProductId": "O0AW",
+        "productId": "ed084845-3e57-41cb-ad5b-a08db1d8761a",
+        "modelName": "DISCOVER X7 TECH",
+        "manufacturerId": "726",
+        "deviceId": 537
+      },
+      {
+        "deviceType": "0BF",
+        "smartProductId": "O0B3",
+        "productId": "ba94740d-f025-4721-ba25-7d0678a0817a",
+        "modelName": "X1S",
+        "manufacturerId": "cec",
+        "deviceId": 521
+      },
+      {
+        "deviceType":"0BF",
+        "smartProductId":"2GG9",
+        "productId":"27b133c3-e2b7-4193-8438-c03c59c1ddca",
+        "modelName":"LJJ-C1-",
+        "manufacturerId":"3b8",
+        "deviceId":648
+      },
+      {
+        "deviceType": "0BF",
+        "smartProductId": "2IAL",
+        "productId": "76030b30-8c33-4534-bf1a-642ba2f68bc8",
+        "modelName": "Bike-1",
+        "manufacturerId": "53c",
+        "deviceId": 686
+      },
+      {
+        "deviceType": "0BF",
+        "smartProductId": "O07C",
+        "productId": "169346b1-e9e5-4f7f-b2d3-e46ef8b58701",
+        "modelName": "K8",
+        "manufacturerId": "702",
+        "deviceId": 714
+      },
+      {
+        "deviceType": "0BF",
+        "smartProductId": "2C77",
+        "productId": "71ccdf07-27f7-4e22-83c0-e655439c4c50",
+        "modelName": "Discover B11 TECH",
+        "manufacturerId": "726",
+        "deviceId": 330
+      }
+    ]
+  },
+  {
+    "productType": "rowingMachine",
+    "productList": [
+      {
+        "deviceType": "0C1",
+        "smartProductId": "2AEB",
+        "productId": "696b2f25-ea24-49d9-8a68-379a42906fca",
+        "modelName": "Pro Max",
+        "manufacturerId": "485",
+        "deviceId": 148
+      },
+      {
+        "deviceType": "0C1",
+        "smartProductId": "2BHH",
+        "productId": "671d2f28-a6ab-4e0c-8312-5e1b9dd8a838",
+        "modelName": "WR655",
+        "manufacturerId": "7d5",
+        "deviceId": 177
+      },
+      {
+        "deviceType": "0C1",
+        "smartProductId": "2CN2",
+        "productId": "36453e74-0d67-4caa-82b1-dd35d4d0d5f1",
+        "modelName": "QM-3019A",
+        "manufacturerId": "573",
+        "deviceId": 365
+      },
+      {
+        "deviceType": "0C1",
+        "smartProductId": "O042",
+        "productId": "c3d4dcd4-cacd-4dc7-9afe-aee676864766",
+        "modelName": "WR689",
+        "manufacturerId": "7d5",
+        "deviceId": 408
+      },
+      {
+        "deviceType": "0C1",
+        "smartProductId": "2CEA",
+        "productId": "0d4f4ca8-c6e5-4981-a8a0-078e845e426e",
+        "modelName": "MR-902",
+        "manufacturerId": "4e7",
+        "deviceId": 344
+      },
+      {
+        "deviceType": "0C1",
+        "smartProductId": "O03U",
+        "productId": "6b1631b3-7127-472f-8f2f-f69b57eb3310",
+        "modelName": "A60",
+        "manufacturerId": "9ec",
+        "deviceId": 409
+      },
+      {
+        "deviceType": "0C1",
+        "smartProductId": "O04C",
+        "productId": "7d08f474-1249-4223-aa07-4ce5ad797fc0",
+        "modelName": "R5",
+        "manufacturerId": "399",
+        "deviceId": 416
+      },
+      {
+        "deviceType": "0C1",
+        "smartProductId": "O04K",
+        "productId": "a21b5484-20b8-4150-a171-f758b3b1772b",
+        "modelName": "SR901",
+        "manufacturerId": "a73",
+        "deviceId": 426
+      },
+      {
+        "deviceType": "0C1",
+        "smartProductId": "O052",
+        "productId": "5d657b04-83a3-439b-b0f1-a265e5fa6e2f",
+        "modelName": "R40",
+        "manufacturerId": "b6b",
+        "deviceId": 429
+      },
+      {
+        "deviceType": "0C1",
+        "smartProductId": "O065",
+        "productId": "cc1ec984-79c1-40fa-8340-033addd13a9d",
+        "modelName": "QM-80",
+        "manufacturerId": "573",
+        "deviceId": 465
+      },
+      {
+        "deviceType": "0C1",
+        "smartProductId": "209M",
+        "productId": "72f0f671-df3c-4260-8d30-a0543d25b0ab",
+        "modelName": "Rower-1",
+        "manufacturerId": "53c",
+        "deviceId": 430
+      },
+      {
+        "deviceType": "0C1",
+        "smartProductId": "O0A6",
+        "productId": "6ef0efd1-7f39-4bbc-8afc-07718a2f3873",
+        "modelName": "Q1",
+        "manufacturerId": "4e7",
+        "deviceId": 577
+      },
+      {
+        "deviceType": "0C1",
+        "smartProductId": "O053",
+        "productId": "fe65b4b2-1bf2-4d24-9a4c-ebfbdc32e3da",
+        "modelName": "R30",
+        "manufacturerId": "b6b",
+        "deviceId": 427
+      },
+      {
+        "deviceType": "0C1",
+        "smartProductId": "O055",
+        "productId": "2429d888-7c16-49ab-b91c-5a98c1e0dcc6",
+        "modelName": "R40S",
+        "manufacturerId": "b6b",
+        "deviceId": 429
+      },
+      {
+        "deviceType": "0C1",
+        "smartProductId": "O0B9",
+        "productId": "21129bb0-f8a1-4bd0-be16-8527b413170b",
+        "modelName": "H5",
+        "manufacturerId": "399",
+        "deviceId": 545
+      },
+      {
+        "deviceType": "0C1",
+        "smartProductId": "O05N",
+        "productId": "daaccbb0-ede5-4198-9021-f77706af8e08",
+        "modelName": "5801S",
+        "manufacturerId": "702",
+        "deviceId": 497
+      },
+      {
+        "deviceType": "0C1",
+        "smartProductId": "O06W",
+        "productId": "b194c593-0d17-4933-9fab-a866ca2e6bce",
+        "modelName": "5901S",
+        "manufacturerId": "702",
+        "deviceId": 509
+      },
+      {
+        "deviceType": "0C1",
+        "smartProductId": "2F8K",
+        "productId": "5d83f46b-e2fd-4cc8-88d2-a314ce0cd365",
+        "modelName": "MR-950",
+        "manufacturerId": "4e7",
+        "deviceId": 625
+      },
+      {
+        "deviceType": "0C1",
+        "smartProductId": "O06G",
+        "productId": "16288ed8-4116-438d-bbbd-2ba89a17ac08",
+        "modelName": "SH-R598-H1",
+        "manufacturerId": "3f8",
+        "deviceId": 499
+      },
+      {
+        "deviceType": "0C1",
+        "smartProductId": "O06H",
+        "productId": "360964ab-b3a1-439c-a7db-07f979a4da1b",
+        "modelName": "R598",
+        "manufacturerId": "3f8",
+        "deviceId": 500
+      },
+      {
+        "deviceType": "0C1",
+        "smartProductId": "28L1",
+        "productId": "054d0093-9ea5-40fe-adc0-1ebc41095660",
+        "modelName": "MRH3208A",
+        "manufacturerId": "485",
+        "deviceId": 591
+      },
+      {
+        "deviceType":"0C1",
+        "smartProductId":"2FUB",
+        "productId":"a8a70869-3827-4388-886e-5efce58a27d5",
+        "modelName":"WR655C",
+        "manufacturerId":"7d5",
+        "deviceId":650
+      },
+      {
+        "deviceType": "0C1",
+        "smartProductId": "2HXT",
+        "productId": "0d90c2fe-304f-44af-83e1-d5a3286929a3",
+        "modelName": "M16p",
+        "manufacturerId": "gj8",
+        "deviceId": 658
+      },
+      {
+        "deviceType": "0C1",
+        "smartProductId": "26C7",
+        "productId": "2ba265b3-49d1-4ccd-8ea7-7c1a95c88bca",
+        "modelName": "MRH1102",
+        "manufacturerId": "485",
+        "deviceId": 673
+      },
+      {
+        "deviceType": "0C1",
+        "smartProductId": "2JQ2",
+        "productId": "6385a33d-47bc-4596-97d8-acf2a58981d8",
+        "modelName": "WR693",
+        "manufacturerId": "7d5",
+        "deviceId": 697
+      }
+    ]
+  },
+  {
+    "productType": "walkingMachine",
+    "productList": [
+      {
+        "deviceType": "092",
+        "smartProductId": "2AKI",
+        "productId": "b522ade3-5014-438f-9c41-9199c34a040d",
+        "modelName": "V1",
+        "manufacturerId": "3f8",
+        "deviceId": 320
+      }
+    ]
+  },
+  {
+    "productType": "ropeSkipping",
+    "productList": [
+      {
+        "deviceType":"095",
+        "smartProductId":"2IX6",
+        "productId":"ccf2e21e-5203-4b5f-a9b1-22a71345449a",
+        "modelName":"icomonropeS2",
+        "manufacturerId":"3ea",
+        "deviceId":676
+      },
+      {
+        "deviceType": "095",
+        "smartProductId": "O00L",
+        "productId": "2e5890e6-1faf-41f6-95c3-fadcc8895999",
+        "modelName": "HL02",
+        "manufacturerId": "000",
+        "deviceId": 134
+      },
+      {
+        "deviceType": "095",
+        "smartProductId": "O036",
+        "productId": "e5b4ccde-fd09-4383-8401-295400f51c06",
+        "modelName": "T01",
+        "manufacturerId": "658",
+        "deviceId": 377
+      },
+      {
+        "deviceType": "095",
+        "smartProductId": "O03P",
+        "productId": "25edc463-960e-4d08-aaac-e9821b008a50",
+        "modelName": "NT930",
+        "manufacturerId": "7d5",
+        "deviceId": 435
+      },
+      {
+        "deviceType": "095",
+        "smartProductId": "2BG9",
+        "productId": "249af949-85f0-49c6-9310-2bef6bc40a50",
+        "modelName": "RS1949",
+        "manufacturerId": "3ea",
+        "deviceId": 376
+      },
+      {
+        "deviceType": "095",
+        "smartProductId": "O051",
+        "productId": "af2bcbb9-db3c-4194-b7ce-fd8ab1a54b75",
+        "modelName": "LS-T30L",
+        "manufacturerId": "b7c",
+        "deviceId": 434
+      },
+      {
+        "deviceType": "095",
+        "smartProductId": "O049",
+        "productId": "a8e8e395-adaf-4aef-b156-81ac518822d4",
+        "modelName": "L-HW003",
+        "manufacturerId": "972",
+        "deviceId": 415
+      },
+      {
+        "deviceType": "095",
+        "smartProductId": "22QF",
+        "productId": "84130dc5-b9af-459a-bdcd-72bcbdcff9b1",
+        "modelName": "TS3",
+        "manufacturerId": "702",
+        "deviceId": 507
+      },
+      {
+        "deviceType": "095",
+        "smartProductId": "O04W",
+        "productId": "f2be9988-375a-4eb7-87c6-1a24193a67aa",
+        "modelName": "AB-HW003",
+        "manufacturerId": "972",
+        "deviceId": 433
+      },
+      {
+        "deviceType": "095",
+        "smartProductId": "O05C",
+        "productId": "98133f2b-f8d7-4a1c-858d-a1ce6d7f315f",
+        "modelName": "J1",
+        "manufacturerId": "4e7",
+        "deviceId": 456
+      },
+      {
+        "deviceType": "095",
+        "smartProductId": "O03R",
+        "productId": "28ce2b98-a894-4511-98a6-9234d9c8732c",
+        "modelName": "RS100",
+        "manufacturerId": "399",
+        "deviceId": 410
+      },
+      {
+        "deviceType": "095",
+        "smartProductId": "O05F",
+        "productId": "e321f97b-16c0-4dcb-9a77-8e291c7cbf4b",
+        "modelName": "SS-05",
+        "manufacturerId": "bd8",
+        "deviceId": 457
+      },
+      {
+        "deviceType": "095",
+        "smartProductId": "2G97",
+        "productId": "9a9406f6-6368-4186-b1dc-38fe61df69c0",
+        "modelName": "RS2159ULB",
+        "manufacturerId": "3ea",
+        "deviceId": 635
+      },
+      {
+        "deviceType":"095",
+        "smartProductId":"2G98",
+        "productId":"8d833e3b-d01d-4133-b6f0-39ae2f416943",
+        "modelName":"RS2160ULB",
+        "manufacturerId":"3ea",
+        "deviceId":634
+      },
+      {
+        "deviceType": "095",
+        "smartProductId": "O0AX",
+        "productId": "09536595-208f-42e9-a845-1b1e4f49498a",
+        "modelName": "LS-T20L",
+        "manufacturerId": "b7c",
+        "deviceId": 549
+      },
+      {
+        "deviceType": "095",
+        "smartProductId": "O05J",
+        "productId": "d294f8bf-df65-45be-ba2d-74a9c48a8b9b",
+        "modelName": "T2",
+        "manufacturerId": "b84",
+        "deviceId": 458
+      },
+      {
+        "deviceType": "095",
+        "smartProductId": "O0AZ",
+        "productId": "4068d420-b867-409e-9fe5-06afc0836a9c",
+        "modelName": "LS-T20L",
+        "manufacturerId": "b7c",
+        "deviceId": 535
+      },
+      {
+        "deviceType": "095",
+        "smartProductId": "O0B1",
+        "productId": "e09052bd-e069-4edf-88f0-fa840c36cdfa",
+        "modelName": "LS-T30",
+        "manufacturerId": "b7c",
+        "deviceId": 534
+      },
+      {
+        "deviceType": "095",
+        "smartProductId": "O06E",
+        "productId": "c53cb3c7-42ee-43c9-9106-9cdac68af4ce",
+        "modelName": "YD-O1",
+        "manufacturerId": "6eb",
+        "deviceId": 505
+      },
+      {
+        "deviceType":"095",
+        "smartProductId": "2GYA",
+        "productId": "438933be-cd14-4c4e-a41a-1fb04e20eee4",
+        "modelName":"SR900",
+        "manufacturerId":"7d5",
+        "deviceId":636
+      },
+      {
+        "deviceType": "095",
+        "smartProductId": "O0AE",
+        "productId": "f6c45bc7-50ed-4679-a4be-bc822f060324",
+        "modelName": "T3",
+        "manufacturerId": "b0e",
+        "deviceId": 546
+      },
+      {
+        "deviceType": "095",
+        "smartProductId": "O0AY",
+        "productId": "3f4b7814-ca54-4183-b889-4a96a5dcb815",
+        "modelName": "LS-T20L",
+        "manufacturerId": "b7c",
+        "deviceId": 550
+      },
+      {
+        "deviceType": "095",
+        "smartProductId": "2FK5",
+        "productId": "16859777-6437-4da7-a194-18284101fd07",
+        "modelName": "T2",
+        "manufacturerId": "aa9",
+        "deviceId": 622
+      },
+      {
+        "deviceType": "095",
+        "smartProductId": "2FPH",
+        "productId": "fe31f7ed-a313-4528-abf7-c915f61ee35a",
+        "modelName": "MR-J002",
+        "manufacturerId": "4e7",
+        "deviceId": 659
+      },
+      {
+        "deviceType": "095",
+        "smartProductId": "2GPG",
+        "productId": "66c178c7-c14e-434b-bc98-be763138f8ca",
+        "modelName": "SJ500-N",
+        "manufacturerId": "2fc",
+        "deviceId": 678
+      },
+      {
+        "deviceType": "095",
+        "smartProductId": "2G6U",
+        "productId": "e6b32cbe-babe-41c5-b12e-37c5748399fb",
+        "modelName": "T018",
+        "manufacturerId": "gaa",
+        "deviceId": 720
+      }
+    ]
+  },
+  {
+    "productType": "ThirdWatchMonitor",
+    "productList": [
+      {
+        "deviceType": "0A1",
+        "smartProductId": "H001",
+        "productId": "c2128114-ad6c-4999-a857-61be97f6fc12",
+        "modelName": "Tissot-SA",
+        "manufacturerId": "Tissot",
+        "deviceId": 470
+      }
+    ]
+  },
+  {
+    "productType": "fasciaGunMonitor",
+    "productList": [
+      {
+        "deviceType": "0C5",
+        "smartProductId": "O0B8",
+        "productId": "d6502f3b-6bb2-4b1b-81f5-20af06e3f898",
+        "modelName": "G36",
+        "manufacturerId": "bd2",
+        "deviceId": 555
+      }
+    ]
+  },
+  {
+    "productType": "smartPillowMonitor",
+    "productList": [
+      {
+        "deviceType": "054",
+        "smartProductId": "O0AM",
+        "productId": "53583568-fb9b-4ce1-aead-2ce8fd8e0964",
+        "modelName": "P401M",
+        "manufacturerId": "04F",
+        "deviceId": 506
+      }
+    ]
+  },
+  {
+    "productType": "smartPhone",
+    "productList": [
+      {
+        "deviceType": "00E",
+        "smartProductId": "P096",
+        "productId": "",
+        "modelName": "",
+        "manufacturerId": "",
+        "deviceId": 32
+      }
+    ]
+  },
+  {
+    "productType": "wearWatch",
+    "productList": [
+      {
+        "deviceType": "06D",
+        "smartProductId": "M00E",
+        "productId": "b81581e1-5c5a-4e30-b099-0a448ef56a24",
+        "modelName": "Vidar-B19PD",
+        "manufacturerId": "001",
+        "marketingName": "PORSCHE DESIGN | HUAWEI WATCH GT 2####HUAWEI WATCH GT 2 | 保时捷设计",
+        "deviceId": 149
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "002M",
+        "productId": "11642280-3614-4f5a-9696-f3cf4ddc07e2",
+        "modelName": "TLS-B19",
+        "manufacturerId": "002",
+        "deviceId": 79
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M005",
+        "productId": "69a968a4-5db8-4d1e-a390-762cb8039784",
+        "modelName": "Galileo",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH 3####HUAWEI WATCH 3",
+        "deviceId": 114
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0AB",
+        "productId": "69a968a4-5db8-4d1e-a390-762cb8039784",
+        "modelName": "Galileo",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH 3 Pro####HUAWEI WATCH 3 Pro",
+        "deviceId": 474
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0A2",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "JPT-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 3####HUAWEI WATCH GT 3",
+        "deviceId": 395
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0A3",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "JPT-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 3####HUAWEI WATCH GT 3",
+        "deviceId": 396
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0A4",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "JPT-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT Runner####HUAWEI WATCH GT Runner",
+        "deviceId": 397
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0EV",
+        "productId": "07315dd9-c2ce-fef6-83b1-194d324e3345",
+        "modelName": "CHT-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT Runner 2",
+        "deviceId": 842,
+        "skuConfigs": [
+          {
+            "subProdId": "03",
+            "marketingName": "HUAWEI WATCH GT Runner 2 Racing Legend Edition####HUAWEI WATCH GT Runner 2 赛道传奇款"
+          }
+        ]
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0A5",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "Odin-B19V",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 3 Pro####HUAWEI WATCH GT 3 Pro",
+        "deviceId": 398
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0A6",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "ODN-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 3 Pro####HUAWEI WATCH GT 3 Pro",
+        "deviceId": 399
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0AH",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "JPT-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 3####HUAWEI WATCH GT 3",
+        "deviceId": 556
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0AI",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "JPT-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 3####HUAWEI WATCH GT 3",
+        "deviceId": 557
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0AJ",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "JPT-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 3####HUAWEI WATCH GT 3",
+        "deviceId": 558
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0AK",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "MIL-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 3####HUAWEI WATCH GT 3",
+        "deviceId": 559
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0AL",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "MIL-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 3####HUAWEI WATCH GT 3",
+        "deviceId": 560
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0AM",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "MIL-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 3####HUAWEI WATCH GT 3",
+        "deviceId": 561
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0AN",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "OCF-B29",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 2022PE####HUAWEI WATCH GT 2022典藏版",
+        "deviceId": 562
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0AO",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "OCF-B29",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 2022PE####HUAWEI WATCH GT 2022典藏版",
+        "deviceId": 563
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0AP",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "RUN-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT Runner####HUAWEI WATCH GT Runner",
+        "deviceId": 564
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0AQ",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "RUN-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT Runner####HUAWEI WATCH GT Runner",
+        "deviceId": 565
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0AR",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "ODN-B99",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH B5-736####HUAWEI WATCH B5-736",
+        "deviceId": 566
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0AS",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "ODN-B19",
+        "manufacturerId": "001",
+        "marketingName": "PORSCHE DESIGN | HUAWEI WATCH GT 3####HUAWEI WATCH GT 3 | 保时捷设计",
+        "deviceId": 567
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0AT",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "FRG-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 3 Pro####HUAWEI WATCH GT 3 Pro",
+        "deviceId": 568
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0AU",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "FRG-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 3 Pro####HUAWEI WATCH GT 3 Pro",
+        "deviceId": 569
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0AV",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "FRG-B99",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 3 Pro####HUAWEI WATCH GT 3 Pro",
+        "deviceId": 570
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0AW",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "JPT-B29",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 3####HUAWEI WATCH GT 3",
+        "deviceId": 571
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0AX",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "JPT-B29",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 3####HUAWEI WATCH GT 3",
+        "deviceId": 572
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0AY",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "JPT-B29",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 3####HUAWEI WATCH GT 3",
+        "deviceId": 573
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0AZ",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "JPT-B29",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 3####HUAWEI WATCH GT 3",
+        "deviceId": 574
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0B0",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "RUN-B29",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT Runner####HUAWEI WATCH GT Runner",
+        "deviceId": 575
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0B1",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "RUN-B29",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT Runner####HUAWEI WATCH GT Runner",
+        "deviceId": 576
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0B3",
+        "productId": "ddbacead-850b-4adb-9e3b-7d53bbc0f416",
+        "modelName": "YDA-B19S",
+        "manufacturerId": "001",
+        "deviceId": 592
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0B4",
+        "productId": "ddbacead-850b-4adb-9e3b-7d53bbc0f416",
+        "modelName": "YDA-B19V",
+        "manufacturerId": "001",
+        "deviceId": 593
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0B6",
+        "productId": "fb5a1162-e71b-4b44-b8c2-c58ec475c085",
+        "modelName": "JPT-B29B",
+        "manufacturerId": "001",
+        "deviceId": 597
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0B7",
+        "productId": "fb5a1162-e71b-4b44-b8c2-c58ec475c085",
+        "modelName": "MIL-B29B",
+        "manufacturerId": "001",
+        "deviceId": 598
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0D4",
+        "productId": "7730ce60-8035-4e80-abd0-f8fbc6e74d2e",
+        "modelName": "PNX-B19B",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH H5546####华为擎云 H5546",
+        "deviceId": 724
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0B9",
+        "productId": "ddbacead-850b-4adb-9e3b-7d53bbc0f416",
+        "modelName": "YDA-B09S",
+        "manufacturerId": "001",
+        "deviceId": 602
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0BA",
+        "productId": "ddbacead-850b-4adb-9e3b-7d53bbc0f416",
+        "modelName": "YDA-B19V",
+        "manufacturerId": "001",
+        "deviceId": 603
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0BB",
+        "productId": "ddbacead-850b-4adb-9e3b-7d53bbc0f416",
+        "modelName": "YDA-B19V",
+        "manufacturerId": "001",
+        "deviceId": 604
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0BC",
+        "productId": "69a968a4-5db8-4d1e-a390-762cb8039784",
+        "modelName": "GLL-AL08",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH 3 Pro new####HUAWEI WATCH 3 Pro new",
+        "deviceId": 610
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0BD",
+        "productId": "69a968a4-5db8-4d1e-a390-762cb8039784",
+        "modelName": "GLL-AL09",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH 3 Pro new####HUAWEI WATCH 3 Pro new",
+        "deviceId": 611
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0BE",
+        "productId": "96cea4f7-9a5e-4db4-9dda-244885c5446f",
+        "modelName": "GLL-AL03B",
+        "manufacturerId": "001",
+        "deviceId": 612
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0BF",
+        "productId": "96cea4f7-9a5e-4db4-9dda-244885c5446f",
+        "modelName": "GLL-AL09B",
+        "manufacturerId": "001",
+        "deviceId": 613
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0B5",
+        "productId": "00259b85-c182-4e47-8236-c57d55a27301",
+        "modelName": "SGA-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH Buds",
+        "deviceId": 614
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0BK",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "Odin-B19M",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 3 Pro####HUAWEI WATCH GT 3 Pro",
+        "deviceId": 619
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0BL",
+        "productId": "96cea4f7-9a5e-4db4-9dda-244885c5446f",
+        "modelName": "GLL-AL30B",
+        "manufacturerId": "001",
+        "deviceId": 620
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0BM",
+        "productId": "96cea4f7-9a5e-4db4-9dda-244885c5446f",
+        "modelName": "GLL-AL04B",
+        "manufacturerId": "001",
+        "deviceId": 621
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "005W",
+        "productId": "ce2ceada-adf8-40f2-b8b7-d595a6628a67",
+        "modelName": "LTN-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 2####HUAWEI WATCH GT 2",
+        "deviceId": 88
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "005X",
+        "productId": "ce2ceada-adf8-40f2-b8b7-d595a6628a67",
+        "modelName": "LTN-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 2####HUAWEI WATCH GT 2",
+        "deviceId": 88
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "005Z",
+        "productId": "ce2ceada-adf8-40f2-b8b7-d595a6628a67",
+        "modelName": "DAN-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 2####HUAWEI WATCH GT 2",
+        "deviceId": 88
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M003",
+        "productId": "ce2ceada-adf8-40f2-b8b7-d595a6628a67",
+        "modelName": "HCT-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 2e####HUAWEI WATCH GT 2e",
+        "deviceId": 112
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M004",
+        "productId": "ce2ceada-adf8-40f2-b8b7-d595a6628a67",
+        "modelName": "Vidar-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 2 Pro####HUAWEI WATCH GT 2 Pro",
+        "deviceId": 113
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M008",
+        "productId": "ce2ceada-adf8-40f2-b8b7-d595a6628a67",
+        "modelName": "Vidar-B99",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 2 Pro####HUAWEI WATCH GT 2 Pro",
+        "deviceId": 119
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M009",
+        "productId": "67216939-80bf-47eb-9913-2a33763deefd",
+        "modelName": "Stia-B09",
+        "manufacturerId": "001",
+        "deviceId": 124
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M00A",
+        "productId": "67216939-80bf-47eb-9913-2a33763deefd",
+        "modelName": "Stia-B19",
+        "manufacturerId": "001",
+        "deviceId": 125
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0AG",
+        "productId": "67216939-80bf-47eb-9913-2a33763deefd",
+        "modelName": "TIA-B39",
+        "manufacturerId": "001",
+        "deviceId": 516
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M00B",
+        "productId": "67216939-80bf-47eb-9913-2a33763deefd",
+        "modelName": "Stia-B29",
+        "manufacturerId": "001",
+        "deviceId": 126
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0AF",
+        "productId": "67216939-80bf-47eb-9913-2a33763deefd",
+        "modelName": "TIA-B39",
+        "manufacturerId": "001",
+        "deviceId": 515
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0D1",
+        "productId": "67216939-80bf-47eb-9913-2a33763deefd",
+        "modelName": "STA-B39",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH FIT####HUAWEI WATCH FIT",
+        "deviceId": 721
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0A7",
+        "productId": "f6f6eb8d-6168-4d42-ae08-27da0efda3a9",
+        "modelName": "MLY-B10",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH D####HUAWEI WATCH D",
+        "deviceId": 400
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0A8",
+        "productId": "f6f6eb8d-6168-4d42-ae08-27da0efda3a9",
+        "modelName": "MLY-B11",
+        "manufacturerId": "001",
+        "deviceId": 585
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0BN",
+        "productId": "2f651f9f-5516-48bb-ab97-fa48841c1421",
+        "modelName": "Molly-B102B",
+        "manufacturerId": "001",
+        "deviceId": 628
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0BO",
+        "productId": "f6f6eb8d-6168-4d42-ae08-27da0efda3a9",
+        "modelName": "Molly-B19B",
+        "manufacturerId": "001",
+        "deviceId": 629
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0BP",
+        "productId": "f6f6eb8d-6168-4d42-ae08-27da0efda3a9",
+        "modelName": "Molly-B19G",
+        "manufacturerId": "001",
+        "deviceId": 630
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0BW",
+        "productId": "5bd4ac51-2379-4ff4-af4f-1b1e591f381c",
+        "modelName": "AND-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT Cyber####HUAWEI WATCH GT Cyber",
+        "deviceId": 638
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0BX",
+        "productId": "c680ed06-b360-4d34-ae5e-038f0aff4a16",
+        "modelName": "Bessel-B19",
+        "manufacturerId": "001",
+        "deviceId": 639
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0BZ",
+        "productId": "86f9682a-f439-4104-8a54-f5d1d6dcde3e",
+        "modelName": "CLB-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH Ultimate",
+        "deviceId": 642
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0BY",
+        "productId": "86f9682a-f439-4104-8a54-f5d1d6dcde3e",
+        "modelName": "CLB-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH Ultimate",
+        "deviceId": 643
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0D5",
+        "productId": "86f9682a-f439-4104-8a54-f5d1d6dcde3e",
+        "modelName": "CLB-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH | ULTIMATE DESIGN####HUAWEI WATCH | ULTIMATE DESIGN",
+        "deviceId": 730
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0E9",
+        "productId": "86f9682a-f439-4104-8a54-f5d1d6dcde3e",
+        "modelName": "WDS-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH Ultimate",
+        "deviceId": 792
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0EA",
+        "productId": "86f9682a-f439-4104-8a54-f5d1d6dcde3e",
+        "modelName": "EDD-B39",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH | ULTIMATE DESIGN",
+        "deviceId": 793
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0EX",
+        "productId": "aa597439-ba45-66cf-c20d-ab114872d44d",
+        "modelName": "MCH-AL00",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH Ultimate 2",
+        "deviceId": 836
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0EY",
+        "productId": "aa597439-ba45-66cf-c20d-ab114872d44d",
+        "modelName": "LNG-AL00",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH | ULTIMATE DESIGN",
+        "deviceId": 837
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0FC",
+        "productId": "aa597439-ba45-66cf-c20d-ab114872d44d",
+        "modelName": "MCH-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH Ultimate 2",
+        "deviceId": 861
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0F7",
+        "productId": "137f0f95-267d-660f-1b61-3631a39aa472",
+        "modelName": "CHC-AL00",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH | ULTIMATE DESIGN",
+        "deviceId": 856
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0C0",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "RUNEB29",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 3 SE####HUAWEI WATCH GT 3 SE",
+        "deviceId": 644
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0D2",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "PNX-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 4####HUAWEI WATCH GT 4",
+        "deviceId": 722
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0D3",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "ARA-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 4####HUAWEI WATCH GT 4",
+        "deviceId": 723
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0C2",
+        "productId": "8df8e0d8-e4bf-42f0-b0f3-0e11bf16caff",
+        "modelName": "Frigga-B29C",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 3 Pro####HUAWEI WATCH GT 3 Pro 典藏款",
+        "deviceId": 646
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0C4",
+        "productId": "488f8d9f-7428-4bd0-9a6b-5ff107e9613c",
+        "modelName": "AND-B10",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Smart Movement####HUAWEI Smart Movement",
+        "deviceId": 653
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0F8",
+        "productId": "59881ac4-3297-d86d-e623-ffac1f40810b",
+        "modelName": "SYA-B39N",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Smart Movement S1",
+        "deviceId": 857
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0C5",
+        "productId": "5bd4ac51-2379-4ff4-af4f-1b1e591f381c",
+        "modelName": "AND-B29",
+        "marketingName": "HUAWEI WATCH GT Cyber####HUAWEI WATCH GT Cyber",
+        "manufacturerId": "001",
+        "deviceId": 654
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0C6",
+        "productId": "5bd4ac51-2379-4ff4-af4f-1b1e591f381c",
+        "modelName": "AND-B39",
+        "marketingName": "HUAWEI WATCH GT Cyber####HUAWEI WATCH GT Cyber",
+        "manufacturerId": "001",
+        "deviceId": 655
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0C7",
+        "productId": "c7d28238-fec2-4985-b2a4-f29c96637ac4",
+        "modelName": "Archi-L19F",
+        "marketingName": "HUAWEI WATCH 4",
+        "manufacturerId": "001",
+        "deviceId": 660
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0C8",
+        "productId": "c7d28238-fec2-4985-b2a4-f29c96637ac4",
+        "marketingName": "HUAWEI WATCH 4",
+        "modelName": "Archi-L19L",
+        "manufacturerId": "001",
+        "deviceId": 661
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0C9",
+        "productId": "c7d28238-fec2-4985-b2a4-f29c96637ac4",
+        "marketingName": "HUAWEI WATCH 4",
+        "modelName": "Archi-L19M",
+        "manufacturerId": "001",
+        "deviceId": 662
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0D6",
+        "productId": "f5195256-bc1c-44b8-a4b7-52866f623d11",
+        "marketingName": "HUAWEI WATCH H7546####华为擎云 H7546",
+        "modelName": "Archi-L19F2B",
+        "manufacturerId": "001",
+        "deviceId": 731
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0EO",
+        "productId": "f5195256-bc1c-44b8-a4b7-52866f623d11",
+        "marketingName": "华为擎云 H7556",
+        "modelName": "RTS-AL2B",
+        "manufacturerId": "001",
+        "deviceId": 828
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "MOCA",
+        "productId": "c7d28238-fec2-4985-b2a4-f29c96637ac4",
+        "marketingName": "HUAWEI WATCH 4 Pro",
+        "modelName": "Medes-L10L",
+        "manufacturerId": "001",
+        "deviceId": 663
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0CB",
+        "productId": "c7d28238-fec2-4985-b2a4-f29c96637ac4",
+        "marketingName": "HUAWEI WATCH 4 Pro",
+        "modelName": "Medes-L10M",
+        "manufacturerId": "001",
+        "deviceId": 665
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0CC",
+        "productId": "c7d28238-fec2-4985-b2a4-f29c96637ac4",
+        "marketingName": "HUAWEI WATCH 4 Pro",
+        "modelName": "Medes-L10W",
+        "manufacturerId": "001",
+        "deviceId": 666
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0CE",
+        "productId": "c7d28238-fec2-4985-b2a4-f29c96637ac4",
+        "marketingName": "HUAWEI WATCH 4 Pro",
+        "modelName": "Medes-L19L",
+        "manufacturerId": "001",
+        "deviceId": 667
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0CF",
+        "productId": "c7d28238-fec2-4985-b2a4-f29c96637ac4",
+        "marketingName": "HUAWEI WATCH 4 Pro",
+        "modelName": "Medes-L19M",
+        "manufacturerId": "001",
+        "deviceId": 668
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0CG",
+        "productId": "c7d28238-fec2-4985-b2a4-f29c96637ac4",
+        "marketingName": "HUAWEI WATCH 4 Pro",
+        "modelName": "Medes-L19W",
+        "manufacturerId": "001",
+        "deviceId": 669
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0DQ",
+        "productId": "c7d28238-fec2-4985-b2a4-f29c96637ac4",
+        "marketingName": "HUAWEI WATCH 4 Pro Space Edition####HUAWEI WATCH 4 Pro 太空探索",
+        "modelName": "Medes-L19MN",
+        "manufacturerId": "001",
+        "deviceId": 760
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "N004",
+        "productId": "aa3946cc-d2c7-4ffc-b167-1a6fede861ae",
+        "modelName": "Kanon-B19",
+        "manufacturerId": "002",
+        "deviceId": 137
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "N0A8",
+        "productId": "aa3946cc-d2c7-4ffc-b167-1a6fede861ae",
+        "modelName": "KAN-B39",
+        "manufacturerId": "002",
+        "deviceId": 394
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "N0AA",
+        "productId": "17fa9133-b89a-4f76-aa44-1bd91f0549fc",
+        "modelName": "Muses",
+        "manufacturerId": "002",
+        "deviceId": 475
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "N002",
+        "productId": "87b9e25c-9b4e-473e-a1dc-c94b9f827f69",
+        "modelName": "Hes-B09",
+        "manufacturerId": "002",
+        "deviceId": 122
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "N003",
+        "productId": "87b9e25c-9b4e-473e-a1dc-c94b9f827f69",
+        "modelName": "Hes-B19",
+        "manufacturerId": "002",
+        "deviceId": 123
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "N0A4",
+        "productId": "87b9e25c-9b4e-473e-a1dc-c94b9f827f69",
+        "modelName": "HES-B39",
+        "manufacturerId": "002",
+        "deviceId": 390
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "N0A5",
+        "productId": "87b9e25c-9b4e-473e-a1dc-c94b9f827f69",
+        "modelName": "HES-B59",
+        "manufacturerId": "002",
+        "deviceId": 391
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "005Y",
+        "productId": "568d8802-6506-4f74-991b-76b5c50b915b",
+        "modelName": "MNS-B19",
+        "manufacturerId": "002",
+        "deviceId": 89
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "005Z",
+        "productId": "568d8802-6506-4f74-991b-76b5c50b915b",
+        "modelName": "HBE-B19",
+        "manufacturerId": "002",
+        "deviceId": 89
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "N0A7",
+        "productId": "568d8802-6506-4f74-991b-76b5c50b915b",
+        "modelName": "HBE-B39",
+        "manufacturerId": "002",
+        "deviceId": 393
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "N0A6",
+        "productId": "568d8802-6506-4f74-991b-76b5c50b915b",
+        "modelName": "MNS-B39",
+        "manufacturerId": "002",
+        "deviceId": 392
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "0069",
+        "productId": "",
+        "modelName": "",
+        "manufacturerId": "001",
+        "deviceId": 36
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "004Q",
+        "productId": "",
+        "modelName": "",
+        "manufacturerId": "001",
+        "deviceId": 46
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "004S",
+        "productId": "",
+        "modelName": "",
+        "manufacturerId": "001",
+        "deviceId": 46
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "004T",
+        "productId": "",
+        "modelName": "",
+        "manufacturerId": "001",
+        "deviceId": 46
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "004V",
+        "productId": "",
+        "modelName": "",
+        "manufacturerId": "001",
+        "deviceId": 46
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "003N",
+        "productId": "a8ab58b1-0893-42ce-8b2d-2de08aed4ab4",
+        "modelName": "Fortuna",
+        "manufacturerId": "001",
+        "deviceId": 80
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "003N",
+        "productId": "a8ab58b1-0893-42ce-8b2d-2de08aed4ab4",
+        "modelName": "Fortuna",
+        "manufacturerId": "001",
+        "deviceId": 80
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0DB",
+        "productId": "6881432b-36ab-49d7-950c-8c2b5433c9b8",
+        "modelName": "SLO-B09",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH FIT 3",
+        "deviceId": 743
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0DC",
+        "productId": "6881432b-36ab-49d7-950c-8c2b5433c9b8",
+        "modelName": "SLO-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH FIT 3",
+        "deviceId": 744
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0EH",
+        "productId": "8aaabb45-cc68-4b70-bf3f-09fe5f478dee",
+        "modelName": "SYA-B09",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH FIT 4",
+        "deviceId": 820
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0EI",
+        "productId": "8aaabb45-cc68-4b70-bf3f-09fe5f478dee",
+        "modelName": "SYA-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH FIT 4",
+        "deviceId": 821
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0EJ",
+        "productId": "8aaabb45-cc68-4b70-bf3f-09fe5f478dee",
+        "modelName": "SYA-B29",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH FIT 4 Pro",
+        "deviceId": 822
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0EP",
+        "productId": "45533294-b32d-4a30-b5b0-25cb942b335b",
+        "modelName": "SYA-B19B",
+        "manufacturerId": "001",
+        "marketingName": "华为擎云 H3540",
+        "deviceId": 829
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0F9",
+        "productId": "b555bd81-93e6-d5d7-77c1-de73354bec89",
+        "modelName": "NKI-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH FIT 5",
+        "deviceId": 858
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0FB",
+        "productId": "b555bd81-93e6-d5d7-77c1-de73354bec89",
+        "modelName": "NKI-B29",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH FIT 5 Pro",
+        "deviceId": 860
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0FJ",
+        "productId": "b555bd81-93e6-d5d7-77c1-de73354bec89",
+        "modelName": "NKI-B09",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH FIT 5",
+        "deviceId": 869
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0FA",
+        "productId": "2e5343d1-2fab-f7fe-f8c6-efe6bebe1d1c",
+        "modelName": "NKI-B19B",
+        "manufacturerId": "001",
+        "marketingName": "华为擎云 H3550",
+        "deviceId": 859
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0CM",
+        "productId": "e750d63e-a8fe-4980-8a99-8e6971b63bd5",
+        "modelName": "LCA-B10",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH D2",
+        "deviceId": 681
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0CO",
+        "productId": "e750d63e-a8fe-4980-8a99-8e6971b63bd5",
+        "modelName": "LCA-B11",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH D2",
+        "deviceId": 682
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0CP",
+        "productId": "e750d63e-a8fe-4980-8a99-8e6971b63bd5",
+        "modelName": "LCA-B10",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH D2",
+        "deviceId": 683
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0E8",
+        "productId": "e750d63e-a8fe-4980-8a99-8e6971b63bd5",
+        "modelName": "LCA-B11",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH D2",
+        "deviceId": 791
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0EW",
+        "productId": "e750d63e-a8fe-4980-8a99-8e6971b63bd5",
+        "modelName": "LCA-B29",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH D2",
+        "deviceId": 835
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0CR",
+        "productId": "503b3f62-2a54-48e1-ad32-84f7971ab433",
+        "modelName": "LCA-B12",
+        "manufacturerId": "001",
+        "marketingName": "华为擎云 H9D20####HUAWEI WATCH H9D20",
+        "deviceId": 685
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0FF",
+        "productId": "2255e8ca-a482-2355-2731-02924c9d9e30",
+        "modelName": "RIV-B10",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI RIVA",
+        "deviceId": 865
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0FG",
+        "productId": "2255e8ca-a482-2355-2731-02924c9d9e30",
+        "modelName": "RIV-B11",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI RIVA",
+        "deviceId": 866
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0FH",
+        "productId": "2255e8ca-a482-2355-2731-02924c9d9e30",
+        "modelName": "RIV-B12",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI RIVA",
+        "deviceId": 867
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0FI",
+        "productId": "a17e5624-6c91-aac2-d2ee-6d624870d1af",
+        "modelName": "RIV-B10B",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI RIVA",
+        "deviceId": 868
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0DV",
+        "productId": "68808678-2c89-45ab-9d58-793ea1291eff",
+        "modelName": "VLI-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 5",
+        "deviceId": 774
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0DZ",
+        "productId": "68808678-2c89-45ab-9d58-793ea1291eff",
+        "modelName": "VLI-B29",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 5 Pro",
+        "deviceId": 778
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0E2",
+        "productId": "68808678-2c89-45ab-9d58-793ea1291eff",
+        "modelName": "JNA-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 5",
+        "deviceId": 781
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0E6",
+        "productId": "68808678-2c89-45ab-9d58-793ea1291eff",
+        "modelName": "JNA-B29",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 5 Pro",
+        "deviceId": 785
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0ER",
+        "productId": "f00bb118-edab-9eae-3fa2-637edc1237ff",
+        "modelName": "ATM-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 6",
+        "deviceId": 838
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0ET",
+        "productId": "f00bb118-edab-9eae-3fa2-637edc1237ff",
+        "modelName": "ATM-B29",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 6 Pro",
+        "deviceId": 840
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0EU",
+        "productId": "f00bb118-edab-9eae-3fa2-637edc1237ff",
+        "modelName": "KSU-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH GT 6",
+        "deviceId": 841
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0ES",
+        "productId": "0a02400a-b4b3-dd57-358a-07cef2c573e4",
+        "modelName": "ATM-B19B",
+        "manufacturerId": "001",
+        "marketingName": "华为擎云 H5566",
+        "deviceId": 839
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0F1",
+        "productId": "155148f3-880c-8ad2-eddb-3ece7983b1f0",
+        "modelName": "LBA-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH Buds 2",
+        "deviceId": 845
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0DY",
+        "productId": "259cdcb3-d333-4f96-9160-c3c91d6ba959",
+        "modelName": "VLI-B19B",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH H5556",
+        "deviceId": 777
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0E1",
+        "productId": "259cdcb3-d333-4f96-9160-c3c91d6ba959",
+        "modelName": "VLI-B29B",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH H5756",
+        "deviceId": 780
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0EB",
+        "productId": "29b7de7d-e12f-3ce9-7120-323256d30419",
+        "modelName": "SOC-AL00",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH 5",
+        "deviceId": 794,
+        "skuConfigs": [
+          {
+            "subProdId": "06",
+            "marketingName": "HUAWEI WATCH 十周年款"
+          }
+        ]
+      },
+      {
+        "deviceType": "06D",
+        "smartProductId": "M0EC",
+        "productId": "29b7de7d-e12f-3ce9-7120-323256d30419",
+        "modelName": "RTS-AL00",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI WATCH 5",
+        "deviceId": 795,
+        "skuConfigs": [
+          {
+            "subProdId": "06",
+            "marketingName": "HUAWEI WATCH 十周年款"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "productType": "wearBand",
+    "productList": [
+      {
+        "deviceType": "06E",
+        "smartProductId": "M006",
+        "productId": "0753996d-5b27-4867-9564-240e45b5289c",
+        "modelName": "FDS-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI TalkBand B6####华为手环B6",
+        "deviceId": 115
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0A0",
+        "productId": "24572deb-6b22-4a10-ab5d-4aa3c20c87d1",
+        "modelName": "Fara-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 6####华为手环 6",
+        "deviceId": 366
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0A1",
+        "productId": "24572deb-6b22-4a10-ab5d-4aa3c20c87d1",
+        "modelName": "Fara-B29",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 6####华为手环 6",
+        "deviceId": 367
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0A9",
+        "productId": "24572deb-6b22-4a10-ab5d-4aa3c20c87d1",
+        "modelName": "FRA-B39",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 6####华为手环 6",
+        "deviceId": 512
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0AE",
+        "productId": "24572deb-6b22-4a10-ab5d-4aa3c20c87d1",
+        "modelName": "FRA-B29B",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 6####华为手环 6",
+        "deviceId": 514
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0AD",
+        "productId": "24572deb-6b22-4a10-ab5d-4aa3c20c87d1",
+        "modelName": "FRA-B19B",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 6####华为手环 6",
+        "deviceId": 513
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0BG",
+        "productId": "24572deb-6b22-4a10-ab5d-4aa3c20c87d1",
+        "modelName": "LEA-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 7####华为手环 7",
+        "deviceId": 615
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0BH",
+        "productId": "24572deb-6b22-4a10-ab5d-4aa3c20c87d1",
+        "modelName": "LEA-B29",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 7####华为手环 7",
+        "deviceId": 616
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0CS",
+        "productId": "24572deb-6b22-4a10-ab5d-4aa3c20c87d1",
+        "marketingName": "HUAWEI Band 8####华为手环8",
+        "modelName": "ASK-B19",
+        "manufacturerId": "001",
+        "deviceId": 699
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0CT",
+        "productId": "24572deb-6b22-4a10-ab5d-4aa3c20c87d1",
+        "marketingName": "HUAWEI Band 8####华为手环8",
+        "modelName": "ASK-B29",
+        "manufacturerId": "001",
+        "deviceId": 700
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0CU",
+        "productId": "24572deb-6b22-4a10-ab5d-4aa3c20c87d1",
+        "marketingName": "HUAWEI Band 8####华为手环8",
+        "modelName": "ASK-B19",
+        "manufacturerId": "001",
+        "deviceId": 701
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0CV",
+        "productId": "24572deb-6b22-4a10-ab5d-4aa3c20c87d1",
+        "marketingName": "HUAWEI Band 8####华为手环8",
+        "modelName": "ASK-B29",
+        "manufacturerId": "001",
+        "deviceId": 702
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0D7",
+        "productId": "24572deb-6b22-4a10-ab5d-4aa3c20c87d1",
+        "marketingName": "HUAWEI Band 8####华为手环8",
+        "modelName": "ASK-B19",
+        "manufacturerId": "001",
+        "deviceId": 735
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0D8",
+        "productId": "24572deb-6b22-4a10-ab5d-4aa3c20c87d1",
+        "marketingName": "HUAWEI Band 8####华为手环8",
+        "modelName": "ASK-B29",
+        "manufacturerId": "001",
+        "deviceId": 736
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0DF",
+        "productId": "24572deb-6b22-4a10-ab5d-4aa3c20c87d1",
+        "modelName": "KIM-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 9####华为手环 9",
+        "deviceId": 747
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0DG",
+        "productId": "24572deb-6b22-4a10-ab5d-4aa3c20c87d1",
+        "modelName": "KIM-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 9####华为手环 9",
+        "deviceId": 748
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0DH",
+        "productId": "24572deb-6b22-4a10-ab5d-4aa3c20c87d1",
+        "modelName": "KIM-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 9####华为手环 9",
+        "deviceId": 749
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0DI",
+        "productId": "24572deb-6b22-4a10-ab5d-4aa3c20c87d1",
+        "modelName": "KIM-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 9####华为手环 9",
+        "deviceId": 750
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0DS",
+        "productId": "24572deb-6b22-4a10-ab5d-4aa3c20c87d1",
+        "modelName": "KIM-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 9####华为手环 9",
+        "deviceId": 761
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0DJ",
+        "productId": "24572deb-6b22-4a10-ab5d-4aa3c20c87d1",
+        "modelName": "KIM-B29",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 9####华为手环 9",
+        "deviceId": 751
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0DK",
+        "productId": "24572deb-6b22-4a10-ab5d-4aa3c20c87d1",
+        "modelName": "KIM-B29",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 9####华为手环 9",
+        "deviceId": 752
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0DL",
+        "productId": "24572deb-6b22-4a10-ab5d-4aa3c20c87d1",
+        "modelName": "KIM-B29",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 9####华为手环 9",
+        "deviceId": 753
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0DM",
+        "productId": "24572deb-6b22-4a10-ab5d-4aa3c20c87d1",
+        "modelName": "KIM-B29",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 9####华为手环 9",
+        "deviceId": 754
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0EG",
+        "productId": "24572deb-6b22-4a10-ab5d-4aa3c20c87d1",
+        "modelName": "KIM-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 9####华为手环 9",
+        "deviceId": 811
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0DT",
+        "productId": "24572deb-6b22-4a10-ab5d-4aa3c20c87d1",
+        "modelName": "KIM-B29",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 9####华为手环 9",
+        "deviceId": 762
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0EK",
+        "productId": "356aab94-7fec-465b-8936-8afff0c7d811",
+        "modelName": "NOR-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 10####华为手环10",
+        "deviceId": 823
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0EL",
+        "productId": "356aab94-7fec-465b-8936-8afff0c7d811",
+        "modelName": "NOR-B29",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 10####华为手环10",
+        "deviceId": 824
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0EM",
+        "productId": "356aab94-7fec-465b-8936-8afff0c7d811",
+        "modelName": "NOR-B39",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 10####华为手环10",
+        "deviceId": 825
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0CW",
+        "productId": "2378be1c-3e6f-4804-b17c-b9f00f9a13a8",
+        "modelName": "ASK-B19B",
+        "marketingName": "HUAWEI Band HA580####华为擎云 HA580",
+        "manufacturerId": "001",
+        "deviceId": 703
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0DN",
+        "productId": "2378be1c-3e6f-4804-b17c-b9f00f9a13a8",
+        "modelName": "KIM-B19B",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band HA590####华为擎云HA590",
+        "deviceId": 755
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0DO",
+        "productId": "2378be1c-3e6f-4804-b17c-b9f00f9a13a8",
+        "modelName": "KIM-B29B",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band HA590####华为擎云HA590",
+        "deviceId": 756
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0CY",
+        "productId": "2378be1c-3e6f-4804-b17c-b9f00f9a13a8",
+        "modelName": "ASK-B29B",
+        "marketingName": "HUAWEI Band HA580####华为擎云 HA580",
+        "manufacturerId": "001",
+        "deviceId": 704
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0D0",
+        "productId": "e9e34cf9-b945-41a7-af0e-ec18b2904b79",
+        "modelName": "Fides-B49F",
+        "marketingName": "HUAWEI TalkBand B7",
+        "manufacturerId": "001",
+        "deviceId": 706
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0BI",
+        "productId": "2378be1c-3e6f-4804-b17c-b9f00f9a13a8",
+        "modelName": "LEA-B19B",
+        "manufacturerId": "001",
+        "deviceId": 617
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0BJ",
+        "productId": "2378be1c-3e6f-4804-b17c-b9f00f9a13a8",
+        "modelName": "LEA-B29B",
+        "manufacturerId": "001",
+        "deviceId": 618
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0EN",
+        "productId": "2378be1c-3e6f-4804-b17c-b9f00f9a13a8",
+        "modelName": "NOR-B39B",
+        "manufacturerId": "001",
+        "marketingName": "华为擎云 HA5A0",
+        "deviceId": 826
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0F2",
+        "productId": "35134a8f-cd7d-4ae0-0b28-eb77b823d0aa",
+        "modelName": "CDY-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 11####华为手环 11",
+        "deviceId": 851
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0F3",
+        "productId": "35134a8f-cd7d-4ae0-0b28-eb77b823d0aa",
+        "modelName": "CDY-B29",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 11####华为手环 11",
+        "deviceId": 852
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0F4",
+        "productId": "35134a8f-cd7d-4ae0-0b28-eb77b823d0aa",
+        "modelName": "CDY-B39",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 11####华为手环 11",
+        "deviceId": 853
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0F5",
+        "productId": "35134a8f-cd7d-4ae0-0b28-eb77b823d0aa",
+        "modelName": "CDY-B49",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 11 Pro####华为手环 11 Pro",
+        "deviceId": 854
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0F6",
+        "productId": "2045fd01-637a-d543-26ed-60b7b94aeda3",
+        "modelName": "CDY-B19B",
+        "manufacturerId": "001",
+        "marketingName": "华为擎云 HA5B0",
+        "deviceId": 855
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M0FK",
+        "productId": "35134a8f-cd7d-4ae0-0b28-eb77b823d0aa",
+        "modelName": "CDY-B59",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI Band 11 Pro####华为手环 11 Pro",
+        "deviceId": 870
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "007C",
+        "productId": "acccc80b-1b60-4a23-8f3c-c48c7483ac89",
+        "modelName": "TER-B19S",
+        "manufacturerId": "001",
+        "deviceId": 98
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "007D",
+        "productId": "acccc80b-1b60-4a23-8f3c-c48c7483ac89",
+        "modelName": "TER-B29S",
+        "manufacturerId": "001",
+        "deviceId": 99
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "N005",
+        "productId": "7236036a-ba76-486a-9320-a1d3db62bebe",
+        "modelName": "Aragorn-B29",
+        "manufacturerId": "002",
+        "deviceId": 131
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "N006",
+        "productId": "7236036a-ba76-486a-9320-a1d3db62bebe",
+        "modelName": "Aragorn-B19",
+        "manufacturerId": "002",
+        "deviceId": 132
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "N0A2",
+        "productId": "7236036a-ba76-486a-9320-a1d3db62bebe",
+        "modelName": "ARG-B39",
+        "manufacturerId": "002",
+        "deviceId": 388
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "N0A3",
+        "productId": "7236036a-ba76-486a-9320-a1d3db62bebe",
+        "modelName": "ARG-B59",
+        "manufacturerId": "002",
+        "deviceId": 389
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "005T",
+        "productId": "f7df3b17-cbb6-42b5-b8b3-3a30240c2ec3",
+        "modelName": "ADS-B19",
+        "manufacturerId": "002",
+        "deviceId": 92
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "005R",
+        "productId": "6083cb0b-3388-4fb5-bce7-a0242fcbcce7",
+        "modelName": "CRS-B19S",
+        "manufacturerId": "002",
+        "deviceId": 96
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "002I",
+        "productId": "6083cb0b-3388-4fb5-bce7-a0242fcbcce7",
+        "modelName": "CRS-B19",
+        "manufacturerId": "002",
+        "deviceId": 77
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "002J",
+        "productId": "6083cb0b-3388-4fb5-bce7-a0242fcbcce7",
+        "modelName": "CRS-B19",
+        "manufacturerId": "002",
+        "deviceId": 77
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "005S",
+        "productId": "6083cb0b-3388-4fb5-bce7-a0242fcbcce7",
+        "modelName": "CRS-B19",
+        "manufacturerId": "002",
+        "deviceId": 97
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "N0A0",
+        "productId": "6083cb0b-3388-4fb5-bce7-a0242fcbcce7",
+        "modelName": "CRS-B39S",
+        "manufacturerId": "002",
+        "deviceId": 386
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "N0A1",
+        "productId": "6083cb0b-3388-4fb5-bce7-a0242fcbcce7",
+        "modelName": "CRS-B59S",
+        "manufacturerId": "002",
+        "deviceId": 387
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "0063",
+        "productId": "",
+        "modelName": "B1",
+        "manufacturerId": "002",
+        "deviceId": 21
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "0064",
+        "productId": "",
+        "modelName": "B2",
+        "manufacturerId": "001",
+        "deviceId": 22
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "0065",
+        "productId": "",
+        "modelName": "ColorBand",
+        "manufacturerId": "001",
+        "deviceId": 23
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "0068",
+        "productId": "",
+        "modelName": "B0产品",
+        "manufacturerId": "002",
+        "deviceId": 35
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "006J",
+        "productId": "",
+        "modelName": "N1",
+        "manufacturerId": "001",
+        "deviceId": 38
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "004Z",
+        "productId": "",
+        "modelName": "GEMINI",
+        "manufacturerId": "001",
+        "deviceId": 39
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "004W",
+        "productId": "",
+        "modelName": "METIS",
+        "manufacturerId": "002",
+        "deviceId": 41
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "0054",
+        "productId": "",
+        "modelName": "NYX-B10",
+        "manufacturerId": "002",
+        "deviceId": 42
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "0056",
+        "productId": "",
+        "modelName": "A1PLUS",
+        "manufacturerId": "002",
+        "deviceId": 44
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "0050",
+        "productId": "",
+        "modelName": "grus",
+        "manufacturerId": "001",
+        "deviceId": 45
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "0051",
+        "productId": "",
+        "modelName": "eris",
+        "manufacturerId": "001",
+        "deviceId": 47
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "0052",
+        "productId": "",
+        "modelName": "eris",
+        "manufacturerId": "001",
+        "deviceId": 47
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "006C",
+        "productId": "",
+        "modelName": "aw600荣耀畅玩",
+        "manufacturerId": "002",
+        "deviceId": 51
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "004Y",
+        "productId": "2d63dc6a-30bf-4bfe-b27c-79b7a462442a",
+        "modelName": "Janustalkband",
+        "manufacturerId": "001",
+        "deviceId": 74
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "0055",
+        "productId": "",
+        "modelName": "NYX-B20",
+        "manufacturerId": "002",
+        "deviceId": 76
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "0044",
+        "productId": "1508e6af-4135-4d10-bb8a-4ba6bda8a8ec",
+        "modelName": "terraBLE手环",
+        "manufacturerId": "001",
+        "deviceId": 78
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "002K",
+        "productId": "1508e6af-4135-4d10-bb8a-4ba6bda8a8ec",
+        "modelName": "terraBLE手环",
+        "manufacturerId": "001",
+        "deviceId": 78
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "002L",
+        "productId": "1508e6af-4135-4d10-bb8a-4ba6bda8a8ec",
+        "modelName": "terraBLE手环",
+        "manufacturerId": "001",
+        "deviceId": 78
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "004X",
+        "productId": "",
+        "modelName": "AW70",
+        "manufacturerId": "001",
+        "deviceId": 81
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "0053",
+        "productId": "",
+        "modelName": "荣耀aw70",
+        "manufacturerId": "002",
+        "deviceId": 83
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "006X",
+        "productId": "",
+        "modelName": "AW70-B39",
+        "manufacturerId": "001",
+        "deviceId": 90
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "006Y",
+        "productId": "",
+        "modelName": "AW70-B39HN",
+        "manufacturerId": "002",
+        "deviceId": 91
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "005U",
+        "productId": "856b8a94-5218-4e04-b355-62505e9e59bf",
+        "modelName": "Andes-B29",
+        "manufacturerId": "001",
+        "deviceId": 93
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "M00C",
+        "productId": "",
+        "modelName": "AW70-B49",
+        "manufacturerId": "001",
+        "deviceId": 138
+      },
+      {
+        "deviceType": "06E",
+        "smartProductId": "N007",
+        "productId": "24a18888-fed0-414d-a075-8649d48ddf5c",
+        "modelName": "AW70-B49HN",
+        "manufacturerId": "001",
+        "deviceId": 139
+      }
+    ]
+  },
+  {
+    "productType": "wearSportsGenie",
+    "productList": [
+      {
+        "deviceType": "A12",
+        "smartProductId": "M0B2",
+        "productId": "2785d456-09a6-4bca-beaa-485270df50c7",
+        "modelName": "BLT-B19",
+        "manufacturerId": "001",
+        "marketingName": "HUAWEI S-TAG####HUAWEI S-TAG",
+        "deviceId": 554
+      }
+    ]
+  },
+  {
+    "productType": "smartPad",
+    "productList": [
+      {
+        "deviceType": "011",
+        "smartProductId": "R096",
+        "productId": "",
+        "modelName": "",
+        "manufacturerId": "",
+        "deviceId": 32
+      }
+    ]
+  },
+  {
+    "productType": "smartHeadphones",
+    "productList": [
+      {
+        "deviceType": "082",
+        "smartProductId": "ZAA6",
+        "productId": "4bfc5a27-f2b9-4c41-bd9b-a4a2a18f752c",
+        "modelName": "Nemo-Pro",
+        "manufacturerId": "999",
+        "deviceId": 705
+      },
+      {
+        "deviceType": "082",
+        "smartProductId": "006A",
+        "productId": "92d0af08-80c4-4039-8761-718ee249d5a4",
+        "modelName": "",
+        "manufacturerId": "001",
+        "deviceId": 43
+      },
+      {
+        "deviceType": "082",
+        "smartProductId": "006B",
+        "productId": "59ae6410-34d1-4971-b473-9247c4cbcd1f",
+        "modelName": "",
+        "manufacturerId": "001",
+        "deviceId": 43
+      },
+      {
+        "deviceType": "082",
+        "smartProductId": "006I",
+        "productId": "6d5416d9-2167-41df-ab10-c492e152b44f",
+        "modelName": "",
+        "manufacturerId": "002",
+        "deviceId": 75
+      }
+    ]
+  }
+]

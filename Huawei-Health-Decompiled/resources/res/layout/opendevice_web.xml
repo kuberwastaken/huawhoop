@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.openalliance.ad.views.web.NetworkLoadStatusView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    id="@+id/status_view"
+    background="@color/_2131297307_res_0x7f09041b"
+    paddingLeft="@dimen/_2131363304_res_0x7f0a05e8"
+    paddingRight="@dimen/_2131363408_res_0x7f0a0650"
+    layout_width="-1"
+    layout_height="-1"
+    paddingStart="@dimen/_2131363304_res_0x7f0a05e8"
+    paddingEnd="@dimen/_2131363304_res_0x7f0a05e8"
+    NOT_FOUND_0x14="@string/opendevice_network_no_available">
+    <LinearLayout
+        enabled="false"
+        gravity="0x1"
+        id="@+id/content_statement"
+        clickable="true"
+        layout_width="-1"
+        layout_height="-1"
+        layout_marginLeft="@dimen/_2131363304_res_0x7f0a05e8"
+        layout_marginRight="@dimen/_2131363304_res_0x7f0a05e8"
+        layout_marginStart="@dimen/_2131363304_res_0x7f0a05e8"
+        layout_marginEnd="@dimen/_2131363304_res_0x7f0a05e8">
+        <LinearLayout
+            orientation="1"
+            id="@+id/replace_layout"
+            layout_width="-1"
+            layout_height="-1">
+            <android.widget.ProgressBar
+                id="@+id/web_progress"
+                layout_width="-1"
+                layout_height="2dp"
+                max="100"
+                progress="0"
+                style="?android:attr/progressBarStyleHorizontal"/>
+            <WebView
+                id="@+id/content_webview"
+                scrollbars="0x0"
+                clipToPadding="true"
+                layout_width="-1"
+                layout_height="-1"/>
+        </LinearLayout>
+    </LinearLayout>
+</com.huawei.openalliance.ad.views.web.NetworkLoadStatusView>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<config>
+    <dict>
+        <string key="ODSA_ESURL">https://aes.mnc010.mcc208.pub.3gppnetwork.org</string>
+        <string key="ODSA_PROTOCOL">2</string>
+        <string key="ODSA_ES_VERSION">5</string>
+        <bool key="ODSA_SIMPLE_VERS">false</bool>
+    </dict>
+</config>

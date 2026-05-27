@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-2"
+    layout_height="-2">
+    <com.huawei.ui.commonui.bubblelayout.HealthBubbleLayout
+        id="@+id/privacy_bubble_layout"
+        layout_width="-2"
+        layout_height="-2"
+        outlineSpotShadowColor="@color/_2131296940_res_0x7f0902ac"
+        NOT_FOUND_0xf="2"
+        NOT_FOUND_0x10="true">
+        <LinearLayout
+            orientation="1"
+            paddingTop="@dimen/_2131362934_res_0x7f0a0476"
+            paddingBottom="@dimen/_2131362934_res_0x7f0a0476"
+            layout_width="-2"
+            layout_height="-2"
+            paddingStart="@dimen/_2131362970_res_0x7f0a049a"
+            paddingEnd="@dimen/_2131362970_res_0x7f0a049a">
+            <com.huawei.ui.commonui.healthtextview.HealthTextView
+                textSize="@dimen/_2131362955_res_0x7f0a048b"
+                textColor="@color/_2131297531_res_0x7f0904fb"
+                id="@+id/running_route_length"
+                layout_width="-2"
+                layout_height="-2"
+                maxWidth="@dimen/_2131363009_res_0x7f0a04c1"
+                text="5.01km"/>
+            <com.huawei.ui.commonui.healthtextview.HealthTextView
+                textSize="@dimen/_2131362955_res_0x7f0a048b"
+                textColor="@color/_2131297531_res_0x7f0904fb"
+                id="@+id/running_route_place"
+                layout_width="-2"
+                layout_height="-2"
+                maxWidth="@dimen/_2131363009_res_0x7f0a04c1"
+                text="深圳湾人才公园"/>
+        </LinearLayout>
+    </com.huawei.ui.commonui.bubblelayout.HealthBubbleLayout>
+    <ImageView
+        layout_gravity="0x1"
+        layout_width="@dimen/_2131363054_res_0x7f0a04ee"
+        layout_height="@dimen/_2131363054_res_0x7f0a04ee"
+        src="@color/_2131299845_res_0x7f090e05"/>
+</LinearLayout>

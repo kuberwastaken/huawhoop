@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x10"
+    orientation="1"
+    background="@drawable/popup_window_background"
+    layout_width="@dimen/_2131363680_res_0x7f0a0760"
+    layout_height="@dimen/_2131363629_res_0x7f0a072d">
+    <LinearLayout
+        gravity="0x11"
+        id="@+id/delete_music_ll"
+        background="@drawable/_2131431835_res_0x7f0b119b"
+        layout_width="@dimen/_2131363680_res_0x7f0a0760"
+        layout_height="@dimen/_2131363629_res_0x7f0a072d">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131363881_res_0x7f0a0829"
+            textColor="@color/_2131298247_res_0x7f0907c7"
+            gravity="0x10"
+            id="@+id/delete_music_text"
+            layout_width="104dp"
+            layout_height="@dimen/_2131363629_res_0x7f0a072d"
+            text="@string/_2130843569_res_0x7f0217b1"/>
+    </LinearLayout>
+</LinearLayout>

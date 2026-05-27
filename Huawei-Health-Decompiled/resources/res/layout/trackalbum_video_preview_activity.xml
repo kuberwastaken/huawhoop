@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    background="@color/_2131297527_res_0x7f0904f7"
+    layout_width="-1"
+    layout_height="-1">
+    <LinearLayout
+        orientation="1"
+        id="@+id/image_select_content"
+        layout_width="-1"
+        layout_height="-1">
+        <include
+            id="@+id/preview_video_select_title_bar"
+            layout_width="-2"
+            layout_height="-2"
+            layout="@layout/trackalbum_image_preview_title"/>
+        <VideoView
+            layout_gravity="0x1"
+            id="@+id/play_video"
+            layout_width="-1"
+            layout_height="-1"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

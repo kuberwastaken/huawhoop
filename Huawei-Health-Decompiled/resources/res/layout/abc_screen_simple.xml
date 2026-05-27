@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.FitWindowsLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    id="@+id/action_bar_root"
+    fitsSystemWindows="true"
+    layout_width="-1"
+    layout_height="-1">
+    <androidx.appcompat.widget.ViewStubCompat
+        id="@+id/action_mode_bar_stub"
+        layout="@layout/abc_action_mode_bar"
+        inflatedId="@+id/action_mode_bar"
+        layout_width="-1"
+        layout_height="-2"/>
+    <include layout="@layout/abc_screen_content_include"/>
+</androidx.appcompat.widget.FitWindowsLinearLayout>

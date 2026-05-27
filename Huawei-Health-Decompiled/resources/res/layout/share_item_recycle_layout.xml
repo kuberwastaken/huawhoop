@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.recycleview.HealthRecycleView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    id="@+id/share_item_recycler_view"
+    paddingBottom="@dimen/_2131362934_res_0x7f0a0476"
+    scrollbars="0x0"
+    layout_width="-1"
+    layout_height="-2"
+    overScrollMode="2"
+    nestedScrollingEnabled="false"
+    NOT_FOUND_0x7="false"/>

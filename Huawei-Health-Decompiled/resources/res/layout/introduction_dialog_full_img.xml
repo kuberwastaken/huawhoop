@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    id="@+id/dialog_marketing"
+    background="@drawable/configured_item_image_text_background"
+    layout_width="-2"
+    layout_height="-2">
+    <com.huawei.ui.commonui.cardview.HealthCardView
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xb="@dimen/_2131362365_res_0x7f0a023d">
+        <RelativeLayout
+            layout_width="-1"
+            layout_height="-2"
+            maxHeight="@dimen/_2131363114_res_0x7f0a052a"
+            minHeight="@dimen/_2131363066_res_0x7f0a04fa"
+            NOT_FOUND_0xc="0"
+            NOT_FOUND_0xd="0">
+            <ImageView
+                layout_gravity="0x11"
+                id="@+id/introduction_dialog_full_image"
+                layout_width="-1"
+                layout_height="-2"
+                adjustViewBounds="true"
+                maxHeight="@dimen/_2131363114_res_0x7f0a052a"
+                minHeight="@dimen/_2131363066_res_0x7f0a04fa"/>
+            <TextureView
+                layout_gravity="0x11"
+                id="@+id/introduction_dialog_full_video"
+                visibility="2"
+                layout_width="-1"
+                layout_height="-2"
+                adjustViewBounds="true"
+                maxHeight="@dimen/_2131363114_res_0x7f0a052a"
+                minHeight="@dimen/_2131363066_res_0x7f0a04fa"/>
+        </RelativeLayout>
+    </com.huawei.ui.commonui.cardview.HealthCardView>
+    <com.huawei.ui.commonui.button.HealthButton
+        layout_gravity="0x51"
+        id="@+id/introduction_dialog_full_button"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginBottom="@dimen/_2131363021_res_0x7f0a04cd"
+        layout_alignParentBottom="true"
+        style="@style/Health.CommonUI.HealthButton.Emphasize"/>
+</FrameLayout>

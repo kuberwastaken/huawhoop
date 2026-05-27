@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        state_enabled="false"
+        state_checked="true"
+        drawable="@drawable/_2131429811_res_0x7f0b09b3"/>
+    <item
+        state_enabled="false"
+        state_checked="false"
+        drawable="@drawable/_2131429849_res_0x7f0b09d9"/>
+    <item
+        state_checked="true"
+        id="@+id/switch_checked_translucent"
+        drawable="@drawable/_2131429808_res_0x7f0b09b0"/>
+    <item
+        id="@+id/switch_unchecked_translucent"
+        drawable="@drawable/_2131429846_res_0x7f0b09d6"/>
+    <transition
+        drawable="@drawable/_2131429840_res_0x7f0b09d0"
+        toId="@+id/switch_checked_translucent"
+        fromId="@+id/switch_unchecked_translucent"/>
+    <transition
+        drawable="@drawable/_2131429843_res_0x7f0b09d3"
+        toId="@+id/switch_unchecked_translucent"
+        fromId="@+id/switch_checked_translucent"/>
+</animated-selector>

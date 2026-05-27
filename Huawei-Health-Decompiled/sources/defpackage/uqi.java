@@ -1,0 +1,25 @@
+package defpackage;
+
+/* JADX INFO: loaded from: classes11.dex */
+public class uqi {
+    private String appIconPath;
+    private String appId;
+    private String appName;
+    private String dataType;
+
+    public String getAppId() {
+        return this.appId;
+    }
+
+    public String getDataType() {
+        return this.dataType;
+    }
+
+    public String getAppName() {
+        return this.appName;
+    }
+
+    public String getAppIconPath() {
+        return this.appIconPath;
+    }
+}

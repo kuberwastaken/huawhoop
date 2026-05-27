@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296700_res_0x7f0901bc"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/reminder_setting_title"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xe="@color/_2131296984_res_0x7f0902d8"
+        NOT_FOUND_0xf="@string/_2130846723_res_0x7f022403"/>
+    <com.huawei.uikit.hwscrollview.widget.HwScrollView
+        layout_width="-1"
+        layout_height="-1">
+        <com.huawei.ui.commonui.cardview.HealthCardView
+            layout_width="-1"
+            layout_height="-2"
+            layout_marginTop="@dimen/_2131362578_res_0x7f0a0312"
+            layout_marginBottom="@dimen/_2131362369_res_0x7f0a0241"
+            layout_marginStart="@dimen/_2131362013_res_0x7f0a00dd"
+            layout_marginEnd="@dimen/_2131362011_res_0x7f0a00db"
+            NOT_FOUND_0xb="@dimen/_2131362365_res_0x7f0a023d"
+            NOT_FOUND_0xc="@dimen/_2131363112_res_0x7f0a0528"
+            NOT_FOUND_0xd="@dimen/_2131363112_res_0x7f0a0528">
+            <LinearLayout
+                orientation="1"
+                layout_width="-1"
+                layout_height="-1"
+                paddingHorizontal="@dimen/_2131362934_res_0x7f0a0476">
+                <com.huawei.ui.commonui.recycleview.HealthRecycleView
+                    layout_gravity="0x11"
+                    id="@+id/switch_recycle"
+                    layout_width="-1"
+                    layout_height="-2"/>
+            </LinearLayout>
+        </com.huawei.ui.commonui.cardview.HealthCardView>
+    </com.huawei.uikit.hwscrollview.widget.HwScrollView>
+</com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout>

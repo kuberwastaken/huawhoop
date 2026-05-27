@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="@dimen/_2131363090_res_0x7f0a0512"
+    layout_height="@dimen/_2131363090_res_0x7f0a0512">
+    <ImageView
+        id="@+id/iv_start_step"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-1"
+        src="@drawable/_2131430297_res_0x7f0b0b99"/>
+    <RelativeLayout
+        id="@+id/rl_progress_container"
+        layout_width="-1"
+        layout_height="-1">
+        <ImageView
+            id="@+id/right_icon"
+            layout_width="-1"
+            layout_height="-1"
+            scaleType="6"
+            layout_centerInParent="true"/>
+        <TextView
+            textSize="@dimen/_2131362917_res_0x7f0a0465"
+            textColor="@color/_2131298206_res_0x7f09079e"
+            id="@+id/right_icon_text"
+            layout_width="-2"
+            layout_height="-2"
+            scaleType="6"
+            text="@string/IDS_plugindameon_hw_phonecounter_widget_defualt_value"
+            layout_centerInParent="true"
+            alpha="0.5"/>
+    </RelativeLayout>
+</FrameLayout>

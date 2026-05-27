@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners radius="@dimen/_2131362817_res_0x7f0a0401"/>
+    <solid color="@color/feedback_sdk_common_black_20"/>
+    <stroke
+        width="@dimen/_2131362798_res_0x7f0a03ee"
+        color="@color/feedback_sdk_media_select_white"/>
+    <size
+        height="@dimen/_2131362799_res_0x7f0a03ef"
+        width="@dimen/_2131362799_res_0x7f0a03ef"/>
+</shape>

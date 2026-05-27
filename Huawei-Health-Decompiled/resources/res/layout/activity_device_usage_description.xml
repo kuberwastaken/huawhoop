@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/title_bar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xc="2"
+        NOT_FOUND_0xd="@string/_2130841907_res_0x7f021133"/>
+    <RelativeLayout
+        id="@+id/list_load_progress"
+        visibility="0"
+        layout_width="-1"
+        layout_height="-1">
+        <include layout="@layout/common_loading_layout"/>
+    </RelativeLayout>
+    <ListView
+        scrollbarSize="@dimen/_2131363087_res_0x7f0a050f"
+        scrollbarThumbVertical="@drawable/_2131428102_res_0x7f0b0306"
+        id="@+id/user_guide_list_view"
+        focusable="true"
+        layout_width="-1"
+        layout_height="-1"
+        divider="@null"
+        scrollbarFadeDuration="0"
+        fadeScrollbars="true"/>
+</LinearLayout>

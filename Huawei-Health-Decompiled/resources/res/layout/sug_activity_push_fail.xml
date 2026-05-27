@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2"
+    baselineAligned="false">
+    <LinearLayout
+        orientation="1"
+        layout_width="-2"
+        layout_height="-2">
+        <RelativeLayout
+            id="@+id/max_heart_rate_layout"
+            layout_width="-1"
+            layout_height="-2"
+            layout_marginBottom="8dp">
+            <com.huawei.ui.commonui.healthtextview.HealthTextView
+                textSize="@dimen/_2131365482_res_0x7f0a0e6a"
+                textColor="@color/_2131299845_res_0x7f090e05"
+                layout_width="-2"
+                layout_height="-2"
+                text="@string/_2130849621_res_0x7f022f55"
+                layout_centerVertical="true"
+                fontFamily="@string/_2130852834_res_0x7f023be2"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

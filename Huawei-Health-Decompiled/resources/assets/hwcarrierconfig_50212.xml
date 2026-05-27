@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<config>
+    <dict>
+        <string key="ODSA_ESURL">https://android-es.maxis.com.my:8091/android/</string>
+        <string key="ODSA_PROTOCOL">2</string>
+        <bool key="ODSA_ADD_IMSI">true</bool>
+        <string key="ODSA_ES_VERSION">5</string>
+        <bool key="ODSA_SIMPLE_VERS">true</bool>
+        <bool key="ODSA_SUPPORT_NOTIFICATION_SERVICE">false</bool>
+    </dict>
+</config>

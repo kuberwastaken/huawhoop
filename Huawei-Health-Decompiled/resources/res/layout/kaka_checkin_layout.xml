@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="0"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.pluginachievement.ui.views.KakaCheckinItemView
+        id="@+id/checkin_date_first"
+        layout_width="-2"
+        layout_height="-2"/>
+    <View
+        id="@+id/itemStoneFirst"
+        layout_width="@dimen/_2131362916_res_0x7f0a0464"
+        layout_height="1dp"/>
+    <com.huawei.pluginachievement.ui.views.KakaCheckinItemView
+        id="@+id/checkin_date_second"
+        layout_width="-2"
+        layout_height="-2"/>
+    <View
+        id="@+id/itemStoneSecond"
+        layout_width="@dimen/_2131362916_res_0x7f0a0464"
+        layout_height="1dp"/>
+    <com.huawei.pluginachievement.ui.views.KakaCheckinItemView
+        id="@+id/checkin_date_third"
+        layout_width="-2"
+        layout_height="-2"/>
+    <View
+        id="@+id/itemStoneThird"
+        layout_width="@dimen/_2131362916_res_0x7f0a0464"
+        layout_height="1dp"/>
+    <com.huawei.pluginachievement.ui.views.KakaCheckinItemView
+        id="@+id/checkin_date_fourth"
+        layout_width="-2"
+        layout_height="-2"/>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-2"
+    layout_height="-2">
+    <LinearLayout
+        layout_gravity="0x11"
+        orientation="1"
+        layout_width="@dimen/_2131363514_res_0x7f0a06ba"
+        layout_height="@dimen/_2131363514_res_0x7f0a06ba">
+        <ImageView
+            id="@+id/iv_big"
+            layout_width="-1"
+            layout_height="-1"/>
+    </LinearLayout>
+    <ImageView
+        layout_gravity="0x11"
+        layout_width="@dimen/_2131363545_res_0x7f0a06d9"
+        layout_height="@dimen/_2131363521_res_0x7f0a06c1"
+        layout_marginTop="@dimen/_2131363541_res_0x7f0a06d5"
+        src="@drawable/_2131431262_res_0x7f0b0f5e"/>
+</LinearLayout>

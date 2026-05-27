@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    gravity="0x10"
+    orientation="0"
+    layout_width="-2"
+    layout_height="-2">
+    <com.huawei.ui.commonui.spinner.HealthSpinner
+        id="@+id/titleSpinner"
+        visibility="2"
+        layout_width="-2"
+        layout_height="-2"
+        layout_weight="1"
+        NOT_FOUND_0x8="true"
+        NOT_FOUND_0x9="true"
+        style="@style/Health.CommonUI.HealthSpinner"/>
+    <com.huawei.ui.commonui.spinner.HealthSpinner
+        id="@+id/titleSpinners"
+        visibility="2"
+        layout_width="-2"
+        layout_height="-2"
+        layout_weight="1"
+        layout_marginStart="@dimen/_2131362351_res_0x7f0a022f"
+        NOT_FOUND_0x8="true"
+        NOT_FOUND_0x9="true"
+        style="@style/Health.CommonUI.HealthSpinner"/>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/fitness_detail_titlebar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x8="2"/>
+    <ListView
+        id="@+id/weight_user_manager_list_view"
+        scrollbars="0x0"
+        layout_width="-1"
+        layout_height="0dp"
+        divider="@null"
+        layout_weight="1"/>
+    <com.huawei.ui.commonui.toolbar.HealthToolBar
+        id="@+id/buttomview"
+        layout_width="-1"
+        layout_height="-2"/>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.gridview.HealthGridView xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x11"
+    layout_gravity="0x11"
+    orientation="0"
+    id="@+id/dialog_task_grid"
+    background="@drawable/shape_grid_background"
+    scrollbars="0x0"
+    layout_width="-1"
+    layout_height="-2"
+    listSelector="@color/_2131296984_res_0x7f0902d8"
+    stretchMode="2"/>

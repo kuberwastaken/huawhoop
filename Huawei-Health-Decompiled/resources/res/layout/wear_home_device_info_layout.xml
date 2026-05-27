@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296700_res_0x7f0901bc"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/wear_home_device_info_bar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xc="2"
+        NOT_FOUND_0xd="@color/_2131296700_res_0x7f0901bc"/>
+    <LinearLayout
+        layout_gravity="0x1"
+        orientation="1"
+        paddingTop="@dimen/_2131363172_res_0x7f0a0564"
+        paddingBottom="@dimen/_2131362934_res_0x7f0a0476"
+        descendantFocusability="2"
+        layout_width="-1"
+        layout_height="-2"
+        minHeight="@dimen/_2131362453_res_0x7f0a0295"
+        paddingStart="@dimen/_2131362372_res_0x7f0a0244"
+        paddingEnd="@dimen/_2131362371_res_0x7f0a0243">
+        <LinearLayout
+            orientation="1"
+            background="@drawable/_2131432613_res_0x7f0b14a5"
+            layout_width="-1"
+            layout_height="-1">
+            <com.huawei.ui.commonui.recycleview.HealthRecycleView
+                id="@+id/wear_home_device_info_recyclerView"
+                layout_width="-1"
+                layout_height="-2"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-1"
+    layout_marginTop="@dimen/_2131363696_res_0x7f0a0770">
+    <ImageButton
+        id="@+id/dialog_back_btn"
+        background="@color/_2131299926_res_0x7f090e56"
+        layout_width="@dimen/_2131363825_res_0x7f0a07f1"
+        layout_height="@dimen/_2131363825_res_0x7f0a07f1"
+        src="@drawable/_2131431623_res_0x7f0b10c7"
+        layout_marginStart="@dimen/_2131363696_res_0x7f0a0770"
+        layout_alignParentStart="true"/>
+    <ImageButton
+        id="@+id/dialog_choose_btn"
+        background="@color/_2131299926_res_0x7f090e56"
+        layout_width="@dimen/_2131363825_res_0x7f0a07f1"
+        layout_height="@dimen/_2131363825_res_0x7f0a07f1"
+        src="@drawable/_2131432501_res_0x7f0b1435"
+        layout_marginEnd="@dimen/_2131363696_res_0x7f0a0770"
+        layout_alignParentEnd="true"/>
+</RelativeLayout>

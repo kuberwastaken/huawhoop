@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <RelativeLayout
+        layout_width="-1"
+        layout_height="@dimen/_2131361847_res_0x7f0a0037"
+        layout_marginTop="@dimen/_2131361854_res_0x7f0a003e"
+        layout_marginBottom="@dimen/_2131361834_res_0x7f0a002a"
+        layout_marginStart="@dimen/_2131361854_res_0x7f0a003e"
+        layout_marginEnd="@dimen/_2131361854_res_0x7f0a003e">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365482_res_0x7f0a0e6a"
+            textColor="@color/_2131299845_res_0x7f090e05"
+            id="@+id/custom_progress_dialog_desc"
+            layout_width="-2"
+            layout_height="-2"
+            text="@string/IDS_plugin_device_weight_device_clearing_tip"
+            layout_centerVertical="true"/>
+        <com.huawei.ui.commonui.progressbar.HealthProgressBar
+            id="@+id/iv_clear_user_data_anim"
+            visibility="2"
+            layout_width="@dimen/_2131361847_res_0x7f0a0037"
+            layout_height="@dimen/_2131361847_res_0x7f0a0037"
+            layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</LinearLayout>

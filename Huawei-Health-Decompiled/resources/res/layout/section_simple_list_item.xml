@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.columnlayout.HealthColumnRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="@dimen/_2131363109_res_0x7f0a0525">
+    <LinearLayout
+        gravity="0x10"
+        orientation="0"
+        id="@+id/content_area"
+        layout_width="-1"
+        layout_height="-2"
+        layout_centerVertical="true">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365482_res_0x7f0a0e6a"
+            textColor="@color/_2131299845_res_0x7f090e05"
+            ellipsize="3"
+            gravity="0x10"
+            id="@+id/simple_title"
+            layout_width="0dp"
+            layout_height="-2"
+            maxLines="1"
+            layout_weight="1"
+            fontFamily="@string/_2130852833_res_0x7f023be1"/>
+        <ImageView
+            id="@+id/arrow"
+            background="@drawable/_2131427877_res_0x7f0b0225"
+            layout_width="-2"
+            layout_height="-2"
+            layout_marginStart="@dimen/_2131363112_res_0x7f0a0528"
+            style="@style/health_default_background_tint"/>
+    </LinearLayout>
+    <com.huawei.ui.commonui.divider.HealthDivider
+        id="@+id/item_divider"
+        layout_width="-1"
+        layout_height="-2"
+        layout_alignParentBottom="true"
+        NOT_FOUND_0xf="0"/>
+</com.huawei.ui.commonui.columnlayout.HealthColumnRelativeLayout>

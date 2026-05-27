@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">एक ग्राफ़ पर अधिकतम %1$d संकेतक दिखाया जा सकता है।</item>
+        <item quantity="other">एक ग्राफ़ पर अधिकतम %1$d संकेतक दिखाए जा सकते हैं।</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">आपका रक्त ग्लूकोज़ %1$s मिनट में %2$s mmol/L से कम होने की उम्मीद है। कृपया अपने ग्लूकोज़ स्तर पर करीबी से निगरानी करें।</item>
+        <item quantity="other">आपका रक्त ग्लूकोज़ %1$s मिनट में %2$s mmol/L से कम होने की उम्मीद है। कृपया अपने ग्लूकोज़ स्तर पर करीबी से निगरानी करें।</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">आपका रक्त ग्लूकोज़ %1$s मिनट में %2$s mg/dL से कम होने की उम्मीद है। कृपया अपने ग्लूकोज़ स्तर पर करीबी से निगरानी करें।</item>
+        <item quantity="other">आपका रक्त ग्लूकोज़ %1$s मिनट में %2$s mg/dL से कम होने की उम्मीद है। कृपया अपने ग्लूकोज़ स्तर पर करीबी से निगरानी करें।</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d चरण</item>
+        <item quantity="other">%d चरण</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s मील</item>
+        <item quantity="other">%s मील</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s किलोमीटर</item>
+        <item quantity="other">%s किलोमीटर</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">%1$s कदम दूर</item>
+        <item quantity="other">%1$s कदम दूर</item>
+    </plurals>
+</resources>

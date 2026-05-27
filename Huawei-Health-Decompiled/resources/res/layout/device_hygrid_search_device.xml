@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <ListView
+        id="@+id/data_source_activity_content_listview"
+        scrollbars="0x200"
+        layout_width="-1"
+        layout_height="100dp"
+        divider="@null"
+        style="@style/hw_device_style_setting_main_listView"/>
+</LinearLayout>

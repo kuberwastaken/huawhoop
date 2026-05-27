@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    layout_gravity="0x1"
+    orientation="1"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-2"
+    minHeight="136dp">
+    <LinearLayout
+        layout_gravity="0x10"
+        orientation="0"
+        id="@+id/core_day_sleep_chart_show_layout"
+        layout_width="-1"
+        layout_height="-2"
+        minHeight="136dp"
+        layout_marginStart="@dimen/_2131364901_res_0x7f0a0c25"
+        layout_marginEnd="@dimen/_2131364901_res_0x7f0a0c25">
+        <com.huawei.ui.commonui.chart.HealthRingChart
+            layout_gravity="0x10"
+            id="@+id/core_day_detail_sleep_rate_recycle"
+            layout_width="-1"
+            layout_height="-2"/>
+    </LinearLayout>
+</LinearLayout>

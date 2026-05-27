@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/hiad_landing_layout"
+    layout_width="-1"
+    layout_height="-1">
+    <RelativeLayout
+        id="@+id/hiad_landing_download_box"
+        layout_width="-1"
+        layout_height="-2"
+        layout_alignParentBottom="true">
+        <com.huawei.openalliance.ad.views.PPSAppDetailView xmlns:detail_view="http://schemas.android.com/apk/res-auto"
+            id="@+id/hiad_landing_app_detail"
+            visibility="2"
+            layout_width="-1"
+            layout_height="-2"
+            NOT_FOUND_0x6="1"/>
+        <com.huawei.openalliance.ad.views.PPSExpandButtonDetailView
+            id="@+id/hiad_landing_expand_button_detail"
+            visibility="2"
+            layout_width="-1"
+            layout_height="-2"
+            NOT_FOUND_0x6="1"/>
+    </RelativeLayout>
+    <FrameLayout
+        id="@+id/hiad_landing_webview_layout"
+        layout_width="-1"
+        layout_height="-1"
+        layout_above="@+id/hiad_landing_download_box"/>
+</RelativeLayout>

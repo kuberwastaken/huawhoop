@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.scrollview.HealthScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    scrollbars="0x0"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        id="@+id/privacy_dialog_message"
+        layout_width="-1"
+        layout_height="-2"
+        lineSpacingExtra="@dimen/_2131362343_res_0x7f0a0227"
+        breakStrategy="1"
+        hyphenationFrequency="1"
+        style="@style/CustomDialog_message"/>
+</com.huawei.ui.commonui.scrollview.HealthScrollView>

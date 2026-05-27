@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296979_res_0x7f0902d3"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/confirm_invalid_title_bar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x10="2"
+        NOT_FOUND_0x11="@string/_2130849054_res_0x7f022d1e"/>
+    <RelativeLayout
+        orientation="1"
+        layout_width="-1"
+        layout_height="-1">
+        <ImageView
+            id="@+id/conform_invalid_image"
+            layout_width="-2"
+            layout_height="-2"
+            layout_marginTop="@dimen/_2131365327_res_0x7f0a0dcf"
+            src="@drawable/_2131431934_res_0x7f0b11fe"
+            layout_centerHorizontal="true"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365335_res_0x7f0a0dd7"
+            textColor="@color/_2131299845_res_0x7f090e05"
+            id="@+id/confirm_invide_info"
+            layout_width="-2"
+            layout_height="-2"
+            layout_marginTop="@dimen/_2131365317_res_0x7f0a0dc5"
+            text="@string/_2130849053_res_0x7f022d1d"
+            layout_below="@+id/conform_invalid_image"
+            layout_centerHorizontal="true"/>
+        <com.huawei.ui.commonui.button.HealthButton
+            id="@+id/confirm_button"
+            layout_width="-1"
+            layout_marginBottom="@dimen/_2131365315_res_0x7f0a0dc3"
+            text="@string/_2130849041_res_0x7f022d11"
+            layout_alignParentBottom="true"
+            layout_marginStart="@dimen/_2131365314_res_0x7f0a0dc2"
+            layout_marginEnd="@dimen/_2131365314_res_0x7f0a0dc2"
+            style="@style/health_button_style"/>
+    </RelativeLayout>
+</LinearLayout>

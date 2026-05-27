@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/reward_layout"
+    background="@color/_2131297998_res_0x7f0906ce"
+    layout_width="-1"
+    layout_height="-1">
+    <RelativeLayout
+        id="@+id/reward_content_area"
+        layout_width="-1"
+        layout_height="-1">
+        <com.huawei.openalliance.ad.views.PPSWebView
+            id="@+id/reward_webview"
+            background="@color/_2131298034_res_0x7f0906f2"
+            layout_width="-1"
+            layout_height="-1"/>
+    </RelativeLayout>
+</RelativeLayout>

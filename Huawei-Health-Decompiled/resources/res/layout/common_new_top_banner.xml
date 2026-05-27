@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.viewpager.HealthViewPager
+        layout_gravity="0x1"
+        id="@+id/view_pager_common_top_banner_cant_loop"
+        visibility="2"
+        clipToPadding="false"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xb="false"/>
+    <com.huawei.ui.commonui.viewpager.HealthViewPager
+        layout_gravity="0x1"
+        id="@+id/view_pager_common_top_banner"
+        visibility="2"
+        clipToPadding="false"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xb="true"/>
+    <com.huawei.ui.commonui.dotspageindicator.HealthDotsPageIndicator
+        gravity="0x11"
+        layout_gravity="0x51"
+        id="@+id/indicator"
+        visibility="2"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginBottom="@dimen/_2131362944_res_0x7f0a0480"
+        NOT_FOUND_0xa="@color/emui_white"
+        style="@style/DotsPageIndicatorStyleDots"/>
+    <com.huawei.ui.commonui.recycleview.HealthRecycleView
+        id="@+id/recycleView_dailyTask"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-2"
+        minHeight="146dp"/>
+</FrameLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">%1$d хүртэлх үзүүлэлтийг нэг зураг дээр харуулах боломжтой.</item>
+        <item quantity="other">%1$d хүртэлх үзүүлэлтийг нэг зураг дээр харуулах боломжтой.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">Таны цусан дахь глюкоз %1$s минутын дараа %2$s ммоль/л-ээс доош унах магадлалтай байна. Цусан дахь глюкозын түвшнээ анхааралтай хянана уу.</item>
+        <item quantity="other">Таны цусан дахь глюкоз %1$s минутын дараа %2$s ммоль/л-ээс доош унах магадлалтай байна. Цусан дахь глюкозын түвшнээ анхааралтай хянана уу.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">Таны цусан дахь глюкоз %1$s минутын дараа %2$s мг/дл-ээс доош унах магадлалтай байна. Цусан дахь глюкозын түвшнээ анхааралтай хянана уу.</item>
+        <item quantity="other">Таны цусан дахь глюкоз %1$s минутын дараа %2$s мг/дл-ээс доош унах магадлалтай байна. Цусан дахь глюкозын түвшнээ анхааралтай хянана уу.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d алхам</item>
+        <item quantity="other">%d алхам</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s миль</item>
+        <item quantity="other">%s миль</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s км</item>
+        <item quantity="other">%s км</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">%1$s алхам дутуу байна</item>
+        <item quantity="other">%1$s алхам дутуу байна</item>
+    </plurals>
+</resources>

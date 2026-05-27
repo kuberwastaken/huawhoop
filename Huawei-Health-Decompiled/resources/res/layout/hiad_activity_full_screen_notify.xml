@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x50"
+    id="@+id/hiad_installed_notify_layout"
+    background="@color/_2131298076_res_0x7f09071c"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.openalliance.ad.views.viewpager.WrapContentHeightGalleryView
+        id="@+id/hiad_view_pager"
+        layout_width="-1"
+        layout_height="-2"/>
+</RelativeLayout>

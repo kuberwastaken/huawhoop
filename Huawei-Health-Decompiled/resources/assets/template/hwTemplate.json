@@ -1,0 +1,338 @@
+{
+    "id": "hwtemplateone",
+    "version": 110001,
+    "name": "hwtemplate",
+    "duration": 14500,
+    "create_time": 1587956099851,
+    "update_time": 1588045904884,
+    "canvas_config": {
+        "ratio": "original",
+        "width": 1920,
+        "height": 1080
+    },
+    "tracks": [
+        {
+            "id": "1vt",
+            "type": "video",
+            "segments": [
+                {
+                    "id": "1vt1vs",
+                    "source_timerange": {
+                        "start": 0,
+                        "duration": 3500
+                    },
+                    "target_timerange": {
+                        "start": 0,
+                        "duration": 3500
+                    },
+                    "speed": 1,
+                    "mirror": false,
+                    "reverse": false,
+                    "volume": 1,
+                    "clip": {
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "rotation": 0,
+                        "transform": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "flip": {
+                            "horizontal": false,
+                            "vertical": false
+                        },
+                        "alpha": 1
+                    },
+                    "material_id": "1v_material_id",
+                    "extra_material_refs": [],
+                    "render_index": 1,
+                    "attachInfo": {
+                        "videoId": "",
+                        "offset": 0
+                    }
+                },
+                {
+                    "id": "1vt2vs",
+                    "source_timerange": {
+                        "start": 0,
+                        "duration": 3500
+                    },
+                    "target_timerange": {
+                        "start": 3500,
+                        "duration": 3500
+                    },
+                    "speed": 1,
+                    "mirror": false,
+                    "reverse": false,
+                    "volume": 1,
+                    "clip": {
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "rotation": 0,
+                        "transform": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "flip": {
+                            "horizontal": false,
+                            "vertical": false
+                        },
+                        "alpha": 1
+                    },
+                    "material_id": "2v_material_id",
+                    "extra_material_refs": [],
+                    "render_index": 1,
+                    "attachInfo": {
+                        "videoId": "",
+                        "offset": 0
+                    }
+                },
+                {
+                    "id": "1vt3vs",
+                    "source_timerange": {
+                        "start": 0,
+                        "duration": 3500
+                    },
+                    "target_timerange": {
+                        "start": 7000,
+                        "duration": 3500
+                    },
+                    "speed": 1,
+                    "mirror": false,
+                    "reverse": false,
+                    "volume": 1,
+                    "clip": {
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "rotation": 0,
+                        "transform": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "flip": {
+                            "horizontal": false,
+                            "vertical": false
+                        },
+                        "alpha": 1
+                    },
+                    "material_id": "3v_material_id",
+                    "extra_material_refs": [],
+                    "render_index": 1,
+                    "attachInfo": {
+                        "videoId": "",
+                        "offset": 0
+                    }
+                },
+                {
+                    "id": "1vt4vs",
+                    "source_timerange": {
+                        "start": 0,
+                        "duration": 4000
+                    },
+                    "target_timerange": {
+                        "start": 10500,
+                        "duration": 4000
+                    },
+                    "speed": 1,
+                    "mirror": false,
+                    "reverse": false,
+                    "volume": 1,
+                    "clip": {
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "rotation": 0,
+                        "transform": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "flip": {
+                            "horizontal": false,
+                            "vertical": false
+                        },
+                        "alpha": 1
+                    },
+                    "material_id": "4v_material_id",
+                    "extra_material_refs": [],
+                    "render_index": 1,
+                    "attachInfo": {
+                        "videoId": "",
+                        "offset": 0
+                    }
+                }
+            ],
+            "flag": 0
+        },
+        {
+            "id": "1at",
+            "type": "audio",
+            "segments": [
+                {
+                    "id": "1at1as",
+                    "source_timerange": {
+                        "start": 0,
+                        "duration": 14500
+                    },
+                    "target_timerange": {
+                        "start": 0,
+                        "duration": 14500
+                    },
+                    "speed": 1,
+                    "mirror": false,
+                    "reverse": false,
+                    "volume": 1,
+                    "clip": {
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "rotation": 0,
+                        "transform": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "flip": {
+                            "horizontal": false,
+                            "vertical": false
+                        },
+                        "alpha": 1
+                    },
+                    "material_id": "1a_material_id",
+                    "extra_material_refs": [],
+                    "render_index": 1,
+                    "attachInfo": {
+                        "videoId": "",
+                        "offset": 0
+                    }
+                }
+            ],
+            "flag": 0
+        },
+        {
+            "id": "1ft",
+            "type": "filter",
+            "segments": [
+                {
+                    "id": "1ft1fs",
+                    "source_timerange": {
+                        "start": 0,
+                        "duration": 14500
+                    },
+                    "target_timerange": {
+                        "start": 0,
+                        "duration": 14500
+                    },
+                    "speed": 1,
+                    "mirror": false,
+                    "reverse": false,
+                    "volume": 1,
+                    "clip": {
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "rotation": 0,
+                        "transform": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "flip": {
+                            "horizontal": false,
+                            "vertical": false
+                        },
+                        "alpha": 1
+                    },
+                    "material_id": "1f_material_id",
+                    "extra_material_refs": [],
+                    "render_index": 1,
+                    "attachInfo": {
+                        "videoId": "1v",
+                        "offset": 0
+                    }
+                }
+            ],
+            "flag": 0
+        }
+    ],
+    "materials": {
+        "videos": [
+            {
+                "id": "1v_material_id",
+                "type": "video",
+                "duration": 600,
+                "path": "/thepath",
+                "width": 1920,
+                "height": 1080,
+                "category_name": null,
+                "rotation": 0.0
+            },
+            {
+                "id": "2v_material_id",
+                "type": "video",
+                "duration": 12129,
+                "path": "/thepath",
+                "width": 1920,
+                "height": 1080,
+                "category_name": null,
+                "rotation": 0.0
+            },
+            {
+                "id": "3v_material_id",
+                "type": "video",
+                "duration": 12129,
+                "path": "/thepath",
+                "width": 1920,
+                "height": 1080,
+                "category_name": null,
+                "rotation": 0.0
+            },
+            {
+                "id": "4v_material_id",
+                "type": "video",
+                "duration": 12129,
+                "path": "/thepath",
+                "width": 1920,
+                "height": 1080,
+                "category_name": null,
+                "rotation": 0.0
+            }
+        ],
+        "audios": [
+            {
+                "id": "1a_material_id",
+                "type": "music",
+                "duration": 23000,
+                "path": "template/HawaiianBeach.aac",
+                "name": "music_name"
+            }
+        ],
+        "effects": [
+            {
+                "id": "1f_material_id",
+                "type": "filter",
+                "effect_id": "milktea.style_yaml",
+                "name": "milktea",
+                "path": "filters/04.jpg",
+                "value": 1,
+                "category_name": ""
+            }
+        ],
+        "tail_leaders": [
+            {
+                "id": "1tl_material_id",
+                "type": "tail_leader",
+                "text": "",
+                "index": 0,
+                "start": 14500,
+                "duration": 1000
+            }
+        ]
+    }
+}

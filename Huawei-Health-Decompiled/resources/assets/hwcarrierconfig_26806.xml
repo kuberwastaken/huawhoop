@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<config>
+    <dict>
+        <string key="ODSA_ESURL">https://aes.mnc006.mcc268.pub.3gppnetwork.org:10024</string>
+        <string key="ODSA_PROTOCOL">2</string>
+        <string key="ODSA_ES_VERSION">5</string>
+        <bool key="ODSA_SUPPORT_NOTIFICATION_SERVICE">false</bool>
+        <bool key="ODSA_SUPPORT_URL_ENCODER_TOKEN">true</bool>
+        <bool key="ODSA_SUPPORT_CHANGE_MANAGE_SUBSCRIPTION">true</bool>
+        <int key="ODSA_POLLING_TIME_LIMIT_MINUTES">20</int>
+    </dict>
+</config>
+

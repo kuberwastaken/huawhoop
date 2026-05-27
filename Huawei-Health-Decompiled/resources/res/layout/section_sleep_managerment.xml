@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-2"
+    layout_height="-2">
+    <LinearLayout
+        orientation="1"
+        id="@+id/layout_webview"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131362934_res_0x7f0a0476"/>
+    <RelativeLayout
+        id="@+id/sleep_toast_layout1"
+        layout_width="-1"
+        layout_height="-2"/>
+</RelativeLayout>

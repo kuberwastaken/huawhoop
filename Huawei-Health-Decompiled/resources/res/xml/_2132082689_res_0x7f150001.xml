@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<account-authenticator xmlns:android="http://schemas.android.com/apk/res/android"
+    label="@string/IDS_app_name_health"
+    icon="@mipmap/healthlogo_hw_app"
+    accountType="com.huawei.health.alive.account"
+    smallIcon="@mipmap/healthlogo_hw_app"
+    customTokens="false"/>

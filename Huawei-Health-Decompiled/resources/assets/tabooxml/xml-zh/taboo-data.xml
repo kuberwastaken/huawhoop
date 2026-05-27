@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taboo>
+    <item name="region_TW_r_all" value="中国台湾"/>
+    <item name="region_HK_r_all" value="中国香港特别行政区"/>
+    <item name="region_MO_r_all" value="中国澳门特别行政区"/>
+    <item name="region_MK_r_all" value="北马其顿"/>
+    <item name="region_TW_hc_TW" value="台湾"/>
+</taboo>

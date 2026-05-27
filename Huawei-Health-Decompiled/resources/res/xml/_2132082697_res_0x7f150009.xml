@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<declaration>
+    <privacystatement id="example_privacy_statement">
+        <title>
+            <string name="@string/IDS_hw_app_name"/>
+        </title>
+        <privacy_statement_package_name>com.huawei.health
+        </privacy_statement_package_name>
+        <privacy_statement_class_name>com.huawei.ui.main.stories.me.views.privacy.PrivacyStatementActivity
+        </privacy_statement_class_name>
+        <privacy_statement_action>android.intent.action.MAIN
+        </privacy_statement_action>
+    </privacystatement>
+</declaration>

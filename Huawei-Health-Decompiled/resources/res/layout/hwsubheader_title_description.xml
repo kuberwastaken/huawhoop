@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x50"
+    orientation="1"
+    id="@+id/hwsubheader_layout_background"
+    background="@color/_2131297307_res_0x7f09041b"
+    paddingBottom="@dimen/_2131364497_res_0x7f0a0a91"
+    layout_width="-1"
+    layout_height="-2"
+    minHeight="@dimen/_2131364483_res_0x7f0a0a83"
+    paddingStart="@dimen/_2131362647_res_0x7f0a0357"
+    paddingEnd="@dimen/_2131362636_res_0x7f0a034c">
+    <com.huawei.uikit.phone.hwtextview.widget.HwTextView
+        textSize="@dimen/_2131362740_res_0x7f0a03b4"
+        textColor="@color/_2131297419_res_0x7f09048b"
+        ellipsize="3"
+        id="@+id/hwsubheader_title_left"
+        layout_width="-1"
+        layout_height="-2"
+        maxLines="1"
+        fontFamily="@string/_2130851947_res_0x7f02386b"
+        textAlignment="5"/>
+    <com.huawei.uikit.phone.hwtextview.widget.HwTextView
+        textSize="@dimen/_2131362741_res_0x7f0a03b5"
+        textColor="@color/_2131297422_res_0x7f09048e"
+        ellipsize="3"
+        id="@+id/hwsubheader_title_description"
+        layout_width="-1"
+        layout_height="-2"
+        maxLines="1"
+        fontFamily="@string/_2130851947_res_0x7f02386b"
+        textAlignment="5"/>
+</LinearLayout>

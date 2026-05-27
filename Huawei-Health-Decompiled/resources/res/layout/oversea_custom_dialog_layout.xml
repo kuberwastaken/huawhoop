@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    id="@+id/dialog_layout"
+    background="@drawable/_2131427941_res_0x7f0b0265"
+    layout_width="-1"
+    layout_height="-2">
+    <LinearLayout
+        orientation="1"
+        id="@+id/content"
+        paddingLeft="@dimen/_2131362647_res_0x7f0a0357"
+        paddingTop="16dp"
+        paddingRight="@dimen/_2131362646_res_0x7f0a0356"
+        visibility="2"
+        layout_width="-1"
+        layout_height="0dp"
+        layout_weight="1"
+        paddingStart="@dimen/_2131362647_res_0x7f0a0357"
+        paddingEnd="@dimen/_2131362646_res_0x7f0a0356"/>
+</LinearLayout>

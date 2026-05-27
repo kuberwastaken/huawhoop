@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="0"
+    layout_width="-1"
+    layout_height="-2"
+    layout_marginTop="@dimen/_2131363112_res_0x7f0a0528"
+    paddingStart="@dimen/_2131362034_res_0x7f0a00f2"
+    paddingEnd="@dimen/_2131362034_res_0x7f0a00f2">
+    <ImageView
+        layout_width="@dimen/_2131363112_res_0x7f0a0528"
+        layout_height="@dimen/_2131363112_res_0x7f0a0528"
+        layout_marginTop="@dimen/_2131363144_res_0x7f0a0548"
+        src="@drawable/_2131431884_res_0x7f0b11cc"
+        scaleType="6"
+        layout_marginEnd="@dimen/_2131364855_res_0x7f0a0bf7"/>
+    <TextView
+        textSize="@dimen/_2131365484_res_0x7f0a0e6c"
+        textColor="@color/_2131299850_res_0x7f090e0a"
+        id="@+id/tips_weight"
+        layout_width="-2"
+        layout_height="-2"
+        lineSpacingExtra="@dimen/_2131363112_res_0x7f0a0528"/>
+</LinearLayout>

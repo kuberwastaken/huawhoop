@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- nova 主题-->
+    <color name="hisync_sdk_emui_accent">#596FE1</color>
+
+    <color name="hisync_sdk_emui_primary">#191919</color>
+    <color name="hisync_sdk_emui_white">#ffffff</color>
+    <color name="hisync_sdk_emui_functional_red">#FA2A2D</color>
+    <!--升级SDK-->
+    <color name="upsdk_category_button_select_pressed">#0277BD</color>
+    <color name="upsdk_blue_text_007dff">#039BE5</color>
+</resources>

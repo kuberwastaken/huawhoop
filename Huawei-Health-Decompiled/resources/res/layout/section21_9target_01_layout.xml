@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/section_root_view"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/section_sub_header"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x7="false"
+        NOT_FOUND_0x8="3"
+        NOT_FOUND_0x9="计划"/>
+    <LinearLayout
+        id="@+id/section21_9target_01_data_recycler_layout"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginStart="@dimen/_2131362372_res_0x7f0a0244"
+        layout_marginEnd="@dimen/_2131362371_res_0x7f0a0243">
+        <com.huawei.ui.commonui.recycleview.HealthRecycleView
+            id="@+id/section21_9target_01_data_recycler_view"
+            layout_width="-1"
+            layout_height="-2"
+            NOT_FOUND_0x6="2"/>
+    </LinearLayout>
+</LinearLayout>

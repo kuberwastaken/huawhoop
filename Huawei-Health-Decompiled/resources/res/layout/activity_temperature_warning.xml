@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    background="@color/_2131297867_res_0x7f09064b"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/title_bar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x10="2"
+        NOT_FOUND_0x12="@string/_2130838340_res_0x7f020344"/>
+    <com.huawei.ui.commonui.toolbar.HealthToolBar
+        id="@+id/temperature_tool_bar"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-2"
+        layout_alignParentBottom="true"/>
+    <com.huawei.uikit.hwcolumnlayout.widget.HwColumnLinearLayout
+        orientation="1"
+        id="@+id/privacy_data_fragment_container"
+        layout_width="-1"
+        layout_height="-1"
+        layout_above="@+id/temperature_tool_bar"
+        layout_below="@+id/title_bar"
+        layout_centerHorizontal="true"
+        NOT_FOUND_0x11="3">
+        <com.huawei.ui.commonui.listview.HealthExpandableListView
+            id="@+id/temperature_warning_exp_list"
+            scrollbars="0x0"
+            clipToPadding="false"
+            layout_width="-1"
+            layout_height="-1"
+            listSelector="@drawable/_2131427524_res_0x7f0b00c4"
+            cacheColorHint="@color/_2131296995_res_0x7f0902e3"
+            groupIndicator="@null"
+            divider="@null"
+            layout_above="@+id/temperature_tool_bar"/>
+    </com.huawei.uikit.hwcolumnlayout.widget.HwColumnLinearLayout>
+    <include
+        id="@+id/temperature_warning_loading"
+        layout_width="-1"
+        layout_height="-1"
+        layout_below="@+id/title_bar"
+        layout="@layout/common_loading_layout"/>
+</RelativeLayout>

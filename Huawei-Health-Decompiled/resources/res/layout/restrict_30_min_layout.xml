@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x800013"
+    orientation="0"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.imageview.HealthImageView
+        layout_width="@dimen/_2131362925_res_0x7f0a046d"
+        layout_height="@dimen/_2131362925_res_0x7f0a046d"
+        src="@drawable/_2131430613_res_0x7f0b0cd5"
+        layout_marginEnd="@dimen/_2131363129_res_0x7f0a0539"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131362917_res_0x7f0a0465"
+        textColor="@color/_2131299847_res_0x7f090e07"
+        id="@+id/restrict_naps_description_text"
+        layout_width="-2"
+        layout_height="-2"/>
+</LinearLayout>

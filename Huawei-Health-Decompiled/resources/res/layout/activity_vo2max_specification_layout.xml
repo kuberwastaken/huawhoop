@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/vo2max_speci_title_bar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x4="3"/>
+    <include
+        id="@+id/specification_help_view"
+        layout="@layout/activity_vo2max_help"/>
+</LinearLayout>

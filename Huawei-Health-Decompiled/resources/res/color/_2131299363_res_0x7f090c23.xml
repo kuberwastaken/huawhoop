@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        color="?attr/_2131099988_res_0x7f060154"
+        state_activated="true"
+        alpha="0.12"/>
+    <item
+        state_checked="true"
+        color="?attr/_2131099988_res_0x7f060154"
+        alpha="0.12"/>
+    <item color="@android:color/transparent"/>
+</selector>

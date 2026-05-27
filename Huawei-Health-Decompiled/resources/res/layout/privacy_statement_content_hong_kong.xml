@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    id="@+id/scrollview_privacy"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+        textColor="@color/_2131299850_res_0x7f090e0a"
+        id="@+id/hw_health_service_item_two"
+        layout_width="-1"
+        layout_height="-2"
+        lineSpacingMultiplier="1.1"
+        fontFamily="@string/_2130852834_res_0x7f023be2"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+        textColor="@color/_2131299850_res_0x7f090e0a"
+        id="@+id/hw_health_service_item_six"
+        layout_width="-1"
+        layout_height="-2"
+        text="@string/_2130841534_res_0x7f020fbe"
+        lineSpacingMultiplier="1.1"
+        fontFamily="@string/_2130852834_res_0x7f023be2"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+        textColor="@color/_2131299850_res_0x7f090e0a"
+        id="@+id/hw_health_service_item_seven"
+        layout_width="-1"
+        layout_height="-2"
+        text="@string/_2130841449_res_0x7f020f69"
+        lineSpacingMultiplier="1.1"
+        fontFamily="@string/_2130852834_res_0x7f023be2"/>
+</LinearLayout>

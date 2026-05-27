@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="0"
+    id="@+id/child_grid_layout"
+    background="@drawable/medal_black_background_bottom"
+    layout_width="-1"
+    layout_height="-2"
+    columnCount="3"/>

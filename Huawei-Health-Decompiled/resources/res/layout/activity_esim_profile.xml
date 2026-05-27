@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296979_res_0x7f0902d3"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/esim_profile_title_bar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x10="2"
+        NOT_FOUND_0x11="@string/_2130849046_res_0x7f022d16"/>
+    <LinearLayout
+        orientation="1"
+        layout_width="-1"
+        layout_height="-2">
+        <include layout="@layout/bt_disconnect_layout"/>
+        <include layout="@layout/bt_connecting_layout"/>
+        <include layout="@layout/bt_comunication_fail"/>
+        <RelativeLayout
+            layout_width="-1"
+            layout_height="-1">
+            <com.huawei.ui.commonui.healthtextview.HealthTextView
+                textSize="@dimen/_2131365303_res_0x7f0a0db7"
+                textColor="@color/_2131299845_res_0x7f090e05"
+                id="@+id/profile_tips"
+                layout_width="-1"
+                layout_height="-2"
+                layout_marginTop="@dimen/_2131365305_res_0x7f0a0db9"
+                text="@string/_2130849038_res_0x7f022d0e"
+                layout_marginStart="@dimen/_2131365334_res_0x7f0a0dd6"
+                layout_marginEnd="@dimen/_2131365334_res_0x7f0a0dd6"/>
+            <ImageView
+                id="@+id/profile_tips_img"
+                background="@color/_2131296307_res_0x7f090033"
+                layout_width="-1"
+                layout_height="8dp"
+                layout_marginTop="@dimen/_2131365304_res_0x7f0a0db8"
+                layout_below="@+id/profile_tips"/>
+            <ListView
+                id="@+id/esim_profile"
+                layout_width="-1"
+                layout_height="-1"
+                divider="@color/_2131296925_res_0x7f09029d"
+                dividerHeight="0.5dp"
+                layout_below="@+id/profile_tips_img"
+                headerDividersEnabled="false"
+                footerDividersEnabled="true"
+                layout_marginStart="@dimen/_2131365334_res_0x7f0a0dd6"
+                layout_marginEnd="@dimen/_2131365334_res_0x7f0a0dd6"/>
+            <include layout="@layout/layout_back_next"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

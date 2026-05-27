@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-1">
+    <RelativeLayout
+        id="@+id/achieve_level_head"
+        layout_width="-1"
+        layout_height="-2">
+        <com.huawei.ui.commonui.titlebar.CustomTitleBar
+            id="@+id/level_titlebar"
+            layout_width="-1"
+            layout_height="-2"
+            NOT_FOUND_0x9="2"
+            NOT_FOUND_0xc="@color/_2131296922_res_0x7f09029a"
+            NOT_FOUND_0xd="@string/_2130840937_res_0x7f020d69"
+            NOT_FOUND_0xe="false"/>
+    </RelativeLayout>
+    <com.huawei.ui.commonui.scrollview.HealthScrollView
+        id="@+id/fragment_social_sroll"
+        scrollbars="0x0"
+        layout_width="-1"
+        layout_height="-1"
+        fillViewport="true"
+        layout_below="@+id/achieve_level_head"
+        NOT_FOUND_0xa="true"
+        NOT_FOUND_0xb="true">
+        <com.huawei.ui.commonui.recycleview.HealthRecycleView
+            id="@+id/achieve_level_listview"
+            scrollbars="0x0"
+            layout_width="-1"
+            layout_height="-1"
+            divider="@null"/>
+    </com.huawei.ui.commonui.scrollview.HealthScrollView>
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    id="@+id/download_plugin_layout"
+    layout_width="-1"
+    layout_height="-2"
+    layout_marginTop="@dimen/_2131363051_res_0x7f0a04eb">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textAppearance="@android:style/TextAppearance.Material.Notification.Info"
+        textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+        id="@+id/content_textview"
+        layout_width="-1"
+        layout_height="-2"
+        layout_alignParentStart="true"/>
+</LinearLayout>

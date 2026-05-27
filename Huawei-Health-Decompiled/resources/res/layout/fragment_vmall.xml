@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <RelativeLayout
+        id="@+id/device_vmall_card_layout"
+        paddingTop="@dimen/_2131364856_res_0x7f0a0bf8"
+        layout_width="-1"
+        layout_height="-1">
+        <com.huawei.ui.commonui.progressbar.HealthProgressBar
+            id="@+id/loading_progress"
+            layout_width="-2"
+            layout_height="-2"
+            layout_marginTop="@dimen/_2131362918_res_0x7f0a0466"
+            layout_centerHorizontal="true"
+            style="@style/hw_health_progressbar_style_large"/>
+        <WebView
+            orientation="1"
+            id="@+id/vmall_webview"
+            background="@color/_2131299926_res_0x7f090e56"
+            visibility="0"
+            scrollbars="0x0"
+            layout_width="-1"
+            layout_height="-1"/>
+        <include
+            id="@+id/vmall_no_network_layout"
+            visibility="2"
+            layout="@layout/vmall_no_network_inner_layout"/>
+    </RelativeLayout>
+</LinearLayout>

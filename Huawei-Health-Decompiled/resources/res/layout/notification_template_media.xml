@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="0"
+    id="@+id/status_bar_latest_event_content"
+    layout_width="-1"
+    layout_height="64dp">
+    <include
+        layout_width="@dimen/_2131365122_res_0x7f0a0d02"
+        layout_height="@dimen/_2131365121_res_0x7f0a0d01"
+        layout="@layout/notification_template_icon_group"/>
+    <include
+        layout_width="0dp"
+        layout_height="-2"
+        layout_weight="1"
+        layout="@layout/notification_template_lines_media"/>
+    <LinearLayout
+        layout_gravity="0x800015"
+        orientation="0"
+        id="@+id/media_actions"
+        layout_width="-2"
+        layout_height="-1"
+        layoutDirection="0"/>
+    <include
+        layout_width="48dp"
+        layout_height="-1"
+        layout_marginRight="6dp"
+        layout_marginEnd="6dp"
+        layout="@layout/notification_media_cancel_action"/>
+    <ImageView
+        id="@+id/end_padder"
+        layout_width="6dp"
+        layout_height="-1"/>
+</LinearLayout>

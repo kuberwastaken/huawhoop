@@ -1,0 +1,109 @@
+{
+  "1": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "musicInfo",
+        "type": "empty",
+        "optional": true
+      },
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32",
+        "optional": true
+      }
+    ],
+    "encode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32"
+      }
+    ]
+  },
+  "2": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "singerName",
+        "type": "array",
+        "elemType": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "songName",
+        "type": "array",
+        "elemType": "number8"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "playState",
+        "type": "number8"
+      },
+      {
+        "tag": 4,
+        "jsonKey": "maxVolume",
+        "type": "number8"
+      },
+      {
+        "tag": 5,
+        "jsonKey": "currentVolume",
+        "type": "number8"
+      },
+      {
+        "tag": 6,
+        "jsonKey": "previousControl",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 7,
+        "jsonKey": "nextControl",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 8,
+        "jsonKey": "playControl",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 9,
+        "jsonKey": "mediaType",
+        "type": "number8"
+      }
+    ],
+    "decode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32"
+      }
+    ]
+  },
+  "3": {
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "musicControl",
+        "type": "number",
+        "optional": true
+      },
+      {
+        "tag": 2,
+        "jsonKey": "musicVolume",
+        "type": "number",
+        "optional": true
+      }
+    ],
+    "encode": [
+      {
+        "tag": 127,
+        "jsonKey": "errorCode",
+        "type": "number32"
+      }
+    ]
+  }
+}

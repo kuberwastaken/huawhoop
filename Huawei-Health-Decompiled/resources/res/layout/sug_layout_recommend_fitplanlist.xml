@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/sug_fitness_title"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x8="2"
+        NOT_FOUND_0x9="@string/_2130844817_res_0x7f021c91"/>
+    <RelativeLayout
+        id="@+id/fitplans_layout"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginStart="@dimen/_2131362013_res_0x7f0a00dd"
+        layout_marginEnd="@dimen/_2131362011_res_0x7f0a00db">
+        <com.huawei.ui.commonui.recycleview.HealthRecycleView
+            id="@+id/plan_list_recycle_view"
+            layout_width="-1"
+            layout_height="-1"
+            layout_alignParentTop="true"/>
+    </RelativeLayout>
+</LinearLayout>

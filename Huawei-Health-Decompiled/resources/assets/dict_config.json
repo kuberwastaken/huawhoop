@@ -1,0 +1,725 @@
+{
+  "version": 20240311,
+  "extraProcessTypes": [
+    {
+      "typeId": 700009,
+      "processUrl": "com.huawei.hwarkuix.oHBrigdePlugin.health.HeartRateBridge#processECG"
+    },
+    {
+      "typeId": 31002,
+      "processUrl": "com.huawei.hwarkuix.oHBrigdePlugin.health.HeartRateBridge#processECGDia"
+    },
+    {
+      "typeId": 700004,
+      "processUrl": "com.huawei.hwarkuix.oHBrigdePlugin.health.HeartRateBridge#processPPG"
+    },
+    {
+      "typeId": 400017,
+      "processUrl": "com.huawei.hwarkuix.oHBrigdePlugin.health.HeartRateBridge#processVas"
+    }
+  ],
+  "dictTypes": [
+    {
+      "typeId": 500021,
+      "name": "HIGH_HEART_RATE",
+      "fields": [
+        {
+          "healthType": 500021207,
+          "name": "maxHighHeartRateForAPeriod",
+          "format": "Integer",
+          "isMetaData": true,
+          "metaName": "maxHeartRate",
+          "mappingId": 2101,
+          "mappingName":"HIGH_HEART_RATE",
+          "statMappings": [
+            {
+              "statType": 47003,
+              "statName": "maxHighHeartRate",
+              "statPolicy": "max"
+            }
+          ]
+        },
+        {
+          "healthType": 500021237,
+          "name": "minHighHeartRateForAPeriod",
+          "format": "Integer",
+          "isMetaData": true,
+          "metaName": "minHeartRate",
+          "mappingId":2101,
+          "mappingName":"HIGH_HEART_RATE",
+          "statMappings": [
+            {
+              "statType": 47002,
+              "statName": "minHighHeartRate",
+              "statPolicy": "min"
+            }
+          ]
+        },
+        {
+          "healthType": 500021411,
+          "name": "highHeartRateDetail",
+          "format": "Integer",
+          "isMetaData": true,
+          "metaName": "details",
+          "mappingId":2101,
+          "mappingName":"HIGH_HEART_RATE",
+          "statMappings": [
+            {
+              "statType": 47004,
+              "statName": "highHeartRateDuration",
+              "statPolicy": "duration"
+            }
+          ]
+        },
+        {
+          "healthType": 500021617,
+          "name": "highThreshold",
+          "format": "Integer",
+          "isMetaData": true,
+          "metaName": "threshold",
+          "mappingId": 2101,
+          "mappingName":"HIGH_HEART_RATE",
+          "statMappings": [
+            {
+              "statType": 47005,
+              "statName": "highHeartRateAlarmTimes",
+              "statPolicy": "count"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "typeId": 500022,
+      "name": "LOW_HEART_RATE",
+      "fields": [
+        {
+          "healthType": 500022511,
+          "name": "maxLowHeartRateForAPeriod",
+          "format": "Integer",
+          "isMetaData": true,
+          "metaName": "maxHeartRate",
+          "mappingId": 2102,
+          "mappingName":"LOW_HEART_RATE",
+          "statMappings": [
+            {
+              "statType": 47053,
+              "statName": "maxLowHeartRate",
+              "statPolicy": "max"
+            }
+          ]
+        },
+        {
+          "healthType": 500022565,
+          "name": "minLowHeartRateForAPeriod",
+          "format": "Integer",
+          "isMetaData": true,
+          "metaName": "minHeartRate",
+          "mappingId":2102,
+          "mappingName":"LOW_HEART_RATE",
+          "statMappings": [
+            {
+              "statType": 47052,
+              "statName": "minLowHeartRate",
+              "statPolicy": "min"
+            }
+          ]
+        },
+        {
+          "healthType": 500022115,
+          "name": "lowHeartRateDetail",
+          "format": "Integer",
+          "isMetaData": true,
+          "metaName": "details",
+          "mappingId":2102,
+          "mappingName":"LOW_HEART_RATE",
+          "statMappings": [
+            {
+              "statType": 47054,
+              "statName": "lowHeartRateDuration",
+              "statPolicy": "duration"
+            }
+          ]
+        },
+        {
+          "healthType": 500022167,
+          "name": "lowThreshold",
+          "format": "Integer",
+          "isMetaData": true,
+          "metaName": "threshold",
+          "mappingId":2102,
+          "mappingName":"LOW_HEART_RATE",
+          "statMappings": [
+            {
+              "statType": 47055,
+              "statName": "lowHeartRateAlarmTimes",
+              "statPolicy": "count"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "typeId": 200009,
+      "name": "DAILY_ACTIVITIES",
+      "fields": [
+        {
+          "healthType": 200009009,
+          "name": "pushesVal",
+          "format": "Integer",
+          "mappingId": 8,
+          "mappingName": "pushesVal",
+          "statMappings": [
+            {
+              "statType": 40008,
+              "statName": "pushesValStat",
+              "statPolicy": "sum"
+            }
+          ]
+        },
+        {
+          "healthType": 200009001,
+          "name": "step",
+          "mappingId": 2,
+          "statMappings": [
+            {
+              "statType": 40002,
+              "statName": "visualSteps",
+              "statPolicy": "sum"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "typeId": 500023,
+      "name": "DYNAMIC_HEART_RATE",
+      "fields": [
+        {
+          "healthType": 2002,
+          "name": "bpm",
+          "format": "Integer",
+          "statMappings": [
+            {
+              "statType": 46016,
+              "statName": "maxBpm",
+              "statPolicy": "max"
+            },
+            {
+              "statType": 46017,
+              "statName": "minBpm",
+              "statPolicy": "min"
+            },
+            {
+              "statType": 46019,
+              "statName": "lastBpm",
+              "statPolicy": "last"
+            }]
+        }
+      ]
+    },
+    {
+      "typeId": 500024,
+      "name": "RESTING_HEART_RATE",
+      "fields": [
+        {
+          "healthType": 2018,
+          "name": "oldRestBpm",
+          "format": "Integer",
+          "statMappings": [
+            {
+              "statType": 500024888,
+              "statName": "maxOldRestBpm",
+              "statPolicy": "max"
+            },{
+              "statType": 500024250,
+              "statName": "minOldRestBpm",
+              "statPolicy": "min"
+            },{
+              "statType": 46018,
+              "statName": "avgOldRestBpm",
+              "statPolicy": "avg"
+            },{
+              "statType": 500024486,
+              "statName": "lastOldRestBpm",
+              "statPolicy": "last"
+            }]
+        },
+        {
+          "healthType": 2105,
+          "name": "restBpm",
+          "format": "Integer",
+          "statMappings": [
+            {
+              "statType": 46020,
+              "statName": "lastRestBpm",
+              "statPolicy": "last"
+            }]
+        }
+      ]
+    },
+    {
+      "typeId": 500026,
+      "name": "STRESS",
+      "syncType": 11,
+      "fields": [
+        {
+          "healthType": 500026382,
+          "name": "stressScore",
+          "format": "Integer",
+          "mappingId":2034,
+          "mappingName":"stressScore",
+          "statMappings": [
+            {
+              "statType": 44304,
+              "statName": "minScore",
+              "statPolicy": "min"
+            },{
+              "statType": 44305,
+              "statName": "maxScore",
+              "statPolicy": "max"
+            },{
+              "statType": 44306,
+              "statName": "meanScore",
+              "statPolicy": "avg"
+            },{
+              "statType": 44307,
+              "statName": "lastScore",
+              "statPolicy": "last"
+            }, {
+              "statType": 44308,
+              "statName": "measureCount",
+              "statPolicy": "count"
+            }]
+        },
+        {
+          "healthType": 500026285,
+          "name": "stressDetail",
+          "isMetaData": true,
+          "format": "String",
+          "mappingId":2034,
+          "mappingName":"stressDetail"
+        }
+      ]
+    },
+    {
+      "typeId": 800003,
+      "name": "SLEEP_PRO_RECORD",
+      "fields": [
+        {
+          "healthType": 800001156,
+          "name": "wakeupTime",
+          "format": "Long",
+          "mappingId":44202,
+          "mappingName":"dayWakeupTime",
+          "statMappings": [
+            {
+              "statType": 44202,
+              "statName": "dayWakeupTime",
+              "statPolicy": "max"
+            }]
+        },
+        {
+          "healthType": 800001686,
+          "name": "fallAsleepTime",
+          "format": "Long",
+          "mappingId":44201,
+          "mappingName":"dayFallAsleepTime",
+          "statMappings": [
+            {
+              "statType": 44201,
+              "statName": "dayFallAsleepTime",
+              "statPolicy": "min"
+            }]
+        },
+        {
+          "healthType": 800001396,
+          "name": "duration",
+          "format": "Integer",
+          "mappingId":44105,
+          "mappingName":"dayDuration",
+          "statMappings": [
+            {
+              "statType": 44105,
+              "statName": "dayDuration",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 800001245,
+          "name": "sleepScore",
+          "format": "Integer",
+          "mappingId":44203,
+          "mappingName":"daySleepScore",
+          "statMappings": [
+          {
+            "statType": 44203,
+            "statName": "daySleepScore",
+            "statPolicy": "max"
+          }]
+        }
+      ]
+    },
+    {
+      "typeId": 30001,
+      "name": "SPORT",
+      "fields": [
+        {
+          "healthType": 42102,
+          "mappingId":0,
+          "statMappings": [
+            {
+              "statType": 42102,
+              "statName": "sumTotalDistance",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 42152,
+          "mappingId":0,
+          "statMappings": [
+            {
+              "statType": 42152,
+              "statName": "sumTotalDistance",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 42202,
+          "mappingId":0,
+          "statMappings": [
+            {
+              "statType": 42202,
+              "statName": "sumTotalDistance",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 42001,
+          "mappingId":0,
+          "statMappings": [
+            {
+              "statType": 42001,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 42413,
+          "mappingId":0,
+          "statMappings": [
+            {
+              "statType": 42413,
+              "statName": "sumGolfSwingCount",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 286,
+          "mappingId":286,
+          "statMappings": [
+            {
+              "statType": 23,
+              "statName": "sumGolfSwingCount",
+              "statPolicy": "sum"
+            },
+            {
+              "statType": 5,
+              "statName": "sumTotalCount",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 220,
+          "mappingId":220,
+          "statMappings": [
+            {
+              "statType": 5,
+              "statName": "sumTotalCount",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 283,
+          "mappingId":283,
+          "statMappings": [
+            {
+              "statType": 12,
+              "statName": "sumSkipNum",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 275,
+          "mappingId":275,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 139,
+          "mappingId":139,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 137,
+          "mappingId":137,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 151,
+          "mappingId":151,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 138,
+          "mappingId":138,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 140,
+          "mappingId":140,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 141,
+          "mappingId":141,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 142,
+          "mappingId":142,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 143,
+          "mappingId":143,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 144,
+          "mappingId":144,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 145,
+          "mappingId":145,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 146,
+          "mappingId":146,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 147,
+          "mappingId":147,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 148,
+          "mappingId":148,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 149,
+          "mappingId":149,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 150,
+          "mappingId":150,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 152,
+          "mappingId":152,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 153,
+          "mappingId":153,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 154,
+          "mappingId":154,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 155,
+          "mappingId":155,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 156,
+          "mappingId":156,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 157,
+          "mappingId":157,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 158,
+          "mappingId":158,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 159,
+          "mappingId":159,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 160,
+          "mappingId":160,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 161,
+          "mappingId":161,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        },
+        {
+          "healthType": 279,
+          "mappingId":279,
+          "statMappings": [
+            {
+              "statType": 4,
+              "statName": "sumTotalTime",
+              "statPolicy": "sum"
+            }]
+        }
+      ]
+    }
+  ]
+}

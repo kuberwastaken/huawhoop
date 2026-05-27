@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        state_pressed="true"
+        color="?unknown_attr_ref: 7f060149"
+        alpha="@dimen/_2131365025_res_0x7f0a0ca1"/>
+    <item
+        state_focused="true"
+        color="?unknown_attr_ref: 7f060149"
+        alpha="@dimen/_2131365023_res_0x7f0a0c9f"
+        state_hovered="true"/>
+    <item
+        state_focused="true"
+        color="?unknown_attr_ref: 7f060149"
+        alpha="@dimen/_2131365023_res_0x7f0a0c9f"/>
+    <item
+        color="?unknown_attr_ref: 7f060149"
+        alpha="@dimen/_2131365024_res_0x7f0a0ca0"
+        state_hovered="true"/>
+    <item
+        color="?unknown_attr_ref: 7f060149"
+        alpha="@dimen/_2131365022_res_0x7f0a0c9e"/>
+</selector>

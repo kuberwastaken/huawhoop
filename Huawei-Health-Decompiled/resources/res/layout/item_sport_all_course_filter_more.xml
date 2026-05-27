@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    gravity="0x11"
+    id="@+id/sug_course_filter_more_item"
+    layout_width="-1"
+    layout_height="-2"
+    minHeight="@dimen/_2131363090_res_0x7f0a0512">
+    <FrameLayout
+        layout_width="-2"
+        layout_height="-1">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365484_res_0x7f0a0e6c"
+            ellipsize="4"
+            gravity="0x11"
+            layout_gravity="0x1"
+            id="@+id/sug_fitness_more_filter"
+            background="@drawable/_2131429742_res_0x7f0b096e"
+            layout_width="-2"
+            layout_height="-1"
+            maxLines="1"
+            drawablePadding="-14dp"
+            drawableEnd="@drawable/_2131431825_res_0x7f0b1191"
+            textAlignment="0"
+            paddingStart="@dimen/_2131362916_res_0x7f0a0464"
+            style="@style/Widget.Emui.HwSpinner.HwSpinnerItem"/>
+    </FrameLayout>
+</LinearLayout>

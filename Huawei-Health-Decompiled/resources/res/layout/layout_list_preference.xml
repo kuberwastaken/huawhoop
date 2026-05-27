@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-2">
+    <ListView
+        id="@+id/lv_list_preference"
+        layout_width="-1"
+        layout_height="-2"
+        divider="@color/_2131297380_res_0x7f090464"
+        dividerHeight="@dimen/_2131363295_res_0x7f0a05df"/>
+</RelativeLayout>

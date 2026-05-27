@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    paddingBottom="@dimen/_2131362500_res_0x7f0a02c4"
+    layout_width="-1"
+    layout_height="-2">
+    <LinearLayout
+        layout_gravity="0x10"
+        orientation="1"
+        layout_width="-1"
+        layout_height="-2">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131362734_res_0x7f0a03ae"
+            ellipsize="3"
+            gravity="0x10"
+            id="@+id/commonui_dialog_title"
+            layout_width="-1"
+            layout_height="-2"
+            minHeight="@dimen/_2131362506_res_0x7f0a02ca"
+            maxLines="2"
+            textAlignment="1"
+            layout_marginStart="@dimen/_2131363021_res_0x7f0a04cd"
+            NOT_FOUND_0xf="@dimen/_2131364239_res_0x7f0a098f"
+            NOT_FOUND_0x10="1sp"
+            style="@style/Widget.Emui.HwDialogPattern.DialogWindowTitle"/>
+        <com.huawei.ui.commonui.scrollview.HealthScrollView
+            id="@+id/text_scrollview"
+            layout_width="-1"
+            layout_height="-2">
+            <com.huawei.ui.commonui.healthtextview.HealthTextView
+                id="@+id/commonui_dialog_content"
+                layout_width="-1"
+                layout_height="-2"
+                textAlignment="5"
+                paddingStart="@dimen/_2131363021_res_0x7f0a04cd"
+                paddingEnd="@dimen/_2131363021_res_0x7f0a04cd"
+                style="@style/Widget.Emui.HwDialogPattern.DialogBody1"/>
+        </com.huawei.ui.commonui.scrollview.HealthScrollView>
+    </LinearLayout>
+</LinearLayout>

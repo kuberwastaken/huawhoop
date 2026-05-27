@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    clipChildren="false"
+    clipToPadding="false"
+    layout_width="-1"
+    layout_height="-1">
+    <include
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginBottom="@dimen/_2131362970_res_0x7f0a049a"
+        layout="@layout/restrict_30_min_layout"/>
+    <com.huawei.ui.main.stories.fitness.views.coresleep.RestrictNapsProgressBar
+        id="@+id/restrict_naps_progress_bar"
+        layout_width="-1"
+        layout_height="-2"/>
+</LinearLayout>

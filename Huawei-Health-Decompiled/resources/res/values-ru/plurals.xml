@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_plugin_fitnessadvice_minute">
+        <item quantity="one">%1$s минута</item>
+        <item quantity="few">%1$s минуты</item>
+        <item quantity="many">%1$s минут</item>
+        <item quantity="other">%1$s минуты</item>
+    </plurals>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">На одном графике может отражаться до %1$d индикатора.</item>
+        <item quantity="few">На одном графике может отражаться до %1$d индикаторов.</item>
+        <item quantity="many">На одном графике может отражаться до %1$d индикаторов.</item>
+        <item quantity="other">На одном графике может отражаться до %1$d индикаторов.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">Через %1$s мин ожидается падение уровня сахара в крови ниже %2$s ммоль/л. Внимательно следите за показателем.</item>
+        <item quantity="few">Через %1$s мин ожидается падение уровня сахара в крови ниже %2$s ммоль/л. Внимательно следите за показателем.</item>
+        <item quantity="many">Через %1$s мин ожидается падение уровня сахара в крови ниже %2$s ммоль/л. Внимательно следите за показателем.</item>
+        <item quantity="other">Через %1$s мин ожидается падение уровня сахара в крови ниже %2$s ммоль/л. Внимательно следите за показателем.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">Через %1$s мин ожидается падение уровня сахара в крови ниже %2$s мг/дл. Внимательно следите за показателем.</item>
+        <item quantity="few">Через %1$s мин ожидается падение уровня сахара в крови ниже %2$s мг/дл. Внимательно следите за показателем.</item>
+        <item quantity="many">Через %1$s мин ожидается падение уровня сахара в крови ниже %2$s мг/дл. Внимательно следите за показателем.</item>
+        <item quantity="other">Через %1$s мин ожидается падение уровня сахара в крови ниже %2$s мг/дл. Внимательно следите за показателем.</item>
+    </plurals>
+    <plurals name="IDS_user_profile_achieve_num_day">
+        <item quantity="one">%1$s день</item>
+        <item quantity="few">%1$s дня</item>
+        <item quantity="many">%1$s дней</item>
+        <item quantity="other">%1$s дня</item>
+    </plurals>
+    <plurals name="IDS_sleep_referece_title_score_string">
+        <item quantity="one">%1$s балл</item>
+        <item quantity="few">%1$s балла</item>
+        <item quantity="many">%1$s баллов</item>
+        <item quantity="other">%1$s балла</item>
+    </plurals>
+    <plurals name="IDS_hwh_motiontrack_swim_pace_unit">
+        <item quantity="one">/%1$d м</item>
+        <item quantity="few">/%1$d м</item>
+        <item quantity="many">/%1$d м</item>
+        <item quantity="other">/%1$d м</item>
+    </plurals>
+    <plurals name="IDS_hwh_motiontrack_swim_pace_unit_mi">
+        <item quantity="one">/%1$d ярд</item>
+        <item quantity="few">/%1$d ярд.</item>
+        <item quantity="many">/%1$d ярд.</item>
+        <item quantity="other">/%1$d ярд.</item>
+    </plurals>
+    <plurals name="IDS_hwh_motiontrack_unit_yd">
+        <item quantity="one">ярд</item>
+        <item quantity="few">ярда</item>
+        <item quantity="many">ярдов</item>
+        <item quantity="other">ярда</item>
+    </plurals>
+    <plurals name="IDS_hwh_motiontrack_ft_string">
+        <item quantity="one">фут</item>
+        <item quantity="few">фута</item>
+        <item quantity="many">футов</item>
+        <item quantity="other">фута</item>
+    </plurals>
+    <plurals name="IDS_band_data_golf_count_unit">
+        <item quantity="one">%s удар</item>
+        <item quantity="few">%s удара</item>
+        <item quantity="many">%s ударов</item>
+        <item quantity="other">%s удара</item>
+    </plurals>
+    <plurals name="IDS_indoor_skipper_number_unit_value">
+        <item quantity="one">%1$s прыжок</item>
+        <item quantity="few">%1$s прыжка</item>
+        <item quantity="many">%1$s прыжков</item>
+        <item quantity="other">%1$s прыжка</item>
+    </plurals>
+    <plurals name="IDS_fitness_completed_goal">
+        <item quantity="one">Еще %1$s шаг</item>
+        <item quantity="few">Еще %1$s шага</item>
+        <item quantity="many">Еще %1$s шагов</item>
+        <item quantity="other">Еще %1$s шага</item>
+    </plurals>
+    <plurals name="IDS_altitude_ft">
+        <item quantity="one">%1$s фут</item>
+        <item quantity="few">%1$s фута</item>
+        <item quantity="many">%1$s футов</item>
+        <item quantity="other">%1$s фута</item>
+    </plurals>
+    <plurals name="IDS_altitude_meter">
+        <item quantity="one">%1$s м</item>
+        <item quantity="few">%1$s м</item>
+        <item quantity="many">%1$s м</item>
+        <item quantity="other">%1$s м</item>
+    </plurals>
+    <plurals name="IDS_physiology_day">
+        <item quantity="one">%s день</item>
+        <item quantity="few">%s дня</item>
+        <item quantity="many">%s дней</item>
+        <item quantity="other">%s дня</item>
+    </plurals>
+    <plurals name="IDS_single_circle_active_target_desc">
+        <item quantity="one">%1$s час</item>
+        <item quantity="few">%1$s часа</item>
+        <item quantity="many">%1$s часов</item>
+        <item quantity="other">%1$s часа</item>
+    </plurals>
+    <plurals name="IDS_single_circle_intensity_target_desc">
+        <item quantity="one">%1$s мин</item>
+        <item quantity="few">%1$s мин</item>
+        <item quantity="many">%1$s мин</item>
+        <item quantity="other">%1$s мин</item>
+    </plurals>
+    <plurals name="IDS_min_single_unit">
+        <item quantity="one">%s мин</item>
+        <item quantity="few">%s мин</item>
+        <item quantity="many">%s мин</item>
+        <item quantity="other">%s мин</item>
+    </plurals>
+    <plurals name="IDS_min_insert_unit">
+        <item quantity="one">%1$s мин</item>
+        <item quantity="few">%1$s мин</item>
+        <item quantity="many">%1$s мин</item>
+        <item quantity="other">%1$s мин</item>
+    </plurals>
+    <plurals name="IDS_hour_single_unit">
+        <item quantity="one">%1$s ч</item>
+        <item quantity="few">%1$s ч</item>
+        <item quantity="many">%1$s ч</item>
+        <item quantity="other">%1$s ч</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_1">
+        <item quantity="one">Остался %1$d шаг. Так держать!</item>
+        <item quantity="few">Осталось %1$d шага. Так держать!</item>
+        <item quantity="many">Осталось %1$d шагов. Так держать!</item>
+        <item quantity="other">Осталось %1$d шага. Так держать!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_2">
+        <item quantity="one">Всего %1$d шаг до цели!</item>
+        <item quantity="few">Всего %1$d шага до цели!</item>
+        <item quantity="many">Всего %1$d шагов до цели!</item>
+        <item quantity="other">Всего %1$d шага до цели!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_3">
+        <item quantity="one">Остался %1$d шаг. Вы сможете!</item>
+        <item quantity="few">Осталось %1$d шага. Вы сможете!</item>
+        <item quantity="many">Осталось %1$d шагов. Вы сможете!</item>
+        <item quantity="other">Осталось %1$d шага. Вы сможете!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_4">
+        <item quantity="one">Остался %1$d шаг. Еще немного!</item>
+        <item quantity="few">Осталось %1$d шага. Еще немного!</item>
+        <item quantity="many">Осталось %1$d шагов. Еще немного!</item>
+        <item quantity="other">Осталось %1$d шага. Еще немного!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_5">
+        <item quantity="one">До сегодняшней цели всего %1$d шаг!</item>
+        <item quantity="few">До сегодняшней цели всего %1$d шага!</item>
+        <item quantity="many">До сегодняшней цели всего %1$d шагов!</item>
+        <item quantity="other">До сегодняшней цели всего %1$d шага!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_6">
+        <item quantity="one">Всего %1$d шаг до цели</item>
+        <item quantity="few">Всего %1$d шага до цели</item>
+        <item quantity="many">Всего %1$d шагов до цели</item>
+        <item quantity="other">Всего %1$d шага до цели</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_7">
+        <item quantity="one">Еще %1$d шаг</item>
+        <item quantity="few">Еще %1$d шага</item>
+        <item quantity="many">Еще %1$d шагов</item>
+        <item quantity="other">Еще %1$d шага</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_1">
+        <item quantity="one">Достигнуто %1$d день подряд.</item>
+        <item quantity="few">Достигнуто %1$d дня подряд.</item>
+        <item quantity="many">Достигнуто %1$d дней подряд.</item>
+        <item quantity="other">Достигнуто %1$d дня подряд.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_1_over_30_days">
+        <item quantity="one">Достигнуто более %1$d дня подряд.</item>
+        <item quantity="few">Достигнуто более %1$d дней подряд.</item>
+        <item quantity="many">Достигнуто более %1$d дней подряд.</item>
+        <item quantity="other">Достигнуто более %1$d дней подряд.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_2">
+        <item quantity="one">Выполнено %1$d день.</item>
+        <item quantity="few">Выполнено %1$d дня подряд.</item>
+        <item quantity="many">Выполнено %1$d дней подряд.</item>
+        <item quantity="other">Выполнено %1$d дня подряд.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_2_over_30_days">
+        <item quantity="one">Выполнено более %1$d дня подряд.</item>
+        <item quantity="few">Выполнено более %1$d дней подряд.</item>
+        <item quantity="many">Выполнено более %1$d дней подряд.</item>
+        <item quantity="other">Выполнено более %1$d дней подряд.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_3">
+        <item quantity="one">%1$d день подряд. Посмотрите число шагов.</item>
+        <item quantity="few">%1$d дня подряд. Посмотрите число шагов.</item>
+        <item quantity="many">%1$d дней подряд. Посмотрите число шагов.</item>
+        <item quantity="other">%1$d дня подряд. Посмотрите число шагов.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_3_over_30_days">
+        <item quantity="one">Достигнуто более %1$d дня подряд. Посмотрите число шагов.</item>
+        <item quantity="few">Достигнуто более %1$d дней подряд. Посмотрите число шагов.</item>
+        <item quantity="many">Достигнуто более %1$d дней подряд. Посмотрите число шагов.</item>
+        <item quantity="other">Достигнуто более %1$d дней подряд. Посмотрите число шагов.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_4">
+        <item quantity="one">Ваш рекорд: %1$d день.</item>
+        <item quantity="few">Ваш рекорд: %1$d дня.</item>
+        <item quantity="many">Ваш рекорд: %1$d дней.</item>
+        <item quantity="other">Ваш рекорд: %1$d дня.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_4_over_30_days">
+        <item quantity="one">Ваш рекорд: больше %1$d дня.</item>
+        <item quantity="few">Ваш рекорд: больше %1$d дней.</item>
+        <item quantity="many">Ваш рекорд: больше %1$d дней.</item>
+        <item quantity="other">Ваш рекорд: больше %1$d дней.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_5">
+        <item quantity="one">Цель достигнута %1$d день.</item>
+        <item quantity="few">Цель достигнута %1$d дня подряд.</item>
+        <item quantity="many">Цель достигнута %1$d дней подряд.</item>
+        <item quantity="other">Цель достигнута %1$d дня подряд.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_5_over_30_days">
+        <item quantity="one">Цель достигнута более %1$d дня подряд.</item>
+        <item quantity="few">Цель достигнута более %1$d дней подряд.</item>
+        <item quantity="many">Цель достигнута более %1$d дней подряд.</item>
+        <item quantity="other">Цель достигнута более %1$d дней подряд.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_6">
+        <item quantity="one">Прекрасно! %1$d день подряд.</item>
+        <item quantity="few">Прекрасно! %1$d дня подряд.</item>
+        <item quantity="many">Прекрасно! %1$d дней подряд.</item>
+        <item quantity="other">Прекрасно! %1$d дня подряд.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_6_over_30_days">
+        <item quantity="one">Прекрасно! Непрерывное достижение более %1$d дня.</item>
+        <item quantity="few">Прекрасно! Непрерывное достижение более %1$d дней.</item>
+        <item quantity="many">Прекрасно! Непрерывное достижение более %1$d дней.</item>
+        <item quantity="other">Прекрасно! Непрерывное достижение более %1$d дней.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_7">
+        <item quantity="one">Результат держится %1$d день подряд!</item>
+        <item quantity="few">Результат держится %1$d дня подряд!</item>
+        <item quantity="many">Результат держится %1$d дней подряд!</item>
+        <item quantity="other">Результат держится %1$d дня подряд!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_7_over_30_days">
+        <item quantity="one">Результат держится более %1$d дня!</item>
+        <item quantity="few">Результат держится более %1$d дней!</item>
+        <item quantity="many">Результат держится более %1$d дней!</item>
+        <item quantity="other">Результат держится более %1$d дней!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_1">
+        <item quantity="one">%1$d день подряд! Не сдавайтесь!</item>
+        <item quantity="few">%1$d дня подряд! Не сдавайтесь!</item>
+        <item quantity="many">%1$d дней подряд! Не сдавайтесь!</item>
+        <item quantity="other">%1$d дня подряд! Не сдавайтесь!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_1_over_30_days">
+        <item quantity="one">Более %1$d дня подряд! Не сдавайтесь!</item>
+        <item quantity="few">Более %1$d дней подряд! Не сдавайтесь!</item>
+        <item quantity="many">Более %1$d дней подряд! Не сдавайтесь!</item>
+        <item quantity="other">Более %1$d дней подряд! Не сдавайтесь!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_2">
+        <item quantity="one">%1$d день подряд! Только вперед!</item>
+        <item quantity="few">%1$d дня подряд! Только вперед!</item>
+        <item quantity="many">%1$d дней подряд! Только вперед!</item>
+        <item quantity="other">%1$d дня подряд! Только вперед!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_2_over_30_days">
+        <item quantity="one">Более %1$d дня подряд! Сегодня ваш день!</item>
+        <item quantity="few">Более %1$d дней подряд! Сегодня ваш день!</item>
+        <item quantity="many">Более %1$d дней подряд! Сегодня ваш день!</item>
+        <item quantity="other">Более %1$d дней подряд! Сегодня ваш день!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_3">
+        <item quantity="one">Цель достигнута %1$d день. Так держать!</item>
+        <item quantity="few">Цель достигнута %1$d дня подряд. Так держать!</item>
+        <item quantity="many">Цель достигнута %1$d дней подряд. Так держать!</item>
+        <item quantity="other">Цель достигнута %1$d дня подряд. Так держать!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_3_over_30_days">
+        <item quantity="one">Цель достигнута более %1$d дня подряд. Так держать!</item>
+        <item quantity="few">Цель достигнута более %1$d дней подряд. Так держать!</item>
+        <item quantity="many">Цель достигнута более %1$d дней подряд. Так держать!</item>
+        <item quantity="other">Цель достигнута более %1$d дней подряд. Так держать!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_5">
+        <item quantity="one">%1$d день подряд. Все получится!</item>
+        <item quantity="few">%1$d дня подряд. Все получится!</item>
+        <item quantity="many">%1$d дней подряд. Все получится!</item>
+        <item quantity="other">%1$d дня подряд. Все получится!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_5_over_30_days">
+        <item quantity="one">Более %1$d дня подряд. Не останавливайтесь!</item>
+        <item quantity="few">Более %1$d дней подряд. Не останавливайтесь!</item>
+        <item quantity="many">Более %1$d дней подряд. Не останавливайтесь!</item>
+        <item quantity="other">Более %1$d дней подряд. Не останавливайтесь!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_6_p1">
+        <item quantity="one">Еще %1$d день</item>
+        <item quantity="few">Еще %1$d дня</item>
+        <item quantity="many">Еще %1$d дней</item>
+        <item quantity="other">Еще %1$d дня</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_6_p2">
+        <item quantity="one">Остался %1$d шаг</item>
+        <item quantity="few">Осталось %1$d шага</item>
+        <item quantity="many">Осталось %1$d шагов</item>
+        <item quantity="other">Осталось %1$d шага</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_7">
+        <item quantity="one">Результат держится %1$d день подряд! Нужно держаться!</item>
+        <item quantity="few">Результат держится %1$d дня подряд! Нужно держаться!</item>
+        <item quantity="many">Результат держится %1$d дней подряд! Нужно держаться!</item>
+        <item quantity="other">Результат держится %1$d дня подряд! Нужно держаться!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_7_over_30_days">
+        <item quantity="one">Результат сохраняется более %1$d дня! Так держать!</item>
+        <item quantity="few">Результат сохраняется более %1$d дней! Так держать!</item>
+        <item quantity="many">Результат сохраняется более %1$d дней! Так держать!</item>
+        <item quantity="other">Результат сохраняется более %1$d дней! Так держать!</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_low_step_1">
+        <item quantity="one">Число шагов в день было %1$d.</item>
+        <item quantity="few">Число шагов в день было %1$d.</item>
+        <item quantity="many">Число шагов в день было %1$d.</item>
+        <item quantity="other">Число шагов в день было %1$d.</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_low_step_2_p2">
+        <item quantity="one">Пройден %1$d шаг/день</item>
+        <item quantity="few">Пройдено %1$d шага/день</item>
+        <item quantity="many">Пройдено %1$d шагов/день</item>
+        <item quantity="other">Пройдено %1$d шага/день</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d шаг</item>
+        <item quantity="few">%d шага</item>
+        <item quantity="many">%d шагов</item>
+        <item quantity="other">%d шага</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s миля</item>
+        <item quantity="few">%s мили</item>
+        <item quantity="many">%s миль</item>
+        <item quantity="other">%s мили</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s км</item>
+        <item quantity="few">%s км</item>
+        <item quantity="many">%s км</item>
+        <item quantity="other">%s км</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">Еще %1$s шаг</item>
+        <item quantity="few">Еще %1$s шага</item>
+        <item quantity="many">Еще %1$s шагов</item>
+        <item quantity="other">Еще %1$s шага</item>
+    </plurals>
+</resources>

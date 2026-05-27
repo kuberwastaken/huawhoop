@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/webview_layout"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/app_help_title"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xb="2"/>
+    <com.huawei.ui.commonui.progressbar.HealthProgressBar
+        id="@+id/load_help_url_progress"
+        visibility="2"
+        layout_width="-1"
+        layout_height="@dimen/_2131362343_res_0x7f0a0227"
+        max="100"
+        progressDrawable="@drawable/_2131432617_res_0x7f0b14a9"
+        style="@style/Health.CommonUI.HealthProgressBar.Horizontal"/>
+    <FrameLayout
+        layout_gravity="0x1"
+        layout_width="-1"
+        layout_height="-1">
+        <WebView
+            id="@+id/sns_app_help_web"
+            layout_width="-1"
+            layout_height="-1"/>
+        <LinearLayout
+            gravity="0x11"
+            orientation="1"
+            id="@+id/help_retry"
+            background="#ffffff"
+            visibility="2"
+            layout_width="-1"
+            layout_height="-1">
+            <com.huawei.ui.commonui.healthtextview.HealthTextView
+                id="@+id/retry_text"
+                style="@style/web_view_activity_error_text_style"/>
+            <com.huawei.ui.commonui.button.HealthButton
+                id="@+id/refresh_btn"
+                layout_width="-2"
+                layout_height="-2"
+                text="@string/_2130842102_res_0x7f0211f6"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

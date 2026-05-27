@@ -1,0 +1,4918 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="_2131099649_res_0x7f060001" format="color">
+    </attr>
+    <attr name="_2131099650_res_0x7f060002" format="dimension">
+    </attr>
+    <attr name="_2131099651_res_0x7f060003" format="dimension">
+    </attr>
+    <attr name="_2131099652_res_0x7f060004" format="dimension">
+    </attr>
+    <attr name="_2131099653_res_0x7f060005" format="dimension">
+    </attr>
+    <attr name="_2131099654_res_0x7f060006" format="dimension">
+    </attr>
+    <attr name="_2131099655_res_0x7f060007" format="dimension">
+    </attr>
+    <attr name="_2131099660_res_0x7f06000c" format="dimension">
+    </attr>
+    <attr name="_2131099661_res_0x7f06000d" format="dimension">
+    </attr>
+    <attr name="_2131099666_res_0x7f060012" format="dimension">
+    </attr>
+    <attr name="_2131099667_res_0x7f060013" format="dimension">
+    </attr>
+    <attr name="_2131099668_res_0x7f060014" format="integer">
+    </attr>
+    <attr name="_2131099669_res_0x7f060015" format="reference">
+    </attr>
+    <attr name="_2131099672_res_0x7f060018" format="dimension">
+    </attr>
+    <attr name="_2131099673_res_0x7f060019" format="dimension">
+    </attr>
+    <attr name="_2131099674_res_0x7f06001a" format="dimension">
+    </attr>
+    <attr name="_2131099675_res_0x7f06001b" format="dimension">
+    </attr>
+    <attr name="_2131099676_res_0x7f06001c" format="dimension">
+    </attr>
+    <attr name="_2131099677_res_0x7f06001d" format="dimension">
+    </attr>
+    <attr name="_2131099678_res_0x7f06001e" format="dimension">
+    </attr>
+    <attr name="_2131099679_res_0x7f06001f" format="dimension">
+    </attr>
+    <attr name="_2131099680_res_0x7f060020" format="dimension">
+    </attr>
+    <attr name="_2131099681_res_0x7f060021" format="reference">
+    </attr>
+    <attr name="_2131099682_res_0x7f060022" format="reference">
+    </attr>
+    <attr name="_2131099683_res_0x7f060023" format="reference">
+    </attr>
+    <attr name="_2131099684_res_0x7f060024" format="dimension">
+        <enum name="wrap_content" value="0" />
+    </attr>
+    <attr name="_2131099685_res_0x7f060025" format="reference">
+    </attr>
+    <attr name="_2131099686_res_0x7f060026" format="reference">
+    </attr>
+    <attr name="_2131099687_res_0x7f060027" format="reference">
+    </attr>
+    <attr name="_2131099688_res_0x7f060028" format="reference">
+    </attr>
+    <attr name="_2131099689_res_0x7f060029" format="reference">
+    </attr>
+    <attr name="_2131099690_res_0x7f06002a" format="reference">
+    </attr>
+    <attr name="_2131099691_res_0x7f06002b" format="reference">
+    </attr>
+    <attr name="_2131099692_res_0x7f06002c" format="reference">
+    </attr>
+    <attr name="_2131099693_res_0x7f06002d" format="reference">
+    </attr>
+    <attr name="_2131099694_res_0x7f06002e" format="reference">
+    </attr>
+    <attr name="_2131099695_res_0x7f06002f" format="reference">
+    </attr>
+    <attr name="_2131099696_res_0x7f060030" format="reference|color">
+    </attr>
+    <attr name="_2131099697_res_0x7f060031" format="reference">
+    </attr>
+    <attr name="_2131099698_res_0x7f060032" format="reference">
+    </attr>
+    <attr name="_2131099699_res_0x7f060033" format="string">
+    </attr>
+    <attr name="_2131099700_res_0x7f060034" format="reference">
+    </attr>
+    <attr name="_2131099701_res_0x7f060035" format="reference">
+    </attr>
+    <attr name="_2131099702_res_0x7f060036" format="reference">
+    </attr>
+    <attr name="_2131099703_res_0x7f060037" format="reference">
+    </attr>
+    <attr name="_2131099704_res_0x7f060038" format="reference">
+    </attr>
+    <attr name="_2131099705_res_0x7f060039" format="reference">
+    </attr>
+    <attr name="_2131099706_res_0x7f06003a" format="reference">
+    </attr>
+    <attr name="_2131099707_res_0x7f06003b" format="reference">
+    </attr>
+    <attr name="_2131099708_res_0x7f06003c" format="reference">
+    </attr>
+    <attr name="_2131099709_res_0x7f06003d" format="reference">
+    </attr>
+    <attr name="_2131099710_res_0x7f06003e" format="reference">
+    </attr>
+    <attr name="_2131099711_res_0x7f06003f" format="reference">
+    </attr>
+    <attr name="_2131099712_res_0x7f060040" format="reference">
+    </attr>
+    <attr name="_2131099713_res_0x7f060041" format="reference">
+    </attr>
+    <attr name="_2131099714_res_0x7f060042" format="string">
+    </attr>
+    <attr name="_2131099715_res_0x7f060043" format="float">
+    </attr>
+    <attr name="_2131099716_res_0x7f060044" format="string">
+    </attr>
+    <attr name="_2131099717_res_0x7f060045" format="reference">
+    </attr>
+    <attr name="_2131099718_res_0x7f060046" format="color">
+    </attr>
+    <attr name="_2131099719_res_0x7f060047" format="dimension">
+    </attr>
+    <attr name="_2131099720_res_0x7f060048" format="dimension">
+    </attr>
+    <attr name="_2131099721_res_0x7f060049" format="dimension">
+    </attr>
+    <attr name="_2131099722_res_0x7f06004a" format="dimension">
+    </attr>
+    <attr name="_2131099723_res_0x7f06004b" format="reference">
+    </attr>
+    <attr name="_2131099724_res_0x7f06004c" format="boolean">
+    </attr>
+    <attr name="_2131099725_res_0x7f06004d" format="reference">
+    </attr>
+    <attr name="_2131099726_res_0x7f06004e" format="reference">
+    </attr>
+    <attr name="_2131099727_res_0x7f06004f" format="boolean">
+    </attr>
+    <attr name="_2131099728_res_0x7f060050" format="float">
+    </attr>
+    <attr name="_2131099729_res_0x7f060051">
+        <flag name="META" value="65536" />
+        <flag name="CTRL" value="4096" />
+        <flag name="ALT" value="2" />
+        <flag name="SHIFT" value="1" />
+        <flag name="SYM" value="4" />
+        <flag name="FUNCTION" value="8" />
+    </attr>
+    <attr name="_2131099730_res_0x7f060052" format="reference">
+    </attr>
+    <attr name="_2131099731_res_0x7f060053" format="boolean">
+    </attr>
+    <attr name="_2131099732_res_0x7f060054" format="integer">
+    </attr>
+    <attr name="_2131099733_res_0x7f060055">
+        <enum name="bestChoice" value="0" />
+        <enum name="closest" value="1" />
+        <enum name="clockwise" value="2" />
+        <enum name="antiClockwise" value="3" />
+        <enum name="constraint" value="4" />
+    </attr>
+    <attr name="_2131099734_res_0x7f060056" format="reference">
+    </attr>
+    <attr name="_2131099735_res_0x7f060057">
+        <enum name="slide" value="0" />
+        <enum name="fade" value="1" />
+    </attr>
+    <attr name="_2131099736_res_0x7f060058" format="boolean">
+    </attr>
+    <attr name="_2131099737_res_0x7f060059" format="boolean">
+    </attr>
+    <attr name="_2131099738_res_0x7f06005a" format="reference">
+    </attr>
+    <attr name="_2131099739_res_0x7f06005b" format="boolean">
+    </attr>
+    <attr name="_2131099740_res_0x7f06005c" format="reference|color">
+    </attr>
+    <attr name="_2131099742_res_0x7f06005e" format="dimension">
+    </attr>
+    <attr name="_2131099745_res_0x7f060061" format="dimension">
+    </attr>
+    <attr name="_2131099746_res_0x7f060062" format="dimension">
+    </attr>
+    <attr name="_2131099747_res_0x7f060063">
+        <enum name="off" value="0" />
+        <enum name="fit" value="1" />
+        <enum name="fill" value="2" />
+    </attr>
+    <attr name="_2131099748_res_0x7f060064" format="string">
+    </attr>
+    <attr name="_2131099749_res_0x7f060065">
+        <enum name="continuousVelocity" value="0" />
+        <enum name="spring" value="1" />
+    </attr>
+    <attr name="_2131099750_res_0x7f060066" format="reference">
+    </attr>
+    <attr name="_2131099751_res_0x7f060067" format="boolean">
+    </attr>
+    <attr name="_2131099752_res_0x7f060068" format="dimension">
+    </attr>
+    <attr name="_2131099753_res_0x7f060069" format="dimension">
+    </attr>
+    <attr name="_2131099754_res_0x7f06006a" format="reference">
+    </attr>
+    <attr name="_2131099755_res_0x7f06006b" format="dimension">
+    </attr>
+    <attr name="_2131099756_res_0x7f06006c">
+        <enum name="none" value="0" />
+        <enum name="uniform" value="1" />
+    </attr>
+    <attr name="_2131099757_res_0x7f06006d">
+        <enum name="none" value="0" />
+        <enum name="jumpToStart" value="1" />
+        <enum name="jumpToEnd" value="2" />
+        <enum name="animateToStart" value="3" />
+        <enum name="animateToEnd" value="4" />
+    </attr>
+    <attr name="_2131099758_res_0x7f06006e" format="boolean">
+    </attr>
+    <attr name="_2131099759_res_0x7f06006f" format="boolean">
+    </attr>
+    <attr name="_2131099760_res_0x7f060070" format="boolean">
+    </attr>
+    <attr name="_2131099761_res_0x7f060071" format="reference">
+    </attr>
+    <attr name="_2131099762_res_0x7f060072" format="color">
+    </attr>
+    <attr name="_2131099763_res_0x7f060073" format="reference|color">
+    </attr>
+    <attr name="_2131099764_res_0x7f060074" format="dimension">
+    </attr>
+    <attr name="_2131099765_res_0x7f060075" format="dimension">
+    </attr>
+    <attr name="_2131099766_res_0x7f060076" format="dimension">
+    </attr>
+    <attr name="_2131099767_res_0x7f060077" format="dimension">
+    </attr>
+    <attr name="_2131099768_res_0x7f060078" format="float">
+    </attr>
+    <attr name="_2131099769_res_0x7f060079" format="reference|color">
+    </attr>
+    <attr name="_2131099770_res_0x7f06007a" format="reference|color">
+    </attr>
+    <attr name="_2131099771_res_0x7f06007b" format="color">
+    </attr>
+    <attr name="_2131099772_res_0x7f06007c">
+        <enum name="src_over" value="3" />
+        <enum name="src_in" value="5" />
+        <enum name="src_atop" value="9" />
+        <enum name="multiply" value="14" />
+        <enum name="screen" value="15" />
+        <enum name="add" value="16" />
+    </attr>
+    <attr name="_2131099773_res_0x7f06007d">
+        <enum name="TOP_END" value="8388661" />
+        <enum name="TOP_START" value="8388659" />
+        <enum name="BOTTOM_END" value="8388693" />
+        <enum name="BOTTOM_START" value="8388691" />
+    </attr>
+    <attr name="_2131099774_res_0x7f06007e" format="dimension">
+    </attr>
+    <attr name="_2131099775_res_0x7f06007f" format="reference">
+    </attr>
+    <attr name="_2131099776_res_0x7f060080" format="color">
+    </attr>
+    <attr name="_2131099777_res_0x7f060081" format="dimension">
+    </attr>
+    <attr name="_2131099778_res_0x7f060082" format="dimension">
+    </attr>
+    <attr name="_2131099779_res_0x7f060083" format="string">
+    </attr>
+    <attr name="_2131099780_res_0x7f060084" format="color">
+    </attr>
+    <attr name="_2131099781_res_0x7f060085" format="dimension">
+    </attr>
+    <attr name="_2131099782_res_0x7f060086" format="dimension">
+    </attr>
+    <attr name="_2131099783_res_0x7f060087" format="dimension">
+    </attr>
+    <attr name="_2131099784_res_0x7f060088" format="dimension">
+    </attr>
+    <attr name="_2131099785_res_0x7f060089" format="color">
+    </attr>
+    <attr name="_2131099786_res_0x7f06008a">
+        <enum name="detail" value="0" />
+        <enum name="report" value="1" />
+    </attr>
+    <attr name="_2131099787_res_0x7f06008b">
+        <enum name="center" value="0" />
+        <enum name="bottom" value="1" />
+    </attr>
+    <attr name="_2131099788_res_0x7f06008c" format="dimension">
+    </attr>
+    <attr name="_2131099789_res_0x7f06008d" format="boolean">
+    </attr>
+    <attr name="_2131099790_res_0x7f06008e">
+        <enum name="left" value="0" />
+        <enum name="right" value="1" />
+        <enum name="top" value="2" />
+        <enum name="bottom" value="3" />
+        <enum name="start" value="5" />
+        <enum name="end" value="6" />
+    </attr>
+    <attr name="_2131099791_res_0x7f06008f" format="dimension">
+    </attr>
+    <attr name="_2131099792_res_0x7f060090" format="boolean">
+    </attr>
+    <attr name="_2131099793_res_0x7f060091" format="boolean">
+    </attr>
+    <attr name="_2131099794_res_0x7f060092" format="boolean">
+    </attr>
+    <attr name="_2131099795_res_0x7f060093" format="reference|dimension">
+    </attr>
+    <attr name="_2131099796_res_0x7f060094" format="boolean">
+    </attr>
+    <attr name="_2131099797_res_0x7f060095" format="reference|float">
+    </attr>
+    <attr name="_2131099798_res_0x7f060096" format="boolean">
+    </attr>
+    <attr name="_2131099799_res_0x7f060097" format="dimension">
+    </attr>
+    <attr name="_2131099800_res_0x7f060098" format="dimension">
+        <enum name="auto" value="-1" />
+    </attr>
+    <attr name="_2131099801_res_0x7f060099">
+        <flag name="peekHeight" value="1" />
+        <flag name="fitToContents" value="2" />
+        <flag name="hideable" value="4" />
+        <flag name="skipCollapsed" value="8" />
+        <flag name="all" value="-1" />
+        <flag name="none" value="0" />
+    </attr>
+    <attr name="_2131099802_res_0x7f06009a" format="boolean">
+    </attr>
+    <attr name="_2131099803_res_0x7f06009b" format="reference|color">
+    </attr>
+    <attr name="_2131099805_res_0x7f06009d" format="reference">
+    </attr>
+    <attr name="_2131099806_res_0x7f06009e" format="dimension">
+    </attr>
+    <attr name="_2131099807_res_0x7f06009f">
+        <enum name="detail" value="0" />
+        <enum name="report" value="1" />
+        <enum name="oversea_report" value="2" />
+    </attr>
+    <attr name="_2131099808_res_0x7f0600a0">
+        <enum name="fat_mass" value="0" />
+        <enum name="skeletal_muscle_mass" value="1" />
+    </attr>
+    <attr name="_2131099809_res_0x7f0600a1" format="dimension">
+    </attr>
+    <attr name="_2131099810_res_0x7f0600a2" format="float">
+    </attr>
+    <attr name="_2131099811_res_0x7f0600a3" format="dimension">
+    </attr>
+    <attr name="_2131099812_res_0x7f0600a4" format="dimension">
+    </attr>
+    <attr name="_2131099813_res_0x7f0600a5" format="reference">
+    </attr>
+    <attr name="_2131099814_res_0x7f0600a6" format="reference">
+    </attr>
+    <attr name="_2131099815_res_0x7f0600a7" format="dimension">
+    </attr>
+    <attr name="_2131099816_res_0x7f0600a8" format="color">
+    </attr>
+    <attr name="_2131099817_res_0x7f0600a9" format="boolean">
+    </attr>
+    <attr name="_2131099818_res_0x7f0600aa" format="reference">
+    </attr>
+    <attr name="_2131099819_res_0x7f0600ab" format="reference">
+    </attr>
+    <attr name="_2131099820_res_0x7f0600ac" format="reference">
+    </attr>
+    <attr name="_2131099821_res_0x7f0600ad" format="color">
+    </attr>
+    <attr name="_2131099822_res_0x7f0600ae">
+        <enum name="none" value="0" />
+        <enum name="filled" value="1" />
+        <enum name="outline" value="2" />
+    </attr>
+    <attr name="_2131099823_res_0x7f0600af" format="dimension">
+    </attr>
+    <attr name="_2131099824_res_0x7f0600b0" format="dimension">
+    </attr>
+    <attr name="_2131099825_res_0x7f0600b1" format="dimension">
+    </attr>
+    <attr name="_2131099826_res_0x7f0600b2" format="dimension">
+    </attr>
+    <attr name="_2131099827_res_0x7f0600b3" format="dimension">
+    </attr>
+    <attr name="_2131099828_res_0x7f0600b4" format="color">
+    </attr>
+    <attr name="_2131099829_res_0x7f0600b5" format="color">
+    </attr>
+    <attr name="_2131099830_res_0x7f0600b6" format="dimension">
+    </attr>
+    <attr name="_2131099831_res_0x7f0600b7" format="dimension">
+    </attr>
+    <attr name="_2131099832_res_0x7f0600b8" format="float">
+    </attr>
+    <attr name="_2131099833_res_0x7f0600b9" format="dimension">
+    </attr>
+    <attr name="_2131099834_res_0x7f0600ba" format="dimension">
+    </attr>
+    <attr name="_2131099835_res_0x7f0600bb" format="dimension">
+    </attr>
+    <attr name="_2131099836_res_0x7f0600bc" format="boolean">
+    </attr>
+    <attr name="_2131099837_res_0x7f0600bd" format="color">
+    </attr>
+    <attr name="_2131099838_res_0x7f0600be" format="reference">
+    </attr>
+    <attr name="_2131099839_res_0x7f0600bf" format="reference">
+    </attr>
+    <attr name="_2131099840_res_0x7f0600c0" format="reference">
+    </attr>
+    <attr name="_2131099841_res_0x7f0600c1" format="reference">
+    </attr>
+    <attr name="_2131099842_res_0x7f0600c2" format="reference">
+    </attr>
+    <attr name="_2131099843_res_0x7f0600c3" format="reference">
+    </attr>
+    <attr name="_2131099844_res_0x7f0600c4">
+        <flag name="center_vertical" value="16" />
+        <flag name="top" value="48" />
+        <flag name="bottom" value="80" />
+    </attr>
+    <attr name="_2131099845_res_0x7f0600c5" format="dimension">
+    </attr>
+    <attr name="_2131099846_res_0x7f0600c6" format="reference">
+    </attr>
+    <attr name="_2131099847_res_0x7f0600c7" format="reference">
+        <enum name="standard" value="0" />
+        <enum name="wide" value="1" />
+        <enum name="icon_only" value="2" />
+    </attr>
+    <attr name="_2131099848_res_0x7f0600c8" format="reference">
+    </attr>
+    <attr name="_2131099849_res_0x7f0600c9" format="reference">
+    </attr>
+    <attr name="_2131099850_res_0x7f0600ca" format="color">
+    </attr>
+    <attr name="_2131099851_res_0x7f0600cb" format="color">
+    </attr>
+    <attr name="_2131099852_res_0x7f0600cc">
+        <enum name="src_over" value="3" />
+        <enum name="src_in" value="5" />
+        <enum name="src_atop" value="9" />
+        <enum name="multiply" value="14" />
+        <enum name="screen" value="15" />
+        <enum name="add" value="16" />
+    </attr>
+    <attr name="_2131099853_res_0x7f0600cd" format="integer">
+    </attr>
+    <attr name="_2131099854_res_0x7f0600ce">
+        <enum name="both_month_week_view" value="0" />
+        <enum name="only_week_view" value="1" />
+        <enum name="only_month_view" value="2" />
+    </attr>
+    <attr name="_2131099855_res_0x7f0600cf" format="dimension">
+    </attr>
+    <attr name="_2131099856_res_0x7f0600d0" format="dimension">
+    </attr>
+    <attr name="_2131099857_res_0x7f0600d1" format="dimension">
+    </attr>
+    <attr name="_2131099858_res_0x7f0600d2" format="dimension">
+    </attr>
+    <attr name="_2131099859_res_0x7f0600d3" format="float">
+    </attr>
+    <attr name="_2131099860_res_0x7f0600d4" format="float">
+    </attr>
+    <attr name="_2131099861_res_0x7f0600d5" format="float">
+    </attr>
+    <attr name="_2131099862_res_0x7f0600d6" format="float">
+    </attr>
+    <attr name="_2131099863_res_0x7f0600d7" format="float">
+    </attr>
+    <attr name="_2131099864_res_0x7f0600d8" format="float">
+    </attr>
+    <attr name="_2131099865_res_0x7f0600d9" format="float">
+    </attr>
+    <attr name="_2131099866_res_0x7f0600da" format="color">
+    </attr>
+    <attr name="_2131099867_res_0x7f0600db" format="dimension">
+    </attr>
+    <attr name="_2131099868_res_0x7f0600dc" format="dimension">
+    </attr>
+    <attr name="_2131099869_res_0x7f0600dd" format="color">
+    </attr>
+    <attr name="_2131099870_res_0x7f0600de" format="dimension">
+    </attr>
+    <attr name="_2131099871_res_0x7f0600df" format="boolean">
+    </attr>
+    <attr name="_2131099872_res_0x7f0600e0" format="boolean">
+    </attr>
+    <attr name="_2131099873_res_0x7f0600e1" format="reference">
+    </attr>
+    <attr name="_2131099874_res_0x7f0600e2" format="reference">
+    </attr>
+    <attr name="_2131099875_res_0x7f0600e3">
+        <enum name="invisible" value="4" />
+        <enum name="gone" value="8" />
+    </attr>
+    <attr name="_2131099876_res_0x7f0600e4" format="reference">
+    </attr>
+    <attr name="_2131099877_res_0x7f0600e5" format="reference">
+    </attr>
+    <attr name="_2131099878_res_0x7f0600e6" format="boolean">
+    </attr>
+    <attr name="_2131099879_res_0x7f0600e7" format="reference">
+    </attr>
+    <attr name="_2131099880_res_0x7f0600e8" format="reference">
+    </attr>
+    <attr name="_2131099881_res_0x7f0600e9">
+        <enum name="immediateStop" value="1" />
+        <enum name="carryVelocity" value="2" />
+    </attr>
+    <attr name="_2131099882_res_0x7f0600ea" format="float">
+    </attr>
+    <attr name="_2131099883_res_0x7f0600eb" format="float">
+    </attr>
+    <attr name="_2131099884_res_0x7f0600ec" format="dimension">
+    </attr>
+    <attr name="_2131099885_res_0x7f0600ed" format="dimension">
+    </attr>
+    <attr name="_2131099886_res_0x7f0600ee" format="dimension">
+    </attr>
+    <attr name="_2131099887_res_0x7f0600ef" format="reference">
+    </attr>
+    <attr name="_2131099888_res_0x7f0600f0" format="boolean">
+    </attr>
+    <attr name="_2131099889_res_0x7f0600f1" format="boolean">
+    </attr>
+    <attr name="_2131099890_res_0x7f0600f2" format="color">
+    </attr>
+    <attr name="_2131099891_res_0x7f0600f3" format="integer">
+    </attr>
+    <attr name="_2131099892_res_0x7f0600f4" format="integer">
+    </attr>
+    <attr name="_2131099893_res_0x7f0600f5" format="integer">
+    </attr>
+    <attr name="_2131099894_res_0x7f0600f6" format="boolean">
+    </attr>
+    <attr name="_2131099895_res_0x7f0600f7" format="reference">
+    </attr>
+    <attr name="_2131099896_res_0x7f0600f8" format="color">
+    </attr>
+    <attr name="_2131099897_res_0x7f0600f9">
+        <enum name="src_over" value="3" />
+        <enum name="src_in" value="5" />
+        <enum name="src_atop" value="9" />
+        <enum name="multiply" value="14" />
+        <enum name="screen" value="15" />
+        <enum name="add" value="16" />
+    </attr>
+    <attr name="_2131099898_res_0x7f0600fa" format="reference">
+    </attr>
+    <attr name="_2131099899_res_0x7f0600fb" format="reference">
+    </attr>
+    <attr name="_2131099900_res_0x7f0600fc" format="reference">
+    </attr>
+    <attr name="_2131099901_res_0x7f0600fd" format="reference">
+    </attr>
+    <attr name="_2131099902_res_0x7f0600fe" format="boolean">
+    </attr>
+    <attr name="_2131099903_res_0x7f0600ff">
+        <enum name="TOP_END" value="8388661" />
+        <enum name="TOP_START" value="8388659" />
+        <enum name="BOTTOM_END" value="8388693" />
+        <enum name="BOTTOM_START" value="8388691" />
+    </attr>
+    <attr name="_2131099904_res_0x7f060100" format="dimension">
+    </attr>
+    <attr name="_2131099905_res_0x7f060101" format="dimension">
+    </attr>
+    <attr name="_2131099906_res_0x7f060102" format="color">
+    </attr>
+    <attr name="_2131099907_res_0x7f060103" format="boolean">
+    </attr>
+    <attr name="_2131099908_res_0x7f060104" format="reference">
+    </attr>
+    <attr name="_2131099909_res_0x7f060105" format="color">
+    </attr>
+    <attr name="_2131099910_res_0x7f060106" format="dimension">
+    </attr>
+    <attr name="_2131099911_res_0x7f060107" format="dimension">
+    </attr>
+    <attr name="_2131099912_res_0x7f060108" format="reference">
+    </attr>
+    <attr name="_2131099913_res_0x7f060109" format="reference">
+    </attr>
+    <attr name="_2131099914_res_0x7f06010a" format="boolean">
+    </attr>
+    <attr name="_2131099915_res_0x7f06010b" format="dimension">
+    </attr>
+    <attr name="_2131099916_res_0x7f06010c" format="color">
+    </attr>
+    <attr name="_2131099917_res_0x7f06010d" format="boolean">
+    </attr>
+    <attr name="_2131099918_res_0x7f06010e" format="dimension">
+    </attr>
+    <attr name="_2131099919_res_0x7f06010f" format="dimension">
+    </attr>
+    <attr name="_2131099920_res_0x7f060110" format="dimension">
+    </attr>
+    <attr name="_2131099921_res_0x7f060111" format="dimension">
+    </attr>
+    <attr name="_2131099922_res_0x7f060112" format="dimension">
+    </attr>
+    <attr name="_2131099923_res_0x7f060113" format="reference">
+    </attr>
+    <attr name="_2131099924_res_0x7f060114" format="dimension">
+    </attr>
+    <attr name="_2131099925_res_0x7f060115" format="color">
+    </attr>
+    <attr name="_2131099926_res_0x7f060116" format="dimension">
+    </attr>
+    <attr name="_2131099927_res_0x7f060117" format="reference">
+    </attr>
+    <attr name="_2131099928_res_0x7f060118" format="color">
+    </attr>
+    <attr name="_2131099929_res_0x7f060119" format="boolean">
+    </attr>
+    <attr name="_2131099930_res_0x7f06011a" format="dimension">
+    </attr>
+    <attr name="_2131099931_res_0x7f06011b" format="dimension">
+    </attr>
+    <attr name="_2131099932_res_0x7f06011c" format="reference">
+    </attr>
+    <attr name="_2131099933_res_0x7f06011d" format="string">
+    </attr>
+    <attr name="_2131099934_res_0x7f06011e" format="float">
+    </attr>
+    <attr name="_2131099935_res_0x7f06011f" format="dimension">
+    </attr>
+    <attr name="_2131099936_res_0x7f060120" format="string">
+    </attr>
+    <attr name="_2131099937_res_0x7f060121" format="reference">
+    </attr>
+    <attr name="_2131099938_res_0x7f060122" format="reference">
+    </attr>
+    <attr name="_2131099939_res_0x7f060123">
+        <flag name="toggle" value="17" />
+        <flag name="transitionToEnd" value="1" />
+        <flag name="transitionToStart" value="16" />
+        <flag name="jumpToEnd" value="256" />
+        <flag name="jumpToStart" value="4096" />
+    </attr>
+    <attr name="_2131099940_res_0x7f060124" format="color">
+    </attr>
+    <attr name="_2131099941_res_0x7f060125" format="color">
+    </attr>
+    <attr name="_2131099942_res_0x7f060126" format="reference">
+    </attr>
+    <attr name="_2131099943_res_0x7f060127" format="color">
+    </attr>
+    <attr name="_2131099944_res_0x7f060128" format="reference">
+    </attr>
+    <attr name="_2131099945_res_0x7f060129" format="boolean">
+    </attr>
+    <attr name="_2131099946_res_0x7f06012a" format="dimension">
+    </attr>
+    <attr name="_2131099947_res_0x7f06012b" format="dimension">
+    </attr>
+    <attr name="_2131099948_res_0x7f06012c" format="dimension">
+    </attr>
+    <attr name="_2131099949_res_0x7f06012d" format="color">
+    </attr>
+    <attr name="_2131099950_res_0x7f06012e" format="boolean">
+    </attr>
+    <attr name="_2131099951_res_0x7f06012f" format="reference">
+    </attr>
+    <attr name="_2131099952_res_0x7f060130" format="string">
+    </attr>
+    <attr name="_2131099953_res_0x7f060131" format="reference">
+    </attr>
+    <attr name="_2131099954_res_0x7f060132" format="dimension">
+    </attr>
+    <attr name="_2131099955_res_0x7f060133">
+        <flag name="top" value="48" />
+        <flag name="bottom" value="80" />
+        <flag name="left" value="3" />
+        <flag name="right" value="5" />
+        <flag name="center_vertical" value="16" />
+        <flag name="fill_vertical" value="112" />
+        <flag name="center_horizontal" value="1" />
+        <flag name="center" value="17" />
+        <flag name="start" value="8388611" />
+        <flag name="end" value="8388613" />
+    </attr>
+    <attr name="_2131099956_res_0x7f060134" format="reference">
+    </attr>
+    <attr name="_2131099957_res_0x7f060135" format="reference|color">
+    </attr>
+    <attr name="_2131099962_res_0x7f06013a" format="reference">
+    </attr>
+    <attr name="_2131099963_res_0x7f06013b" format="color">
+    </attr>
+    <attr name="_2131099964_res_0x7f06013c" format="color">
+    </attr>
+    <attr name="_2131099965_res_0x7f06013d" format="color">
+    </attr>
+    <attr name="_2131099966_res_0x7f06013e" format="color">
+    </attr>
+    <attr name="_2131099968_res_0x7f060140" format="color">
+    </attr>
+    <attr name="_2131099969_res_0x7f060141" format="color">
+    </attr>
+    <attr name="_2131099970_res_0x7f060142" format="color">
+    </attr>
+    <attr name="_2131099971_res_0x7f060143" format="reference|color">
+    </attr>
+    <attr name="_2131099972_res_0x7f060144" format="color">
+    </attr>
+    <attr name="_2131099973_res_0x7f060145" format="reference|string|integer|boolean|color|float|dimension|fraction">
+    </attr>
+    <attr name="_2131099975_res_0x7f060147" format="color">
+    </attr>
+    <attr name="_2131099976_res_0x7f060148" format="color">
+    </attr>
+    <attr name="_2131099982_res_0x7f06014e" format="color">
+    </attr>
+    <attr name="_2131099988_res_0x7f060154" format="color">
+    </attr>
+    <attr name="_2131099990_res_0x7f060156" format="color">
+    </attr>
+    <attr name="_2131099993_res_0x7f060159" format="color">
+    </attr>
+    <attr name="_2131099994_res_0x7f06015a" format="reference">
+        <enum name="dark" value="0" />
+        <enum name="light" value="1" />
+        <enum name="auto" value="2" />
+    </attr>
+    <attr name="_2131099998_res_0x7f06015e" format="color">
+    </attr>
+    <attr name="_2131100001_res_0x7f060161" format="color">
+    </attr>
+    <attr name="_2131100004_res_0x7f060164" format="boolean">
+    </attr>
+    <attr name="_2131100005_res_0x7f060165" format="integer">
+    </attr>
+    <attr name="_2131100006_res_0x7f060166" format="reference">
+    </attr>
+    <attr name="_2131100007_res_0x7f060167" format="float">
+    </attr>
+    <attr name="_2131100008_res_0x7f060168">
+        <enum name="none" value="0" />
+        <enum name="right" value="1" />
+        <enum name="left" value="2" />
+        <enum name="x_right" value="3" />
+        <enum name="x_left" value="4" />
+    </attr>
+    <attr name="_2131100009_res_0x7f060169" format="reference">
+    </attr>
+    <attr name="_2131100010_res_0x7f06016a" format="reference">
+    </attr>
+    <attr name="_2131100011_res_0x7f06016b" format="reference">
+    </attr>
+    <attr name="_2131100012_res_0x7f06016c" format="string">
+    </attr>
+    <attr name="_2131100013_res_0x7f06016d" format="string">
+    </attr>
+    <attr name="_2131100014_res_0x7f06016e" format="reference">
+    </attr>
+    <attr name="_2131100015_res_0x7f06016f" format="reference">
+    </attr>
+    <attr name="_2131100016_res_0x7f060170" format="string">
+    </attr>
+    <attr name="_2131100017_res_0x7f060171" format="reference|dimension">
+        <enum name="fill_parent" value="-1" />
+        <enum name="match_parent" value="-1" />
+        <enum name="wrap_content" value="-2" />
+    </attr>
+    <attr name="_2131100018_res_0x7f060172" format="reference">
+    </attr>
+    <attr name="_2131100019_res_0x7f060173" format="dimension">
+    </attr>
+    <attr name="_2131100020_res_0x7f060174" format="dimension">
+    </attr>
+    <attr name="_2131100021_res_0x7f060175" format="dimension">
+    </attr>
+    <attr name="_2131100022_res_0x7f060176" format="dimension">
+    </attr>
+    <attr name="_2131100023_res_0x7f060177" format="dimension">
+    </attr>
+    <attr name="_2131100024_res_0x7f060178" format="dimension">
+    </attr>
+    <attr name="_2131100025_res_0x7f060179" format="dimension">
+    </attr>
+    <attr name="_2131100026_res_0x7f06017a" format="dimension">
+    </attr>
+    <attr name="_2131100027_res_0x7f06017b" format="dimension">
+    </attr>
+    <attr name="_2131100028_res_0x7f06017c" format="dimension">
+    </attr>
+    <attr name="_2131100029_res_0x7f06017d" format="dimension">
+    </attr>
+    <attr name="_2131100030_res_0x7f06017e" format="dimension">
+    </attr>
+    <attr name="_2131100031_res_0x7f06017f" format="dimension">
+    </attr>
+    <attr name="_2131100032_res_0x7f060180" format="color">
+    </attr>
+    <attr name="_2131100033_res_0x7f060181" format="dimension">
+    </attr>
+    <attr name="_2131100034_res_0x7f060182" format="reference|dimension">
+        <enum name="fill_parent" value="-1" />
+        <enum name="match_parent" value="-1" />
+        <enum name="wrap_content" value="-2" />
+    </attr>
+    <attr name="_2131100035_res_0x7f060183" format="float">
+    </attr>
+    <attr name="_2131100036_res_0x7f060184" format="reference">
+    </attr>
+    <attr name="_2131100037_res_0x7f060185" format="boolean">
+    </attr>
+    <attr name="_2131100038_res_0x7f060186" format="reference">
+    </attr>
+    <attr name="_2131100039_res_0x7f060187" format="reference">
+    </attr>
+    <attr name="_2131100040_res_0x7f060188">
+        <enum name="rounded" value="0" />
+        <enum name="cut" value="1" />
+    </attr>
+    <attr name="_2131100041_res_0x7f060189">
+        <enum name="rounded" value="0" />
+        <enum name="cut" value="1" />
+    </attr>
+    <attr name="_2131100042_res_0x7f06018a">
+        <enum name="rounded" value="0" />
+        <enum name="cut" value="1" />
+    </attr>
+    <attr name="_2131100043_res_0x7f06018b">
+        <enum name="rounded" value="0" />
+        <enum name="cut" value="1" />
+    </attr>
+    <attr name="_2131100044_res_0x7f06018c">
+        <enum name="rounded" value="0" />
+        <enum name="cut" value="1" />
+    </attr>
+    <attr name="_2131100045_res_0x7f06018d" format="dimension">
+    </attr>
+    <attr name="_2131100046_res_0x7f06018e" format="dimension|fraction">
+    </attr>
+    <attr name="_2131100047_res_0x7f06018f" format="dimension|fraction">
+    </attr>
+    <attr name="_2131100048_res_0x7f060190" format="dimension|fraction">
+    </attr>
+    <attr name="_2131100049_res_0x7f060191" format="dimension|fraction">
+    </attr>
+    <attr name="_2131100050_res_0x7f060192" format="dimension|fraction">
+    </attr>
+    <attr name="_2131100051_res_0x7f060193" format="boolean">
+    </attr>
+    <attr name="_2131100052_res_0x7f060194" format="integer">
+    </attr>
+    <attr name="_2131100053_res_0x7f060195" format="reference">
+    </attr>
+    <attr name="_2131100054_res_0x7f060196" format="reference">
+    </attr>
+    <attr name="_2131100055_res_0x7f060197" format="reference">
+    </attr>
+    <attr name="_2131100056_res_0x7f060198" format="reference">
+    </attr>
+    <attr name="_2131100057_res_0x7f060199" format="float">
+    </attr>
+    <attr name="_2131100058_res_0x7f06019a" format="reference">
+    </attr>
+    <attr name="_2131100059_res_0x7f06019b" format="color">
+    </attr>
+    <attr name="_2131100060_res_0x7f06019c" format="color">
+    </attr>
+    <attr name="_2131100061_res_0x7f06019d" format="color">
+    </attr>
+    <attr name="_2131100062_res_0x7f06019e" format="color">
+    </attr>
+    <attr name="_2131100063_res_0x7f06019f" format="reference">
+    </attr>
+    <attr name="_2131100064_res_0x7f0601a0" format="float">
+    </attr>
+    <attr name="_2131100065_res_0x7f0601a1" format="dimension">
+    </attr>
+    <attr name="_2131100066_res_0x7f0601a2">
+        <enum name="spline" value="0" />
+        <enum name="linear" value="1" />
+    </attr>
+    <attr name="_2131100067_res_0x7f0601a3" format="boolean">
+    </attr>
+    <attr name="_2131100068_res_0x7f0601a4" format="color">
+    </attr>
+    <attr name="_2131100069_res_0x7f0601a5" format="color">
+    </attr>
+    <attr name="_2131100070_res_0x7f0601a6" format="reference">
+    </attr>
+    <attr name="_2131100071_res_0x7f0601a7" format="dimension">
+    </attr>
+    <attr name="_2131100072_res_0x7f0601a8" format="float">
+    </attr>
+    <attr name="_2131100073_res_0x7f0601a9" format="integer">
+    </attr>
+    <attr name="_2131100074_res_0x7f0601aa" format="reference">
+    </attr>
+    <attr name="_2131100075_res_0x7f0601ab" format="dimension">
+    </attr>
+    <attr name="_2131100076_res_0x7f0601ac" format="reference">
+    </attr>
+    <attr name="_2131100077_res_0x7f0601ad" format="string">
+    </attr>
+    <attr name="_2131100078_res_0x7f0601ae">
+        <enum name="normal" value="0" />
+        <enum name="save" value="1" />
+        <enum name="detail" value="2" />
+        <enum name="more" value="3" />
+        <enum name="custom_spinner" value="4" />
+    </attr>
+    <attr name="_2131100079_res_0x7f0601af">
+        <enum name="normal" value="0" />
+        <enum name="save" value="1" />
+        <enum name="detail" value="2" />
+        <enum name="more" value="3" />
+        <enum name="spinner" value="4" />
+    </attr>
+    <attr name="_2131100080_res_0x7f0601b0">
+        <enum name="relative" value="0" />
+        <enum name="absolute" value="1" />
+    </attr>
+    <attr name="_2131100081_res_0x7f0601b1" format="boolean">
+    </attr>
+    <attr name="_2131100082_res_0x7f0601b2" format="reference">
+    </attr>
+    <attr name="_2131100083_res_0x7f0601b3" format="reference">
+    </attr>
+    <attr name="_2131100084_res_0x7f0601b4" format="reference">
+    </attr>
+    <attr name="_2131100085_res_0x7f0601b5" format="reference">
+    </attr>
+    <attr name="_2131100086_res_0x7f0601b6" format="dimension">
+    </attr>
+    <attr name="_2131100088_res_0x7f0601b8" format="integer">
+    </attr>
+    <attr name="_2131100089_res_0x7f0601b9" format="string">
+    </attr>
+    <attr name="_2131100090_res_0x7f0601ba" format="reference">
+    </attr>
+    <attr name="_2131100091_res_0x7f0601bb" format="reference|string">
+    </attr>
+    <attr name="_2131100092_res_0x7f0601bc" format="reference">
+    </attr>
+    <attr name="_2131100093_res_0x7f0601bd" format="color">
+    </attr>
+    <attr name="_2131100094_res_0x7f0601be">
+        <enum name="unfold" value="0" />
+        <enum name="fold" value="1" />
+    </attr>
+    <attr name="_2131100095_res_0x7f0601bf" format="boolean">
+    </attr>
+    <attr name="_2131100098_res_0x7f0601c2" format="reference">
+    </attr>
+    <attr name="_2131100099_res_0x7f0601c3">
+        <enum name="detail" value="0" />
+        <enum name="report" value="1" />
+        <enum name="oversea_report" value="2" />
+    </attr>
+    <attr name="_2131100100_res_0x7f0601c4" format="reference|color">
+    </attr>
+    <attr name="_2131100101_res_0x7f0601c5" format="dimension">
+    </attr>
+    <attr name="_2131100102_res_0x7f0601c6" format="dimension">
+    </attr>
+    <attr name="_2131100103_res_0x7f0601c7" format="reference">
+    </attr>
+    <attr name="_2131100104_res_0x7f0601c8">
+        <enum name="uptodown" value="0" />
+        <enum name="downtoup" value="1" />
+    </attr>
+    <attr name="_2131100105_res_0x7f0601c9">
+        <flag name="none" value="0" />
+        <flag name="useLogo" value="1" />
+        <flag name="showHome" value="2" />
+        <flag name="homeAsUp" value="4" />
+        <flag name="showTitle" value="8" />
+        <flag name="showCustom" value="16" />
+        <flag name="disableHome" value="32" />
+    </attr>
+    <attr name="_2131100106_res_0x7f0601ca" format="reference">
+    </attr>
+    <attr name="_2131100107_res_0x7f0601cb" format="reference|color">
+    </attr>
+    <attr name="_2131100108_res_0x7f0601cc" format="dimension">
+    </attr>
+    <attr name="_2131100109_res_0x7f0601cd" format="reference">
+    </attr>
+    <attr name="_2131100110_res_0x7f0601ce" format="dimension">
+    </attr>
+    <attr name="_2131100111_res_0x7f0601cf" format="dimension">
+    </attr>
+    <attr name="_2131100112_res_0x7f0601d0" format="dimension">
+    </attr>
+    <attr name="_2131100113_res_0x7f0601d1" format="dimension">
+    </attr>
+    <attr name="_2131100114_res_0x7f0601d2">
+        <enum name="line" value="0" />
+        <enum name="bar" value="1" />
+    </attr>
+    <attr name="_2131100115_res_0x7f0601d3" format="reference">
+    </attr>
+    <attr name="_2131100116_res_0x7f0601d4" format="color">
+    </attr>
+    <attr name="_2131100117_res_0x7f0601d5" format="dimension">
+    </attr>
+    <attr name="_2131100118_res_0x7f0601d6" format="boolean">
+    </attr>
+    <attr name="_2131100119_res_0x7f0601d7" format="dimension">
+    </attr>
+    <attr name="_2131100120_res_0x7f0601d8" format="dimension">
+    </attr>
+    <attr name="_2131100121_res_0x7f0601d9">
+        <enum name="dragUp" value="0" />
+        <enum name="dragDown" value="1" />
+        <enum name="dragLeft" value="2" />
+        <enum name="dragRight" value="3" />
+        <enum name="dragStart" value="4" />
+        <enum name="dragEnd" value="5" />
+        <enum name="dragClockwise" value="6" />
+        <enum name="dragAnticlockwise" value="7" />
+    </attr>
+    <attr name="_2131100122_res_0x7f0601da" format="float">
+    </attr>
+    <attr name="_2131100123_res_0x7f0601db" format="float">
+    </attr>
+    <attr name="_2131100124_res_0x7f0601dc">
+        <enum name="none" value="0" />
+        <enum name="path" value="1" />
+        <enum name="pathRelative" value="2" />
+        <enum name="deltaRelative" value="3" />
+        <enum name="asConfigured" value="4" />
+        <enum name="rectangles" value="5" />
+    </attr>
+    <attr name="_2131100125_res_0x7f0601dd" format="reference">
+    </attr>
+    <attr name="_2131100126_res_0x7f0601de" format="reference">
+    </attr>
+    <attr name="_2131100127_res_0x7f0601df" format="reference">
+    </attr>
+    <attr name="_2131100128_res_0x7f0601e0" format="reference">
+    </attr>
+    <attr name="_2131100129_res_0x7f0601e1" format="dimension">
+    </attr>
+    <attr name="_2131100130_res_0x7f0601e2" format="reference">
+    </attr>
+    <attr name="_2131100131_res_0x7f0601e3" format="color">
+    </attr>
+    <attr name="_2131100132_res_0x7f0601e4">
+        <enum name="src_over" value="3" />
+        <enum name="src_in" value="5" />
+        <enum name="src_atop" value="9" />
+        <enum name="multiply" value="14" />
+        <enum name="screen" value="15" />
+        <enum name="add" value="16" />
+    </attr>
+    <attr name="_2131100133_res_0x7f0601e5" format="reference">
+    </attr>
+    <attr name="_2131100134_res_0x7f0601e6" format="reference">
+    </attr>
+    <attr name="_2131100135_res_0x7f0601e7" format="dimension">
+    </attr>
+    <attr name="_2131100136_res_0x7f0601e8" format="reference">
+    </attr>
+    <attr name="_2131100137_res_0x7f0601e9" format="reference">
+    </attr>
+    <attr name="_2131100138_res_0x7f0601ea" format="dimension">
+    </attr>
+    <attr name="_2131100139_res_0x7f0601eb" format="integer">
+    </attr>
+    <attr name="_2131100140_res_0x7f0601ec" format="reference">
+    </attr>
+    <attr name="_2131100141_res_0x7f0601ed" format="reference">
+    </attr>
+    <attr name="_2131100142_res_0x7f0601ee" format="reference|color">
+    </attr>
+    <attr name="_2131100143_res_0x7f0601ef" format="reference">
+    </attr>
+    <attr name="_2131100144_res_0x7f0601f0" format="dimension">
+    </attr>
+    <attr name="_2131100145_res_0x7f0601f1" format="color">
+    </attr>
+    <attr name="_2131100146_res_0x7f0601f2" format="color">
+    </attr>
+    <attr name="_2131100147_res_0x7f0601f3" format="boolean">
+    </attr>
+    <attr name="_2131100148_res_0x7f0601f4" format="boolean">
+    </attr>
+    <attr name="_2131100149_res_0x7f0601f5" format="boolean">
+    </attr>
+    <attr name="_2131100150_res_0x7f0601f6" format="boolean">
+    </attr>
+    <attr name="_2131100151_res_0x7f0601f7" format="string">
+    </attr>
+    <attr name="_2131100152_res_0x7f0601f8" format="reference">
+    </attr>
+    <attr name="_2131100153_res_0x7f0601f9">
+        <enum name="custom" value="-1" />
+        <enum name="none" value="0" />
+        <enum name="password_toggle" value="1" />
+        <enum name="clear_text" value="2" />
+        <enum name="dropdown_menu" value="3" />
+    </attr>
+    <attr name="_2131100154_res_0x7f0601fa" format="color">
+    </attr>
+    <attr name="_2131100155_res_0x7f0601fb">
+        <enum name="src_over" value="3" />
+        <enum name="src_in" value="5" />
+        <enum name="src_atop" value="9" />
+        <enum name="multiply" value="14" />
+        <enum name="screen" value="15" />
+    </attr>
+    <attr name="_2131100156_res_0x7f0601fc" format="integer">
+    </attr>
+    <attr name="_2131100157_res_0x7f0601fd" format="boolean">
+    </attr>
+    <attr name="_2131100158_res_0x7f0601fe" format="boolean">
+    </attr>
+    <attr name="_2131100159_res_0x7f0601ff" format="boolean">
+    </attr>
+    <attr name="_2131100160_res_0x7f060200" format="reference">
+    </attr>
+    <attr name="_2131100161_res_0x7f060201" format="reference|string">
+    </attr>
+    <attr name="_2131100162_res_0x7f060202" format="reference">
+    </attr>
+    <attr name="_2131100163_res_0x7f060203" format="string">
+    </attr>
+    <attr name="_2131100164_res_0x7f060204" format="boolean">
+    </attr>
+    <attr name="_2131100165_res_0x7f060205" format="reference">
+    </attr>
+    <attr name="_2131100166_res_0x7f060206" format="reference">
+    </attr>
+    <attr name="_2131100167_res_0x7f060207">
+        <enum name="src_over" value="3" />
+        <enum name="src_in" value="5" />
+        <enum name="src_atop" value="9" />
+        <enum name="multiply" value="14" />
+        <enum name="screen" value="15" />
+    </attr>
+    <attr name="_2131100168_res_0x7f060208" format="reference">
+    </attr>
+    <attr name="_2131100169_res_0x7f060209" format="color">
+    </attr>
+    <attr name="_2131100170_res_0x7f06020a" format="reference">
+    </attr>
+    <attr name="_2131100171_res_0x7f06020b" format="boolean">
+    </attr>
+    <attr name="_2131100172_res_0x7f06020c" format="boolean">
+    </attr>
+    <attr name="_2131100173_res_0x7f06020d">
+        <flag name="top" value="48" />
+        <flag name="bottom" value="80" />
+        <flag name="left" value="3" />
+        <flag name="right" value="5" />
+        <flag name="center_vertical" value="16" />
+        <flag name="fill_vertical" value="112" />
+        <flag name="center_horizontal" value="1" />
+        <flag name="center" value="17" />
+        <flag name="start" value="8388611" />
+        <flag name="end" value="8388613" />
+    </attr>
+    <attr name="_2131100174_res_0x7f06020e" format="dimension">
+    </attr>
+    <attr name="_2131100175_res_0x7f06020f" format="dimension">
+    </attr>
+    <attr name="_2131100176_res_0x7f060210" format="dimension">
+    </attr>
+    <attr name="_2131100177_res_0x7f060211" format="dimension">
+    </attr>
+    <attr name="_2131100178_res_0x7f060212" format="dimension">
+    </attr>
+    <attr name="_2131100179_res_0x7f060213" format="reference">
+    </attr>
+    <attr name="_2131100180_res_0x7f060214" format="reference|color">
+    </attr>
+    <attr name="_2131100181_res_0x7f060215" format="reference">
+    </attr>
+    <attr name="_2131100184_res_0x7f060218" format="reference">
+    </attr>
+    <attr name="_2131100187_res_0x7f06021b" format="boolean">
+    </attr>
+    <attr name="_2131100188_res_0x7f06021c">
+        <enum name="center" value="0" />
+        <enum name="end" value="1" />
+    </attr>
+    <attr name="_2131100189_res_0x7f06021d">
+        <enum name="scale" value="0" />
+        <enum name="slide" value="1" />
+    </attr>
+    <attr name="_2131100190_res_0x7f06021e" format="dimension">
+    </attr>
+    <attr name="_2131100191_res_0x7f06021f" format="dimension">
+    </attr>
+    <attr name="_2131100192_res_0x7f060220" format="dimension">
+    </attr>
+    <attr name="_2131100193_res_0x7f060221" format="dimension">
+    </attr>
+    <attr name="_2131100194_res_0x7f060222">
+        <enum name="auto" value="-1" />
+        <enum name="normal" value="0" />
+        <enum name="mini" value="1" />
+    </attr>
+    <attr name="_2131100195_res_0x7f060223" format="boolean">
+    </attr>
+    <attr name="_2131100196_res_0x7f060224" format="reference">
+    </attr>
+    <attr name="_2131100197_res_0x7f060225" format="reference">
+    </attr>
+    <attr name="_2131100198_res_0x7f060226" format="reference">
+    </attr>
+    <attr name="_2131100199_res_0x7f060227" format="reference">
+    </attr>
+    <attr name="_2131100200_res_0x7f060228" format="reference">
+    </attr>
+    <attr name="_2131100201_res_0x7f060229" format="integer">
+    </attr>
+    <attr name="_2131100202_res_0x7f06022a" format="dimension">
+    </attr>
+    <attr name="_2131100203_res_0x7f06022b">
+        <enum name="list" value="0" />
+        <enum name="grid" value="1" />
+    </attr>
+    <attr name="_2131100206_res_0x7f06022e" format="dimension">
+    </attr>
+    <attr name="_2131100207_res_0x7f06022f" format="boolean">
+    </attr>
+    <attr name="_2131100208_res_0x7f060230" format="dimension">
+    </attr>
+    <attr name="_2131100209_res_0x7f060231" format="string">
+    </attr>
+    <attr name="_2131100210_res_0x7f060232" format="reference">
+    </attr>
+    <attr name="_2131100211_res_0x7f060233" format="dimension">
+    </attr>
+    <attr name="_2131100212_res_0x7f060234" format="string">
+    </attr>
+    <attr name="_2131100213_res_0x7f060235" format="reference|color">
+    </attr>
+    <attr name="_2131100214_res_0x7f060236" format="dimension">
+    </attr>
+    <attr name="_2131100215_res_0x7f060237" format="dimension">
+    </attr>
+    <attr name="_2131100216_res_0x7f060238" format="reference|color">
+    </attr>
+    <attr name="_2131100217_res_0x7f060239">
+        <enum name="error" value="0" />
+        <enum name="progress" value="1" />
+    </attr>
+    <attr name="_2131100221_res_0x7f06023d" format="boolean">
+    </attr>
+    <attr name="_2131100222_res_0x7f06023e" format="dimension">
+    </attr>
+    <attr name="_2131100223_res_0x7f06023f" format="float">
+    </attr>
+    <attr name="_2131100224_res_0x7f060240" format="float">
+    </attr>
+    <attr name="_2131100232_res_0x7f060248" format="reference">
+    </attr>
+    <attr name="_2131100235_res_0x7f06024b" format="float">
+    </attr>
+    <attr name="_2131100236_res_0x7f06024c">
+        <enum name="spread" value="0" />
+        <enum name="spread_inside" value="1" />
+        <enum name="packed" value="2" />
+    </attr>
+    <attr name="_2131100237_res_0x7f06024d" format="float">
+    </attr>
+    <attr name="_2131100238_res_0x7f06024e">
+        <enum name="spread" value="0" />
+        <enum name="spread_inside" value="1" />
+        <enum name="packed" value="2" />
+    </attr>
+    <attr name="_2131100239_res_0x7f06024f">
+        <enum name="start" value="0" />
+        <enum name="end" value="1" />
+        <enum name="center" value="2" />
+    </attr>
+    <attr name="_2131100240_res_0x7f060250" format="float">
+    </attr>
+    <attr name="_2131100241_res_0x7f060251" format="dimension">
+    </attr>
+    <attr name="_2131100242_res_0x7f060252">
+        <enum name="spread" value="0" />
+        <enum name="spread_inside" value="1" />
+        <enum name="packed" value="2" />
+    </attr>
+    <attr name="_2131100243_res_0x7f060253" format="float">
+    </attr>
+    <attr name="_2131100244_res_0x7f060254">
+        <enum name="spread" value="0" />
+        <enum name="spread_inside" value="1" />
+        <enum name="packed" value="2" />
+    </attr>
+    <attr name="_2131100245_res_0x7f060255" format="float">
+    </attr>
+    <attr name="_2131100246_res_0x7f060256">
+        <enum name="spread" value="0" />
+        <enum name="spread_inside" value="1" />
+        <enum name="packed" value="2" />
+    </attr>
+    <attr name="_2131100247_res_0x7f060257" format="integer">
+    </attr>
+    <attr name="_2131100249_res_0x7f060259">
+        <enum name="top" value="0" />
+        <enum name="bottom" value="1" />
+        <enum name="center" value="2" />
+        <enum name="baseline" value="3" />
+    </attr>
+    <attr name="_2131100250_res_0x7f06025a" format="float">
+    </attr>
+    <attr name="_2131100251_res_0x7f06025b" format="dimension">
+    </attr>
+    <attr name="_2131100252_res_0x7f06025c">
+        <enum name="spread" value="0" />
+        <enum name="spread_inside" value="1" />
+        <enum name="packed" value="2" />
+    </attr>
+    <attr name="_2131100253_res_0x7f06025d">
+        <enum name="none" value="0" />
+        <enum name="chain" value="1" />
+        <enum name="aligned" value="2" />
+        <enum name="chain2" value="3" />
+    </attr>
+    <attr name="_2131100254_res_0x7f06025e" format="float">
+    </attr>
+    <attr name="_2131100255_res_0x7f06025f" format="integer">
+    </attr>
+    <attr name="_2131100256_res_0x7f060260" format="reference">
+    </attr>
+    <attr name="_2131100257_res_0x7f060261" format="boolean">
+    </attr>
+    <attr name="_2131100258_res_0x7f060262" format="reference">
+    </attr>
+    <attr name="_2131100259_res_0x7f060263" format="dimension">
+    </attr>
+    <attr name="_2131100260_res_0x7f060264" format="integer">
+    </attr>
+    <attr name="_2131100261_res_0x7f060265" format="reference">
+    </attr>
+    <attr name="_2131100262_res_0x7f060266" format="boolean">
+    </attr>
+    <attr name="_2131100263_res_0x7f060267" format="reference">
+    </attr>
+    <attr name="_2131100264_res_0x7f060268" format="float">
+    </attr>
+    <attr name="_2131100265_res_0x7f060269" format="float">
+    </attr>
+    <attr name="_2131100266_res_0x7f06026a" format="dimension">
+    </attr>
+    <attr name="_2131100267_res_0x7f06026b" format="dimension">
+    </attr>
+    <attr name="_2131100268_res_0x7f06026c" format="dimension">
+    </attr>
+    <attr name="_2131100269_res_0x7f06026d" format="reference">
+    </attr>
+    <attr name="_2131100270_res_0x7f06026e" format="string">
+    </attr>
+    <attr name="_2131100271_res_0x7f06026f" format="string">
+    </attr>
+    <attr name="_2131100272_res_0x7f060270" format="reference">
+    </attr>
+    <attr name="_2131100273_res_0x7f060271">
+        <enum name="blocking" value="0" />
+        <enum name="async" value="1" />
+    </attr>
+    <attr name="_2131100274_res_0x7f060272" format="integer">
+        <enum name="forever" value="-1" />
+    </attr>
+    <attr name="_2131100275_res_0x7f060273" format="string">
+    </attr>
+    <attr name="_2131100276_res_0x7f060274" format="string">
+    </attr>
+    <attr name="_2131100277_res_0x7f060275" format="string">
+    </attr>
+    <attr name="_2131100278_res_0x7f060276">
+        <enum name="normal" value="0" />
+        <enum name="italic" value="1" />
+    </attr>
+    <attr name="_2131100279_res_0x7f060277" format="string">
+    </attr>
+    <attr name="_2131100280_res_0x7f060278" format="integer">
+    </attr>
+    <attr name="_2131100281_res_0x7f060279" format="boolean">
+    </attr>
+    <attr name="_2131100282_res_0x7f06027a" format="boolean">
+    </attr>
+    <attr name="_2131100283_res_0x7f06027b" format="integer">
+    </attr>
+    <attr name="_2131100284_res_0x7f06027c" format="integer">
+    </attr>
+    <attr name="_2131100285_res_0x7f06027d" format="reference">
+    </attr>
+    <attr name="_2131100286_res_0x7f06027e" format="reference">
+    </attr>
+    <attr name="_2131100287_res_0x7f06027f" format="dimension">
+    </attr>
+    <attr name="_2131100288_res_0x7f060280" format="boolean">
+    </attr>
+    <attr name="_2131100289_res_0x7f060281" format="reference">
+    </attr>
+    <attr name="_2131100290_res_0x7f060282" format="float">
+    </attr>
+    <attr name="_2131100291_res_0x7f060283" format="float">
+    </attr>
+    <attr name="_2131100292_res_0x7f060284" format="integer">
+    </attr>
+    <attr name="_2131100293_res_0x7f060285" format="float">
+    </attr>
+    <attr name="_2131100294_res_0x7f060286" format="dimension">
+    </attr>
+    <attr name="_2131100295_res_0x7f060287" format="reference">
+    </attr>
+    <attr name="_2131100296_res_0x7f060288" format="boolean">
+    </attr>
+    <attr name="_2131100297_res_0x7f060289" format="dimension">
+    </attr>
+    <attr name="_2131100298_res_0x7f06028a" format="reference">
+    </attr>
+    <attr name="_2131100299_res_0x7f06028b" format="dimension">
+    </attr>
+    <attr name="_2131100300_res_0x7f06028c">
+        <enum name="left" value="0" />
+        <enum name="center" value="1" />
+    </attr>
+    <attr name="_2131100301_res_0x7f06028d" format="boolean">
+    </attr>
+    <attr name="_2131100302_res_0x7f06028e" format="color">
+    </attr>
+    <attr name="_2131100303_res_0x7f06028f" format="dimension">
+    </attr>
+    <attr name="_2131100304_res_0x7f060290" format="dimension">
+    </attr>
+    <attr name="_2131100305_res_0x7f060291" format="reference">
+    </attr>
+    <attr name="_2131100307_res_0x7f060293" format="reference">
+    </attr>
+    <attr name="_2131100308_res_0x7f060294" format="reference">
+    </attr>
+    <attr name="_2131100309_res_0x7f060295" format="reference">
+    </attr>
+    <attr name="_2131100310_res_0x7f060296" format="boolean">
+    </attr>
+    <attr name="_2131100311_res_0x7f060297" format="color">
+    </attr>
+    <attr name="_2131100312_res_0x7f060298" format="dimension">
+    </attr>
+    <attr name="_2131100313_res_0x7f060299" format="color">
+    </attr>
+    <attr name="_2131100314_res_0x7f06029a" format="boolean">
+    </attr>
+    <attr name="_2131100315_res_0x7f06029b" format="boolean">
+    </attr>
+    <attr name="_2131100316_res_0x7f06029c" format="color">
+    </attr>
+    <attr name="_2131100317_res_0x7f06029d" format="dimension">
+    </attr>
+    <attr name="_2131100318_res_0x7f06029e" format="integer">
+    </attr>
+    <attr name="_2131100319_res_0x7f06029f" format="string">
+    </attr>
+    <attr name="_2131100320_res_0x7f0602a0" format="boolean">
+    </attr>
+    <attr name="_2131100321_res_0x7f0602a1" format="reference">
+    </attr>
+    <attr name="_2131100322_res_0x7f0602a2" format="color">
+    </attr>
+    <attr name="_2131100323_res_0x7f0602a3" format="dimension">
+    </attr>
+    <attr name="_2131100324_res_0x7f0602a4" format="string">
+    </attr>
+    <attr name="_2131100325_res_0x7f0602a5" format="string">
+    </attr>
+    <attr name="_2131100326_res_0x7f0602a6" format="integer">
+    </attr>
+    <attr name="_2131100327_res_0x7f0602a7" format="boolean">
+    </attr>
+    <attr name="_2131100328_res_0x7f0602a8" format="string">
+    </attr>
+    <attr name="_2131100329_res_0x7f0602a9" format="dimension">
+    </attr>
+    <attr name="_2131100330_res_0x7f0602aa" format="dimension">
+    </attr>
+    <attr name="_2131100331_res_0x7f0602ab" format="boolean">
+    </attr>
+    <attr name="_2131100332_res_0x7f0602ac" format="dimension">
+    </attr>
+    <attr name="_2131100333_res_0x7f0602ad" format="integer">
+    </attr>
+    <attr name="_2131100334_res_0x7f0602ae" format="color">
+    </attr>
+    <attr name="_2131100335_res_0x7f0602af" format="dimension">
+    </attr>
+    <attr name="_2131100336_res_0x7f0602b0" format="integer">
+    </attr>
+    <attr name="_2131100337_res_0x7f0602b1">
+        <enum name="none" value="0" />
+        <enum name="outward" value="1" />
+        <enum name="inward" value="2" />
+    </attr>
+    <attr name="_2131100338_res_0x7f0602b2" format="reference">
+    </attr>
+    <attr name="_2131100339_res_0x7f0602b3" format="boolean">
+    </attr>
+    <attr name="_2131100340_res_0x7f0602b4" format="boolean">
+    </attr>
+    <attr name="_2131100341_res_0x7f0602b5" format="boolean">
+    </attr>
+    <attr name="_2131100342_res_0x7f0602b6" format="boolean">
+    </attr>
+    <attr name="_2131100343_res_0x7f0602b7" format="boolean">
+    </attr>
+    <attr name="_2131100344_res_0x7f0602b8" format="reference|color">
+    </attr>
+    <attr name="_2131100345_res_0x7f0602b9" format="dimension">
+    </attr>
+    <attr name="_2131100346_res_0x7f0602ba" format="boolean">
+    </attr>
+    <attr name="_2131100348_res_0x7f0602bc" format="reference">
+    </attr>
+    <attr name="_2131100349_res_0x7f0602bd" format="color">
+    </attr>
+    <attr name="_2131100350_res_0x7f0602be" format="dimension">
+    </attr>
+    <attr name="_2131100351_res_0x7f0602bf" format="reference|color">
+    </attr>
+    <attr name="_2131100352_res_0x7f0602c0" format="reference">
+    </attr>
+    <attr name="_2131100353_res_0x7f0602c1" format="reference">
+    </attr>
+    <attr name="_2131100354_res_0x7f0602c2" format="dimension">
+    </attr>
+    <attr name="_2131100355_res_0x7f0602c3" format="dimension">
+    </attr>
+    <attr name="_2131100356_res_0x7f0602c4" format="dimension">
+    </attr>
+    <attr name="_2131100357_res_0x7f0602c5" format="boolean">
+    </attr>
+    <attr name="_2131100358_res_0x7f0602c6" format="reference">
+    </attr>
+    <attr name="_2131100359_res_0x7f0602c7" format="reference">
+    </attr>
+    <attr name="_2131100360_res_0x7f0602c8" format="color">
+    </attr>
+    <attr name="_2131100361_res_0x7f0602c9" format="reference">
+    </attr>
+    <attr name="_2131100362_res_0x7f0602ca" format="float">
+    </attr>
+    <attr name="_2131100363_res_0x7f0602cb">
+        <enum name="left" value="1" />
+        <enum name="top" value="2" />
+        <enum name="right" value="3" />
+        <enum name="bottom" value="4" />
+    </attr>
+    <attr name="_2131100364_res_0x7f0602cc" format="dimension">
+    </attr>
+    <attr name="_2131100365_res_0x7f0602cd" format="boolean">
+    </attr>
+    <attr name="_2131100366_res_0x7f0602ce">
+        <enum name="positive" value="1" />
+        <enum name="negative" value="2" />
+    </attr>
+    <attr name="_2131100367_res_0x7f0602cf" format="dimension">
+    </attr>
+    <attr name="_2131100368_res_0x7f0602d0" format="dimension">
+    </attr>
+    <attr name="_2131100369_res_0x7f0602d1">
+        <enum name="changeSizeFirst" value="0" />
+        <enum name="wrapFirst" value="1" />
+    </attr>
+    <attr name="_2131100370_res_0x7f0602d2" format="boolean">
+    </attr>
+    <attr name="_2131100371_res_0x7f0602d3" format="boolean">
+    </attr>
+    <attr name="_2131100372_res_0x7f0602d4" format="boolean">
+    </attr>
+    <attr name="_2131100373_res_0x7f0602d5" format="reference">
+    </attr>
+    <attr name="_2131100374_res_0x7f0602d6" format="reference">
+    </attr>
+    <attr name="_2131100375_res_0x7f0602d7" format="color">
+    </attr>
+    <attr name="_2131100376_res_0x7f0602d8" format="boolean">
+    </attr>
+    <attr name="_2131100377_res_0x7f0602d9" format="dimension">
+    </attr>
+    <attr name="_2131100378_res_0x7f0602da" format="reference">
+    </attr>
+    <attr name="_2131100379_res_0x7f0602db" format="color">
+    </attr>
+    <attr name="_2131100380_res_0x7f0602dc" format="color">
+    </attr>
+    <attr name="_2131100381_res_0x7f0602dd" format="boolean">
+    </attr>
+    <attr name="_2131100382_res_0x7f0602de" format="reference|color">
+    </attr>
+    <attr name="_2131100383_res_0x7f0602df" format="reference|color">
+    </attr>
+    <attr name="_2131100384_res_0x7f0602e0" format="color">
+    </attr>
+    <attr name="_2131100385_res_0x7f0602e1" format="float">
+    </attr>
+    <attr name="_2131100386_res_0x7f0602e2" format="boolean">
+    </attr>
+    <attr name="_2131100387_res_0x7f0602e3" format="boolean">
+    </attr>
+    <attr name="_2131100388_res_0x7f0602e4" format="dimension">
+    </attr>
+    <attr name="_2131100389_res_0x7f0602e5" format="dimension">
+    </attr>
+    <attr name="_2131100390_res_0x7f0602e6" format="dimension">
+    </attr>
+    <attr name="_2131100391_res_0x7f0602e7" format="dimension">
+    </attr>
+    <attr name="_2131100392_res_0x7f0602e8" format="color">
+    </attr>
+    <attr name="_2131100393_res_0x7f0602e9" format="integer">
+    </attr>
+    <attr name="_2131100394_res_0x7f0602ea" format="reference">
+    </attr>
+    <attr name="_2131100395_res_0x7f0602eb" format="reference">
+    </attr>
+    <attr name="_2131100396_res_0x7f0602ec" format="reference">
+    </attr>
+    <attr name="_2131100397_res_0x7f0602ed" format="reference">
+    </attr>
+    <attr name="_2131100398_res_0x7f0602ee" format="color">
+    </attr>
+    <attr name="_2131100399_res_0x7f0602ef" format="reference">
+    </attr>
+    <attr name="_2131100400_res_0x7f0602f0" format="boolean">
+    </attr>
+    <attr name="_2131100401_res_0x7f0602f1" format="reference">
+    </attr>
+    <attr name="_2131100402_res_0x7f0602f2" format="dimension">
+    </attr>
+    <attr name="_2131100403_res_0x7f0602f3" format="reference">
+    </attr>
+    <attr name="_2131100404_res_0x7f0602f4" format="boolean">
+    </attr>
+    <attr name="_2131100405_res_0x7f0602f5" format="reference">
+    </attr>
+    <attr name="_2131100406_res_0x7f0602f6">
+        <enum name="normal" value="0" />
+        <enum name="small" value="1" />
+    </attr>
+    <attr name="_2131100407_res_0x7f0602f7" format="color">
+    </attr>
+    <attr name="_2131100408_res_0x7f0602f8" format="dimension">
+    </attr>
+    <attr name="_2131100409_res_0x7f0602f9" format="dimension">
+    </attr>
+    <attr name="_2131100410_res_0x7f0602fa" format="color">
+    </attr>
+    <attr name="_2131100411_res_0x7f0602fb" format="dimension">
+    </attr>
+    <attr name="_2131100412_res_0x7f0602fc" format="reference">
+    </attr>
+    <attr name="_2131100413_res_0x7f0602fd" format="boolean">
+    </attr>
+    <attr name="_2131100414_res_0x7f0602fe" format="reference">
+    </attr>
+    <attr name="_2131100415_res_0x7f0602ff" format="boolean">
+    </attr>
+    <attr name="_2131100416_res_0x7f060300" format="integer">
+    </attr>
+    <attr name="_2131100417_res_0x7f060301" format="color">
+    </attr>
+    <attr name="_2131100418_res_0x7f060302" format="color">
+    </attr>
+    <attr name="_2131100419_res_0x7f060303" format="color">
+    </attr>
+    <attr name="_2131100420_res_0x7f060304" format="color">
+    </attr>
+    <attr name="_2131100421_res_0x7f060305" format="color">
+    </attr>
+    <attr name="_2131100422_res_0x7f060306" format="color">
+    </attr>
+    <attr name="_2131100423_res_0x7f060307" format="color">
+    </attr>
+    <attr name="_2131100424_res_0x7f060308" format="color">
+    </attr>
+    <attr name="_2131100425_res_0x7f060309" format="color">
+    </attr>
+    <attr name="_2131100426_res_0x7f06030a" format="integer">
+    </attr>
+    <attr name="_2131100427_res_0x7f06030b" format="color">
+    </attr>
+    <attr name="_2131100428_res_0x7f06030c" format="color">
+    </attr>
+    <attr name="_2131100429_res_0x7f06030d" format="color">
+    </attr>
+    <attr name="_2131100430_res_0x7f06030e" format="color">
+    </attr>
+    <attr name="_2131100431_res_0x7f06030f" format="color">
+    </attr>
+    <attr name="_2131100432_res_0x7f060310" format="color">
+    </attr>
+    <attr name="_2131100433_res_0x7f060311" format="color">
+    </attr>
+    <attr name="_2131100434_res_0x7f060312" format="color">
+    </attr>
+    <attr name="_2131100435_res_0x7f060313" format="color">
+    </attr>
+    <attr name="_2131100436_res_0x7f060314" format="reference">
+    </attr>
+    <attr name="_2131100437_res_0x7f060315" format="reference">
+    </attr>
+    <attr name="_2131100438_res_0x7f060316" format="boolean">
+    </attr>
+    <attr name="_2131100439_res_0x7f060317" format="boolean">
+    </attr>
+    <attr name="_2131100440_res_0x7f060318" format="float">
+    </attr>
+    <attr name="_2131100441_res_0x7f060319" format="reference|color">
+    </attr>
+    <attr name="_2131100442_res_0x7f06031a" format="float">
+    </attr>
+    <attr name="_2131100443_res_0x7f06031b" format="boolean">
+    </attr>
+    <attr name="_2131100444_res_0x7f06031c" format="float">
+    </attr>
+    <attr name="_2131100445_res_0x7f06031d" format="float">
+    </attr>
+    <attr name="_2131100447_res_0x7f06031f" format="boolean">
+    </attr>
+    <attr name="_2131100448_res_0x7f060320" format="boolean">
+    </attr>
+    <attr name="_2131100449_res_0x7f060321">
+        <enum name="content_type" value="0" />
+        <enum name="button_type" value="1" />
+        <enum name="card_type" value="3" />
+        <enum name="bubble_type" value="4" />
+        <enum name="card_button_type" value="17" />
+    </attr>
+    <attr name="_2131100450_res_0x7f060322" format="reference">
+    </attr>
+    <attr name="_2131100451_res_0x7f060323" format="reference|color">
+    </attr>
+    <attr name="_2131100452_res_0x7f060324" format="reference">
+    </attr>
+    <attr name="_2131100453_res_0x7f060325">
+        <enum name="none" value="0" />
+        <enum name="always" value="1" />
+        <enum name="never" value="2" />
+    </attr>
+    <attr name="_2131100454_res_0x7f060326" format="reference">
+    </attr>
+    <attr name="_2131100455_res_0x7f060327" format="reference">
+    </attr>
+    <attr name="_2131100456_res_0x7f060328" format="reference">
+    </attr>
+    <attr name="_2131100457_res_0x7f060329" format="boolean">
+    </attr>
+    <attr name="_2131100458_res_0x7f06032a" format="float">
+    </attr>
+    <attr name="_2131100459_res_0x7f06032b" format="reference|dimension">
+    </attr>
+    <attr name="_2131100460_res_0x7f06032c" format="reference|dimension">
+    </attr>
+    <attr name="_2131100461_res_0x7f06032d" format="reference">
+    </attr>
+    <attr name="_2131100462_res_0x7f06032e" format="reference">
+    </attr>
+    <attr name="_2131100463_res_0x7f06032f" format="reference">
+    </attr>
+    <attr name="_2131100464_res_0x7f060330" format="integer">
+    </attr>
+    <attr name="_2131100465_res_0x7f060331" format="reference">
+    </attr>
+    <attr name="_2131100466_res_0x7f060332" format="dimension">
+    </attr>
+    <attr name="_2131100467_res_0x7f060333" format="reference">
+    </attr>
+    <attr name="_2131100468_res_0x7f060334" format="dimension">
+    </attr>
+    <attr name="_2131100469_res_0x7f060335" format="integer">
+    </attr>
+    <attr name="_2131100470_res_0x7f060336" format="boolean">
+    </attr>
+    <attr name="_2131100471_res_0x7f060337" format="reference">
+    </attr>
+    <attr name="_2131100472_res_0x7f060338" format="reference">
+    </attr>
+    <attr name="_2131100473_res_0x7f060339" format="reference">
+    </attr>
+    <attr name="_2131100474_res_0x7f06033a" format="boolean">
+    </attr>
+    <attr name="_2131100475_res_0x7f06033b" format="reference">
+    </attr>
+    <attr name="_2131100476_res_0x7f06033c" format="reference">
+    </attr>
+    <attr name="_2131100477_res_0x7f06033d" format="reference">
+    </attr>
+    <attr name="_2131100478_res_0x7f06033e" format="reference">
+    </attr>
+    <attr name="_2131100479_res_0x7f06033f" format="reference">
+    </attr>
+    <attr name="_2131100480_res_0x7f060340" format="color">
+    </attr>
+    <attr name="_2131100481_res_0x7f060341" format="dimension">
+    </attr>
+    <attr name="_2131100482_res_0x7f060342" format="dimension">
+    </attr>
+    <attr name="_2131100483_res_0x7f060343">
+        <enum name="dot" value="1" />
+        <enum name="text" value="2" />
+    </attr>
+    <attr name="_2131100484_res_0x7f060344" format="reference">
+    </attr>
+    <attr name="_2131100485_res_0x7f060345" format="color">
+    </attr>
+    <attr name="_2131100486_res_0x7f060346" format="dimension">
+    </attr>
+    <attr name="_2131100487_res_0x7f060347" format="dimension">
+    </attr>
+    <attr name="_2131100488_res_0x7f060348" format="dimension">
+    </attr>
+    <attr name="_2131100489_res_0x7f060349" format="color">
+    </attr>
+    <attr name="_2131100491_res_0x7f06034b" format="color">
+    </attr>
+    <attr name="_2131100492_res_0x7f06034c" format="color">
+    </attr>
+    <attr name="_2131100493_res_0x7f06034d" format="dimension">
+    </attr>
+    <attr name="_2131100494_res_0x7f06034e">
+        <enum name="downRight" value="0" />
+        <enum name="downCenter" value="1" />
+    </attr>
+    <attr name="_2131100495_res_0x7f06034f" format="reference">
+    </attr>
+    <attr name="_2131100499_res_0x7f060353" format="reference">
+    </attr>
+    <attr name="_2131100501_res_0x7f060355" format="dimension">
+    </attr>
+    <attr name="_2131100502_res_0x7f060356" format="color">
+    </attr>
+    <attr name="_2131100503_res_0x7f060357" format="reference">
+    </attr>
+    <attr name="_2131100504_res_0x7f060358" format="color">
+    </attr>
+    <attr name="_2131100505_res_0x7f060359" format="color">
+    </attr>
+    <attr name="_2131100506_res_0x7f06035a" format="string">
+    </attr>
+    <attr name="_2131100507_res_0x7f06035b" format="color">
+    </attr>
+    <attr name="_2131100508_res_0x7f06035c" format="color">
+    </attr>
+    <attr name="_2131100509_res_0x7f06035d" format="boolean">
+    </attr>
+    <attr name="_2131100510_res_0x7f06035e" format="reference">
+    </attr>
+    <attr name="_2131100511_res_0x7f06035f" format="reference">
+    </attr>
+    <attr name="_2131100512_res_0x7f060360" format="color">
+    </attr>
+    <attr name="_2131100513_res_0x7f060361" format="reference|dimension">
+    </attr>
+    <attr name="_2131100514_res_0x7f060362" format="dimension">
+    </attr>
+    <attr name="_2131100515_res_0x7f060363" format="float">
+    </attr>
+    <attr name="_2131100517_res_0x7f060365" format="dimension">
+    </attr>
+    <attr name="_2131100518_res_0x7f060366" format="dimension">
+    </attr>
+    <attr name="_2131100519_res_0x7f060367" format="dimension">
+    </attr>
+    <attr name="_2131100520_res_0x7f060368" format="dimension">
+    </attr>
+    <attr name="_2131100521_res_0x7f060369" format="dimension">
+    </attr>
+    <attr name="_2131100522_res_0x7f06036a" format="reference">
+    </attr>
+    <attr name="_2131100523_res_0x7f06036b" format="boolean">
+    </attr>
+    <attr name="_2131100524_res_0x7f06036c" format="boolean">
+    </attr>
+    <attr name="_2131100525_res_0x7f06036d" format="boolean">
+    </attr>
+    <attr name="_2131100526_res_0x7f06036e" format="color">
+    </attr>
+    <attr name="_2131100527_res_0x7f06036f" format="dimension">
+    </attr>
+    <attr name="_2131100528_res_0x7f060370" format="dimension">
+    </attr>
+    <attr name="_2131100529_res_0x7f060371" format="boolean">
+    </attr>
+    <attr name="_2131100530_res_0x7f060372" format="reference">
+    </attr>
+    <attr name="_2131100531_res_0x7f060373" format="boolean">
+    </attr>
+    <attr name="_2131100532_res_0x7f060374" format="boolean">
+    </attr>
+    <attr name="_2131100533_res_0x7f060375" format="float|fraction">
+    </attr>
+    <attr name="_2131100534_res_0x7f060376" format="float|fraction">
+    </attr>
+    <attr name="_2131100535_res_0x7f060377" format="boolean">
+    </attr>
+    <attr name="_2131100536_res_0x7f060378" format="dimension">
+    </attr>
+    <attr name="_2131100537_res_0x7f060379" format="string">
+    </attr>
+    <attr name="_2131100538_res_0x7f06037a" format="reference">
+    </attr>
+    <attr name="_2131100539_res_0x7f06037b" format="reference">
+    </attr>
+    <attr name="_2131100540_res_0x7f06037c" format="string">
+    </attr>
+    <attr name="_2131100541_res_0x7f06037d" format="color">
+    </attr>
+    <attr name="_2131100542_res_0x7f06037e" format="dimension">
+    </attr>
+    <attr name="_2131100543_res_0x7f06037f" format="reference">
+    </attr>
+    <attr name="_2131100544_res_0x7f060380" format="reference|dimension">
+    </attr>
+    <attr name="_2131100545_res_0x7f060381" format="reference|dimension">
+    </attr>
+    <attr name="_2131100546_res_0x7f060382" format="reference|dimension">
+    </attr>
+    <attr name="_2131100547_res_0x7f060383" format="reference">
+    </attr>
+    <attr name="_2131100548_res_0x7f060384" format="reference|color">
+    </attr>
+    <attr name="_2131100550_res_0x7f060386" format="reference|color">
+    </attr>
+    <attr name="_2131100551_res_0x7f060387" format="float">
+    </attr>
+    <attr name="_2131100552_res_0x7f060388" format="reference">
+    </attr>
+    <attr name="_2131100553_res_0x7f060389" format="reference|color">
+    </attr>
+    <attr name="_2131100554_res_0x7f06038a" format="dimension">
+    </attr>
+    <attr name="_2131100555_res_0x7f06038b" format="reference|color">
+    </attr>
+    <attr name="_2131100556_res_0x7f06038c" format="reference|color">
+    </attr>
+    <attr name="_2131100557_res_0x7f06038d" format="reference|color">
+    </attr>
+    <attr name="_2131100558_res_0x7f06038e" format="reference">
+    </attr>
+    <attr name="_2131100559_res_0x7f06038f" format="reference">
+    </attr>
+    <attr name="_2131100560_res_0x7f060390" format="color">
+    </attr>
+    <attr name="_2131100561_res_0x7f060391" format="reference|color">
+    </attr>
+    <attr name="_2131100562_res_0x7f060392" format="reference">
+    </attr>
+    <attr name="_2131100563_res_0x7f060393" format="reference">
+    </attr>
+    <attr name="_2131100564_res_0x7f060394" format="boolean">
+    </attr>
+    <attr name="_2131100565_res_0x7f060395" format="reference">
+    </attr>
+    <attr name="_2131100566_res_0x7f060396" format="reference">
+    </attr>
+    <attr name="_2131100567_res_0x7f060397" format="reference">
+    </attr>
+    <attr name="_2131100568_res_0x7f060398" format="boolean">
+    </attr>
+    <attr name="_2131100569_res_0x7f060399" format="reference">
+    </attr>
+    <attr name="_2131100570_res_0x7f06039a" format="reference">
+    </attr>
+    <attr name="_2131100571_res_0x7f06039b">
+        <enum name="expanded" value="0" />
+        <enum name="collapsed" value="1" />
+        <enum name="anchored" value="2" />
+        <enum name="hidden" value="3" />
+    </attr>
+    <attr name="_2131100572_res_0x7f06039c" format="reference">
+    </attr>
+    <attr name="_2131100573_res_0x7f06039d" format="boolean">
+    </attr>
+    <attr name="_2131100574_res_0x7f06039e" format="boolean">
+    </attr>
+    <attr name="_2131100575_res_0x7f06039f" format="boolean">
+    </attr>
+    <attr name="_2131100576_res_0x7f0603a0" format="boolean">
+    </attr>
+    <attr name="_2131100577_res_0x7f0603a1" format="boolean">
+    </attr>
+    <attr name="_2131100578_res_0x7f0603a2" format="boolean">
+    </attr>
+    <attr name="_2131100579_res_0x7f0603a3" format="boolean">
+    </attr>
+    <attr name="_2131100580_res_0x7f0603a4" format="boolean">
+    </attr>
+    <attr name="_2131100581_res_0x7f0603a5" format="dimension">
+    </attr>
+    <attr name="_2131100582_res_0x7f0603a6" format="color">
+    </attr>
+    <attr name="_2131100583_res_0x7f0603a7" format="boolean">
+    </attr>
+    <attr name="_2131100584_res_0x7f0603a8">
+        <enum name="smallest" value="0" />
+        <enum name="small" value="1" />
+        <enum name="medium" value="2" />
+        <enum name="large" value="3" />
+    </attr>
+    <attr name="_2131100585_res_0x7f0603a9" format="dimension">
+    </attr>
+    <attr name="_2131100586_res_0x7f0603aa">
+        <enum name="layout_overlay" value="0" />
+        <enum name="layout_stack" value="1" />
+    </attr>
+    <attr name="_2131100587_res_0x7f0603ab" format="reference">
+    </attr>
+    <attr name="_2131100588_res_0x7f0603ac" format="reference">
+    </attr>
+    <attr name="_2131100589_res_0x7f0603ad" format="color">
+    </attr>
+    <attr name="_2131100590_res_0x7f0603ae" format="boolean">
+    </attr>
+    <attr name="_2131100591_res_0x7f0603af">
+        <enum name="smallest" value="0" />
+        <enum name="small" value="1" />
+        <enum name="medium" value="2" />
+        <enum name="large" value="3" />
+    </attr>
+    <attr name="_2131100592_res_0x7f0603b0" format="boolean">
+    </attr>
+    <attr name="_2131100593_res_0x7f0603b1" format="integer">
+    </attr>
+    <attr name="_2131100594_res_0x7f0603b2" format="reference|dimension">
+    </attr>
+    <attr name="_2131100595_res_0x7f0603b3" format="color">
+    </attr>
+    <attr name="_2131100596_res_0x7f0603b4" format="dimension">
+    </attr>
+    <attr name="_2131100597_res_0x7f0603b5" format="integer">
+    </attr>
+    <attr name="_2131100598_res_0x7f0603b6" format="dimension">
+    </attr>
+    <attr name="_2131100599_res_0x7f0603b7" format="reference|color">
+    </attr>
+    <attr name="_2131100600_res_0x7f0603b8" format="dimension">
+    </attr>
+    <attr name="_2131100601_res_0x7f0603b9" format="integer">
+    </attr>
+    <attr name="_2131100602_res_0x7f0603ba" format="dimension">
+    </attr>
+    <attr name="_2131100603_res_0x7f0603bb" format="dimension">
+    </attr>
+    <attr name="_2131100604_res_0x7f0603bc" format="dimension">
+    </attr>
+    <attr name="_2131100605_res_0x7f0603bd" format="dimension">
+    </attr>
+    <attr name="_2131100606_res_0x7f0603be" format="reference">
+    </attr>
+    <attr name="_2131100607_res_0x7f0603bf" format="color">
+    </attr>
+    <attr name="_2131100608_res_0x7f0603c0" format="color">
+    </attr>
+    <attr name="_2131100609_res_0x7f0603c1" format="reference">
+    </attr>
+    <attr name="_2131100610_res_0x7f0603c2" format="dimension">
+    </attr>
+    <attr name="_2131100611_res_0x7f0603c3" format="dimension">
+    </attr>
+    <attr name="_2131100612_res_0x7f0603c4" format="reference">
+    </attr>
+    <attr name="_2131100613_res_0x7f0603c5" format="dimension">
+    </attr>
+    <attr name="_2131100614_res_0x7f0603c6" format="boolean">
+    </attr>
+    <attr name="_2131100615_res_0x7f0603c7" format="float">
+    </attr>
+    <attr name="_2131100616_res_0x7f0603c8" format="float">
+    </attr>
+    <attr name="_2131100617_res_0x7f0603c9">
+        <enum name="none" value="0" />
+        <enum name="verticalOffset" value="1" />
+    </attr>
+    <attr name="_2131100618_res_0x7f0603ca" format="reference">
+    </attr>
+    <attr name="_2131100619_res_0x7f0603cb" format="reference">
+    </attr>
+    <attr name="_2131100620_res_0x7f0603cc">
+        <enum name="left" value="1" />
+        <enum name="right" value="2" />
+    </attr>
+    <attr name="_2131100621_res_0x7f0603cd" format="reference">
+    </attr>
+    <attr name="_2131100622_res_0x7f0603ce" format="reference|color">
+    </attr>
+    <attr name="_2131100623_res_0x7f0603cf" format="reference">
+    </attr>
+    <attr name="_2131100624_res_0x7f0603d0" format="dimension">
+    </attr>
+    <attr name="_2131100625_res_0x7f0603d1" format="reference|color">
+    </attr>
+    <attr name="_2131100626_res_0x7f0603d2" format="color">
+    </attr>
+    <attr name="_2131100627_res_0x7f0603d3" format="dimension">
+    </attr>
+    <attr name="_2131100628_res_0x7f0603d4" format="float">
+    </attr>
+    <attr name="_2131100629_res_0x7f0603d5" format="float">
+    </attr>
+    <attr name="_2131100630_res_0x7f0603d6" format="integer">
+    </attr>
+    <attr name="_2131100631_res_0x7f0603d7" format="dimension">
+    </attr>
+    <attr name="_2131100632_res_0x7f0603d8" format="dimension">
+    </attr>
+    <attr name="_2131100633_res_0x7f0603d9" format="dimension">
+    </attr>
+    <attr name="_2131100634_res_0x7f0603da" format="fraction">
+    </attr>
+    <attr name="_2131100635_res_0x7f0603db" format="integer">
+    </attr>
+    <attr name="_2131100636_res_0x7f0603dc" format="integer">
+    </attr>
+    <attr name="_2131100637_res_0x7f0603dd" format="dimension">
+    </attr>
+    <attr name="_2131100638_res_0x7f0603de" format="integer">
+    </attr>
+    <attr name="_2131100639_res_0x7f0603df" format="boolean">
+    </attr>
+    <attr name="_2131100640_res_0x7f0603e0" format="dimension">
+    </attr>
+    <attr name="_2131100641_res_0x7f0603e1" format="integer">
+    </attr>
+    <attr name="_2131100642_res_0x7f0603e2" format="dimension">
+    </attr>
+    <attr name="_2131100643_res_0x7f0603e3" format="dimension">
+    </attr>
+    <attr name="_2131100644_res_0x7f0603e4" format="dimension">
+    </attr>
+    <attr name="_2131100645_res_0x7f0603e5" format="color">
+    </attr>
+    <attr name="_2131100646_res_0x7f0603e6">
+        <enum name="noRing" value="0" />
+        <enum name="filledRing" value="1" />
+        <enum name="tickRing" value="2" />
+    </attr>
+    <attr name="_2131100647_res_0x7f0603e7" format="dimension">
+    </attr>
+    <attr name="_2131100648_res_0x7f0603e8" format="reference">
+    </attr>
+    <attr name="_2131100649_res_0x7f0603e9" format="dimension">
+    </attr>
+    <attr name="_2131100650_res_0x7f0603ea" format="reference">
+    </attr>
+    <attr name="_2131100651_res_0x7f0603eb" format="color">
+    </attr>
+    <attr name="_2131100652_res_0x7f0603ec" format="reference">
+    </attr>
+    <attr name="_2131100653_res_0x7f0603ed" format="color">
+    </attr>
+    <attr name="_2131100654_res_0x7f0603ee" format="reference">
+    </attr>
+    <attr name="_2131100655_res_0x7f0603ef" format="color">
+    </attr>
+    <attr name="_2131100656_res_0x7f0603f0" format="reference">
+    </attr>
+    <attr name="_2131100657_res_0x7f0603f1" format="dimension">
+    </attr>
+    <attr name="_2131100658_res_0x7f0603f2" format="color">
+    </attr>
+    <attr name="_2131100659_res_0x7f0603f3" format="boolean">
+    </attr>
+    <attr name="_2131100660_res_0x7f0603f4" format="reference">
+    </attr>
+    <attr name="_2131100661_res_0x7f0603f5" format="color">
+    </attr>
+    <attr name="_2131100662_res_0x7f0603f6" format="color">
+    </attr>
+    <attr name="_2131100663_res_0x7f0603f7" format="reference">
+    </attr>
+    <attr name="_2131100664_res_0x7f0603f8" format="color">
+    </attr>
+    <attr name="_2131100665_res_0x7f0603f9" format="color">
+    </attr>
+    <attr name="_2131100666_res_0x7f0603fa" format="boolean">
+    </attr>
+    <attr name="_2131100667_res_0x7f0603fb" format="reference">
+    </attr>
+    <attr name="_2131100668_res_0x7f0603fc" format="color">
+    </attr>
+    <attr name="_2131100669_res_0x7f0603fd" format="boolean">
+    </attr>
+    <attr name="_2131100670_res_0x7f0603fe" format="color">
+    </attr>
+    <attr name="_2131100671_res_0x7f0603ff" format="reference">
+    </attr>
+    <attr name="_2131100672_res_0x7f060400" format="reference">
+    </attr>
+    <attr name="_2131100673_res_0x7f060401" format="reference">
+    </attr>
+    <attr name="_2131100674_res_0x7f060402" format="reference">
+    </attr>
+    <attr name="_2131100675_res_0x7f060403" format="reference">
+    </attr>
+    <attr name="_2131100676_res_0x7f060404" format="reference">
+    </attr>
+    <attr name="_2131100677_res_0x7f060405" format="float">
+    </attr>
+    <attr name="_2131100678_res_0x7f060406" format="float">
+    </attr>
+    <attr name="_2131100679_res_0x7f060407" format="reference">
+    </attr>
+    <attr name="_2131100680_res_0x7f060408" format="reference">
+    </attr>
+    <attr name="_2131100681_res_0x7f060409" format="color">
+    </attr>
+    <attr name="_2131100682_res_0x7f06040a" format="boolean">
+    </attr>
+    <attr name="_2131100683_res_0x7f06040b" format="reference">
+    </attr>
+    <attr name="_2131100684_res_0x7f06040c" format="color">
+    </attr>
+    <attr name="_2131100685_res_0x7f06040d" format="reference">
+    </attr>
+    <attr name="_2131100686_res_0x7f06040e" format="reference">
+    </attr>
+    <attr name="_2131100687_res_0x7f06040f" format="dimension">
+    </attr>
+    <attr name="_2131100688_res_0x7f060410" format="reference|color">
+    </attr>
+    <attr name="_2131100689_res_0x7f060411" format="dimension">
+    </attr>
+    <attr name="_2131100690_res_0x7f060412" format="integer">
+    </attr>
+    <attr name="_2131100691_res_0x7f060413" format="dimension">
+    </attr>
+    <attr name="_2131100692_res_0x7f060414" format="integer">
+    </attr>
+    <attr name="_2131100693_res_0x7f060415" format="integer">
+    </attr>
+    <attr name="_2131100694_res_0x7f060416" format="reference">
+    </attr>
+    <attr name="_2131100695_res_0x7f060417" format="reference|color">
+    </attr>
+    <attr name="_2131100696_res_0x7f060418" format="dimension">
+    </attr>
+    <attr name="_2131100697_res_0x7f060419" format="reference">
+    </attr>
+    <attr name="_2131100698_res_0x7f06041a" format="dimension">
+    </attr>
+    <attr name="_2131100699_res_0x7f06041b" format="dimension">
+    </attr>
+    <attr name="_2131100700_res_0x7f06041c" format="dimension">
+    </attr>
+    <attr name="_2131100701_res_0x7f06041d" format="dimension">
+    </attr>
+    <attr name="_2131100702_res_0x7f06041e" format="dimension">
+    </attr>
+    <attr name="_2131100703_res_0x7f06041f" format="reference">
+    </attr>
+    <attr name="_2131100704_res_0x7f060420" format="color">
+    </attr>
+    <attr name="_2131100705_res_0x7f060421" format="dimension">
+    </attr>
+    <attr name="_2131100706_res_0x7f060422" format="dimension">
+    </attr>
+    <attr name="_2131100707_res_0x7f060423" format="boolean">
+    </attr>
+    <attr name="_2131100708_res_0x7f060424" format="boolean">
+    </attr>
+    <attr name="_2131100709_res_0x7f060425" format="boolean">
+    </attr>
+    <attr name="_2131100710_res_0x7f060426" format="dimension">
+    </attr>
+    <attr name="_2131100711_res_0x7f060427">
+        <enum name="horizontal" value="0" />
+        <enum name="vertical" value="1" />
+    </attr>
+    <attr name="_2131100712_res_0x7f060428" format="reference">
+    </attr>
+    <attr name="_2131100713_res_0x7f060429" format="dimension">
+    </attr>
+    <attr name="_2131100714_res_0x7f06042a" format="dimension">
+    </attr>
+    <attr name="_2131100715_res_0x7f06042b" format="reference|color">
+    </attr>
+    <attr name="_2131100716_res_0x7f06042c" format="color">
+    </attr>
+    <attr name="_2131100717_res_0x7f06042d" format="reference">
+    </attr>
+    <attr name="_2131100718_res_0x7f06042e" format="reference|dimension">
+    </attr>
+    <attr name="_2131100719_res_0x7f06042f" format="reference|dimension">
+    </attr>
+    <attr name="_2131100720_res_0x7f060430" format="reference">
+    </attr>
+    <attr name="_2131100721_res_0x7f060431" format="reference">
+    </attr>
+    <attr name="_2131100722_res_0x7f060432" format="reference">
+    </attr>
+    <attr name="_2131100723_res_0x7f060433" format="reference">
+    </attr>
+    <attr name="_2131100724_res_0x7f060434" format="reference">
+    </attr>
+    <attr name="_2131100725_res_0x7f060435" format="reference">
+    </attr>
+    <attr name="_2131100726_res_0x7f060436" format="reference">
+    </attr>
+    <attr name="_2131100727_res_0x7f060437">
+        <enum name="fast" value="0" />
+        <enum name="normal" value="1" />
+        <enum name="slow" value="2" />
+    </attr>
+    <attr name="_2131100728_res_0x7f060438" format="color">
+    </attr>
+    <attr name="_2131100729_res_0x7f060439" format="boolean">
+    </attr>
+    <attr name="_2131100730_res_0x7f06043a">
+        <enum name="smallest" value="0" />
+        <enum name="small" value="1" />
+        <enum name="medium" value="2" />
+        <enum name="large" value="3" />
+        <enum name="floating_small" value="4" />
+        <enum name="floating_medium" value="5" />
+        <enum name="floating_large" value="6" />
+    </attr>
+    <attr name="_2131100731_res_0x7f06043b">
+        <enum name="bubble" value="0" />
+        <enum name="linear" value="1" />
+        <enum name="white" value="2" />
+        <enum name="space" value="3" />
+    </attr>
+    <attr name="_2131100732_res_0x7f06043c" format="dimension">
+    </attr>
+    <attr name="_2131100733_res_0x7f06043d" format="boolean">
+    </attr>
+    <attr name="_2131100734_res_0x7f06043e" format="reference">
+    </attr>
+    <attr name="_2131100735_res_0x7f06043f">
+        <enum name="large" value="0" />
+        <enum name="middle" value="1" />
+        <enum name="small" value="2" />
+    </attr>
+    <attr name="_2131100737_res_0x7f060441" format="dimension">
+    </attr>
+    <attr name="_2131100738_res_0x7f060442" format="color">
+    </attr>
+    <attr name="_2131100739_res_0x7f060443" format="reference|color">
+    </attr>
+    <attr name="_2131100740_res_0x7f060444" format="reference">
+    </attr>
+    <attr name="_2131100741_res_0x7f060445" format="reference">
+    </attr>
+    <attr name="_2131100742_res_0x7f060446" format="float">
+    </attr>
+    <attr name="_2131100743_res_0x7f060447" format="reference">
+    </attr>
+    <attr name="_2131100744_res_0x7f060448" format="color">
+    </attr>
+    <attr name="_2131100745_res_0x7f060449" format="dimension">
+    </attr>
+    <attr name="_2131100746_res_0x7f06044a" format="boolean">
+    </attr>
+    <attr name="_2131100747_res_0x7f06044b" format="boolean">
+    </attr>
+    <attr name="_2131100748_res_0x7f06044c">
+        <enum name="classic" value="0" />
+        <enum name="headline" value="1" />
+    </attr>
+    <attr name="_2131100749_res_0x7f06044d" format="reference">
+    </attr>
+    <attr name="_2131100750_res_0x7f06044e" format="color">
+    </attr>
+    <attr name="_2131100751_res_0x7f06044f" format="integer">
+    </attr>
+    <attr name="_2131100752_res_0x7f060450" format="color">
+    </attr>
+    <attr name="_2131100753_res_0x7f060451" format="dimension">
+    </attr>
+    <attr name="_2131100754_res_0x7f060452" format="reference">
+    </attr>
+    <attr name="_2131100755_res_0x7f060453" format="dimension">
+    </attr>
+    <attr name="_2131100756_res_0x7f060454" format="dimension">
+    </attr>
+    <attr name="_2131100757_res_0x7f060455" format="color">
+    </attr>
+    <attr name="_2131100758_res_0x7f060456" format="dimension">
+    </attr>
+    <attr name="_2131100759_res_0x7f060457" format="dimension">
+    </attr>
+    <attr name="_2131100760_res_0x7f060458" format="reference">
+    </attr>
+    <attr name="_2131100761_res_0x7f060459" format="dimension">
+    </attr>
+    <attr name="_2131100762_res_0x7f06045a" format="dimension">
+    </attr>
+    <attr name="_2131100763_res_0x7f06045b" format="dimension">
+    </attr>
+    <attr name="_2131100764_res_0x7f06045c" format="dimension">
+    </attr>
+    <attr name="_2131100765_res_0x7f06045d" format="color">
+    </attr>
+    <attr name="_2131100766_res_0x7f06045e" format="dimension">
+    </attr>
+    <attr name="_2131100767_res_0x7f06045f" format="dimension">
+    </attr>
+    <attr name="_2131100768_res_0x7f060460" format="float">
+    </attr>
+    <attr name="_2131100769_res_0x7f060461" format="dimension">
+    </attr>
+    <attr name="_2131100770_res_0x7f060462" format="boolean">
+    </attr>
+    <attr name="_2131100771_res_0x7f060463" format="float">
+    </attr>
+    <attr name="_2131100772_res_0x7f060464" format="string">
+    </attr>
+    <attr name="_2131100773_res_0x7f060465" format="reference">
+    </attr>
+    <attr name="_2131100774_res_0x7f060466" format="color">
+    </attr>
+    <attr name="_2131100775_res_0x7f060467" format="string">
+    </attr>
+    <attr name="_2131100776_res_0x7f060468" format="string">
+    </attr>
+    <attr name="_2131100777_res_0x7f060469" format="color">
+    </attr>
+    <attr name="_2131100778_res_0x7f06046a" format="reference">
+    </attr>
+    <attr name="_2131100779_res_0x7f06046b" format="string">
+    </attr>
+    <attr name="_2131100780_res_0x7f06046c" format="color">
+    </attr>
+    <attr name="_2131100781_res_0x7f06046d" format="reference|color">
+    </attr>
+    <attr name="_2131100782_res_0x7f06046e" format="reference|dimension">
+    </attr>
+    <attr name="_2131100783_res_0x7f06046f" format="reference|dimension">
+    </attr>
+    <attr name="_2131100784_res_0x7f060470" format="dimension">
+    </attr>
+    <attr name="_2131100785_res_0x7f060471" format="color">
+    </attr>
+    <attr name="_2131100786_res_0x7f060472" format="reference">
+    </attr>
+    <attr name="_2131100787_res_0x7f060473" format="reference">
+    </attr>
+    <attr name="_2131100789_res_0x7f060475" format="dimension">
+    </attr>
+    <attr name="_2131100790_res_0x7f060476">
+        <flag name="line" value="0" />
+        <flag name="arc" value="1" />
+    </attr>
+    <attr name="_2131100791_res_0x7f060477" format="dimension">
+    </attr>
+    <attr name="_2131100792_res_0x7f060478" format="reference">
+    </attr>
+    <attr name="_2131100793_res_0x7f060479" format="boolean">
+    </attr>
+    <attr name="_2131100794_res_0x7f06047a" format="color">
+    </attr>
+    <attr name="_2131100795_res_0x7f06047b" format="dimension">
+    </attr>
+    <attr name="_2131100796_res_0x7f06047c" format="reference|color">
+    </attr>
+    <attr name="_2131100797_res_0x7f06047d" format="reference|color">
+    </attr>
+    <attr name="_2131100798_res_0x7f06047e" format="float|fraction">
+    </attr>
+    <attr name="_2131100799_res_0x7f06047f" format="float|fraction">
+    </attr>
+    <attr name="_2131100800_res_0x7f060480" format="boolean">
+    </attr>
+    <attr name="_2131100801_res_0x7f060481" format="color">
+    </attr>
+    <attr name="_2131100802_res_0x7f060482" format="reference">
+    </attr>
+    <attr name="_2131100803_res_0x7f060483" format="reference|dimension">
+    </attr>
+    <attr name="_2131100804_res_0x7f060484" format="float">
+    </attr>
+    <attr name="_2131100805_res_0x7f060485" format="float">
+    </attr>
+    <attr name="_2131100806_res_0x7f060486" format="dimension">
+    </attr>
+    <attr name="_2131100807_res_0x7f060487" format="reference|dimension">
+    </attr>
+    <attr name="_2131100808_res_0x7f060488" format="reference|dimension">
+    </attr>
+    <attr name="_2131100809_res_0x7f060489" format="reference|dimension">
+    </attr>
+    <attr name="_2131100810_res_0x7f06048a" format="color">
+    </attr>
+    <attr name="_2131100811_res_0x7f06048b" format="color">
+    </attr>
+    <attr name="_2131100812_res_0x7f06048c" format="color">
+    </attr>
+    <attr name="_2131100813_res_0x7f06048d" format="dimension">
+    </attr>
+    <attr name="_2131100814_res_0x7f06048e" format="dimension">
+    </attr>
+    <attr name="_2131100815_res_0x7f06048f" format="integer">
+    </attr>
+    <attr name="_2131100816_res_0x7f060490" format="boolean">
+    </attr>
+    <attr name="_2131100817_res_0x7f060491" format="float">
+    </attr>
+    <attr name="_2131100818_res_0x7f060492" format="float">
+    </attr>
+    <attr name="_2131100819_res_0x7f060493" format="reference">
+    </attr>
+    <attr name="_2131100820_res_0x7f060494" format="boolean">
+    </attr>
+    <attr name="_2131100821_res_0x7f060495">
+        <enum name="light" value="0" />
+        <enum name="dark" value="1" />
+        <enum name="translucent" value="2" />
+    </attr>
+    <attr name="_2131100822_res_0x7f060496">
+        <enum name="hwid_button_theme_no_title" value="0" />
+        <enum name="hwid_button_theme_full_title" value="1" />
+    </attr>
+    <attr name="_2131100823_res_0x7f060497">
+        <enum name="hwid_color_policy_red" value="0" />
+        <enum name="hwid_color_policy_white" value="1" />
+        <enum name="hwid_color_policy_white_with_border" value="2" />
+        <enum name="hwid_color_policy_black" value="3" />
+        <enum name="hwid_color_policy_gray" value="4" />
+    </attr>
+    <attr name="_2131100824_res_0x7f060498" format="dimension">
+        <enum name="hwid_corner_radius_large" value="-1" />
+        <enum name="hwid_corner_radius_medium" value="-2" />
+        <enum name="hwid_corner_radius_small" value="-3" />
+    </attr>
+    <attr name="_2131100825_res_0x7f060499" format="reference">
+    </attr>
+    <attr name="_2131100826_res_0x7f06049a" format="dimension">
+    </attr>
+    <attr name="_2131100827_res_0x7f06049b">
+        <flag name="start" value="1" />
+        <flag name="textStart" value="2" />
+        <flag name="end" value="3" />
+        <flag name="textEnd" value="4" />
+        <flag name="top" value="16" />
+        <flag name="textTop" value="32" />
+    </attr>
+    <attr name="_2131100828_res_0x7f06049c" format="dimension">
+    </attr>
+    <attr name="_2131100829_res_0x7f06049d" format="dimension">
+    </attr>
+    <attr name="_2131100830_res_0x7f06049e" format="dimension">
+    </attr>
+    <attr name="_2131100831_res_0x7f06049f" format="color">
+    </attr>
+    <attr name="_2131100832_res_0x7f0604a0">
+        <enum name="src_over" value="3" />
+        <enum name="src_in" value="5" />
+        <enum name="src_atop" value="9" />
+        <enum name="multiply" value="14" />
+        <enum name="screen" value="15" />
+        <enum name="add" value="16" />
+    </attr>
+    <attr name="_2131100833_res_0x7f0604a1" format="boolean">
+    </attr>
+    <attr name="_2131100834_res_0x7f0604a2" format="reference">
+    </attr>
+    <attr name="_2131100835_res_0x7f0604a3" format="reference">
+    </attr>
+    <attr name="_2131100836_res_0x7f0604a4" format="reference">
+    </attr>
+    <attr name="_2131100837_res_0x7f0604a5" format="float">
+    </attr>
+    <attr name="_2131100838_res_0x7f0604a6">
+        <enum name="none" value="0" />
+        <enum name="adjust_width" value="1" />
+        <enum name="adjust_height" value="2" />
+    </attr>
+    <attr name="_2131100839_res_0x7f0604a7" format="reference">
+    </attr>
+    <attr name="_2131100840_res_0x7f0604a8" format="float">
+    </attr>
+    <attr name="_2131100841_res_0x7f0604a9" format="float">
+    </attr>
+    <attr name="_2131100842_res_0x7f0604aa" format="float">
+    </attr>
+    <attr name="_2131100843_res_0x7f0604ab" format="dimension">
+    </attr>
+    <attr name="_2131100844_res_0x7f0604ac" format="dimension">
+    </attr>
+    <attr name="_2131100845_res_0x7f0604ad" format="float">
+    </attr>
+    <attr name="_2131100846_res_0x7f0604ae">
+        <enum name="fit" value="0" />
+        <enum name="fill" value="1" />
+    </attr>
+    <attr name="_2131100847_res_0x7f0604af">
+        <enum name="contiguous" value="0" />
+        <enum name="disjoint" value="1" />
+    </attr>
+    <attr name="_2131100848_res_0x7f0604b0" format="reference">
+    </attr>
+    <attr name="_2131100849_res_0x7f0604b1" format="reference|color">
+    </attr>
+    <attr name="_2131100850_res_0x7f0604b2" format="integer|color">
+    </attr>
+    <attr name="_2131100851_res_0x7f0604b3" format="string">
+    </attr>
+    <attr name="_2131100852_res_0x7f0604b4">
+        <enum name="visible" value="0" />
+        <enum name="invisible" value="4" />
+        <enum name="gone" value="8" />
+    </attr>
+    <attr name="_2131100853_res_0x7f0604b5">
+        <enum name="clockwise" value="0" />
+        <enum name="counterclockwise" value="1" />
+    </attr>
+    <attr name="_2131100854_res_0x7f0604b6">
+        <enum name="leftToRight" value="0" />
+        <enum name="rightToLeft" value="1" />
+        <enum name="startToEnd" value="2" />
+        <enum name="endToStart" value="3" />
+    </attr>
+    <attr name="_2131100855_res_0x7f0604b7" format="dimension">
+    </attr>
+    <attr name="_2131100856_res_0x7f0604b8" format="dimension">
+    </attr>
+    <attr name="_2131100857_res_0x7f0604b9" format="integer|color">
+    </attr>
+    <attr name="_2131100858_res_0x7f0604ba" format="string">
+    </attr>
+    <attr name="_2131100859_res_0x7f0604bb">
+        <enum name="visible" value="0" />
+        <enum name="invisible" value="4" />
+        <enum name="gone" value="8" />
+    </attr>
+    <attr name="_2131100860_res_0x7f0604bc" format="integer|color">
+    </attr>
+    <attr name="_2131100861_res_0x7f0604bd" format="string">
+    </attr>
+    <attr name="_2131100862_res_0x7f0604be">
+        <enum name="visible" value="0" />
+        <enum name="invisible" value="4" />
+        <enum name="gone" value="8" />
+    </attr>
+    <attr name="_2131100863_res_0x7f0604bf" format="integer|color">
+    </attr>
+    <attr name="_2131100864_res_0x7f0604c0" format="string">
+    </attr>
+    <attr name="_2131100865_res_0x7f0604c1" format="string">
+    </attr>
+    <attr name="_2131100866_res_0x7f0604c2" format="dimension">
+    </attr>
+    <attr name="_2131100867_res_0x7f0604c3" format="dimension">
+    </attr>
+    <attr name="_2131100868_res_0x7f0604c4" format="dimension">
+    </attr>
+    <attr name="_2131100869_res_0x7f0604c5" format="color">
+    </attr>
+    <attr name="_2131100870_res_0x7f0604c6" format="dimension">
+    </attr>
+    <attr name="_2131100871_res_0x7f0604c7" format="reference|color">
+    </attr>
+    <attr name="_2131100872_res_0x7f0604c8" format="dimension">
+    </attr>
+    <attr name="_2131100873_res_0x7f0604c9" format="integer">
+    </attr>
+    <attr name="_2131100874_res_0x7f0604ca" format="boolean">
+    </attr>
+    <attr name="_2131100876_res_0x7f0604cc" format="float">
+    </attr>
+    <attr name="_2131100877_res_0x7f0604cd" format="reference">
+    </attr>
+    <attr name="_2131100878_res_0x7f0604ce" format="dimension">
+    </attr>
+    <attr name="_2131100879_res_0x7f0604cf" format="dimension">
+    </attr>
+    <attr name="_2131100880_res_0x7f0604d0" format="dimension">
+    </attr>
+    <attr name="_2131100881_res_0x7f0604d1" format="dimension">
+    </attr>
+    <attr name="_2131100882_res_0x7f0604d2" format="dimension">
+    </attr>
+    <attr name="_2131100883_res_0x7f0604d3" format="dimension">
+    </attr>
+    <attr name="_2131100884_res_0x7f0604d4" format="dimension">
+    </attr>
+    <attr name="_2131100885_res_0x7f0604d5" format="string">
+    </attr>
+    <attr name="_2131100886_res_0x7f0604d6" format="color">
+    </attr>
+    <attr name="_2131100887_res_0x7f0604d7" format="reference">
+    </attr>
+    <attr name="_2131100888_res_0x7f0604d8" format="dimension">
+    </attr>
+    <attr name="_2131100889_res_0x7f0604d9" format="dimension">
+    </attr>
+    <attr name="_2131100890_res_0x7f0604da" format="dimension">
+    </attr>
+    <attr name="_2131100891_res_0x7f0604db" format="color">
+    </attr>
+    <attr name="_2131100892_res_0x7f0604dc" format="dimension">
+    </attr>
+    <attr name="_2131100893_res_0x7f0604dd" format="color">
+    </attr>
+    <attr name="_2131100894_res_0x7f0604de" format="dimension">
+    </attr>
+    <attr name="_2131100895_res_0x7f0604df" format="string">
+    </attr>
+    <attr name="_2131100896_res_0x7f0604e0" format="color">
+    </attr>
+    <attr name="_2131100897_res_0x7f0604e1" format="dimension">
+    </attr>
+    <attr name="_2131100898_res_0x7f0604e2" format="dimension">
+    </attr>
+    <attr name="_2131100899_res_0x7f0604e3" format="dimension">
+    </attr>
+    <attr name="_2131100900_res_0x7f0604e4" format="color">
+    </attr>
+    <attr name="_2131100901_res_0x7f0604e5" format="dimension">
+    </attr>
+    <attr name="_2131100902_res_0x7f0604e6" format="dimension">
+    </attr>
+    <attr name="_2131100903_res_0x7f0604e7" format="dimension">
+    </attr>
+    <attr name="_2131100904_res_0x7f0604e8" format="dimension">
+    </attr>
+    <attr name="_2131100905_res_0x7f0604e9" format="dimension">
+    </attr>
+    <attr name="_2131100906_res_0x7f0604ea" format="color">
+    </attr>
+    <attr name="_2131100907_res_0x7f0604eb" format="dimension">
+    </attr>
+    <attr name="_2131100908_res_0x7f0604ec" format="dimension">
+    </attr>
+    <attr name="_2131100909_res_0x7f0604ed">
+        <enum name="DETAIL" value="0" />
+        <enum name="COACH" value="1" />
+    </attr>
+    <attr name="_2131100910_res_0x7f0604ee" format="boolean">
+    </attr>
+    <attr name="_2131100911_res_0x7f0604ef" format="boolean">
+    </attr>
+    <attr name="_2131100912_res_0x7f0604f0" format="boolean">
+    </attr>
+    <attr name="_2131100913_res_0x7f0604f1" format="boolean">
+    </attr>
+    <attr name="_2131100914_res_0x7f0604f2" format="boolean">
+    </attr>
+    <attr name="_2131100915_res_0x7f0604f3" format="boolean">
+    </attr>
+    <attr name="_2131100916_res_0x7f0604f4" format="boolean">
+    </attr>
+    <attr name="_2131100918_res_0x7f0604f6" format="boolean">
+    </attr>
+    <attr name="_2131100919_res_0x7f0604f7" format="boolean">
+    </attr>
+    <attr name="_2131100920_res_0x7f0604f8" format="boolean">
+    </attr>
+    <attr name="_2131100921_res_0x7f0604f9" format="boolean">
+    </attr>
+    <attr name="_2131100922_res_0x7f0604fa" format="boolean">
+    </attr>
+    <attr name="_2131100923_res_0x7f0604fb" format="boolean">
+    </attr>
+    <attr name="_2131100925_res_0x7f0604fd" format="boolean">
+    </attr>
+    <attr name="_2131100926_res_0x7f0604fe" format="boolean">
+    </attr>
+    <attr name="_2131100927_res_0x7f0604ff" format="boolean">
+    </attr>
+    <attr name="_2131100928_res_0x7f060500" format="boolean">
+    </attr>
+    <attr name="_2131100929_res_0x7f060501" format="boolean">
+    </attr>
+    <attr name="_2131100930_res_0x7f060502" format="boolean">
+    </attr>
+    <attr name="_2131100931_res_0x7f060503" format="boolean">
+    </attr>
+    <attr name="_2131100932_res_0x7f060504" format="boolean">
+    </attr>
+    <attr name="_2131100933_res_0x7f060505" format="boolean">
+    </attr>
+    <attr name="_2131100934_res_0x7f060506" format="reference">
+    </attr>
+    <attr name="_2131100935_res_0x7f060507" format="reference">
+    </attr>
+    <attr name="_2131100936_res_0x7f060508" format="color">
+    </attr>
+    <attr name="_2131100937_res_0x7f060509" format="dimension">
+    </attr>
+    <attr name="_2131100938_res_0x7f06050a" format="boolean">
+    </attr>
+    <attr name="_2131100939_res_0x7f06050b" format="dimension">
+    </attr>
+    <attr name="_2131100940_res_0x7f06050c" format="dimension">
+    </attr>
+    <attr name="_2131100941_res_0x7f06050d" format="color">
+    </attr>
+    <attr name="_2131100942_res_0x7f06050e" format="integer">
+    </attr>
+    <attr name="_2131100943_res_0x7f06050f" format="dimension">
+    </attr>
+    <attr name="_2131100944_res_0x7f060510" format="dimension">
+    </attr>
+    <attr name="_2131100945_res_0x7f060511" format="dimension">
+    </attr>
+    <attr name="_2131100946_res_0x7f060512" format="dimension">
+    </attr>
+    <attr name="_2131100947_res_0x7f060513" format="color">
+    </attr>
+    <attr name="_2131100948_res_0x7f060514" format="reference">
+    </attr>
+    <attr name="_2131100949_res_0x7f060515" format="reference">
+    </attr>
+    <attr name="_2131100950_res_0x7f060516" format="color">
+    </attr>
+    <attr name="_2131100951_res_0x7f060517" format="dimension">
+    </attr>
+    <attr name="_2131100952_res_0x7f060518" format="dimension">
+    </attr>
+    <attr name="_2131100953_res_0x7f060519" format="dimension">
+    </attr>
+    <attr name="_2131100954_res_0x7f06051a" format="dimension">
+    </attr>
+    <attr name="_2131100955_res_0x7f06051b" format="dimension">
+    </attr>
+    <attr name="_2131100956_res_0x7f06051c" format="color">
+    </attr>
+    <attr name="_2131100957_res_0x7f06051d" format="dimension">
+    </attr>
+    <attr name="_2131100958_res_0x7f06051e" format="reference">
+    </attr>
+    <attr name="_2131100959_res_0x7f06051f" format="reference">
+    </attr>
+    <attr name="_2131100960_res_0x7f060520" format="reference">
+    </attr>
+    <attr name="_2131100961_res_0x7f060521" format="color">
+    </attr>
+    <attr name="_2131100962_res_0x7f060522" format="dimension">
+    </attr>
+    <attr name="_2131100963_res_0x7f060523" format="dimension">
+    </attr>
+    <attr name="_2131100964_res_0x7f060524" format="dimension">
+    </attr>
+    <attr name="_2131100965_res_0x7f060525" format="boolean">
+    </attr>
+    <attr name="_2131100966_res_0x7f060526" format="boolean">
+    </attr>
+    <attr name="_2131100967_res_0x7f060527" format="string">
+    </attr>
+    <attr name="_2131100968_res_0x7f060528">
+        <enum name="deltaRelative" value="0" />
+        <enum name="pathRelative" value="1" />
+        <enum name="parentRelative" value="2" />
+    </attr>
+    <attr name="_2131100969_res_0x7f060529" format="reference">
+    </attr>
+    <attr name="_2131100970_res_0x7f06052a" format="reference">
+    </attr>
+    <attr name="_2131100971_res_0x7f06052b" format="float">
+    </attr>
+    <attr name="_2131100972_res_0x7f06052c">
+        <enum name="floating" value="0" />
+        <enum name="withinBounds" value="1" />
+        <enum name="gone" value="2" />
+        <enum name="visible" value="3" />
+    </attr>
+    <attr name="_2131100973_res_0x7f06052d" format="reference">
+    </attr>
+    <attr name="_2131100974_res_0x7f06052e">
+        <enum name="auto" value="-1" />
+        <enum name="selected" value="0" />
+        <enum name="labeled" value="1" />
+        <enum name="unlabeled" value="2" />
+    </attr>
+    <attr name="_2131100975_res_0x7f06052f" format="reference">
+    </attr>
+    <attr name="_2131100976_res_0x7f060530" format="color">
+    </attr>
+    <attr name="_2131100977_res_0x7f060531" format="dimension">
+    </attr>
+    <attr name="_2131100978_res_0x7f060532" format="boolean">
+    </attr>
+    <attr name="_2131100979_res_0x7f060533" format="dimension">
+    </attr>
+    <attr name="_2131100980_res_0x7f060534" format="float">
+    </attr>
+    <attr name="_2131100981_res_0x7f060535" format="float">
+    </attr>
+    <attr name="_2131100982_res_0x7f060536" format="float">
+    </attr>
+    <attr name="_2131100983_res_0x7f060537" format="float">
+    </attr>
+    <attr name="_2131100984_res_0x7f060538" format="reference">
+    </attr>
+    <attr name="_2131100985_res_0x7f060539" format="reference">
+    </attr>
+    <attr name="_2131100986_res_0x7f06053a">
+        <enum name="ignoreRequest" value="0" />
+        <enum name="honorRequest" value="1" />
+        <enum name="callMeasure" value="2" />
+    </attr>
+    <attr name="_2131100987_res_0x7f06053b" format="string">
+    </attr>
+    <attr name="_2131100988_res_0x7f06053c" format="dimension">
+    </attr>
+    <attr name="_2131100989_res_0x7f06053d" format="reference">
+    </attr>
+    <attr name="_2131100990_res_0x7f06053e" format="reference">
+    </attr>
+    <attr name="_2131100991_res_0x7f06053f">
+        <flag name="top" value="48" />
+        <flag name="bottom" value="80" />
+        <flag name="left" value="3" />
+        <flag name="right" value="5" />
+        <flag name="center_vertical" value="16" />
+        <flag name="fill_vertical" value="112" />
+        <flag name="center_horizontal" value="1" />
+        <flag name="fill_horizontal" value="7" />
+        <flag name="center" value="17" />
+        <flag name="fill" value="119" />
+        <flag name="clip_vertical" value="128" />
+        <flag name="clip_horizontal" value="8" />
+        <flag name="start" value="8388611" />
+        <flag name="end" value="8388613" />
+    </attr>
+    <attr name="_2131100992_res_0x7f060540" format="string">
+    </attr>
+    <attr name="_2131100993_res_0x7f060541">
+        <enum name="none" value="0" />
+        <enum name="pin" value="1" />
+        <enum name="parallax" value="2" />
+    </attr>
+    <attr name="_2131100994_res_0x7f060542" format="float">
+    </attr>
+    <attr name="_2131100995_res_0x7f060543" format="boolean">
+    </attr>
+    <attr name="_2131100996_res_0x7f060544" format="boolean">
+    </attr>
+    <attr name="_2131100997_res_0x7f060545" format="integer">
+    </attr>
+    <attr name="_2131100998_res_0x7f060546" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="_2131100999_res_0x7f060547" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="_2131101000_res_0x7f060548" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="_2131101001_res_0x7f060549" format="integer">
+    </attr>
+    <attr name="_2131101002_res_0x7f06054a" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="_2131101003_res_0x7f06054b" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="_2131101004_res_0x7f06054c" format="reference">
+    </attr>
+    <attr name="_2131101005_res_0x7f06054d" format="float">
+    </attr>
+    <attr name="_2131101006_res_0x7f06054e" format="dimension">
+    </attr>
+    <attr name="_2131101007_res_0x7f06054f" format="string">
+    </attr>
+    <attr name="_2131101008_res_0x7f060550" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="_2131101009_res_0x7f060551" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="_2131101010_res_0x7f060552" format="dimension">
+    </attr>
+    <attr name="_2131101011_res_0x7f060553" format="dimension">
+    </attr>
+    <attr name="_2131101012_res_0x7f060554" format="float">
+    </attr>
+    <attr name="_2131101013_res_0x7f060555" format="string|dimension">
+        <enum name="match_parent" value="-1" />
+        <enum name="wrap_content" value="-2" />
+        <enum name="match_constraint" value="-3" />
+        <enum name="wrap_content_constrained" value="-4" />
+    </attr>
+    <attr name="_2131101014_res_0x7f060556">
+        <enum name="spread" value="0" />
+        <enum name="wrap" value="1" />
+        <enum name="percent" value="2" />
+    </attr>
+    <attr name="_2131101015_res_0x7f060557" format="dimension">
+        <enum name="wrap" value="-2" />
+    </attr>
+    <attr name="_2131101016_res_0x7f060558" format="dimension">
+        <enum name="wrap" value="-2" />
+    </attr>
+    <attr name="_2131101017_res_0x7f060559" format="float">
+    </attr>
+    <attr name="_2131101018_res_0x7f06055a" format="float">
+    </attr>
+    <attr name="_2131101019_res_0x7f06055b">
+        <enum name="spread" value="0" />
+        <enum name="spread_inside" value="1" />
+        <enum name="packed" value="2" />
+    </attr>
+    <attr name="_2131101020_res_0x7f06055c" format="float">
+    </attr>
+    <attr name="_2131101021_res_0x7f06055d" format="integer">
+    </attr>
+    <attr name="_2131101022_res_0x7f06055e" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="_2131101023_res_0x7f06055f" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="_2131101024_res_0x7f060560" format="integer">
+    </attr>
+    <attr name="_2131101025_res_0x7f060561" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="_2131101026_res_0x7f060562" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="_2131101027_res_0x7f060563" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="_2131101028_res_0x7f060564" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="_2131101029_res_0x7f060565" format="string">
+    </attr>
+    <attr name="_2131101030_res_0x7f060566" format="integer">
+    </attr>
+    <attr name="_2131101031_res_0x7f060567" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="_2131101032_res_0x7f060568" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="_2131101033_res_0x7f060569" format="float">
+    </attr>
+    <attr name="_2131101034_res_0x7f06056a">
+        <enum name="spread" value="0" />
+        <enum name="spread_inside" value="1" />
+        <enum name="packed" value="2" />
+    </attr>
+    <attr name="_2131101035_res_0x7f06056b" format="float">
+    </attr>
+    <attr name="_2131101036_res_0x7f06056c" format="string|dimension">
+        <enum name="match_parent" value="-1" />
+        <enum name="wrap_content" value="-2" />
+        <enum name="match_constraint" value="-3" />
+        <enum name="wrap_content_constrained" value="-4" />
+    </attr>
+    <attr name="_2131101037_res_0x7f06056d">
+        <enum name="spread" value="0" />
+        <enum name="wrap" value="1" />
+        <enum name="percent" value="2" />
+    </attr>
+    <attr name="_2131101038_res_0x7f06056e" format="dimension">
+        <enum name="wrap" value="-2" />
+    </attr>
+    <attr name="_2131101039_res_0x7f06056f" format="dimension">
+        <enum name="wrap" value="-2" />
+    </attr>
+    <attr name="_2131101040_res_0x7f060570" format="float">
+    </attr>
+    <attr name="_2131101041_res_0x7f060571">
+        <flag name="none" value="0" />
+        <flag name="top" value="48" />
+        <flag name="bottom" value="80" />
+        <flag name="left" value="3" />
+        <flag name="right" value="5" />
+        <flag name="start" value="8388611" />
+        <flag name="end" value="8388613" />
+        <flag name="all" value="119" />
+    </attr>
+    <attr name="_2131101042_res_0x7f060572" format="dimension">
+    </attr>
+    <attr name="_2131101043_res_0x7f060573" format="dimension">
+    </attr>
+    <attr name="_2131101044_res_0x7f060574" format="dimension">
+    </attr>
+    <attr name="_2131101045_res_0x7f060575" format="dimension">
+    </attr>
+    <attr name="_2131101046_res_0x7f060576" format="dimension">
+    </attr>
+    <attr name="_2131101047_res_0x7f060577" format="dimension">
+    </attr>
+    <attr name="_2131101048_res_0x7f060578" format="dimension">
+    </attr>
+    <attr name="_2131101049_res_0x7f060579" format="dimension">
+    </attr>
+    <attr name="_2131101050_res_0x7f06057a" format="dimension">
+    </attr>
+    <attr name="_2131101051_res_0x7f06057b">
+        <enum name="none" value="0" />
+        <enum name="top" value="48" />
+        <enum name="bottom" value="80" />
+        <enum name="left" value="3" />
+        <enum name="right" value="5" />
+        <enum name="start" value="8388611" />
+        <enum name="end" value="8388613" />
+    </attr>
+    <attr name="_2131101052_res_0x7f06057c" format="integer">
+    </attr>
+    <attr name="_2131101053_res_0x7f06057d" format="dimension">
+    </attr>
+    <attr name="_2131101054_res_0x7f06057e">
+        <flag name="none" value="0" />
+        <flag name="legacy" value="0" />
+        <flag name="standard" value="257" />
+        <flag name="direct" value="1" />
+        <flag name="barrier" value="2" />
+        <flag name="chains" value="4" />
+        <flag name="dimensions" value="8" />
+        <flag name="ratio" value="16" />
+        <flag name="groups" value="32" />
+        <flag name="graph" value="64" />
+        <flag name="graph_wrap" value="128" />
+        <flag name="cache_measures" value="256" />
+        <flag name="dependency_ordering" value="512" />
+        <flag name="grouping" value="1024" />
+    </attr>
+    <attr name="_2131101055_res_0x7f06057f">
+        <enum name="none" value="0" />
+        <enum name="compress" value="1" />
+    </attr>
+    <attr name="_2131101056_res_0x7f060580">
+        <flag name="noScroll" value="0" />
+        <flag name="scroll" value="1" />
+        <flag name="exitUntilCollapsed" value="2" />
+        <flag name="enterAlways" value="4" />
+        <flag name="enterAlwaysCollapsed" value="8" />
+        <flag name="snap" value="16" />
+        <flag name="snapMargins" value="32" />
+    </attr>
+    <attr name="_2131101057_res_0x7f060581" format="reference">
+    </attr>
+    <attr name="_2131101058_res_0x7f060582">
+        <enum name="included" value="0" />
+        <enum name="horizontal_only" value="1" />
+        <enum name="vertical_only" value="2" />
+        <enum name="skipped" value="3" />
+    </attr>
+    <attr name="_2131101059_res_0x7f060583" format="dimension">
+    </attr>
+    <attr name="_2131101060_res_0x7f060584" format="dimension">
+    </attr>
+    <attr name="_2131101061_res_0x7f060585" format="string">
+    </attr>
+    <attr name="_2131101062_res_0x7f060586" format="reference">
+    </attr>
+    <attr name="_2131101063_res_0x7f060587" format="string">
+    </attr>
+    <attr name="_2131101064_res_0x7f060588">
+        <enum name="visible" value="0" />
+        <enum name="invisible" value="4" />
+        <enum name="gone" value="8" />
+    </attr>
+    <attr name="_2131101065_res_0x7f060589" format="boolean">
+    </attr>
+    <attr name="_2131101066_res_0x7f06058a" format="reference">
+    </attr>
+    <attr name="_2131101067_res_0x7f06058b" format="reference">
+    </attr>
+    <attr name="_2131101068_res_0x7f06058c" format="reference">
+    </attr>
+    <attr name="_2131101069_res_0x7f06058d" format="boolean">
+    </attr>
+    <attr name="_2131101070_res_0x7f06058e" format="dimension">
+    </attr>
+    <attr name="_2131101072_res_0x7f060590" format="dimension">
+    </attr>
+    <attr name="_2131101073_res_0x7f060591" format="color">
+    </attr>
+    <attr name="_2131101074_res_0x7f060592" format="dimension">
+    </attr>
+    <attr name="_2131101075_res_0x7f060593" format="dimension">
+    </attr>
+    <attr name="_2131101076_res_0x7f060594">
+        <enum name="horizontal" value="0" />
+        <enum name="left_top" value="1" />
+        <enum name="left_bottom" value="2" />
+        <enum name="right_top" value="3" />
+        <enum name="right_bottom" value="4" />
+    </attr>
+    <attr name="_2131101077_res_0x7f060595" format="reference">
+    </attr>
+    <attr name="_2131101079_res_0x7f060597" format="reference">
+    </attr>
+    <attr name="_2131101080_res_0x7f060598" format="reference">
+    </attr>
+    <attr name="_2131101081_res_0x7f060599" format="reference">
+    </attr>
+    <attr name="_2131101082_res_0x7f06059a" format="reference">
+    </attr>
+    <attr name="_2131101083_res_0x7f06059b" format="reference">
+    </attr>
+    <attr name="_2131101084_res_0x7f06059c" format="reference">
+    </attr>
+    <attr name="_2131101085_res_0x7f06059d" format="reference">
+    </attr>
+    <attr name="_2131101086_res_0x7f06059e" format="reference">
+    </attr>
+    <attr name="_2131101087_res_0x7f06059f" format="dimension">
+    </attr>
+    <attr name="_2131101088_res_0x7f0605a0" format="dimension">
+    </attr>
+    <attr name="_2131101089_res_0x7f0605a1" format="dimension">
+    </attr>
+    <attr name="_2131101090_res_0x7f0605a2" format="dimension">
+    </attr>
+    <attr name="_2131101091_res_0x7f0605a3" format="dimension">
+    </attr>
+    <attr name="_2131101092_res_0x7f0605a4" format="dimension">
+    </attr>
+    <attr name="_2131101093_res_0x7f0605a5" format="dimension">
+    </attr>
+    <attr name="_2131101094_res_0x7f0605a6" format="boolean">
+    </attr>
+    <attr name="_2131101095_res_0x7f0605a7" format="reference">
+    </attr>
+    <attr name="_2131101096_res_0x7f0605a8" format="boolean">
+    </attr>
+    <attr name="_2131101097_res_0x7f0605a9" format="string">
+    </attr>
+    <attr name="_2131101098_res_0x7f0605aa">
+        <enum name="matrix" value="0" />
+        <enum name="fitXY" value="1" />
+        <enum name="fitStart" value="2" />
+        <enum name="fitCenter" value="3" />
+        <enum name="fitEnd" value="4" />
+        <enum name="center" value="5" />
+        <enum name="centerCrop" value="6" />
+        <enum name="centerInside" value="7" />
+    </attr>
+    <attr name="_2131101099_res_0x7f0605ab" format="boolean">
+    </attr>
+    <attr name="_2131101100_res_0x7f0605ac" format="reference">
+    </attr>
+    <attr name="_2131101101_res_0x7f0605ad">
+        <enum name="automatic" value="0" />
+        <enum name="enabled" value="1" />
+        <enum name="disabled" value="2" />
+    </attr>
+    <attr name="_2131101102_res_0x7f0605ae" format="boolean">
+    </attr>
+    <attr name="_2131101103_res_0x7f0605af" format="boolean">
+    </attr>
+    <attr name="_2131101104_res_0x7f0605b0" format="boolean">
+    </attr>
+    <attr name="_2131101105_res_0x7f0605b1" format="boolean">
+    </attr>
+    <attr name="_2131101106_res_0x7f0605b2" format="color">
+    </attr>
+    <attr name="_2131101107_res_0x7f0605b3" format="string">
+    </attr>
+    <attr name="_2131101108_res_0x7f0605b4" format="boolean">
+    </attr>
+    <attr name="_2131101109_res_0x7f0605b5" format="reference">
+    </attr>
+    <attr name="_2131101110_res_0x7f0605b6" format="string">
+    </attr>
+    <attr name="_2131101111_res_0x7f0605b7" format="boolean">
+    </attr>
+    <attr name="_2131101112_res_0x7f0605b8" format="string">
+    </attr>
+    <attr name="_2131101113_res_0x7f0605b9" format="boolean">
+    </attr>
+    <attr name="_2131101114_res_0x7f0605ba" format="float">
+    </attr>
+    <attr name="_2131101115_res_0x7f0605bb" format="reference">
+    </attr>
+    <attr name="_2131101116_res_0x7f0605bc">
+        <enum name="automatic" value="0" />
+        <enum name="hardware" value="1" />
+        <enum name="software" value="2" />
+    </attr>
+    <attr name="_2131101117_res_0x7f0605bd" format="integer">
+    </attr>
+    <attr name="_2131101118_res_0x7f0605be">
+        <enum name="restart" value="1" />
+        <enum name="reverse" value="2" />
+    </attr>
+    <attr name="_2131101119_res_0x7f0605bf" format="float">
+    </attr>
+    <attr name="_2131101120_res_0x7f0605c0" format="string">
+    </attr>
+    <attr name="_2131101121_res_0x7f0605c1" format="boolean">
+    </attr>
+    <attr name="_2131101122_res_0x7f0605c2" format="integer">
+    </attr>
+    <attr name="_2131101123_res_0x7f0605c3">
+        <enum name="none" value="0" />
+        <enum name="normal" value="1" />
+        <enum name="satellite" value="2" />
+        <enum name="terrain" value="3" />
+        <enum name="hybrid" value="4" />
+        <enum name="eagle" value="8" />
+    </attr>
+    <attr name="_2131101124_res_0x7f0605c4" format="dimension">
+    </attr>
+    <attr name="_2131101125_res_0x7f0605c5" format="boolean">
+    </attr>
+    <attr name="_2131101126_res_0x7f0605c6" format="boolean">
+    </attr>
+    <attr name="_2131101127_res_0x7f0605c7" format="dimension">
+    </attr>
+    <attr name="_2131101128_res_0x7f0605c8" format="boolean">
+    </attr>
+    <attr name="_2131101129_res_0x7f0605c9" format="color">
+    </attr>
+    <attr name="_2131101130_res_0x7f0605ca" format="reference">
+    </attr>
+    <attr name="_2131101131_res_0x7f0605cb" format="dimension">
+    </attr>
+    <attr name="_2131101132_res_0x7f0605cc" format="string">
+    </attr>
+    <attr name="_2131101133_res_0x7f0605cd" format="color">
+    </attr>
+    <attr name="_2131101134_res_0x7f0605ce" format="dimension">
+    </attr>
+    <attr name="_2131101135_res_0x7f0605cf" format="color">
+    </attr>
+    <attr name="_2131101136_res_0x7f0605d0" format="dimension">
+    </attr>
+    <attr name="_2131101137_res_0x7f0605d1" format="reference">
+    </attr>
+    <attr name="_2131101138_res_0x7f0605d2" format="integer">
+    </attr>
+    <attr name="_2131101139_res_0x7f0605d3" format="reference">
+    </attr>
+    <attr name="_2131101140_res_0x7f0605d4" format="reference">
+    </attr>
+    <attr name="_2131101141_res_0x7f0605d5" format="reference">
+    </attr>
+    <attr name="_2131101142_res_0x7f0605d6" format="reference">
+    </attr>
+    <attr name="_2131101144_res_0x7f0605d8" format="reference">
+    </attr>
+    <attr name="_2131101145_res_0x7f0605d9" format="reference">
+    </attr>
+    <attr name="_2131101148_res_0x7f0605dc" format="reference">
+    </attr>
+    <attr name="_2131101158_res_0x7f0605e6" format="reference">
+    </attr>
+    <attr name="_2131101159_res_0x7f0605e7" format="reference">
+    </attr>
+    <attr name="_2131101164_res_0x7f0605ec" format="reference">
+    </attr>
+    <attr name="_2131101165_res_0x7f0605ed" format="dimension">
+    </attr>
+    <attr name="_2131101166_res_0x7f0605ee" format="reference">
+    </attr>
+    <attr name="_2131101169_res_0x7f0605f1" format="reference|string|integer|boolean|color|float|dimension|fraction">
+    </attr>
+    <attr name="_2131101170_res_0x7f0605f2" format="reference">
+    </attr>
+    <attr name="_2131101171_res_0x7f0605f3" format="reference">
+    </attr>
+    <attr name="_2131101172_res_0x7f0605f4" format="reference">
+    </attr>
+    <attr name="_2131101174_res_0x7f0605f6" format="integer">
+    </attr>
+    <attr name="_2131101175_res_0x7f0605f7" format="float">
+    </attr>
+    <attr name="_2131101176_res_0x7f0605f8" format="dimension">
+    </attr>
+    <attr name="_2131101177_res_0x7f0605f9" format="dimension">
+    </attr>
+    <attr name="_2131101178_res_0x7f0605fa" format="integer">
+    </attr>
+    <attr name="_2131101179_res_0x7f0605fb" format="dimension">
+    </attr>
+    <attr name="_2131101180_res_0x7f0605fc" format="dimension">
+    </attr>
+    <attr name="_2131101181_res_0x7f0605fd" format="integer">
+    </attr>
+    <attr name="_2131101182_res_0x7f0605fe" format="integer">
+    </attr>
+    <attr name="_2131101183_res_0x7f0605ff" format="integer">
+    </attr>
+    <attr name="_2131101184_res_0x7f060600" format="float">
+    </attr>
+    <attr name="_2131101185_res_0x7f060601" format="float">
+    </attr>
+    <attr name="_2131101186_res_0x7f060602" format="float">
+    </attr>
+    <attr name="_2131101187_res_0x7f060603" format="dimension">
+    </attr>
+    <attr name="_2131101188_res_0x7f060604" format="integer">
+    </attr>
+    <attr name="_2131101189_res_0x7f060605" format="integer">
+    </attr>
+    <attr name="_2131101190_res_0x7f060606" format="integer">
+    </attr>
+    <attr name="_2131101191_res_0x7f060607" format="integer">
+    </attr>
+    <attr name="_2131101192_res_0x7f060608" format="boolean">
+    </attr>
+    <attr name="_2131101193_res_0x7f060609" format="reference">
+    </attr>
+    <attr name="_2131101194_res_0x7f06060a">
+        <enum name="top" value="49" />
+        <enum name="center" value="17" />
+        <enum name="bottom" value="81" />
+    </attr>
+    <attr name="_2131101195_res_0x7f06060b" format="string">
+    </attr>
+    <attr name="_2131101196_res_0x7f06060c" format="dimension">
+    </attr>
+    <attr name="_2131101197_res_0x7f06060d" format="dimension">
+    </attr>
+    <attr name="_2131101198_res_0x7f06060e" format="dimension">
+    </attr>
+    <attr name="_2131101199_res_0x7f06060f" format="integer">
+    </attr>
+    <attr name="_2131101200_res_0x7f060610" format="float">
+    </attr>
+    <attr name="_2131101201_res_0x7f060611" format="dimension">
+    </attr>
+    <attr name="_2131101202_res_0x7f060612" format="dimension">
+    </attr>
+    <attr name="_2131101203_res_0x7f060613" format="float">
+    </attr>
+    <attr name="_2131101204_res_0x7f060614" format="dimension">
+    </attr>
+    <attr name="_2131101205_res_0x7f060615" format="integer">
+    </attr>
+    <attr name="_2131101206_res_0x7f060616" format="integer">
+    </attr>
+    <attr name="_2131101207_res_0x7f060617" format="integer">
+    </attr>
+    <attr name="_2131101208_res_0x7f060618" format="color">
+    </attr>
+    <attr name="_2131101209_res_0x7f060619" format="dimension">
+    </attr>
+    <attr name="_2131101210_res_0x7f06061a" format="dimension">
+    </attr>
+    <attr name="_2131101211_res_0x7f06061b" format="color">
+    </attr>
+    <attr name="_2131101212_res_0x7f06061c" format="string">
+    </attr>
+    <attr name="_2131101213_res_0x7f06061d" format="color">
+    </attr>
+    <attr name="_2131101214_res_0x7f06061e" format="color">
+    </attr>
+    <attr name="_2131101215_res_0x7f06061f" format="boolean">
+    </attr>
+    <attr name="_2131101216_res_0x7f060620" format="boolean">
+    </attr>
+    <attr name="_2131101217_res_0x7f060621" format="string">
+    </attr>
+    <attr name="_2131101218_res_0x7f060622">
+        <enum name="first_day_of_month" value="0" />
+        <enum name="last_select_day" value="1" />
+        <enum name="last_select_day_ignore_current" value="2" />
+    </attr>
+    <attr name="_2131101219_res_0x7f060623" format="boolean">
+    </attr>
+    <attr name="_2131101220_res_0x7f060624">
+        <enum name="mode_only_current" value="1" />
+        <enum name="mode_fix" value="2" />
+    </attr>
+    <attr name="_2131101222_res_0x7f060626">
+        <enum name="NO_DEBUG" value="0" />
+        <enum name="SHOW_PROGRESS" value="1" />
+        <enum name="SHOW_PATH" value="2" />
+        <enum name="SHOW_ALL" value="3" />
+    </attr>
+    <attr name="_2131101223_res_0x7f060627" format="integer">
+    </attr>
+    <attr name="_2131101226_res_0x7f06062a" format="integer">
+    </attr>
+    <attr name="_2131101227_res_0x7f06062b" format="integer">
+    </attr>
+    <attr name="_2131101228_res_0x7f06062c" format="integer">
+    </attr>
+    <attr name="_2131101232_res_0x7f060630" format="string">
+    </attr>
+    <attr name="_2131101233_res_0x7f060631" format="string">
+    </attr>
+    <attr name="_2131101234_res_0x7f060632" format="float">
+    </attr>
+    <attr name="_2131101235_res_0x7f060633" format="integer">
+    </attr>
+    <attr name="_2131101236_res_0x7f060634">
+        <enum name="auto" value="-1" />
+        <enum name="north" value="0" />
+        <enum name="south" value="1" />
+        <enum name="east" value="2" />
+        <enum name="west" value="3" />
+    </attr>
+    <attr name="_2131101237_res_0x7f060635" format="integer">
+    </attr>
+    <attr name="_2131101238_res_0x7f060636" format="boolean">
+    </attr>
+    <attr name="_2131101239_res_0x7f060637" format="dimension">
+    </attr>
+    <attr name="_2131101240_res_0x7f060638" format="dimension">
+    </attr>
+    <attr name="_2131101241_res_0x7f060639" format="reference">
+    </attr>
+    <attr name="_2131101242_res_0x7f06063a" format="reference|string">
+        <enum name="easeInOut" value="0" />
+        <enum name="easeIn" value="1" />
+        <enum name="easeOut" value="2" />
+        <enum name="linear" value="3" />
+        <enum name="bounce" value="4" />
+        <enum name="overshoot" value="5" />
+        <enum name="anticipate" value="6" />
+    </attr>
+    <attr name="_2131101243_res_0x7f06063b" format="string">
+        <enum name="linear" value="0" />
+        <enum name="arc" value="1" />
+    </attr>
+    <attr name="_2131101244_res_0x7f06063c" format="float">
+    </attr>
+    <attr name="_2131101245_res_0x7f06063d" format="float">
+    </attr>
+    <attr name="_2131101246_res_0x7f06063e" format="float">
+    </attr>
+    <attr name="_2131101247_res_0x7f06063f" format="reference|string">
+    </attr>
+    <attr name="_2131101248_res_0x7f060640" format="boolean">
+    </attr>
+    <attr name="_2131101249_res_0x7f060641" format="reference">
+    </attr>
+    <attr name="_2131101250_res_0x7f060642" format="boolean">
+    </attr>
+    <attr name="_2131101251_res_0x7f060643" format="reference">
+    </attr>
+    <attr name="_2131101252_res_0x7f060644" format="string">
+    </attr>
+    <attr name="_2131101253_res_0x7f060645" format="reference">
+    </attr>
+    <attr name="_2131101254_res_0x7f060646" format="color">
+    </attr>
+    <attr name="_2131101255_res_0x7f060647">
+        <enum name="normal" value="0" />
+        <enum name="listMode" value="1" />
+        <enum name="tabMode" value="2" />
+    </attr>
+    <attr name="_2131101256_res_0x7f060648" format="reference">
+    </attr>
+    <attr name="_2131101257_res_0x7f060649" format="reference">
+    </attr>
+    <attr name="_2131101258_res_0x7f06064a" format="boolean">
+    </attr>
+    <attr name="_2131101259_res_0x7f06064b">
+        <flag name="none" value="0" />
+        <flag name="disablePostScroll" value="1" />
+        <flag name="disableScroll" value="2" />
+        <flag name="supportScrollUp" value="4" />
+    </attr>
+    <attr name="_2131101260_res_0x7f06064c" format="reference">
+    </attr>
+    <attr name="_2131101261_res_0x7f06064d" format="boolean">
+    </attr>
+    <attr name="_2131101262_res_0x7f06064e" format="reference">
+    </attr>
+    <attr name="_2131101263_res_0x7f06064f" format="reference|string">
+    </attr>
+    <attr name="_2131101264_res_0x7f060650" format="color">
+    </attr>
+    <attr name="_2131101265_res_0x7f060651" format="color">
+    </attr>
+    <attr name="_2131101266_res_0x7f060652" format="dimension">
+    </attr>
+    <attr name="_2131101267_res_0x7f060653" format="integer">
+    </attr>
+    <attr name="_2131101268_res_0x7f060654" format="dimension">
+    </attr>
+    <attr name="_2131101269_res_0x7f060655">
+        <flag name="META" value="65536" />
+        <flag name="CTRL" value="4096" />
+        <flag name="ALT" value="2" />
+        <flag name="SHIFT" value="1" />
+        <flag name="SYM" value="4" />
+        <flag name="FUNCTION" value="8" />
+    </attr>
+    <attr name="_2131101270_res_0x7f060656" format="dimension">
+    </attr>
+    <attr name="_2131101271_res_0x7f060657" format="dimension">
+    </attr>
+    <attr name="_2131101272_res_0x7f060658" format="string">
+    </attr>
+    <attr name="_2131101273_res_0x7f060659" format="boolean">
+    </attr>
+    <attr name="_2131101274_res_0x7f06065a" format="string">
+    </attr>
+    <attr name="_2131101275_res_0x7f06065b" format="string">
+    </attr>
+    <attr name="_2131101276_res_0x7f06065c" format="boolean">
+    </attr>
+    <attr name="_2131101277_res_0x7f06065d">
+        <enum name="actionDown" value="1" />
+        <enum name="actionUp" value="2" />
+        <enum name="actionDownUp" value="3" />
+        <enum name="sharedValueSet" value="4" />
+        <enum name="sharedValueUnset" value="5" />
+    </attr>
+    <attr name="_2131101278_res_0x7f06065e">
+        <enum name="autoComplete" value="0" />
+        <enum name="autoCompleteToStart" value="1" />
+        <enum name="autoCompleteToEnd" value="2" />
+        <enum name="stop" value="3" />
+        <enum name="decelerate" value="4" />
+        <enum name="decelerateAndComplete" value="5" />
+        <enum name="neverCompleteToStart" value="6" />
+        <enum name="neverCompleteToEnd" value="7" />
+    </attr>
+    <attr name="_2131101279_res_0x7f06065f" format="color">
+    </attr>
+    <attr name="_2131101280_res_0x7f060660" format="color">
+    </attr>
+    <attr name="_2131101281_res_0x7f060661" format="color">
+    </attr>
+    <attr name="_2131101282_res_0x7f060662" format="float">
+    </attr>
+    <attr name="_2131101283_res_0x7f060663" format="float">
+    </attr>
+    <attr name="_2131101284_res_0x7f060664" format="color">
+    </attr>
+    <attr name="_2131101285_res_0x7f060665" format="float">
+    </attr>
+    <attr name="_2131101286_res_0x7f060666" format="dimension">
+    </attr>
+    <attr name="_2131101287_res_0x7f060667" format="float">
+    </attr>
+    <attr name="_2131101288_res_0x7f060668" format="color">
+    </attr>
+    <attr name="_2131101289_res_0x7f060669" format="float">
+    </attr>
+    <attr name="_2131101290_res_0x7f06066a" format="dimension">
+    </attr>
+    <attr name="_2131101291_res_0x7f06066b" format="dimension">
+    </attr>
+    <attr name="_2131101292_res_0x7f06066c" format="color">
+    </attr>
+    <attr name="_2131101293_res_0x7f06066d" format="dimension">
+    </attr>
+    <attr name="_2131101294_res_0x7f06066e" format="dimension">
+    </attr>
+    <attr name="_2131101295_res_0x7f06066f" format="dimension">
+    </attr>
+    <attr name="_2131101296_res_0x7f060670" format="color">
+    </attr>
+    <attr name="_2131101297_res_0x7f060671" format="color">
+    </attr>
+    <attr name="_2131101298_res_0x7f060672" format="dimension">
+    </attr>
+    <attr name="_2131101299_res_0x7f060673">
+        <enum name="fill_and_stroke" value="0" />
+        <enum name="stroke" value="1" />
+        <enum name="fill" value="2" />
+    </attr>
+    <attr name="_2131101300_res_0x7f060674" format="boolean">
+    </attr>
+    <attr name="_2131101301_res_0x7f060675" format="boolean">
+    </attr>
+    <attr name="_2131101302_res_0x7f060676" format="dimension">
+    </attr>
+    <attr name="_2131101303_res_0x7f060677" format="boolean">
+    </attr>
+    <attr name="_2131101304_res_0x7f060678" format="dimension">
+    </attr>
+    <attr name="_2131101305_res_0x7f060679" format="boolean">
+    </attr>
+    <attr name="_2131101306_res_0x7f06067a" format="boolean">
+    </attr>
+    <attr name="_2131101307_res_0x7f06067b" format="dimension">
+    </attr>
+    <attr name="_2131101308_res_0x7f06067c" format="dimension">
+    </attr>
+    <attr name="_2131101309_res_0x7f06067d" format="boolean">
+    </attr>
+    <attr name="_2131101310_res_0x7f06067e" format="reference">
+    </attr>
+    <attr name="_2131101311_res_0x7f06067f" format="reference">
+    </attr>
+    <attr name="_2131101312_res_0x7f060680" format="dimension">
+    </attr>
+    <attr name="_2131101313_res_0x7f060681" format="string">
+    </attr>
+    <attr name="_2131101314_res_0x7f060682" format="reference">
+    </attr>
+    <attr name="_2131101315_res_0x7f060683" format="boolean">
+    </attr>
+    <attr name="_2131101316_res_0x7f060684" format="color">
+    </attr>
+    <attr name="_2131101317_res_0x7f060685">
+        <enum name="src_over" value="3" />
+        <enum name="src_in" value="5" />
+        <enum name="src_atop" value="9" />
+        <enum name="multiply" value="14" />
+        <enum name="screen" value="15" />
+    </attr>
+    <attr name="_2131101318_res_0x7f060686">
+        <enum name="none" value="0" />
+        <enum name="startVertical" value="1" />
+        <enum name="startHorizontal" value="2" />
+        <enum name="flip" value="3" />
+    </attr>
+    <attr name="_2131101320_res_0x7f060688" format="reference">
+    </attr>
+    <attr name="_2131101321_res_0x7f060689" format="float">
+    </attr>
+    <attr name="_2131101322_res_0x7f06068a" format="float">
+    </attr>
+    <attr name="_2131101323_res_0x7f06068b" format="float">
+    </attr>
+    <attr name="_2131101324_res_0x7f06068c" format="float">
+    </attr>
+    <attr name="_2131101326_res_0x7f06068e" format="reference">
+        <enum name="parent" value="0" />
+    </attr>
+    <attr name="_2131101327_res_0x7f06068f" format="string">
+    </attr>
+    <attr name="_2131101328_res_0x7f060690" format="reference">
+    </attr>
+    <attr name="_2131101329_res_0x7f060691" format="color">
+    </attr>
+    <attr name="_2131101330_res_0x7f060692">
+        <enum name="visible" value="0" />
+        <enum name="invisible" value="4" />
+        <enum name="gone" value="8" />
+    </attr>
+    <attr name="_2131101331_res_0x7f060693" format="reference">
+    </attr>
+    <attr name="_2131101332_res_0x7f060694" format="color">
+    </attr>
+    <attr name="_2131101333_res_0x7f060695" format="color">
+    </attr>
+    <attr name="_2131101334_res_0x7f060696" format="reference">
+    </attr>
+    <attr name="_2131101335_res_0x7f060697" format="reference">
+    </attr>
+    <attr name="_2131101337_res_0x7f060699" format="reference">
+    </attr>
+    <attr name="_2131101338_res_0x7f06069a" format="reference">
+    </attr>
+    <attr name="_2131101339_res_0x7f06069b" format="reference">
+    </attr>
+    <attr name="_2131101340_res_0x7f06069c" format="string">
+    </attr>
+    <attr name="_2131101341_res_0x7f06069d" format="reference">
+    </attr>
+    <attr name="_2131101342_res_0x7f06069e" format="color">
+    </attr>
+    <attr name="_2131101343_res_0x7f06069f" format="boolean">
+    </attr>
+    <attr name="_2131101344_res_0x7f0606a0" format="dimension">
+    </attr>
+    <attr name="_2131101345_res_0x7f0606a1" format="color">
+    </attr>
+    <attr name="_2131101346_res_0x7f0606a2" format="string">
+    </attr>
+    <attr name="_2131101347_res_0x7f0606a3" format="reference">
+    </attr>
+    <attr name="_2131101348_res_0x7f0606a4" format="integer">
+    </attr>
+    <attr name="_2131101349_res_0x7f0606a5" format="color">
+    </attr>
+    <attr name="_2131101350_res_0x7f0606a6" format="boolean">
+    </attr>
+    <attr name="_2131101351_res_0x7f0606a7" format="integer">
+    </attr>
+    <attr name="_2131101352_res_0x7f0606a8" format="dimension">
+    </attr>
+    <attr name="_2131101353_res_0x7f0606a9" format="reference">
+    </attr>
+    <attr name="_2131101354_res_0x7f0606aa" format="color">
+    </attr>
+    <attr name="_2131101355_res_0x7f0606ab" format="color">
+    </attr>
+    <attr name="_2131101356_res_0x7f0606ac" format="reference">
+    </attr>
+    <attr name="_2131101357_res_0x7f0606ad" format="color">
+    </attr>
+    <attr name="_2131101360_res_0x7f0606b0" format="dimension">
+    </attr>
+    <attr name="_2131101361_res_0x7f0606b1" format="color">
+    </attr>
+    <attr name="_2131101362_res_0x7f0606b2" format="color">
+    </attr>
+    <attr name="_2131101363_res_0x7f0606b3" format="integer">
+    </attr>
+    <attr name="_2131101364_res_0x7f0606b4" format="color">
+    </attr>
+    <attr name="_2131101365_res_0x7f0606b5" format="dimension">
+    </attr>
+    <attr name="_2131101366_res_0x7f0606b6" format="float">
+    </attr>
+    <attr name="_2131101367_res_0x7f0606b7" format="dimension">
+    </attr>
+    <attr name="_2131101368_res_0x7f0606b8">
+        <enum name="left" value="0" />
+        <enum name="top" value="1" />
+        <enum name="right" value="2" />
+        <enum name="bottom" value="3" />
+    </attr>
+    <attr name="_2131101369_res_0x7f0606b9" format="color">
+    </attr>
+    <attr name="_2131101370_res_0x7f0606ba" format="dimension">
+    </attr>
+    <attr name="_2131101371_res_0x7f0606bb" format="boolean">
+    </attr>
+    <attr name="_2131101372_res_0x7f0606bc" format="reference|string">
+        <enum name="easeInOut" value="0" />
+        <enum name="easeIn" value="1" />
+        <enum name="easeOut" value="2" />
+        <enum name="linear" value="3" />
+        <enum name="bounce" value="4" />
+        <enum name="overshoot" value="5" />
+    </attr>
+    <attr name="_2131101373_res_0x7f0606bd" format="float">
+    </attr>
+    <attr name="_2131101374_res_0x7f0606be" format="integer">
+    </attr>
+    <attr name="_2131101375_res_0x7f0606bf" format="reference">
+    </attr>
+    <attr name="_2131101376_res_0x7f0606c0" format="string">
+    </attr>
+    <attr name="_2131101377_res_0x7f0606c1" format="reference">
+    </attr>
+    <attr name="_2131101378_res_0x7f0606c2" format="reference">
+    </attr>
+    <attr name="_2131101379_res_0x7f0606c3" format="dimension">
+    </attr>
+    <attr name="_2131101380_res_0x7f0606c4" format="color">
+    </attr>
+    <attr name="_2131101381_res_0x7f0606c5" format="reference">
+    </attr>
+    <attr name="_2131101382_res_0x7f0606c6" format="reference">
+    </attr>
+    <attr name="_2131101383_res_0x7f0606c7" format="reference">
+    </attr>
+    <attr name="_2131101384_res_0x7f0606c8" format="boolean">
+    </attr>
+    <attr name="_2131101385_res_0x7f0606c9" format="boolean">
+    </attr>
+    <attr name="_2131101386_res_0x7f0606ca" format="boolean">
+    </attr>
+    <attr name="_2131101387_res_0x7f0606cb" format="reference">
+    </attr>
+    <attr name="_2131101388_res_0x7f0606cc" format="reference">
+    </attr>
+    <attr name="_2131101389_res_0x7f0606cd" format="reference">
+    </attr>
+    <attr name="_2131101390_res_0x7f0606ce" format="dimension">
+    </attr>
+    <attr name="_2131101391_res_0x7f0606cf" format="dimension">
+    </attr>
+    <attr name="_2131101392_res_0x7f0606d0" format="dimension">
+    </attr>
+    <attr name="_2131101393_res_0x7f0606d1" format="dimension">
+    </attr>
+    <attr name="_2131101394_res_0x7f0606d2" format="boolean">
+    </attr>
+    <attr name="_2131101395_res_0x7f0606d3" format="reference">
+    </attr>
+    <attr name="_2131101396_res_0x7f0606d4" format="reference">
+    </attr>
+    <attr name="_2131101397_res_0x7f0606d5" format="reference">
+    </attr>
+    <attr name="_2131101398_res_0x7f0606d6">
+        <flag name="none" value="0" />
+        <flag name="one" value="1" />
+        <flag name="all" value="2" />
+    </attr>
+    <attr name="_2131101399_res_0x7f0606d7">
+        <enum name="fit" value="0" />
+        <enum name="fixed_width" value="1" />
+        <enum name="fixed_height" value="2" />
+        <enum name="fill" value="3" />
+        <enum name="zoom" value="4" />
+    </attr>
+    <attr name="_2131101400_res_0x7f0606d8" format="boolean">
+    </attr>
+    <attr name="_2131101401_res_0x7f0606d9" format="reference">
+    </attr>
+    <attr name="_2131101402_res_0x7f0606da" format="dimension">
+    </attr>
+    <attr name="_2131101403_res_0x7f0606db" format="string">
+    </attr>
+    <attr name="_2131101404_res_0x7f0606dc" format="reference">
+    </attr>
+    <attr name="_2131101405_res_0x7f0606dd" format="string">
+    </attr>
+    <attr name="_2131101406_res_0x7f0606de" format="reference">
+        <enum name="visible" value="0" />
+        <enum name="invisible" value="4" />
+        <enum name="gone" value="8" />
+    </attr>
+    <attr name="_2131101407_res_0x7f0606df" format="dimension">
+    </attr>
+    <attr name="_2131101408_res_0x7f0606e0" format="color">
+    </attr>
+    <attr name="_2131101409_res_0x7f0606e1" format="dimension">
+    </attr>
+    <attr name="_2131101410_res_0x7f0606e2" format="dimension">
+    </attr>
+    <attr name="_2131101411_res_0x7f0606e3" format="dimension">
+    </attr>
+    <attr name="_2131101412_res_0x7f0606e4" format="reference">
+    </attr>
+    <attr name="_2131101413_res_0x7f0606e5" format="color">
+    </attr>
+    <attr name="_2131101414_res_0x7f0606e6" format="reference">
+    </attr>
+    <attr name="_2131101415_res_0x7f0606e7" format="reference">
+    </attr>
+    <attr name="_2131101416_res_0x7f0606e8" format="dimension">
+    </attr>
+    <attr name="_2131101417_res_0x7f0606e9" format="float">
+    </attr>
+    <attr name="_2131101418_res_0x7f0606ea" format="boolean">
+    </attr>
+    <attr name="_2131101419_res_0x7f0606eb" format="color">
+    </attr>
+    <attr name="_2131101420_res_0x7f0606ec" format="integer">
+    </attr>
+    <attr name="_2131101421_res_0x7f0606ed" format="float">
+    </attr>
+    <attr name="_2131101422_res_0x7f0606ee" format="dimension">
+    </attr>
+    <attr name="_2131101423_res_0x7f0606ef" format="color">
+    </attr>
+    <attr name="_2131101424_res_0x7f0606f0" format="dimension">
+    </attr>
+    <attr name="_2131101425_res_0x7f0606f1" format="dimension">
+    </attr>
+    <attr name="_2131101426_res_0x7f0606f2" format="dimension">
+    </attr>
+    <attr name="_2131101427_res_0x7f0606f3" format="reference">
+    </attr>
+    <attr name="_2131101428_res_0x7f0606f4" format="float">
+    </attr>
+    <attr name="_2131101429_res_0x7f0606f5" format="color">
+    </attr>
+    <attr name="_2131101430_res_0x7f0606f6" format="float">
+    </attr>
+    <attr name="_2131101431_res_0x7f0606f7" format="dimension">
+    </attr>
+    <attr name="_2131101432_res_0x7f0606f8" format="dimension">
+    </attr>
+    <attr name="_2131101433_res_0x7f0606f9" format="float">
+    </attr>
+    <attr name="_2131101434_res_0x7f0606fa" format="dimension">
+    </attr>
+    <attr name="_2131101435_res_0x7f0606fb" format="float">
+    </attr>
+    <attr name="_2131101436_res_0x7f0606fc" format="float">
+    </attr>
+    <attr name="_2131101437_res_0x7f0606fd" format="dimension">
+    </attr>
+    <attr name="_2131101438_res_0x7f0606fe" format="color">
+    </attr>
+    <attr name="_2131101439_res_0x7f0606ff" format="color">
+    </attr>
+    <attr name="_2131101440_res_0x7f060700" format="dimension">
+    </attr>
+    <attr name="_2131101441_res_0x7f060701" format="dimension">
+    </attr>
+    <attr name="_2131101442_res_0x7f060702" format="integer">
+    </attr>
+    <attr name="_2131101443_res_0x7f060703" format="dimension">
+    </attr>
+    <attr name="_2131101444_res_0x7f060704" format="string">
+    </attr>
+    <attr name="_2131101445_res_0x7f060705" format="color">
+    </attr>
+    <attr name="_2131101446_res_0x7f060706">
+        <enum name="top" value="0" />
+        <enum name="bottom" value="1" />
+    </attr>
+    <attr name="_2131101447_res_0x7f060707" format="dimension">
+    </attr>
+    <attr name="_2131101448_res_0x7f060708" format="dimension">
+    </attr>
+    <attr name="_2131101449_res_0x7f060709" format="color">
+    </attr>
+    <attr name="_2131101450_res_0x7f06070a">
+        <enum name="none" value="0" />
+        <enum name="line" value="1" />
+        <enum name="grid" value="2" />
+    </attr>
+    <attr name="_2131101451_res_0x7f06070b" format="boolean">
+    </attr>
+    <attr name="_2131101452_res_0x7f06070c" format="color">
+    </attr>
+    <attr name="_2131101453_res_0x7f06070d" format="color">
+    </attr>
+    <attr name="_2131101454_res_0x7f06070e" format="boolean">
+    </attr>
+    <attr name="_2131101455_res_0x7f06070f" format="color">
+    </attr>
+    <attr name="_2131101456_res_0x7f060710" format="dimension">
+    </attr>
+    <attr name="_2131101457_res_0x7f060711" format="color">
+    </attr>
+    <attr name="_2131101458_res_0x7f060712" format="color">
+    </attr>
+    <attr name="_2131101459_res_0x7f060713" format="float">
+    </attr>
+    <attr name="_2131101460_res_0x7f060714" format="dimension">
+    </attr>
+    <attr name="_2131101461_res_0x7f060715" format="float">
+    </attr>
+    <attr name="_2131101462_res_0x7f060716" format="string">
+    </attr>
+    <attr name="_2131101463_res_0x7f060717" format="color">
+    </attr>
+    <attr name="_2131101464_res_0x7f060718" format="dimension">
+    </attr>
+    <attr name="_2131101465_res_0x7f060719" format="dimension">
+    </attr>
+    <attr name="_2131101466_res_0x7f06071a" format="reference|string">
+    </attr>
+    <attr name="_2131101467_res_0x7f06071b" format="dimension">
+    </attr>
+    <attr name="_2131101468_res_0x7f06071c" format="integer">
+    </attr>
+    <attr name="_2131101470_res_0x7f06071e" format="dimension">
+    </attr>
+    <attr name="_2131101471_res_0x7f06071f" format="boolean">
+    </attr>
+    <attr name="_2131101472_res_0x7f060720" format="boolean">
+    </attr>
+    <attr name="_2131101473_res_0x7f060721" format="color">
+    </attr>
+    <attr name="_2131101474_res_0x7f060722" format="dimension">
+    </attr>
+    <attr name="_2131101475_res_0x7f060723" format="dimension">
+    </attr>
+    <attr name="_2131101476_res_0x7f060724" format="reference">
+    </attr>
+    <attr name="_2131101477_res_0x7f060725" format="dimension">
+    </attr>
+    <attr name="_2131101478_res_0x7f060726" format="reference">
+    </attr>
+    <attr name="_2131101479_res_0x7f060727" format="reference">
+    </attr>
+    <attr name="_2131101480_res_0x7f060728" format="reference">
+    </attr>
+    <attr name="_2131101481_res_0x7f060729" format="color">
+    </attr>
+    <attr name="_2131101482_res_0x7f06072a" format="dimension">
+    </attr>
+    <attr name="_2131101483_res_0x7f06072b" format="reference">
+    </attr>
+    <attr name="_2131101484_res_0x7f06072c" format="dimension">
+    </attr>
+    <attr name="_2131101485_res_0x7f06072d" format="dimension">
+    </attr>
+    <attr name="_2131101486_res_0x7f06072e" format="reference">
+    </attr>
+    <attr name="_2131101487_res_0x7f06072f" format="reference">
+    </attr>
+    <attr name="_2131101488_res_0x7f060730" format="reference|color">
+    </attr>
+    <attr name="_2131101489_res_0x7f060731" format="color">
+    </attr>
+    <attr name="_2131101490_res_0x7f060732" format="color">
+    </attr>
+    <attr name="_2131101491_res_0x7f060733" format="boolean">
+    </attr>
+    <attr name="_2131101492_res_0x7f060734" format="dimension">
+    </attr>
+    <attr name="_2131101493_res_0x7f060735" format="reference|string">
+    </attr>
+    <attr name="_2131101494_res_0x7f060736" format="boolean">
+    </attr>
+    <attr name="_2131101495_res_0x7f060737" format="reference">
+    </attr>
+    <attr name="_2131101496_res_0x7f060738" format="reference">
+    </attr>
+    <attr name="_2131101497_res_0x7f060739" format="reference">
+    </attr>
+    <attr name="_2131101498_res_0x7f06073a" format="reference">
+    </attr>
+    <attr name="_2131101499_res_0x7f06073b" format="dimension">
+    </attr>
+    <attr name="_2131101500_res_0x7f06073c" format="reference">
+    </attr>
+    <attr name="_2131101501_res_0x7f06073d">
+        <enum name="center" value="0" />
+        <enum name="bottom" value="1" />
+        <enum name="top" value="2" />
+    </attr>
+    <attr name="_2131101502_res_0x7f06073e" format="reference">
+    </attr>
+    <attr name="_2131101505_res_0x7f060741" format="reference">
+    </attr>
+    <attr name="_2131101507_res_0x7f060743" format="boolean">
+    </attr>
+    <attr name="_2131101508_res_0x7f060744" format="boolean">
+    </attr>
+    <attr name="_2131101509_res_0x7f060745" format="boolean">
+    </attr>
+    <attr name="_2131101510_res_0x7f060746" format="integer">
+    </attr>
+    <attr name="_2131101511_res_0x7f060747">
+        <enum name="none" value="0" />
+        <enum name="outward" value="1" />
+        <enum name="inward" value="2" />
+    </attr>
+    <attr name="_2131101512_res_0x7f060748">
+        <flag name="never" value="0" />
+        <flag name="ifRoom" value="1" />
+        <flag name="always" value="2" />
+        <flag name="withText" value="4" />
+        <flag name="collapseActionView" value="8" />
+    </attr>
+    <attr name="_2131101513_res_0x7f060749" format="integer">
+    </attr>
+    <attr name="_2131101514_res_0x7f06074a">
+        <flag name="none" value="0" />
+        <flag name="beginning" value="1" />
+        <flag name="middle" value="2" />
+        <flag name="end" value="4" />
+    </attr>
+    <attr name="_2131101515_res_0x7f06074b" format="reference">
+    </attr>
+    <attr name="_2131101516_res_0x7f06074c" format="boolean">
+    </attr>
+    <attr name="_2131101517_res_0x7f06074d" format="boolean">
+    </attr>
+    <attr name="_2131101518_res_0x7f06074e" format="boolean">
+    </attr>
+    <attr name="_2131101519_res_0x7f06074f" format="boolean">
+    </attr>
+    <attr name="_2131101520_res_0x7f060750" format="boolean">
+    </attr>
+    <attr name="_2131101521_res_0x7f060751" format="boolean">
+    </attr>
+    <attr name="_2131101522_res_0x7f060752">
+        <enum name="never" value="0" />
+        <enum name="when_playing" value="1" />
+        <enum name="always" value="2" />
+    </attr>
+    <attr name="_2131101523_res_0x7f060753" format="boolean">
+    </attr>
+    <attr name="_2131101524_res_0x7f060754" format="boolean">
+    </attr>
+    <attr name="_2131101525_res_0x7f060755" format="boolean">
+    </attr>
+    <attr name="_2131101526_res_0x7f060756" format="boolean">
+    </attr>
+    <attr name="_2131101527_res_0x7f060757" format="boolean">
+    </attr>
+    <attr name="_2131101528_res_0x7f060758" format="boolean">
+    </attr>
+    <attr name="_2131101529_res_0x7f060759" format="boolean">
+    </attr>
+    <attr name="_2131101530_res_0x7f06075a" format="integer">
+    </attr>
+    <attr name="_2131101531_res_0x7f06075b" format="boolean">
+    </attr>
+    <attr name="_2131101532_res_0x7f06075c" format="reference">
+    </attr>
+    <attr name="_2131101533_res_0x7f06075d" format="reference">
+    </attr>
+    <attr name="_2131101534_res_0x7f06075e" format="reference">
+    </attr>
+    <attr name="_2131101535_res_0x7f06075f" format="color">
+    </attr>
+    <attr name="_2131101536_res_0x7f060760" format="reference">
+    </attr>
+    <attr name="_2131101537_res_0x7f060761" format="reference">
+    </attr>
+    <attr name="_2131101538_res_0x7f060762" format="reference">
+    </attr>
+    <attr name="_2131101539_res_0x7f060763" format="boolean">
+    </attr>
+    <attr name="_2131101540_res_0x7f060764" format="boolean">
+    </attr>
+    <attr name="_2131101541_res_0x7f060765" format="float">
+    </attr>
+    <attr name="_2131101542_res_0x7f060766" format="integer">
+    </attr>
+    <attr name="_2131101543_res_0x7f060767" format="reference">
+    </attr>
+    <attr name="_2131101544_res_0x7f060768" format="reference">
+    </attr>
+    <attr name="_2131101545_res_0x7f060769" format="color">
+    </attr>
+    <attr name="_2131101546_res_0x7f06076a" format="reference">
+    </attr>
+    <attr name="_2131101547_res_0x7f06076b" format="reference">
+    </attr>
+    <attr name="_2131101548_res_0x7f06076c" format="reference">
+    </attr>
+    <attr name="_2131101549_res_0x7f06076d" format="integer">
+    </attr>
+    <attr name="_2131101550_res_0x7f06076e" format="boolean">
+    </attr>
+    <attr name="_2131101551_res_0x7f06076f" format="reference">
+    </attr>
+    <attr name="_2131101552_res_0x7f060770" format="reference">
+    </attr>
+    <attr name="_2131101553_res_0x7f060771" format="boolean">
+    </attr>
+    <attr name="_2131101554_res_0x7f060772" format="boolean">
+    </attr>
+    <attr name="_2131101555_res_0x7f060773" format="boolean">
+    </attr>
+    <attr name="_2131101556_res_0x7f060774" format="float">
+    </attr>
+    <attr name="_2131101557_res_0x7f060775" format="float">
+    </attr>
+    <attr name="_2131101558_res_0x7f060776">
+        <flag name="overshoot" value="0" />
+        <flag name="bounceStart" value="1" />
+        <flag name="bounceEnd" value="2" />
+        <flag name="bounceBoth" value="3" />
+    </attr>
+    <attr name="_2131101559_res_0x7f060777" format="float">
+    </attr>
+    <attr name="_2131101560_res_0x7f060778" format="float">
+    </attr>
+    <attr name="_2131101561_res_0x7f060779" format="float">
+    </attr>
+    <attr name="_2131101562_res_0x7f06077a" format="float">
+    </attr>
+    <attr name="_2131101563_res_0x7f06077b" format="reference">
+    </attr>
+    <attr name="_2131101564_res_0x7f06077c" format="boolean">
+    </attr>
+    <attr name="_2131101565_res_0x7f06077d" format="float">
+    </attr>
+    <attr name="_2131101566_res_0x7f06077e" format="integer">
+    </attr>
+    <attr name="_2131101567_res_0x7f06077f" format="float">
+    </attr>
+    <attr name="_2131101568_res_0x7f060780" format="boolean">
+    </attr>
+    <attr name="_2131101569_res_0x7f060781" format="string">
+    </attr>
+    <attr name="_2131101570_res_0x7f060782" format="reference">
+    </attr>
+    <attr name="_2131101571_res_0x7f060783" format="color">
+    </attr>
+    <attr name="_2131101572_res_0x7f060784">
+        <enum name="src_over" value="3" />
+        <enum name="src_in" value="5" />
+        <enum name="src_atop" value="9" />
+        <enum name="multiply" value="14" />
+        <enum name="screen" value="15" />
+    </attr>
+    <attr name="_2131101573_res_0x7f060785" format="integer">
+    </attr>
+    <attr name="_2131101574_res_0x7f060786">
+        <enum name="anger_0" value="0" />
+        <enum name="anger_180" value="180" />
+    </attr>
+    <attr name="_2131101575_res_0x7f060787" format="boolean">
+    </attr>
+    <attr name="_2131101576_res_0x7f060788" format="boolean">
+    </attr>
+    <attr name="_2131101577_res_0x7f060789" format="boolean">
+    </attr>
+    <attr name="_2131101578_res_0x7f06078a" format="boolean">
+    </attr>
+    <attr name="_2131101579_res_0x7f06078b" format="boolean">
+    </attr>
+    <attr name="_2131101580_res_0x7f06078c" format="boolean">
+    </attr>
+    <attr name="_2131101581_res_0x7f06078d" format="boolean">
+    </attr>
+    <attr name="_2131101582_res_0x7f06078e" format="reference|color">
+    </attr>
+    <attr name="_2131101583_res_0x7f06078f" format="color">
+    </attr>
+    <attr name="_2131101584_res_0x7f060790" format="boolean">
+    </attr>
+    <attr name="_2131101585_res_0x7f060791" format="color">
+    </attr>
+    <attr name="_2131101586_res_0x7f060792" format="reference|color">
+    </attr>
+    <attr name="_2131101587_res_0x7f060793" format="dimension">
+    </attr>
+    <attr name="_2131101588_res_0x7f060794" format="boolean">
+    </attr>
+    <attr name="_2131101589_res_0x7f060795" format="string">
+    </attr>
+    <attr name="_2131101590_res_0x7f060796">
+        <enum name="normalList" value="0" />
+        <enum name="moreList" value="1" />
+        <enum name="normalGrid" value="2" />
+        <enum name="moreGrid" value="3" />
+        <enum name="actionList" value="4" />
+        <enum name="actionGrid" value="5" />
+        <enum name="descriptionAction" value="6" />
+    </attr>
+    <attr name="_2131101591_res_0x7f060797" format="string">
+    </attr>
+    <attr name="_2131101592_res_0x7f060798" format="string">
+    </attr>
+    <attr name="_2131101593_res_0x7f060799" format="boolean">
+    </attr>
+    <attr name="_2131101594_res_0x7f06079a" format="reference">
+    </attr>
+    <attr name="_2131101595_res_0x7f06079b" format="reference|color">
+    </attr>
+    <attr name="_2131101596_res_0x7f06079c" format="dimension">
+    </attr>
+    <attr name="_2131101597_res_0x7f06079d" format="dimension">
+    </attr>
+    <attr name="_2131101598_res_0x7f06079e" format="reference">
+    </attr>
+    <attr name="_2131101599_res_0x7f06079f" format="reference">
+    </attr>
+    <attr name="_2131101600_res_0x7f0607a0" format="string">
+    </attr>
+    <attr name="_2131101601_res_0x7f0607a1" format="boolean">
+    </attr>
+    <attr name="_2131101602_res_0x7f0607a2" format="reference">
+    </attr>
+    <attr name="_2131101603_res_0x7f0607a3" format="color">
+    </attr>
+    <attr name="_2131101604_res_0x7f0607a4" format="reference">
+    </attr>
+    <attr name="_2131101605_res_0x7f0607a5" format="reference">
+    </attr>
+    <attr name="_2131101606_res_0x7f0607a6" format="reference">
+    </attr>
+    <attr name="_2131101607_res_0x7f0607a7" format="string">
+    </attr>
+    <attr name="_2131101608_res_0x7f0607a8" format="reference">
+    </attr>
+    <attr name="_2131101609_res_0x7f0607a9" format="color">
+    </attr>
+    <attr name="_2131101622_res_0x7f0607b6" format="reference">
+    </attr>
+    <attr name="_2131101623_res_0x7f0607b7" format="boolean">
+    </attr>
+    <attr name="_2131101624_res_0x7f0607b8">
+        <enum name="sp" value="0" />
+        <enum name="dp" value="1" />
+    </attr>
+    <attr name="_2131101625_res_0x7f0607b9">
+        <enum name="none" value="0" />
+        <enum name="surface_view" value="1" />
+        <enum name="texture_view" value="2" />
+        <enum name="spherical_gl_surface_view" value="3" />
+        <enum name="video_decoder_gl_surface_view" value="4" />
+    </attr>
+    <attr name="_2131101626_res_0x7f0607ba" format="float">
+    </attr>
+    <attr name="_2131101627_res_0x7f0607bb" format="dimension">
+    </attr>
+    <attr name="_2131101628_res_0x7f0607bc" format="dimension">
+    </attr>
+    <attr name="_2131101629_res_0x7f0607bd" format="reference">
+    </attr>
+    <attr name="_2131101630_res_0x7f0607be" format="reference">
+    </attr>
+    <attr name="_2131101631_res_0x7f0607bf" format="reference">
+    </attr>
+    <attr name="_2131101632_res_0x7f0607c0" format="dimension">
+    </attr>
+    <attr name="_2131101633_res_0x7f0607c1">
+        <enum name="fill" value="0" />
+        <enum name="center" value="1" />
+        <enum name="start" value="2" />
+    </attr>
+    <attr name="_2131101634_res_0x7f0607c2" format="color">
+    </attr>
+    <attr name="_2131101635_res_0x7f0607c3">
+        <enum name="src_over" value="3" />
+        <enum name="src_in" value="5" />
+        <enum name="src_atop" value="9" />
+        <enum name="multiply" value="14" />
+        <enum name="screen" value="15" />
+        <enum name="add" value="16" />
+    </attr>
+    <attr name="_2131101636_res_0x7f0607c4" format="reference">
+    </attr>
+    <attr name="_2131101637_res_0x7f0607c5" format="integer">
+    </attr>
+    <attr name="_2131101638_res_0x7f0607c6">
+        <enum name="linear" value="0" />
+        <enum name="elastic" value="1" />
+        <enum name="fade" value="2" />
+    </attr>
+    <attr name="_2131101639_res_0x7f0607c7" format="color">
+    </attr>
+    <attr name="_2131101640_res_0x7f0607c8" format="boolean">
+    </attr>
+    <attr name="_2131101641_res_0x7f0607c9">
+        <enum name="bottom" value="0" />
+        <enum name="center" value="1" />
+        <enum name="top" value="2" />
+        <enum name="stretch" value="3" />
+    </attr>
+    <attr name="_2131101642_res_0x7f0607ca" format="dimension">
+    </attr>
+    <attr name="_2131101643_res_0x7f0607cb" format="boolean">
+    </attr>
+    <attr name="_2131101644_res_0x7f0607cc" format="dimension">
+    </attr>
+    <attr name="_2131101645_res_0x7f0607cd" format="dimension">
+    </attr>
+    <attr name="_2131101646_res_0x7f0607ce">
+        <enum name="scrollable" value="0" />
+        <enum name="fixed" value="1" />
+        <enum name="auto" value="2" />
+    </attr>
+    <attr name="_2131101647_res_0x7f0607cf" format="dimension">
+    </attr>
+    <attr name="_2131101648_res_0x7f0607d0" format="dimension">
+    </attr>
+    <attr name="_2131101649_res_0x7f0607d1" format="dimension">
+    </attr>
+    <attr name="_2131101650_res_0x7f0607d2" format="dimension">
+    </attr>
+    <attr name="_2131101651_res_0x7f0607d3" format="dimension">
+    </attr>
+    <attr name="_2131101652_res_0x7f0607d4" format="color">
+    </attr>
+    <attr name="_2131101654_res_0x7f0607d6" format="color">
+    </attr>
+    <attr name="_2131101655_res_0x7f0607d7" format="reference">
+    </attr>
+    <attr name="_2131101656_res_0x7f0607d8" format="reference">
+    </attr>
+    <attr name="_2131101657_res_0x7f0607d9" format="color">
+    </attr>
+    <attr name="_2131101658_res_0x7f0607da" format="boolean">
+    </attr>
+    <attr name="_2131101659_res_0x7f0607db" format="reference">
+    </attr>
+    <attr name="_2131101660_res_0x7f0607dc" format="color">
+    </attr>
+    <attr name="_2131101661_res_0x7f0607dd" format="float">
+    </attr>
+    <attr name="_2131101662_res_0x7f0607de">
+        <enum name="layout" value="0" />
+        <enum name="postLayout" value="1" />
+        <enum name="staticPostLayout" value="2" />
+        <enum name="staticLayout" value="3" />
+    </attr>
+    <attr name="_2131101663_res_0x7f0607df" format="boolean">
+    </attr>
+    <attr name="_2131101686_res_0x7f0607f6" format="reference">
+    </attr>
+    <attr name="_2131101687_res_0x7f0607f7" format="boolean">
+    </attr>
+    <attr name="_2131101688_res_0x7f0607f8" format="reference">
+    </attr>
+    <attr name="_2131101689_res_0x7f0607f9" format="reference">
+    </attr>
+    <attr name="_2131101690_res_0x7f0607fa" format="reference">
+    </attr>
+    <attr name="_2131101692_res_0x7f0607fc" format="reference">
+    </attr>
+    <attr name="_2131101693_res_0x7f0607fd" format="reference">
+    </attr>
+    <attr name="_2131101694_res_0x7f0607fe" format="reference">
+    </attr>
+    <attr name="_2131101695_res_0x7f0607ff" format="reference">
+    </attr>
+    <attr name="_2131101701_res_0x7f060805" format="reference">
+    </attr>
+    <attr name="_2131101702_res_0x7f060806" format="float">
+    </attr>
+    <attr name="_2131101703_res_0x7f060807" format="float">
+    </attr>
+    <attr name="_2131101704_res_0x7f060808" format="float">
+    </attr>
+    <attr name="_2131101705_res_0x7f060809" format="float">
+    </attr>
+    <attr name="_2131101706_res_0x7f06080a" format="reference|color">
+    </attr>
+    <attr name="_2131101707_res_0x7f06080b" format="reference|color">
+    </attr>
+    <attr name="_2131101708_res_0x7f06080c" format="reference|color">
+    </attr>
+    <attr name="_2131101709_res_0x7f06080d" format="dimension">
+    </attr>
+    <attr name="_2131101710_res_0x7f06080e" format="color">
+    </attr>
+    <attr name="_2131101714_res_0x7f060812" format="boolean">
+    </attr>
+    <attr name="_2131101718_res_0x7f060816" format="reference">
+    </attr>
+    <attr name="_2131101719_res_0x7f060817" format="string">
+    </attr>
+    <attr name="_2131101720_res_0x7f060818" format="color">
+    </attr>
+    <attr name="_2131101721_res_0x7f060819" format="dimension">
+    </attr>
+    <attr name="_2131101722_res_0x7f06081a" format="float">
+    </attr>
+    <attr name="_2131101723_res_0x7f06081b" format="float">
+    </attr>
+    <attr name="_2131101724_res_0x7f06081c" format="dimension">
+    </attr>
+    <attr name="_2131101725_res_0x7f06081d" format="dimension">
+    </attr>
+    <attr name="_2131101726_res_0x7f06081e" format="integer">
+    </attr>
+    <attr name="_2131101727_res_0x7f06081f">
+        <enum name="none" value="0" />
+        <enum name="frost" value="1" />
+    </attr>
+    <attr name="_2131101728_res_0x7f060820" format="dimension">
+    </attr>
+    <attr name="_2131101729_res_0x7f060821" format="dimension">
+    </attr>
+    <attr name="_2131101730_res_0x7f060822" format="reference">
+    </attr>
+    <attr name="_2131101732_res_0x7f060824" format="dimension">
+    </attr>
+    <attr name="_2131101733_res_0x7f060825" format="reference">
+    </attr>
+    <attr name="_2131101734_res_0x7f060826" format="color">
+    </attr>
+    <attr name="_2131101735_res_0x7f060827" format="dimension">
+    </attr>
+    <attr name="_2131101736_res_0x7f060828" format="dimension">
+    </attr>
+    <attr name="_2131101737_res_0x7f060829" format="color">
+    </attr>
+    <attr name="_2131101738_res_0x7f06082a" format="dimension">
+    </attr>
+    <attr name="_2131101739_res_0x7f06082b" format="dimension">
+    </attr>
+    <attr name="_2131101740_res_0x7f06082c" format="color">
+    </attr>
+    <attr name="_2131101741_res_0x7f06082d">
+        <enum name="src_over" value="3" />
+        <enum name="src_in" value="5" />
+        <enum name="src_atop" value="9" />
+        <enum name="multiply" value="14" />
+        <enum name="screen" value="15" />
+        <enum name="add" value="16" />
+    </attr>
+    <attr name="_2131101742_res_0x7f06082e" format="color">
+    </attr>
+    <attr name="_2131101743_res_0x7f06082f" format="color">
+    </attr>
+    <attr name="_2131101744_res_0x7f060830" format="color">
+    </attr>
+    <attr name="_2131101745_res_0x7f060831" format="reference">
+    </attr>
+    <attr name="_2131101746_res_0x7f060832" format="color">
+    </attr>
+    <attr name="_2131101747_res_0x7f060833">
+        <enum name="src_over" value="3" />
+        <enum name="src_in" value="5" />
+        <enum name="src_atop" value="9" />
+        <enum name="multiply" value="14" />
+        <enum name="screen" value="15" />
+        <enum name="add" value="16" />
+    </attr>
+    <attr name="_2131101748_res_0x7f060834" format="boolean">
+    </attr>
+    <attr name="_2131101749_res_0x7f060835" format="boolean">
+    </attr>
+    <attr name="_2131101750_res_0x7f060836" format="reference">
+    </attr>
+    <attr name="_2131101751_res_0x7f060837" format="reference|string">
+    </attr>
+    <attr name="_2131101752_res_0x7f060838" format="integer">
+    </attr>
+    <attr name="_2131101753_res_0x7f060839" format="color">
+    </attr>
+    <attr name="_2131101754_res_0x7f06083a">
+        <enum name="src_over" value="3" />
+        <enum name="src_in" value="5" />
+        <enum name="src_atop" value="9" />
+        <enum name="multiply" value="14" />
+        <enum name="screen" value="15" />
+        <enum name="add" value="16" />
+    </attr>
+    <attr name="_2131101756_res_0x7f06083c" format="reference">
+    </attr>
+    <attr name="_2131101757_res_0x7f06083d" format="reference">
+    </attr>
+    <attr name="_2131101758_res_0x7f06083e" format="string">
+    </attr>
+    <attr name="_2131101759_res_0x7f06083f" format="reference">
+    </attr>
+    <attr name="_2131101760_res_0x7f060840" format="reference">
+    </attr>
+    <attr name="_2131101761_res_0x7f060841" format="integer|color">
+    </attr>
+    <attr name="_2131101762_res_0x7f060842" format="reference">
+    </attr>
+    <attr name="_2131101763_res_0x7f060843" format="integer|color">
+    </attr>
+    <attr name="_2131101764_res_0x7f060844" format="boolean">
+    </attr>
+    <attr name="_2131101765_res_0x7f060845" format="reference">
+    </attr>
+    <attr name="_2131101766_res_0x7f060846" format="boolean">
+    </attr>
+    <attr name="_2131101767_res_0x7f060847" format="string">
+    </attr>
+    <attr name="_2131101768_res_0x7f060848" format="integer|color">
+    </attr>
+    <attr name="_2131101769_res_0x7f060849" format="reference">
+    </attr>
+    <attr name="_2131101770_res_0x7f06084a" format="boolean">
+    </attr>
+    <attr name="_2131101771_res_0x7f06084b" format="boolean">
+    </attr>
+    <attr name="_2131101772_res_0x7f06084c">
+        <enum name="scale" value="0" />
+        <enum name="fade" value="1" />
+    </attr>
+    <attr name="_2131101773_res_0x7f06084d" format="boolean">
+    </attr>
+    <attr name="_2131101774_res_0x7f06084e" format="reference">
+    </attr>
+    <attr name="_2131101775_res_0x7f06084f" format="boolean">
+    </attr>
+    <attr name="_2131101776_res_0x7f060850" format="dimension">
+    </attr>
+    <attr name="_2131101777_res_0x7f060851" format="dimension">
+    </attr>
+    <attr name="_2131101778_res_0x7f060852" format="dimension">
+    </attr>
+    <attr name="_2131101779_res_0x7f060853" format="dimension">
+    </attr>
+    <attr name="_2131101780_res_0x7f060854" format="dimension">
+    </attr>
+    <attr name="_2131101781_res_0x7f060855" format="dimension">
+    </attr>
+    <attr name="_2131101782_res_0x7f060856" format="reference">
+    </attr>
+    <attr name="_2131101783_res_0x7f060857" format="string">
+    </attr>
+    <attr name="_2131101784_res_0x7f060858" format="reference">
+    </attr>
+    <attr name="_2131101785_res_0x7f060859" format="color">
+    </attr>
+    <attr name="_2131101786_res_0x7f06085a" format="dimension">
+    </attr>
+    <attr name="_2131101787_res_0x7f06085b" format="reference">
+    </attr>
+    <attr name="_2131101788_res_0x7f06085c" format="dimension">
+    </attr>
+    <attr name="_2131101789_res_0x7f06085d" format="boolean">
+    </attr>
+    <attr name="_2131101790_res_0x7f06085e" format="reference">
+    </attr>
+    <attr name="_2131101791_res_0x7f06085f" format="reference">
+    </attr>
+    <attr name="_2131101792_res_0x7f060860" format="reference">
+    </attr>
+    <attr name="_2131101794_res_0x7f060862" format="reference|color">
+    </attr>
+    <attr name="_2131101795_res_0x7f060863" format="reference">
+    </attr>
+    <attr name="_2131101796_res_0x7f060864" format="reference">
+    </attr>
+    <attr name="_2131101797_res_0x7f060865" format="string">
+    </attr>
+    <attr name="_2131101798_res_0x7f060866" format="dimension">
+    </attr>
+    <attr name="_2131101799_res_0x7f060867" format="boolean">
+    </attr>
+    <attr name="_2131101800_res_0x7f060868" format="dimension">
+    </attr>
+    <attr name="_2131101801_res_0x7f060869" format="reference">
+    </attr>
+    <attr name="_2131101802_res_0x7f06086a">
+        <enum name="top" value="0" />
+        <enum name="left" value="1" />
+        <enum name="right" value="2" />
+        <enum name="bottom" value="3" />
+        <enum name="middle" value="4" />
+        <enum name="start" value="5" />
+        <enum name="end" value="6" />
+    </attr>
+    <attr name="_2131101803_res_0x7f06086b" format="reference">
+    </attr>
+    <attr name="_2131101804_res_0x7f06086c" format="dimension">
+    </attr>
+    <attr name="_2131101805_res_0x7f06086d" format="reference">
+    </attr>
+    <attr name="_2131101806_res_0x7f06086e" format="color">
+    </attr>
+    <attr name="_2131101807_res_0x7f06086f" format="color">
+    </attr>
+    <attr name="_2131101808_res_0x7f060870" format="color">
+    </attr>
+    <attr name="_2131101809_res_0x7f060871" format="dimension">
+    </attr>
+    <attr name="_2131101811_res_0x7f060873" format="dimension">
+    </attr>
+    <attr name="_2131101812_res_0x7f060874" format="dimension">
+    </attr>
+    <attr name="_2131101813_res_0x7f060875" format="color">
+    </attr>
+    <attr name="_2131101814_res_0x7f060876">
+        <enum name="src_over" value="3" />
+        <enum name="src_in" value="5" />
+        <enum name="src_atop" value="9" />
+        <enum name="multiply" value="14" />
+        <enum name="screen" value="15" />
+        <enum name="add" value="16" />
+    </attr>
+    <attr name="_2131101815_res_0x7f060877" format="reference">
+    </attr>
+    <attr name="_2131101816_res_0x7f060878" format="boolean">
+    </attr>
+    <attr name="_2131101817_res_0x7f060879" format="string">
+        <enum name="standard" value="0" />
+        <enum name="accelerate" value="1" />
+        <enum name="decelerate" value="2" />
+        <enum name="linear" value="3" />
+    </attr>
+    <attr name="_2131101818_res_0x7f06087a">
+        <flag name="none" value="0" />
+        <flag name="beginOnFirstDraw" value="1" />
+        <flag name="disableIntraAutoTransition" value="2" />
+        <flag name="onInterceptTouchReturnSwipe" value="4" />
+    </attr>
+    <attr name="_2131101819_res_0x7f06087b" format="float">
+    </attr>
+    <attr name="_2131101820_res_0x7f06087c" format="reference">
+    </attr>
+    <attr name="_2131101821_res_0x7f06087d" format="reference">
+    </attr>
+    <attr name="_2131101822_res_0x7f06087e" format="reference">
+    </attr>
+    <attr name="_2131101823_res_0x7f06087f" format="float">
+    </attr>
+    <attr name="_2131101824_res_0x7f060880" format="integer">
+    </attr>
+    <attr name="_2131101825_res_0x7f060881" format="boolean">
+    </attr>
+    <attr name="_2131101826_res_0x7f060882" format="boolean">
+    </attr>
+    <attr name="_2131101827_res_0x7f060883" format="boolean">
+    </attr>
+    <attr name="_2131101828_res_0x7f060884" format="boolean">
+    </attr>
+    <attr name="_2131101829_res_0x7f060885" format="boolean">
+    </attr>
+    <attr name="_2131101830_res_0x7f060886" format="boolean">
+    </attr>
+    <attr name="_2131101831_res_0x7f060887" format="boolean">
+    </attr>
+    <attr name="_2131101832_res_0x7f060888" format="boolean">
+    </attr>
+    <attr name="_2131101833_res_0x7f060889" format="integer|color">
+    </attr>
+    <attr name="_2131101834_res_0x7f06088a" format="reference|dimension">
+    </attr>
+    <attr name="_2131101835_res_0x7f06088b" format="string">
+    </attr>
+    <attr name="_2131101836_res_0x7f06088c" format="float">
+    </attr>
+    <attr name="_2131101837_res_0x7f06088d" format="color">
+    </attr>
+    <attr name="_2131101838_res_0x7f06088e" format="integer">
+    </attr>
+    <attr name="_2131101839_res_0x7f06088f" format="boolean">
+    </attr>
+    <attr name="_2131101840_res_0x7f060890" format="boolean">
+    </attr>
+    <attr name="_2131101841_res_0x7f060891" format="boolean">
+    </attr>
+    <attr name="_2131101842_res_0x7f060892" format="boolean">
+    </attr>
+    <attr name="_2131101843_res_0x7f060893" format="boolean">
+    </attr>
+    <attr name="_2131101844_res_0x7f060894" format="boolean">
+    </attr>
+    <attr name="_2131101845_res_0x7f060895" format="string">
+    </attr>
+    <attr name="_2131101846_res_0x7f060896" format="float">
+    </attr>
+    <attr name="_2131101847_res_0x7f060897" format="reference">
+    </attr>
+    <attr name="_2131101848_res_0x7f060898" format="dimension">
+    </attr>
+    <attr name="_2131101849_res_0x7f060899" format="dimension">
+    </attr>
+    <attr name="_2131101850_res_0x7f06089a" format="string">
+    </attr>
+    <attr name="_2131101851_res_0x7f06089b" format="reference|color">
+    </attr>
+    <attr name="_2131101852_res_0x7f06089c" format="reference|dimension">
+    </attr>
+    <attr name="_2131101853_res_0x7f06089d" format="string">
+    </attr>
+    <attr name="_2131101854_res_0x7f06089e" format="integer|color">
+    </attr>
+    <attr name="_2131101855_res_0x7f06089f">
+        <enum name="currentState" value="0" />
+        <enum name="allStates" value="1" />
+        <enum name="noState" value="2" />
+    </attr>
+    <attr name="_2131101856_res_0x7f0608a0" format="reference">
+    </attr>
+    <attr name="_2131101857_res_0x7f0608a1" format="reference">
+    </attr>
+    <attr name="_2131101858_res_0x7f0608a2" format="reference">
+    </attr>
+    <attr name="_2131101859_res_0x7f0608a3">
+        <enum name="normal" value="0" />
+        <enum name="ignore" value="1" />
+    </attr>
+    <attr name="_2131101860_res_0x7f0608a4" format="reference">
+    </attr>
+    <attr name="_2131101861_res_0x7f0608a5" format="reference">
+    </attr>
+    <attr name="_2131101862_res_0x7f0608a6" format="float">
+    </attr>
+    <attr name="_2131101863_res_0x7f0608a7" format="reference|color">
+    </attr>
+    <attr name="_2131101864_res_0x7f0608a8" format="integer">
+    </attr>
+    <attr name="_2131101865_res_0x7f0608a9" format="float|dimension">
+    </attr>
+    <attr name="_2131101866_res_0x7f0608aa" format="float">
+    </attr>
+    <attr name="_2131101867_res_0x7f0608ab" format="float">
+    </attr>
+    <attr name="_2131101868_res_0x7f0608ac" format="dimension">
+    </attr>
+    <attr name="_2131101869_res_0x7f0608ad" format="string">
+        <enum name="sin" value="0" />
+        <enum name="square" value="1" />
+        <enum name="triangle" value="2" />
+        <enum name="sawtooth" value="3" />
+        <enum name="reverseSawtooth" value="4" />
+        <enum name="cos" value="5" />
+        <enum name="bounce" value="6" />
+    </attr>
+    <attr name="_2131101870_res_0x7f0608ae">
+        <enum name="position" value="0" />
+        <enum name="path" value="1" />
+    </attr>
+    <attr name="_2131101871_res_0x7f0608af" format="color">
+    </attr>
+    <attr name="_2131101872_res_0x7f0608b0" format="dimension">
+    </attr>
+    <attr name="_2131101873_res_0x7f0608b1" format="dimension">
+    </attr>
+    <attr name="_2131101874_res_0x7f0608b2" format="boolean">
+    </attr>
+    <attr name="_2131101875_res_0x7f0608b3" format="string">
+    </attr>
+    <attr name="_2131101876_res_0x7f0608b4" format="dimension">
+    </attr>
+    <attr name="_2131101877_res_0x7f0608b5" format="dimension">
+    </attr>
+    <attr name="_2131101878_res_0x7f0608b6" format="dimension">
+    </attr>
+    <attr name="_2131101879_res_0x7f0608b7" format="boolean">
+    </attr>
+    <attr name="_2131101880_res_0x7f0608b8">
+        <enum name="sun" value="1" />
+        <enum name="mon" value="2" />
+        <enum name="sat" value="7" />
+    </attr>
+    <attr name="_2131101881_res_0x7f0608b9" format="color">
+    </attr>
+    <attr name="_2131101882_res_0x7f0608ba" format="dimension">
+    </attr>
+    <attr name="_2131101883_res_0x7f0608bb" format="string">
+    </attr>
+    <attr name="_2131101884_res_0x7f0608bc" format="boolean">
+    </attr>
+    <attr name="_2131101885_res_0x7f0608bd">
+        <enum name="normal" value="0" />
+        <enum name="calendar" value="1" />
+    </attr>
+    <attr name="_2131101886_res_0x7f0608be" format="reference">
+    </attr>
+    <attr name="_2131101887_res_0x7f0608bf" format="float">
+    </attr>
+    <attr name="_2131101888_res_0x7f0608c0" format="integer">
+    </attr>
+    <attr name="_2131101889_res_0x7f0608c1" format="reference">
+    </attr>
+    <attr name="_2131101890_res_0x7f0608c2" format="boolean">
+    </attr>
+    <attr name="_2131101891_res_0x7f0608c3" format="boolean">
+    </attr>
+    <attr name="_2131101892_res_0x7f0608c4" format="boolean">
+    </attr>
+    <attr name="_2131101893_res_0x7f0608c5" format="dimension|fraction">
+    </attr>
+    <attr name="_2131101894_res_0x7f0608c6" format="dimension|fraction">
+    </attr>
+    <attr name="_2131101895_res_0x7f0608c7" format="dimension|fraction">
+    </attr>
+    <attr name="_2131101896_res_0x7f0608c8" format="dimension|fraction">
+    </attr>
+    <attr name="_2131101897_res_0x7f0608c9" format="dimension|fraction">
+    </attr>
+    <attr name="_2131101898_res_0x7f0608ca" format="dimension|fraction">
+    </attr>
+    <attr name="_2131101899_res_0x7f0608cb" format="boolean">
+    </attr>
+    <attr name="_2131101904_res_0x7f0608d0" format="reference">
+    </attr>
+    <attr name="_2131101905_res_0x7f0608d1" format="reference">
+    </attr>
+    <attr name="_2131101906_res_0x7f0608d2" format="reference">
+    </attr>
+    <attr name="_2131101907_res_0x7f0608d3" format="boolean">
+    </attr>
+</resources>

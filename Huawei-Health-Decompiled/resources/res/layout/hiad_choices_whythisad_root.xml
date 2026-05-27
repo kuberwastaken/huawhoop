@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x11"
+    layout_gravity="0x11"
+    layout_width="-2"
+    layout_height="-2">
+    <RelativeLayout
+        id="@+id/hiad_whythisad_wrapper"
+        visibility="2"
+        layout_width="-2"
+        layout_height="-2"
+        layout_centerInParent="true">
+        <include layout="@layout/hiad_choices_whythisad"/>
+    </RelativeLayout>
+    <RelativeLayout
+        id="@+id/hiad_feedback_wrapper"
+        visibility="2"
+        layout_width="-2"
+        layout_height="-2"
+        layout_centerInParent="true">
+        <include layout="@layout/hiad_choices_feedback"/>
+    </RelativeLayout>
+</RelativeLayout>

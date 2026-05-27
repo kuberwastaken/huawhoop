@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/wear_engine_third_part_auth_title_layout"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xa="2"
+        NOT_FOUND_0xb="@string/_2130838136_res_0x7f020278"/>
+    <LinearLayout
+        orientation="1"
+        id="@+id/wear_engine_third_party_have_app_layout_id"
+        visibility="0"
+        layout_width="-1"
+        layout_height="-1">
+        <com.huawei.ui.commonui.recycleview.HealthRecycleView
+            layout_gravity="0x1"
+            id="@+id/wear_engine_third_part_auth_app_recycler_view_id"
+            layout_width="-2"
+            layout_height="-2"
+            layout_marginTop="10dp"/>
+    </LinearLayout>
+    <LinearLayout
+        orientation="1"
+        id="@+id/wear_engine_third_party_not_have_app_layout_id"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="200dp">
+        <ImageView
+            layout_gravity="0x1"
+            id="@+id/wear_engine_third_party_auth_app_icon_id"
+            layout_width="72dp"
+            layout_height="72dp"
+            layout_marginTop="30dp"
+            src="@drawable/_2131427548_res_0x7f0b00dc"
+            tint="@color/_2131296695_res_0x7f0901b7"
+            tintMode="5"/>
+    </LinearLayout>
+</LinearLayout>

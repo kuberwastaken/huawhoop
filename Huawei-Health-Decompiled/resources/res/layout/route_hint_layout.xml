@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-2"
+    layout_height="-2">
+    <LinearLayout
+        gravity="0x1"
+        id="@+id/route_in_sight"
+        layout_width="-2"
+        layout_height="-2">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365484_res_0x7f0a0e6c"
+            textColor="@color/_2131299846_res_0x7f090e06"
+            id="@+id/route_in_sight_name"
+            visibility="2"
+            layout_width="-2"
+            layout_height="-2"
+            fontFamily="@string/_2130852834_res_0x7f023be2"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131362963_res_0x7f0a0493"
+            textColor="@color/_2131299847_res_0x7f090e07"
+            id="@+id/route_in_sight_length"
+            background="@drawable/route_location_marker_background"
+            layout_width="-2"
+            layout_height="-2"
+            fontFamily="@string/_2130852833_res_0x7f023be1"/>
+    </LinearLayout>
+</LinearLayout>

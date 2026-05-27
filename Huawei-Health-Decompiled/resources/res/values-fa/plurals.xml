@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">تا %1$d شاخص در یک نمودار قابل نمایش است.</item>
+        <item quantity="other">تا %1$d شاخص در یک نمودار قابل نمایش است.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">پیش‌بینی می‌شود میزان قند خون شما ظرف %1$s دقیقه به کمتر از %2$s میلی‌مول/لیتر برسد. لطفاً سطح قند خون خود را به‌دقت زیر نظر داشته باشید.</item>
+        <item quantity="other">پیش‌بینی می‌شود میزان قند خون شما ظرف %1$s دقیقه به کمتر از %2$s میلی‌مول/لیتر برسد. لطفاً سطح قند خون خود را به‌دقت زیر نظر داشته باشید.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">پیش‌بینی می‌شود میزان قند خون شما ظرف %1$s دقیقه به کمتر از %2$s میلی‌گرم/دسی‌لیتر برسد. لطفاً سطح قند خون خود را به‌دقت زیر نظر داشته باشید.</item>
+        <item quantity="other">پیش‌بینی می‌شود میزان قند خون شما ظرف %1$s دقیقه به کمتر از %2$s میلی‌گرم/دسی‌لیتر برسد. لطفاً سطح قند خون خود را به‌دقت زیر نظر داشته باشید.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">‪‎%d‬ گام</item>
+        <item quantity="other">‪‎%d‬ گام</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">‏%s مایل</item>
+        <item quantity="other">‏%s مایل</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">‏%s کیلومتر</item>
+        <item quantity="other">‏%s کیلومتر</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">‏%1$s گام فاصله دارید</item>
+        <item quantity="other">‏%1$s گام فاصله دارید</item>
+    </plurals>
+</resources>

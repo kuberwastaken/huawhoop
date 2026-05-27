@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="-1"
+    nestedScrollingEnabled="true">
+    <com.huawei.ui.commonui.swiperefreshlayout.HealthSwipeRefreshLayout
+        id="@+id/swiperefreshlayout"
+        layout_width="-1"
+        layout_height="-1"
+        minHeight="@dimen/_2131362981_res_0x7f0a04a5">
+        <com.huawei.ui.commonui.recycleview.HealthRecycleView
+            id="@+id/bg_recyclerView"
+            layout_width="-1"
+            layout_height="-2"/>
+    </com.huawei.ui.commonui.swiperefreshlayout.HealthSwipeRefreshLayout>
+</RelativeLayout>

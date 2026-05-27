@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/section_abnormal_record_root"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/section_abnormal_record_subhead"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x8="false"
+        NOT_FOUND_0x9="3"
+        NOT_FOUND_0xa="--"/>
+    <com.huawei.ui.commonui.cardview.HealthCardView
+        id="@+id/section_abnormal_record_cardview"
+        descendantFocusability="2"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginStart="@dimen/_2131362372_res_0x7f0a0244"
+        layout_marginEnd="@dimen/_2131362371_res_0x7f0a0243">
+        <com.huawei.ui.commonui.recycleview.HealthRecycleView
+            id="@+id/section_abnormal_record_recyclerview"
+            layout_width="-1"
+            layout_height="-2"/>
+    </com.huawei.ui.commonui.cardview.HealthCardView>
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.health.knit.section.view.CustomH5ProWebview xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/int_plan_h5_web_view"
+    layout_width="-1"
+    layout_height="-1"/>

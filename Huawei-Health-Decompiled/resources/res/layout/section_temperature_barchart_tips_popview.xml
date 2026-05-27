@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x11"
+    orientation="1"
+    paddingTop="@dimen/_2131365479_res_0x7f0a0e67"
+    layout_width="-2"
+    layout_height="-2"
+    paddingStart="@dimen/_2131362372_res_0x7f0a0244"
+    paddingEnd="@dimen/_2131362372_res_0x7f0a0244">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+        textColor="@color/_2131296687_res_0x7f0901af"
+        gravity="0x800013"
+        id="@+id/section_temperature_barchart_tips"
+        background="@drawable/_2131432008_res_0x7f0b1248"
+        layout_width="-2"
+        layout_height="-2"
+        maxWidth="@dimen/_2131362965_res_0x7f0a0495"
+        fontFamily="@string/_2130852834_res_0x7f023be2"/>
+</LinearLayout>

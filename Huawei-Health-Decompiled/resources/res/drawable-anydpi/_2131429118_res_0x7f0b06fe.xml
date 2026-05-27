@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<drawable xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    NOT_FOUND_0x3="@color/_2131297448_res_0x7f0904a8"
+    class="com.huawei.uikit.animations.drawable.HwHoverAndPressAnimatedDrawable">
+    <size
+        height="@dimen/_2131364135_res_0x7f0a0927"
+        width="@dimen/_2131364135_res_0x7f0a0927"/>
+    <corners radius="@dimen/_2131364134_res_0x7f0a0926"/>
+</drawable>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">Бір графикте %1$d индикаторға дейін көрсетуге болады.</item>
+        <item quantity="other">Бір графикте %1$d индикаторға дейін көрсетуге болады.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">Қандағы глюкоза деңгейі %1$s минут ішінде %2$s ммоль/л-ден төмендейді деген болжам бар. Глюкоза деңгейін мұқият қадағалаңыз.</item>
+        <item quantity="other">Қандағы глюкоза деңгейі %1$s минут ішінде %2$s ммоль/л-ден төмендейді деген болжам бар. Глюкоза деңгейін мұқият қадағалаңыз.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">Қандағы глюкоза деңгейі %1$s минут ішінде %2$s мг/дл-ден төмендейді деген болжам бар. Глюкоза деңгейін мұқият қадағалаңыз.</item>
+        <item quantity="other">Қандағы глюкоза деңгейі %1$s минут ішінде %2$s мг/дл-ден төмендейді деген болжам бар. Глюкоза деңгейін мұқият қадағалаңыз.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d қадам</item>
+        <item quantity="other">%d қадам</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s миля</item>
+        <item quantity="other">%s миля</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s км</item>
+        <item quantity="other">%s км</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">%1$s қадам қалды</item>
+        <item quantity="other">%1$s қадам қалды</item>
+    </plurals>
+</resources>

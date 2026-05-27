@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.subheader.HealthSubHeader xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    id="@+id/item_sub_header"
+    layout_width="-1"
+    layout_height="-2"
+    NOT_FOUND_0x3="false"
+    NOT_FOUND_0x4="2"
+    NOT_FOUND_0x5="@string/_2130852812_res_0x7f023bcc"/>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.bubblelayout.HealthBubbleLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    id="@+id/track_beat_bubble_layout"
+    layout_width="-2"
+    layout_height="-2"
+    minHeight="@dimen/_2131363120_res_0x7f0a0530"
+    NOT_FOUND_0xc="4"
+    NOT_FOUND_0xd="@dimen/_2131362962_res_0x7f0a0492"
+    NOT_FOUND_0xe="2">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365486_res_0x7f0a0e6e"
+        textColor="@color/_2131296950_res_0x7f0902b6"
+        gravity="0x11"
+        paddingTop="@dimen/_2131362578_res_0x7f0a0312"
+        paddingBottom="@dimen/_2131362578_res_0x7f0a0312"
+        layout_width="-2"
+        layout_height="-2"
+        minHeight="@dimen/_2131363103_res_0x7f0a051f"
+        text="@string/_2130846934_res_0x7f0224d6"
+        layout_marginStart="@dimen/_2131362372_res_0x7f0a0244"
+        layout_marginEnd="@dimen/_2131362371_res_0x7f0a0243"/>
+</com.huawei.ui.commonui.bubblelayout.HealthBubbleLayout>

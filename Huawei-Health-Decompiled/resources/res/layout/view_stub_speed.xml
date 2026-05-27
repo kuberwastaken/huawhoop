@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x1"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="20dp"
+        textColor="@color/_2131298740_res_0x7f0909b4"
+        gravity="0x1"
+        id="@+id/speed_value"
+        layout_width="-1"
+        layout_height="-2"
+        text="@string/_2130852481_res_0x7f023a81"
+        fontFamily="@string/_2130852834_res_0x7f023be2"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131364617_res_0x7f0a0b09"
+        textColor="@color/_2131298742_res_0x7f0909b6"
+        ellipsize="3"
+        gravity="0x1"
+        id="@+id/speed_type"
+        layout_width="-1"
+        layout_height="-2"
+        text="@string/_2130839942_res_0x7f020986"
+        singleLine="true"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131364616_res_0x7f0a0b08"
+        textColor="@color/_2131298740_res_0x7f0909b4"
+        gravity="0x11"
+        id="@+id/speed_unit"
+        visibility="2"
+        layout_width="-2"
+        layout_height="-2"
+        maxWidth="@dimen/_2131364636_res_0x7f0a0b1c"
+        layout_marginStart="@dimen/_2131364632_res_0x7f0a0b18"/>
+</LinearLayout>

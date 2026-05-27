@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/section_recommended_cards"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/section_member_type_header"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x4="false"
+        NOT_FOUND_0x5="2"/>
+    <LinearLayout
+        id="@+id/section_recommended_cards_layout"
+        layout_width="-1"
+        layout_height="-2">
+        <com.huawei.ui.commonui.recycleview.HealthRecycleView
+            id="@+id/section_recommended_cards_recyclerview"
+            layout_width="-1"
+            layout_height="-2"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.health.suggestion.ui.view.FlowLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    id="@+id/search_flowlayout"
+    paddingTop="16dp"
+    paddingBottom="16dp"
+    layout_width="-1"
+    layout_height="-2"
+    paddingStart="@dimen/_2131364901_res_0x7f0a0c25"
+    paddingEnd="@dimen/_2131364900_res_0x7f0a0c24"
+    NOT_FOUND_0x7="10dp"
+    NOT_FOUND_0x8="3"/>

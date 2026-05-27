@@ -1,0 +1,215 @@
+{
+  "version": "0.2",
+  "template_id": "SportTabConstructor",
+  "template_parser": "string",
+  "template_config": {
+    "sub_tab": [
+      {
+        "page_type": 500001
+      },
+      {
+        "page_type": 2
+      },
+     {
+        "page_type": 258,
+        "section_list": [
+          {
+            "template": 1033,
+            "dataUrl": "local:content//SmartCoachProvider"
+          },
+          {
+            "template": 31,
+            "dataUrl": "local:content//OutdoorRunStatisticProvider"
+          },
+          {
+            "template": 1079,
+            "dataUrl": "local:content//AICoachProvider"
+          },
+          {
+            "template": 33,
+            "dataUrl": "local:content//RunMyCourseProvider"
+          },
+          {
+            "template": 1078,
+            "dataUrl": "local:content//RunMyCompetitionProvider",
+            "priority": -1
+          },
+          {
+            "template": 32,
+            "isOnlyOffline": true,
+            "dataUrl": "local:content//RunAllCourseProvider"
+          },
+          {
+            "template": 72,
+            "isOnlyOffline": true,
+            "dataUrl": "local:content//RunPlanProvider"
+          },
+          {
+            "template": 73,
+            "isOnlyOffline": true,
+            "dataUrl": "local:content//AiRunPlanProvider"
+          }
+        ]
+      },
+      {
+        "page_type": 264,
+        "section_list": [
+          {
+            "template": 1033,
+            "dataUrl": "local:content//SmartCoachProvider"
+          },
+          {
+            "template": 31,
+            "dataUrl": "local:content//IndoorRunStatisticProvider"
+          },
+          {
+            "template": 33,
+            "dataUrl": "local:content//RunMyCourseProvider"
+          },
+          {
+            "template": 32,
+            "isOnlyOffline": true,
+            "dataUrl": "local:content//RunAllCourseProvider"
+          },
+          {
+            "template": 72,
+            "isOnlyOffline": true,
+            "dataUrl": "local:content//RunPlanProvider"
+          },
+          {
+            "template": 73,
+            "isOnlyOffline": true,
+            "dataUrl": "local:content//AiRunPlanProvider"
+          }
+        ]
+      },
+      {
+        "page_type": 137,
+        "section_list": [
+          {
+            "template": 31,
+            "dataUrl": "local:content//YogaStatisticProvider"
+          },
+          {
+            "template": 33,
+            "dataUrl": "local:content//YogaMyCourseProvider"
+          },
+          {
+            "template": 32,
+            "isOnlyOffline": true,
+            "dataUrl": "local:content//YogaRecommendCourseProvider"
+          }
+        ]
+      },
+      {
+        "page_type": 10001,
+        "section_list": [
+          {
+            "template": 31,
+            "dataUrl": "local:content//WorkoutStatisticProvider"
+          },
+          {
+            "template": 33,
+            "dataUrl": "local:content//WorkoutMyCourseProvider",
+            "priority": 999
+          },
+          {
+            "template": 32,
+            "isOnlyOffline": true,
+            "dataUrl": "local:content//WorkoutRecommendCourseProvider",
+            "priority": 997
+          },
+          {
+            "template": 72,
+            "isOnlyOffline": true,
+            "dataUrl": "local:content//AiWorkoutPlanProvider",
+            "priority": 996
+          },
+          {
+            "template": 1022,
+            "dataUrl": "local:content//ActionLibraryProvider",
+            "priority": -1
+          }
+        ]
+      },
+      {
+        "page_type": 257,
+        "section_list": [
+          {
+            "template": 31,
+            "dataUrl": "local:content//WalkStatisticProvider"
+          },
+          {
+            "template": 33,
+            "dataUrl": "local:content//WalkMyCourseProvider",
+            "priority": 999
+          }
+        ]
+      },
+      {
+        "page_type": 259,
+        "section_list": [
+          {
+            "template": 31,
+            "dataUrl": "local:content//BikeStatisticProvider"
+          }
+        ]
+      },
+      {
+        "page_type": 286,
+        "section_list": [
+          {
+            "template": 1103,
+            "dataUrl": "local:content//GolfUpdateReminderProvider"
+          },
+          {
+            "template": 61,
+            "dataUrl": "local:content//GolfStatisticProvider"
+          },
+          {
+            "template": 86,
+            "dataUrl": "local:content//GolfMyTrainingCourseProvider",
+            "priority": 860
+          },
+          {
+            "template": 1076,
+            "dataUrl": "local:content//GolfClubsEnterProvider",
+            "priority": 998
+          }
+        ]
+      },
+      {
+        "page_type": 282,
+        "section_list": [
+          {
+            "template": 31,
+            "dataUrl": "local:content//HikingStatisticProvider"
+          }
+        ]
+      },
+      {
+        "page_type": 260,
+        "section_list": [
+          {
+            "template": 31,
+            "dataUrl": "local:content//ClimbingStatisticProvider"
+          }
+        ]
+      },
+      {
+        "page_type": 283,
+        "section_list": [
+          {
+            "template": 31,
+            "dataUrl": "local:content//RopeSkipStatisticProvider"
+          },
+          {
+            "template": 32,
+            "dataUrl": "local:content//RopeSkipRecommendCourseProvider"
+          }
+        ]
+      }
+    ]
+  }
+}
+

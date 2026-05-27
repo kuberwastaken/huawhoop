@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/default_menu_songs_titlebar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x12="2"
+        NOT_FOUND_0x13="0"
+        NOT_FOUND_0x14="@string/_2130843573_res_0x7f0217b5"/>
+    <ListView
+        id="@+id/default_menu_songs_listview"
+        scrollbars="0x200"
+        layout_width="-1"
+        layout_height="-1"
+        divider="@null"
+        fillViewport="true"
+        layout_below="@+id/default_menu_songs_titlebar"/>
+    <LinearLayout
+        gravity="0x1"
+        orientation="1"
+        id="@+id/load_ll"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-2"
+        layout_centerInParent="true">
+        <com.huawei.ui.commonui.progressbar.HealthProgressBar
+            id="@+id/load_progressbar"
+            layout_width="@dimen/_2131363758_res_0x7f0a07ae"
+            layout_height="@dimen/_2131363758_res_0x7f0a07ae"
+            tint="@color/_2131297849_res_0x7f090639"
+            tintMode="5"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131363699_res_0x7f0a0773"
+            textColor="@color/_2131299383_res_0x7f090c37"
+            id="@+id/load_tip_tv"
+            layout_width="-2"
+            layout_height="-2"
+            text="@string/_2130843764_res_0x7f021874"
+            fontFamily="Roboto-Regular"/>
+    </LinearLayout>
+</RelativeLayout>

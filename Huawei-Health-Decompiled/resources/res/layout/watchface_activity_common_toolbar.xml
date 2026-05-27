@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.watchface.mvp.ui.widget.HwToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/tl_common_toolbar"
+    background="@android:color/transparent"
+    layout_width="-1"
+    layout_height="@dimen/_2131362561_res_0x7f0a0301"
+    paddingStart="@dimen/_2131362559_res_0x7f0a02ff"
+    paddingEnd="@dimen/_2131362540_res_0x7f0a02ec"
+    titleMarginStart="@dimen/_2131362559_res_0x7f0a02ff">
+    <ImageView
+        id="@+id/iv_back"
+        visibility="2"
+        layout_width="@dimen/_2131362561_res_0x7f0a0301"
+        layout_height="@dimen/_2131362561_res_0x7f0a0301"
+        src="@drawable/_2131429562_res_0x7f0b08ba"
+        scaleType="5"
+        layout_marginEnd="@dimen/_2131362559_res_0x7f0a02ff"/>
+    <com.huawei.uikit.phone.hwtextview.widget.HwTextView
+        textSize="@dimen/_2131365349_res_0x7f0a0de5"
+        textColor="@color/_2131297212_res_0x7f0903bc"
+        ellipsize="3"
+        layout_gravity="0x800013"
+        id="@+id/tv_common_toolbar_title"
+        layout_width="-2"
+        layout_height="-2"
+        singleLine="true"
+        textDirection="6"
+        textAlignment="5"
+        layout_marginEnd="@dimen/_2131362551_res_0x7f0a02f7"/>
+</com.huawei.watchface.mvp.ui.widget.HwToolbar>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x1"
+    orientation="1"
+    id="@+id/hw_toolbar_style"
+    background="@drawable/_2131428958_res_0x7f0b065e"
+    clickable="true"
+    layout_width="-1"
+    layout_height="-2">
+    <ImageView
+        id="@+id/toolbar_imageView"
+        layout_width="@dimen/_2131363802_res_0x7f0a07da"
+        layout_height="@dimen/_2131363802_res_0x7f0a07da"
+        layout_marginTop="8dp"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131362721_res_0x7f0a03a1"
+        textColor="@color/_2131297675_res_0x7f09058b"
+        ellipsize="3"
+        gravity="0x11"
+        id="@+id/toolbar_textView"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131364003_res_0x7f0a08a3"
+        layout_marginBottom="@dimen/_2131363999_res_0x7f0a089f"
+        maxLines="2"
+        fontFamily="HwChinese-medium"
+        layout_marginStart="@dimen/_2131364002_res_0x7f0a08a2"
+        layout_marginEnd="@dimen/_2131364000_res_0x7f0a08a0"/>
+</LinearLayout>

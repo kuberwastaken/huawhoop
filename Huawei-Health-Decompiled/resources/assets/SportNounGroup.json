@@ -1,0 +1,75 @@
+{
+  "version": "1.0",
+  "sportNounGroupList": [
+    {
+      "groupName": "EXERCISE",
+      "groupNum": "SF-10190178_f6181",
+      "firstSortName": "BASE_KNOWLEDGE"
+    },
+    {
+      "groupName": "TRAINING_LOAD",
+      "groupNum": "SF-10190178_f6182",
+      "firstSortName": "BASE_KNOWLEDGE"
+    },
+    {
+      "groupName": "SPORTS_PERFORMANCE",
+      "groupNum": "SF-10190178_f6183",
+      "firstSortName": "BASE_KNOWLEDGE"
+    },
+    {
+      "groupName": "SPORTS_LEVEL",
+      "groupNum": "SF-10190178_f6184",
+      "firstSortName": "BASE_KNOWLEDGE"
+    },
+    {
+      "groupName": "FOOT_DATA",
+      "groupNum": "SF-10190178_f6186",
+      "firstSortName": "RUNNING_DATA"
+    },
+    {
+      "groupName": "WAIST_DATA",
+      "groupNum": "SF-10190178_f6187",
+      "firstSortName": "RUNNING_DATA"
+    },
+    {
+      "groupName": "SWING_DATA",
+      "groupNum": "SF-10190178_f6189",
+      "firstSortName": "GOLF_DATA"
+    },
+    {
+      "groupName": "GOLF_COURSE_INFO",
+      "groupNum": "SF-10190178_f6190",
+      "firstSortName": "GOLF_DATA"
+    },
+    {
+      "groupName": "SCORE_CARD",
+      "groupNum": "SF-10190178_f6191",
+      "firstSortName": "GOLF_DATA"
+    },
+    {
+      "groupName": "RIDING_KNOWLEDGE",
+      "groupNum": "SF-10190178_f6192",
+      "firstSortName": "RIDING_KNOWLEDGE"
+    },
+    {
+      "groupName": "SWIMMING_KNOWLEDGE",
+      "groupNum": "SF-10190178_f6193",
+      "firstSortName": "SWIMMING_KNOWLEDGE"
+    },
+    {
+      "groupName": "BASKETBALL_KNOWLEDGE",
+      "groupNum": "SF-10190178_f6194",
+      "firstSortName": "BASKETBALL_KNOWLEDGE"
+    },
+    {
+      "groupName": "CROSSTRAINER_KNOWLEDGE",
+      "groupNum": "SF-10190178_f6195",
+      "firstSortName": "CROSSTRAINER_KNOWLEDGE"
+    },
+    {
+      "groupName": "ADVENTURE_KNOWLEDGE",
+      "groupNum": "SF-10190178_f6138",
+      "firstSortName": "ADVENTURE_KNOWLEDGE"
+    }
+  ]
+}

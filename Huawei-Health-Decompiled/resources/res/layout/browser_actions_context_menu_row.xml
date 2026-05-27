@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="0"
+    layout_width="-1"
+    layout_height="-2"
+    minHeight="48dp"
+    paddingStart="15dp"
+    paddingEnd="15dp">
+    <TextView
+        textSize="15sp"
+        textColor="@color/_2131296558_res_0x7f09012e"
+        layout_gravity="0x10"
+        id="@+id/browser_actions_menu_item_text"
+        layout_width="0dp"
+        layout_height="-2"
+        layout_marginLeft="10dp"
+        layout_weight="1"
+        layout_marginStart="10dp"/>
+    <ImageView
+        id="@+id/browser_actions_menu_item_icon"
+        paddingTop="8dp"
+        paddingBottom="8dp"
+        layout_width="20dp"
+        layout_height="-1"
+        scaleType="7"
+        contentDescription="@null"/>
+</LinearLayout>

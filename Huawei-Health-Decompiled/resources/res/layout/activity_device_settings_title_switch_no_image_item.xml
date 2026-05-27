@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    background="@drawable/device_item_background"
+    layout_width="-1"
+    layout_height="-2">
+    <RelativeLayout
+        id="@+id/setting_device_rela"
+        layout_width="-1"
+        layout_height="-2"
+        minHeight="@dimen/_2131362453_res_0x7f0a0295"
+        paddingStart="@dimen/_2131364900_res_0x7f0a0c24"
+        paddingEnd="@dimen/_2131364900_res_0x7f0a0c24">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365482_res_0x7f0a0e6a"
+            textColor="@color/_2131299845_res_0x7f090e05"
+            id="@+id/content"
+            text="@string/_2130841826_res_0x7f0210e2"
+            layout_centerVertical="true"
+            fontFamily="@string/_2130852834_res_0x7f023be2"
+            layout_marginEnd="@dimen/_2131362456_res_0x7f0a0298"
+            layout_toStartOf="@+id/switch_button"
+            layout_alignParentStart="true"
+            style="@style/device_fragment_setting_text_style"/>
+        <com.huawei.ui.commonui.switchbutton.HealthSwitchButton
+            id="@+id/switch_button"
+            focusable="false"
+            layout_width="-2"
+            layout_height="-2"
+            checked="false"
+            layout_centerVertical="true"
+            layout_alignParentEnd="true"
+            style="@style/health_switch_style"/>
+    </RelativeLayout>
+</RelativeLayout>

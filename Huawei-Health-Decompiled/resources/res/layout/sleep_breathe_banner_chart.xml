@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    gravity="0x11"
+    orientation="1"
+    layout_width="-2"
+    layout_height="-2">
+    <com.huawei.ui.commonui.seekbar.HealthSeekBarExtend
+        id="@+id/sleep_breathe_seek_bar"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginEnd="@dimen/_2131363215_res_0x7f0a058f"
+        NOT_FOUND_0x6="@dimen/_2131362993_res_0x7f0a04b1"
+        NOT_FOUND_0x7="100"
+        NOT_FOUND_0x8="@drawable/health_halthdata_weight_seekbar_background"
+        NOT_FOUND_0x9="@drawable/_2131428624_res_0x7f0b0510"
+        NOT_FOUND_0xa="@drawable/_2131430313_res_0x7f0b0ba9"/>
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.cardview.HealthCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    id="@+id/tab_item_card"
+    layout_width="-1"
+    layout_height="-1"
+    layout_margin="@dimen/_2131363051_res_0x7f0a04eb"
+    NOT_FOUND_0x9="@color/_2131299654_res_0x7f090d46"
+    NOT_FOUND_0xa="@dimen/_2131363002_res_0x7f0a04ba"
+    NOT_FOUND_0xb="@dimen/_2131362907_res_0x7f0a045b">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131362954_res_0x7f0a048a"
+        textColor="@color/_2131299667_res_0x7f090d53"
+        gravity="0x11"
+        layout_gravity="0x11"
+        id="@+id/tab_text"
+        layout_width="-1"
+        layout_height="-2"
+        fontFamily="HarmonyHeiTi"/>
+</com.huawei.ui.commonui.cardview.HealthCardView>

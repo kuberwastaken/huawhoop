@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/edit_info_title_bar"
+        layout_width="-1"
+        layout_height="-2"
+        layout_alignParentTop="true"
+        NOT_FOUND_0x9="2"
+        NOT_FOUND_0xc="@string/_2130850006_res_0x7f0230d6"/>
+    <com.huawei.ui.commonui.scrollview.HealthScrollView
+        scrollbars="0x0"
+        layout_width="-1"
+        layout_height="-1"
+        fillViewport="true"
+        NOT_FOUND_0xa="true"
+        NOT_FOUND_0xb="true">
+        <LinearLayout
+            orientation="1"
+            background="@color/_2131296667_res_0x7f09019b"
+            layout_width="-1"
+            layout_height="-1">
+            <fragment
+                name="com.huawei.featureuserprofile.sos.fragment.EditEmergencyInfoFragment"
+                id="@+id/editinfofragment"
+                layout_width="-1"
+                layout_height="-1"/>
+        </LinearLayout>
+    </com.huawei.ui.commonui.scrollview.HealthScrollView>
+</LinearLayout>

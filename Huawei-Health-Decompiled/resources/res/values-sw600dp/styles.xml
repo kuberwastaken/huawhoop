@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.Design.TabLayout" parent="@style/Base.Widget.Design.TabLayout">
+        <item name="_2131101633_res_0x7f0607c1">center</item>
+        <item name="_2131101646_res_0x7f0607ce">fixed</item>
+    </style>
+    <style name="startup_bkg_style" parent="">
+        <item name="android:scaleType">2</item>
+    </style>
+    <style name="sug_traindetail_vp_top_banner" parent="">
+        <item name="android:layout_gravity">0x1</item>
+        <item name="android:layout_width">368dp</item>
+    </style>
+</resources>

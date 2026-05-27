@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    layout_gravity="0x11"
+    orientation="1"
+    layout_width="-2"
+    layout_height="-2">
+    <FrameLayout
+        layout_gravity="0x11"
+        id="@+id/item_task_dialog_grid_background"
+        layout_width="-2"
+        layout_height="-2">
+        <ImageView
+            layout_gravity="0x11"
+            id="@+id/item_task_dialog_grid_foreground"
+            layout_width="-2"
+            layout_height="-2"/>
+    </FrameLayout>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131362916_res_0x7f0a0464"
+        ellipsize="3"
+        layout_gravity="0x11"
+        id="@+id/item_task_dialog_grid_plan"
+        visibility="2"
+        layout_marginTop="@dimen/_2131363112_res_0x7f0a0528"
+        maxLines="3"
+        NOT_FOUND_0xa="true"
+        style="@style/text_regular_primary_inverse_high_quality_none"/>
+</LinearLayout>

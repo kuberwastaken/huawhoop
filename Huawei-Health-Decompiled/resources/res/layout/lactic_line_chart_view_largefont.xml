@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.scrollview.HealthScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-1">
+    <include layout="@layout/lactic_line_chart_view"/>
+</com.huawei.ui.commonui.scrollview.HealthScrollView>

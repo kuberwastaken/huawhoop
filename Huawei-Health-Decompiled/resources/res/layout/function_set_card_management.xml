@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar xmlns:setting="http://schemas.android.com/apk/res-auto"
+        id="@+id/card_management_title_layout"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xf="2"
+        NOT_FOUND_0x10="@string/_2130837887_res_0x7f02017f"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365484_res_0x7f0a0e6c"
+        textColor="@color/_2131299850_res_0x7f090e0a"
+        gravity="0x1"
+        id="@+id/card_management_bottom_text"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginBottom="16dp"
+        text="@string/_2130837810_res_0x7f020132"
+        layout_alignParentBottom="true"
+        fontFamily="@string/_2130852834_res_0x7f023be2"/>
+    <com.huawei.ui.commonui.scrollview.HealthScrollView
+        layout_width="-1"
+        layout_height="-1"
+        fillViewport="true"
+        layout_above="@+id/card_management_bottom_text"
+        layout_below="@+id/card_management_title_layout">
+        <RelativeLayout
+            id="@+id/card_management_relative_layout"
+            descendantFocusability="2"
+            layout_width="-1"
+            layout_height="-1">
+            <com.huawei.ui.commonui.recycleview.HealthRecycleView
+                id="@+id/id_recycler_card_management"
+                layout_width="-1"
+                layout_height="-2"/>
+        </RelativeLayout>
+    </com.huawei.ui.commonui.scrollview.HealthScrollView>
+</RelativeLayout>

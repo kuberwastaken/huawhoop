@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <corners radius="@dimen/_2131362608_res_0x7f0a0330"/>
+            <solid color="@color/_2131298345_res_0x7f090829"/>
+        </shape>
+    </item>
+    <item>
+        <selector
+            enterFadeDuration="@integer/_2131623953_res_0x7f0e0011"
+            exitFadeDuration="@integer/_2131623953_res_0x7f0e0011">
+            <item
+                state_pressed="true"
+                drawable="@drawable/_2131429049_res_0x7f0b06b9"/>
+            <item drawable="@android:color/transparent"/>
+        </selector>
+    </item>
+</layer-list>

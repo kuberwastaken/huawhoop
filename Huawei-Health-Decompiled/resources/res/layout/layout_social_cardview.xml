@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    paddingTop="@dimen/_2131363844_res_0x7f0a0804"
+    layout_width="-1"
+    layout_height="@dimen/_2131362860_res_0x7f0a042c"
+    layout_centerHorizontal="true">
+    <ImageView
+        layout_width="-1"
+        layout_height="-2"
+        src="@drawable/_2131432285_res_0x7f0b135d"
+        scaleType="1"
+        layout_alignParentBottom="true"
+        layout_centerHorizontal="true"
+        layout_marginStart="@dimen/_2131364901_res_0x7f0a0c25"
+        layout_marginEnd="@dimen/_2131364900_res_0x7f0a0c24"/>
+    <com.huawei.ui.commonui.cardview.HealthCardView
+        id="@+id/card_view"
+        layout_width="-1"
+        layout_height="192dp"
+        layout_marginStart="@dimen/_2131364901_res_0x7f0a0c25"
+        layout_marginEnd="@dimen/_2131364900_res_0x7f0a0c24"
+        NOT_FOUND_0xa="@dimen/_2131362366_res_0x7f0a023e"
+        NOT_FOUND_0xb="false"
+        NOT_FOUND_0xc="false">
+        <ImageView
+            id="@+id/card_image"
+            layout_width="-1"
+            layout_height="-1"
+            scaleType="1"/>
+    </com.huawei.ui.commonui.cardview.HealthCardView>
+</RelativeLayout>

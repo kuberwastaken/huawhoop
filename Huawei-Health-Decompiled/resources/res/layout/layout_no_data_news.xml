@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/layout_configured_page"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/no_data_news_page_sub_header"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x6="3"
+        NOT_FOUND_0x7="@string/_2130844374_res_0x7f021ad6"/>
+    <RelativeLayout
+        id="@+id/no_data_news_recycler_view_out"
+        descendantFocusability="2"
+        layout_width="-2"
+        layout_height="-2">
+        <com.huawei.ui.commonui.recycleview.HealthRecycleView
+            id="@+id/no_data_news_recycler_view"
+            layout_width="-1"
+            layout_height="-2"
+            NOT_FOUND_0x5="false"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.recycleview.HealthRecycleView xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/rv_second_menu_item"
+    layout_width="-1"
+    layout_height="-2"
+    layout_marginBottom="@dimen/_2131362012_res_0x7f0a00dc"/>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.viewpager.HealthViewPager
+        layout_gravity="0x1"
+        id="@+id/guide_view_pager"
+        clipToPadding="false"
+        layout_width="-1"
+        layout_height="-2"/>
+    <com.huawei.ui.commonui.dotspageindicator.HealthDotsPageIndicator
+        layout_gravity="0x1"
+        id="@+id/guide_dots"
+        layout_width="-2"
+        layout_height="-2"
+        layout_alignParentBottom="true"
+        layout_centerHorizontal="true"
+        style="@style/DotsPageIndicatorStyleDots"/>
+</RelativeLayout>

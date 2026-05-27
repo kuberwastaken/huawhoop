@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.edittext.HealthErrorTipTextLayout
+        id="@+id/error_tip_text_layout"
+        layout_width="-1"
+        layout_height="-2"
+        layoutDirection="3"
+        NOT_FOUND_0x8="1">
+        <com.huawei.ui.commonui.edittext.HealthEditText
+            layout_gravity="0x800013"
+            id="@+id/edit"
+            layout_width="-1"
+            layout_height="-2"
+            singleLine="true"
+            inputType="0x2002"
+            layoutDirection="3"/>
+    </com.huawei.ui.commonui.edittext.HealthErrorTipTextLayout>
+</LinearLayout>

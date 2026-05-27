@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    background="@drawable/_2131427891_res_0x7f0b0233"
+    descendantFocusability="2"
+    layout_width="-1"
+    layout_height="-2">
+    <LinearLayout
+        gravity="0x10"
+        orientation="0"
+        id="@+id/wifi_device_list_view_item"
+        layout_width="-1"
+        layout_height="@dimen/_2131361855_res_0x7f0a003f"
+        layout_marginStart="@dimen/_2131361828_res_0x7f0a0024"
+        layout_marginEnd="@dimen/_2131361828_res_0x7f0a0024">
+        <ImageView
+            id="@+id/wifi_device_icon"
+            layout_width="@dimen/_2131361851_res_0x7f0a003b"
+            layout_height="@dimen/_2131361851_res_0x7f0a003b"
+            contentDescription="@string/IDS_device_common_ui_contentDescription"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365482_res_0x7f0a0e6a"
+            textColor="@color/_2131299845_res_0x7f090e05"
+            id="@+id/wifi_device_content"
+            layout_width="-2"
+            layout_height="-2"
+            singleLine="true"
+            layout_marginStart="@dimen/_2131361828_res_0x7f0a0024"/>
+    </LinearLayout>
+    <com.huawei.ui.commonui.divider.HealthDivider
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginStart="@dimen/_2131361857_res_0x7f0a0041"
+        layout_marginEnd="@dimen/_2131361828_res_0x7f0a0024"/>
+</LinearLayout>

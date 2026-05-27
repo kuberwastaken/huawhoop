@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    layout_width="-2"
+    layout_height="-2">
+    <com.huawei.openalliance.ad.views.ScanningRelativeLayout
+        id="@+id/hiad_pro_layout"
+        layout_width="-2"
+        layout_height="-2"
+        minHeight="@dimen/_2131363364_res_0x7f0a0624"
+        NOT_FOUND_0x13="36dp"
+        NOT_FOUND_0x14="@drawable/_2131428751_res_0x7f0b058f">
+        <com.huawei.openalliance.ad.views.RoundLinearLayout
+            gravity="0x10"
+            orientation="0"
+            id="@+id/hiad_pro_desc_layout"
+            layout_width="-2"
+            layout_height="-2">
+            <com.huawei.openalliance.ad.views.AutoSizeTextView
+                textSize="@dimen/_2131363445_res_0x7f0a0675"
+                textColor="@color/_2131297978_res_0x7f0906ba"
+                gravity="0x11"
+                layout_gravity="0x10"
+                id="@+id/hiad_pro_desc"
+                layout_width="0dp"
+                layout_height="-2"
+                layout_marginLeft="@dimen/_2131363318_res_0x7f0a05f6"
+                minHeight="@dimen/_2131363364_res_0x7f0a0624"
+                text="@string/_2130852334_res_0x7f0239ee"
+                layout_weight="1"
+                contentDescription="@string/_2130852334_res_0x7f0239ee"
+                fontFamily="HwChinese-medium"
+                textAlignment="4"
+                layout_marginStart="@dimen/_2131363318_res_0x7f0a05f6"/>
+            <ImageView
+                gravity="0x10"
+                layout_gravity="0x10"
+                id="@+id/hiad_pro_arrow"
+                layout_width="@dimen/_2131363318_res_0x7f0a05f6"
+                layout_height="@dimen/_2131363318_res_0x7f0a05f6"
+                layout_marginLeft="@dimen/_2131363360_res_0x7f0a0620"
+                layout_marginRight="@dimen/_2131363318_res_0x7f0a05f6"
+                src="@drawable/_2131428727_res_0x7f0b0577"
+                layout_marginStart="@dimen/_2131363360_res_0x7f0a0620"
+                layout_marginEnd="@dimen/_2131363318_res_0x7f0a05f6"/>
+        </com.huawei.openalliance.ad.views.RoundLinearLayout>
+    </com.huawei.openalliance.ad.views.ScanningRelativeLayout>
+</RelativeLayout>

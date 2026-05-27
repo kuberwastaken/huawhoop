@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/app_market_titlebar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x10="2"
+        NOT_FOUND_0x11="@string/IDS_device_fragment_application_market"/>
+    <RelativeLayout
+        layout_width="-1"
+        layout_height="-1"
+        layout_below="@+id/app_market_titlebar">
+        <LinearLayout
+            gravity="0x1"
+            orientation="1"
+            layout_width="-1"
+            layout_height="-2"
+            layout_centerInParent="true">
+            <com.huawei.ui.commonui.progressbar.HealthProgressBar
+                id="@+id/app_market_progressbar"
+                layout_width="-2"
+                layout_height="-2"
+                tint="@color/_2131297849_res_0x7f090639"
+                tintMode="5"
+                style="@style/health_progressbar_style_large"/>
+            <com.huawei.ui.commonui.healthtextview.HealthTextView
+                textSize="@dimen/_2131363699_res_0x7f0a0773"
+                textColor="@color/_2131299648_res_0x7f090d40"
+                id="@+id/disconnect_textview"
+                layout_width="-2"
+                layout_height="-2"
+                text="@string/_2130845426_res_0x7f021ef2"
+                fontFamily="Roboto-Regular"
+                layout_marginStart="@dimen/_2131364901_res_0x7f0a0c25"
+                layout_marginEnd="@dimen/_2131364900_res_0x7f0a0c24"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

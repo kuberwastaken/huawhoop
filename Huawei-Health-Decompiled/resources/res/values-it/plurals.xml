@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">Mostra %1$d indicatore in un grafico.</item>
+        <item quantity="other">Mostra fino a %1$d indicatori in un grafico.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">Si prevede un calo della glicemia al di sotto di %2$s mmol/L tra %1$s min. Monitora attentamente i livelli glicemici.</item>
+        <item quantity="other">Si prevede un calo della glicemia al di sotto di %2$s mmol/L tra %1$s min. Monitora attentamente i livelli glicemici.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">Si prevede un calo della glicemia al di sotto di %2$s mg/dL tra %1$s min. Monitora attentamente i livelli glicemici.</item>
+        <item quantity="other">Si prevede un calo della glicemia al di sotto di %2$s mg/dL tra %1$s min. Monitora attentamente i livelli glicemici.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d passo</item>
+        <item quantity="other">%d passi</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s mi</item>
+        <item quantity="other">%s mi</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s km</item>
+        <item quantity="other">%s km</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">Manca %1$s passo</item>
+        <item quantity="other">Mancano %1$s passi</item>
+    </plurals>
+</resources>

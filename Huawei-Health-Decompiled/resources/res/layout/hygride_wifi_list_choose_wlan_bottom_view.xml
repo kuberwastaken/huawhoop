@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x1"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.button.HealthButton
+        textSize="@dimen/_2131365485_res_0x7f0a0e6d"
+        textColor="@color/_2131296940_res_0x7f0902ac"
+        id="@+id/wifi_list_info_refresh_btn"
+        layout_width="-2"
+        layout_marginTop="16dp"
+        text="@string/IDS_device_hygride_select_other_network"
+        fontFamily="@string/_2130852833_res_0x7f023be1"
+        style="@style/health_button_style_borderless"/>
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <RelativeLayout
+        gravity="0x11"
+        layout_gravity="0x10"
+        id="@+id/dialog_rlyt_content"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131362499_res_0x7f0a02c3"
+        layout_marginStart="@dimen/_2131362499_res_0x7f0a02c3"
+        layout_marginEnd="@dimen/_2131362499_res_0x7f0a02c3">
+        <com.huawei.ui.commonui.scrollview.HealthScrollView
+            scrollbars="0x0"
+            layout_width="-1"
+            layout_height="-2">
+            <LinearLayout
+                layout_gravity="0x1"
+                id="@+id/dialog_no_title_llyt_message"
+                visibility="0"
+                layout_width="-2"
+                layout_height="-2">
+                <com.huawei.ui.commonui.healthtextview.HealthTextView
+                    id="@+id/dialog_no_title_tv_message"
+                    layout_width="-2"
+                    layout_height="-2"
+                    lineSpacingExtra="@dimen/_2131362343_res_0x7f0a0227"
+                    paddingStart="@dimen/_2131362493_res_0x7f0a02bd"
+                    paddingEnd="@dimen/_2131362493_res_0x7f0a02bd"
+                    breakStrategy="1"
+                    hyphenationFrequency="1"
+                    style="@style/CustomDialog_message"/>
+                <com.huawei.ui.commonui.healthtextview.HealthTextView
+                    id="@+id/dialog_no_title_auto_tv_message"
+                    layout_width="-2"
+                    layout_height="-2"
+                    lineSpacingExtra="@dimen/_2131362343_res_0x7f0a0227"
+                    paddingStart="@dimen/_2131362493_res_0x7f0a02bd"
+                    paddingEnd="@dimen/_2131362493_res_0x7f0a02bd"
+                    breakStrategy="1"
+                    hyphenationFrequency="1"
+                    NOT_FOUND_0x10="true"
+                    style="@style/CustomDialog_message"/>
+            </LinearLayout>
+        </com.huawei.ui.commonui.scrollview.HealthScrollView>
+    </RelativeLayout>
+    <include layout="@layout/health_commonui_dialog_button"/>
+</LinearLayout>

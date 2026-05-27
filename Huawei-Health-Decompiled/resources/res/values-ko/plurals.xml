@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="other">최대 %1$d개의 지표를 하나의 그래프에 표시할 수 있습니다.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="other">혈당이 %1$s분 후에 %2$smmol/L 미만으로 하락할 것으로 예상됩니다. 혈당 수치를 면밀히 모니터링하십시오.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="other">혈당이 %1$s분 후에 %2$smg/dL 미만으로 하락할 것으로 예상됩니다. 혈당 수치를 면밀히 모니터링하십시오.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="other">%d 걸음</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="other">%s마일</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="other">%skm</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="other">%1$s걸음 남음</item>
+    </plurals>
+</resources>

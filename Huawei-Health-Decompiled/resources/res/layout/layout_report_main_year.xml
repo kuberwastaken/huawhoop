@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/txt_report_title"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x14="2"
+        NOT_FOUND_0x15="@string/_2130841063_res_0x7f020de7"/>
+    <RelativeLayout
+        id="@+id/reportListLayout"
+        layout_width="-1"
+        layout_height="-1">
+        <com.huawei.ui.commonui.listview.StatusBarListenListView
+            id="@+id/annual_report_list"
+            scrollbars="0x0"
+            layout_width="-1"
+            layout_height="-1"
+            listSelector="@android:color/transparent"
+            cacheColorHint="@android:color/transparent"
+            divider="@null"
+            footerDividersEnabled="false"/>
+    </RelativeLayout>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="13dp"
+        textColor="@color/_2131299850_res_0x7f090e0a"
+        gravity="0x11"
+        layout_gravity="0x10"
+        id="@+id/report_empty_txt"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131363527_res_0x7f0a06c7"
+        text="@string/_2130841049_res_0x7f020dd9"
+        drawableTop="@mipmap/_2131821014_res_0x7f1101d6"
+        drawableTint="@color/_2131297849_res_0x7f090639"
+        drawableTintMode="5"/>
+</LinearLayout>

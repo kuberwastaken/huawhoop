@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <Space
+        layout_width="-1"
+        layout_height="@dimen/_2131364234_res_0x7f0a098a"/>
+    <TextView
+        id="@+id/hwdialogpattern_message"
+        layout_width="-1"
+        layout_height="-2"
+        paddingStart="@dimen/_2131364233_res_0x7f0a0989"
+        paddingEnd="@dimen/_2131364233_res_0x7f0a0989"
+        style="@style/Widget.Emui.HwDialogPattern.DialogBody1"/>
+    <include layout="@layout/hwdialogpattern_simple_checkbox"/>
+    <Space
+        layout_width="-1"
+        layout_height="@dimen/_2131364232_res_0x7f0a0988"/>
+</LinearLayout>

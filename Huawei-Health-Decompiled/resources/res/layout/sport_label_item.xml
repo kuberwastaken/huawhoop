@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="0"
+    layout_width="-1"
+    layout_height="-2">
+    <LinearLayout
+        orientation="0"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131362496_res_0x7f0a02c0"
+        layout_marginStart="0dp"
+        layout_marginEnd="0dp">
+        <com.huawei.ui.commonui.reportchart.CustomIndicatorView
+            id="@+id/sportLeftLabel"
+            layout_width="0dp"
+            layout_height="-2"
+            layout_weight="1"
+            NOT_FOUND_0x8="8"
+            NOT_FOUND_0x9="0"
+            NOT_FOUND_0xa="12"/>
+        <View
+            layout_width="@dimen/_2131363884_res_0x7f0a082c"
+            layout_height="-2"/>
+        <com.huawei.ui.commonui.reportchart.CustomIndicatorView
+            id="@+id/sportRightLabel"
+            layout_width="0dp"
+            layout_height="-2"
+            layout_weight="1"
+            NOT_FOUND_0x8="8"
+            NOT_FOUND_0x9="0"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners radius="@dimen/hw_cloud_dialog_button_corner_radius"/>
+    <solid color="@color/hw_cloud_dialog_button_normal"/>
+    <padding
+        left="@dimen/hw_cloud_dialog_button_padding_dimen"
+        top="@dimen/hw_cloud_dialog_button_padding_dimen"
+        right="@dimen/hw_cloud_dialog_button_padding_dimen"
+        bottom="@dimen/hw_cloud_dialog_button_padding_dimen"/>
+</shape>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.ui.commonui.cardview.HealthCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2"
+    layout_marginStart="@dimen/_2131362011_res_0x7f0a00db"
+    layout_marginEnd="@dimen/_2131362011_res_0x7f0a00db">
+    <LinearLayout
+        orientation="1"
+        paddingTop="@dimen/_2131362577_res_0x7f0a0311"
+        paddingBottom="@dimen/_2131362578_res_0x7f0a0312"
+        layout_width="-1"
+        layout_height="-2"
+        paddingStart="@dimen/_2131362013_res_0x7f0a00dd"
+        paddingEnd="@dimen/_2131362011_res_0x7f0a00db">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365501_res_0x7f0a0e7d"
+            textColor="@color/_2131299846_res_0x7f090e06"
+            id="@+id/coach_comments_title"
+            layout_width="-1"
+            layout_height="-2"
+            text="@string/_2130849712_res_0x7f022fb0"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365484_res_0x7f0a0e6c"
+            textColor="@color/_2131299850_res_0x7f090e0a"
+            id="@+id/coach_comments"
+            layout_width="-1"
+            layout_height="-2"/>
+    </LinearLayout>
+</com.huawei.ui.commonui.cardview.HealthCardView>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">Na jednym wykresie można wyświetlić maksymalnie %1$d wskaźnik.</item>
+        <item quantity="few">Na jednym wykresie można wyświetlić maksymalnie %1$d wskaźniki.</item>
+        <item quantity="many">Na jednym wykresie można wyświetlić maksymalnie %1$d wskaźników.</item>
+        <item quantity="other">Maksymalna liczba wskaźników na jednym wykresie: %1$d.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">Twój poziom glukozy we krwi prawdopodobnie spadnie poniżej %2$s mmol/l za %1$s min. Uważnie obserwuj swój poziom glukozy we krwi.</item>
+        <item quantity="few">Twój poziom glukozy we krwi prawdopodobnie spadnie poniżej %2$s mmol/l za %1$s min. Uważnie obserwuj swój poziom glukozy we krwi.</item>
+        <item quantity="many">Twój poziom glukozy we krwi prawdopodobnie spadnie poniżej %2$s mmol/l za %1$s min. Uważnie obserwuj swój poziom glukozy we krwi.</item>
+        <item quantity="other">Twój poziom glukozy we krwi prawdopodobnie spadnie poniżej %2$s mmol/l za %1$s min. Uważnie obserwuj swój poziom glukozy we krwi.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">Twój poziom glukozy we krwi prawdopodobnie spadnie poniżej %2$s mg/dl za %1$s min. Uważnie obserwuj swój poziom glukozy we krwi.</item>
+        <item quantity="few">Twój poziom glukozy we krwi prawdopodobnie spadnie poniżej %2$s mg/dl za %1$s min. Uważnie obserwuj swój poziom glukozy we krwi.</item>
+        <item quantity="many">Twój poziom glukozy we krwi prawdopodobnie spadnie poniżej %2$s mg/dl za %1$s min. Uważnie obserwuj swój poziom glukozy we krwi.</item>
+        <item quantity="other">Twój poziom glukozy we krwi prawdopodobnie spadnie poniżej %2$s mg/dl za %1$s min. Uważnie obserwuj swój poziom glukozy we krwi.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d krok</item>
+        <item quantity="few">%d kroki</item>
+        <item quantity="many">%d kroków</item>
+        <item quantity="other">%d kroku</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s mi</item>
+        <item quantity="few">%s mi</item>
+        <item quantity="many">%s mi</item>
+        <item quantity="other">%s mi</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s km</item>
+        <item quantity="few">%s km</item>
+        <item quantity="many">%s km</item>
+        <item quantity="other">%s km</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">Pozostał %1$s krok</item>
+        <item quantity="few">Pozostały %1$s kroki</item>
+        <item quantity="many">Pozostało %1$s kroków</item>
+        <item quantity="other">Pozostało %1$s kroku</item>
+    </plurals>
+</resources>

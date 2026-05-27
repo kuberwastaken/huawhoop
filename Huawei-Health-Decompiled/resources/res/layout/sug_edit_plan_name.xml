@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.edittext.HealthEditText
+        textSize="@dimen/_2131365482_res_0x7f0a0e6a"
+        textColor="@color/_2131299845_res_0x7f090e05"
+        id="@+id/sug_edit_plan_name"
+        layout_width="-1"
+        layout_height="-2"
+        singleLine="true"
+        maxLength="40"
+        fontFamily="@string/_2130852834_res_0x7f023be2"
+        style="@style/health_editText_Linear"/>
+</RelativeLayout>

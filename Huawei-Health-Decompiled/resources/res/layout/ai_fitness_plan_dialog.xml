@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.health.sport.view.AiFitnessPlanEnergyReplacementCard
+        id="@+id/ai_fitness_plan_energy_replace_layout"
+        layout_width="-1"
+        layout_height="-2"/>
+</LinearLayout>

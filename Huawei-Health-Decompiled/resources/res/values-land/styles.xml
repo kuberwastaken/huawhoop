@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.Design.TabLayout" parent="@style/Base.Widget.Design.TabLayout">
+        <item name="_2131101633_res_0x7f0607c1">center</item>
+        <item name="_2131101646_res_0x7f0607ce">fixed</item>
+    </style>
+    <style name="Widget.MaterialComponents.MaterialCalendar.HeaderSelection" parent="@style/Widget.AppCompat.TextView">
+        <item name="android:textAppearance">?unknown_attr_ref: 7f0607ef</item>
+        <item name="android:textColor">?unknown_attr_ref: 7f060149</item>
+        <item name="android:ellipsize">3</item>
+        <item name="android:maxLines">@integer/_2131624017_res_0x7f0e0051</item>
+    </style>
+    <style name="Widget.MaterialComponents.MaterialCalendar.HeaderToggleButton" parent="@style/Base.Widget.MaterialComponents.MaterialCalendar.HeaderToggleButton">
+        <item name="android:layout_gravity">0x800053</item>
+    </style>
+</resources>

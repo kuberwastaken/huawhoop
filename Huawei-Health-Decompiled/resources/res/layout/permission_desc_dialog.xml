@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x30"
+    layout_gravity="0x30"
+    orientation="1"
+    background="@drawable/list_item_background_single_normal"
+    layout_width="-1"
+    layout_height="-2">
+    <ListView
+        id="@+id/permission_desc_list"
+        layout_width="-1"
+        layout_height="-2"
+        divider="@drawable/_2131428143_res_0x7f0b032f"
+        paddingStart="@dimen/_2131362478_res_0x7f0a02ae"
+        paddingEnd="@dimen/_2131362477_res_0x7f0a02ad"
+        paddingVertical="@dimen/_2131363112_res_0x7f0a0528"/>
+</FrameLayout>

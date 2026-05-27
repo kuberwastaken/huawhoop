@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <CheckedTextView
+        textSize="@dimen/_2131362714_res_0x7f0a039a"
+        textColor="@color/_2131299845_res_0x7f090e05"
+        gravity="0x10"
+        id="@+id/text1"
+        background="@drawable/_2131427891_res_0x7f0b0233"
+        layout_width="-1"
+        layout_height="@dimen/_2131362377_res_0x7f0a0249"
+        checkMark="@drawable/_2131431575_res_0x7f0b1097"
+        fontFamily="@string/_2130851948_res_0x7f02386c"
+        paddingStart="@dimen/_2131362035_res_0x7f0a00f3"
+        paddingEnd="@dimen/_2131362035_res_0x7f0a00f3"/>
+    <com.huawei.ui.commonui.divider.HealthDivider
+        id="@+id/divide_line"
+        visibility="2"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginStart="@dimen/_2131364901_res_0x7f0a0c25"
+        layout_marginEnd="@dimen/_2131364900_res_0x7f0a0c24"/>
+</LinearLayout>

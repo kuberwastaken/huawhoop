@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-2"
+    layout_height="-2">
+    <TextView
+        textAppearance="@style/TextAppearance.AppCompat.Tooltip"
+        textColor="?attr/_2131101794_res_0x7f060862"
+        ellipsize="3"
+        id="@+id/message"
+        background="?attr/_2131101795_res_0x7f060863"
+        paddingLeft="@dimen/_2131365540_res_0x7f0a0ea4"
+        paddingTop="@dimen/_2131365544_res_0x7f0a0ea8"
+        paddingRight="@dimen/_2131365540_res_0x7f0a0ea4"
+        paddingBottom="@dimen/_2131365544_res_0x7f0a0ea8"
+        layout_width="-2"
+        layout_height="-2"
+        layout_margin="@dimen/_2131365541_res_0x7f0a0ea5"
+        maxWidth="256dp"
+        maxLines="3"
+        paddingStart="@dimen/_2131365540_res_0x7f0a0ea4"
+        paddingEnd="@dimen/_2131365540_res_0x7f0a0ea4"/>
+</LinearLayout>

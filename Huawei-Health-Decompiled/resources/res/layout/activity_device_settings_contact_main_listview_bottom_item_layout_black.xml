@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x10"
+    orientation="1"
+    layout_width="-1"
+    layout_height="@dimen/_2131362087_res_0x7f0a0127"
+    minHeight="@dimen/_2131362087_res_0x7f0a0127"
+    paddingStart="@dimen/_2131364901_res_0x7f0a0c25"
+    paddingEnd="@dimen/_2131364900_res_0x7f0a0c24">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131362383_res_0x7f0a024f"
+        textColor="@color/_2131297897_res_0x7f090669"
+        id="@+id/footer_tv"
+        layout_width="-2"
+        layout_height="-2"
+        text="@string/_2130842214_res_0x7f021266"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131362383_res_0x7f0a024f"
+        textColor="@color/_2131297897_res_0x7f090669"
+        layout_width="-2"
+        layout_height="-2"
+        text="@string/_2130842215_res_0x7f021267"/>
+</LinearLayout>

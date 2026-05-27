@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/custom_courses_sub_header"
+        paddingTop="@dimen/_2131362498_res_0x7f0a02c2"
+        paddingBottom="@dimen/_2131362498_res_0x7f0a02c2"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x8="false"/>
+    <RelativeLayout
+        gravity="0x11"
+        id="@+id/custom_courses_pick_content"
+        layout_width="-1"
+        layout_height="-2"
+        layout_below="@+id/custom_courses_sub_header"/>
+</RelativeLayout>

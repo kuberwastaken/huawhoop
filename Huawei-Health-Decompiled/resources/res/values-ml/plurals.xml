@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">ഒരൊറ്റ ഗ്രാഫിൽ %1$d സൂചകങ്ങൾ വരെ കാണിക്കാൻ കഴിയും.</item>
+        <item quantity="other">%1$d സൂചകങ്ങൾ വരെ ഒരൊറ്റ ഗ്രാഫിൽ കാണിക്കാൻ കഴിയും.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d ചുവട്</item>
+        <item quantity="other">%d ചുവടുകൾ</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s മൈൽ</item>
+        <item quantity="other">%s മൈൽ</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s കി.മീ.</item>
+        <item quantity="other">%s കി.മീ.</item>
+    </plurals>
+</resources>

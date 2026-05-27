@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/root"
+    layout_width="-1"
+    layout_height="-1">
+    <LinearLayout
+        orientation="1"
+        id="@+id/horizontal_linechart"
+        layout_width="-1"
+        layout_height="-1">
+        <com.huawei.ui.commonui.titlebar.CustomTitleBar
+            id="@+id/heart_rate_day_titlebar"
+            layout_width="-1"
+            layout_height="-2"
+            NOT_FOUND_0x6="4"/>
+        <LinearLayout
+            orientation="0"
+            id="@+id/table_chart_container"
+            layout_width="-1"
+            layout_height="-1"/>
+    </LinearLayout>
+    <ViewStub
+        id="@+id/horizontal_heart_rate_linechart_tips"
+        layout="@layout/track_linechart_tips_frag_horizontal_heart_rate"
+        layout_width="-1"
+        layout_height="-1"
+        layout_centerInParent="true"/>
+</RelativeLayout>

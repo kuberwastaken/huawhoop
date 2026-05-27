@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/item_banner_ad_card"
+    layout_width="-1"
+    layout_height="-2"
+    layout_marginStart="@dimen/_2131362478_res_0x7f0a02ae"
+    layout_marginEnd="@dimen/_2131362478_res_0x7f0a02ae">
+    <View
+        layout_width="-1"
+        layout_height="@dimen/_2131362012_res_0x7f0a00dc"/>
+    <com.huawei.ui.commonui.cardview.HealthCardView
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0xb="@android:color/transparent"
+        NOT_FOUND_0xc="@dimen/_2131362365_res_0x7f0a023d"
+        NOT_FOUND_0xd="false"
+        NOT_FOUND_0xe="false">
+        <ImageView
+            id="@+id/item_banner_ad_img"
+            layout_width="-1"
+            layout_height="-1"
+            scaleType="6"/>
+        <ImageView
+            layout_gravity="0x800035"
+            id="@+id/item_banner_ad_close_icon"
+            padding="@dimen/_2131365479_res_0x7f0a0e67"
+            layout_width="@dimen/_2131363082_res_0x7f0a050a"
+            layout_height="@dimen/_2131363082_res_0x7f0a050a"
+            src="@drawable/_2131430570_res_0x7f0b0caa"
+            contentDescription="@string/_2130848057_res_0x7f022939"/>
+    </com.huawei.ui.commonui.cardview.HealthCardView>
+</LinearLayout>

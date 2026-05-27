@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2"
+    importantForAccessibility="2">
+    <include layout="@layout/health_bottomsheet_title_one_icon"/>
+    <FrameLayout
+        orientation="1"
+        id="@+id/frameContent"
+        layout_width="-1"
+        layout_height="-1"
+        layout_marginTop="@dimen/_2131362644_res_0x7f0a0354"
+        importantForAccessibility="2">
+        <com.huawei.ui.commonui.calendarview.HealthMonthRecyclerView
+            id="@+id/list"
+            layout_width="-1"
+            layout_height="-1"
+            overScrollMode="2"
+            importantForAccessibility="2"
+            NOT_FOUND_0x7="false"/>
+    </FrameLayout>
+</LinearLayout>

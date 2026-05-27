@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="0"
+    background="@drawable/_2131429308_res_0x7f0b07bc"
+    descendantFocusability="2"
+    layout_width="-1"
+    layout_height="-2"
+    minHeight="@dimen/_2131364225_res_0x7f0a0981"
+    paddingStart="@dimen/_2131364227_res_0x7f0a0983"
+    paddingEnd="@dimen/_2131364226_res_0x7f0a0982">
+    <TextView
+        textSize="@dimen/_2131362714_res_0x7f0a039a"
+        textColor="@color/_2131297419_res_0x7f09048b"
+        id="@+id/hwdialogpattern_text"
+        paddingTop="@dimen/_2131364228_res_0x7f0a0984"
+        paddingBottom="@dimen/_2131364228_res_0x7f0a0984"
+        layout_width="-1"
+        layout_height="-2"
+        layout_centerVertical="true"
+        fontFamily="@string/_2130851948_res_0x7f02386c"
+        textDirection="5"
+        layout_toStartOf="@+id/hwdialogpattern_radiobutton"/>
+    <com.huawei.uikit.hwradiobutton.widget.HwRadioButton
+        id="@+id/hwdialogpattern_radiobutton"
+        clickable="false"
+        layout_width="@dimen/_2131364238_res_0x7f0a098e"
+        layout_height="@dimen/_2131364238_res_0x7f0a098e"
+        layout_centerVertical="true"
+        layout_marginStart="@dimen/_2131364237_res_0x7f0a098d"
+        layout_alignParentEnd="true"
+        style="@style/Widget.Emui.HwRadioButton"/>
+</RelativeLayout>

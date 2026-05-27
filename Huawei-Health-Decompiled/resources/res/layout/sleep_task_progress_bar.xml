@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    clipChildren="false"
+    clipToPadding="false"
+    layout_width="-1"
+    layout_height="-1">
+    <androidx.constraintlayout.widget.Guideline
+        orientation="1"
+        id="@+id/progress_guide_line"
+        layout_width="-2"
+        layout_height="-2"
+        NOT_FOUND_0xd="0"
+        NOT_FOUND_0x10="0"
+        NOT_FOUND_0x12="0"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="10sp"
+        textColor="@color/_2131299847_res_0x7f090e07"
+        id="@+id/sleep_naps_time"
+        background="@drawable/_2131431964_res_0x7f0b121c"
+        paddingTop="@dimen/_2131363087_res_0x7f0a050f"
+        paddingBottom="@dimen/_2131363087_res_0x7f0a050f"
+        layout_width="-2"
+        layout_height="-2"
+        paddingStart="@dimen/_2131363172_res_0x7f0a0564"
+        paddingEnd="@dimen/_2131363172_res_0x7f0a0564"
+        NOT_FOUND_0xe="@+id/triangle_imageview"
+        NOT_FOUND_0xf="@+id/progress_guide_line"
+        NOT_FOUND_0x11="@+id/progress_guide_line"/>
+    <com.huawei.ui.commonui.imageview.HealthImageView
+        id="@+id/triangle_imageview"
+        background="@drawable/_2131430744_res_0x7f0b0d58"
+        layout_width="-2"
+        layout_height="-2"
+        NOT_FOUND_0xe="@+id/sleep_task_progress"
+        NOT_FOUND_0xf="@+id/progress_guide_line"
+        NOT_FOUND_0x11="@+id/progress_guide_line"/>
+    <com.huawei.ui.commonui.progressbar.HealthProgressBar
+        id="@+id/sleep_task_progress"
+        layout_width="-1"
+        layout_height="@dimen/_2131363002_res_0x7f0a04ba"
+        NOT_FOUND_0xd="0"
+        NOT_FOUND_0xf="0"
+        NOT_FOUND_0x11="0"
+        style="@style/sleep_task_dialog_progress_scale"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

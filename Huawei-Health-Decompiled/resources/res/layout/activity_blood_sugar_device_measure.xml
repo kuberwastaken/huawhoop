@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131298132_res_0x7f090754"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/titlebar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x5="2"
+        NOT_FOUND_0x6="@color/_2131298132_res_0x7f090754"
+        NOT_FOUND_0x7="@color/_2131298132_res_0x7f090754"
+        NOT_FOUND_0x8="@string/_2130838211_res_0x7f0202c3"/>
+    <LinearLayout
+        orientation="1"
+        id="@+id/hw_show_healthdata_bloodsugar_measure_fragment_container"
+        layout_width="-1"
+        layout_height="-1"/>
+</LinearLayout>

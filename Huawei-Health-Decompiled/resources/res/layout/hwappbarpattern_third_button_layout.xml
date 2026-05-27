@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/hwappbarpattern_layout_third_button"
+    layout_width="-2"
+    layout_height="-1">
+    <com.huawei.uikit.hwbutton.widget.HwButton
+        layout_gravity="0x11"
+        id="@+id/hwappbarpattern_third_button"
+        visibility="0"
+        layout_width="-2"
+        layout_height="-2"
+        layout_marginStart="@dimen/_2131363955_res_0x7f0a0873"
+        layout_marginEnd="@dimen/_2131363954_res_0x7f0a0872"
+        style="@style/Widget.Emui.HwButton.Small.Emphasize.Light"/>
+</LinearLayout>

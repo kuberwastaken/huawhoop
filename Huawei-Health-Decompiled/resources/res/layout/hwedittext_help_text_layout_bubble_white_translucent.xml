@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1"
+    paddingStart="@dimen/_2131362647_res_0x7f0a0357"
+    paddingEnd="@dimen/_2131362646_res_0x7f0a0356">
+    <com.huawei.uikit.phone.hwedittext.widget.HwEditText
+        id="@+id/hwedittext_edit"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginBottom="@dimen/_2131362651_res_0x7f0a035b"
+        style="@style/Widget.Emui.HwEditText.White.Translucent"/>
+    <TextView
+        textSize="@dimen/_2131362715_res_0x7f0a039b"
+        textColor="@color/_2131297424_res_0x7f090490"
+        id="@+id/hwedittext_text_assist"
+        layout_width="-1"
+        layout_height="-2"
+        fontFamily="@string/_2130851948_res_0x7f02386c"/>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x800013"
+    layout_gravity="0x800013"
+    orientation="0"
+    layout_width="-2"
+    layout_height="-2"
+    layout_marginStart="@dimen/_2131362576_res_0x7f0a0310">
+    <ImageView
+        layout_gravity="0x11"
+        id="@+id/kaka_message_icon"
+        background="@mipmap/_2131820552_res_0x7f110008"
+        layout_width="@dimen/_2131362103_res_0x7f0a0137"
+        layout_height="@dimen/_2131362103_res_0x7f0a0137"/>
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365484_res_0x7f0a0e6c"
+        textColor="@color/_2131296377_res_0x7f090079"
+        ellipsize="3"
+        layout_gravity="0x11"
+        id="@+id/kaka_msg_text"
+        layout_width="-2"
+        layout_height="-2"
+        singleLine="true"
+        fontFamily="HarmonyHeiTi-Medium"
+        textDirection="5"
+        layout_marginStart="@dimen/_2131362576_res_0x7f0a0310"/>
+</LinearLayout>

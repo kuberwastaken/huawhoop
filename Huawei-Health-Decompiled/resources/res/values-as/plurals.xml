@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">এখন গ্ৰাফত %1$d টালৈকে সূচক দেখুৱাব পৰা যায়।</item>
+        <item quantity="other">এখন গ্ৰাফত %1$d টালৈকে সূচক দেখুৱাব পৰা যায়।</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d-টা খোজ</item>
+        <item quantity="other">%d-টা খোজ</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s mi</item>
+        <item quantity="other">%s mi</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s km</item>
+        <item quantity="other">%s km</item>
+    </plurals>
+</resources>

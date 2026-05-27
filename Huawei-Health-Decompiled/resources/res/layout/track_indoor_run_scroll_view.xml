@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    gravity="0x1"
+    orientation="0"
+    layout_width="-1"
+    layout_height="-1"
+    layoutDirection="0">
+    <RelativeLayout
+        id="@+id/hw_health_time_picker_hour_layout"
+        layout_width="-1"
+        layout_height="200dp">
+        <com.huawei.ui.commonui.numberpicker.HealthNumberPicker
+            id="@+id/hw_indoor_run_picker"
+            layout_width="-1"
+            layout_height="200dp"/>
+    </RelativeLayout>
+</LinearLayout>

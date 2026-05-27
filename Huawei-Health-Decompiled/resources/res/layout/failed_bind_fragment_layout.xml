@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/failed_fragment"
+    tag="FailedFragment"
+    background="@color/_2131297166_res_0x7f09038e"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout
+        gravity="0x1"
+        layout_gravity="0x1"
+        orientation="1"
+        id="@+id/fail_bind_image_layout"
+        layout_width="-1"
+        layout_height="-1"
+        NOT_FOUND_0xf="0">
+        <LinearLayout
+            gravity="0x11"
+            id="@+id/image_view_container"
+            layout_width="@dimen/_2131363042_res_0x7f0a04e2"
+            layout_height="@dimen/_2131363042_res_0x7f0a04e2">
+            <ImageView
+                id="@+id/fail_bind_show_image"
+                layout_width="@dimen/_2131363023_res_0x7f0a04cf"
+                layout_height="@dimen/_2131363023_res_0x7f0a04cf"
+                scaleType="3"/>
+        </LinearLayout>
+        <ImageView
+            layout_gravity="0x11"
+            id="@+id/device_measure_top_square"
+            background="@drawable/hw_device_johnson_glucose_pair_guide_scan_bg"
+            visibility="0"
+            layout_width="@dimen/_2131363090_res_0x7f0a0512"
+            layout_height="@dimen/_2131363090_res_0x7f0a0512"
+            layout_marginTop="@dimen/_2131363021_res_0x7f0a04cd"
+            contentDescription="@string/IDS_device_common_ui_contentDescription"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131362714_res_0x7f0a039a"
+            textColor="@color/emui_color_primary"
+            layout_gravity="0x1"
+            id="@+id/device_measure_fail_tip_title"
+            layout_width="-2"
+            layout_height="-2"
+            layout_marginTop="@dimen/_2131362576_res_0x7f0a0310"
+            text="@string/IDS_device_bind_fail"/>
+    </com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout>
+</LinearLayout>

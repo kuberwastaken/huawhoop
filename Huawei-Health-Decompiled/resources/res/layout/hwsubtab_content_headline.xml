@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-2">
+    <LinearLayout
+        gravity="0x800003"
+        orientation="0"
+        layout_height="-1"
+        layout_weight="1"
+        style="@style/Widget.Emui.HwSubTabContentView">
+        <com.huawei.uikit.phone.hwsubtab.widget.HwSubTabViewContainer
+            id="@+id/hwsubtab_view_container"
+            layout_width="-2"
+            layout_height="-1"/>
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatImageView
+        layout_gravity="0x50"
+        id="@+id/hwsubtab_function_icon"
+        focusable="true"
+        visibility="2"
+        layout_width="40dp"
+        layout_height="40dp"
+        layout_marginBottom="@dimen/_2131364519_res_0x7f0a0aa7"
+        scaleType="7"
+        paddingStart="8dp"
+        paddingEnd="8dp"
+        layout_marginStart="0dp"
+        layout_marginEnd="@dimen/_2131364512_res_0x7f0a0aa0"/>
+</merge>

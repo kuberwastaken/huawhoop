@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.edittext.HealthEditText
+        gravity="0x800013"
+        id="@+id/edit"
+        layout_width="-1"
+        layout_height="-2"
+        singleLine="true"
+        style="@style/Widget.Emui.HwEditText.Linear"/>
+</RelativeLayout>

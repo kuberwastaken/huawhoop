@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-1"
+    layout_marginTop="@dimen/_2131362012_res_0x7f0a00dc">
+    <RelativeLayout
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginStart="@dimen/_2131363021_res_0x7f0a04cd">
+        <com.huawei.ui.commonui.recycleview.HealthRecycleView
+            id="@+id/tab_recycler_view"
+            layout_width="-2"
+            layout_height="-2"
+            layout_centerVertical="true"
+            layout_alignParentStart="true"/>
+        <com.huawei.ui.commonui.imageview.HealthImageView
+            id="@+id/tab_right_btn"
+            layout_width="-2"
+            layout_height="-2"
+            src="@drawable/_2131427866_res_0x7f0b021a"
+            layout_centerVertical="true"
+            layout_marginEnd="@dimen/_2131363144_res_0x7f0a0548"
+            layout_alignParentEnd="true"
+            style="@style/health_default_img_tint"/>
+    </RelativeLayout>
+    <com.huawei.ui.commonui.recycleview.HealthRecycleView
+        id="@+id/grid_recycler_view"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131363186_res_0x7f0a0572"/>
+</LinearLayout>

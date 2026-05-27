@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.uikit.hwprogressbar.widget.HwProgressBar
+        layout_gravity="0x11"
+        id="@+id/hwprogressbutton_progress_bar"
+        layout_width="-1"
+        layout_height="-1"
+        max="100"
+        progress="0"
+        progressDrawable="@drawable/_2131429464_res_0x7f0b0858"
+        minHeight="@dimen/_2131364353_res_0x7f0a0a01"
+        style="@style/Widget.Emui.HwProgressBar.Horizontal"/>
+    <com.huawei.uikit.hwtextview.widget.HwTextView
+        textSize="@dimen/_2131362719_res_0x7f0a039f"
+        textColor="@color/_2131298504_res_0x7f0908c8"
+        ellipsize="3"
+        layout_gravity="0x11"
+        id="@+id/hwprogressbutton_percentage_text_view"
+        layout_width="-2"
+        layout_height="-2"
+        maxLines="1"
+        textAllCaps="true"
+        fontFamily="HwChinese-medium"
+        layout_marginStart="@dimen/_2131364345_res_0x7f0a09f9"
+        layout_marginEnd="@dimen/_2131364345_res_0x7f0a09f9"
+        NOT_FOUND_0x10="@dimen/_2131364351_res_0x7f0a09ff"
+        NOT_FOUND_0x11="1sp"/>
+</FrameLayout>

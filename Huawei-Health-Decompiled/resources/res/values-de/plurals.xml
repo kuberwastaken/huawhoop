@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="one">%1$d Messgröße kann in der Grafik angezeigt werden.</item>
+        <item quantity="other">Bis zu %1$d Messgrößen können in der Grafik angezeigt werden.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="one">Ihre Blutglukose fällt voraussichtlich in %1$s Min. unter %2$s mmol/l. Bitte überwachen Sie Ihren Blutglukosespiegel genau.</item>
+        <item quantity="other">Ihre Blutglukose fällt voraussichtlich in %1$s Min. unter %2$s mmol/l. Bitte überwachen Sie Ihren Blutglukosespiegel genau.</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="one">Ihre Blutglukose fällt voraussichtlich in %1$s Min. unter %2$s mg/dl. Bitte überwachen Sie Ihren Blutglukosespiegel genau.</item>
+        <item quantity="other">Ihre Blutglukose fällt voraussichtlich in %1$s Min. unter %2$s mg/dl. Bitte überwachen Sie Ihren Blutglukosespiegel genau.</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="one">%d</item>
+        <item quantity="other">%d</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="one">%s mi</item>
+        <item quantity="other">%s mi</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="one">%s km</item>
+        <item quantity="other">%s km</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="one">Noch %1$s Schritt</item>
+        <item quantity="other">Noch %1$s Schritte</item>
+    </plurals>
+</resources>

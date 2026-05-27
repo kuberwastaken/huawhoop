@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <RelativeLayout
+        gravity="0x10"
+        layout_width="-1"
+        layout_height="-2"
+        minHeight="@dimen/_2131363109_res_0x7f0a0525">
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365482_res_0x7f0a0e6a"
+            textColor="@color/_2131299845_res_0x7f090e05"
+            id="@+id/sleep_naps_text"
+            layout_width="-2"
+            layout_height="-2"
+            text="@string/_2130843351_res_0x7f0216d7"
+            fontFamily="@string/_2130852834_res_0x7f023be2"/>
+        <com.huawei.ui.commonui.healthtextview.HealthTextView
+            textSize="@dimen/_2131365483_res_0x7f0a0e6b"
+            textColor="@color/_2131299850_res_0x7f090e0a"
+            id="@+id/time_tv"
+            layout_width="-2"
+            layout_height="-2"
+            fontFamily="@string/_2130852834_res_0x7f023be2"
+            layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <com.huawei.ui.commonui.divider.HealthDivider
+        id="@+id/noon_sleep_divide"
+        layout_width="-1"
+        layout_height="-2"/>
+</LinearLayout>

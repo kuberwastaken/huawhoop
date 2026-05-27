@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    visibility="1"
+    layout_width="-1"
+    layout_height="-1">
+    <fragment
+        name="com.huawei.health.suggestion.ui.fragment.FitSearchFragmentRecyclerView"
+        id="@+id/fragment_FitSearchFragmentRecyclerView"
+        layout_width="-1"
+        layout_height="-1"/>
+    <fragment
+        name="com.huawei.health.suggestion.ui.fragment.FitSearchFragmentFlowLayout"
+        id="@+id/fragment_FitSearchFragmentFlowLayout"
+        layout_width="-1"
+        layout_height="-1"/>
+    <include
+        visibility="2"
+        layout="@layout/sug_search_no_show"/>
+    <include
+        id="@+id/sug_search_loading"
+        layout_width="-1"
+        layout_height="-1"
+        layout="@layout/sug_loading_layout"/>
+</FrameLayout>

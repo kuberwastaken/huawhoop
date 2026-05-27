@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawei.health.h5pro.core.H5ProWebView xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_gravity="0x1"
+    id="@+id/health_model_h5_pro_web_view"
+    visibility="2"
+    layout_width="-1"
+    layout_height="-2"/>

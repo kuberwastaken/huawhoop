@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296667_res_0x7f09019b"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/wear_home_legal"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x5="2"/>
+    <com.huawei.ui.commonui.recycleview.HealthRecycleView
+        id="@+id/legal_information"
+        layout_width="-1"
+        layout_height="-1"/>
+</LinearLayout>

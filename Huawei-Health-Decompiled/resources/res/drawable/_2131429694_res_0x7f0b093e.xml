@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <nine-patch src="@drawable/_2131429717_res_0x7f0b0955"/>
+    </item>
+</selector>

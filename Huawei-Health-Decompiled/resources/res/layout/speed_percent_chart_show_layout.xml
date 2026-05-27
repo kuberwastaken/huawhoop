@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2"
+    layout_centerHorizontal="true">
+    <com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout
+        layout_gravity="0x1"
+        id="@+id/heart_rate_chart_show_layout"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x6="0">
+        <com.huawei.ui.commonui.chart.HealthRingChart
+            layout_gravity="0x10"
+            id="@+id/moving_speed_circle"
+            layout_width="-1"
+            layout_height="-2"/>
+    </com.huawei.ui.commonui.columnlayout.HealthColumnLinearLayout>
+</LinearLayout>

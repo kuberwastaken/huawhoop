@@ -1,0 +1,20 @@
+{
+  "3": {
+    "encode": [
+      {
+        "tag": 1,
+        "jsonKey": "wear_status",
+        "type": "empty",
+        "optional": true
+      }
+    ],
+    "decode": [
+      {
+        "tag": 1,
+        "jsonKey": "wear_status",
+        "type": "number8",
+        "optional": true
+      }
+    ]
+  }
+}

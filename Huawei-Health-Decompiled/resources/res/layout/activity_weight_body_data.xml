@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    background="@color/_2131296700_res_0x7f0901bc"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.ui.commonui.titlebar.CustomTitleBar
+        id="@+id/activity_weight_body_data_custom_title_bar"
+        layout_width="-1"
+        layout_height="-2"
+        NOT_FOUND_0x5="2"
+        NOT_FOUND_0x6="@color/_2131296984_res_0x7f0902d8"
+        NOT_FOUND_0x7="@string/_2130838057_res_0x7f020229"/>
+    <com.huawei.ui.commonui.subtab.HealthSubTabWidget
+        id="@+id/activity_weight_body_data_health_sub_tab_widget"
+        background="@color/_2131296984_res_0x7f0902d8"
+        layout_width="-1"
+        layout_height="-2"
+        style="@style/health_sub_tab_style_weight"/>
+    <com.huawei.ui.commonui.viewpager.HealthViewPager
+        id="@+id/activity_weight_body_data_custom_view_pager"
+        layout_width="-1"
+        layout_height="-1"/>
+</LinearLayout>

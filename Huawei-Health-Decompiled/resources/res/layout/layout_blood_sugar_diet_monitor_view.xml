@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:setting="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    id="@+id/blood_sugar_diet_monitor_view"
+    visibility="2"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.subheader.HealthSubHeader
+        id="@+id/diet_monitor_subheader"
+        layout_width="-2"
+        layout_height="-2"
+        NOT_FOUND_0x7="false"
+        NOT_FOUND_0x8="2"
+        NOT_FOUND_0x9="@string/_2130838433_res_0x7f0203a1"/>
+    <LinearLayout
+        orientation="1"
+        id="@+id/blood_sugar_diet_monitor_container"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginStart="@dimen/_2131362013_res_0x7f0a00dd"
+        layout_marginEnd="@dimen/_2131362011_res_0x7f0a00db"/>
+</LinearLayout>

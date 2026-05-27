@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    id="@+id/sug_item_course_category_layout"
+    layout_width="-1"
+    layout_height="-2"
+    importantForAccessibility="1"
+    textDirection="5"
+    layoutDirection="3">
+    <com.huawei.ui.commonui.healthtextview.HealthTextView
+        textSize="@dimen/_2131365502_res_0x7f0a0e7e"
+        textColor="@color/_2131299850_res_0x7f090e0a"
+        id="@+id/sug_item_course_category_text"
+        layout_width="-1"
+        layout_height="-2"
+        layout_marginTop="@dimen/_2131362970_res_0x7f0a049a"
+        layout_marginBottom="@dimen/_2131362970_res_0x7f0a049a"
+        fontFamily="@string/_2130852833_res_0x7f023be1"
+        textDirection="5"
+        layout_marginStart="@dimen/_2131362934_res_0x7f0a0476"
+        layout_marginEnd="@dimen/_2131363172_res_0x7f0a0564"
+        breakStrategy="1"
+        hyphenationFrequency="1"/>
+    <ImageView
+        id="@+id/sug_item_course_category_icon"
+        visibility="2"
+        layout_width="-1"
+        layout_height="@dimen/_2131363109_res_0x7f0a0525"
+        layout_marginBottom="@dimen/_2131362578_res_0x7f0a0312"
+        scaleType="1"
+        layout_centerHorizontal="true"
+        layout_centerVertical="true"/>
+</RelativeLayout>

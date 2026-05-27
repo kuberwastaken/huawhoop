@@ -1,0 +1,103 @@
+{
+  "2": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "sub_cmd",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "even_type",
+        "type": "number8"
+      },
+      {
+        "tag": 3,
+        "jsonKey": "value",
+        "type": "array",
+        "elemType": "number8",
+        "optional": true
+      }
+    ]
+  },
+  "3": {
+    "default": [
+      {
+        "tag": 1,
+        "jsonKey": "notify_template",
+        "type": "number8"
+      },
+      {
+        "tag": 2,
+        "jsonKey": "notify_pkgname",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 3,
+        "jsonKey": "notify_title",
+        "type": "array",
+        "elemType": "number8",
+        "optional": true
+      },
+      {
+        "tag": 4,
+        "jsonKey": "notify_id",
+        "type": "string",
+        "optional": true
+      },
+      {
+        "tag": 5,
+        "jsonKey": "notify_content",
+        "type": "array",
+        "elemType": "number8",
+        "optional": true
+      },
+      {
+        "tag": 6,
+        "jsonKey": "notify_button_1",
+        "type": "array",
+        "elemType": "number8",
+        "optional": true
+      },
+      {
+        "tag": 7,
+        "jsonKey": "notify_button_2",
+        "type": "array",
+        "elemType": "number8",
+        "optional": true
+      },
+      {
+        "tag": 8,
+        "jsonKey": "notify_button_3",
+        "type": "array",
+        "elemType": "number8",
+        "optional": true
+      },
+      {
+        "tag": 9,
+        "jsonKey": "notify_feedback",
+        "type": "number",
+        "optional": true
+      },
+      {
+        "tag": 10,
+        "jsonKey": "notify_vibration",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 11,
+        "jsonKey": "notify_ringtone",
+        "type": "number8",
+        "optional": true
+      },
+      {
+        "tag": 12,
+        "jsonKey": "notify_ringtone_id",
+        "type": "number8",
+        "optional": true
+      }
+    ]
+  }
+}

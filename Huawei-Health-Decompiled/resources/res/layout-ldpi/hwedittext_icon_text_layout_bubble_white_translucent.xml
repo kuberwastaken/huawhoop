@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="0"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.uikit.hwedittext.widget.HwEditText
+        layout_gravity="0x10"
+        id="@+id/hwedittext_edit"
+        layout_width="-1"
+        layout_height="-2"
+        paddingStart="@dimen/_2131362642_res_0x7f0a0352"
+        paddingEnd="@dimen/_2131364296_res_0x7f0a09c8"
+        style="@style/Widget.Emui.HwEditText.White.Translucent"/>
+    <RelativeLayout
+        gravity="0x11"
+        layout_gravity="0x800015"
+        background="@drawable/_2131429397_res_0x7f0b0815"
+        focusable="true"
+        clickable="true"
+        layout_width="@dimen/_2131364296_res_0x7f0a09c8"
+        layout_height="@dimen/_2131364304_res_0x7f0a09d0"
+        paddingStart="@dimen/_2131362642_res_0x7f0a0352"
+        paddingEnd="@dimen/_2131362642_res_0x7f0a0352">
+        <androidx.appcompat.widget.AppCompatImageView
+            id="@+id/hwedittext_icon"
+            layout_width="@dimen/_2131364295_res_0x7f0a09c7"
+            layout_height="@dimen/_2131364295_res_0x7f0a09c7"
+            tint="@color/_2131297393_res_0x7f090471"/>
+    </RelativeLayout>
+</FrameLayout>

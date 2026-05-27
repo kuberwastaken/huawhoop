@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="IDS_plugin_fitnessadvice_minute">
+        <item quantity="other">%1$s 分钟</item>
+    </plurals>
+    <plurals name="IDS_pluginmotiontrack_show_three_chart">
+        <item quantity="other">仅支持 %1$d 个图表同时叠加</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mmol">
+        <item quantity="other">您当前血糖正快速下降，预计 %1$s 分钟后会低于 %2$s mmol/L，请您密切关注。</item>
+    </plurals>
+    <plurals name="IDS_maca_content_2_mg">
+        <item quantity="other">您当前血糖正快速下降，预计 %1$s 分钟后会低于 %2$s mg/dL，请您密切关注。</item>
+    </plurals>
+    <plurals name="IDS_user_profile_achieve_num_day">
+        <item quantity="other">%1$s 天</item>
+    </plurals>
+    <plurals name="IDS_sleep_referece_title_score_string">
+        <item quantity="other">%1$s 分</item>
+    </plurals>
+    <plurals name="IDS_hwh_motiontrack_swim_pace_unit">
+        <item quantity="other">/%1$d米</item>
+    </plurals>
+    <plurals name="IDS_hwh_motiontrack_swim_pace_unit_mi">
+        <item quantity="other">/%1$d码</item>
+    </plurals>
+    <plurals name="IDS_hwh_motiontrack_unit_yd">
+        <item quantity="other">码</item>
+    </plurals>
+    <plurals name="IDS_hwh_motiontrack_ft_string">
+        <item quantity="other">英尺</item>
+    </plurals>
+    <plurals name="IDS_band_data_golf_count_unit">
+        <item quantity="other">%s 杆</item>
+    </plurals>
+    <plurals name="IDS_indoor_skipper_number_unit_value">
+        <item quantity="other">%1$s 个</item>
+    </plurals>
+    <plurals name="IDS_fitness_completed_goal">
+        <item quantity="other">差 %1$s 步就达成目标了！</item>
+    </plurals>
+    <plurals name="IDS_altitude_ft">
+        <item quantity="other">%1$s 英尺</item>
+    </plurals>
+    <plurals name="IDS_altitude_meter">
+        <item quantity="other">%1$s 米</item>
+    </plurals>
+    <plurals name="IDS_physiology_day">
+        <item quantity="other">%s天</item>
+    </plurals>
+    <plurals name="IDS_single_circle_active_target_desc">
+        <item quantity="other">%1$s 小时</item>
+    </plurals>
+    <plurals name="IDS_single_circle_intensity_target_desc">
+        <item quantity="other">%1$s 分钟</item>
+    </plurals>
+    <plurals name="IDS_min_single_unit">
+        <item quantity="other">%s 分</item>
+    </plurals>
+    <plurals name="IDS_min_insert_unit">
+        <item quantity="other">%1$s 分钟</item>
+    </plurals>
+    <plurals name="IDS_hour_single_unit">
+        <item quantity="other">%1$s小时</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_1">
+        <item quantity="other">还差 %1$d 步，坚持时间到</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_2">
+        <item quantity="other">距离目标只差 %1$d 步！</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_3">
+        <item quantity="other">还差 %1$d 步，大步走起来</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_4">
+        <item quantity="other">还剩 %1$d 步，目标别犹豫！</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_5">
+        <item quantity="other">今日目标：最后 %1$d 步！</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_6">
+        <item quantity="other">%1$d 步，还差一点小目标</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_today_not_complete_goal_7">
+        <item quantity="other">%1$d 步，达标倒计时</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_1">
+        <item quantity="other">连续 %1$d 天达成！活力满满</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_1_over_30_days">
+        <item quantity="other">连续超 %1$d 天达成！活力满满</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_2">
+        <item quantity="other">已连胜 %1$d 天！走走更健康</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_2_over_30_days">
+        <item quantity="other">已连胜超 %1$d 天！走走更健康</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_3">
+        <item quantity="other">%1$d 天连胜！看看日均多少步</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_3_over_30_days">
+        <item quantity="other">超 %1$d 天连胜！看看日均多少步</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_4">
+        <item quantity="other">连胜 %1$d 天的记录续上了！</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_4_over_30_days">
+        <item quantity="other">连胜超 %1$d 天的记录续上了！</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_5">
+        <item quantity="other">%1$d 天连续达标！去看看</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_5_over_30_days">
+        <item quantity="other">超 %1$d 天连续达标！去看看</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_6">
+        <item quantity="other">厉害！步数 %1$d 天不间断</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_6_over_30_days">
+        <item quantity="other">厉害！步数超 %1$d 天不间断</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_7">
+        <item quantity="other">%1$d 天连胜记录保持成功！</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_complete_goal_7_over_30_days">
+        <item quantity="other">超 %1$d 天连胜记录保持成功！</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_1">
+        <item quantity="other">连胜 %1$d 天了，不继续吗？</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_1_over_30_days">
+        <item quantity="other">连胜超 %1$d 天了，不继续吗？</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_2">
+        <item quantity="other">%1$d 天连胜！今日也别停</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_2_over_30_days">
+        <item quantity="other">超 %1$d 天连胜！今日也别停</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_3">
+        <item quantity="other">连续达标 %1$d 天了，别断！</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_3_over_30_days">
+        <item quantity="other">连续达标超 %1$d 天了，别断！</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_5">
+        <item quantity="other">%1$d 天不间断！现在就续上</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_5_over_30_days">
+        <item quantity="other">超 %1$d 天不间断！现在就续上</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_6_p1">
+        <item quantity="other">再坚持 %1$d 天！</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_6_p2">
+        <item quantity="other">就差 %1$d 步</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_7">
+        <item quantity="other">%1$d 天连胜记录，立即保持</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_multi_day_not_complete_goal_7_over_30_days">
+        <item quantity="other">超 %1$d 天连胜记录，立即保持</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_low_step_1">
+        <item quantity="other">最近日均 %1$d 步，没怎么动</item>
+    </plurals>
+    <plurals name="IDS_fa_tip_low_step_2_p2">
+        <item quantity="other">日均 %1$d 步</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_hw_show_sport_timeline_steps_string">
+        <item quantity="other">%d 步</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_mi_unit">
+        <item quantity="other">%s 英里</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_widget_distance_km_unit">
+        <item quantity="other">%s 公里</item>
+    </plurals>
+    <plurals name="IDS_plugindameon_step_goal">
+        <item quantity="other">差 %1$s 步就达成目标了！</item>
+    </plurals>
+</resources>

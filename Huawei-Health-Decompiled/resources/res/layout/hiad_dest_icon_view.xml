@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="@dimen/_2131363369_res_0x7f0a0629"
+    layout_height="@dimen/_2131363369_res_0x7f0a0629">
+    <com.huawei.openalliance.ad.views.AutoScaleSizeRelativeLayout
+        id="@+id/hiad_round_layout"
+        layout_width="@dimen/_2131363369_res_0x7f0a0629"
+        layout_height="@dimen/_2131363369_res_0x7f0a0629"/>
+    <com.huawei.openalliance.ad.views.CornerImageView
+        id="@+id/hiad_dest_icon"
+        layout_width="@dimen/_2131363364_res_0x7f0a0624"
+        layout_height="@dimen/_2131363364_res_0x7f0a0624"
+        layout_margin="@dimen/_2131363360_res_0x7f0a0620"
+        scaleType="6"/>
+</RelativeLayout>

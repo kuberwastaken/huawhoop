@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    orientation="1"
+    layout_width="-1"
+    layout_height="-2">
+    <com.huawei.ui.commonui.recycleview.HealthRecycleView
+        id="@+id/section_active_record_week_recycler_view"
+        fadingEdge="0x0"
+        layout_width="-1"
+        layout_height="-2"
+        overScrollMode="2"/>
+</LinearLayout>

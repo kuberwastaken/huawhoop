@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        gravity="0x17"
+        id="@android:id/background">
+        <shape shape="0">
+            <corners radius="2dp"/>
+            <size
+                height="@dimen/_2131363262_res_0x7f0a05be"
+                width="1dp"/>
+            <solid color="@color/_2131297930_res_0x7f09068a"/>
+        </shape>
+    </item>
+</layer-list>

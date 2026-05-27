@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    orientation="1"
+    fitsSystemWindows="true"
+    layout_width="-1"
+    layout_height="-1">
+    <com.huawei.hms.iapfull.widget.actionbar.CustomActionBar
+        id="@+id/action_bar"
+        layout_width="-1"
+        layout_height="-2"/>
+    <LinearLayout
+        orientation="1"
+        id="@+id/webview_layout"
+        layout_width="-1"
+        layout_height="-1"
+        layout_below="@+id/action_bar">
+        <ProgressBar
+            id="@+id/webview_progressbar"
+            visibility="2"
+            layout_width="-1"
+            layout_height="2dp"
+            max="100"
+            progressDrawable="@drawable/_2131429899_res_0x7f0b0a0b"
+            style="@android:style/Widget.ProgressBar.Horizontal"/>
+        <com.huawei.secure.android.common.webview.SafeWebView
+            id="@+id/uri_webview"
+            paddingLeft="18dp"
+            paddingRight="18dp"
+            scrollbars="0x0"
+            layout_width="-1"
+            layout_height="0dp"
+            layout_weight="1"
+            layerType="1"
+            paddingStart="18dp"
+            paddingEnd="18dp"/>
+    </LinearLayout>
+</RelativeLayout>
